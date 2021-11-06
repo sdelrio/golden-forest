@@ -36,17 +36,17 @@ sudo lshw -short -C memory
 ```
 
 ```bash
-ruta H/W                  Dispositivo  Clase          Descripción
-==================================================================
-/0/0                                   memory         64KiB BIOS
-/0/35                                  memory         64GiB Memoria de sistema
-/0/35/0                                memory         16GiB DIMM DDR4 Síncrono Unbuffered (Unregistered) 2133 MHz (0,5 ns)
-/0/35/1                                memory         16GiB DIMM DDR4 Síncrono Unbuffered (Unregistered) 2133 MHz (0,5 ns)
-/0/35/2                                memory         16GiB DIMM DDR4 Síncrono Unbuffered (Unregistered) 2133 MHz (0,5 ns)
-/0/35/3                                memory         16GiB DIMM DDR4 Síncrono Unbuffered (Unregistered) 2133 MHz (0,5 ns)
-/0/38                                  memory         768KiB L1 caché
-/0/39                                  memory         6MiB L2 caché
-/0/3a                                  memory         64MiB L3 caché
+H/W path                  Device      Class          Description
+================================================================
+/0/0                                  memory         64KiB BIOS
+/0/35                                 memory         64GiB System Memory
+/0/35/0                               memory         16GiB DIMM DDR4 Synchronous Unbuffered (Unregistered) 2133 MHz (0.5 ns)
+/0/35/1                               memory         16GiB DIMM DDR4 Synchronous Unbuffered (Unregistered) 2133 MHz (0.5 ns)
+/0/35/2                               memory         16GiB DIMM DDR4 Synchronous Unbuffered (Unregistered) 2133 MHz (0.5 ns)
+/0/35/3                               memory         16GiB DIMM DDR4 Synchronous Unbuffered (Unregistered) 2133 MHz (0.5 ns)
+/0/38                                 memory         768KiB L1 cache
+/0/39                                 memory         6MiB L2 cache
+/0/3a                                 memory         64MiB L3 cache
 ```
 ## References
 
