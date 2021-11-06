@@ -1,0 +1,38 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+/* Autumn Yellow HEX #E99700 / RGB (233, 151, 0)  */
+/* https://docusaurus.io/docs/styling-layout */
+:root {
+  --ifm-color-primary: #e99700;
+  --ifm-color-primary-dark: #d28800;
+  --ifm-color-primary-darker: #c68000;
+  --ifm-color-primary-darkest: #a36a00;
+  --ifm-color-primary-light: #ffa601;
+  --ifm-color-primary-lighter: #ffaa0d;
+  --ifm-color-primary-lightest: #ffb630;
+  --ifm-code-font-size: 95%;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html {
+  background-color: #fff6eb;
+}
+
+html[data-theme='dark'] {
+  background-color: #170f00;
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
