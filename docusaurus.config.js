@@ -13,7 +13,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   favicon: 'img/favicon.ico',
   organizationName: 'sdelrio', // Usually your GitHub org/user name.
   projectName: 'golden-forest', // Usually your repo name.
-  deploymentBranch: 'gh-pages',	//The name of the branch to deploy the static files to. This defaults to "gh-pages" 
+  //deploymentBranch: 'gh-pages',	//The name of the branch to deploy the static files to. This defaults to "gh-pages"
 
 
   plugins: [
@@ -37,14 +37,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/sdelrio/docusaurus/edit/main/website/',
+          editUrl: 'https://github.com/sdelrio/golden-forest/edit/master/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           editUrl:
-            'https://github.com/sdelrio/docusaurus/edit/main/website/blog/',
+            'https://github.com/sdelrio/golden-forest/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -100,7 +98,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/docs-intro',
               },
             ],
           },
