@@ -32,4 +32,6 @@ start:	## Docusaurus start develop server
 	@npx docusaurus start
 
 
+upgrade:	## Docusaurus upgrade version
+	@yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 
