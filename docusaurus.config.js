@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 (module.exports = {
   title: 'The Golden Forest',
   tagline: 'Digital garden',
-  url: 'https://sdelrio.github.io',
-  baseUrl: '/golden-forest/',
+  url: 'https://www.lorien.cloud',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
