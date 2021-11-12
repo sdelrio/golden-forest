@@ -37,7 +37,7 @@ power1:       25.04 W  (cap = 110.00 W)
 ```
 
 :::warningRyzen 
-Only newer kernels like [Linux 5.15](/OS/GNU-Linux/Kernel/linux-5.15) will allow to get Zen 3 APU temperature.
+Only newer kernels like [Linux 5.15](/docs/OS/GNU-Linux/Kernel/linux-5.15) will allow to get Zen 3 APU temperature.
 :::
 
 ## Gnome extensions
