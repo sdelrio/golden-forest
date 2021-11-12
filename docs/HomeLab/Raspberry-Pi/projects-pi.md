@@ -22,6 +22,12 @@ Share Keyboard and mouse between computers
 
 * <https://www.raspberrypi.com/news/share-your-keyboard-and-mouse-between-computers-with-barrier/>
 
+## Storage
+
+### NextCloudPi
+
+* <https://ownyourbits.com/nextcloudpi/>
+* <https://ownyourbits.com/2019/08/05/nextcloudpi-gets-a-backup-ui-moves-to-nc16-0-3-buster-php7-3-and-more/>
 
 ## Machine Learning
 
@@ -42,7 +48,6 @@ Share Keyboard and mouse between computers
 An open monitoring system for plant science
 
 * <https://www.raspberrypi.com/news/growth-monitor-pi-an-open-monitoring-system-for-plant-science/>
-
 
 ### Bonsai watering
 
