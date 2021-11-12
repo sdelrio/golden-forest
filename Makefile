@@ -35,6 +35,6 @@ start:	## Docusaurus start develop server
 upgrade:	## Docusaurus upgrade version
 	@yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 
-deploy:
+deploy:	## Deploy to github pages
 	@GIT_USER=$(USER) USE_SSH=true yarn deploy
 
