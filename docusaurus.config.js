@@ -87,8 +87,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/sdelrio/golden-forest',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
         ],
       },

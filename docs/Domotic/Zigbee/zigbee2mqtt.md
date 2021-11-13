@@ -130,12 +130,16 @@ addons:
       mountPath: /data
 ```
 
+import IconExternalLink from '@theme/IconExternalLink';
+
 ## Install on Hassio
 
-* <https://domoticaencasa.es/tutorial-instalar-zigbee2mqtt-hassio>
+* [Install zigbee2qtt on Hassio <IconExternalLink />](https://domoticaencasa.es/tutorial-instalar-zigbee2mqtt-hassio)
 
 ## References
 
-* [Homepage](https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html>*)
-* [GitHub](https://github.com/Koenkk/zigbee2mqtt)
+
+* [Homepage<IconExternalLink />](https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html>*)
+* [GitHub<IconExternalLink />](https://github.com/Koenkk/zigbee2mqtt)
+
 
