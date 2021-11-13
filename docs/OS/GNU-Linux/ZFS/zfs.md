@@ -216,4 +216,9 @@ Would you like to proceed [y/N]? y
 ### Ubuntu / Mint
 
 * [Zsys](zsys)
+* <http://zfsonlinux.org/>
+
+### FreeBSD
+
+* <http://zfsguru.com/>
 
