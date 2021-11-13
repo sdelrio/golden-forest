@@ -29,6 +29,9 @@ help:	## Show this help menu.
 
 
 start:	## Docusaurus start develop server
+	@if [ ! -d node_modules ]; then \
+		yarn install; \
+	fi;
 	@npx docusaurus start
 
 
