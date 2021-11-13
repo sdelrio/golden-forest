@@ -1,6 +1,6 @@
 name: Build blog on PR
 on:
-  pull_requests:
+  pull_request:
     branches:
       - master
     push:
