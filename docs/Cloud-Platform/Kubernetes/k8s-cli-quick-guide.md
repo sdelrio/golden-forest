@@ -14,7 +14,7 @@ Usually the master nodes are tainted
 kubectl get nodes -o json | jq .items[].spec
 ```
 
-## Changen default namespace
+## Change default namespace
 
 ```bash
 kubectl config set-context --current --namespace=mynamespace
