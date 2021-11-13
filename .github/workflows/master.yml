@@ -1,36 +1,11 @@
-name: Build blog on PR
+name: Relese gh-pages
 on:
-  pull_request:
+  push:
     branches:
-      - master
-    push:
       - master
 
 jobs:
-  checks:
-    if: github.event_name != 'push'
-    name: Build without publish
-    timeout-minutes: 5
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16.x'
-          cache: yarn
-      - name: Install Node Packages
-        run: |
-          if [ -e yarn.lock ]; then
-            yarn install --frozen-lockfile
-          elif [ -e package-lock.json ];  then
-            npm ci
-          else
-            npm i
-          fi
-          npm run build
-
   gh-release:
-    if: github.event_name != 'pull_request'
     name: GitHub Pages Release
     timeout-minutes: 5
     runs-on: ubuntu-latest
