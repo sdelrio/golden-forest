@@ -1,6 +1,6 @@
 name: Build blog on PR
 on:
-  pull_requests:
+  pull_request:
     branches:
       - master
     push:
@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: '16.x'
           cache: yarn
       - name: Install Node Packages
         run: |
@@ -38,7 +38,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: '16.x'
           cache: yarn
       - uses: webfactory/ssh-agent@v0.5.0
         with:
@@ -47,7 +47,6 @@ jobs:
         env:
           USE_SSH: true
           GIT_USER: git
-      - name: Install Node Packages
         run: |
           git config --global user.email "sdelrio@users.noreply.github.com"
           git config --global user.name "gh-actions"
