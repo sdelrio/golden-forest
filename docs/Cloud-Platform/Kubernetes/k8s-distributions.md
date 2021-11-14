@@ -35,6 +35,7 @@ It doesn't have any cloud feature (no AWS, no GKE), so it's very small. Packaged
 * [k8s system-upgrae-controller](https://pet2cattle.com/2021/05/k3s-autoupgrade)
 * [k3s + calico + portworks](https://thenewstack.io/tutorial-configure-cloud-native-edge-infrastructure-with-k3s-calico-portworx/)
 * [k3s on Raspberry Pi](https://medium.com/@mabrams_46032/kubernetes-on-raspberry-pi-c246c72f362f) (requires armv7 or higher, 8GB SSD)
+* [k3s + traefik + sticky session](https://zhimin-wen.medium.com/sticky-sessions-in-kubernetes-56eb0e8f257d)
 
 ### Deploy clusters
 

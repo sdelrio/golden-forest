@@ -21,6 +21,7 @@ There is a new [serverless version](https://medium.com/@jdrawlings/serverless-je
 ## Global Libraries
 
 * [fabric8](https://github.com/fabric8io/fabric8-pipeline-library)
+  * [ci/cd fabric](https://fabric8.io/guide/cdelivery.html)
 * [jenkinsci - pipeline-examples](https://github.com/jenkinsci/pipeline-examples/tree/master/pipeline-examples)
 * [jenkinsci - report test results](https://github.com/jenkinsci/pipeline-model-definition-plugin/wiki/Reporting-test-results-and-storing-artifacts)
 * [jenkins server to develop pipelines](https://github.com/liatrio/pipeline-developer)]
