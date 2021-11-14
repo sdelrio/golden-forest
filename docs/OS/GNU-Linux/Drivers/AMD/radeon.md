@@ -118,5 +118,10 @@ $ ./amdgpu-pro-install -y
 ```bash
 $ amdgpu-pro-uninstall
 ```
+## Issues
+
+### Files missing in `/lib/firmare/amdgpu`
+
+* <https://www.linux.org/threads/files-missing-in-lib-firmware-amdgpu-solved.30836/>
 
 ## References
