@@ -2,7 +2,7 @@
 
 ![Observability Tools](https://brendangregg.com/Perf/linux_observability_tools.png)
 
-## Referendes
+## References
 
 * [Linux Performance](http://brendangregg.com/linuxperf.html)
 
