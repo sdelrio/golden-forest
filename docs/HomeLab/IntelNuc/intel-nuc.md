@@ -235,6 +235,11 @@ kernel.nmi_watchdog = 0
 
 * <https://superuser.com/questions/758270/very-high-iowait-after-connecting-ssd-drive>
 
+## Racks
+
+* [Intel NUC mini PC rack mount](https://commons.wikimedia.org/wiki/File:8_intel_NUC_mini_pc_rack_mount_rack_shelf.jpg)
+* [Amazon Intel NUC miniPC 19"](https://www.amazon.es/MiniPC-19inch-mounting-plates-included/dp/B07V6FS385)
+
 ## References
 
 * <https://openhomelab.org/index.php?title=Intel_NUC>
