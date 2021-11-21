@@ -41,3 +41,8 @@ upgrade:	## Docusaurus upgrade version
 deploy:	## Deploy to github pages
 	@GIT_USER=$(USER) USE_SSH=true yarn deploy
 
+
+.PHONY: build
+build: ## Build page
+	@yarn build
+
