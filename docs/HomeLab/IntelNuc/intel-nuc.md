@@ -8,7 +8,7 @@ Homelabs built from Intel NUCs are sometimes referred to as Nanolabs.
 
 * [2018-2019: Roadmap](https://www.cnx-software.com/2017/09/20/intel-nuc-roadmap-2018-2019-gemini-lake-coffee-lake-and-kaby-lake-h/)
 * [2016-2020: Intel Roadmap](https://time.graphics/es/line/23974)
-* [2018: Dawson Canyon](nucblog.net/2018/02/dawson-canyon-commercial-i7-nuc-announced/)
+* [2018: Dawson Canyon](https://nucblog.net/2018/02/dawson-canyon-commercial-i7-nuc-announced/)
 
 ## CPU's Benchamrks for Low power Models
 
