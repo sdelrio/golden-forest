@@ -71,6 +71,40 @@ grep memory_backing_dir /etc/libvirt/qemu.conf
 memory_backing_dir = "/var/lib/libvirt/qemu/ram"
 ```
 
+#### Ubuntu 20.04
+
+QEMU 5.0, libvirt 6.6, virtmanager 3.0, are available for Ubuntu 20.04:
+
+* <https://launchpad.net/~jacob/+archive/ubuntu/virtualisation?field.series_filter=focal>
+
+##### CLI install
+```bash
+sudo add-apt-repository ppa:jacob/virtualisation
+sudo apt-get update
+```
+
+##### Ansible install
+
+```yaml
+- name: "Add Jacob Zimmermann APT repo"
+  apt_repository:
+    repo: ppa:jacob/virtualisation
+    state: present
+    codename: focal
+
+    - name: "APT VM packages"
+  apt:
+    name:
+      - qemu-kvm
+      - qemu-utils
+      - libvirt-daemon-system
+      - libvirt-clients
+      - virt-manager
+      - ovmf
+      - libhugetlbfs-bin      # hugeadm: Tools to ease use of hugetlbfs
+```
+
+
 ### CPU section with NUMA
 
 ```xml
@@ -106,39 +140,28 @@ memory_backing_dir = "/var/lib/libvirt/qemu/ram"
    ...
   </devices>
 ```
+### Install virtiofs drivers on windows
 
-### Ubuntu 20.04
+* [How to install virtiofs drivers on windows](https://virtio-fs.gitlab.io/howto-windows.html)
 
-QEMU 5.0, libvirt 6.6, virtmanager 3.0, are available for Ubuntu 20.04:
+1. Install [WinFsp](http://www.secfs.net/winfsp)
+2. Install virtiofs PCI device driver: Device manager, right click Mass storage device, use virtio-win ISO to install drivers
+3. Copy `E:\viofs\w10\amd64` (E drive is your virtio-win ISO drivers) to a local location (sample `C:\virtiofs`).
+4. Install virtio service on windows (open terminal as administrator).
 
-* <https://launchpad.net/~jacob/+archive/ubuntu/virtualisation?field.series_filter=focal>
-
-#### CLI install
-```bash
-sudo add-apt-repository ppa:jacob/virtualisation
-sudo apt-get update
+```
+sc.exe create VirtioFsSvc binpath="C:\virtiofs\virtiofs.exe" start=auto depend="WinFsp.Launcher/VirtioFsDrv" DisplayName="Virtio FS Service"
 ```
 
-#### Ansible install
+6. Start VirtioFsSvc (open terminal as administrator).
 
-```yaml
-- name: "Add Jacob Zimmermann APT repo"
-  apt_repository:
-    repo: ppa:jacob/virtualisation
-    state: present
-    codename: focal
-
-    - name: "APT VM packages"
-  apt:
-    name:
-      - qemu-kvm
-      - qemu-utils
-      - libvirt-daemon-system
-      - libvirt-clients
-      - virt-manager
-      - ovmf
-      - libhugetlbfs-bin      # hugeadm: Tools to ease use of hugetlbfs
 ```
+sc.exe start VirtioFsSvc
+```
+
+![virtiofs terminal](/img/virtiofs-start-svc.png)
+
+
 ## VGA
 
 ### Recomendations
