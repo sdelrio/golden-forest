@@ -57,7 +57,7 @@ qemu-aarch64_be version 5.0.0 (Debian 1:5.0-5ubuntu6~ppa0)
 Copyright (c) 2003-2020 Fabrice Bellard and the QEMU Project developers
 ```
 
-* libvirt 6.2
+* libvirt 6.2+ (in my case i got 6.6.0)
 
 ```bash
 $ libvirtd -V
@@ -67,7 +67,7 @@ libvirtd (libvirt) 6.6.0
 * `memory_backend_dir` enabled on libvirt.conf
 
 ```bash
-grep memoery_backing_dir /etc/libvirt/qemu.conf
+grep memory_backing_dir /etc/libvirt/qemu.conf
 memory_backing_dir = "/var/lib/libvirt/qemu/ram"
 ```
 
@@ -239,6 +239,10 @@ Example, if you have 2 VMs named `wind10` and `ubuntu20`:
 
 * [My hugepages hook script](https://github.com/sdelrio/ansible-workstation/blob/master/roles/kvm/files/hooks/hugepages.sh)
 
+## Windonws 10 VM
+
+* [Windows 10 KVM VN on Ryzen 9 3900x using qemu and vga passthrough](https://www.heiko-sieger.info/creating-a-windows-10-vm-on-the-amd-ryzen-9-3900x-using-qemu-4-0-and-vga-passthrough/)
+
 ## Gaming VM
 
 * [Performance of your gaming VM](https://rokups.github.io/#!pages/gaming-vm-performance.md)
@@ -365,4 +369,23 @@ Find the block `<cpu>...</cpu>` and adapt like this:
 libvirt-wakenlan, a daemon which listens for wake on LAN packets and starts libvirt based virtual machines
 
 * [GitHub libvirt-wakeonlan](https://github.com/simoncadman/libvirt-wakeonlan)
+
+## Apparmor
+
+When you find some vm not sarting, check for dmesg or `/var/log/syslog`.
+
+
+### libvirt denied capname `sysrawio`
+```log
+[ 2592.816582] audit: type=1400 audit(1638036341.363:33): apparmor="DENIED" operation="capable" profile="libvirtd" pid=4545 comm="prio-rpc-worker" capability=17  capname="sys_rawio"
+[ 2593.030984] audit: type=1400 audit(1638036341.575:34): apparmor="DENIED" operation="capable" profile="libvirtd" pid=47974 comm="libvirt_parthel" capability=17  capname="sys_rawio"
+[ 2593.045133] audit: type=1400 audit(1638036341.591:35): apparmor="DENIED" operation="capable" profile="libvirtd" pid=47977 comm="libvirt_parthel" capability=17  capname="sys_rawio"
+```
+
+Edit apparmor and add `capability sys_rawio,` (the comma at the end too) and restart libvirt service
+
+```bash
+sudo vi /etc/apparmor.d/abstractions/libvirt-qemu
+sudo systemctl restart libvirtd
+```
 
