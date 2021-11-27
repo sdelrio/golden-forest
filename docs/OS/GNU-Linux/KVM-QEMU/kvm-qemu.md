@@ -139,4 +139,29 @@ sudo apt-get update
       - ovmf
       - libhugetlbfs-bin      # hugeadm: Tools to ease use of hugetlbfs
 ```
+## VGA
+
+### Recomendations
+
+For the desktop use case (assuming display performance matters and/or you need multihead support), in order of preference:
+
+1. `virtio` vga or `virtio-gpu-pci`, if your guest has drivers
+2. `qxl` vga, if your guest has drivers
+3. `bochs` display device, when using UEFI
+4. `std`, standard VGA
+
+For the server use case (assuming the GUI is rarely used, or not at all), in order of preference:
+
+1. `none`: serial console, if you can work without a GUI
+2. `bochs` display device, when using UEFI
+3. `std`, standard VGA
+
+On arm systems display devices with a pci memory bar do not work, which reduces the choices alot. We are left with:
+
+1. `virtio-gpu-pci` virtio gpu, if your guest has drivers
+2. `ramfb`
+
+### References
+
+* [VGA and other display devices in qemu](https://www.kraxel.org/blog/2019/09/display-devices-in-qemu/)
 
