@@ -23,6 +23,8 @@ exit
 
 Write yes when you get question on `bootrec` command.
 
+![Windows terminal](/img/windows-mbr.png)
+
 Press `continue` option after exit from the terminal.
 
 
