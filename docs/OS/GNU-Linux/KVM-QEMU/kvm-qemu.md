@@ -165,3 +165,46 @@ On arm systems display devices with a pci memory bar do not work, which reduces 
 
 * [VGA and other display devices in qemu](https://www.kraxel.org/blog/2019/09/display-devices-in-qemu/)
 
+## PCI passthrough
+
+Usually very complex and recomended only for advanced users.
+
+## USB hotplug
+
+
+### Attach a USB device
+
+Attach your device to your VM using virtmanager. You will end up with a section like this in your machine definition:
+
+1. Copy this snippets to a new file `/etc/libvirt/snippets/SNIPPET.xml`
+
+```xml
+<hostdev mode='subsystem' type='usb' managed='yes'>
+  <source>
+    <vendor id='0x04f9'/>
+    <product id='0x2015'/>
+  </source>
+  <address type='usb' bus='0' port='4'/>
+</hostdev>
+```
+
+2. Load the snippet into the Virtual Machine:
+
+```bash
+$ virsh attach-device VMNAME /etc/libvirt/snippets/SNIPPET.xml
+Device attached successfully
+```
+
+3. Find `ENV{PRODUCT}` using `udevadm monitor --environment`
+
+4. Add a `/etc/udev/rules.d/90-libvirt-usb.rules` to automate this plugin and unpluggin using `udev`.
+
+```
+ACTION=="add",    SUBSYSTEM=="usb", ENV{PRODUCT}=="4f9/2015/100", RUN+="/usr/bin/virsh attach-device VMNAME /etc/libvirt/snippets/SNIPPET.xml"
+ACTION=="remove", SUBSYSTEM=="usb", ENV{PRODUCT}=="4f9/2015/100", RUN+="/usr/bin/virsh detach-device VMNAME /etc/libvirt/snippets/SNIPPET.xml"
+```
+
+#### References
+
+* [2020: Hotplug USB devices into libvirt VMS](https://blog.tinyhost.de/blog/2020-05-01_libvirt_usb.html)
+
