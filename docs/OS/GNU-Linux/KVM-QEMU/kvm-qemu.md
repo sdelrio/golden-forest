@@ -243,3 +243,10 @@ Example, if you have 2 VMs named `wind10` and `ubuntu20`:
 
 * [Performance of your gaming VM](https://rokups.github.io/#!pages/gaming-vm-performance.md)
 
+
+## WakeonLan
+
+libvirt-wakenlan, a daemon which listens for wake on LAN packets and starts libvirt based virtual machines
+
+* [GitHub libvirt-wakeonlan](https://github.com/simoncadman/libvirt-wakeonlan)
+
