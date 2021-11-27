@@ -269,7 +269,8 @@ Example, if you have 2 VMs named `wind10` and `ubuntu20`:
 ## Gaming VM
 
 * [Performance of your gaming VM](https://rokups.github.io/#!pages/gaming-vm-performance.md)
-* [Guide to performance optimizations for gaming on VM with QEMU and PCI passthrough](https://mathiashueber.com/performance-tweaks-gaming-on-virtual-machines/)
+* [2021: Guide to performance optimizations for gaming on VM with QEMU and PCI passthrough](https://mathiashueber.com/performance-tweaks-gaming-on-virtual-machines/)
+* [2020: VM with PCI passthrough on Ubuntu 20.04 for gaming machine](https://mathiashueber.com/pci-passthrough-ubuntu-2004-virtual-machine/)
 
 ## CPU Pinning
 
