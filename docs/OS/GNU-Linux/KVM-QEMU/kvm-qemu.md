@@ -208,3 +208,38 @@ ACTION=="remove", SUBSYSTEM=="usb", ENV{PRODUCT}=="4f9/2015/100", RUN+="/usr/bin
 
 * [2020: Hotplug USB devices into libvirt VMS](https://blog.tinyhost.de/blog/2020-05-01_libvirt_usb.html)
 
+## Huge Pages
+
+HugePages is a feature integrated into the Linux kernel since v2.6. It makes possible for the OS to suport memory pages greater than the default (usually 4KB). Using very large page sizes can improve system performance by reduccing the ammount of system resources required to access page tables entries.. I't size vary from 2MB to 256oMB, depending on the kernel version and the harware architecture.
+This feature is commonly enabled in VMs and big Databases.
+
+For KVM/libvirt case I put a hugepages scripts on `/etc/libvirt/hooks/hugepages.sh` and then make symbolic links from each libvirtvm hook to that one. For.
+
+Example, if you have 2 VMs named `wind10` and `ubuntu20`:
+```
+/etc/libvirt/hooks/
+  huepages.sh
+  qemu
+  qemu.d/
+    win10/
+      prepare/
+        begin/
+          hugepages.sh -> ../../../../hugepages.sh
+      release/
+        end/
+          hugepages.sh -> ../../../../hugepages.sh
+    ubuntu20/
+      prepare/
+        begin/
+          hugepages.sh -> ../../../../hugepages.sh
+      release/
+        end/
+          hugepages.sh -> ../../../../hugepages.sh
+```
+
+* [My hugepages hook script](https://github.com/sdelrio/ansible-workstation/blob/master/roles/kvm/files/hooks/hugepages.sh)
+
+## Gaming VM
+
+* [Performance of your gaming VM](https://rokups.github.io/#!pages/gaming-vm-performance.md)
+
