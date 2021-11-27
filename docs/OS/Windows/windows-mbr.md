@@ -27,4 +27,9 @@ Write yes when you get question on `bootrec` command.
 
 Press `continue` option after exit from the terminal.
 
+## UEFI repair
+
+```
+bcdboot D:\windows /s C: /f UEFI
+```
 
