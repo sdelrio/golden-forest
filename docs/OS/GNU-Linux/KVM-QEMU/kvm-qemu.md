@@ -242,7 +242,123 @@ Example, if you have 2 VMs named `wind10` and `ubuntu20`:
 ## Gaming VM
 
 * [Performance of your gaming VM](https://rokups.github.io/#!pages/gaming-vm-performance.md)
+* [Guide to performance optimizations for gaming on VM with QEMU and PCI passthrough](https://mathiashueber.com/performance-tweaks-gaming-on-virtual-machines/)
 
+## CPU Pinning
+
+CPU-pinning will allocate CPU-cores for the guest VM while it is running. The idea is the host machine not using the guest CPU cores pinned inside the VM.
+
+A more agresive aproach could be to use `isolcpus` kernel command line as linux boot parameter to restrict access even if the VM is not running.
+
+<details>
+ <summary>isolcpu kernel parameters</summary>
+  <div>
+
+:::note
+https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF#With_isolcpus_kernel_parameter
+
+Example, let us assume you are using CPUs 4-7. Use the kernel parameters `isolcpus nohz_full rcu_nocbs` to completely isolate the CPUs from the kernel. For example:
+
+```bash
+isolcpus=4-7 nohz_full=4-7 rcu_nocbs=4-7
+```
+
+Then, run `qemu-system-x86_64` with taskset and chrt:
+
+```bash
+chrt -r 1 taskset -c 4-7 qemu-system-x86_64 ...
+```
+
+The `chrt` command will ensure that the task scheduler will round-robin distribute work (otherwise it will all stay on the first cpu). For taskset, the CPU numbers can be comma- and/or dash-separated, like "0,1,2,3" or "0-4" or "1,7-8,10" etc.
+:::
+
+  </div>
+</details>
+
+### AMD Ryzen 3900
+
+![cpu-ryzen3k](/img/lstopo-cpu-ryzen3900.png)
+
+:::noteScrenshot from lstopo cli tool
+Tool to see CPU architecture, usually in all mayor distributions.
+
+* Ubuntu/Mint: `apt-get install hwloc`
+:::
+
+AMD Ryzen 3900 has 12 physical cores, each core with 2 threads, with a total of 24 cores availabe to make the cpu pinning.
+
+The 12 cores are spared in 4 complex of 3 physical cores called CCX.
+
+Each CCX has his own L3 (16MB) cache.
+
+Depending on the power needed inside the VM we could set:
+
+* 1 CCX for the host and 3 CCX for the VM
+* 2 CCX for the host and 2 CCX for the VM
+* ...
+* `n` CCX for the hots and `4-n` CCX for the VM
+
+In this example will choose 2 for the host and 2 for the VM:
+
+![pin cpu ryen3900](/img/lstopo-pin-cpu-ryzen3900.png)
+
+#### Manual edit your VM xml
+
+Edit your VM xml settings wiht `virsh edit your-windows-vm-name`
+
+#### Domain schema
+
+Search for
+
+```xml
+<domain type='kvm'>
+```
+
+and repace with:
+
+```xml
+<domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
+```
+
+#### Update vcpu section
+
+Find line within `<vcpu>....</vcpu>` and add the following block:
+
+```xml
+<vcpu placement='static'>12</vcpu>
+<iothreads>2</iothreads>
+<cputune>
+    <vcpupin vcpu='0' cpuset='12'/>
+    <vcpupin vcpu='1' cpuset='13'/>
+    <vcpupin vcpu='2' cpuset='14'/>
+    <vcpupin vcpu='3' cpuset='15'/>
+    <vcpupin vcpu='4' cpuset='16'/>
+    <vcpupin vcpu='5' cpuset='17'/>
+    <vcpupin vcpu='6' cpuset='18'/>
+    <vcpupin vcpu='7' cpuset='19'/>
+    <vcpupin vcpu='8' cpuset='20'/>
+    <vcpupin vcpu='9' cpuset='21'/>
+    <vcpupin vcpu='10' cpuset='22'/>
+    <vcpupin vcpu='11' cpuset='23'/>
+    <emulatorpin cpuset='0-1'/>
+    <iothreadpin iothread='1' cpuset='0-1'/>
+    <iothreadpin iothread='2' cpuset='2-3'/>
+ </cputune>
+```
+
+#### Update cpu section
+
+
+Find the block `<cpu>...</cpu>` and adapt like this:
+
+```xml
+<cpu mode='host-passthrough' check='none'>
+    <topology sockets='1' cores='6' threads='2'/>
+    <cache mode='passthrough'/>
+    <feature policy='require' name='topoext'/>
+    <!-- add additional cpu features here-->
+</cpu>
+```
 
 ## WakeonLan
 
