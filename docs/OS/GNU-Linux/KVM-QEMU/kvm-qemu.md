@@ -35,7 +35,7 @@ Set `security_driver = "none"` if you need some special privilege, like VGA or U
 
 ## virtio-fs
 
-Virtiofs is a shared file system that lets virtual machines access a directory tree on the host. Unlike existing approaches, it is designed to offer local file system semantics and performance. 
+Virtiofs is a shared file system that lets virtual machines access a directory tree on the host. Unlike existing approaches, it is designed to offer local file system semantics and performance.
 
 * <https://virtio-fs.gitlab.io/>
 
@@ -162,6 +162,33 @@ sc.exe start VirtioFsSvc
 ![virtiofs terminal](/img/virtiofs-start-svc.png)
 
 
+## PCI passthrough
+
+### Check if is `amd_iommu=on` & `amd_iommu=pt` enabled
+
+```bash
+$ dmesg | grep AMD-Vi
+[    1.498933] pci 0000:00:00.2: AMD-Vi: IOMMU performance counters supported
+[    1.503260] pci 0000:00:00.2: AMD-Vi: Found IOMMU cap 0x40
+[    1.503261] pci 0000:00:00.2: AMD-Vi: Extended features (0x58f77ef22294ade):
+[    1.503263] AMD-Vi: Interrupt remapping enabled
+[    1.503263] AMD-Vi: Virtual APIC enabled
+[    1.503263] AMD-Vi: X2APIC enabled
+[    1.503333] AMD-Vi: Lazy IO/TLB flushing enabled
+[    1.801913] AMD-Vi: AMD IOMMUv2 driver by Joerg Roedel <jroedel@suse.de>
+$ lspci | grep VGA
+09:00.0 VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] Ellesmere [Radeon RX 470/480/570/570X/580/580X/590] (rev cf)
+$ lspci | grep VGA
+09:00.0 VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] Ellesmere [Radeon RX 470/480/570/570X/580/580X/590] (rev cf)
+$ lspci -nn|grep 09:00
+09:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Ellesmere [Radeon RX 470/480/570/570X/580/580X/590] [1002:67df] (rev cf)
+09:00.1 Audio de
+```
+
+VGA has two devices, the first one is the graphics card and the second is the hdmi audio. In some graphics cards are even 3 of them (like usb or serial port). If you going to do a PCI passthrough to a VM you have to pass all the PCI IDs from that card.
+
+* [ArchLinux PCI passthrough via OVMF](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF)
+
 ## VGA
 
 ### Recomendations
@@ -264,7 +291,8 @@ Example, if you have 2 VMs named `wind10` and `ubuntu20`:
 
 ## Windonws 10 VM
 
-* [Windows 10 KVM VN on Ryzen 9 3900x using qemu and vga passthrough](https://www.heiko-sieger.info/creating-a-windows-10-vm-on-the-amd-ryzen-9-3900x-using-qemu-4-0-and-vga-passthrough/)
+* [09/2021: Running Windows 10 on Linux using KVM wiht VGA passthrough](https://www.heiko-sieger.info/running-windows-10-on-linux-using-kvm-with-vga-passthrough/)
+* [10/2021: Windows 10 KVM VN on Ryzen 9 3900x using qemu and vga passthrough](https://www.heiko-sieger.info/creating-a-windows-10-vm-on-the-amd-ryzen-9-3900x-using-qemu-4-0-and-vga-passthrough/)
 
 ## Gaming VM
 
