@@ -196,7 +196,29 @@ VGA has two devices, the first one is the graphics card and the second is the hd
 For the desktop use case (assuming display performance matters and/or you need multihead support), in order of preference:
 
 1. `virtio` vga or `virtio-gpu-pci`, if your guest has drivers
-2. `qxl` vga, if your guest has drivers
+2. `qxl` vga, if your guest has drivers.
+
+:::note
+If guest is windows, is recomended to this enable change resolution when you resize the spice window and enable copy/paste from/to VM, so make sure you do this:
+
+* Install [spice-guest-tools](https://www.spice-space.org/download/windows/spice-guest-tools/spice-guest-tools-latest.exe) .
+* Install spice VD agent.
+
+```bash
+apt-get install spice-vdagent
+```
+
+* Make sure that in the qemu xml you have a ve the spicevmc channel into the `<devices>...</devices>` section.
+
+```xml
+<channel type="spicevmc">
+  <target type="virtio" name="com.redhat.spice.0" state="disconnected"/>
+  <alias name="channel0"/>
+  <address type="virtio-serial" controller="0" bus="0" port="1"/>
+</channel>
+```
+:::
+
 3. `bochs` display device, when using UEFI
 4. `std`, standard VGA
 
