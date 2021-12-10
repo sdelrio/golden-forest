@@ -194,6 +194,36 @@ VGA has two devices, the first one is the graphics card and the second is the hd
 
 * [ArchLinux PCI passthrough via OVMF](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF)
 
+### Remove the device and rescan PCIe bus
+
+Removing the PCIe device via the remove function in its directory and reloading it via the PCIe bus' rescan function causes the kernel to power-cycle the PCIe device without rebooting your computer.
+
+```bash
+echo "1" > /sys/bus/pci/devices/DDDD\:BB\:DD.F/remove
+sleep 1
+echo "1" > /sys/bus/pci/rescan
+```
+
+In the above code, `DDDD:BB:DD.F` is the device slot format Domain:Bus:Device.Function.
+
+
+:::note AMD VGA
+On some Radeon cards, it can't be rebooted
+:::
+
+
+#### References
+
+* <https://unix.stackexchange.com/questions/73908/how-to-reset-cycle-power-to-a-pcie-device/245184#245184>
+
+### Poweroff discrete graphis
+
+```
+powerdown vga powersave
+```
+
+* <https://askubuntu.com/questions/771562/16-04-power-off-discrete-graphics-ati-amd>
+
 ## VGA
 
 ### Recomendations
