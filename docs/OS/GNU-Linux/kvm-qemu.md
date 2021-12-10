@@ -1,5 +1,10 @@
 # KVM/QEMU
 
+## KVM UI managers
+
+* [Kimchi: HTML5 management interface](https://github.com/kimchi-project/kimchi/)
+* [vir-manager: desktop app availabe in most distributions](https://virt-manager.org/)
+
 ## qemu.conf
 
 ### UEFI BIOS
