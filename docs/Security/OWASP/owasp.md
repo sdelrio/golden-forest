@@ -12,7 +12,7 @@ Online community that produces freely-available:
 
 In the field of Web Application Security.
 
-Since 2003 they publish the [Top 10 project](/https://owasp.org/www-project-top-ten), identifing some of the most critical reisk facing organization.
+Since 2003 they publish the [Top 10 project](https://owasp.org/www-project-top-ten), identifing some of the most critical reisk facing organization.
 
 * [2021 Top 10 summary](https://thenewstack.io/owasp-top-10-a-guide-to-the-worst-software-vulnerabilities/)
 
