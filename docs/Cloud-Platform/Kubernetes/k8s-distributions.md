@@ -18,7 +18,33 @@ Lightweight Kubernetes, certified disribution for IoT & Edge computing.
 
 It doesn't have any cloud feature (no AWS, no GKE), so it's very small. Packaged with a single &lt;50MB binary.
 
-### Install cluster
+## kind
+
+[kind](https://kind.sigs.k8s.io/) is a tool for running local Kubernetes clusters using Docker container “nodes”.
+kind was primarily designed for testing Kubernetes itself, but may be used for local development or CI.
+
+### Simple command to create a kind cluster
+```bash
+kind create cluster
+kind create cluster --loglevel=debug
+```
+
+### Issues
+
+#### Stuck at "Starting control panel"
+
+* <https://github.com/kubernetes-sigs/kind/issues/440>
+
+#### Create cluster fails - kind-control-plane does not work on zfs
+
+* <https://github.com/kubernetes-sigs/kind/issues/440>
+
+#### ZFS workarounds
+
+* <https://gist.github.com/sdelrio/fd628669a9cda68ebc6ca591e1e791ee>
+* <https://github.com/ashald/docker-volume-loopback>
+
+# Install cluster
 
 * [Ansible](https://github.com/k3s-io/k3s-ansible) (Debian/Ubuntu/CentOS)(x64/arm64/armhf)
 * [Tutorial: HA on the Edge (etcd)](https://thenewstack.io/tutorial-install-a-highly-available-k3s-cluster-at-the-edge/)
