@@ -1,5 +1,18 @@
 # Darktable
 
+# Darktable seggings for Lightroom users
+
+* [2020: Recommended Darktable 3.0 settings for Lightroom user](https://mathiashueber.com/darktable-settings-for-lightroom-user/)
+* [2020: Migrate from Lightroom to open source alternatives](https://mathiashueber.com/migrate-from-lightroom-to-open-source-alternative/)
+
+## HDR landscape stacking
+
+* [Sunrise Bracket](https://www.youtube.com/watch?v=5EfFZ-2YddU)
+
+## Denoising
+
+* [2020: Denoising with darktable 3.0.1 - How to use wavelets Y0U0V0 mode](https://www.youtube.com/watch?v=7ZhbeXpx2W8)
+
 ## Camera Profiling with Darktable-chart
 
 ![](/img/colorchecker.jpg)
@@ -11,6 +24,11 @@
 ```
 
 * <https://www.darktable.org/2016/05/colour-manipulation-with-the-colour-checker-lut-module/>
+* [GitHub pmjdebrujin/ColorMatch create ICC standr color profiles from jpgs camera profiles](https://github.com/pmjdebruijn/colormatch)
+* [2017: Let's Build our own Basecurves](https://www.youtube.com/watch?v=LufwQZx01gk)
+* [2016: Creating camera input profile with ColorCheker Passport](https://tomassobekphotography.co.nz/articles/create-camera-input-profile-with-ColorChecker-Passport.php)
+* [2014: How to make better Custom Camera Input profile](https://ninedegreesbelow.com/photography/well-behaved-camera-profile.html)
+* [2014: How can I use colorchecker passport with darktable?](https://www.reddit.com/r/photography/comments/2u0b07/how_can_i_use_the_colorchecker_passport_with/)
 
 ### DisplayCall
 
@@ -37,4 +55,25 @@ Display calibration and profiling with a focus on accuracy and versatility
 #### References
 
 * [homepage](https://displaycal.net/)
+
+#### OpenCL AMD drivers
+
+* [Install AMD ROCm — ROCm Documentation 1.0.0 documentation](https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation-Guide.html#ubuntu)
+* [Install OpenCL 2.0 driver for AMD GPU](https://askubuntu.com/questions/1223032/install-opencl-2-0-driver-for-amd-gpu-on-ubuntu-19-10-whats-my-options)
+* [AMD RAdeon Ubuntu 20.04 Driver installation](https://linuxconfig.org/amd-radeon-ubuntu-20-04-driver-installation)
+
+* [ROCm 3.3 on Ubuntu 20.04 fix install errors](https://www.youtube.com/watch?v=9a47-nCZ1MA)
+
+```
+wget -q -O - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key add -
+apt install rocm-dkms
+apt-cache policy rocm-opencl
+
+sudo vi /etc/apt/sources.list.d/rocm.list
+sudo apt install rocm-dkms
+wget -q -O - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key add -
+echo 'deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main' | sudo tee /etc/apt/sources.list.d/rocm.list
+cat /etc/apt/sources.list.d/rocm.list
+```
+ROCm 3.5.0 works but give python warnings
 
