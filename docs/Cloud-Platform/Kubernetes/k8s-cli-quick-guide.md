@@ -20,6 +20,22 @@ kubectl get nodes -o json | jq .items[].spec
 kubectl config set-context --current --namespace=mynamespace
 ```
 
+## Network debug
+
+Spin up a throw away container for debugging.
+
+```bash
+kubectl run tmp-shell --rm -i --tty --image nicolaka/netshoot -- /bin/bash
+```
+
+And if you want to spin up a container on the host's network namespace.
+
+```bash
+$ kubectl run tmp-shell --rm -i --tty --overrides='{"spec": {"hostNetwork": true}}' --image nicolaka/netshoot -- /bin/bash
+```
+
+* [GitHub](https://github.com/nicolaka/netshoot)
+
 ## K8s Cheat Sheets
 
 * <https://kubernetes.io/docs/reference/kubectl/cheatsheet/>
