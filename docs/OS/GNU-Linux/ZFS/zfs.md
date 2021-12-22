@@ -17,7 +17,6 @@ tags:
 
 ## Mount
 
-
 ### mounts external disk share
 
 ```bash
@@ -38,8 +37,25 @@ zpool import -o readonly=on {{ pool_name }}
 mount -t zfs {{ pool_name }}/{{ snapshot_name }} {{ mount_path }} -o ro
 ```
 
-
 ## Pool
+
+### Create
+
+:::note Note: Use `disk by-id`
+Use `/dev/disk/by-id/` instead `/dev/sdX`. This way doesn't matter where you plug the hard disk in the controller.
+:::
+
+#### Command
+
+```bash
+zpool create hddpool mirror /dev/disk/by-id/... /dev/disk/by-id/...
+```
+
+#### Sample
+
+```bash
+zpool create hddpool mirror /dev/disk/by-id/ata-Hitachi_HDS5C3020ALA632_ML4220F424ERTK /dev/disk/by-id/ata-Hitachi_HDS5C3020ALA632_ML4220F31666VK
+```
 
 ### List
 ```
@@ -53,9 +69,102 @@ hddpool  1,81T   461G  1,36T        -         -     0%    24%  1.00x    ONLINE  
 rpool     460G   164G   296G        -         -    24%    35%  1.00x    ONLINE  -
 ```
 
-## List Volumes
+### Cache (ZIL/ARC)
 
-### With space usage
+* ZFS Intent Log, or ZIL, is designed to buffer **WRITE** operations
+* ARC and L2ARC are ment for **READ** operations
+
+[Configure ZFS cache for high Speed IO](https://linuxhint.com/configuring-zfs-cache/)
+[ZFS sync/async + ZIL/SLOG explained](https://jrs-s.net/2019/05/02/zfs-sync-async-zil-slog/)
+[TrueNas SLOG](https://www.truenas.com/docs/references/slog/)
+
+#### ZIL Log
+
+[Exploring the Best ZFS ZIL SLOG SSD with Intel Optane and NAND](https://www.servethehome.com/exploring-best-zfs-zil-slog-ssd-intel-optane-nand/)
+
+* 2020 winner: Optane 900p 28GB
+
+##### Sample creating ZIL log
+
+```bash
+$ sudo zpool add hddpool log /dev/disk/by-id/ata-DP-CT050M4SSC2_000000001207032EBBDB
+
+$ sudo zpool iostat hddpool -v
+                                                  capacity     operations     bandwidth 
+pool                                            alloc   free   read  write   read  write
+----------------------------------------------  -----  -----  -----  -----  -----  -----
+hddpool                                          433G  1,39T      6    111  61,5K  83,2M
+  mirror                                         433G  1,39T      6    111  61,5K  83,2M
+    ata-Hitachi_HDS5C3020ALA632_ML4220F312ERTK      -      -      3     55  31,8K  41,6M
+    ata-Hitachi_HDS5C3020ALA632_ML4220F31538VK      -      -      3     56  29,6K  41,6M
+logs                                                -      -      -      -      -      -
+  ata-DP-CT050M4SSC2_000000001207032EBBDB           0  59,5G      0      0     10  1,02K
+----------------------------------------------  -----  -----  -----  -----  -----  -----
+```
+
+* Force sync always to pool log, this can lower a lot the performance, even if the log is a normal SSD
+
+```bash
+sudo zfs set sync=always hddpool
+```
+
+#### Clear arz zfs cache
+
+```bash
+sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
+```
+
+### Upgrade zpool
+
+1. `zpool scrub pvepool1`
+2. `zpool status pvepool1`
+3. Pull one disk
+4. Insert new  disk
+5. `zpool status pvepool1`
+6. `dmesg`
+7. `zpool replace pvepool1 /dev/disk/by-id/...`
+8. `zpool scrub pvepool1`
+9. `zpool status pvepool1`
+
+Repeat the process for other disks, and then turn on autoexpand
+
+```bash
+zpool set autoexpand=on pvepool1
+zpool online -e pvepool1 /dev/disk/by-id/...id1
+zpool online -e pvepool1 /dev/disk/by-id/...id2
+zpool online -e pvepool1 /dev/disk/by-id/...id3
+zpool online -e pvepool1 /dev/disk/by-id/...id4
+```
+
+#### References
+
+* [56TB Zpool upgrade](https://b3n.org/56tb-zpool-upgrade/)
+
+## ZFS Filesystem or volumes (ZVOL)
+
+### Create
+
+```bash
+zfs create tank/home
+```
+
+### Samples
+
+* Create with default parameters
+
+```bash
+sudo zfs create hddpool/imagenes
+```
+
+* Create with compression enabled
+
+```bash
+sudo zfs create hddpool/vms -o compress=on
+```
+
+### List Volumes
+
+#### With space usage
 ```bash
 zfs list -o space
 ```
@@ -79,9 +188,49 @@ rpool/ROOT/ubuntu_awq93l/srv                281G   272K       80K    192K       
 (...)
 ```
 
-## List snapshots
+## Snapshots
 
-### Standard
+### Tools
+
+#### Ubuntu `zfs-auto-snapshot`
+
+```
+$ apt-cache show zfs-auto-snapshot
+Package: zfs-auto-snapshot
+Architecture: all
+Version: 1.2.4-2
+Priority: extra
+Section: multiverse/utils
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jonathan Carter <jcc@debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 41
+Depends: cron, zfsutils-linux
+Filename: pool/multiverse/z/zfs-auto-snapshot/zfs-auto-snapshot_1.2.4-2_all.deb
+Size: 8652
+MD5sum: 97ae5b7f86d15c41103e5874b2348699
+SHA1: e40530df79e5d4758ea19e34759c10d6f7ac2c95
+SHA256: 2fb1271116627b687e85ef40cc32a772b39c5e82ca5f9a6e687e92e97b67cae7
+Homepage: https://github.com/zfsonlinux/zfs-auto-snapshot
+Description-en: ZFS automatic snapshot service
+ Automatically create, rotate, and destroy periodic ZFS snapshots. This is
+ the utility that creates the @zfs-auto-snap_frequent, @zfs-auto-snap_hourly,
+ @zfs-auto-snap_daily, @zfs-auto-snap_weekly, and @zfs-auto-snap_monthly
+ snapshots if it is installed.
+ .
+ This program is a posixly correct bourne shell script. It depends only on
+ the zfs utilities and cron, and can run in the dash shell.
+Description-md5: 50b5e87f01f77e852b84260e57dc2473
+```
+
+##### Install
+
+```
+apt install zfs-auto-snapshot
+```
+
+### List snapshots (standard)
 
 ```bash
 zfs list -t snapshot
@@ -122,7 +271,7 @@ rpool/ROOT/ubuntu_awq93l/var/www@autozsys_sslfo1      0B      -      192K  -
 (...)
 ```
 
-### Detailed
+### List snapshots (detailed)
 ```bash
 zfs list -t snapshot -o name,used,referenced,creation -s creation
 ```
@@ -141,6 +290,19 @@ rpool/var/lib/docker/f13856143025fcd4b664d9df7e13ae7e0f4b6d5ad2b3127bb4121a857da
 rpool/var/lib/docker/b83cf8fb8f07d0b27025c294d6ac6962b82836c441620d489cc4dad1c5d5ccf2@376293604       2,44M     35,8M  sáb may 22 17:54 2021
 ```
 
+### Delete snapshots
+
+#### Samples
+
+* Delete last snapshot:
+
+```bash
+zfs list -H -t snapshot -o name -S creation -r bpool | tail -5 | xargs -n 1 zfs destroy
+```
+
+#### References
+
+* [ZFS delete oldest n snapshots](https://techblog.jeppson.org/2018/03/zfs-delete-oldest-n-snapshots/)
 
 ## List pools
 
@@ -207,18 +369,49 @@ rpool/USERDATA/didrocks_e2jj0s@autozsys_iynia9 will be detached from system stat
 Would you like to proceed [y/N]? y
 ```
 
+## UI
+
+### Cockpit
+
+```bash
+apt install cockpit
+```
+
+## Backup
+
+### Pyznap
+
+ZFS snapshot tool written in python
+
+`pyznap` is a ZFS snapshot management tool. It automatically takes and deletes snapshots and can send them to different backup locations. You can specify a policy for a given filesystem in the `pyznap.conf` file and then use cron to let it run regularly.
+
+* [GitHub](https://github.com/yboetz/pyznap)
+
+### ZFSbackup-go
+
+Backup ZFS snapshots to cloud storage such as Google, Amazon, Azure, etc. Built with the enterprise in mind.
+
+* [GitHub](https://github.com/someone1/zfsbackup-go)
+
+### Zrepl
+
+One-stop ZFS backup & replication solution
+
+* [GitHub](https://github.com/zrepl/zrepl)
+* [Doc](https://zrepl.github.io0)
+
 ## Resources
 
-### Cheatsheets
-
 * [ZFS-Cheatsheet](https://blog.programster.org/zfs-cheatsheet)
-
-### Ubuntu / Mint
-
+* [Debian Wiki](https://wiki.debian.org/ZFS#Provisioning_file_systems_or_volume)
+  * [Provision filesystem or volume (ZVOL)](https://wiki.debian.org/ZFS#Provisioning_file_systems_or_volume)
+* [Configure ZFS on Ubuntu 20.04](https://linuxconfig.org/configuring-zfs-on-ubuntu-20-04)
+* [2020: Video - Running Ubuntu 20.04 on ZFS](https://www.youtube.com/watch?v=l-iu-cutkyQ)
+* [Ubuntu 20.04 Root on ZFS](https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/Ubuntu%2020.04%20Root%20on%20ZFS.html)
+* [Encrypting ZFS on Ubuntu 20.04](https://linsomniac.gitlab.io/post/2020-04-09-ubuntu-2004-encrypted-zfs/)
 * [Zsys](zsys)
-* <http://zfsonlinux.org/>
-
-### FreeBSD
-
-* <http://zfsguru.com/>
+* [ZFS on linux ](http://zfsonlinux.org/)
+* [FreeBSD ZFS guru](http://zfsguru.com/)
+* [ZFS Plugin for Unraid](https://forums.unraid.net/topic/41333-zfs-plugin-for-unraid/)
+* [NAS with ZFS on RAspberry Pi 4](https://sysops.tv/?page_id=28)
 

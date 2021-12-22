@@ -105,6 +105,40 @@ zsysctl service refresh
 zsysctl service reload
 ```
 
+## Remove state
+
+### User state
+
+```bash
+$ zsysctl show --full |grep r48a3r
+$ zsysctl state remove r48a3r
+rpool/USERDATA/sdelrio_0y06wn@autozsys_r48a3r will be detached from system state rpool/ROOT/ubuntu_awq93l@autozsys_r48a3r
+```
+
+### System state
+
+```bash
+$ sudo zsysctl state remove r48a3r
+```
+
+### Whole system 
+
+adding `--system` (`/boot` included)
+
+```bash
+$ sudo zsysctl state remove r48a3r --system
+```
+
+### User State without any dependency but linked to a system state
+
+```bash
+$ zsysctl state remove rpool/USERDATA/didrocks_e2jj0s@autozsys_iynia9
+rpool/USERDATA/didrocks_e2jj0s@autozsys_iynia9 will be detached from system state rpool/ROOT/ubuntu_qiq15o@autozsys_iynia9
+
+Would you like to proceed [y/N]? y
+```
+
+
 ## References
 
 * <https://github.com/ubuntu/zsys>
