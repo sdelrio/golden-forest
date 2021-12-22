@@ -10,10 +10,19 @@ tags:
 
 # ZFS
 
-:::cautionWIP: Work in progress
-:::
-
 [ZFS](https://en.wikipedia.org/wiki/ZFS) combines a file system with a volume manager.
+
+## Instal Linux Mint 20 with ZFS
+
+Before starting installation, open a terminal and run this command:
+
+```bash
+sudo aptitude -y install libzfs2linux zfs-initramfs zfsutils-linux zfs-zed
+```
+
+Then start installation and when you get to the filesystem picker, choose advanced and select **"Experimental ZFS"**. Continue as you would normally do.
+
+* [ZFS and Linux Mint 20 forums](https://forums.linuxmint.com/viewtopic.php?t=306210)
 
 ## Mount
 
@@ -160,6 +169,12 @@ sudo zfs create hddpool/imagenes
 
 ```bash
 sudo zfs create hddpool/vms -o compress=on
+```
+
+* Create and destroy a 64GB volume, compressed without encruyption
+```
+sudo zfs create rpool/vm-win10 -V 64G -o compress=on -o encryption=off
+sudo zfs destroy rpool/vm-win10
 ```
 
 ### List Volumes
@@ -368,6 +383,74 @@ rpool/USERDATA/didrocks_e2jj0s@autozsys_iynia9 will be detached from system stat
 
 Would you like to proceed [y/N]? y
 ```
+
+## Encryption
+
+### Create and load-key
+
+Sample, create a vol witih compression, encription, and dedup.
+
+```
+zpool create -o ashift=12 -m /mnt/zfs zfs raidz sdb sdc sde
+zfs set compression=lz4 zfs
+zfs set xattr=sa zfs
+zfs set atime=off zfs
+zfs set dedup=on zfs
+zfs set recordsize=1M zfs
+zfs create -o encryption=aes-256-gcm -o keyformat=passphrase -o keylocation=file:///boot/config/zfs.key zfs/homes
+```
+
+```
+zfs load-key zfs/homes
+```
+
+### Key status
+
+```
+zfs get keystatus <dataset>
+```
+
+### Changing wrapping key
+
+Change a wrapping key for a dataset as long as current wrapping key is loaded (`zfs get keystatus <dataset>`)
+
+```bash
+zfs key -c <dataset>
+```
+
+### Change actual data encryption key
+
+```bash
+zfs key -K <dataset>
+```
+
+* [Changing passphrase on encrypted zpool](https://www.reddit.com/r/zfs/comments/7mm237/changing_passphrase_on_encrypted_zpool/)
+
+## Sharing ZFS Datasets
+
+### NFS
+
+1. Install `nfs-kernel-server`
+
+```bash
+sudo apt-get install -y nfs-kernel-server
+```
+
+2. Enable `sharenfs` on the dataset
+
+```bash
+zfs set sharenfs=on pool-name/dataset-name
+```
+
+3. Now you can mount in your NFS client
+
+```bash
+mount -t nfs \
+zfs.host.com:/pool-name/dataset-name \
+/path/to/local/mount
+```
+
+* [Sharing ZFS Dataset via NFS](https://blog.programster.org/sharing-zfs-datasets-via-nfs)
 
 ## UI
 
