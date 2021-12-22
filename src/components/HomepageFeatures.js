@@ -19,15 +19,16 @@ const FeatureList = [
     Svg: require('../../static/img/logo.svg').default,
     description: (
       <>
-        The phrase <i>digital garden</i> is a metaphor for thinking about writing and 
-        creating that focuses less on the resulting <i>showpiece</i> and more on the 
+        The phrase <i>digital garden</i> is a metaphor for thinking about writing and
+        creating that focuses less on the resulting <i>showpiece</i> and more on the
         process, care, and craft it takes to get there.
       </>
     ),
   },
   {
     title: 'Easy to add Content',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('../../static/img/leaves-02.svg').default,
+    //Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     //Svg: require('../../static/img/logo.svg').default,
     description: (
       <>
@@ -61,18 +62,18 @@ function Section({
   return <El className={`Section ${className} ${background}`}>{children}</El>;
 }
 
-function TwoColumns({columnOne, columnTwo, reverse}) {                                       
-  return (                                                                                   
-    <div className={`TwoColumns ${reverse ? 'reverse' : ''}`}>                               
-    ┆ <div className={`column first ${reverse ? 'right' : 'left'}`}>                         
-    ┆   {columnOne}                                                                          
-    ┆ </div>                                                                                 
-    ┆ <div className={`column last ${reverse ? 'left' : 'right'}`}>                          
-    ┆   {columnTwo}                                                                          
-    ┆ </div>                                                                                 
-    </div>                                                                                   
-  );                                                                                         
-}      
+function TwoColumns({columnOne, columnTwo, reverse}) {
+  return (
+    <div className={`TwoColumns ${reverse ? 'reverse' : ''}`}>
+    ┆ <div className={`column first ${reverse ? 'right' : 'left'}`}>
+    ┆   {columnOne}
+    ┆ </div>
+    ┆ <div className={`column last ${reverse ? 'left' : 'right'}`}>
+    ┆   {columnTwo}
+    ┆ </div>
+    </div>
+  );
+}
 
 function LineOne() {
   return (
@@ -82,13 +83,13 @@ function LineOne() {
         columnOne={
           <TextColumn
             tilte="titulo"
-            text="Text" 
+            text="Text"
           />
         }
         columnTwo={
           <TextColumn
             tilte="titulo columna 2"
-            text="Text columna 2" 
+            text="Text columna 2"
           />
         }
       />
