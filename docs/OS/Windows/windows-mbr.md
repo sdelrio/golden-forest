@@ -33,3 +33,17 @@ Press `continue` option after exit from the terminal.
 bcdboot D:\windows /s C: /f UEFI
 ```
 
+## Convert MBR to GPT
+
+Here we will show you how to convert MBR to GPT without data loss in Windows 10, 8, 7. Three different ways will be shared.
+
+```
+bcdboot G:\Windows /s G: /f BIOS
+
+bcdboot G:\Windows /s G: /f UEFI
+
+bcdboot G:\Windows /s G: /f ALL
+```
+
+[How to Convert MBR to GPT without Data Loss in Windows 10, 8, 7?](https://www.diskpart.com/gpt-mbr/convert-mbr-to-gpt-without-data-loss.html)
+
