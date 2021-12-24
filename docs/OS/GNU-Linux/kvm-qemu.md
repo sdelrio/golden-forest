@@ -29,21 +29,36 @@ nvram = [
 ]
 ```
 
-#### Disable securty
+#### Disable security
 
 Set `security_driver = "none"` if you need some special privilege, like VGA or USB passthrough.
+
+#### Console
+
+* Enter into a folder and boot efi manually:
+
+```
+FS1:
+cd EFI
+cd boot
+bootx64.efi
+```
+
+* Set manually a boot file on startup:
+
+```
+echo \EFI\boot\bootx64.efi > \startup.nsh
+```
 
 ## virtio-win isos
 
 * <https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/>
-
 
 ## virtio-fs
 
 Virtiofs is a shared file system that lets virtual machines access a directory tree on the host. Unlike existing approaches, it is designed to offer local file system semantics and performance.
 
 * <https://virtio-fs.gitlab.io/>
-
 
 ### Requirements
 
@@ -194,6 +209,151 @@ VGA has two devices, the first one is the graphics card and the second is the hd
 
 * [ArchLinux PCI passthrough via OVMF](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF)
 
+### VGA Passthrough
+
+* start.sh
+
+```bash
+#!/bin/bash
+# Helpful to read output when debugging
+set -x
+
+echo "hoock start.sh" > /tmp/delete.txt
+
+# Stop display manager
+systemctl stop display-manager.service
+
+## Uncomment the following line if you use GDM
+#killall gdm-x-session
+
+# Unbind VTconsoles
+# /sys/devices/virtual/vtconsole/vtcon0/bind
+echo 0 > /sys/class/vtconsole/vtcon0/bind
+echo 0 > /sys/devices/virtual/vtconsole/vtcon1/bind
+# If have a 2ndn vga:
+#echo 0 > /sys/class/vtconsole/vtcon1/bind
+
+# Unbind EFI-Framebuffer
+#echo efi-framebuffer.0 > /sys/bus/platform/drivers/efi-framebuffer/unbind || true
+
+# Avoid a Race condition by waiting 2 seconds. This can be calibrated to be shorter or longer if required for your system
+sleep 2
+
+# Unload all Nvidia drivers
+#modprobe -r nvidia_drm
+#modprobe -r nvidia_modeset
+#modprobe -r nvidia_uvm
+#modprobe -r nvidia
+
+# Unload 2nd VGA AMDGPU driver
+#DEVS="0000_0a_00_0 0000_0a_00_1"
+
+#for DEV in $DEVS; do
+#  echo -n "$DEV -> "
+#  virsh nodedev-detach pci_${DEV} || ( sleep 1 ; virsh nodedev-detach pci_${DEV} )
+#done
+#sleep 1
+
+# Unbind the GPU from display driver
+#virsh nodedev-detach pci_0000_09_00_0
+#virsh nodedev-detach pci_0000_09_00_1
+DEVS="0000_09_00_0 0000_09_00_1"
+
+for DEV in $DEVS; do
+  echo -n "$DEV -> "
+  virsh nodedev-detach pci_${DEV} || ( sleep 1 ; virsh nodedev-detach pci_${DEV} )
+done
+sleep 1
+
+# Unload AMD GPU driver
+modprobe -r amdgpu
+
+# Load VFIO Kernel Module
+modprobe vfio-pci
+```
+
+* revert.sh
+
+```bash
+#!/bin/bash
+set -x
+
+echo "revert.sh" >> /tmp/deleteme.txt
+
+# Unload VFIO-PCI Kernel Driver
+modprobe -r vfio-pci
+modprobe -r vfio_iommu_type1
+modprobe -r vfio
+  
+# Re-Bind GPU to Nvidia Driver
+#virsh nodedev-reattach pci_0000_0c_00_1
+#virsh nodedev-reattach pci_0000_0c_00_0
+
+# Re-Bind GPU to AMDGPU Driver
+#virsh nodedev-reattach pci_0000_09_00_1
+#virsh nodedev-reattach pci_0000_09_00_0
+
+DEVS="0000_09_00_1 0000_09_00_0"
+
+for DEV in $DEVS; do
+  echo -n "$DEV -> "
+  virsh nodedev-reattach pci_${DEV}
+  echo "$DEV" > /sys/bus/pci/devices/$DEV/driver/unbind
+  echo "$DEV" > /sys/bus/pci/drivers/vfio-pci/unbind
+done
+sleep 1
+
+# Re-Bind AMDGPU
+
+#DEVS="0000_0a_00_0 0000_0a_00_1"
+#
+#for DEV in $DEVS; do
+#  echo -n "$DEV -> "
+#  virsh nodedev-reattach pci_${DEV}
+#done
+#sleep 1
+
+# Rebind VT consoles
+echo 1 > /sys/class/vtconsole/vtcon0/bind
+# Some machines might have more than 1 virtual console. Add a line for each corresponding VTConsole
+#echo 1 > /sys/class/vtconsole/vtcon1/bind
+echo 1 > /sys/devices/virtual/vtconsole/vtcon1/bind
+
+#nvidia-xconfig --query-gpu-info > /dev/null 2>&1
+
+#modprobe nvidia_drm
+#modprobe nvidia_modeset
+#modprobe nvidia_uvm
+#modprobe nvidia
+#sleep as test
+sleep 2
+modprobe amdgpu
+
+#echo "efi-framebuffer.0" > /sys/bus/platform/drivers/efi-framebuffer/bind
+
+# Restart Display Manager
+#systemctl start display-manager.service
+
+systemctl start display-manager.service
+```
+
+* [My prepare start.sh VM for VGA passthrough](https://github.com/sdelrio/ansible-workstation/blob/master/roles/kvm/templates/hooks/amd/prepare/begin/start.sh)
+* [My release revert VM for VGA passthrough](https://github.com/sdelrio/ansible-workstation/blob/master/roles/kvm/templates/hooks/amd/release/end/revert.sh)
+
+#### References
+
+* [How to keep 2nd passthrough graphics card](https://www.reddit.com/r/VFIO/comments/hy2enj/how_to_keep_2nd_passthrough_graphics_card/)
+* [AMD GPU driver to stop grabbinb 2nd GPU](https://www.reddit.com/r/VFIO/comments/73og2w/cant_get_amdgpu_driver_to_stop_grabbing_2nd_gpu/)
+* [Beginner friendly guide to VM with GPU passtrhough on Ubuntu 18](https://mathiashueber.com/windows-virtual-machine-gpu-passthrough-ubuntu/)
+* [GitHub: joeknock90 - Single GPU Passthrough on Linux](https://github.com/joeknock90/Single-GPU-Passthrough)
+* [Video RX470 BIOS Collection](https://www.techpowerup.com/vgabios/?architecture=AMD&manufacturer=MSI&model=RX+470&version=015.050.000.000.000000&interface=&memType=&memSize=&since=)
+* [UEFI (OVMF) compatibility in VBIOS](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF#UEFI_(OVMF)_compatibility_in_VBIOS)
+* [Reddit: Cannot unbind guest GPU from amdgpu driver](https://www.reddit.com/r/VFIO/comments/c93kqs/cannot_unbind_guest_gpu_from_amdgpu_driver/)
+* [PCI passwthrough via OVMF](https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF)
+* [VFIO in 2019 – Pop!_OS How-To (General Guide though)](https://forum.level1techs.com/t/vfio-in-2019-pop-os-how-to-general-guide-though-draft/142287)
+* [Linux KVM GPU pass-through with identical graphic cards](https://bytee.net/blog/kvm-gpu-pass-through-with-identical-cards)
+* [VFIO GPU How To series, part 3 - Host configuration](http://vfio.blogspot.com/2015/05/vfio-gpu-how-to-series-part-3-host.htmlo)
+
 ### Remove the device and rescan PCIe bus
 
 Removing the PCIe device via the remove function in its directory and reloading it via the PCIe bus' rescan function causes the kernel to power-cycle the PCIe device without rebooting your computer.
@@ -215,6 +375,51 @@ On some Radeon cards, it can't be rebooted
 #### References
 
 * <https://unix.stackexchange.com/questions/73908/how-to-reset-cycle-power-to-a-pcie-device/245184#245184>
+
+### List VFIO
+
+* vfio-list.sh
+
+```bash
+#!/bin/sh
+
+DEVS="0000:0a:00.0 0000:0a:00.1"
+
+for DEV in $DEVS; do
+#  echo "vfio-pci" > "/sys/bus/pci/devices/$DEV/driver_override"
+  cat "/sys/bus/pci/devices/$DEV/driver_override"
+#  echo $DEV > "/sys/bus/pci/devices/$DEV/driver/unbind"
+#sudo virsh nodedev-detach pci_0000_0a_00_0
+#sudo virsh nodedev-detach pci_0000_0a_00_1
+done
+sleep 1
+
+echo modprobe amdgpu
+
+for DEV in $DEVS; do
+  lscpi -s $DEV -v 
+done
+
+echo # kernel driver used on pcie
+
+for DEV in $DEVS; do
+  lscpi -s $DEV -nnk
+done
+```
+
+### List IOMMU groups
+
+* `ls-iommu.sh`
+
+```bash
+#!/bin/bash
+for d in /sys/kernel/iommu_groups/*/devices/*; do
+  n=${d#*/iommu_groups/*}; n=${n%%/*}
+  printf 'IOMMU Group %s ' "$n"
+  lspci -nns "${d##*/}"
+done
+```
+
 
 ### Poweroff discrete graphis
 
@@ -344,12 +549,34 @@ Example, if you have 2 VMs named `wind10` and `ubuntu20`:
           hugepages.sh -> ../../../../hugepages.sh
 ```
 
+### Get current Hugepages
+
+```bash
+grep Huge /proc/meminfo
+```
+
+### References
+
 * [My hugepages hook script](https://github.com/sdelrio/ansible-workstation/blob/master/roles/kvm/files/hooks/hugepages.sh)
+* [Howto: Libvirt Automation Using VFIO-Tools Hook Helper](https://passthroughpo.st/simple-per-vm-libvirt-hooks-with-the-vfio-tools-hook-helper/)
+
+## Isolate CPUs using kerne's cgroup cpuset
+
+* [hooks: Add cset CPU isolation hook](https://github.com/PassthroughPOST/VFIO-Tools/blob/master/libvirt_hooks/hooks/cset.sh)
 
 ## Windonws 10 VM
 
 * [09/2021: Running Windows 10 on Linux using KVM wiht VGA passthrough](https://www.heiko-sieger.info/running-windows-10-on-linux-using-kvm-with-vga-passthrough/)
 * [10/2021: Windows 10 KVM VN on Ryzen 9 3900x using qemu and vga passthrough](https://www.heiko-sieger.info/creating-a-windows-10-vm-on-the-amd-ryzen-9-3900x-using-qemu-4-0-and-vga-passthrough/)
+* [2017: Windows 10 in KVM: change boot disk to Virtio](https://superuser.com/questions/1057959/windows-10-in-kvm-change-boot-disk-to-virtio/1200899#1200899)
+* [Windows virt toolkit](https://github.com/mattshortland/windows-virt-toolkit)
+
+## OSX VM
+
+* [Tools to set up a quick macOS VM in QEMU, accelerated by KVM](https://github.com/foxlet/macOS-Simple-KVM)
+* [How to run macOS on KVM/QEMU](https://computingforgeeks.com/how-to-run-macos-on-kvm-qemu/)
+* [Unraid Mac in a Box](https://github.com/SpaceinvaderOne/Macinabox/blob/master/unraid.sh)
+* [2020: Video - Easy Opencore macOS big sur on ryzen](https://www.youtube.com/watch?v=EtVa_Y7gkxc)
 
 ## Gaming VM
 
