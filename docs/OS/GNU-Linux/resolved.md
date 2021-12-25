@@ -1,8 +1,8 @@
-# Disable systemd-resolved
+# Systemd-resolved
 
-## Ubuntu
+## Disable systemd-resolved
 
-
+### Ubuntu
 
 1. Disable and stop sytemd-resolved servicee
 ```bash
@@ -25,4 +25,31 @@ sudo systemctl restart NetworkManager
 ```
 
 * <https://askubuntu.com/questions/907246/how-to-disable-systemd-resolved-in-ubuntu>
+
+### Use resolvconf
+
+To replace systemd and manual set the DNS server
+
+1. Install `resolvconf`:
+```
+sudo apt install resolvconf
+```
+
+2. Edit `tail` file
+
+```
+vi /etc/resolvconf/resolv.conf.d/tail
+```
+
+Set the DNS server we want to use in that file:
+
+```
+nameserver 8.8.8.8
+```
+
+Make sure systemd-resolved is disabled
+
+```
+sudo systemctl disable systemd-resolved
+```
 
