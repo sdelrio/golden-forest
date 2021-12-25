@@ -146,9 +146,11 @@ terraform-resources
    *
 ```
 
+### References
+
+* [Lessons learned from writing 3000.000 lines of IaC code](https://www.slideshare.net/brikis98/lessons-learned-from-writing-over-300000-lines-of-infrastructure-code-120597849)
 
 ## Terrafrom Up & Running
-
 
 ### Samples
 
@@ -170,6 +172,7 @@ Code samples for the book "Terraform: Up & Running" by Yevgeniy Brikman:
 
 * [2020: Terraform Without the mess](https://speakerdeck.com/jen20/terraform-without-the-mess?slide=48)
 * [2017: HashiDays New York 2017](https://github.com/jen20/hashidays-nyc)
+* [2017: Top 3 Terraform Testing Strategies for Ultra-Reliable Infrastructure-as-Code](https://www.contino.io/insights/top-3-terraform-testing-strategies-for-ultra-reliable-infrastructure-as-code)
 
 ### Atlantis
 
