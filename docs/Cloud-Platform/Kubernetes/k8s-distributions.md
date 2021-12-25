@@ -263,6 +263,14 @@ kind create cluster --loglevel=debug
 
 * `/etc/rancher/k3s/k3s.yaml`
 
+## Kubespray
+
+Ansible playbook to deploy a production Ready Kubernetes Cluster
+
+* [Homepage](https://github.com/kubernetes-sigs/kubespray)
+* [My Kubespray install on kvm](https://github.com/sdelrio/install-k8s-kvm)
+* <https://medium.com/@jodywan/cloud-native-devops-09a-ha-kubernetes-with-kubespray-16ec8cd26040>
+
 ### References
 
 * [Homepage](https://k3s.io/)
