@@ -18,6 +18,194 @@ Lightweight Kubernetes, certified disribution for IoT & Edge computing.
 
 It doesn't have any cloud feature (no AWS, no GKE), so it's very small. Packaged with a single &lt;50MB binary.
 
+### Remove k3s ingress-nginx
+
+```
+kubectl delete helmcharts ingress-nginx -n kube-system
+```
+
+and then
+
+```
+systemctl restart k3s.service
+```
+* [Unable tore-deploying manifest after change](https://github.com/k3s-io/k3s/issues/737)
+
+### Master no-schedule
+
+Master No-schedule except kube-system or other deployments
+
+#### On install
+
+Add `--node-taint k3s-controlplane=true:NoExecute` to k3s install
+
+#### On already installed system
+
+* Toleration and affinity
+
+  * `kubectl taint nodes mynode-01 node-role.kubernetes.io/master=effect:NoSchedule`
+  * On deployment tolerate `NoSchedule`and affinity to master.
+  * Get tainted nodes: `kubectl get nodes -o json | jq .items[].spec.taints`
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metrics-server
+  namespace: kube-system
+  labels:
+    k8s-app: metrics-server
+spec:
+  selector:
+    matchLabels:
+      k8s-app: metrics-server
+  template:
+    metadata:
+      name: metrics-server
+      labels:
+        k8s-app: metrics-server
+    spec:
+      serviceAccountName: metrics-server
+      tolerations:
+      - key: "node-role.kubernetes.io/master"
+        operator: "Exists"
+        effect: "NoSchedule"
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "node-role.kubernetes.io/master"
+                operator: In
+                values:
+                - "true"
+      volumes:
+      # mount in tmp so we can safely use from-scratch images and/or read-only containers
+      - name: tmp-dir
+        emptyDir: {}
+      containers:
+      - name: metrics-server
+        image: rancher/metrics-server:v0.3.6
+        volumeMounts:
+        - name: tmp-dir
+          mountPath: /tmp
+```
+
+* Labels
+  * `node-role.kubernetes.io/master=true`
+  * `node-role.kubernetes.io/worker=`
+
+```
+# kubectl get nodes --show-labels
+NAME          STATUS   ROLES    AGE    VERSION         LABELS
+mynode-01   Ready    master   168m   v1.16.3-k3s.2   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/instance-type=k3s,beta.kubernetes.io/os=linux,k3s.io/hostname=mynode-01,k3s.io/internal-ip=212.237.21.49,kubernetes.io/arch=amd64,kubernetes.io/hostname=mynode-01,kubernetes.io/os=linux,node-role.kubernetes.io/master=true
+mynode-02   Ready    worker   168m   v1.16.3-k3s.2   beta.kubernetes.io/arch=amd64,beta.kubernetes.io/instance-type=k3s,beta.kubernetes.io/os=linux,k3s.io/hostname=mynode-02,k3s.io/internal-ip=89.46.65.154,kubernetes.io/arch=amd64,kubernetes.io/hostname=mynode-02,kubernetes.io/os=linux,node-role.kubernetes.io/worker=
+```
+
+### flannel UFW
+
+#### Ansible
+
+```yaml
+- name: k3s firewall between nodes masters
+  hosts: k3s
+  vars:
+    k3s_all_ips: "{% set IP_ARR=[] %}{% for host in groups['k3s'] %}{% if IP_ARR.insert(loop.index,hostvars[host]['ansible_ssh_host']) %}{% endif %}{% endfor %}{{IP_ARR}}"
+    k3s_master_ips: "{% set IP_ARR=[] %}{% for host in groups['k3smasters'] %}{% if IP_ARR.insert(loop.index,hostvars[host]['ansible_ssh_host']) %}{% endif %}{% endfor %}{{IP_ARR}}"
+    k3s_workers_ips: "{% set IP_ARR=[] %}{% for host in groups['k3sworkers'] %}{% if IP_ARR.insert(loop.index,hostvars[host]['ansible_ssh_host']) %}{% endif %}{% endfor %}{{IP_ARR}}"
+    k3s_all_ips_list: "{{ k3s_all_ips | join(',')}}"
+
+  tasks:
+
+    - name: Allow tcp ports kube api, schuduler, controller
+      ufw:
+        rule: allow
+        port: "10250:10252"
+        proto: tcp
+        from_ip: "{{ item }}"
+      with_items: "{{ k3s_all_ips }}"
+      when: isk3s_master is defined and (isk3s_master | bool)
+      tags: [ debug ]
+
+    - name: Allow tcp ports API server
+      ufw:
+        rule: allow
+        port: 6443
+        proto: tcp
+        from_ip: "{{ item }}"
+      with_items: "{{ k3s_all_ips }}"
+      when:  isk3s_master is defined and (isk3s_master | bool)
+      tags: [ debug ]
+
+    - name: Allow udp ports flannel overlay
+      ufw:
+        rule: allow
+        port: 8285
+        proto: udp
+        from_ip: "{{ item }}"
+      with_items: "{{ k3s_all_ips }}"
+      tags: [ debug ]
+
+    - name: Allow udp ports flannel overlay icmp
+      ufw:
+        rule: allow
+        port: 8472
+        proto: udp
+        from_ip: "{{ item }}"
+      with_items: "{{ k3s_all_ips }}"
+      tags: [ debug ]
+
+    - name: Allow tcp ports for NodePort services
+      ufw:
+        rule: allow
+        port: "30000:32767"
+        proto: tcp
+        from_ip: "{{ item }}"
+      with_items: "{{ k3s_all_ips }}"
+      tags: [ debug ]
+
+    - name: Allow cni0 to outside
+      ufw:
+        rule: allow
+        interface: cni0
+        direction: in
+        proto: tcp
+        to_ip: any
+      tags: [ debug ]
+
+    - name: debug
+      debug:
+        var: k3s_ips
+        #        var:  "{{ groups['k3sworkers'] | map('extract', hostvars, ['ansible_host']) }}"
+      tags: [ debug ]
+```
+
+* Inventory
+
+```ini
+[k3s]
+mynode-01
+mynode-02
+
+[k3smasters]
+mynode-01
+
+[k3smasters:vars]
+isk3s_master=true
+
+[k3sworkers]
+mynode-02
+
+[k3sworkers:vars]
+isk3s_worker=true
+```
+
+# DNS resolve issues
+
+* Remove DNS from `/etc/systemd/resolved.conf`
+
+* [Ubuntu 18 Temporary failure in Name Resolution to internal host](https://serverfault.com/questions/925611/temporary-failure-in-name-resolution-to-internal-host)
+
 ## kind
 
 [kind](https://kind.sigs.k8s.io/) is a tool for running local Kubernetes clusters using Docker container “nodes”.
@@ -44,7 +232,7 @@ kind create cluster --loglevel=debug
 * <https://gist.github.com/sdelrio/fd628669a9cda68ebc6ca591e1e791ee>
 * <https://github.com/ashald/docker-volume-loopback>
 
-# Install cluster
+## Install cluster
 
 * [Ansible](https://github.com/k3s-io/k3s-ansible) (Debian/Ubuntu/CentOS)(x64/arm64/armhf)
 * [Tutorial: HA on the Edge (etcd)](https://thenewstack.io/tutorial-install-a-highly-available-k3s-cluster-at-the-edge/)
