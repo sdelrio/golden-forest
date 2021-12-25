@@ -22,6 +22,12 @@ ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "john@example.com"
 ssh-add ~/.ssh/id_ed25519
 ```
 
+## Generate SSH pub key from priv key
+
+```bash
+ssh-keygen -y -f private_key.pem > public_key.pem
+```
+
 ### References
 
 * <https://lwn.net/Articles/821544/>
