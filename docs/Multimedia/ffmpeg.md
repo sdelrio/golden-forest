@@ -1,6 +1,5 @@
 # FFMpeg
 
-
 ## DTS -> ac3
 
 ### Get one audio track
@@ -29,6 +28,10 @@ ffmpeg -i input -map 0 -map -0:a:1 -c copy output
 
 - https://superuser.com/questions/550710/how-do-i-translate-handbrakecli-options-to-ffmpeg-options
 - https://sites.google.com/site/linuxencoding/x264-ffmpeg-mapping
+
+## Subtitle options
+
+- https://en.wikibooks.org/wiki/FFMPEG_An_Intermediate_Guide/subtitle_options
 
 ## References
 
