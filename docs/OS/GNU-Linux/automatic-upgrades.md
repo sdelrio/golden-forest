@@ -1,6 +1,5 @@
 # Automatic Upgrades
 
-
 ## Ubuntu
 
 ### Ubuntu 18 or Ubuntu 20
