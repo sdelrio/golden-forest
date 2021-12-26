@@ -1,6 +1,6 @@
 # Kubernetes
 
-Kuberntes is an open-sourced platform for managing containerized workloads.
+Kubernetes is an open-sourced platform for managing containerized workloads.
 
 K8s is an abbreviation result from couting the eight lettersw beteween the *K* and the *s*.
 
