@@ -2,6 +2,19 @@
 
 Automate the continuous delivery of change through your environments via GitOps and create previews on Pull Requests.
 
+Jenkins-X is a set of tools, not a full program like the old Jenkins. In the first version they used this set of apps:
+
+- skaffold
+- draft
+- nexus
+- knative
+- chart museum
+- jenkins
+
+Then later started do migrate to other tools, like replacing Jenkins for Tekton.
+
+* [Jenkins-X v2 components](https://jenkins-x.io/docs/reference/components/)
+
 ## Install
 
 ### Kubernetes
