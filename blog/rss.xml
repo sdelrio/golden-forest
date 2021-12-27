@@ -4,16 +4,24 @@
         <title>The Golden Forest Blog</title>
         <link>https://www.lorien.cloud/blog</link>
         <description>The Golden Forest Blog</description>
-        <lastBuildDate>Tue, 09 Nov 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 27 Dec 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Initial Setup]]></title>
+            <link>https://www.lorien.cloud/blog/blog-initial-setup</link>
+            <guid>blog-initial-setup</guid>
+            <pubDate>Mon, 27 Dec 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Initial setup of content sections. Also added some detailed notes about:]]></description>
+            <content:encoded><![CDATA[<p>Initial setup of content sections. Also added some detailed notes about:</p><ul><li><a href="docs/OS/GNU-Linux/ZFS/">ZFS</a></li><li><a href="docs/Multimedia/darktable">Darktable</a></li><li><a href="docs/OS/GNU-Linux/kvm-qemu">KVM</a></li></ul>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[First Post]]></title>
             <link>https://www.lorien.cloud/blog/first-post</link>
             <guid>first-post</guid>
             <pubDate>Tue, 09 Nov 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Initial setup of Docusaurus and start for the web page and blog.]]></description>
-            <content:encoded><![CDATA[<p>Initial setup of Docusaurus and start for the web page and blog.</p><p><a href="https://docusaurus.io/docs/blog">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog">blog plugin</a>.</p><p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p><p>Regular blog authors can be added to <code>authors.yml</code>.</p><p>The blog post date can be extracted from filenames, such as:</p><ul><li><code>2019-05-30-welcome.md</code></li><li><code>2019-05-30-welcome/index.md</code></li></ul><p>A blog post folder can be convenient to co-locate blog post images:</p><p><img src="./docusaurus-plushie-banner.jpeg" alt="Docusaurus Plushie"/></p>]]></content:encoded>
+            <content:encoded><![CDATA[<p>Initial setup of Docusaurus and start for the web page and blog.</p><p><a href="https://docusaurus.io/docs/blog">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog">blog plugin</a>.</p><p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p><p><img src="./docusaurus-plushie-banner.jpeg" alt="Docusaurus Plushie"/></p>]]></content:encoded>
         </item>
     </channel>
 </rss>
