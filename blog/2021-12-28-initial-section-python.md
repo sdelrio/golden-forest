@@ -11,4 +11,5 @@ Initial python section.
   * [Unit-test](/docs/Coding/Python/python-unit-test)
   * [Compile](/docs/Coding/Python/python-compile)
   * [Libraries](/docs/Coding/Python/python-libraries)
+* [Dockerfile for python](/docs/Containers/Docker/dockerfile-python)
 
