@@ -13,7 +13,9 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
 * Python 2 was discontinued with version 2.7.18 in 2020.
 
 
-## Manage versions with PyEnv
+## PyEnv
+
+Manage python versions with PyEnv
 
 You can [Install](https://github.com/pyenv/pyenv#installation) with brew, compiling or just a git clone. `pyenv` works by building Python from source. 
 
@@ -93,6 +95,10 @@ Downloading Python-3.9.7.tar.xz...
 /var/folders/33/ms31kn2n7d5b4qbzrmnfngfc0000gn/T/python-build.20211228211329.31561/Python-3.9.7 /var/folders/33/ms31kn2n7d5b4qbzrmnfngfc0000gn/T/python-build.20211228211329.31561 ~/github/golden-forest/docs/Coding
 Installing Python-3.9.7...
 (...)
+Successfully installed pip-21.2.3 setuptools-57.4.0
+/var/folders/33/ms31kn2n7d5b4qbzrmnfngfc0000gn/T/python-build.20211228211329.31561 ~/github/golden-forest/docs/Coding
+~/github/golden-forest/docs/Coding
+Installed Python-3.9.7 to /Users/sdelrio/.pyenv/versions/3.9.7
 ```
   </TabItem>
 
@@ -218,6 +224,95 @@ $ pyenv virtualenv <python_version> <environment_name>
 $ pyenv virtualenv 3.6.8 myproject
 $ pyenv local myproject
 ```
+
+## Project Setup
+
+* Python 3.7+
+* [Poetry](https://srcco.de/posts/my-python-poetry-project-setup-calver-2020.html#poetry) for dependency management
+* Make to leverage muscle memory
+* [black](https://black.readthedocs.io/) for code formatting
+* [mypy](https://srcco.de/posts/my-python-poetry-project-setup-calver-2020.html#mypy) for type checking
+* [py.test](https://srcco.de/posts/my-python-poetry-project-setup-calver-2020.html#py-test) for unit and e2e tests
+* [pre-commit](https://pre-commit.com/) hooks to run formatting and linting
+* [ReadTheDocs](https://readthedocs.org/) for documentation
+* [CalVer](https://calver.org/) for releases
+
+### black & flake8
+
+#### `.flake8`
+
+```
+[flake8]
+ignore=E501,E203
+```
+* ignore E501: black won't always ensure a max line length, e.g. it won't linebreak docstrings or comments
+* ignore E203: black has problems formatting mylist[len(prefix) :]
+
+### Pre-commit Hooks
+
+* make sure that file endings are consistent (also important when working with Windows colleagues)
+* strip unnecessary whitespace (avoids unnecessary git diffs)
+* validate YAML/Dockerfile/... syntax
+* validate Kubernetes manifests (easy to get some deployment spec wrong)
+* format Python code with [black](https://black.readthedocs.io/)
+* lint Python code ([Flake8](https://flake8.pycqa.org/), [mypy](https://srcco.de/posts/my-python-poetry-project-setup-calver-2020.html#mypy), [Bandit](https://bandit.readthedocs.io/))
+
+#### `pre-commit-config.yaml`
+
+```yaml
+minimum_pre_commit_version: 1.21.0
+repos:
+- repo: meta
+  hooks:
+  - id: check-hooks-apply
+  - id: check-useless-excludes
+
+# reorder Python imports
+- repo: https://github.com/asottile/reorder_python_imports
+  rev: v1.9.0
+  hooks:
+  - id: reorder-python-imports
+
+# format Python code with black
+- repo: https://github.com/ambv/black
+  rev: 19.10b0
+  hooks:
+  - id: black
+
+# check docstrings
+- repo: https://github.com/PyCQA/pydocstyle
+  rev: 5.0.2
+  hooks:
+  - id: pydocstyle
+    args: ["--ignore=D10,D21,D202"]
+
+# static type checking with mypy
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v0.761
+  hooks:
+  - id: mypy
+
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v2.4.0
+  hooks:
+  - id: check-added-large-files
+  - id: check-docstring-first
+  - id: debug-statements
+  - id: end-of-file-fixer
+  - id: flake8
+    additional_dependencies: ["flake8-bugbear"]
+  - id: trailing-whitespace
+  - id: check-ast
+  - id: check-builtin-literals
+  - id: detect-private-key
+  - id: mixed-line-ending
+  - id: name-tests-test
+    args: ["--django"]
+```
+
+#### Article
+
+* [2020: Python Project Setup](https://srcco.de/posts/my-python-poetry-project-setup-calver-2020.html)
 
 ## References
 

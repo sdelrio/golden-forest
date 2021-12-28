@@ -31,8 +31,15 @@
 * [python doc `unittest.mock`](https://docs.python.org/3/library/unittest.mock.html)
 * [An introduction to mocking in python](https://www.toptal.com/python/an-introduction-to-mocking-in-python)
 
+## Boilerplate
+
+* [python 3 + argparse + unittest](https://www.python-boilerplate.com/py3+argparse+unittest)
+
 ## References
 
 * [2018: ](https://www.bogotobogo.com/python/python_private_attributes_methods.php)
 * [2016: Write Professional Unit Tests in Python](https://code.tutsplus.com/tutorials/write-professional-unit-tests-in-python--cms-25835)
+* [PyCon 2018: Demystifying the patch funcction](https://www.youtube.com/watch?v=ww1UsGZV8fQ)
+* [PyCon 2018: Type-checked Python in the real world](https://www.youtube.com/watch?v=pMgmKJyWKn8)
+* [PyCon 2018: Automatic Code Quality](https://www.youtube.com/watch?v=G1lDk_WKXvY)
 
