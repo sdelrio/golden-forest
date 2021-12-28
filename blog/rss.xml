@@ -13,7 +13,7 @@
             <guid>blog-initial-python</guid>
             <pubDate>Tue, 28 Dec 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Initial python section.]]></description>
-            <content:encoded><![CDATA[<p>Initial python section.</p><ul><li><a href="/docs/Coding/Python/">Python</a><ul><li><a href="/docs/Coding/Python/python-unit-test">Unit-test</a></li><li><a href="/docs/Coding/Python/python-compile">Compile</a></li><li><a href="/docs/Coding/Python/python-libraries">Libraries</a></li></ul></li></ul>]]></content:encoded>
+            <content:encoded><![CDATA[<p>Initial python section.</p><ul><li><a href="/docs/Coding/Python/">Python</a><ul><li><a href="/docs/Coding/Python/python-unit-test">Unit-test</a></li><li><a href="/docs/Coding/Python/python-compile">Compile</a></li><li><a href="/docs/Coding/Python/python-libraries">Libraries</a></li></ul></li><li><a href="/docs/Containers/Docker/dockerfile-python">Dockerfile for python</a></li></ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Initial Setup]]></title>

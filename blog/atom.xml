@@ -13,7 +13,7 @@
         <link href="https://www.lorien.cloud/blog/blog-initial-python"/>
         <updated>2021-12-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Initial python section.]]></summary>
-        <content type="html"><![CDATA[<p>Initial python section.</p><ul><li><a href="/docs/Coding/Python/">Python</a><ul><li><a href="/docs/Coding/Python/python-unit-test">Unit-test</a></li><li><a href="/docs/Coding/Python/python-compile">Compile</a></li><li><a href="/docs/Coding/Python/python-libraries">Libraries</a></li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>Initial python section.</p><ul><li><a href="/docs/Coding/Python/">Python</a><ul><li><a href="/docs/Coding/Python/python-unit-test">Unit-test</a></li><li><a href="/docs/Coding/Python/python-compile">Compile</a></li><li><a href="/docs/Coding/Python/python-libraries">Libraries</a></li></ul></li><li><a href="/docs/Containers/Docker/dockerfile-python">Dockerfile for python</a></li></ul>]]></content>
         <author>
             <name>sdelrio</name>
             <uri>https://github.com/sdelrio</uri>
