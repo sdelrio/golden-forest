@@ -5,7 +5,7 @@ authors: sdelrio
 tags: [sections, python]
 ---
 
-Initial python section. Also added some detailed notes about:
+Initial python section.
 
 * [Python](/docs/Coding/Python/)
   * [Unit-test](/docs/Coding/Python/python-unit-test)
