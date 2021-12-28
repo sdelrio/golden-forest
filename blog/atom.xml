@@ -2,11 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.lorien.cloud/blog</id>
     <title>The Golden Forest Blog</title>
-    <updated>2021-12-27T00:00:00.000Z</updated>
+    <updated>2021-12-28T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.lorien.cloud/blog"/>
     <subtitle>The Golden Forest Blog</subtitle>
     <icon>https://www.lorien.cloud/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Initial Python section]]></title>
+        <id>blog-initial-python</id>
+        <link href="https://www.lorien.cloud/blog/blog-initial-python"/>
+        <updated>2021-12-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Initial python section.]]></summary>
+        <content type="html"><![CDATA[<p>Initial python section.</p><ul><li><a href="/docs/Coding/Python/">Python</a><ul><li><a href="/docs/Coding/Python/python-unit-test">Unit-test</a></li><li><a href="/docs/Coding/Python/python-compile">Compile</a></li><li><a href="/docs/Coding/Python/python-libraries">Libraries</a></li></ul></li></ul>]]></content>
+        <author>
+            <name>sdelrio</name>
+            <uri>https://github.com/sdelrio</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Initial Setup]]></title>
         <id>blog-initial-setup</id>
