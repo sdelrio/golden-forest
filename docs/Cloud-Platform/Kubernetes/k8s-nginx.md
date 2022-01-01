@@ -81,4 +81,23 @@ metadata:
     nginx.ingress.kubernetes.io/auth-url: "https://$host/oauth2/auth"
     nginx.ingress.kubernetes.io/auth-signin: "https://$host/oauth2/start?rd=$escaped_request_uri"
 ```
+## Sticky Sessions
+
+The nginx-ingress controller already has these requirement implemented. The controller replies with a Set-Cookie header to the firest request. The value of the cookie will map to a specific pod replica. When subsequent request come back again, the client browser will attach the cookie and the ingress controller is therefore able to route the traffice to the same pod replica.
+
+The configuration is achieved with annotations:
+```yaml
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-test
+  annotations:
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-name: "route"
+    nginx.ingress.kubernetes.io/session-cookie-expires: "172800"
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "172800"
+```
+
+* <https://zhimin-wen.medium.com/sticky-sessions-in-kubernetes-56eb0e8f257d>
+* <https://kubernetes.github.io/ingress-nginx/examples/affinity/cookie/ingress.yaml>
 

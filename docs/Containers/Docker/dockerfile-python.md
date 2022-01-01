@@ -30,7 +30,9 @@ CMD ["python","-u","main.py"]
 
 ## Alpine base image
 
-You will get small image sizes, but has some drawback, like using [musl](https://en.wikipedia.org/wiki/Musl) libs and [wheels](https://pythonwheels.com/) package sometimes are not available so you must compile packages when building image. So it's better to use the official ubuntu images, you will get faster builds, standard libs and security maintenance updates.
+You will get small image sizes, but has some drawback, like using [musl](https://en.wikipedia.org/wiki/Musl) libs and [wheels](https://pythonwheels.com/) package sometimes are not available so you must compile packages when building image, but as a result you can get longer build times, some strange bugs or even performance issues. So it's better to use the official ubuntu images, you will get faster builds, standard libs and security maintenance updates.
+
+[2021: The best Docker base image for your Python application](https://pythonspeed.com/articles/base-image-python-docker-images/)
 
 #### Multistage build
 
@@ -143,7 +145,6 @@ RUN \
 
 CMD ["python", "-m", "my.app.run"]
 ```
-
 ## Nuitka
 
 Minimal docker image containing a compiled python program and it's dependent libs
@@ -177,6 +178,7 @@ CMD ["/app.exe"]
 
 * [2018: GitHub](https://github.com/TransactCharlie/nuitka-docker-example/blob/master/build_scripts/ldd_cp.sh)
   * [Build script](https://github.com/TransactCharlie/nuitka-docker-example/blob/master/build_scripts/ldd_cp.shkkk)
+
 ## References
 
 
