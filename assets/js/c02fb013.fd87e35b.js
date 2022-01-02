@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[2362],{7604:function(e){e.exports=JSON.parse('{"name":"gc","permalink":"/docs/tags/gc","docs":[{"id":"OS/GNU-Linux/ZFS/zfs","title":"ZFS","description":"ZFS combines a file system with a volume manager.","permalink":"/docs/OS/GNU-Linux/ZFS/"}],"allTagsPath":"/docs/tags"}')}}]);

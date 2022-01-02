@@ -20,6 +20,18 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Microservces]]></title>
+        <id>blog-init-microservices-section</id>
+        <link href="https://www.lorien.cloud/blog/blog-init-microservices-section"/>
+        <updated>2022-01-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Init Microservices section]]></summary>
+        <content type="html"><![CDATA[<p>Init Microservices section</p><ul><li>Sofware-Architecture<ul><li><a href="/docs/Software-Architeture/microservices">Microservices</a></li></ul></li></ul>]]></content>
+        <author>
+            <name>sdelrio</name>
+            <uri>https://github.com/sdelrio</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Syslog, nginx-ingress sticky session, Dockerfile python update]]></title>
         <id>blog-initial-syslog</id>
         <link href="https://www.lorien.cloud/blog/blog-initial-syslog"/>

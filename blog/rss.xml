@@ -16,6 +16,14 @@
             <content:encoded><![CDATA[<p>Init API Standards section</p><ul><li><a href="/docs/Coding/api">API Standards</a><ul><li><a href="/docs/Coding/api#rest">REST</a><ul><li><a href="/docs/Coding/api#openapi">OpenAPI</a></li><li><a href="/docs/Coding/api#asyncapi">AsyncAPI</a></li></ul></li><li><a href="/docs/Coding/api#odata">OData</a></li><li><a href="/docs/Coding/api#graphql">GraphQL</a></li></ul></li></ul>]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[Microservces]]></title>
+            <link>https://www.lorien.cloud/blog/blog-init-microservices-section</link>
+            <guid>blog-init-microservices-section</guid>
+            <pubDate>Sun, 02 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Init Microservices section]]></description>
+            <content:encoded><![CDATA[<p>Init Microservices section</p><ul><li>Sofware-Architecture<ul><li><a href="/docs/Software-Architeture/microservices">Microservices</a></li></ul></li></ul>]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[Syslog, nginx-ingress sticky session, Dockerfile python update]]></title>
             <link>https://www.lorien.cloud/blog/blog-initial-syslog</link>
             <guid>blog-initial-syslog</guid>

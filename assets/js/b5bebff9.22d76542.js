@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[330],{85714:function(s){s.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/async-api","name":"AsyncAPI","count":1,"permalink":"/blog/tags/async-api"}')}}]);
