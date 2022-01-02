@@ -42,6 +42,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/sdelrio/golden-forest/edit/master/',
+          remarkPlugins: [require('mdx-mermaid')],  
         },
         blog: {
           showReadingTime: true,
