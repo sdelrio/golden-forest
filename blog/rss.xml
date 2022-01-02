@@ -4,9 +4,17 @@
         <title>The Golden Forest Blog</title>
         <link>https://www.lorien.cloud/blog</link>
         <description>The Golden Forest Blog</description>
-        <lastBuildDate>Sat, 01 Jan 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 02 Jan 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[API standards]]></title>
+            <link>https://www.lorien.cloud/blog/blog-init-api-standard</link>
+            <guid>blog-init-api-standard</guid>
+            <pubDate>Sun, 02 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Init API Standards section]]></description>
+            <content:encoded><![CDATA[<p>Init API Standards section</p><ul><li><a href="/docs/Coding/api">API Standards</a><ul><li><a href="/docs/Coding/api#rest">REST</a><ul><li><a href="/docs/Coding/api#openapi">OpenAPI</a></li><li><a href="/docs/Coding/api#asyncapi">AsyncAPI</a></li></ul></li><li><a href="/docs/Coding/api#odata">OData</a></li><li><a href="/docs/Coding/api#graphql">GraphQL</a></li></ul></li></ul>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Syslog, nginx-ingress sticky session, Dockerfile python update]]></title>
             <link>https://www.lorien.cloud/blog/blog-initial-syslog</link>

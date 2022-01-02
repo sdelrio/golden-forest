@@ -2,11 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.lorien.cloud/blog</id>
     <title>The Golden Forest Blog</title>
-    <updated>2022-01-01T00:00:00.000Z</updated>
+    <updated>2022-01-02T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.lorien.cloud/blog"/>
     <subtitle>The Golden Forest Blog</subtitle>
     <icon>https://www.lorien.cloud/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[API standards]]></title>
+        <id>blog-init-api-standard</id>
+        <link href="https://www.lorien.cloud/blog/blog-init-api-standard"/>
+        <updated>2022-01-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Init API Standards section]]></summary>
+        <content type="html"><![CDATA[<p>Init API Standards section</p><ul><li><a href="/docs/Coding/api">API Standards</a><ul><li><a href="/docs/Coding/api#rest">REST</a><ul><li><a href="/docs/Coding/api#openapi">OpenAPI</a></li><li><a href="/docs/Coding/api#asyncapi">AsyncAPI</a></li></ul></li><li><a href="/docs/Coding/api#odata">OData</a></li><li><a href="/docs/Coding/api#graphql">GraphQL</a></li></ul></li></ul>]]></content>
+        <author>
+            <name>sdelrio</name>
+            <uri>https://github.com/sdelrio</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Syslog, nginx-ingress sticky session, Dockerfile python update]]></title>
         <id>blog-initial-syslog</id>
