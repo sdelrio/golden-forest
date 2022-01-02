@@ -37,8 +37,8 @@ An illustration of microservices "request-driven" communication, Service A is de
             SA -.-> users
         end
 
-        linkStyle 4 stroke-width:2px,fill:none,stroke:green,head:green
-        linkStyle 5 stroke-width:2px,fill:none,stroke:green,head:green
+        linkStyle 4 stroke:green,stroke-width:3px,stroke-dasharray:3;
+        linkStyle 5 stroke:green,stroke-width:3px,stroke-dasharray:3;
         linkStyle default stroke-width:2px,fill:none,stroke:#c0c0c0
         classDef green fill:#beb,stroke:#ada,stroke-width:2px
         classDef gray fill:#eee,stroke:#999,stroke-width:2px
@@ -95,22 +95,22 @@ An illustration of overly chatty microservices (AKA spaghetti)
             campaings --- tracking
         end
 
-        subgraph external-1 [External]
+        subgraph external-1 [" "]
             users-1[Users]
         end
         users-1 --- reporting
 
-        subgraph external-2 [External]
+        subgraph external-2 [" "]
             users-2[Users]
         end
         users-2 --- tracking
 
-        subgraph external-3 [External]
+        subgraph external-3 [" "]
             users-3[Users]
         end
         users-3 --- customers
 
-        subgraph external-4 [External]
+        subgraph external-4 [" "]
             users-4[Users]
         end
         users-4 --- campaings
