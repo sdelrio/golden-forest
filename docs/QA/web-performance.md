@@ -22,3 +22,12 @@ HTTP(S) benchmark tools, testing/debugging, & restAPI (RESTful)
 
 * [GitHub](https://github.com/denji/awesome-http-benchmark)
 
+### Apache SkyWalking
+
+Application performance monitor (APM) tool for distributed systems, especially designed for microservices, cloud native and container-based (Kubernetes) architectures.
+
+* [Homepage](https://skywalking.apache.org/)
+* [GitHub])(https://github.com/apache/skywalking)
+* [2020: Apache SkyWalking: Use Profiling to Fix the Blind Spot of Distributed Tracing](https://thenewstack.io/apache-skywalking-use-profiling-to-fix-the-blind-spot-of-distributed-tracing/)
+  * Automatically profile code in production
+
