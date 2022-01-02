@@ -32,7 +32,7 @@ $45/$65/$140
 * Mac
 * Windows
 
-## Lightroot
+## Lightroom
 
 ### Capture One
 
@@ -56,7 +56,6 @@ Free
 * Mac
 * Windows
 * Linux
-
 
 ## Audition
 
