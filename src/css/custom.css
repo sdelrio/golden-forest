@@ -135,3 +135,19 @@ html[data-theme='dark'] .header-github-link:before {
   --ifm-footer-background-color: #1b2127;
 }
 
+.hero .hero__title {
+  text-shadow: 2px 2px 2px #e99700;
+}
+
+.hero .hero__subtitle {
+  text-shadow: 2px 2px 2px #c77400;
+}
+
+.hero .button--lg {
+  box-shadow: 2px 2px 2px white;
+}
+
+.hero .button--lg {
+  background-color: #c77400;
+}
+
