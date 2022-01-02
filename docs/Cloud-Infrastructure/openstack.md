@@ -1,6 +1,7 @@
 # OpenStack
 
-[Openstack](https://en.wikipedia.org/wiki/OpenStack) is a cloud compute project to provide [IaaS])(https://en.wikipedia.org/wiki/Cloud_computing) in both plublic and private clouds
+[Openstack](https://en.wikipedia.org/wiki/OpenStack) is a cloud compute project to provide [IaaS](
+(https://en.wikipedia.org/wiki/Cloud_computing) in both plublic and private cloud.
 
 The software is a collection of open source projects, some of the basic project include:
 
