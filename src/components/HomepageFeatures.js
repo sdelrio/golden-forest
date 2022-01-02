@@ -4,12 +4,12 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Focus on What Matters',
+    title: 'Focus on documentation',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     //Svg: require('../../static/img/logo.svg').default,
     description: (
       <>
-          Site built using Docusaurus. Go ahead to the <a href="/docs/docs-intro/">Docs</a> Menu to see the content.
+          Site built using <i><a href="https://docusaurus.io">Docusaurus:</a></i> Markdown documentation, built using react, ready for translations and versioning.
       </>
     ),
   },
