@@ -136,18 +136,19 @@ html[data-theme='dark'] .header-github-link:before {
 }
 
 .hero .hero__title {
-  text-shadow: 2px 2px 2px #e99700;
+  text-shadow: 1px 3px 0 #c68000, -1px -3px 0 #ffb630, 1px 13px 15px #a36a00;
 }
 
 .hero .hero__subtitle {
-  text-shadow: 2px 2px 2px #c77400;
+  text-shadow: 1px 3px 0 #c68000, -1px -3px 0 #ffb630, 1px 6px 7px #a36a00;
 }
 
 .hero .button--lg {
-  box-shadow: 2px 2px 2px white;
+  box-shadow: 1px 3px 0 #c68000, -1px -3px 0 #ffaa0d, 1px 6px 7px #a36a00;
 }
 
 .hero .button--lg {
-  background-color: #c77400;
+  background-color: #c68000;
+  border-color: #ffc740;
 }
 
