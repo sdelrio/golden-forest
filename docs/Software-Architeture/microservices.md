@@ -215,27 +215,6 @@ Services can now:
         class queuesys queuesection
 ```
 
-
-```mermaid
-    graph BT;
-
-
-        linkStyle default stroke-width:2px,fill:none,stroke:#c0c0c0
-        classDef green fill:#beb,stroke:#ada,stroke-width:2px
-        classDef gray fill:#eee,stroke:#999,stroke-width:2px
-        classDef yellow fill:#eeb,stroke:#dda,stroke-width:2px
-        classDef section color:#808080,fill:none,stroke:#c0c0c0,stroke-width:2px
-        classDef queuesection color:#808020,fill:none,stroke:#c0c020,stroke-width:2px
-        classDef ext color:#808020,fill:none,stroke:#606010,stroke-width:2px
-        class users-1,users-2,users-3,users-4 green
-        class reporting,auth,analytics,configs,customers,tracking,campaign gray
-        class queue yellow
-        class SA,SB,SC gray
-        class level-1,level-2, section
-        class external-1,external-2,external-3,external-4 ext
-        class queuesys queuesection
-```
-
 ## References
 
 * [2019: Are Your Microservices Overly Chatty?](https://thenewstack.io/are-your-microservices-overly-chatty/)
