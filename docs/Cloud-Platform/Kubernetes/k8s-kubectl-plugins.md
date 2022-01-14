@@ -19,7 +19,7 @@ Will give us LIST, CREATE, UPDATE, DELETE for each resource in the namespace `de
 
 Show who has RBAC permissions to perform actions on different resources in Kubernetes.
 
-### Install
+### Install
 
 ```
 kubectl krew install who-can
