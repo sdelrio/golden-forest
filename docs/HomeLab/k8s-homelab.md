@@ -8,6 +8,8 @@ Awesome projects involving running Kubernetes at home
 
 ## gitops homelab
 
+* [khuedoan/homelab](https://github.com/khuedoan/homelab) Fully automated from empty disk to operating services.
+    * <https://homelab.khuedoan.com/>
 
 * [billimek/k8s-gitops](https://github.com/billimek/k8s-gitops)
 
