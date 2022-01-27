@@ -18,6 +18,13 @@
             <name>sdelrio</name>
             <uri>https://github.com/sdelrio</uri>
         </author>
+        <category label="sections" term="sections"/>
+        <category label="api" term="api"/>
+        <category label="REST" term="REST"/>
+        <category label="OData" term="OData"/>
+        <category label="GraphQL" term="GraphQL"/>
+        <category label="OpenAPI" term="OpenAPI"/>
+        <category label="AsyncAPI" term="AsyncAPI"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Microservces]]></title>
@@ -30,6 +37,8 @@
             <name>sdelrio</name>
             <uri>https://github.com/sdelrio</uri>
         </author>
+        <category label="sections" term="sections"/>
+        <category label="microservices" term="microservices"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Syslog, nginx-ingress sticky session, Dockerfile python update]]></title>
@@ -42,6 +51,8 @@
             <name>sdelrio</name>
             <uri>https://github.com/sdelrio</uri>
         </author>
+        <category label="sections" term="sections"/>
+        <category label="syslog" term="syslog"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Initial Python section]]></title>
@@ -54,6 +65,8 @@
             <name>sdelrio</name>
             <uri>https://github.com/sdelrio</uri>
         </author>
+        <category label="sections" term="sections"/>
+        <category label="python" term="python"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Initial Setup]]></title>
@@ -66,6 +79,7 @@
             <name>sdelrio</name>
             <uri>https://github.com/sdelrio</uri>
         </author>
+        <category label="sections" term="sections"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[First Post]]></title>
@@ -73,10 +87,12 @@
         <link href="https://www.lorien.cloud/blog/first-post"/>
         <updated>2021-11-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Initial setup of Docusaurus and start for the web page and blog.]]></summary>
-        <content type="html"><![CDATA[<p>Initial setup of Docusaurus and start for the web page and blog.</p><p><a href="https://docusaurus.io/docs/blog">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog">blog plugin</a>.</p><p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p><p><img src="./docusaurus-plushie-banner.jpeg" alt="Docusaurus Plushie"/></p>]]></content>
+        <content type="html"><![CDATA[<p>Initial setup of Docusaurus and start for the web page and blog.</p><p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p><p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p><p><img alt="Docusaurus Plushie" src="/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500"></p>]]></content>
         <author>
             <name>sdelrio</name>
             <uri>https://github.com/sdelrio</uri>
         </author>
+        <category label="hola" term="hola"/>
+        <category label="docusaurus" term="docusaurus"/>
     </entry>
 </feed>

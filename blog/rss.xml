@@ -14,6 +14,13 @@
             <pubDate>Sun, 02 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Init API Standards section]]></description>
             <content:encoded><![CDATA[<p>Init API Standards section</p><ul><li><a href="/docs/Coding/api">API Standards</a><ul><li><a href="/docs/Coding/api#rest">REST</a><ul><li><a href="/docs/Coding/api#openapi">OpenAPI</a></li><li><a href="/docs/Coding/api#asyncapi">AsyncAPI</a></li></ul></li><li><a href="/docs/Coding/api#odata">OData</a></li><li><a href="/docs/Coding/api#graphql">GraphQL</a></li></ul></li></ul>]]></content:encoded>
+            <category>sections</category>
+            <category>api</category>
+            <category>REST</category>
+            <category>OData</category>
+            <category>GraphQL</category>
+            <category>OpenAPI</category>
+            <category>AsyncAPI</category>
         </item>
         <item>
             <title><![CDATA[Microservces]]></title>
@@ -22,6 +29,8 @@
             <pubDate>Sun, 02 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Init Microservices section]]></description>
             <content:encoded><![CDATA[<p>Init Microservices section</p><ul><li>Sofware-Architecture<ul><li><a href="/docs/Software-Architeture/microservices">Microservices</a></li></ul></li></ul>]]></content:encoded>
+            <category>sections</category>
+            <category>microservices</category>
         </item>
         <item>
             <title><![CDATA[Syslog, nginx-ingress sticky session, Dockerfile python update]]></title>
@@ -30,6 +39,8 @@
             <pubDate>Sat, 01 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Initial syslog, add nginx-ingress sticky seessions, update Dockerfile for python]]></description>
             <content:encoded><![CDATA[<p>Initial syslog, add nginx-ingress sticky seessions, update Dockerfile for python</p><ul><li><a href="/docs/OS/GNU-Linux/syslog">Syslog</a></li><li><a href="/docs/Cloud-Platform/Kubernetes/k8s-nginx#sticky-sessions">nginx-ingress sticky session</a></li><li><a href="/docs/Containers/Docker/dockerfile-python#alpine-base-image">Dockerfiel for Python why not Alpine</a></li></ul>]]></content:encoded>
+            <category>sections</category>
+            <category>syslog</category>
         </item>
         <item>
             <title><![CDATA[Initial Python section]]></title>
@@ -38,6 +49,8 @@
             <pubDate>Tue, 28 Dec 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Initial python section.]]></description>
             <content:encoded><![CDATA[<p>Initial python section.</p><ul><li><a href="/docs/Coding/Python/">Python</a><ul><li><a href="/docs/Coding/Python/python-unit-test">Unit-test</a></li><li><a href="/docs/Coding/Python/python-compile">Compile</a></li><li><a href="/docs/Coding/Python/python-libraries">Libraries</a></li></ul></li><li><a href="/docs/Containers/Docker/dockerfile-python">Dockerfile for python</a></li></ul>]]></content:encoded>
+            <category>sections</category>
+            <category>python</category>
         </item>
         <item>
             <title><![CDATA[Initial Setup]]></title>
@@ -46,6 +59,7 @@
             <pubDate>Mon, 27 Dec 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Initial setup of content sections. Also added some detailed notes about:]]></description>
             <content:encoded><![CDATA[<p>Initial setup of content sections. Also added some detailed notes about:</p><ul><li><a href="/docs/OS/GNU-Linux/ZFS/">ZFS</a></li><li><a href="/docs/Multimedia/darktable">Darktable</a></li><li><a href="/docs/OS/GNU-Linux/kvm-qemu">KVM</a></li></ul>]]></content:encoded>
+            <category>sections</category>
         </item>
         <item>
             <title><![CDATA[First Post]]></title>
@@ -53,7 +67,9 @@
             <guid>first-post</guid>
             <pubDate>Tue, 09 Nov 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Initial setup of Docusaurus and start for the web page and blog.]]></description>
-            <content:encoded><![CDATA[<p>Initial setup of Docusaurus and start for the web page and blog.</p><p><a href="https://docusaurus.io/docs/blog">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog">blog plugin</a>.</p><p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p><p><img src="./docusaurus-plushie-banner.jpeg" alt="Docusaurus Plushie"/></p>]]></content:encoded>
+            <content:encoded><![CDATA[<p>Initial setup of Docusaurus and start for the web page and blog.</p><p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p><p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p><p><img alt="Docusaurus Plushie" src="/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500"></p>]]></content:encoded>
+            <category>hola</category>
+            <category>docusaurus</category>
         </item>
     </channel>
 </rss>
