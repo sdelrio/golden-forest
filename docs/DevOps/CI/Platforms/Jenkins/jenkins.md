@@ -10,6 +10,19 @@ There is a new [serverless version](https://medium.com/@jdrawlings/serverless-je
 * [Pipeline Syntax](https://jenkins.io/doc/book/pipeline/syntax/#stages)
 * [Jenkinsfile Syntax](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/)
 
+### Setup
+
+* [2020: Run Parallel Builds in Kubernetes Cluster with Jenkins Pipeline](https://ittroubleshooter.in/run-parallel-build-kubernetes-cluster-jenkins/)
+* [2019: Using Jenkins Configuration as Code](https://devops.com/using-jenkins-configuration-as-code/)
+* [2018: KubeCon NA - Migrationg Jenkins to Kubernetes Broke our brains](https://www.youtube.com/watch?v=2w8dbJCTNaA)
+* [2018: Build Your Own Jenkins! Introducing Custom WAR/Docker Package](https://www.cloudbees.com/blog/build-your-own-jenkins-introducing-custom-wardocker-package)
+* [2018: Devops world - Jenkins Config as Code](https://docs.google.com/presentation/d/1VsvDuffinmxOjg0a7irhgJSRWpCzLg_Yskf7Fw7FpBg/edit#slide=id.g2deaad7e50_0_16)
+* [2018: Scaled and distributed Jenkins top of Kubernetes](https://medium.com/muhammet-arslan/how-ive-created-scaled-and-distributed-jenkins-top-of-kubernetes-441db62b15cd)
+* [2018: BlazeMeter - Setup Scalable Jenkins on Top of a Kubernetes Cluster](https://www.blazemeter.com/blog/how-to-setup-scalable-jenkins-on-top-of-a-kubernetes-cluster)
+* [2017: Technology Converstations - Automating Jenkins Docker Setup](https://technologyconversations.com/2017/06/16/automating-jenkins-docker-setup/comment-page-1/#comment-11768)
+* [2017: Demo Jenkins Config as Code with Docker + Groovy hook scripts](https://github.com/hayderimran7/demo-jenkins-config-as-code)
+* [2017: Run Jenkins in Docker container with persistent config in git](https://antonfisher.com/posts/2017/01/16/run-jenkins-in-docker-container-with-persistent-configuration/)
+
 ### Articles
 
 * [2021: CloudBees - Top 10 Best Practices for Jenkins Pipeline Plugin](https://www.cloudbees.com/blog/top-10-best-practices-jenkins-pipeline-plugin)
@@ -21,6 +34,7 @@ There is a new [serverless version](https://medium.com/@jdrawlings/serverless-je
 * [Docker packaging](https://www.cloudbees.com/blog/build-your-own-jenkins-introducing-custom-wardocker-package)
 * [Jenkins software bill of materials with Syft](https://thenewstack.io/give-jenkins-a-software-bill-of-materials-with-syft/)
 * [Restrict Jenkins Project access using Roles (Project Matrix)](https://www.thegeekstuff.com/2017/03/jenkins-users-groups-roles/)
+* [2016: Controlling the Flow with Stage, Lock, and Milestone](https://jenkins.io/blog/2016/10/16/stage-lock-milestone/)
 
 ### Global Libraries
 
@@ -29,12 +43,17 @@ There is a new [serverless version](https://medium.com/@jdrawlings/serverless-je
 * [jenkinsci - pipeline-examples](https://github.com/jenkinsci/pipeline-examples/tree/master/pipeline-examples)
 * [jenkinsci - report test results](https://github.com/jenkinsci/pipeline-model-definition-plugin/wiki/Reporting-test-results-and-storing-artifacts)
 * [jenkins server to develop pipelines](https://github.com/liatrio/pipeline-developer)
+* [2017: Centralise Jenkins Pipelines configuration using Shared Libraries](https://dev.to/jalogut/centralise-jenkins-pipelines-configuration-using-shared-libraries)
+* [2016: Making your own DSL with plugins, written in Pipeline script](Making your own DSL with plugins, written in Pipeline script)
 
 ### Sample Jenkinsfiles
 
 * [2019: Java 8 Pipeline with tests](https://github.com/leszko/calculator/blob/master/Jenkinsfile)
 * [2017: CodeQL, GitHub, Heroku, manual webhook urls](https://gist.github.com/jonico/e205b16cf07451b2f475543cf1541e70)
 * [2016: fahl-design - Slack/mail notifications](https://bitbucket.org/snippets/fahl-design/koxKe)
+* [Building your first Docker image with Jenkins 2: Guide for developers](https://tutorials.releaseworksacademy.com/learn/building-your-first-docker-image-with-jenkins-2-guide-for-developers)
+* [2107: Jenkins Canary releases demo](https://github.com/GoogleCloudPlatform/continuous-deployment-on-kubernetes/blob/master/sample-app/Jenkinsfile)
+    * [Infoshare 2p017: carter morgan (google) what does a production ready kuberntees application look like](https://www.youtube.com/watch?v=PXJu8ujNEmU)
 
 ### Plugins
 
@@ -70,4 +89,84 @@ There is a new [serverless version](https://medium.com/@jdrawlings/serverless-je
 ### Backup
 
 * [2021: How To Backup Jenkins Data and Configuration](https://devopscube.com/jenkins-backup-data-configurations/)
+* [Job on Jenkins to make backup](https://confluence.cornell.edu/display/CLOUD/Backup+Jenkins+Home+EFS+Volume)
+* [Backup Jenkins to the Cloud](https://www.cloudbees.com/blog/backup-jenkins-cloud)
+* [gist - Backup Jenkins config to S3](https://gist.github.com/luispabon/d181724ee80589d12e4b0de44b921a4f)
 
+#### Backup and restore script
+
+https://gist.github.com/luispabon/d181724ee80589d12e4b0de44b921a4f
+
+* Backup to S3
+
+```bash
+#!/usr/bin/env bash
+
+# Generate timestamped filename
+TIMESTAMPED_TAG=`date +%Y-%m-%d-%H%M%S`
+BACKUP_ARCHIVE="./jenkins-backup-${TIMESTAMPED_TAG}.tar.gz"
+
+# Inconceivable race condition avoidance
+if [-f $BACKUP_ARCHIVE ]; then
+	rm ${BACKUP_ARCHIVE}
+fi
+
+# Archive everything on jenkins but workspace, .file, .folders and m2 files, whatever these are
+# If the jenkins folder changes half way through, tar will fail; retry up to 5 times
+COUNTER=0
+until [ $COUNTER -ge 5 ]
+do
+    tar -czvf ${BACKUP_ARCHIVE} --exclude="workspace" --exclude=".m2" --exclude=builds --exclude=".*" /var/lib/jenkins && break
+
+    # If we get here, tar failed!
+    echo "Archive creation failed, retrying..."
+    COUNTER=$[$COUNTER+1]
+    sleep 15
+done
+
+# Place on s3 and cleanup
+aws s3 cp ${BACKUP_ARCHIVE} s3://${S3_BUCKET}/jenkins-backups/
+rm ${BACKUP_ARCHIVE}
+```
+
+* Restore from S3
+
+```bash
+#!/usr/bin/env bash
+
+# Fetch backup generated from script above from s3 and restore
+# This works best BEFORE you install and start jenkins for the first time
+# We use this as part of our jenkins-up logic
+JENKINS_CONFIG_ARCHIVE=`aws s3 ls ${S3_BUCKET}/jenkins-backups/ | sort | tail -n 1 | awk '{print $4}'`
+aws s3 cp s3://${S3_BUCKET}/jenkins-backups/${JENKINS_CONFIG_ARCHIVE} .
+if [ -f ${JENKINS_CONFIG_ARCHIVE} ]; then
+    echo "Archive found, restoring..."
+    tar -xvf ${JENKINS_CONFIG_ARCHIVE}
+    mkdir -p /var/lib/jenkins
+    mv var/lib/jenkins/* /var/lib/jenkins/
+    chown ${JENKINS_USER}:${JENKINS_GROUP} /var/lib/jenkins -Rf
+    rm ${JENKINS_CONFIG_ARCHIVE}
+    rm var -Rf
+else
+    echo "No backups found on s3, skipping..."
+fi
+```
+
+### Logs
+
+* [2017: Putting Jenkins Build log into dockerized ELK stack](https://dzone.com/articles/putting-jenkins-build-logs-into-elk-stack-filebeat)
+
+### Local Development with Jenkins pipelines
+
+Jenkins server for developing pipelines locally without requiring git commits.
+The goal here is to be able to immediately run a pipeline locally without needing to manually copy code or make a git commit before running changes.
+
+* [2017: Building with Docker Using Jenkins Pipelines](https://liatrio.com/local-development-with-jenkins-pipelines/)
+  * https://github.com/liatrio/pipeline-developer
+
+#### Expose port to public URL
+
+* https://ngrok.com/
+* http://www.ultrahook.com/
+* https://jordancrawford.kiwi/home-server-without-portforward/
+  *  https://jordancrawford.kiwi/setting-up-tinc/.
