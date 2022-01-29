@@ -49,7 +49,7 @@ Cloudflare Tunnel provides you with a secure way to connect your resources to Cl
 
 Receive webhooks on localhost trough all firewalls
 
-* [UltraHook Homepage](Receive webhooks on localhost)
+* [UltraHook Homepage](https://www.ultrahook.com/)
 
 ```bash
 $ gem install ultrahook
