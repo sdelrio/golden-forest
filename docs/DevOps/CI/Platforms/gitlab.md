@@ -44,4 +44,5 @@ CIDR:           67.205.128.0/18
 * [2018: Debugging GitLab CI pipelines locally](https://campfirecode.medium.com/debugging-gitlab-ci-pipelines-locally-e2699608f4df)
 * [2016: Continuous Initegration with Jenkins and GitLab](https://medium.com/@teeks99/continuous-integration-with-jenkins-and-gitlab-fa770c62e88a#.c4j4to4ys)
   * <https://github.com/jenkinsci/gitlab-plugin/wiki/Setup-Example>
+* [2019: Docker security scanning using Microscanner (in Jenkins & Gitlab CI)!](https://aboullaite.me/docker-security-scan/)
 

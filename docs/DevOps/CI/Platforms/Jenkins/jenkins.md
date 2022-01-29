@@ -27,6 +27,7 @@ There is a new [serverless version](https://medium.com/@jdrawlings/serverless-je
 
 * [2021: CloudBees - Top 10 Best Practices for Jenkins Pipeline Plugin](https://www.cloudbees.com/blog/top-10-best-practices-jenkins-pipeline-plugin)
 * [2020: NetApp - DevOps-as-a-Service: Our internal Solution](https://thenewstack.io/devops-as-a-service-our-internal-solution/)
+* [2019: Docker security scanning using Microscanner (in Jenkins & Gitlab CI)!](https://aboullaite.me/docker-security-scan/)
 * [2017: Mozilla - fxtest-jenkins-pipeline](https://davehunt.uk/2017/03/23/migrating-to-declarative-jenkins-pipelines.html)
   * [GitHub](https://github.com/mozilla/fxtest-jenkins-pipeline)
 * [2017: Ten Things I Wish I’d Known Before Using Jenkins Pipelines](https://zwischenzugs.com/2017/04/23/things-i-wish-i-knew-before-using-jenkins-pipelines/)
@@ -46,14 +47,16 @@ There is a new [serverless version](https://medium.com/@jdrawlings/serverless-je
 * [2017: Centralise Jenkins Pipelines configuration using Shared Libraries](https://dev.to/jalogut/centralise-jenkins-pipelines-configuration-using-shared-libraries)
 * [2016: Making your own DSL with plugins, written in Pipeline script](Making your own DSL with plugins, written in Pipeline script)
 
-### Sample Jenkinsfiles
+### Sample Pipelines/Jenkinsfiles
 
 * [2019: Java 8 Pipeline with tests](https://github.com/leszko/calculator/blob/master/Jenkinsfile)
 * [2017: CodeQL, GitHub, Heroku, manual webhook urls](https://gist.github.com/jonico/e205b16cf07451b2f475543cf1541e70)
 * [2016: fahl-design - Slack/mail notifications](https://bitbucket.org/snippets/fahl-design/koxKe)
 * [Building your first Docker image with Jenkins 2: Guide for developers](https://tutorials.releaseworksacademy.com/learn/building-your-first-docker-image-with-jenkins-2-guide-for-developers)
-* [2107: Jenkins Canary releases demo](https://github.com/GoogleCloudPlatform/continuous-deployment-on-kubernetes/blob/master/sample-app/Jenkinsfile)
+* [2017: Jenkins Canary releases demo](https://github.com/GoogleCloudPlatform/continuous-deployment-on-kubernetes/blob/master/sample-app/Jenkinsfile)
     * [Infoshare 2p017: carter morgan (google) what does a production ready kuberntees application look like](https://www.youtube.com/watch?v=PXJu8ujNEmU)
+* [2017: PHP CI with Jenkins and Docker](https://wade.be/development/2017/09/03/php-ci.html)
+* [2017: A Guide to Handling Merge Requests in Jenkins Pipelines](https://vetlugin.wordpress.com/2017/01/31/guide-jenkins-pipeline-merge-requests/)
 
 ### Test Pipelines
 
@@ -168,9 +171,3 @@ The goal here is to be able to immediately run a pipeline locally without needin
 * [2017: Building with Docker Using Jenkins Pipelines](https://liatrio.com/local-development-with-jenkins-pipelines/)
   * https://github.com/liatrio/pipeline-developer
 
-#### Expose port to public URL
-
-* https://ngrok.com/
-* http://www.ultrahook.com/
-* https://jordancrawford.kiwi/home-server-without-portforward/
-  *  https://jordancrawford.kiwi/setting-up-tinc/.
