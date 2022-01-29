@@ -36,6 +36,7 @@ There is a new [serverless version](https://medium.com/@jdrawlings/serverless-je
 * [Jenkins software bill of materials with Syft](https://thenewstack.io/give-jenkins-a-software-bill-of-materials-with-syft/)
 * [Restrict Jenkins Project access using Roles (Project Matrix)](https://www.thegeekstuff.com/2017/03/jenkins-users-groups-roles/)
 * [2016: Controlling the Flow with Stage, Lock, and Milestone](https://jenkins.io/blog/2016/10/16/stage-lock-milestone/)
+* [2016: Continous Integraiton with Jenkins and GitLab](https://medium.com/@teeks99/continuous-integration-with-jenkins-and-gitlab-fa770c62e88a)
 
 ### Global Libraries
 
