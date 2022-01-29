@@ -55,6 +55,10 @@ There is a new [serverless version](https://medium.com/@jdrawlings/serverless-je
 * [2107: Jenkins Canary releases demo](https://github.com/GoogleCloudPlatform/continuous-deployment-on-kubernetes/blob/master/sample-app/Jenkinsfile)
     * [Infoshare 2p017: carter morgan (google) what does a production ready kuberntees application look like](https://www.youtube.com/watch?v=PXJu8ujNEmU)
 
+### Test Pipelines
+
+* [2017: Jenkins World: JenkinsPipelineUnit: Test your CD pipeline](https://www.youtube.com/watch?v=RmrpUtbVR7o)
+
 ### Plugins
 
 * [Plugin: Role-based Authorization Strategy](https://plugins.jenkins.io/role-strategy/)

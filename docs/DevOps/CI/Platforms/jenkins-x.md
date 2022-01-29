@@ -23,9 +23,10 @@ Then later started do migrate to other tools, like replacing Jenkins for Tekton.
 
 ## References
 
-### 2019
+### 2019 Videos
 
 * [Installation and maintenance- Video](https://www.youtube.com/watch?v=rQlP_3iXvRE&feature=share)
 * [Cloud Native CI/CD with Jenkins X and Knative pipelines](https://www.youtube.com/watch?v=sUkvpzr9du8&feature=share)
 * [Jenkins X: Hands on Demostration](https://www.youtube.com/watch?v=_XsXqwpcIuw)
+* [KubeCon Europe 2019: Modern CI/CD with Tekton and Prow Automated via Jenkins X - James Rawlings, Cloudbees](https://www.youtube.com/watch?v=4EyTGYB7GvA)
 
