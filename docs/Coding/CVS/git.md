@@ -195,3 +195,44 @@ $ pre-commit install
 
 * [pre-commit homepage](https://pre-commit.com/)
 
+## Rolling back changes
+
+* `git reset`: Can't use when you have already commited the change. Is useful for wiping out uncommited change. Reset will unstage anytihng y'ave added in preparation to commit. But does nothing for anything thaat has been commited
+* `git revert`: Create a commit with the reverse patch to cancel it out. This way you don’t rewrite any history. But the original “whoops” commit(s) and the patch are always going to be part of the version history.
+
+
+### Sample
+
+Check last commits
+```bash
+$ git log --oneline --all --graph --decorate
+* c78f1e0c (HEAD -> master, origin/master, origin/HEAD) k8s: linter tools
+* e3ba41b2 git: update content and adding tools
+* c90c2e85 CI: update db-migrations
+* 6b48bef0 CI: Update Jenkins & gitlab content
+* 6af4eea3 QA: update inspec content
+
+$ git revert c78f1e0c
+
+$ git log --oneline --all --graph --decorate
+* 3f67984 (HEAD -> master, origin/master, origin/HEAD) Revert "k8s: linter tools" will revert this commit c78f1e0c
+* e3ba41b2 git: update content and adding tools
+* c90c2e85 CI: update db-migrations
+* 6b48bef0 CI: Update Jenkins & gitlab content
+* 6af4eea3 QA: update inspec content
+```
+
+* [Getting Legit with Git and GitHub: Rolling Back Changes with Revert and Reset](https://thenewstack.io/getting-legit-with-git-and-github-rolling-back-changes-with-revert-and-reset/)
+## Git blame
+
+Don't blame people for changing whitespaces or moving code.
+
+`git blame` will show the author of the last commit that modified the particular line. If whitespaces were removed or that piece of code was moved around, blame will show that commit and you might blame the wrong person.
+
+```bash
+git blame -w -M
+```
+
+* `-w` will ignore whitespaces 
+* `-M` will detect moved or copied lines.
+
