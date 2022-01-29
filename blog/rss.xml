@@ -4,9 +4,19 @@
         <title>The Golden Forest Blog</title>
         <link>https://www.lorien.cloud/blog</link>
         <description>The Golden Forest Blog</description>
-        <lastBuildDate>Sun, 02 Jan 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 29 Jan 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[k8s linter]]></title>
+            <link>https://www.lorien.cloud/blog/blog-kubelinter</link>
+            <guid>blog-kubelinter</guid>
+            <pubDate>Sat, 29 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Init k8s linter section]]></description>
+            <content:encoded><![CDATA[<p>Init k8s linter section</p><ul><li><a href="/docs/Cloud-Platform/Kubernetes/k8s-linter#kubelinter">k8s linter tools</a><ul><li><a href="/docs/Cloud-Platform/Kubernetes/k8s-linter#kubelinter">kubelinter</a></li></ul></li></ul>]]></content:encoded>
+            <category>k8s</category>
+            <category>linter</category>
+        </item>
         <item>
             <title><![CDATA[API standards]]></title>
             <link>https://www.lorien.cloud/blog/blog-init-api-standard</link>
