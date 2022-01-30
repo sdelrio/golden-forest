@@ -28,6 +28,8 @@ There is a new [serverless version](https://medium.com/@jdrawlings/serverless-je
 * [2021: CloudBees - Top 10 Best Practices for Jenkins Pipeline Plugin](https://www.cloudbees.com/blog/top-10-best-practices-jenkins-pipeline-plugin)
 * [2020: NetApp - DevOps-as-a-Service: Our internal Solution](https://thenewstack.io/devops-as-a-service-our-internal-solution/)
 * [2019: Docker security scanning using Microscanner (in Jenkins & Gitlab CI)!](https://aboullaite.me/docker-security-scan/)
+* [2017: Jenkins World - Jenkins Pipeline on your Local Box to Reduce Cycle Time](https://www.youtube.com/watch?v=nNBWVVlI1Uk)
+    * This session is a case study on how to reduce continuous delivery cycle time by using your local resources as the starting point for the continuous delivery Jenkins Pipeline. Your local box has spare CPU, memory and a Git repo to be used with a local Jenkins Pipeline. You get fast feedback and create lots of precious artifacts.
 * [2017: Mozilla - fxtest-jenkins-pipeline](https://davehunt.uk/2017/03/23/migrating-to-declarative-jenkins-pipelines.html)
   * [GitHub](https://github.com/mozilla/fxtest-jenkins-pipeline)
 * [2017: Ten Things I Wish I’d Known Before Using Jenkins Pipelines](https://zwischenzugs.com/2017/04/23/things-i-wish-i-knew-before-using-jenkins-pipelines/)
