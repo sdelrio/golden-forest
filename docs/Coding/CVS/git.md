@@ -263,3 +263,10 @@ Presentations browser-native and work almost anywhere.
 * [Simul](http://www.simuldocs.com/):  git-like experience via a plugin for Word docs. And using other Office suites like OpenOffice/LibreOffice, you can just save files natively as XML which lets git work its magic
 
 
+## Detect secrets in code
+
+An enterprise friendly way of detecting and preventing secrets in code.
+
+* [Yelp/detect-secrets](https://github.com/Yelp/detect-secrets)
+* [Why Securing Secrets in Cloud and Container Environments Is Important – and How to Do It](https://thenewstack.io/why-securing-secrets-in-cloud-and-container-environments-is-important-and-how-to-do-it/)
+
