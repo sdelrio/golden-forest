@@ -7,4 +7,5 @@
 * [Github selnium-docker-allure](https://github.com/eliranshani/selenium-docker-allure)
 * [More BlazeMeter resources](https://www.blazemeter.com/resources/)
 * [Allure Test REport](http://allure.qatools.ru/)
+* [Automated testing setup with robotframework , selenium, headless chrome and gitlab-ci](https://faun.pub/automated-testing-setup-with-robotframework-and-gitlab-ci-5bd01cf26141)
 
