@@ -36,9 +36,6 @@ Molecule project is designed to aid in the development and testing of [Ansible](
 * [Homepage](https://molecule.readthedocs.io/en/latest/index.html)
 * [Docs](https://molecule.readthedocs.io/en/latest/index.html)
 
-
-
-
 ## Articles and blogs
 
 * [2020: Howtoforge - How to Install Ansible AWX on CentOS 8](https://www.howtoforge.com/tutorial/centos-ansible-awx-installation/)
@@ -51,4 +48,10 @@ Molecule project is designed to aid in the development and testing of [Ansible](
 * [2018: Testing your Ansible roles with Molecule](https://www.jeffgeerling.com/blog/2018/testing-your-ansible-roles-molecule)
 * [2018: Using Ansible as a Hardware Auditing Tool](https://newrelic.com/blog/best-practices/ansible-auditing-tool)
 * [2017: Getting started with Ansible AWX](https://techbloc.net/archives/2389)
+* [2017: Basic CI Deployment with Ansible, Docker, Jenkins and Git](https://medium.com/@tedchength/basic-deployment-with-ansible-docker-jenkins-and-git-4f3b42fb2f5e)
+* [2017: Automated Servers and Deployments with Ansible & Jenkins](https://chromatichq.com/insights/automated-servers-and-deployments-ansible-jenkins)
+* [2017: Using Ansible with Terraform](https://tutorials.releaseworksacademy.com/learn/using-ansible-with-terraform)
+* [2017: Configure Jenkins job with Ansible-Jenkins Plugin to setup CI for Ansible playbooks](https://medium.com/devops-process-and-tools/configure-jenkins-job-with-ansible-jenkins-plugin-to-setup-ci-for-ansible-playbooks-3ed23137d314)
+* [2016: Running Ansible Playbooks From Jenkins](https://dzone.com/articles/running-ansible-playbooks-from-jenkins)
+
 
