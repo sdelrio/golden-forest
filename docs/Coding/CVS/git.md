@@ -236,3 +236,30 @@ git blame -w -M
 * `-w` will ignore whitespaces 
 * `-M` will detect moved or copied lines.
 
+## Git for everything!
+
+* [Beyond Code Control: Git for Everything!])https://thenewstack.io/beyond-code-control-git-for-everything/)
+
+### Progress List and Work-Plans
+
+* [Waffle.io](https://projectmanagernews.com/news/what-happened-to-waffle-io/): Looks at GitHub Issues and PR and uses them to create project management charts.
+* [ZenHub](https://www.zenhub.com/): Build a prroject management tool isnide GitHub itself that is operated by PR.
+
+### Updating your website
+
+* [Netifly](https://projectmanagernews.com/news/what-happened-to-waffle-io/)
+* [GitHub Pages](https://pages.github.com/) + Static site like [Docusuarus.io](https://docusaurus.io)
+
+### Presentations
+
+Presentations browser-native and work almost anywhere.
+
+* [Reveal.js](http://revealjs.com/http://revealjs.com/)
+* [GitPitch](http://gitpitch.com.bitverzo.com/)
+
+### Word and Excel documents
+
+* [Xltrail](https://www.xltrail.com/): Keep track of the cell-by-cell commit history of an Excel spreadsheet that’s stored in git, but it can’t handle merges and pull requests itself. 
+* [Simul](http://www.simuldocs.com/):  git-like experience via a plugin for Word docs. And using other Office suites like OpenOffice/LibreOffice, you can just save files natively as XML which lets git work its magic
+
+
