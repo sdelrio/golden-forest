@@ -13,4 +13,6 @@ Spinnaker was developed by Netflix as a successor to the internally developed As
     * [Install](https://spinnaker.io/docs/setup/install/halyard/)
     * [Tutorial](https://spinnaker.io/docs/guides/tutorials/)
 * [2018: Build Extensible CI/CD Pipelines with Spinnaker and Kubernetes](https://thenewstack.io/build-extensible-ci-cd-pipelines-spinnaker-kubernetes/)
+* Google Cloud Tech
+    * [2019: CI/CD Across Multiple Environments](https://www.youtube.com/watch?v=rt287-94Pq4)
 
