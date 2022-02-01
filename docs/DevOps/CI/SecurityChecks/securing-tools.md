@@ -12,3 +12,5 @@
     * FOSSA
     * Cyberark Conjur
 
+* [2018: Adding CVE Scanning to a CI/CD Pipeline](https://betterprogramming.pub/adding-cve-scanning-to-a-ci-cd-pipeline-d0f5695a555a)
+
