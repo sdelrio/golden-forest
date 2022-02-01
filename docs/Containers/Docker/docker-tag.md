@@ -65,6 +65,42 @@ ifneq ($(shell git status --porcelain),)
 endif
 ```
 
+## Version based on a file content diff
+
+
+```bash
+check_version_changes(){
+    git diff  $(git describe --tags --abbrev=0 HEAD)..HEAD -- mymodule/__init__.py | grep --quiet +__version__;
+};
+
+
+if ! check_version_changes; then
+    echo "Version not changed"
+    exit 0
+fi
+
+VERSION=$(python -c 'import forwarder; print(mymodule.__version__)')
+```
+
+* <https://github.com/pando85/alertmanager-telegram-forwarder/blob/master/.ci/tag_version.sh>
+* <https://github.com/pando85/aiofunctools/blob/master/.ci/tag_version.sh>
+
+## ci-version
+
+With Docker:
+
+```bash
+docker run --rm -v /path/to/my/repository:/repo:ro softonic/ci-version
+#> 1.2.0
+docker run --rm -v /path/to/my/repository:/repo:ro softonic/ci-version --compatible-with package.json
+#> 1.2.0
+docker run --rm -v /path/to/my/repository:/repo:ro softonic/ci-version --compatible-with composer.json
+#> 1.2.0
+```
+
+CLI program to determine new versions in CI projects 
+
+* <https://github.com/softonic/ci-version>
 
 ## References
 
