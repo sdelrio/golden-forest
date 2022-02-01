@@ -129,7 +129,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} The Golden Forest proyect. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} The Golden Forest project. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
