@@ -46,7 +46,7 @@
         <link href="https://www.lorien.cloud/blog/blog-init-microservices-section"/>
         <updated>2022-01-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Init Microservices section]]></summary>
-        <content type="html"><![CDATA[<p>Init Microservices section</p><ul><li>Sofware-Architecture<ul><li><a href="/docs/Software-Architeture/microservices">Microservices</a></li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>Init Microservices section</p><ul><li>Sofware-Architecture<ul><li><a href="/docs/Software-Architecture/microservices">Microservices</a></li></ul></li></ul>]]></content>
         <author>
             <name>sdelrio</name>
             <uri>https://github.com/sdelrio</uri>

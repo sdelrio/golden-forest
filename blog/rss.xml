@@ -38,7 +38,7 @@
             <guid>blog-init-microservices-section</guid>
             <pubDate>Sun, 02 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Init Microservices section]]></description>
-            <content:encoded><![CDATA[<p>Init Microservices section</p><ul><li>Sofware-Architecture<ul><li><a href="/docs/Software-Architeture/microservices">Microservices</a></li></ul></li></ul>]]></content:encoded>
+            <content:encoded><![CDATA[<p>Init Microservices section</p><ul><li>Sofware-Architecture<ul><li><a href="/docs/Software-Architecture/microservices">Microservices</a></li></ul></li></ul>]]></content:encoded>
             <category>sections</category>
             <category>microservices</category>
         </item>
