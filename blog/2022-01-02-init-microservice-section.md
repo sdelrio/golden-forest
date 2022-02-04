@@ -8,5 +8,5 @@ tags: [sections, microservices]
 Init Microservices section
 
 * Sofware-Architecture
-  * [Microservices](/docs/Software-Architeture/microservices)
+  * [Microservices](/docs/Software-Architecture/microservices)
 
