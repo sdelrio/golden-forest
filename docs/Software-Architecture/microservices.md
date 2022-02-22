@@ -215,6 +215,12 @@ Services can now:
         class queuesys queuesection
 ```
 
+## Event-driven runtimes
+
+### [Dapr.io](https://dapr.io)
+
+Dapr is a portable, event-driven runtime that makes it easy for any developer to build resilient, stateless and stateful applications that run on the cloud and edge and embraces the diversity of languages and developer frameworks. Leveraging the benefits of a sidecar architecture, Dapr helps you tackle the challenges that come with building microservices and keeps your code platform agnostic.
+
 ## References
 
 * [2019: Are Your Microservices Overly Chatty?](https://thenewstack.io/are-your-microservices-overly-chatty/)
