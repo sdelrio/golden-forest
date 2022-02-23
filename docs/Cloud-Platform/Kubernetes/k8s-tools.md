@@ -33,7 +33,9 @@ Telepresence is an open source tool that lets you run a single service locally, 
 * [Telepresence docs](https://www.telepresence.io/docs/latest/quick-start/)
 
 
-## [kubeval](https://www.kubeval.com/)
+## K8s yaml validation
+
+### [kubeval](https://www.kubeval.com/)
 
 Validate one or more Kubernetes configuration files, and is often used locally as part of a development workflow as well as in CI pipelines.
 
@@ -46,7 +48,7 @@ $ echo $?
 1
 ```
 
-## [datree.io](https://hub.datree.io/)
+### [datree.io](https://hub.datree.io/)
 
 Datree prevents Kubernetes misconfigurations from reaching production.
 
@@ -97,5 +99,41 @@ $ datree test ./k8s-demo.yaml
 | Total rules passed                | 17                                                       |
 | See all rules in policy           | https://app.datree.io/login?cliId=C2JWeCNE5G7cybebjhszFR |
 +-----------------------------------+----------------------------------------------------------+
-
 ```
+
+### [kube-score](https://kube-score.com/)
+
+Kubernetes object analysis with recommendations for improved reliability and security.
+
+kube-score is a tool that does static code analysis of your Kubernetes object definitions. The output is a list of recommendations of what you can improve to make your application more secure and resilient.
+
+
+`kube-score` can run in your CI/CD environment and will exit with exit code 1 if a critical error has been found. The trigger level can be changed to warning with the `--exit-one-on-warning argument`.
+
+The input to kube-score should be all applications that you deploy to the same namespace for the best result.
+Example with Helm
+
+helm template my-app | kube-score score -
+
+### Kustomize
+
+```bash
+kustomize build . | kube-score score -
+```
+
+#### YAMLs
+
+```bash
+kube-score score my-app/*.yaml
+
+kube-score score my-app/deployment.yaml my-app/service.yaml
+```
+
+#### Example with an existing cluster
+
+```bash
+kubectl api-resources --verbs=list --namespaced -o name \
+  | xargs -n1 -I{} bash -c "kubectl get {} --all-namespaces -oyaml && echo ---" \
+  | kube-score score -
+```
+
