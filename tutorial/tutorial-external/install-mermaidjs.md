@@ -21,6 +21,13 @@ graph TB
     a-->b'
 ```
 
+## VisualStudio Code
+
+### Plugin
+
+* [Mermaid Export](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.mermaid-export)
+* [Mermaid Editor](https://marketplace.visualstudio.com/items?itemName=tomoyukim.vscode-mermaid-editor)
+
 ## References
 
 * <https://github.com/facebook/docusaurus/issues/1258>
