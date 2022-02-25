@@ -31,7 +31,7 @@ Telepresence is an open source tool that lets you run a single service locally, 
 
 * [Telepresence Homepage](https://www.telepresence.io/)
 * [Telepresence docs](https://www.telepresence.io/docs/latest/quick-start/)
-
+* [2022 Evolving CNCF’s Telepresence: Adopting a TUN Device to Deliver Stability and Portability](https://thenewstack.io/evolving-cncfs-telepresence-adopting-a-tun-device-to-deliver-stability-and-portability/)
 
 ## K8s yaml validation
 
