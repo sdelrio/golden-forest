@@ -8,3 +8,8 @@
   * 2-3 Gigabit Ethernet card
   * [Amazon DE](https://www.amazon.de/PC-Engines-APU2E4-System-Board/dp/B09NMDTPK1/)
 
+
+## Raspberry Pi Alternatives
+
+* [Best Single-Board Computer 2022](https://all3dp.com/1/single-board-computer-raspberry-pi-alternative/)
+
