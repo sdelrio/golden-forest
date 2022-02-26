@@ -21,3 +21,47 @@ The mutating webhook of Bank-Vaults is a solution that bypasses the Kubernetes s
 * [Mutating Webook](https://banzaicloud.com/docs/bank-vaults/mutating-webhook/)
 * [Vault Secrets Webhook - Helm Chart](https://artifacthub.io/packages/helm/banzaicloud-stable/vault-secrets-webhook )
 
+## [Kubernetes external secrets](https://github.com/external-secrets/kubernetes-external-secrets)
+
+Integrate external secret management systems with Kubernetes.
+
+:::warning
+This project was deprecated and replaced by an operator ([ESO](/docs/Cloud-Platform/Kubernetes/Concepts/k8s-secrets#eso-external-secrets-operator) External Secrets Operator)
+:::
+
+### [Backends](https://github.com/external-secrets/kubernetes-external-secrets#backends)
+
+* AWS based backends
+* AWS SSM Parameter Store
+* Akeyless Vault
+* Hashicorp Vault
+* Azure Key Vault
+* Alibaba Cloud KMS Secret Manager
+* GCP Secret Manager
+* IBM Cloud Secrets Manager
+* Binary Secrets
+
+## [ESO](https://github.com/external-secrets/external-secrets) (External Secrets Operator)
+
+External Secrets Operator reads information from a third-party service like AWS Secrets Manager and automatically injects the values as Kubernetes Secrets. 
+
+### [Backends](https://github.com/external-secrets/external-secrets#supported-backends)
+
+* AWS Secrets Manager
+* AWS Parameter Store
+* Akeyless
+* Hashicorp Vault
+* Google Cloud Secrets Manager
+* Azure Key Vault
+* IBM Cloud Secrets Manager
+* Yandex Lockbox
+* Gitlab Project Variables
+* Alibaba Cloud KMS
+* Oracle Vault
+* Generic Webhook
+
+### References
+
+* [Documentation](https://external-secrets.io/v0.4.4/)
+* [GitHub](https://github.com/external-secrets/external-secrets)
+
