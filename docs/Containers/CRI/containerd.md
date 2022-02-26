@@ -21,7 +21,10 @@ nerdctl build -t foo /some-dockerfile-directory
 
 nerdctl build -o type=local,dest=. /some-dockerfile-directory
 
+nerdctl build --platform linux/arm/v7,linux/arm64,linux/amd64 -t multiarchdemo .
+
 nerdctl compose -f ./examples/compose-wordpress/docker-compose.yaml up
+
 ```
 
 * [Command reference](https://github.com/containerd/nerdctl#command-reference)
