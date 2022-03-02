@@ -1,12 +1,6 @@
 # Rust
 
-## Install
-
-### GNU/Linux
-
-#### 2020
-
-* <https://thenewstack.io/install-rust-on-linux/>
+Rust is a language designed for performance and safety, especially safe concurrency.
 
 ## Books and learning
 
