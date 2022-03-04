@@ -6,6 +6,8 @@ Rust is a language designed for performance and safety, especially safe concurre
 
 * [Learn Rust](https://www.rust-lang.org/learn)
   * [The Rust Programming Language - Book](https://doc.rust-lang.org/stable/book/)
+  * [The Rust Reference](https://doc.rust-lang.org/stable/reference/index.html)
+  * [The Rustonomicon](https://doc.rust-lang.org/stable/nomicon/vec/vec-layout.html)
 * [A half-hour to learn Rust](https://fasterthanli.me/articles/a-half-hour-to-learn-rust)
 
 ## Video
