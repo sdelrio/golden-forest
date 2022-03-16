@@ -236,6 +236,70 @@ git blame -w -M
 * `-w` will ignore whitespaces 
 * `-M` will detect moved or copied lines.
 
+## Git flows
+
+### [Git Organized: A Better Git Flow](https://render.com/blog/git-organized-a-better-git-flow)
+
+1. Make your changes
+
+```bash
+$ git checkout -b my-feature-branch-name-doesnt-matter
+
+...make changes...
+
+$ git commit -m"WIP this message doesn't matter"
+
+...make more changes...
+
+$ git commit -m"WIP whatever"
+
+...make even more changes...
+
+$ git commit -m"WIP 12345"
+```
+
+2. Reset
+
+```bash
+$ git reset origin/main
+Unstaged changes after reset:
+M       doc/Coding/CVS/git.md
+M       doc/Coding/CVS/gitea.md
+M       doc/Coding/CVS/gerrit.md
+
+$ git status
+On branch feature-branch
+Your branch is behind 'origin/my-feature-branch-name-doesnt-matter' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   doc/Coding/CVS/git.md
+        modified:   doc/Coding/CVS/gitea.md
+        modified:   doc/Coding/CVS/gerrit.md
+```
+
+`git reflog`: To go back to a commit where things weren’t broken, it will show you a timeline of every commit you’ve referenced in your local repository, even across branches. Run git reflog to find the commit you want to return to and then run `git reset <commit-sha>`. This command will point the `HEAD` of your current branch to that commit.
+
+
+3. Create new, logically-grouped commits
+
+Look at all the files you’ve changed. Try to group logically any changes related to a particular model and create a commit with the descsription.
+
+If the same file contains multiple changes that should be grouped separately use [`git add --patch`](https://nuclearsquid.com/writings/git-add/)
+
+```bash
+$ git add doc/Coding/CVS/git.md
+$ git commit -m"Add new section Git flows"
+
+$ git add docs/Coding/CVS/gitea.md
+$ git commit -m"Init section Gitea inside CVSU"
+
+$ git add docs/Coding/CVS/gerrit.md
+$ git commit -m"Fixed typo in references"
+```
+
 ## Git for everything!
 
 * [Beyond Code Control: Git for Everything!])https://thenewstack.io/beyond-code-control-git-for-everything/)
