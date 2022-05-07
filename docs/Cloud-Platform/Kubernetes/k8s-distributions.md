@@ -200,6 +200,18 @@ mynode-02
 isk3s_worker=true
 ```
 
+### Backup and restore
+
+#### ETCD
+
+* Command:
+  * `k3s etcd-snapshot`
+* Doc:
+  * <https://rancher.com/docs/k3s/latest/en/backup-restore/>
+  * <https://pet2cattle.com/2022/05/k3s-etcd-s3-backup-restore>
+
+#### Pods
+
 # DNS resolve issues
 
 * Remove DNS from `/etc/systemd/resolved.conf`
