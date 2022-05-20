@@ -18,3 +18,7 @@ Rust is a language designed for performance and safety, especially safe concurre
 
 * [Rust by the Numbers: The Rust Programming Language in 2021](https://thenewstack.io/rust-by-the-numbers-the-rust-programming-language-in-2021/)
 
+## Tools
+
+* [Fleet](https://github.com/dimensionhq/fleet): The blazing fast build tool for Rust.
+
