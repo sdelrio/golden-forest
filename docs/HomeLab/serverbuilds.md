@@ -10,3 +10,14 @@ But since the rise of AMD Ryzen 9 Zen architecture, maybe you can get the power 
 * [Intel Motherboards and chipsets](https://b3n.org/selecting-a-motherboard-for-intel-computer-desktop-builds/)
 * [Puget System](https://www.pugetsystems.com/)
 
+## Hardware
+
+[Tiny PC With 8 Cores & 16 Threads! Beelink SER4 Mini PC Review](https://www.youtube.com/watch?v=J0zTd_WJnJM)
+
+* 8c/16t, 32Gb ram + 1 x M.2 512 (slot for an extra 1 x 2,5")
+
+* 03/2022
+  * Amazon USA $699
+  * [Amazon ES](Tiny PC With 8 Cores & 16 Threads! Beelink SER4 Mini PC Review) (nearly same as USA + send cost) 839€
+
+
