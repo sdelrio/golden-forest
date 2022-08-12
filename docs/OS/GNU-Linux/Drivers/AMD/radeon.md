@@ -101,16 +101,30 @@ $ sudo apt install ppa-purge
 $ sudo ppa-purge ppa:oibaf/graphics-drivers
 ```
 
-## Propiertary AMDGPU-PRO dirvers
+## AMDGPU-PRO dirvers
 
 ### Install
 
 [AMD Download Page](https://support.amd.com/en-us/download/linux)
+[Radeon repo download](https://repo.radeon.com/amdgpu-install/)
+[ROCM radeon repo download](https://repo.radeon.com/rocm/apt/)
+[ReadTheDocs amdgpu-install](https://amdgpu-install.readthedocs.io/en/latest/install-installing.html#uninstalling-the-amdgpu-stack)
+[ReadTheDocs amdgpu-install advanced script](https://amdgpu-install.readthedocs.io/en/latest/install-script.html#adding-advanced-package-management-functionality)
 
 ```bash
 $ tar -xf amdgpu-pro_*.tar.xz
 $ cd amdgpu-pro-XX.XX-XXXXXX
-$ ./amdgpu-pro-install -y
+```
+
+#### Closed drivers (default parameters)
+```
+$ amdgpu-pro-install -y
+```
+
+#### Open Source version drivers
+
+```
+$ amdgpu-install --usecase=workstation -y --vulkan=amdvlk --opencl=rocr --accept-eula --no-32
 ```
 
 ### Uninstall
