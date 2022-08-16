@@ -7,6 +7,7 @@
         <lastBuildDate>Sat, 29 Jan 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
         <item>
             <title><![CDATA[k8s linter]]></title>
             <link>https://www.lorien.cloud/blog/blog-kubelinter</link>
@@ -77,7 +78,7 @@
             <guid>first-post</guid>
             <pubDate>Tue, 09 Nov 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Initial setup of Docusaurus and start for the web page and blog.]]></description>
-            <content:encoded><![CDATA[<p>Initial setup of Docusaurus and start for the web page and blog.</p><p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p><p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p><p><img alt="Docusaurus Plushie" src="/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500"></p>]]></content:encoded>
+            <content:encoded><![CDATA[<p>Initial setup of Docusaurus and start for the web page and blog.</p><p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p><p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p><p><img loading="lazy" alt="Docusaurus Plushie" src="/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>]]></content:encoded>
             <category>hola</category>
             <category>docusaurus</category>
         </item>

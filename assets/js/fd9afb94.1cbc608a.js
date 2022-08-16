@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[4233],{66067:function(s){s.exports=JSON.parse('{"label":"syslog","permalink":"/blog/tags/syslog","allTagsPath":"/blog/tags","count":1}')}}]);

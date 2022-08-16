@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[3360],{48128:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/graph-ql","name":"GraphQL","count":1,"permalink":"/blog/tags/graph-ql"}')}}]);
