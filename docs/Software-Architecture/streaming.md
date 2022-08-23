@@ -7,5 +7,5 @@
 
 ## NATS
 
-* ToDo
+Event streaming platform, optiimised for pub-sub topoligies where message order and reliable delivery is a non-issue.
 

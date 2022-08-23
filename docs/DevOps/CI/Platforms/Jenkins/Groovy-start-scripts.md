@@ -93,7 +93,7 @@ else {
  * ===================================
  */
 
-// TODO: drive these from a config file
+// drive these from a config file
 def adminPermissions = [
 "hudson.model.Hudson.Administer",
 "hudson.model.Hudson.Read"
