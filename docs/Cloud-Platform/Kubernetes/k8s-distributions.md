@@ -115,7 +115,7 @@ Master No-schedule except kube-system or other deployments
 
 Add `--node-taint k3s-controlplane=true:NoExecute` to k3s install
 
-#### On already installed system
+#### On already installed system
 
 * Toleration and affinity
 
@@ -341,7 +341,7 @@ kind create cluster --loglevel=debug
 
 ### Deploy clusters
 
-* [Fleet](https://thenewstack.io/kubecon-eu-surge-of-kubernetes-edge-deployments-leads-to-cluster-sprawl/)
+* [Fleet](https://thenewstack.io/kubecon-eu-surge-of-kubernetes-edge-deployments-leads-to-cluster-sprawl/) (fleet is no longer developed or maintained by CoreOS. After February 1, 2018)
 
 ### Containerd logs
 
