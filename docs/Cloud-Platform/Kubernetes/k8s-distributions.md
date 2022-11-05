@@ -31,6 +31,82 @@ systemctl restart k3s.service
 ```
 * [Unable tore-deploying manifest after change](https://github.com/k3s-io/k3s/issues/737)
 
+
+### Containerd disk location
+
+The normal directory `/var/lib/containerd` is not the one used in k3s for the container layers. Instead is the `/run/k3s/containerd` but is a `tmpfs` mount.
+
+```bash
+root@k3s-1:~# cat /proc/self/mounts | awk '{print $2}' | grep '^/run/k3s' | head -n 5
+/run/k3s/containerd/io.containerd.grpc.v1.cri/sandboxes/dab3158b11a58caedc3f485af984f033a07f94e933046a6da1a00573bc5dd9db/shm
+/run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/dab3158b11a58caedc3f485af984f033a07f94e933046a6da1a00573bc5dd9db/rootfs
+/run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/a2a3d5d172be7f269850d7f6d6ee569b51b9d1257a54823c96ce6bcfeb25bee3/rootfs
+/run/k3s/containerd/io.containerd.grpc.v1.cri/sandboxes/2e1e05c5d5503ab760dea5a01a9f1f8f3d2f7f7e16866e93e2384597330834c8/shm
+/run/k3s/containerd/io.containerd.runtime.v2.task/k8s.io/2e1e05c5d5503ab760dea5a01a9f1f8f3d2f7f7e16866e93e2384597330834c8/rootfs
+```
+
+Searching in the configuration only find something pointing a plugin optional dir to `/var/lib/rancher/k3s/agent/containerd`, to use things like the snapshooter:
+
+```bash
+root@k3s-1:~# cat /var/lib/rancher/k3s/agent/etc/containerd/config.toml
+```
+
+```toml
+[plugins.opt]
+  path = "/var/lib/rancher/k3s/agent/containerd"
+
+[plugins.cri]
+  stream_server_address = "127.0.0.1"
+  stream_server_port = "10010"
+  enable_selinux = false
+  enable_unprivileged_ports = true
+  enable_unprivileged_icmp = true
+  sandbox_image = "rancher/mirrored-pause:3.6"
+
+[plugins.cri.containerd]
+  snapshotter = "overlayfs"
+  disable_snapshot_annotations = true
+
+[plugins.cri.containerd.runtimes.runc]
+  runtime_type = "io.containerd.runc.v2"
+
+[plugins.cri.containerd.runtimes.runc.options]
+	SystemdCgroup = false
+```
+
+Searching for containerd in the hard disk and looking into current usage found:
+
+```bash
+root@k3s-1:~# for i in /var/lib/rancher/k3s/agent/containerd /var/lib/kubelet /run/k3s/containerd /var/run/k3s/containerd; do du -shc $i; df -h $i; echo; done
+12G	/var/lib/rancher/k3s/agent/containerd
+12G	total
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p4  418G  317G   80G  80% /
+
+12M	/var/lib/kubelet
+12M	total
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p4  418G  317G   80G  80% /
+
+5,1G	/run/k3s/containerd
+5,1G	total
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1,6G   61M  1,5G   4% /run
+
+5,1G	/var/run/k3s/containerd
+5,1G	total
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1,6G   61M  1,5G   4% /run
+```
+
+| Directory |  Mount     | Filesystem | Content |
+|:----------|:-----------|:----------:|:-------|
+| `/var/lib/rancher/k3s/agent/containerd` | `/` | root disk | 
+| `/var/lib/kubelet` | `/` | root disk | plugins (CSI, devices,...), PODs (container webhooks, plugins like emptydir, volumes like secrets & SA tokens )
+| `/run/k3s/containerd` | `/run` | `tmpfs` |
+| `/var/run/k3s/containerd` | `/run` | `tmpfs` |
+
+
 ### Master no-schedule
 
 Master No-schedule except kube-system or other deployments
