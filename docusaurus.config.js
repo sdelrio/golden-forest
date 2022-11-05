@@ -55,10 +55,33 @@ const config = {
       }),
     ],
   ],
-
+  //themes: ['@docusaurus/theme-search-algolia'], 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
+      algolia: {
+        // The application ID provided by Algolia
+        appId: '5VR022LUD5',
+
+        // Public API key: it is safe to commit it
+        apiKey: 'df83999fe52871d81bab9de4ef15dcba',
+
+        indexName: 'loriencloud',
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'www.lorien.cloud',
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+
+        //... other Algolia params
+      },
       docs: {
         sidebar: {
           hideable: true
@@ -139,7 +162,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-    }),
+    },
 };
 
 module.exports = config;
