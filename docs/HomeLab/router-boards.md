@@ -1,5 +1,9 @@
 # Router boards
 
+## 4 cards + 4 10Gbit
+
+* Supermicro [SYS-E300-9D-8CN8TP](https://www.supermicro.com/en/products/system/Mini-ITX/SYS-E300-9D-8CN8TP.cfm) - [YouTube](https://www.youtube.com/watch?v=R2cQxAVb9FU)
+
 ## 3 ethernet cards
 
 * [PC Engines APU2](https://www.pcengines.ch/apu2.htm)
