@@ -36,6 +36,13 @@ $ kubectl run tmp-shell --rm -i --tty --overrides='{"spec": {"hostNetwork": true
 
 * [GitHub](https://github.com/nicolaka/netshoot)
 
+## Check resources when namespace keep on deleting
+
+``` bash
+$ kubectl api-resources --verbs=list --namespaced -o name \
+  | xargs -n 1 kubectl get --show-kind --ignore-not-found -n <namespace>
+```
+
 ## K8s Cheat Sheets
 
 * <https://kubernetes.io/docs/reference/kubectl/cheatsheet/>
