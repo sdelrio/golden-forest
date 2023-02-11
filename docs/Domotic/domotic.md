@@ -11,3 +11,15 @@ Home automation has high potential for sharing data between family members or tr
 
 * [Wikipedia](https://en.wikipedia.org/wiki/Home_automation)
 
+## Firmwares for ESP devices
+
+### ESPhome
+
+Home: https://esphome.io/
+
+ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.
+
+### Tasmota
+
+Home: https://tasmota.github.io/docs/
+
