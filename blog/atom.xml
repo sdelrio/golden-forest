@@ -9,7 +9,7 @@
     <icon>https://www.lorien.cloud/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[k8s linter]]></title>
-        <id>blog-kubelinter</id>
+        <id>https://www.lorien.cloud/blog/blog-kubelinter</id>
         <link href="https://www.lorien.cloud/blog/blog-kubelinter"/>
         <updated>2022-01-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Init k8s linter section]]></summary>
@@ -23,7 +23,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[API standards]]></title>
-        <id>blog-init-api-standard</id>
+        <id>https://www.lorien.cloud/blog/blog-init-api-standard</id>
         <link href="https://www.lorien.cloud/blog/blog-init-api-standard"/>
         <updated>2022-01-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Init API Standards section]]></summary>
@@ -42,7 +42,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Microservces]]></title>
-        <id>blog-init-microservices-section</id>
+        <id>https://www.lorien.cloud/blog/blog-init-microservices-section</id>
         <link href="https://www.lorien.cloud/blog/blog-init-microservices-section"/>
         <updated>2022-01-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Init Microservices section]]></summary>
@@ -56,7 +56,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Syslog, nginx-ingress sticky session, Dockerfile python update]]></title>
-        <id>blog-initial-syslog</id>
+        <id>https://www.lorien.cloud/blog/blog-initial-syslog</id>
         <link href="https://www.lorien.cloud/blog/blog-initial-syslog"/>
         <updated>2022-01-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Initial syslog, add nginx-ingress sticky seessions, update Dockerfile for python]]></summary>
@@ -70,7 +70,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Initial Python section]]></title>
-        <id>blog-initial-python</id>
+        <id>https://www.lorien.cloud/blog/blog-initial-python</id>
         <link href="https://www.lorien.cloud/blog/blog-initial-python"/>
         <updated>2021-12-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Initial python section.]]></summary>
@@ -84,7 +84,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Initial Setup]]></title>
-        <id>blog-initial-setup</id>
+        <id>https://www.lorien.cloud/blog/blog-initial-setup</id>
         <link href="https://www.lorien.cloud/blog/blog-initial-setup"/>
         <updated>2021-12-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Initial setup of content sections. Also added some detailed notes about:]]></summary>
@@ -97,7 +97,7 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[First Post]]></title>
-        <id>first-post</id>
+        <id>https://www.lorien.cloud/blog/first-post</id>
         <link href="https://www.lorien.cloud/blog/first-post"/>
         <updated>2021-11-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Initial setup of Docusaurus and start for the web page and blog.]]></summary>
