@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[5160],{7085:function(e){e.exports=JSON.parse('{"name":"docusaurus-theme-search-algolia","id":"default"}')}}]);

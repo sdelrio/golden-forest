@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[8894],{18894:function(e,s,t){t.r(s)}}]);

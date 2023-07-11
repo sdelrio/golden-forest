@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[596],{5649:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"tutorial-intro"}')}}]);
