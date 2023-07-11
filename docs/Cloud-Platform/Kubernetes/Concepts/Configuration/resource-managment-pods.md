@@ -19,10 +19,10 @@ You are defining a period and a quota.
 
 Example: `cpu: 100m`
 
-$$
-Period = 0.1s = 100,000 \mus
-Quota: = 0.01s = 10,000 \mus
-$$
+Period $= 0.1s = 100,000 \mu s$
+
+Quota $= 0.01s = 10,000 \mu s$
+
 
 Can use the CPU for 0.01 seconds every 0.1 seconds.
 

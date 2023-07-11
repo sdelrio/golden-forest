@@ -4,6 +4,11 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+// KaTeX
+
+const math = require('remark-math');
+const katex = require('rehype-katex');
+
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 //(module.exports = {
@@ -42,7 +47,8 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/sdelrio/golden-forest/edit/master/',
-          remarkPlugins: [require('mdx-mermaid')],  
+          remarkPlugins: [math, require('mdx-mermaid')],  
+          rehypePlugins: [katex],
         },
         blog: {
           showReadingTime: true,
@@ -54,6 +60,15 @@ const config = {
         },
       }),
     ],
+  ],
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
   ],
   //themes: ['@docusaurus/theme-search-algolia'], 
   themeConfig:
