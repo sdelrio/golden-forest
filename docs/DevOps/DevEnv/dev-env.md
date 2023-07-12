@@ -1,4 +1,14 @@
-# Dev Enviornments
+---
+title: nix+devbox+direnv
+date: 20230713
+tags:
+- visual studio code
+- nix
+- devbox
+- direnv
+---
+
+# Dev Enviornment with Nix, Devbox and Direnv
 
 ## [Managing Dev Envs | S01 E20](https://community.aws/livestreams/build-on-weekly/2023-06-01)
 
@@ -6,7 +16,7 @@
 
 Portable dev environment using 4 open source tools:
 
-1. [`nix`](https://github.com/DeterminateSystems/nix-installer). Configuration as code, it comes from [NixOS](https.//nixos.org). Focus on reproducibility 
+1. [`nix`](https://github.com/DeterminateSystems/nix-installer). Configuration as code, it comes from [NixOS](https://nixos.org). Focus on reproducibility 
 If you switch laptops, or if you do things on different machines, it carries along your dev environment with you and make it works everywhere.
 ```bash
 !/bin/bash
