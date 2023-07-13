@@ -1,5 +1,5 @@
 ---
-title: nix+devbox+direnv
+title: Nix + devbox + direnv
 date: 20230713
 tags:
 - visual studio code
@@ -8,7 +8,7 @@ tags:
 - direnv
 ---
 
-# Dev Enviornment with Nix, Devbox and Direnv
+# Dev Environment with Nix, Devbox and Direnv
 
 ## [Managing Dev Envs | S01 E20](https://community.aws/livestreams/build-on-weekly/2023-06-01)
 
