@@ -1,0 +1,13 @@
+# Quickpassthrough
+
+* [GitHub](https://github.com/HikariKnight/quickpassthrough)
+
+A project to simplify setting up GPU passthrough on your Linux host for QuickEMU(vfio support not developed yet) and libvirt/virt-manager
+
+You can use it by simply running
+
+```bash
+git clone https://github.com/HikariKnight/quickpassthrough.git
+cd quickpassthrough
+./vfio-setup
+```
