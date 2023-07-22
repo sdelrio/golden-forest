@@ -1,4 +1,4 @@
-# KVM/Quickemu
+# Quickemu
 
 Quickly create and run optimised Windows, macOS and Linux desktop virtual machines. 
 

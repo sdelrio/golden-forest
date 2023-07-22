@@ -1,4 +1,4 @@
-# KVM/QEMU
+# QEMU
 
 ## KVM UI managers
 
