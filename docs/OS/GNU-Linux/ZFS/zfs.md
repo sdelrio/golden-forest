@@ -388,7 +388,7 @@ Would you like to proceed [y/N]? y
 
 ### Create and load-key
 
-Sample, create a vol witih compression, encription, and dedup.
+Sample, create a vol with compression, encryption, and dedup.
 
 ```
 zpool create -o ashift=12 -m /mnt/zfs zfs raidz sdb sdc sde
@@ -497,4 +497,4 @@ One-stop ZFS backup & replication solution
 * [FreeBSD ZFS guru](http://zfsguru.com/)
 * [ZFS Plugin for Unraid](https://forums.unraid.net/topic/41333-zfs-plugin-for-unraid/)
 * [NAS with ZFS on RAspberry Pi 4](https://sysops.tv/?page_id=28)
-
+* [Letting your ZFS pool sleep](https://rudd-o.com/linux-and-free-software/tip-letting-your-zfs-pool-sleep)
