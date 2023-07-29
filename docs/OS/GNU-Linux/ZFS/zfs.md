@@ -426,6 +426,25 @@ zfs key -K <dataset>
 
 * [Changing passphrase on encrypted zpool](https://www.reddit.com/r/zfs/comments/7mm237/changing_passphrase_on_encrypted_zpool/)
 
+### Change key location
+
+You can use password prompt as the encryption key unlocking method.
+And it can be godo good. But if want to automate this, you can put the key to be read from USB drive.
+
+To do that one can simply prepare a new key and point the pool toward it.
+
+```bash
+dd if=/dev/urandom of=/usb/key.dat bs=32 count=1
+
+zfs change-key -o keylocation=file:///usb/key.dat -o keyformat=raw pool-name
+```
+
+To rollback to password prompt:
+
+```bash
+zfs change-key -o keylocation=prompt -o keyformat=passphrase pool-name
+```
+
 ## Sharing ZFS Datasets
 
 ### NFS
@@ -498,3 +517,4 @@ One-stop ZFS backup & replication solution
 * [ZFS Plugin for Unraid](https://forums.unraid.net/topic/41333-zfs-plugin-for-unraid/)
 * [NAS with ZFS on RAspberry Pi 4](https://sysops.tv/?page_id=28)
 * [Letting your ZFS pool sleep](https://rudd-o.com/linux-and-free-software/tip-letting-your-zfs-pool-sleep)
+* [Changing ZFS Key Location](https://www.medo64.com/2020/12/changing-zfs-key-location/)
