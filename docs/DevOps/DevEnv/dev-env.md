@@ -141,3 +141,9 @@ $ devbox global run install-starship-prompt
 
 * Global config is stored in `~/devbox/global/current`
 
+## Fleek
+
+* [Fleek homepage](https://getfleek.dev/)
+
+Similar to previous solution but seems designed to manage the `$HOME` directory
+
