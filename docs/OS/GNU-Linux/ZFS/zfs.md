@@ -445,6 +445,11 @@ To rollback to password prompt:
 zfs change-key -o keylocation=prompt -o keyformat=passphrase pool-name
 ```
 
+### Encrypted Root
+
+* [Encypted ZFS Root with USB Unlock](https://www.medo64.com/2020/07/encrypted-zfs-root-on-ubuntu-server-20-04-via-usb-unlock/)
+
+
 ## Sharing ZFS Datasets
 
 ### NFS
@@ -501,6 +506,22 @@ One-stop ZFS backup & replication solution
 
 * [GitHub](https://github.com/zrepl/zrepl)
 * [Doc](https://zrepl.github.io0)
+
+
+### Docker
+
+Docker sometimes have overlay fs issues when using ZFS as volume storage, for example in k3s or k3d, you can override the docker volume to use zfs mounting a volume in ext4:
+
+```bash
+$ zfs create -s -V 50GB rpool/ROOT/docker
+$ mkfs.ext4 /dev/zvol/rpool/ROOT/docker 
+$ echo "/dev/zvol/rpool/ROOT/docker /var/lib/docker ext4 defaults 0 0" >> /etc/fstab
+```
+
+References:
+* https://github.com/k3s-io/k3s/issues/1688#issuecomment-619570374
+* https://www.enricobassetti.it/2022/02/k3s-zfs-cgroups-v2/
+
 
 ## Resources
 
