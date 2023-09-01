@@ -83,9 +83,15 @@ rpool     460G   164G   296G        -         -    24%    35%  1.00x    ONLINE  
 * ZFS Intent Log, or ZIL, is designed to buffer **WRITE** operations
 * ARC and L2ARC are ment for **READ** operations
 
-[Configure ZFS cache for high Speed IO](https://linuxhint.com/configuring-zfs-cache/)
+* [Configure ZFS cache for high Speed IO](https://linuxhint.com/configuring-zfs-cache/)
 [ZFS sync/async + ZIL/SLOG explained](https://jrs-s.net/2019/05/02/zfs-sync-async-zil-slog/)
-[TrueNas SLOG](https://www.truenas.com/docs/references/slog/)
+* [TrueNas SLOG](https://www.truenas.com/docs/references/slog/)
+
+* L2ARC is AWESOME on ZFS - Why does EVERYONE say it's NOT?
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JY_-I6lQTtI?si=Pn4vPRk2BA0vH2vL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+* Best Practices for OpenZFS L2ARC in the Era of NVMe (SDC 2019)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yHgSU6iqrlE?si=6t3xnNhrnJ0XhEap" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 #### ZIL Log
 
