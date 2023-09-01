@@ -72,7 +72,7 @@ errors: No known data errors
 ```
 ### Use the free space to create a ZVOL
 
-* Check partition with `parte`
+* Check partition with `parted`
 
 ```bash
 (parted) print free                                                       
@@ -124,7 +124,7 @@ zpool create boot-extra  /dev/disk/by-id/nvme-Samsung_SSD_980_500GB_S64AAA0T0123
 zpool export boot-extra
 ```
 
-* In TrueNAS UI `Storage` -> `Import Pool` -> select `boot-extra`
+* In TrueNAS UI `Storage` -> `Import Pool` -> select pool to import pool: `boot-extra`
 
 
 ### References
