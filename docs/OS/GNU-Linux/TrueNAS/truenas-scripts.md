@@ -1,5 +1,5 @@
 ---
-title: TrueNAS SCALE Install
+title: TrueNAS SCALE scripts
 date: 20230901
 author: sdelrio
 tags:
