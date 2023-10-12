@@ -38,9 +38,18 @@ start:	## Docusaurus start develop server
 upgrade:	## Docusaurus upgrade version
 	@yarn upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest
 
+upgrade-browserlist: ## Why you should do it regularly: https://github.com/browserslist/update-db#readme
+	@npx update-browserslist-db@latest
+
+upgrade-all:  ## Upgrade all yarn.lock dpendencies
+	@yar unpgrade
+
 deploy:	## Deploy to github pages
 	@GIT_USER=$(USER) USE_SSH=true yarn deploy
 
+
+clean:  ## Clean node cache, build directoryo and .docusuarus
+	@rm -rf node_modules .docusaurus build
 
 .PHONY: build
 build: ## Build page
