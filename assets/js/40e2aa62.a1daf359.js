@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[7377],{72083:e=>{e.exports=JSON.parse('{"label":"microservices","permalink":"/blog/tags/microservices","allTagsPath":"/blog/tags","count":1}')}}]);

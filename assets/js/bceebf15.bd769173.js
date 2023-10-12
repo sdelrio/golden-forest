@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[5999],{9690:e=>{e.exports=JSON.parse('{"label":"iVentoy","permalink":"/docs/tags/i-ventoy","allTagsPath":"/docs/tags","count":1,"items":[{"id":"OS/GNU-Linux/PXE","title":"PXE boot","description":"DIY Manual way","permalink":"/docs/OS/GNU-Linux/PXE"}]}')}}]);

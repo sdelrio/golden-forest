@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[330],{5714:e=>{e.exports=JSON.parse('{"label":"AsyncAPI","permalink":"/blog/tags/async-api","allTagsPath":"/blog/tags","count":1}')}}]);
