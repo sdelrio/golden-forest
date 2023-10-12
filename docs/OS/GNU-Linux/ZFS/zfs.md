@@ -482,6 +482,14 @@ zfs.host.com:/pool-name/dataset-name \
 
 * [Sharing ZFS Dataset via NFS](https://blog.programster.org/sharing-zfs-datasets-via-nfs)
 
+## Comression
+
+### Speed benchmarks
+
+Since LZ4 is the fastest decompression depending on the usage we may be internested in another other method or compression level:
+
+* Zstd and LZ4: <https://indico.fnal.gov/event/16264/contributions/36466/attachments/22610/28037/Zstd__LZ4.pdf>
+
 ## UI
 
 ### Cockpit
