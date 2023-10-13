@@ -9,10 +9,10 @@
   <os>
     <type arch="x86_64" machine="pc-q35-5.0">hvm</type>
     <loader readonly="yes" type="pflash">/usr/share/OVMF/OVMF_CODE.fd</loader>
-    <nvram>/var/lib/libvirt/qemu/nvram/NixOsMinimal_VARS.fd</nvram>
+    <nvram>/var/lib/libvirt/qemu/nvram/NixOSVM.fd</nvram>
+    <bootmenu enable="no"/>
   </os>
 ```
-* Make sure the disk doesn't already have `rpool` or `bpool` zpools.
 
 ### Check the disk with id
 
@@ -47,7 +47,7 @@ Number  Start   End     Size    File system  Name   Flags
 ```
 
 * [In defense of swap](https://chrisdown.name/2018/01/02/in-defence-of-swap.html)
-* [Linuxx Performance: Almost always add swap space](https://haydenjames.io/linux-performance-almost-always-add-swap-space/)
+* [Linux Performance: Almost always add swap space](https://haydenjames.io/linux-performance-almost-always-add-swap-space/)
 
 ## Destroy partitions
 
@@ -129,7 +129,7 @@ bpool  mountpoint  /boot       local
 
 
 ```bash
-[root@nixos:/mnt/sergio/etc/nixos]# cat configuration.nix
+
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running `nixos-help`).
@@ -212,9 +212,9 @@ bpool  mountpoint  /boot       local
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.sdelrio = {
+  users.users.myuser = {
     isNormalUser = true;
-    initialPassword= "sdelrio";
+    initialPassword= "myuser";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
   #    firefox
