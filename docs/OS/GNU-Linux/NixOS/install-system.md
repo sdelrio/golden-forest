@@ -35,11 +35,11 @@ This command should include the grub install so after it finish we can reboot th
 
 Once the system is started we can change the `/etc/nixos/configuration.nix`, after 
 that we can apply the change siwth the `nixos-rebuild swith` or we can test it 
-before applying it with the `nixos-rebuild --test`.
+before applying it with the `nixos-rebuild test`.
 
 ```bash
 sudo nixos-rebuild switch
-sudo nixos-rebuild --test
+sudo nixos-rebuild test
 ```
 
 ## Generations
@@ -48,11 +48,16 @@ Every time the system state is rebuilt using `nixos-rebuild switch`, a new gener
 is created. The previous generations are usually added to the grub menu in case you
 need to go back
 
-### Rever generation
+### Revert generation
 
+* Roll back a user environment
 ```bash
-nix-env --rollback               # roll back a user environment
-nixos-rebuild switch --rollback  # roll back a system environment
+nix-env --rollback
+```
+
+* Roll back a system environment
+```bash
+nixos-rebuild switch --rollback
 ```
 
 ### List generations
@@ -89,7 +94,6 @@ nixos-generate-config --show-hardware-config
 ```bash
 nixos-generate-config --show-hardware-config --no-filesystems
 ```
-
 
 ### Hardware profiles
 

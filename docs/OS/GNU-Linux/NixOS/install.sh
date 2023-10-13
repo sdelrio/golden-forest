@@ -31,6 +31,7 @@ NAME="myuser"
 ## Git for system configuration
 GITREPO=https://github.com/ne9z/dotfiles-flake.git
 GITBRANCH=openzfs-guide
+GITSED=true
 MYHOST=exampleHost
 
 ## Enable Nix Flakes functionality
@@ -38,9 +39,9 @@ mkdir -p ~/.config/nix
 echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
 
 ## Install programs needed for system installation
-if ! command -v git; then nix-env -f '<nixpkgs>' -iA git; fi
-if ! command -v jq;  then nix-env -f '<nixpkgs>' -iA jq; fi
-if ! command -v partprobe;  then nix-env -f '<nixpkgs>' -iA parted; fi
+for p in git jq partprobe; do
+  if ! command -v $p; then nix-env -f '<nixpkgs>' -iA $p; fi
+done 
 
 # System Install
 
@@ -208,7 +209,6 @@ mkdir -p "${MNT}"/etc
 git clone --depth 1 --branch ${GITBRANCH} \
   ${GITREPO} "${MNT}"/etc/nixos
 
-
 rm -rf "${MNT}"/etc/nixos/.git
 git -C "${MNT}"/etc/nixos/ init -b main
 git -C "${MNT}"/etc/nixos/ add "${MNT}"/etc/nixos/
@@ -216,55 +216,57 @@ git -C "${MNT}"/etc/nixos config user.email "${EMAIL}"
 git -C "${MNT}"/etc/nixos config user.name "${NAME}"
 git -C "${MNT}"/etc/nixos commit -asm 'initial commit'
 
-echo "[info] Customize configg to your hardware"
+if [[ "${GITSED}" = "true" ]]; then 
+  echo "[info] Customize config to your hardware"
 
-for i in ${DISK}; do
+  for i in ${DISK}; do
+    sed -i \
+    "s|/dev/disk/by-id/|${i%/*}/|" \
+    "${MNT}"/etc/nixos/hosts/exampleHost/default.nix
+    break
+  done
+
+  diskNames=""
+  for i in ${DISK}; do
+    diskNames="${diskNames} \"${i##*/}\""
+  done
+
+  echo "[info] sed bootDevices_placeholder "${MNT}"/etc/nixos/hosts/exampleHost/default.nix"
+  sed -i "s|\"bootDevices_placeholder\"|${diskNames}|g" \
+    "${MNT}"/etc/nixos/hosts/exampleHost/default.nix
+
+  echo "[info] sed abcd1234 "${MNT}"/etc/nixos/hosts/exampleHost/default.nix"
+  sed -i "s|\"abcd1234\"|\"$(head -c4 /dev/urandom | od -A none -t x4| sed 's| ||g' || true)\"|g" \
+    "${MNT}"/etc/nixos/hosts/exampleHost/default.nix
+
+  echo "[info] sed x86_64-linux "${MNT}"/etc/nixos/flake.nix"
+  sed -i "s|\"x86_64-linux\"|\"$(uname -m || true)-linux\"|g" \
+    "${MNT}"/etc/nixos/flake.nix
+
+  echo "[info] Detect kernel modules needed for boot"
+  cp "$(command -v nixos-generate-config || true)" ./nixos-generate-config
+
+  chmod a+rw ./nixos-generate-config
+
+  # shellcheck disable=SC2016
+  echo 'print STDOUT $initrdAvailableKernelModules' >> ./nixos-generate-config
+
+  kernelModules="$(./nixos-generate-config --show-hardware-config --no-filesystems | tail -n1 || true)"
+
+  echo "[info] kernelModules=$kernelModules"
+
+  sed -i "s|\"kernelModules_placeholder\"|${kernelModules}|g" \
+    "${MNT}"/etc/nixos/hosts/exampleHost/default.nix
+
+  echo "[question] Root Password"
+  rootPwd=$(mkpasswd -m SHA-512)
+
   sed -i \
-  "s|/dev/disk/by-id/|${i%/*}/|" \
-  "${MNT}"/etc/nixos/hosts/exampleHost/default.nix
-  break
-done
+  "s|rootHash_placeholder|${rootPwd}|" \
+  "${MNT}"/etc/nixos/configuration.nix
 
-diskNames=""
-for i in ${DISK}; do
-  diskNames="${diskNames} \"${i##*/}\""
-done
-
-echo "[info] sed bootDevices_placeholder "${MNT}"/etc/nixos/hosts/exampleHost/default.nix"
-sed -i "s|\"bootDevices_placeholder\"|${diskNames}|g" \
-  "${MNT}"/etc/nixos/hosts/exampleHost/default.nix
-
-echo "[info] sed abcd1234 "${MNT}"/etc/nixos/hosts/exampleHost/default.nix"
-sed -i "s|\"abcd1234\"|\"$(head -c4 /dev/urandom | od -A none -t x4| sed 's| ||g' || true)\"|g" \
-  "${MNT}"/etc/nixos/hosts/exampleHost/default.nix
-
-echo "[info] sed x86_64-linux "${MNT}"/etc/nixos/flake.nix"
-sed -i "s|\"x86_64-linux\"|\"$(uname -m || true)-linux\"|g" \
-  "${MNT}"/etc/nixos/flake.nix
-
-echo "[info] Detect kernel modules needed for boot"
-cp "$(command -v nixos-generate-config || true)" ./nixos-generate-config
-
-chmod a+rw ./nixos-generate-config
-
-# shellcheck disable=SC2016
-echo 'print STDOUT $initrdAvailableKernelModules' >> ./nixos-generate-config
-
-kernelModules="$(./nixos-generate-config --show-hardware-config --no-filesystems | tail -n1 || true)"
-
-echo "[info] kernelModules=$kernelModules"
-
-sed -i "s|\"kernelModules_placeholder\"|${kernelModules}|g" \
-  "${MNT}"/etc/nixos/hosts/exampleHost/default.nix
-
-echo "[question] Root Password"
-rootPwd=$(mkpasswd -m SHA-512)
-
-sed -i \
-"s|rootHash_placeholder|${rootPwd}|" \
-"${MNT}"/etc/nixos/configuration.nix
-
-git -C "${MNT}"/etc/nixos commit -asm 'initial installation'
+  git -C "${MNT}"/etc/nixos commit -asm 'initial installation'
+fi
 
 echo "[info] Update flake lock file to track latest system version"
 nix flake update --commit-lock-file \
