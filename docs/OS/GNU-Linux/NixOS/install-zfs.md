@@ -13,6 +13,14 @@
     <bootmenu enable="no"/>
   </os>
 ```
+* If using Wayland or want 3D acel [configure](https://www.youtube.com/watch?v=6-IpJLYjc0M):
+  * Video QXL:
+    * Model: virtio
+    * 3D acelration: checked
+  * Display Spice:
+    * Type: spice server
+    * Listen: none
+    * OpenGL: on
 
 ### Check the disk with id
 
