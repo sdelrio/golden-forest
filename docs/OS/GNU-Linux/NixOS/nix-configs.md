@@ -1,5 +1,16 @@
+---
+date: 20231014
+author: sdelrio
+tags:
+ - nixos
+ - config
+ - tutorials
+ - gpu
+ - passthrough
+ - paranoid
+---
 
-# NixOs configs and tutorials
+# NixOS configs and tutorials
 
 ## NixOS Explained from zero
 

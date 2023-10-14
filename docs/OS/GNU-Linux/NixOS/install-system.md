@@ -1,9 +1,20 @@
+---
+title: Installing NixOS
+date: 20231014
+author: sdelrio
+tags:
+ - nixos
+ - nix
+ - nixos-install
+---
 
 # Installing
 
+
+The pretty basic install will need a `configuration.nix`, additionally the default installation also includes a `hardware-configuration.nix`.
+
 * <https://nixos.org/manual/nixos/stable/#sec-installation-manual-installing>
 
-The pretty basic install will need a `configuraiton.nix`, the default installation also includes a `hardware-configuration.nix`.
 The command `nixos-generate-config` can generate those initial configuration 
 files for you. Usually we will mount the target hardisk in some directory, in 
 this sample will be on `/mnt` so the tool will write the files into `/mnt/etc/nixos`.

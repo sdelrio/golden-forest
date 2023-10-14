@@ -1,3 +1,14 @@
+---
+title: NixOS root on ZFS
+date: 20231014
+author: sdelrio
+tags:
+ - nixos
+ - zfs
+ - vm
+ - script
+---
+
 # NixOS Root on ZFS
 
 
