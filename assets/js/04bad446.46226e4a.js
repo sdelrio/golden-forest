@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[8914],{6556:e=>{e.exports=JSON.parse('{"label":"OData","permalink":"/blog/tags/o-data","allTagsPath":"/blog/tags","count":1}')}}]);

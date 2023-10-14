@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[9083],{1614:e=>{e.exports=JSON.parse('{"label":"OpenAPI","permalink":"/blog/tags/open-api","allTagsPath":"/blog/tags","count":1}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[4870],{6680:e=>{e.exports=JSON.parse('{"label":"netboot.xyz","permalink":"/docs/tags/netboot-xyz","allTagsPath":"/docs/tags","count":1,"items":[{"id":"OS/GNU-Linux/PXE","title":"PXE boot","description":"DIY Manual way","permalink":"/docs/OS/GNU-Linux/PXE"}]}')}}]);
