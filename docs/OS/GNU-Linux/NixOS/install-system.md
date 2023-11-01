@@ -80,7 +80,7 @@ sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
 ### Delete generations
 
 ```bash
-sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
+sudo nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 14d
 ```
 
 ## Upgrade NixOs packages

@@ -34,14 +34,14 @@ NixOS Explained from zero Config videos with timestamps , NFS mounting, Gaming S
 ## Config files samples
 
 * https://github.com/gvolpe/nix-config
-  * current — and always evolving 
+  * current — and always evolving
   * NixOS configuration files, home-manager, neovim, etc.
 
 ## Nix CI
 
 * garnix.io (https://garnix.io/)
   * garnix | the nix CI
-  * Simple, fast, and green CI and caching for nix projects 
+  * Simple, fast, and green CI and caching for nix projects
 
 * Fluidattacks <https://makes.fluidattacks.com/>
   * Documentation for Makes
@@ -68,7 +68,7 @@ NixOS Explained from zero Config videos with timestamps , NFS mounting, Gaming S
 * kborling <https://gist.github.com/kborling/76805ade81ac5bfdd712df294208c878>
   configuration.nix: sway + wayland, but in 2021
 
-## Quickpassthrough 
+## Quickpassthrough
 
 * quickpassthrough script <https://youtu.be/sDmLCBI9L4E?t=11434>
   * Hyperland - Wayland (Arch)
@@ -90,7 +90,7 @@ NixOS Explained from zero Config videos with timestamps , NFS mounting, Gaming S
   * Some errors from video (not too bad):
     * At 2:38 alternative to "dunst" is "mako"!!!
     * pkgs.wl-clipboard, not pkgs.wl-copy
-  
+
 ```haskell
 # Enabling hyprlnd on NixOS
 programs.hyprland = {
@@ -136,8 +136,35 @@ services.pipewire = {
 };
 
 # rofi keybind
-bind = $mainMod, S, exec, rofi -show drun -show-icons 
+bind = $mainMod, S, exec, rofi -show drun -show-icons
 ```
+
+### Waybar configuration
+
+(09/2023) Setup WAYBAR, the status bar for HYPRLAND with standard and custom modules for your window manager.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rW3JKs1_oVI?si=1Z4-6RgQAboRlZMY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+This video is about the configuration and customization of Waybar, probably the most used status bar for Hyprland, Sway and other and other Wayland compositors.
+<https://github.com/Alexays/Waybar>
+
+Web developers will love waybar because the styling of the bar and the modules is done using the
+CSS format means Cascading Stylesheets that are also used for web design.
+
+Refering to the Hyprland Wiki, Waybar is one of the recommended status bars for the window manager.
+With special modules you can connect waybar effectively with Hyprling for workspaces, window titles, keyboard language and the submap.
+<https://wiki.hyprland.org/Useful-Utilities/Status-Bars/>
+
+Waybar has an excellent documentation and helped me a lot to customize it to my needs.
+<https://github.com/Alexays/Waybar/wiki>
+
+Your can find the my configuration and latest dofiles of waybar always on Gitlab:
+<https://gitlab.com/stephan-raabe/dotfiles>
+
+Kudos to <https://github.com/f3l3p1n0> for his great and inspiring setup.
+
+Homepage:
+<https://www.ml4w.com>
+
 
 ## Home Manager
 
