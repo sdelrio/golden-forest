@@ -55,3 +55,13 @@ clean:  ## Clean node cache, build directoryo and .docusuarus
 build: ## Build page
 	@yarn build
 
+algolia:  ## Generate algolia index
+	@if [ -f $$HOME/.algoliaenv ]; then \
+		docker run -it --env-file=$$HOME/.algoliaenv -e "CONFIG=$$(cat $$(pwd)/.docsearch.json| jq -r tostring)" algolia/docsearch-scraper -v;\
+	else \
+		echo "[Error] Missing ~/.algoliaenv";\
+		echo "[Info] File format:";\
+		echo "APPLICATION_ID=1234567UVW";\
+		echo "API_KEY=0123456789abcdef0123456789abcdef";\
+	fi
+
