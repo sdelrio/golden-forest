@@ -31,7 +31,7 @@ Nix flakes introduce inning for all dependencies by having a lockfile to solve t
   * https://github.com/konradmalik/dotfiles
 * ZFS
   * https://github.com/mariaa144/dotfiles-flake/blob/openzfs-guide/hosts/exampleHost/sshUnlock.txt
-* [Tool auto detects dock stagins and helps Hyperland not config monitors by terminal]()
+* Tool auto detects dock stagins and helps Hyperland not config monitors by terminal
   * https://github.com/pjones/tilde/blob/4a5a691fbc5c8d63d1ae85a71ad9859de420d39a/devices/jekyll.nix#L68C7-L68C21
 
 
