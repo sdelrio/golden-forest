@@ -15,6 +15,9 @@ Nix flakes introduce inning for all dependencies by having a lockfile to solve t
   * https://github.com/redyf/nixdots
 * NVidia modules
   * https://github.com/redyf/nixdots/blob/main/modules/nixos/hardware/nvidia/default.nix (it also has a crean repo organization)
+* Mac
+  * https://nixcademy.com/2024/01/15/nix-on-macos/
+  * https://medium.com/@zmre/nix-darwin-quick-tip-activate-your-preferences-f69942a93236
 * Mac Apple Silicon
   * https://github.com/billimek/dotfiles/blob/c98a04a057dd1edcfd1ff44329e658a306a887e6/hosts/common/darwin/defaults.nix
   * https://github.com/LnL7/nix-darwin
