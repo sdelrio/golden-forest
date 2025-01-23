@@ -23,7 +23,7 @@ the second creature takes the weapon's damage, but don't add your ability modifi
 **Vex**:If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.  
 **Increased Crit**:Critical range increased by 1.  
 **Brutal Crit**: Add an extra critical damage die.  
-**Parry**:As a reaction after being hit by a melee attack, you can add +2 to your AC, potentially causing the attack to miss.  
+**Parry**: As a reaction after being hit by a melee attack, you can add +2 to your AC, potentially causing the attack to miss.  
 **Fast Reload**: When you take the attack action using a reload weapon, you can reload the weapon as a bonus action and make a second attack as part of the attack action if you are able (e.g. extra attack feature, haste, etc.)  
 **Extended Range**: You ignore disadvantage when attacking beyond normal range.  
 **Powerful**: When the weapon damage dice show a 10 or better result, you can add another damage dice to the damage roll and keep rolling until this condition is not true.  
