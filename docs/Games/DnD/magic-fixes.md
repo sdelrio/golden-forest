@@ -5,7 +5,7 @@
 This spell doesn't require concentration  
 ## Resurrection Effects
 **Revivify**  
-Every time a player cast Revivify, its life force is diminished. The player permanently loses 1 point from a random ability score.  
+Every time a player cast Revivify, its life force is diminished. The caster permanently loses 1 point from a random ability score.  
 
 **Three strikes and you are out**  
 If the character is being brought from the dead for a 3rd time, instead of being raised, the character receiving the resurrection must roll Death Saving Throws.  
