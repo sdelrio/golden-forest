@@ -1,4 +1,4 @@
-# Magic variations
+# Magic fixes
 
 ## Spells
 **Ray of enfeeblement**  
