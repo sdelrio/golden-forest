@@ -14,6 +14,9 @@ The more powerful resurrection spells can bring the character to life more easil
 **Revivify and Raise Dead**: No bonus  
 **Resurrection and Reincarnation**: Advantage on the character's Death Saving Throws.  
 **True Resurrection and Wish**: Automatic Success.  
+  
+**Resurrection weakness**  
+If a Character dies again while still weak from the negative effects of a resurrection spell, it loses 1 point of Constitution permanently.  
 
 ## Spellcasting Services  
 The pricing for spellcasting services listed in page 232 PHB is outrageous.  
