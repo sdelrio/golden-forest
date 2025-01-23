@@ -3,6 +3,17 @@
 ## Spells
 **Ray of enfeeblement**  
 This spell doesn't require concentration  
+## Resurrection Effects
+**Revivify**  
+Every time a player cast Revivify, its life force is diminished. The player permanently loses 1 point from a random ability score.  
+
+**Three strikes and you are out**  
+If the character is being brought from the dead for a 3rd time, instead of being raised, the character receiving the resurrection must roll Death Saving Throws.  
+If successful, he's resurrected. If not, the spell is wasted.  
+The more powerful resurrection spells can bring the character to life more easily:  
+**Revivify and Raise Dead**: No bonus  
+**Resurrection and Reincarnation**: Advantage on the character's Death Saving Throws.  
+**True Resurrection and Wish**: Automatic Success.  
 
 ## Spellcasting Services  
 The pricing for spellcasting services listed in page 232 PHB is outrageous.  
