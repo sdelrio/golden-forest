@@ -3,7 +3,7 @@
 ## Paladin  
 
 ### Level 1 - Laying on hands  
-Must be used in 5 hit point chunks. There's no limit on the number of 5-point chunks per healing.
+Must be used in 5 hit point chunks. There's no limit on the number of 5-point chunks the character can use per healing.
 
 
 ### Level 2 - Paladin's Smite  
