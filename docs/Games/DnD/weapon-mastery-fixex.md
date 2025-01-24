@@ -21,8 +21,8 @@ Due to the current difficult of remember weapon master in PHB2024, a suggestion 
 This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.  
 **Cleave**: If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within ypur reach. On a hit,  
 the second creature takes the weapon's damage, but don't add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.  
-**Vex**:If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.  
-**Increased Crit**:Critical range increased by 1.  
+**Vex**: If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn.  
+**Increased Crit**: Critical range increased by 1.  
 **Brutal Crit**: Add an extra critical damage die.  
 **Parry**: As a reaction after being hit by a melee attack, you can add +2 to your AC, potentially causing the attack to miss.  
 **Fast Reload**: When you take the attack action using a reload weapon, you can reload the weapon as a bonus action and make a second attack as part of the attack action if you are able (e.g. extra attack feature, haste, etc.)  
