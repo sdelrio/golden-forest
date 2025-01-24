@@ -17,7 +17,7 @@ Due to the current difficult of remember weapon master in PHB2024, a suggestion 
 | Firearms | Pistol, Blunderbuss, Musket   | Powerful, Increased Crit| 
 
 ## WEAPON MASTERIES  
-**Graze:** If your attack roll with this weapon misses a creature, you can deal damage to that creature equal to the ability modifier you used to make the attack roll.  
+**Graze:** If your attack roll with this weapon misses a creature and its not an automatic miss, you can deal damage to that creature equal to the ability modifier you used to make the attack roll.  
 This damage is the same type dealt by the weapon, and the damage can be increased only by increasing the ability modifier.  
 **Cleave**: If you hit a creature with a melee attack roll using this weapon, you can make a melee attack roll with the weapon against a second creature within 5 feet of the first that is also within ypur reach. On a hit,  
 the second creature takes the weapon's damage, but don't add your ability modifier to that damage unless that modifier is negative. You can make this extra attack only once per turn.  
