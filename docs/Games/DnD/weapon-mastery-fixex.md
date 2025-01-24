@@ -3,6 +3,7 @@
 
 Due to the current difficult of remember weapon master in PHB2024, a suggestion to group weapons by type and balance effects:
 
+## MASTER TABLE
 
 | Weapon Group | Weapons in group |Weapon mastery |
 |:-----------:|:--------------:|:--------------:|
@@ -27,3 +28,7 @@ the second creature takes the weapon's damage, but don't add your ability modifi
 **Fast Reload**: When you take the attack action using a reload weapon, you can reload the weapon as a bonus action and make a second attack as part of the attack action if you are able (e.g. extra attack feature, haste, etc.)  
 **Extended Range**: You ignore disadvantage when attacking beyond normal range.  
 **Powerful**: When the weapon damage dice show a 10 or better result, you can add another damage dice to the damage roll and keep rolling until this condition is not true.  
+
+## Changing Weapon Masteries  
+
+A character can change its weapon masteries when it gains a level.  
