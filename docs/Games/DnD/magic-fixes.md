@@ -30,6 +30,6 @@ If a Character dies again while still weak from the negative effects of a resurr
 ## Spellcasting Services  
 The pricing for spellcasting services listed in page 232 PHB is outrageous.  
 Instead, the pricing for these services is calculated using the following formula:  
->(Spell level * Spell level * 25)+(Consumed Material Component Cost)+(0,10 * Non-Consumed Material Component Cost). Price in Gold Pieces.  
+>(Spell level x Spell level x 25)+(Consumed Material Component Cost)+(0,10 x Non-Consumed Material Component Cost). Price in Gold Pieces.  
 
 Spells cast as rituals cost half the price of the service (component cost remain the same as above)  
