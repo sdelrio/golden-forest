@@ -3,6 +3,9 @@
 
 ## Spells
 
+### Automatic Miss  
+
+Feature effects that produce an effect on a miss,like *Potent Cantrips*, don't work on automatic misses  
 
 ### Ray of enfeeblement
 
