@@ -32,12 +32,12 @@ The sickle does '1d4+1' damage instead of 1d4
 
 The morningstar gains the property 'reroll 2'  
 :::note
-*reroll 2*: When you roll a 1 or 2 on a weapon damage dice, you can reroll the result, taking the second roll.
+*reroll 2*: When you roll a 1 or 2 on a weapon damage dice, you can reroll the result, taking the second roll.  
 :::
 
 ### Flail
 
 The flail gains the property 'reroll 2'  
 :::note
-*reroll 2*: When you roll a 1 or 2 on a weapon damage dice, you can reroll the result, taking the second roll.
+*reroll 2*: When you roll a 1 or 2 on a weapon damage dice, you can reroll the result, taking the second roll.  
 :::
