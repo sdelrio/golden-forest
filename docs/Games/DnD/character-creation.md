@@ -31,7 +31,7 @@ The character roll its hit die and makes the following adjustment:
 If the result is odd, round up to the next even number.
 
 :::note
-E.g. If the player rolls a 3, it's rounded up to 4. If it rolls a 2, the result is unchanged.  
+E.g. If the player rolls a 3 on a d6, it's rounded up to 4. If it rolls a 2, the result is unchanged.  
 :::
 
 #### Classes rolling d10's or d12's 
