@@ -7,7 +7,7 @@ Feature effects that produce an effect on a miss,like *Potent Cantrips*, don't w
 
 ## Spells
 
-## True Strike
+### True Strike
 
 This spell does the base weapon damage type. As it increases damage with levels, the additional damage is radiant.
 
