@@ -1,11 +1,16 @@
 
 # Magic fixes
 
-## Spells
-
 ### Automatic Miss  
 
 Feature effects that produce an effect on a miss,like *Potent Cantrips*, don't work on automatic misses  
+
+## Spells
+
+## True Strike
+
+This spell does the base weapon damage type. As it increases damage with levels, the additional damage is radiant.
+
 
 ### Ray of enfeeblement
 
