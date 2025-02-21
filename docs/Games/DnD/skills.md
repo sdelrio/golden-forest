@@ -15,9 +15,9 @@ Attuning to a item requires a number of successful checks depending on item rari
 :::note
 The DC of this check is 15.  
 :::
-The number of successes must be consecutive, and the check is made using : (`Arcana check **OR** your Spellcasting ability + Prof bonus`).  
+The number of successes must be consecutive, and the check is made using : `Arcana check OR your Spellcasting ability + Prof bonus`.  
 If the roll is a failure you can commit all your energies to try to master the item. If you do, you roll until you get the required number of successes. Then count the number of failures and roll a CON SAVE against the item CON SAVE DC indicated in the table. For each CON Save failure, you gain one level of exhaustion. If you go above 5 levels of exhaustion roll a WIS saving throw against the CON SAVE DC of the item, if you succeed, you break from the influence of the item before it's too late (death by exhaustion).  
-Any exhaustion levels from attunement are removed by a single cast of Greater Restoration or by successfully finishing a long rest.
+Any exhaustion levels from attunement are removed by a single cast of Greater Restoration or by successfully finishing a long rest (if you have other sources of exhaustion, it cannot be reduced until this exhaustion is removed first).  
 
 
 | Item Rarity | Successes required | CON SAVE DC |
