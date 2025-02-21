@@ -9,7 +9,7 @@ Feature effects that produce an effect on a miss,like *Potent Cantrips*, don't w
 
 ### True Strike
 
-This spell does the base weapon damage type. As it increases damage with levels, the additional damage is radiant.
+This spell damage is the same as the weapon damage type. If the weapon is magical, the damage is magical.
 
 
 ### Ray of enfeeblement
