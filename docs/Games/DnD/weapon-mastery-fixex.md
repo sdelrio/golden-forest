@@ -33,7 +33,7 @@ If you hit a creature with this weapon and deal damage to the creature, you have
 
 ### Brutal Crit
 
-Critican range increade by 1 **AND** you add an extra critical damage die.  
+Critical range increasee by 1 **AND** you add an extra critical damage die.  
 
 ### Parry
 
