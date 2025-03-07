@@ -9,12 +9,12 @@ Due to the current difficult of remember weapon master properties in PHB2024, a 
 |:-----------:|:--------------:|:--------------:|
 | Blunted weapons 🔨 | Club, Greatclub, Light Hammer, Mace, Flail, Morningstar, Warhammer, War Pick, Maul | [Graze](#graze)          |
 | Bladed weapons 🗡 | Dagger, Sickle, Greatsword, Longsword, Shortsword, Scimitar, Rapier     | [Parry](#parry)        |
-| Axes 🪓 | Handaxe, Battleaxe, Greataxe | [Increased crit](#increased-crit), [brutal crit](#brutal-crit)|
+| Axes 🪓 | Handaxe, Battleaxe, Greataxe |[Brutal crit](#brutal-crit)|
 | Pole arms 🔱| Spear, Quarterstaff, Glaive, Halberd, Lance, Pike, Trident   | [Cleave](#cleave)         |
 | Bows 🏹 | Shortbow, Longbow     | [Vex](#vex)            |
 | Crossbows ✖🏹 | Hand Crossbow, Light Crossbow, Heavy Crossbow   | [Fast-Reload](#fast-reload) |
-| Exotic 🎯 | Javelin, Sling, Dart, Blowgun, Shuriken |Reroll 1, [extended range](#extended-range)|
-| Firearms 🥆 | Pistol, Blunderbuss, Musket   | [Powerful](#powerful), [Increased-Crit](#increased-crit)| 
+| Exotic 🎯 | Javelin, Sling, Dart, Blowgun, Shuriken |[extended range](#extended-range)|
+| Firearms 🥆 | Pistol, Blunderbuss, Musket   | [Powerful](#powerful)| 
 
 ## Weapon masteries
 
@@ -31,13 +31,9 @@ If you hit a creature with a melee attack roll using this weapon, you can make a
 
 If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn. 
 
-### Increased Crit
-
-Critical range increased by 1.  
-
 ### Brutal Crit
 
-Add an extra critical damage die.  
+Critican range increade by 1 **AND** you add an extra critical damage die.  
 
 ### Parry
 
@@ -49,11 +45,12 @@ When you take the attack action using a reload weapon, you can reload the weapon
 
 ### Extended Range
 
-You ignore disadvantage when attacking beyond normal range.
+You ignore disadvantage when attacking beyond normal range and you reroll the 1's in the damage rolls.
 
 ### Powerful
 
-When the weapon damage dice show a 10 or better result, you can add another damage dice to the damage roll and keep rolling until this condition is not true.
+This mastery is exclusively for firearms.  
+Critical range increased by 1 and when the weapon damage dice show a 10 or better result, you can add another damage dice to the damage roll and keep rolling until this condition is not true.
 
 ## Changing Weapon Masteries  
 
