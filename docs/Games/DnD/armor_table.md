@@ -28,8 +28,7 @@
 | Splint | 7 | 0 | Disadvantage | 60 | 200 gp | - |
 | Plate | 8 | 0 | Disadvantage | 65 | 1.500 gp | - |
 
-Characters in heavy armor when taking a critical hit from a weapon or natural weapon attack, can spend its reaction to let the heavy armor to take the brunt of the attack.  
-Attacks from cretaures larger than you cannot be blocked this way, as well as attacks from weapons designed to take on armored foes (blunted weapons and firearms)   
+Characters in heavy armor when taking a critical hit from a weapon or natural weapon attack, can spend its reaction to let the heavy armor to take the brunt of the attack.
 
 The armor is damaged in the process.  
 - 1st hit - Damaged: -1 AC. Repair DC 15
