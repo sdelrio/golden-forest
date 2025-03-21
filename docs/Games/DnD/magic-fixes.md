@@ -24,6 +24,10 @@ This spell damage is the same as the weapon damage type. If the weapon is magica
 
 This spell doesn't require concentration  
 
+### Shield of faith
+
+This spell doesn't require concentration  
+
 ## Resurrection Effects
 
 ### Revivify
