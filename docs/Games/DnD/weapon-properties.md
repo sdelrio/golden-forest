@@ -4,22 +4,26 @@
 
 ### Greatclub
 
-The greatclub has the 'increased crit' property  
+The greatclub has the 'Throw Weight' property  
 
 :::note
-**increased crit** When attacking with this weapon, the critical range increased by 1.  
+**Throw Weight** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
 
 ### Light Hammer
 
-The Light Hammer does '1d4+1' damage instead of 1d4  
+The light hammer has the 'Throw Weight' property  
+
+:::note
+**Throw Weight** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+:::
 
 ### Mace
 
-The mace gains the property 'reroll 1'  
+The mace has the 'Throw Weight' property  
 
 :::note
-**reroll 1**: When you roll a 1 on a weapon damage dice, you can reroll the result, taking the second roll.  
+**Throw Weight** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
 
 ### Sickle
@@ -30,14 +34,16 @@ The sickle does '1d4+1' damage instead of 1d4
 
 ### Morningstar
 
-The morningstar gains the property 'reroll 2'  
+The Morningstar has the 'Throw Weight' property  
+
 :::note
-**reroll 2**: When you roll a 1 or 2 on a weapon damage dice, you can reroll the result, taking the second roll.  
+**Throw Weight** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
 
 ### Flail
 
-The flail gains the property 'reroll 2'  
+The Flail has the 'Throw Weight' property  
+
 :::note
-**reroll 2**: When you roll a 1 or 2 on a weapon damage dice, you can reroll the result, taking the second roll.  
+**Throw Weight** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
