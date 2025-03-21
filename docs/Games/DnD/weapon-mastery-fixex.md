@@ -7,13 +7,13 @@ Due to the current difficult of remember weapon master properties in PHB2024, a 
 
 | Weapon Group | Weapons in group |Weapon mastery |
 |:-----------:|:--------------:|:--------------:|
-| Blunted weapons 🔨 | Club, Greatclub, Light Hammer, Mace, Flail, Morningstar, Warhammer, War Pick, Maul | [Graze](#graze)          |
+| Blunted weapons 🔨 | Club, Greatclub, Light Hammer, Mace, Flail, Morningstar, Warhammer, War Pick, Maul | [Sap](#sap)          |
 | Bladed weapons 🗡 | Dagger, Sickle, Greatsword, Longsword, Shortsword, Scimitar, Rapier     | [Parry](#parry)        |
 | Axes 🪓 | Handaxe, Battleaxe, Greataxe |[Brutal crit](#brutal-crit)|
 | Pole arms 🔱| Spear, Quarterstaff, Glaive, Halberd, Lance, Pike, Trident   | [Cleave](#cleave)         |
 | Bows 🏹 | Shortbow, Longbow     | [Vex](#vex)            |
 | Crossbows ✖🏹 | Hand Crossbow, Light Crossbow, Heavy Crossbow   | [Fast-Reload](#fast-reload) |
-| Exotic 🎯 | Javelin, Sling, Dart, Blowgun, Shuriken |[extended range](#extended-range)|
+| Exotic 🎯 | Javelin, Sling, Dart, Blowgun, Shuriken |[graze](#graze)|
 | Firearms 🥆 | Pistol, Blunderbuss, Musket   | [Powerful](#powerful)| 
 
 ## Weapon masteries
@@ -43,9 +43,9 @@ As a reaction after being hit by a melee attack, you can add +2 to your AC, pote
 
 When you take the attack action using a reload weapon, you can reload the weapon as a bonus action and make a second attack as part of the attack action if you are able (e.g. extra attack feature, haste, etc.)
 
-### Extended Range
+### Sap
 
-You ignore disadvantage when attacking beyond normal range and you reroll the 1's in the damage rolls.
+When you hit an enemy with an attack, this mastery property inflicts Disadvantage on your target’s next attack roll before the start of your next turn.
 
 ### Powerful
 
