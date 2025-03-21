@@ -7,7 +7,7 @@
 
 ## Stat Rolling
 
-Stats are rolled in order, rolling 4d6 dices and keeping the 3 highest.
+Stats are rolled in order, rolling for each stat 4d6 dice and keeping the 3 highest.
 
 :::tip Fantasy Grounds
 Can use the command: `/die 4d6k3` 
