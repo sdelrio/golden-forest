@@ -26,7 +26,7 @@ This spell doesn't require concentration
 
 ### Shield of faith
 
-This spell doesn't require concentration  
+This spell doesn't require concentration but its duration is decreased to 1 minute
 
 ## Resurrection Effects
 
