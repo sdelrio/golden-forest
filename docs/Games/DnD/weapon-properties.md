@@ -4,26 +4,26 @@
 
 ### Greatclub
 
-The greatclub has the 'Throw Weight' property  
+The greatclub has the 'Impactful' property  
 
 :::note
-**Throw Weight** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
 
 ### Light Hammer
 
-The light hammer has the 'Throw Weight' property  
+The light hammer has the 'Impactful' property  
 
 :::note
-**Throw Weight** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
 
 ### Mace
 
-The mace has the 'Throw Weight' property  
+The mace has the 'Impactful' property  
 
 :::note
-**Throw Weight** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
 
 ### Sickle
@@ -34,10 +34,10 @@ The sickle does '1d4+1' damage instead of 1d4
 
 ### Morningstar
 
-The Morningstar has the 'Throw Weight' property  
+The Morningstar has the 'Impactful' property  
 
 :::note
-**Throw Weight** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
 
 ### Flail
@@ -45,5 +45,5 @@ The Morningstar has the 'Throw Weight' property
 The Flail has the 'Throw Weight' property  
 
 :::note
-**Throw Weight** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
