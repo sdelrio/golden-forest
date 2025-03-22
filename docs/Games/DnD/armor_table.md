@@ -35,7 +35,7 @@ The armor is damaged in the process.
 - 2nd hit - Worn: -2 AC. Repair DC 20
 - 3rd hit - Destroyed  
 
-  :::note
+:::note
   When wearing magical heavy armor and you use this feature, the armor is damaged only if struck by magical weapons, adamantine weapons, imbued magical effects on weapons (like paladin's smite) or natural attacks from creatures of CR 8 or higher
 :::  
 
