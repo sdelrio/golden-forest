@@ -33,8 +33,11 @@ Characters in heavy armor when taking a critical hit from a weapon or natural we
 The armor is damaged in the process.  
 - 1st hit - Damaged: -1 AC. Repair DC 15
 - 2nd hit - Worn: -2 AC. Repair DC 20
-- 3rd hit - Destroyed
+- 3rd hit - Destroyed  
 
+  :::note
+  When wearing magical heavy armor and you use this feature, the armor is only damaged if struck by magical weapons, adamantine weapons, imbued magical effects on weapons (like paladin's smite) or natural attacks from creatures of CR 8 or higher
+:::  
 
 
 ## Shields  
