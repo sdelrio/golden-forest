@@ -41,8 +41,12 @@ If successful, he's resurrected. If not, the spell is wasted.
 The more powerful resurrection spells can bring the character to life more easily:  
 - *Revivify and Raise Dead*: No bonus  
 - *Resurrection and Reincarnation*: Advantage on the character's Death Saving Throws.  
-- *True Resurrection and Wish*: Automatic Success.  
-  
+- *True Resurrection and Wish*: Automatic Success.
+
+### Instant Death
+
+Bodies of Characters instant-killed are incapable of sustaining life again. Revivify or Raise Dead won't work on them unless a Greater Restoration is previously cast upon them.
+
 ### Resurrection weakness
 
 If a Character dies again while still weak from the negative effects of a resurrection spell, it loses 1 point of Constitution permanently.  
