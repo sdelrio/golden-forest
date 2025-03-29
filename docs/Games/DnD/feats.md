@@ -744,6 +744,7 @@ Random Spellmark Table
 ### Augmented Conjuring
 
 *Prerequisite: Spell Focus (Conjuration)*
+
 Each creature you conjure with any summon spell gains +2 bonus to attack and damage rolls, and +2 hit points per Hit Dice it has.
 
 
@@ -984,6 +985,7 @@ Your physiology is well adapted for consuming and enduring the effects of potion
 + During a long rest, you can create a potion of healing for free. If you spend a spell slot and a material component, you instead can create a potion of a rarity show on the Create Potion table
 
 CREATE POTION
+
 | Spell Slot | Material Component | Rarity |
 |:-----------:|:-----------:|:-----------:|
 | 1-2 | 25 gp | Common |
