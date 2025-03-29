@@ -59,7 +59,7 @@ You gain the following benefits:
 
 + **Ability Score Increase.** Increase your Constitution score by 1, to a maximum of 20.
 
-+ If you fail a saving throw, you gain advantage on the next saving throw that uses the same ability score during this encounter.
++ If you fail a saving throw, you gain advantage on the next saving throw your roll during this encounter.
 
 + When you have less than one-half of your maximum hit points (rounded down), your weapon attacks each round deal an extra 2 damage of the weapon type.
 
