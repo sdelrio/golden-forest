@@ -3,14 +3,6 @@
 ## Origin Feats 
 
 
-### Level 2 - Paladin's Smite  
-
-You always have the Divine Smite spell prepared. In addition, you can cast it without expending a spell slot a number of times equal to your proficiency bonus, but you must finish a Long Rest before you can cast it in this way again.  
-
-### Level 5 - Weapon of Honor (Replaces Faithful Steed)  
-
-You can choose a melee weapon type to be your weapon of honor.  
-In addition to the regular mastery associated with your weapon of honor, you can forfeit the mastery in another weapon to give your weapon of honor a second mastery of your choice.  
 
 ## Regular Feats  
 
@@ -444,7 +436,7 @@ Thanks to study or deep introspection, you have achieved a firm grasp on spellca
 
 ### Elementary Expertise  
 
-*Prerequisite: Spellcasting*
+*Prerequisite: The ability to cast at least one spell*
 
 + **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
 
@@ -459,6 +451,209 @@ Once per day when you finish a short rest, you can choose expended spell slots t
 The spell slots can have a combined leveI that is equal to or less than half your spellcaster level (rounded up), and none of the slots can be 6th level or higher.
 For example, if you're a 4th-level bard, you can recover up to two leves worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots.
 If you already have this feature (i.e. wizard and some druids), you can use this feature 2 times between long rests.
+
+
+### Invigorating Abjuration  
+
+*Prerequisite: The ability to cast at least one spell*
+
+You are able to mold the essence of your protective spells to fill yourself with vigor.
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ Whenever you cast an abjuration spell of 1st level or higher, you gain a number of temporary hit points equal to four times the level of the spell slot used
+
+
+### Magical Reminiscence  
+
+*Prerequisite: The ability to cast at least one spell*
+
+In a pinch, you can strain yourself to recall one of your latent spells to your mind. You gain the following benefits:
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ At any time, you can add a spell to your list of prepared spells (no action required). This spell must be among the spells you know (spellbook for wizards, class list for other classes). You can then cast the added spell normally, by spending the necessary casting time, components, and spell slot. This spell is lost when you finish a long rest. Once you use this feature, you cannot use it again until you finish a long rest.
+
+### Metamagic Adept
+*Prerequisite: Spellcasting or Pact Magic feature*
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
+You've learned how to exert your will on your spells to alter how they function:
++ You learn two Metamagic options of your choice from the sorcerer class. You can use only one Metamagic option on a spell when you cast it, unless the option says otherwise. Whenever you reach a level that grants the Ability Score Improvement feature, you can replace one of these Metamagic options with another one from the sorcerer class.
++ You gain 2 sorcery points. You regain all spent sorcery points when you finish a long rest.
+
+### Protective Transmutation
+
+*Prerequisite: The ability to cast at least one spell*
+
+You are able to use your magic to bolster yourself against assaults. You gain the following benefits:
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ Reactive Shell. When you are about to take damage, you can use your reaction before the damage is rolled to expend a spell slot and gain resistance to the type of the incoming damage until the start of your next turn. If you expend a spell slot of 5th level or higher, you instead gain immunity to this type of damage until the start of your next turn.
+
+### Spell Focus
+
+*Prerequisite: Ability to cast spells.*
+
+Choose a school of magic. 
++ The spell save DC of your spells form the chosen school increases by 1.
++ You gain advantage on all saves against spells from that school of magic.
++ You cannot learn or cast spells from the opposed school of magic. You can replace the spells you know from your opposed school with spells from your chosen school.
+
+### Spellblade
+*Prerequisite: Spellcasting ability 15+*
+
+You’ve learned to meld your strikes with sparks of arcane magic, gaining the following benefits:
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ You gain mastery in one weapon you are proficient with.
++ Your weapon attacks are magical
++ You learn two cantrips of your choice from the wizard spell list. Intelligence is your spellcasting ability for these spells.
++ You learn the shield spell and you always have it prepared. You can cast it once without using a spell slot. Once you cast this spell using this feat, you can’t do so again until you finish a long rest.
+
+### Unrelenting Caster
+
+*Prerequisite: The ability to cast at least one spell*
+
+Whoever resists your spell is in for a demonstration of your tenacity.
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ Whenever you cast a spell of 1st level or higher and fail to affect any creature, you can immediately cast a cantrip you know. This benefit does not apply if a target makes a successful saving throw but still takes damage, a condition, or any other negative effect from your spell.
+
+### Upcaster
+
+*Prerequisite: Spellcasting feature* 
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ As a free action, you can expend two spell slots of the same level to create a spell slot that is one level higher.
+
+### Wyrd Magic
+
+*Prerequisite: Spellcasting or Pact Magic feature*
+
+#### Wyrd Spells
+
+A character casting a spell using wyrd magic can imbue their spells with the chaotic forces of the world.
+When a character casts a spell, which involves rolling dice, it can declare that spell to be a wyrd spell. Upon using wyrd magic, when the spell’s dice are rolled and for each of the highest possible values rolled on the dice, you add the maximum value of the dice to the total (e.g. if you roll damage for a fireball and any of the d6's shows a 6, you add a +6 bonus to the damage roll for each dice showing a 6). After the wyrd spell is cast, you then gain 1 level of exhaustion.
+
+#### Whimsy
+
+When the character is granted Inspiration, they can choose not to gain inspiration and instead roll a d100, gaining a whimsy according to the table below. A whimsy lasts until it is used, or until an affected creature finishes a long rest.
+A spell cast using a whimsy requires no components, and a creature uses its spell save DC and spell attack bonus when casting a whimsy; all other elements of the spell remain the same.
+
+
+### Magical Prodigy
+
+*Prerequisites: Spellcasting or Pact Magic feature. Spellcasting ability score 16+*
+
+You have an innate affinity to magic. You can prepare an extra 1st level spell and you gain an extra spell slot which is always of the highest level you can cast (up to a maximum of 5th level)
+
+### Arcane Shield
+
+*Prerequisite: Ability to cast arcane spells*
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ As a reaction, when you are hit by an attack, you can sacrifice a spell or spell slot of 1st level or higher and gain a shield bonus to AC equal to the level of the spell or spell slot you sacrificed for 1 minute.
+
+### Arcane Strike
+
+*Prerequisite: Ability to cast arcane spells.*
+
+You draw upon your arcane power to enhance your weapons with magical energy.
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ Weapons you hold glow with arcane power and count as though they are magical weapons.
++ You gain a +1 bonus to attacks and damage with these weapons as long as you are holding them.
++ Ranged weapons also grant these bonuses on attacks and damage, but the magic fades after striking their target.
+
+### Eldritch Adept
+
+*Prerequisite: Spellcasting or Pact Magic Feature*
+
+Studying occult lore, you learn one Eldritch Invocation option of your choice from the Warlock class. Your spellcasting ability for the invocation is your normal spellcasting ability. If the invocation has a prerequisite of any kind, you can choose that invocation only if you meet the prerequisite.
+Whenever you gain a level, you can replace the invocation with another one.
+
+### Eldritch Lifesaver
+
+*Prerequisite: The ability to cast at least one arcane spell.*
+
+You've learned to cannibalize the power of your spells to reinvigorate your allies.
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ As a bonus action, you can expend a spell slot of 1st level or higher to heal yourself or an ally within 30 feet. The number of hit points healed equals five times the level of the expended slot. In addition, the target gains temporary hit points equal to your spellcasting ability modifier.
+
+
+### Metamagic: Preserved Spell
+
+*Prerequisite: Spellcasting ability score 16+*
+
++ You gain 2 sorcery points.
++ You learn the Preserved Spell metamagic option
+
+#### Preserved Spell
+
+When you cast a spell that requires concentration, you can spend 2 sorcery points to remove the concentration component to maintain the spell’s effect for the duration.
+Instead, you must use a bonus action on each of your turns to sustain the effect, which immediately ends if you fail to take this action.
+
+### Master of Magic
+
+*Prerequisites: Magical Prodigy feat. Spellcasting ability score 18+. Arcane spellcasting or Divine spellcasting.*
+
+You spellcasting abilities are extraordinary. You gain an extra spell slot for each level between 1st and 4th, provided you are able to cast spells of those levels.
+
+### Master of High Magic
+*Prerequisites: Master of Magic feat. Spellcasting ability score 18+. Arcane spellcasting or Divine spellcasting.*
+
+You gain an extra spell slot of 6th and 7th levels, provided you already have a 7th-level spell slot.
+
+### Overwhelming Elemental Power
+
+*Prerequisite: Elemental Adept Feat*
+
+You gain the following benefits
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+
++ Overwhelming power. If a creature would be immune to the elemental damage from your elemental adept feat, it instead has resistance to that damage. This effect doesn't stack further with elemental adept (i.e. the resistance isn't bypassed by the effects of elemental adept but it can by further bypassed by spells or other effects)
+
+### Spell Penetration
+
+*Prerequisite: Spell Focus Feat*
+
+When casting a spell of the school you have chose for Spell Focus, you ignore resistance of targets.
+
+### Spellmarked
+
+*Prerequisite: Sorcerer*
+
+The marks created by wild magic are as varied as magic itself and can come in many different shapes, sizes, and colors. The magical attributes they imbue the subject with are even more varied, with the only common denominator being that a spellmark always comes with both a boon and a drawback.
+
+Random Spellmark Table
+
+| Roll | Result |
+|:-----------:|:--------------:|
+| 1-2 | Alloy |
+| 3-5 | Conduit |
+| 6-7 | Magesight |
+| 8-9 | Omen |
+| 10-12 | Spellmantle |
+| 13-14 | Mindmage |
+| 15-16 | Weavewraith |
+| 17-18 | Wildfire |
+| 19-20 | Unstable |
+
+
+### Augmented Conjuring
+
+*Prerequisite: Spell Focus (Conjuration)*
+Each creature you conjure with any summon spell gains +2 bonus to attack and damage rolls, and +2 hit points per Hit Dice it has.
 
 ## Epic Boons and Feats
 
