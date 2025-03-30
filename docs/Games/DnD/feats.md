@@ -338,7 +338,7 @@ You gain the following benefits.
 As an action during combat you can attempt to pull off a cunning plan.
 Choose any number of allies you can see that can hear you. Those allies roll a dice of their choice and write down the result. This is called your **planned outcome**.
 
-At any point during that combat when you roll a dice of the same type, you can choose your **planned outcome** instead of rolling.
+At any point during that combat when an ally roll a dice of the same type, it can choose your **planned outcome** instead of rolling.
 Once you use this feature you cannot do so again until you complete a short or long rest.
 
 
