@@ -42,7 +42,7 @@ The Morningstar has the 'Impactful' property
 
 ### Flail
 
-The Flail has the 'Throw Weight' property  
+The Flail has the 'Impactful' property  
 
 :::note
 **Impactful** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
