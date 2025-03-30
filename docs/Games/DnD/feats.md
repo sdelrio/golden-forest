@@ -1558,9 +1558,10 @@ You gain the following benefits.
 + You automatically identify Non-Epic spells that you can see. Epic spells are identified with a successful Arcana check vs DC 21 for Tier 1 Epic, 25 for Tier 2 Epic and 28 for Tier 3 Epic.
 + When an Epic spell is cast within 1 mile of you or you are within 1 mile of an Epic magical effect, you immediately sense its casting, its presence, and the general direction from which the spell or effect originates. You do not know the nature, power, or effects of the spell you sense, only that Epic magic is being used in the vicinity.
 
-Your proficiency with magical equipment and powerful items is remarkable, granting you exceptional understanding and versatility.
 
 ### Artifact Affinity
+
+Your proficiency with magical equipment and powerful items is remarkable, granting you exceptional understanding and versatility.
 
 You gain the following benefits.
 
