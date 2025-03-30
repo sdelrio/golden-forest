@@ -95,7 +95,27 @@ You gain the following benefits.
 Your Hit Point maximum increases by an amount equal to twice your character level when you gain this feat. Whenever you gain a character level thereafter, your Hit Point maximum increases by an additional 2 Hit Points.
 
 
+
+
 ## Regular Feats. Can be selected from level 4th onwards.
+
+### Active Alchemy
+
++ You gain proficiency on Alchemist's Tools.
++ **Ability Score Increase.** Increase your Intelligence or Wisdom score by 1, to a maximum of 20.
+
+You naturally collect alchemical specimens from dead monsters.
+During a long rest you can spend 10 minutes attempting to brew your specimens into a potion with an Alchemy Tools check DC 13.
+
+If you succeed you either brew a potion of the DM’s Discretion based on the ingredients you find or roll 1d4 and refer to the brewing table below to see the effect of the potion. If you succeed the roll by 10 or more you brew enough to make 2 potions.
+
+| Roll | Potion |
+|:-----------:|:--------------:|
+| 1 | Health: The drinker’s maximum and current Hit points are increased by 2d4 for 8 hours. |
+| 2 | Silvered Tongue: The drinker can roll 1d4 and add the number rolled to all charisma checks made for the next 8 hours |
+| 3 | Alertness: The drinker can roll 1d4 and add the result to all initiative and perception checks made in the next 8 hours |
+| 4 | Rejuvenation: The drinker’s recovers a 1st level spell slot |
+
 
 ### Actor
 
@@ -108,6 +128,38 @@ You gain the following benefits.
 + Impersonation. While you're disguised as a real or fictional person, you have Advantage on Charisma (Deception or Performance) checks to convince others that you are that person.
 
 + Mimicry. You can mimic the sounds of other creatures, including speech. A creature that hears the mimicry must succeed on a Wisdom (Insight) check to determine the effect is faked (DC 8 plus your Charisma modifier and Proficiency Bonus).
+
+
+### Adrenaline Surge  
+
+**Ability Score Increase.** Increase your Strength or Constitution score by 1, to a maximum of 20.
+
+As a bonus action you can activate an *adrenaline surge*.  
+For 1 minute you become resistant to bludgeoning, piercing, and slashing damage.  
+Once you use this ability you cannot do so again until finishing a long rest.  
+
+
+### Arcane Shield
+
+*Prerequisite: Ability to cast arcane spells*
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ As a reaction, when you are hit by an attack, you can sacrifice a spell or spell slot of 1st level or higher and gain a shield bonus to AC equal to the level of the spell or spell slot you sacrificed for 1 minute.
+
+
+### Arcane Strike
+
+*Prerequisite: Ability to cast arcane spells.*
+
+You draw upon your arcane power to enhance your weapons with magical energy.
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ Weapons you hold glow with arcane power and count as though they are magical weapons.
++ You gain a +1 bonus to attacks and damage with these weapons as long as you are holding them.
++ Ranged weapons also grant these bonuses on attacks and damage, but the magic fades after striking their target.
+
 
 ### Athlete
 
@@ -123,13 +175,26 @@ You gain the following benefits.
 
 + Jumping. You can make a running Long or High Jump after moving only 5 feet.
 
-### Adrenaline Surge  
 
-**Ability Score Increase.** Increase your Strength or Constitution score by 1, to a maximum of 20.
+### Augmented Conjuring
 
-As a bonus action you can activate an *adrenaline surge*.  
-For 1 minute you become resistant to bludgeoning, piercing, and slashing damage.  
-Once you use this ability you cannot do so again until finishing a long rest.  
+*Prerequisite: Spell Focus (Conjuration)*
+
+Each creature you conjure with any summon spell gains +2 bonus to attack and damage rolls, and +2 hit points per Hit Dice it has.
+
+
+### Battlecaster  
+
+*Prerequisite: The ability to cast at least one spell.*
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
+You are skilled at casting spells with a weapon in hand.
+
++ You can use a weapon that you're proficient with as a spellcasting focus.
++ When wielding a magical weapon that you're proficient with and that provides a bonus to hit and damage, you can also add that weapon's bonus to damage rolls for spells you cast.
++ When casting spells that require a ranged attack roll you don't roll with disadvantage by being within 5 ft. of an enemy
+
 
 ### Battlefield Trickster  
 
@@ -139,6 +204,15 @@ As a bonus action you can deploy caltrop or ball bearings.
 When deployed this way the DC for these items equal to 11 + your proficiency bonus.  
 Whenever a creature fails a saving throw to resist the effects of caltrops or ball bearing you can use your reaction to make a weapon attack against that creature.  
 The trick only works once, any further try against the same creature automatically fails.  
+
+
+### Blaster Buffet    
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
+For you, all cantrips that require a ranged spell attack can be made with a melee spell attack. When you do this the spell has a range of touch. 
+When you deal damage with a cantrip to a creature you deal an additional 1 damage to that creature.
+
 
 ### Blowgun Injector  
 
@@ -153,6 +227,7 @@ This ammunition loses potency if you take another long rest.
 
 + *Baneful Poison:* The must make a Constitution save vs DC 8 + your Dexterity modifier + your proficiency bonus. Target is under the effect of the bane spell for 1 minute
 
+
 ### Charger
 
 *Prerequisite: Strength or Dexterity 13+*
@@ -162,6 +237,7 @@ You gain the following benefits.
 + **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
 + Improved Dash. When you take the Dash action, your Speed increases by 10 feet for that action.
 + Charge Attack. If you move at least 10 feet in a straight line toward a target immediately before hitting it with a melee attack roll as part of the Attack action, choose one of the following effects: gain a 1d8 bonus to the attack's damage roll, or push the target up to 10 feet away if it is no more than one size larger than you. You can use this benefit only once on each of your turns.
+
 
 ### Chef
 
@@ -174,6 +250,54 @@ You gain the following benefits.
 + Replenishing Meal. As part of a Short Rest, you can cook special food if you have ingredients and Cook's Utensils on hand. You can prepare enough of this food for a number of creatures equal to 4 plus your Proficiency Bonus. At the end of the Short Rest, any creature who eats the food and spends one or more Hit Dice to regain Hit Points regains an extra 1d8 Hit Points.
 
 + Bolstering Treats. With 1 hour of work or when you finish a Long Rest, you can cook a number of treats equal to your Proficiency Bonus if you have ingredients and Cook's Utensils on hand. These special treats last 8 hours after being made. A creature can use a Bonus Action to eat one of those treats to gain a number of Temporary Hit Points equal to your Proficiency Bonus.
+
+
+### Combat Caster  
+
+You are adept at spellcasting when threatened or distracted.
+
++ Whenever attempting to mantain concentration on spells in combat, you gain advantage.
++ You can cast spells even when holding weapons or shields.
++ Whenever opponents provoke attacks of opportunity, you can spend your reaction to cast a cantrip at that target.
+
+
+### Combat Expertise  
+
+*Prerequisite: Dex 13+*
+
++ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
+
++ You may choose to suffer disadvantage on all attacks in a round in order to force all opponents to suffer disadvantage on all attacks against you until the start of your next turn.
+
+
+### Comeback Kid
+
++ **Ability Score Increase.** Increase your Constitution score by 1, to a maximum of 20.
+
++ You roll a critical success on death saving throws on a 19 or 20. You regain hit points equal to your level on a critical success
+
++ When you must make a death saving throw, you can choose to instead regain hit points using hit dice. Once you use this ability, you cannot do so again until you finish a long rest.
+
+
+### Conditioned Body
+
++ **Ability Score Increase.** Increase your Constitution score by 1, to a maximum of 20.
+
+By following a strict routine, you've become accustomed to resting less than others.
+
++ You gain the full benefit of taking a long rest in only 4 hours, and you gain the full benefit of taking a short rest in only 30 minutes.
+
++ Additionally, you regain all your expended hit dice, rather than half of them, when you finish a long rest.
+
+
+### Conditioning
+
++ **Ability Score Increase.** Increase your Strength, Constitution or Dexterity score by 1, to a maximum of 20.
+
++ Whenever you make a Strength, Dexterity, or Constitution check or saving throw you can choose to make it with advantage. 
+Once you use this ability you cannot do so again until you complete a short or long rest.
+
++ At the end of each short or long rest you gain 5 temporary hit point.
 
 ### Counter-Riposte  
 
@@ -196,6 +320,7 @@ You gain the following benefits.
 
 + Dual Wielding. When you make the extra attack of the Light property, you can add your ability modifier to the damage of the extra attack if that attack is with a crossbow that has the Light property and you aren't already adding that modifier to the damage.
 
+
 ### Crusher 
 
 You gain the following benefits.
@@ -206,6 +331,7 @@ You gain the following benefits.
 
 + Enhanced Critical. When you score a Critical Hit that deals Bludgeoning damage to a creature, attack rolls against that creature have Advantage until the start of your next turn.
 
+
 ### Cunning Plan  
 **Ability Score Increase.** Increase any ability score by 1, to a maximum of 20.
 
@@ -214,6 +340,7 @@ Choose any number of allies you can see that can hear you. Those allies roll a d
 
 At any point during that combat when you roll a dice of the same type, you can choose your **planned outcome** instead of rolling.
 Once you use this feature you cannot do so again until you complete a short or long rest.
+
 
 ### Defensive Duelist
 
@@ -224,6 +351,7 @@ You gain the following benefits.
 + **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
 
 + Parry. If you're holding a Finesse weapon and another creature hits you with a melee attack, you can take a Reaction to add 1 + your Proficiency Bonus to your Armor Class, potentially causing the attack to miss you. You gain this bonus to your AC against melee attacks until the start of your next turn.
+
 
 ### Desperate Reserve  
 
@@ -236,12 +364,39 @@ You gain the following benefits:
 
 + When you have less than one-half of your maximum hit points (rounded down), your weapon attacks each round deal an extra 2 damage of the weapon type.
 
+
+### Dodging Expertise
+
+*Prerequitsite: Dex 13+*
++ You gain +1 bonus to your AC as long as you are not unaware of an attack.
++ Once per short or long rest, you can use a reaction to take the *Dodge* action.
+
+
+### Double Cast  
+
+*Prerequisite: The ability to cast at least one cantrip*
+
+Your rapid-fire style of casting cantrips allows you to weave magic with uncanny speed, granting you the following benefit:
+
++ Whenever you cast a cantrip with a casting time of 1 action that can only target a single enemy, you can use your bonus action to pick a second target within 15 feet of the first taht is within range of the spell.
+
+
 ### Down but not Out  
 + **Ability Score Increase.** Increase your Constitution score by 1, to a maximum of 20.
 
 + While at half hit points or less, you gain a +1 bonus to AC.
 
 + While at half hit points or less, your melee weapon attacks deal an additional 1d4 damage.
+
+
+### Downcaster  
+
+*Prerequisite: Spellcasting feature*
+
+Thanks to study or deep introspection, you have achieved a firm grasp on spellcasting fundamentals, granting you the following benefit:
+
++ You can use a bonus action to divide a higher-level spell slot into two lower-level spell slots whose combined level is equal to or less than the original slot’s level. The lower-level spell slots must replace expended spell slots. You cannot have more available spell slots at at time than your class normally allows.
+
 
 ### Dual Wielder
 
@@ -265,6 +420,26 @@ You gain the following benefits.
 
 + Speedy Recovery. As a Bonus Action, you can expend one of your Hit Point Dice, roll the die, and regain a number of Hit Points equal to the roll.
 
+
+### Eldritch Adept
+
+*Prerequisite: Spellcasting or Pact Magic Feature*
+
+Studying occult lore, you learn one Eldritch Invocation option of your choice from the Warlock class. Your spellcasting ability for the invocation is your normal spellcasting ability. If the invocation has a prerequisite of any kind, you can choose that invocation only if you meet the prerequisite.
+Whenever you gain a level, you can replace the invocation with another one.
+
+
+### Eldritch Lifesaver
+
+*Prerequisite: The ability to cast at least one arcane spell.*
+
+You've learned to cannibalize the power of your spells to reinvigorate your allies.
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ As a bonus action, you can expend a spell slot of 1st level or higher to heal yourself or an ally within 30 feet. The number of hit points healed equals five times the level of the expended slot. In addition, the target gains temporary hit points equal to your spellcasting ability modifier.
+
+
 ### Elemental Adept (Acid, Cold, Fire, Lightning or Thunder)
 
 *Prerequisite: Spellcasting or Pact Magic Feature*
@@ -275,6 +450,58 @@ You gain the following benefits.
 
 + Energy Mastery. Spells you cast ignore Resistance to the chosen damage type. In addition, when you roll damage for a spell you cast that deals that damage type, you can treat any 1 on a damage die as a 2.
 
+
+### Elementary Expertise  
+
+*Prerequisite: The ability to cast at least one spell*
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ You can cast a 1st level spell which you know or have prepared with your spellcasting feature without expending a spell slot. When you do, treat the spell as though it were cast using a spell slot equal to your proficiency bonus. Once you cast a spell this way you cannot do so again until you complete a short or long rest.
+
+
+### Energy Recovery  
+
+*Prerequisite: Spellcasting*
+
+You have learned to regain some of your magical energy during a rest, or you are blessed by your deity's favor (if you are a divine spellcaster) 
+Once per day when you finish a short rest, you can choose expended spell slots to recover.
+The spell slots can have a combined leveI that is equal to or less than half your spellcaster level (rounded up), and none of the slots can be 6th level or higher.
+For example, if you're a 4th-level bard, you can recover up to two leves worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots.
+If you already have this feature (i.e. wizard and some druids), you can use this feature 2 times between long rests.
+
+
+### Expert Tactician
+
++ **Ability Score Increase.** Increase your Charisma score by 1, to a maximum of 20.
+
+You gain a number of tactician commands equal to your proficiency bonus. You can use these commands in several ways as listed below. you regain all commands when you complete a short or long rest.
+
++ *Reposition:* as a bonus action a number of allies up to your Proficiency bonus can each use a reaction to move 30 feet in a direction of their choice.
+
++ *Calculated Strike:* as a bonus action you can allow an ally within 30 feet to make a weapon attack as a reaction.
+
+
+### Expert Trapper
+
++ You gain proficiency in Survival and one tools of your choice. If you are already proficient, you gain proficiency in nature or medicine (your choice)
+
++ **Ability Score Increase.** Increase your Wisdom score by 1, to a maximum of 20.
+
++ During a long rest you can take the set up traps activity. After that long rest you can make a survival check DC 15. If you succeed you collect enough food to feed yourself for the day and you craft special ammunition for the day out of the bones of the creatures you caught and fom superior timbers. You can craft 5 pieces of non-magical +1 ammunition. If you succeed the check by 10 or more you can craft 5 pieces non-magical +2 ammunition.
+
+
+### Fast as Lightning
+
++ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
+
+Your reflexes are exceptionally sharp and quick, granting you the following benefits:
+
++ When you use your reaction to make an opportunity attack with non-heavy weapon, there's a 50% chance that your reaction is not expended.
+
++ Whenever you fail a Dexterity saving throw, you can immediately use a reaction to reroll this saving throw. The result of the second roll replaces the first.
+
+
 ### Fey-Touched
 
 Your exposure to the Feywild’s magic grants you the following benefits.
@@ -282,6 +509,20 @@ Your exposure to the Feywild’s magic grants you the following benefits.
 + **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
 
 + Fey Magic. Choose one level 1 spell from the Divination or Enchantment school of magic. You always have that spell and the Misty Step spell prepared. You can cast each of these spells without expending a spell slot. Once you cast either spell in this way, you can’t cast that spell in this way again until you fi nish a Long Rest. You can also cast these spells using spell slots you have of the appropriate level. The spells’ spellcasting ability is the ability increased by this feat.
+
+
+### Fleet  
+
+*Prerequisite: Dex 15+*
+
++ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
+
++ Your movement increases by 5 feet.
+
++ While your are wearing light or no armor, your base speed increases by another 5 feet.
+
++ When you take the disengage action, you can take another action on the same turn other than the magic action or the attack action.
+
 
 ### Grappler
 
@@ -309,6 +550,7 @@ You gain the following benefits.
 
 + Hew. Immediately after you score a Critical Hit with a Melee weapon or reduce a creature to 0 Hit Points with one, you can make one attack with the same weapon as a Bonus Action.
 
+
 ### Heavily Armored
 
 *Prerequisite: Medium Armor Proficiency*
@@ -319,548 +561,6 @@ You gain the following benefits.
 
 + Armor Training. You gain training with Heavy armor.
 
-### Keen Mind  
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Wisdom or Charisma score by 1, to a maximum of 20.
-
-+ Bolstering Performance. When you finish a Short or Long Rest, you can give an inspiring performance: a speech, song, or dance. When you do so, choose up to six allies (which can include yourself) within 30 feet of yourself who witness the performance. The chosen creatures each gain Temporary Hit Points equal to your character level plus the modifier of the ability you increased with this feat.
-
-### Keep it Simple  
-
-You are adept at delivering punishment using uncomplicated combat tools, specially those that break the bones of your enemies.
-
-+ **Ability Score Increase**. Increase your Strength or Dexterity score by 1, to a maximum of 20.
-
-+ For you, simple weapons deal an additional 2 damage
-
-+ Whenever you make an attack with a bludgeoning simple weapon your critical range increases by 1
-
-### Lightly Armored  
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
-
-+ Armor Training. You gain training with Light armor and Shields.
-
-### Mage Slayer  
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
-
-+ Concentration Breaker. When you damage a creature that is concentrating, it has Disadvantage on the saving throw it makes to maintain Concentration.
-
-+ Guarded Mind. If you fail an Intelligence, a Wisdom, or a Charisma saving throw, you can cause yourself to succeed instead. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.
-
-### Marksman  
-
-+ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
-
-As a condition for making use of this feat, you must forsake your movement on this turn.
-Whenever you take the Attack action with a ranged weapon against a target that you can see, you can use a bonus action to gain one of the following benefits:
-
-+ *Focus*: You cannot have disadvantage to your next attack, unless you have disadvantage from multiple sources at the same time. Additionally, your attack ignores half cover and three-quarters cover.
-
-+ *Take Aim*: If your next attack is successful, add a +2 bonus to the damage. In addition, your attack scores a critical hit on a roll of 19 or 20.
-
-### Martial Weapon Training  
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
-
-+ Weapon Proficiency. You gain proficiency with Martial weapons.
-
-### Medium Armor Master
-
-*Prerequisite: Medium Armor Proficiency*
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
-
-+ Dexterous Wearer. While you're wearing Medium armor, you can add 3, rather than 2, to your AC if you have a Dexterity score of 16 or higher.
-
-### Moderately Armored
-
-*Prerequisite: Light Armor Proficiency*
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
-
-+ Armor Training. You gain training with Medium armor.
-
-### Mounted Combatant
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Strength, Dexterity, or Wisdom score by 1, to a maximum of 20.
-
-+ Mounted Strike. While mounted, you have Advantage on attack rolls against any unmounted creature within 5 feet of your mount that is at least one size smaller than the mount.
-
-+ Leap Aside. If your mount is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw and only half damage if it fails. For your mount to gain this benefit, you must be riding it, and neither of you can have the Incapacitated condition.
-
-+ Veer. While mounted, you can force an attack that hits your mount to hit you instead if you don't have the Incapacitated condition.
-
-### Observant
-
-*Prerequisite: Intelligence or Wisdom 13+*
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Intelligence or Wisdom score by 1, to a maximum of 20.
-
-+ Keen Observer. Choose one of the following skills: Insight, Investigation, or Perception. If you lack proficiency with the chosen skill, you gain proficiency in it, and if you already have proficiency in it, you gain Expertise in it.
-
-+ Quick Search. You can take the Search action as a Bonus Action.
-
-### Piercer
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Strength or Dexterity by 1, to a maximum of 20.
-
-+ Puncture. Once per turn, when you hit a creature with an attack that deals Piercing damage, you can reroll one of the attack's damage dice, and you must use the new roll.
-
-+ Enhanced Critical. When you score a Critical Hit that deals Piercing damage to a creature, you can roll one additional damage die when determining the extra Piercing damage the target takes.
-
-### Poisoner
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Dexterity or Intelligence score by 1, to a maximum of 20.
-
-+ Potent Poison. When you make a damage roll that deals Poison damage, it ignores Resistance to Poison damage.
-
-+ Brew Poison. You gain proficiency with the Poisoner's Kit. With 1 hour of work using such a kit and expending 50 GP worth of materials, you can create a number of poison doses equal to your Proficiency Bonus. As a Bonus Action, you can apply a poison dose to a weapon or piece of ammunition. Once applied, the poison retains its potency for 1 minute, or until you deal damage with the poisoned item, whichever is shorter. When a creature takes damage from the poisoned item, that creature must succeed on a Constitution saving throw (DC 8 plus the modifier of the ability increased by this feat and your Proficiency Bonus) or take 2d8 Poison damage and have the Poisoned condition until the end of your next turn.
-
-### Polearm Master
-
-*Prerequisite: Strength or Dexterity 13+*
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Dexterity or Strength score by 1, to a maximum of 20.
-
-+ Pole Strike. Immediately after you take the Attack action and attack with a Quarterstaff, a Spear, or a weapon that has the Heavy and Reach properties, you can use a Bonus Action to make a melee attack with the opposite end of the weapon. The weapon deals Bludgeoning damage, and the weapon's damage die for this attack is a d4.
-
-+ Reactive Strike. While you're holding a Quarterstaff, a Spear, or a weapon that has the Heavy and Reach properties, you can take a Reaction to make one melee attack against a creature that enters the reach you have with that weapon.
-
-### Punisher  
-
-+ **Ability Score Increase**. Increase your Strength or Dexterity score by 1, to a maximum of 20.
-
-+ You make attacks of opportunity with advantage.
-
-+ Whenever a creature stands up from prone you can make an attack of opportunity against that creature as a reaction.
-
-### Resilient 
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Choose one ability in which you lack saving throw proficiency. Increase the chosen ability score by 1, to a maximum of 20.
-
-+ Saving Throw Proficiency. You gain saving throw proficiency with the chosen ability.
-
-### Ritual Caster 
-
-*Prerequisite: Intelligence, Wisdom or Charisma 13+*
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
-
-+ Ritual Spells. Choose a number of level 1 spells equal to your Proficiency Bonus that have the Ritual tag. You always have those spells prepared, and you can cast them with any spell slots you have. The spells' spellcasting ability is the ability increased by this feat. Whenever your Proficiency Bonus increases thereafter, you can add an additional level 1 spell with the Ritual tag to the spells always prepared with this feature.
-
-+ Quick Ritual. With this benefit, you can cast a Ritual spell that you have prepared using its regular casting time rather than the extended time for a Ritual. Doing so doesn't require a spell slot. Once you cast the spell in this way, you can't use this benefit again until you finish a Long Rest.
-
-### Sentinel 
-
-*Prerequisite: Stength or Dexterity 13+*
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
-
-+ Guardian. Immediately after a creature within 5 feet of you takes the Disengage Action or hits a target other than you with an attack, you can make an Opportunity Attack against that creature.
-
-+ Halt. When you hit a creature with an Opportunity Attack, the creature's Speed becomes 0 for the rest of the current turn.
-
-### Shadow-Touched
-
-Your exposure to the Shadowfell's magic grants you the following benefits.
-
-+ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
-
-+ Shadow Magic. Choose one level 1 spell from the Illusion or Necromancy school of magic. You always have that spell and the Invisibility spell prepared. You can cast each of these spells without expending a spell slot. Once you cast either spell in this way, you can't cast that spell in this way again until you finish a Long Rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.
-
-### Sharpshooter
-
-*Prerequisite: Dexterity 13+*
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
-
-+ Bypass Cover. Your ranged attacks with weapons ignore Half Cover and Three-Quarters Cover.
-
-+ Firing in Melee. Being within 5 feet of an enemy doesn't impose Disadvantage on your attack rolls with Ranged weapons.
-
-+ Long Shots. Attacking at long range doesn't impose Disadvantage on your attack rolls with Ranged weapons.
-
-### Shield Master
-
-*Prerequisite: Shield Proficiency*
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Strength score by 1, to a maximum of 20.
-
-+ Shield Bash. If you attack a creature within 5 feet of you as part of the Attack action and hit with a Melee weapon, you can immediately bash the target with your Shield if it's equipped, forcing the target to make a Strength saving throw (DC 8 plus your Strength modifier and Proficiency Bonus). On a failed save, you either push the target 5 feet from you or cause it to have the Prone condition (your choice). You can use this benefit only once on each of your turns.
-
-+ Interpose Shield. If you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can take a Reaction to take no damage if you succeed on the saving throw and are holding a Shield.
-You gain the following benefits.
-
-### Skill Expert
-
-+ **Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 20.
-
-+ Skill Proficiency. You gain proficiency in one skill of your choice.
-
-+ Expertise. Choose one skill in which you have proficiency but lack Expertise. You gain Expertise with that skill.
-
-You gain the following benefits.
-
-### Skill Expert
-
-*Prerequisite: Dexterity 13+*
-
-+ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
-
-+ Blindsight. You have Blindsight with a range of 10 feet.
-
-+ Fog of War. You exploit the distractions of battle, gaining Advantage on any Dexterity (Stealth) check you make as part of the Hide action during combat.
-
-+ Sniper. If you make an attack roll while hidden and the roll misses, making the attack roll doesn't reveal your location.
-
-### Slasher
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
-
-+ Hamstring. Once per turn when you hit a creature with an attack that deals Slashing damage, you can reduce the Speed of that creature by 10 feet until the start of your next turn.
-
-+ Enhanced Critical. When you score a Critical Hit that deals Slashing damage to a creature, it has Disadvantage on attack rolls until the start of your next turn.
-
-### Speedy
-
-*Prerequisite: Dexterity or Constitution 13+*
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Dexterity or Constitution score by 1, to a maximum of 20.
-
-+ Speed Increase. Your Speed increases by 10 feet.
-
-+ Dash over Difficult Terrain. When you take the Dash action on your turn, Difficult Terrain doesn't cost you extra movement for the rest of that turn.
-
-+ Agile Movement. Opportunity Attacks have Disadvantage against you.
-
-### Spell Sniper
-
-*Prerequisite: Spellcasting or Pact Magic Feature*
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
-
-+ Bypass Cover. Your attack rolls for spells ignore Half Cover and Three-Quarters Cover.
-
-+ Casting in Melee. Being within 5 feet of an enemy doesn't impose Disadvantage on your attack rolls with spells.
-
-+ Increased Range. When you cast a spell that has a range of at least 10 feet and requires you to make an attack roll, you can increase the spell's range by 60 feet.
-
-### Strong Grip
-
-You've learned to use the weight of your weapons effectively, and have adapted to use large weapons one-handed.
-
-+ **Ability Score Increase**. Increase your Strength score by 1, to a maximum of 20.
-+ When wielding a versatile weapon in one hand, you may use the versatile damage die. You can wield non-heavy melee weapons in one hand.
-+ You can wield two non-heavy melee weapons in each hand. The weapons don't need to have the light property, but you cannot use the versatile property when wielding versatile weapons this way.
-
-### Telekinetic
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
-
-+ Minor Telekinesis. You learn the Mage Hand spell. You can cast it without Verbal or Somatic components, you can make the spectral hand Invisible, and its range and the distance it can be away from you both increase by 30 feet when you cast it. The spell's spellcasting ability is the ability increased by this feat.
-
-+ Telekinetic Shove. As a Bonus Action, you can telekinetically shove one creature you can see within 30 feet of yourself. When you do so, the target must succeed on a Strength saving throw (DC 8 plus the ability modifier of the score increased by this feat and your Proficiency Bonus) or be moved 5 feet toward or away from you.
-
-### Telepathic
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
-
-+ Telepathic Utterance. You can speak telepathically to any creature you can see within 60 feet of yourself. Your telepathic utterances are in a language you know, and the creature understands you only if it knows that language. Your communication doesn't give the creature the ability to respond to you telepathically.
-
-+ Detect Thoughts. You always have the Detect Thoughts spell prepared. You can cast it without a spell slot or spell components, and you must finish a Long Rest before you can cast it in this way again. You can also cast it using spell slots you have of the appropriate level. Your spellcasting ability for the spell is the ability increased by this feat.
-
-### War Caster
-
-*Prerequisite: Spellcasting or Pact Magic Feature*
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
-
-+ Concentration. You have Advantage on Constitution Saving Throws that you make to maintain Concentration.
-
-+ Reactive Spell. When a creature provokes an Opportunity Attack from you by leaving your reach, you can take a Reaction to cast a spell at the creature rather than making an Opportunity Attack. The spell must have a casting time of one action and must target only that creature.
-
-+ Somatic Components. You can perform the Somatic components of spells even when you have weapons or a Shield in one or both hands.
-
-### Weapon Master
-
-You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
-
-+ Mastery Property. Your training with weapons allows you to use the mastery property of one kind of Simple or Martial weapon of your choice, provided you have proficiency with it. Whenever you finish a Long Rest, you can change the kind of weapon to another eligible kind.
-
-### Larger than Life
-
-You are muscular, corn-fed, and strong. You gain the following benefits.
-
-+ **Ability Score Increase.** Increase your Strength or Constitution score by 1, to a maximum of 20.
-+ Your carrying capacity is doubled
-+ At the end of each short rest or long rest you gain 5 temporary hit points  
-
-### Dodging Expertise
-
-*Prerequitsite: Dex 13+*
-+ You gain +1 bonus to your AC as long as you are not unaware of an attack.
-+ Once per short or long rest, you can use a reaction to take the *Dodge* action.
-
-### Sidestep
-
-*Prerequitsite: Dex 13+*
-You can reposition yourself after a foe's missed swing.
-+ **Ability Score Increase**. Increase your Dexterity score by 1, to a maximum of 20.
-+ Whenever an opponent misses you with a melee attack, you may move 5 feet as a reaction. This movement does not provoke opportunity attackas and does not count against your total movement.
-
-### Active Alchemy
-
-+ You gain proficiency on Alchemist's Tools.
-+ **Ability Score Increase.** Increase your Intelligence or Wisdom score by 1, to a maximum of 20.
-
-You naturally collect alchemical specimens from dead monsters.
-During a long rest you can spend 10 minutes attempting to brew your specimens into a potion with an Alchemy Tools check DC 13.
-
-If you succeed you either brew a potion of the DM’s Discretion based on the ingredients you find or roll 1d4 and refer to the brewing table below to see the effect of the potion. If you succeed the roll by 10 or more you brew enough to make 2 potions.
-
-| Roll | Potion |
-|:-----------:|:--------------:|
-| 1 | Health: The drinker’s maximum and current Hit points are increased by 2d4 for 8 hours. |
-| 2 | Silvered Tongue: The drinker can roll 1d4 and add the number rolled to all charisma checks made for the next 8 hours |
-| 3 | Alertness: The drinker can roll 1d4 and add the result to all initiative and perception checks made in the next 8 hours |
-| 4 | Rejuvenation: The drinker’s recovers a 1st level spell slot |
-
-### Comeback Kid
-
-+ **Ability Score Increase.** Increase your Constitution score by 1, to a maximum of 20.
-
-+ You roll a critical success on death saving throws on a 19 or 20. You regain hit points equal to your level on a critical success
-
-+ When you must make a death saving throw, you can choose to instead regain hit points using hit dice. Once you use this ability, you cannot do so again until you finish a long rest.
-
-### Conditioned Body
-
-+ **Ability Score Increase.** Increase your Constitution score by 1, to a maximum of 20.
-
-By following a strict routine, you've become accustomed to resting less than others.
-
-+ You gain the full benefit of taking a long rest in only 4 hours, and you gain the full benefit of taking a short rest in only 30 minutes.
-
-+ Additionally, you regain all your expended hit dice, rather than half of them, when you finish a long rest.
-
-### Conditioning
-
-+ **Ability Score Increase.** Increase your Strength, Constitution or Dexterity score by 1, to a maximum of 20.
-
-+ Whenever you make a Strength, Dexterity, or Constitution check or saving throw you can choose to make it with advantage. 
-Once you use this ability you cannot do so again until you complete a short or long rest.
-
-+ At the end of each short or long rest you gain 5 temporary hit point.
-  
-### Expert Tactician
-
-+ **Ability Score Increase.** Increase your Charisma score by 1, to a maximum of 20.
-
-You gain a number of tactician commands equal to your proficiency bonus. You can use these commands in several ways as listed below. you regain all commands when you complete a short or long rest.
-
-+ *Reposition:* as a bonus action a number of allies up to your Proficiency bonus can each use a reaction to move 30 feet in a direction of their choice.
-
-+ *Calculated Strike:* as a bonus action you can allow an ally within 30 feet to make a weapon attack as a reaction.
-
-### Expert Trapper
-
-+ You gain proficiency in Survival and one tools of your choice. If you are already proficient, you gain proficiency in nature or medicine (your choice)
-
-+ **Ability Score Increase.** Increase your Wisdom score by 1, to a maximum of 20.
-
-+ During a long rest you can take the set up traps activity. After that long rest you can make a survival check DC 15. If you succeed you collect enough food to feed yourself for the day and you craft special ammunition for the day out of the bones of the creatures you caught and fom superior timbers. You can craft 5 pieces of non-magical +1 ammunition. If you succeed the check by 10 or more you can craft 5 pieces non-magical +2 ammunition.
-
-### Fast as Lightning
-
-+ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
-
-Your reflexes are exceptionally sharp and quick, granting you the following benefits:
-
-+ When you use your reaction to make an opportunity attack with non-heavy weapon, there's a 50% chance that your reaction is not expended.
-
-+ Whenever you fail a Dexterity saving throw, you can immediately use a reaction to reroll this saving throw. The result of the second roll replaces the first.
-
-### Quick Adaptation
-
-+ **Ability Score Increase.** Increase your Constitution score by 1, to a maximum of 20.
-
-+ You gain proficiency in one saving throw of your choice
-
-+ If you are forced to make a saving throw to overcome an effect currently afflicting you gain advantage on that saving throw. 
-
-+ You have advantage when attempting to break out of a grapple or an effect that is restraining you.
-
-### Irrepressible
-
-+ **Ability Score Increase.** Increase your Constitution or Charisma score by 1, to a maximum of 20.
-
-You are not one to be deterred by adversity. On the contrary, ordeals steel your resolve.
-
-+ Whenever you roll a 1 on an attack roll or whenever a creature scores a critical hit against you, you immediately gain a number of temporary hit points equal to your level. 
-This can only apply in stressful situations. If this occurs when you are in absolutely no danger (such as when training or partaking in friendly competition), the DM can veto the use of this benefit.
-
-### Lightning Stance
-
-+ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
-
-The speed at which you move makes it almost impossible for your opponents to strike you.
-
-+ If you dash during your turn you gain the benefit of the dodge action.
-
-### Meditation
-
-+ **Ability Score Increase.** Increase your Intelligence, Wisdom or Charisma score by 1, to a maximum of 20.
-
-+ Whenever you make a intelligence, wisdom, or charisma saving throw you can choose to make it with advantage. 
-Once you use this ability you cannot do so again until you complete a short or long rest.
-
-+ At the end of each short or long rest you gain 5 temporary hit points.
-
-### Overly Prepared
-+ **Ability Score Increase.** Increase an ability score by 1, to a maximum of 20.
-
-+ You can take the ready action without a specific trigger. Anytime, after a character has finished its turn, you can activate your readied action.
-
-### Sleuthing
-
-+ **Ability Score Increase.** Increase your Intelligence score by 1, to a maximum of 20.
-
-+ You can cast the spell Find Traps with this feat a number of times per day equal to your intelligence modifier. 
-When you cast Find Traps this way you also learn the location of the nearest trap.
-
-+ You can cast Locate Object or Locate Creature with this feat. Once you cast one of these spells you cannot cast either of them again until you complete a long rest.
-
-When casting a spell with this feat, intelligence is your casting modifier.
-
-### Tireless 
-
-Through sheer grit and years of hardship and survival under the most grueling conditions, you have learned to push on through fatigue that would cripple a lesser hero.
-You gain the following benefits:
-
-+ **Ability Score Increase.** Increase your Constitution score by 1, to a maximum of 20.
-
-+ Reduce any exhaustion penalty you suffer by 2 levels (for example, if you have 4 exhaustion levels, you only suffer the penalty of 2 exhaustion levels).
-
-### Torch Master 
-
-+ **Ability Score Increase.** Increase your Strength, Constitution or Dexterity score by 1, to a maximum of 20.
-
-+ You become proficient with torches.
-
-+ You can light a torch as a bonus action.
-
-+ Whenever you hit a creature with a lit torch it deals 1d4 bludgeoning damage + 1d6 fire damage.
-
-+ As an action you can fan the fire of a torch a release it in a spectacular display. All creatures in a 15-foot cone must make a dexterity saving throw against your torch DC (8+your strength modifier+your proficiency bonus) or take 3d6 fire damage. After using this action, the torch is unusable.
-
-### Privilege of the Wise 
-
-You are cunning, granting you the following benefits.
-
-+ **Ability Score Increase.** Increase your Wisdom score by 1, to a maximum of 20.
-
-+ When you succeed on a Wisdom saving throw and would suffer an effect on the success, you instead suffer no effect.
-  
-+ When you make an a Charisma ability check, you can leverage your will to use Wisdom instead of Charisma, keeping whatever skill you would have ordinarily used to make the check (if any).
-  
-+ If you are asked a question to which you do not know the answer, you recall a substantiated rumor as to where the answer can be found (if it exists).
-
-### Seeker of Seven Songs 
-
-You belong to the ancient order of the Seven Songs, granting you the following benefits.
-
-+ **Ability Score Increase.** Increase your Charisma score by 1, to a maximum of 20.
-
-+ You gain proficiency in Performance. If you are already proficient, you instead double your proficiency bonus when making ability checks using Performance.
-
-+ When you gain a level, you can choose to write a song about the experiences you endured to accomplish such a feat. When you do so, you gain half-proficiency on a skill of your choice.
-  
-+ When the DM awards a character other than you inspiration, you are also awarded inspiration.
-
-### Precognitive  
-
-*Prerequisite: Wisdom 14+*
-
-+ **Ability Score Increase.** Increase your Wisdom score by 1, to a maximum of 20.
-
-+ You sometimes feel impressions of events an instant before they happen. When you begin your turn, you can choose to roll a d20 and record the number rolled. One attack roll, ability check, or saving throw you make before the end of your turn can be replaced with this roll. If you choose not to use the number rolled, it is expended. You can use this ability three times and regain all expended uses when you finish a long rest.
-
-### Combat Expertise  
-
-*Prerequisite: Dex 13+*
-
-+ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
-
-+ You may choose to suffer disadvantage on all attacks in a round in order to force all opponents to suffer disadvantage on all attacks against you until the start of your next turn.
-
-
-### Reactive  
-
-*Prerequisite: Dexterity 18+, Fast as Lightning Feat*
-
-+ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
-
-+ When a creature hits you with a melee attack, you can spend your reaction to make an opportunity attack against the attacker if it is within 5 feet of you.
-
-### Fleet  
-
-*Prerequisite: Dex 15+*
-
-+ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
-
-+ Your movement increases by 5 feet.
-
-+ While your are wearing light or no armor, your base speed increases by another 5 feet.
-
-+ When you take the disengage action, you can take another action on the same turn other than the magic action or the attack action.
 
 ### Hulking Brute  
 
@@ -874,6 +574,66 @@ You gain the following benefits:
 + Thrown weapons attacks beyond its normal range doesn't impose disadvantage.
 + Whenever you attempt a Charisma (intimidation) check against a creature of your size or smaller, you can add your Strength modifier to the result.
 
+
+### Invigorating Abjuration  
+
+*Prerequisite: The ability to cast at least one spell*
+
+You are able to mold the essence of your protective spells to fill yourself with vigor.
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ Whenever you cast an abjuration spell of 1st level or higher, you gain a number of temporary hit points equal to four times the level of the spell slot used
+
+
+### Keen Mind  
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Wisdom or Charisma score by 1, to a maximum of 20.
+
++ Bolstering Performance. When you finish a Short or Long Rest, you can give an inspiring performance: a speech, song, or dance. When you do so, choose up to six allies (which can include yourself) within 30 feet of yourself who witness the performance. The chosen creatures each gain Temporary Hit Points equal to your character level plus the modifier of the ability you increased with this feat.
+
+
+### Keep it Simple  
+
+You are adept at delivering punishment using uncomplicated combat tools, specially those that break the bones of your enemies.
+
++ **Ability Score Increase**. Increase your Strength or Dexterity score by 1, to a maximum of 20.
+
++ For you, simple weapons deal an additional 2 damage
+
++ Whenever you make an attack with a bludgeoning simple weapon your critical range increases by 1
+
+
+### Larger than Life
+
+You are muscular, corn-fed, and strong. You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength or Constitution score by 1, to a maximum of 20.
++ Your carrying capacity is doubled
++ At the end of each short rest or long rest you gain 5 temporary hit points  
+
+
+
+### Lightly Armored  
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
+
++ Armor Training. You gain training with Light armor and Shields.
+
+
+### Lightning Stance
+
++ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
+
+The speed at which you move makes it almost impossible for your opponents to strike you.
+
++ If you dash during your turn you gain the benefit of the dodge action.
+
+
 ### Mage Killer  
 
 *Prerequisite: Arcana proficiency*
@@ -882,27 +642,137 @@ You gain the following benefits:
 + If you harm a spellcaster while they are concentrating on a spell, they suffer disadvantage on the concentration check.
 + If you see an enemy creature cast a spell, you gain +1d4 on attack rolls against that creature for one minute.
 
-### Parry Spell  
 
-*Prerequisite: Dex 13+, Arcana proficiency*
+### Mage Slayer  
 
-+ As a reaction, you can attempt to parry any spell that requires an attack roll. You make an attack roll against the attack roll of the incoming spell attack. If you succed, you parry the spell away harmlessly.
-+ If you take a -5 penalty to your parry roll and succeed, you can parry teh spell back at its caster. Use your parry roll as the spell attack roll.
+You gain the following benefits.
 
-### Parting Shot  
++ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
 
-*Prerequisite: Dex 15+*
++ Concentration Breaker. When you damage a creature that is concentrating, it has Disadvantage on the saving throw it makes to maintain Concentration.
 
-+ When you use the disengage action, you can make a single ranged attack at any point during your movement as a bonus action.
++ Guarded Mind. If you fail an Intelligence, a Wisdom, or a Charisma saving throw, you can cause yourself to succeed instead. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.
 
-### Shield Bearer  
 
-You are a fearsome foe with a shield, capable of skillfully protecting yourself and striking back at your enemies.
-As long as you are equipped with a shield, you gain the following benefits:
+### Magical Prodigy
 
-+ If you do not move during your turn, you gain half cover (see the Combat chapter: Cover) until the start of your next turn. This benefit does not apply if you are incapacitated.
+*Prerequisites: Spellcasting or Pact Magic feature. Spellcasting ability score 16+*
 
-+ Whenever a creature misses you with a melee attack, you can use your reaction to retaliate against your attacker. Make an shield bash attack against your attacker that deals bludgeoning damage equal to 1d4 + your Strength/Dexterity modifier (your choice).
+You have an innate affinity to magic. You can prepare an extra 1st level spell and you gain an extra spell slot which is always of the highest level you can cast (up to a maximum of 5th level)
+
+
+### Magical Reminiscence  
+
+*Prerequisite: The ability to cast at least one spell*
+
+In a pinch, you can strain yourself to recall one of your latent spells to your mind. You gain the following benefits:
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ At any time, you can add a spell to your list of prepared spells (no action required). This spell must be among the spells you know (spellbook for wizards, class list for other classes). You can then cast the added spell normally, by spending the necessary casting time, components, and spell slot. This spell is lost when you finish a long rest. Once you use this feature, you cannot use it again until you finish a long rest.
+
+
+### Marksman  
+
++ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
+
+As a condition for making use of this feat, you must forsake your movement on this turn.
+Whenever you take the Attack action with a ranged weapon against a target that you can see, you can use a bonus action to gain one of the following benefits:
+
++ *Focus*: You cannot have disadvantage to your next attack, unless you have disadvantage from multiple sources at the same time. Additionally, your attack ignores half cover and three-quarters cover.
+
++ *Take Aim*: If your next attack is successful, add a +2 bonus to the damage. In addition, your attack scores a critical hit on a roll of 19 or 20.
+
+
+### Martial Weapon Training  
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
+
++ Weapon Proficiency. You gain proficiency with Martial weapons.
+
+
+### Master of Magic
+
+*Prerequisites: Magical Prodigy feat. Spellcasting ability score 18+. Arcane spellcasting or Divine spellcasting.*
+
+You spellcasting abilities are extraordinary. You gain an extra spell slot for each level between 1st and 4th, provided you are able to cast spells of those levels.
+
+
+### Master of High Magic
+*Prerequisites: Master of Magic feat. Spellcasting ability score 18+. Arcane spellcasting or Divine spellcasting.*
+
+You gain an extra spell slot of 6th and 7th levels, provided you already have a 7th-level spell slot.
+
+
+### Meditation
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom or Charisma score by 1, to a maximum of 20.
+
++ Whenever you make a intelligence, wisdom, or charisma saving throw you can choose to make it with advantage. 
+Once you use this ability you cannot do so again until you complete a short or long rest.
+
++ At the end of each short or long rest you gain 5 temporary hit points.
+
+
+### Medium Armor Master
+
+*Prerequisite: Medium Armor Proficiency*
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
+
++ Dexterous Wearer. While you're wearing Medium armor, you can add 3, rather than 2, to your AC if you have a Dexterity score of 16 or higher.
+
+
+### Metamagic Adept
+*Prerequisite: Spellcasting or Pact Magic feature*
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
+You've learned how to exert your will on your spells to alter how they function:
++ You learn two Metamagic options of your choice from the sorcerer class. You can use only one Metamagic option on a spell when you cast it, unless the option says otherwise. Whenever you reach a level that grants the Ability Score Improvement feature, you can replace one of these Metamagic options with another one from the sorcerer class.
++ You gain 2 sorcery points. You regain all spent sorcery points when you finish a long rest.
+
+
+### Metamagic: Preserved Spell
+
+*Prerequisite: Spellcasting ability score 16+*
+
++ You gain 2 sorcery points.
++ You learn the Preserved Spell metamagic option
+
+#### Preserved Spell
+
+When you cast a spell that requires concentration, you can spend 2 sorcery points to remove the concentration component to maintain the spell’s effect for the duration.
+Instead, you must use a bonus action on each of your turns to sustain the effect, which immediately ends if you fail to take this action.
+
+
+### Moderately Armored
+
+*Prerequisite: Light Armor Proficiency*
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
+
++ Armor Training. You gain training with Medium armor.
+
+
+### Mounted Combatant
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength, Dexterity, or Wisdom score by 1, to a maximum of 20.
+
++ Mounted Strike. While mounted, you have Advantage on attack rolls against any unmounted creature within 5 feet of your mount that is at least one size smaller than the mount.
+
++ Leap Aside. If your mount is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw and only half damage if it fails. For your mount to gain this benefit, you must be riding it, and neither of you can have the Incapacitated condition.
+
++ Veer. While mounted, you can force an attack that hits your mount to hit you instead if you don't have the Incapacitated condition.
+
 
 ### Nimble Physique  
 
@@ -918,99 +788,109 @@ This feat grants the following benefits:
 + Moving through spaces occupied by allies does not impose movement penalties.
 
 
-### Battlecaster  
+### Observant
 
-*Prerequisite: The ability to cast at least one spell.*
+*Prerequisite: Intelligence or Wisdom 13+*
 
-+ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+You gain the following benefits.
 
-You are skilled at casting spells with a weapon in hand.
++ **Ability Score Increase.** Increase your Intelligence or Wisdom score by 1, to a maximum of 20.
 
-+ You can use a weapon that you're proficient with as a spellcasting focus.
-+ When wielding a magical weapon that you're proficient with and that provides a bonus to hit and damage, you can also add that weapon's bonus to damage rolls for spells you cast.
-+ When casting spells that require a ranged attack roll you don't roll with disadvantage by being within 5 ft. of an enemy
++ Keen Observer. Choose one of the following skills: Insight, Investigation, or Perception. If you lack proficiency with the chosen skill, you gain proficiency in it, and if you already have proficiency in it, you gain Expertise in it.
 
-### Blaster Buffet    
-
-+ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
-
-For you, all cantrips that require a ranged spell attack can be made with a melee spell attack. When you do this the spell has a range of touch. 
-When you deal damage with a cantrip to a creature you deal an additional 1 damage to that creature.
++ Quick Search. You can take the Search action as a Bonus Action.
 
 
-### Combat Caster  
+### Overly Prepared
++ **Ability Score Increase.** Increase an ability score by 1, to a maximum of 20.
 
-You are adept at spellcasting when threatened or distracted.
-
-+ Whenever attempting to mantain concentration on spells in combat, you gain advantage.
-+ You can cast spells even when holding weapons or shields.
-+ Whenever opponents provoke attacks of opportunity, you can spend your reaction to cast a cantrip at that target.
-
-### Double Cast  
-
-*Prerequisite: The ability to cast at least one cantrip*
-
-Your rapid-fire style of casting cantrips allows you to weave magic with uncanny speed, granting you the following benefit:
-
-+ Whenever you cast a cantrip with a casting time of 1 action that can only target a single enemy, you can use your bonus action to pick a second target within 15 feet of the first taht is within range of the spell.
-
-### Downcaster  
-
-*Prerequisite: Spellcasting feature*
-
-Thanks to study or deep introspection, you have achieved a firm grasp on spellcasting fundamentals, granting you the following benefit:
-
-+ You can use a bonus action to divide a higher-level spell slot into two lower-level spell slots whose combined level is equal to or less than the original slot’s level. The lower-level spell slots must replace expended spell slots. You cannot have more available spell slots at at time than your class normally allows.
++ You can take the ready action without a specific trigger. Anytime, after a character has finished its turn, you can activate your readied action.
 
 
-### Elementary Expertise  
+### Overwhelming Elemental Power
 
-*Prerequisite: The ability to cast at least one spell*
+*Prerequisite: Elemental Adept Feat*
 
-+ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+You gain the following benefits
 
-+ You can cast a 1st level spell which you know or have prepared with your spellcasting feature without expending a spell slot. When you do, treat the spell as though it were cast using a spell slot equal to your proficiency bonus. Once you cast a spell this way you cannot do so again until you complete a short or long rest.
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
 
-### Energy Recovery  
-
-*Prerequisite: Spellcasting*
-
-You have learned to regain some of your magical energy during a rest, or you are blessed by your deity's favor (if you are a divine spellcaster) 
-Once per day when you finish a short rest, you can choose expended spell slots to recover.
-The spell slots can have a combined leveI that is equal to or less than half your spellcaster level (rounded up), and none of the slots can be 6th level or higher.
-For example, if you're a 4th-level bard, you can recover up to two leves worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots.
-If you already have this feature (i.e. wizard and some druids), you can use this feature 2 times between long rests.
++ Overwhelming power. If a creature would be immune to the elemental damage from your elemental adept feat, it instead has resistance to that damage. This effect doesn't stack further with elemental adept (i.e. the resistance isn't bypassed by the effects of elemental adept but it can by further bypassed by spells or other effects)
 
 
-### Invigorating Abjuration  
+### Parry Spell  
 
-*Prerequisite: The ability to cast at least one spell*
+*Prerequisite: Dex 13+, Arcana proficiency*
 
-You are able to mold the essence of your protective spells to fill yourself with vigor.
-
-+ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
-
-+ Whenever you cast an abjuration spell of 1st level or higher, you gain a number of temporary hit points equal to four times the level of the spell slot used
++ As a reaction, you can attempt to parry any spell that requires an attack roll. You make an attack roll against the attack roll of the incoming spell attack. If you succed, you parry the spell away harmlessly.
++ If you take a -5 penalty to your parry roll and succeed, you can parry teh spell back at its caster. Use your parry roll as the spell attack roll.
 
 
-### Magical Reminiscence  
+### Parting Shot  
 
-*Prerequisite: The ability to cast at least one spell*
+*Prerequisite: Dex 15+*
 
-In a pinch, you can strain yourself to recall one of your latent spells to your mind. You gain the following benefits:
++ When you use the disengage action, you can make a single ranged attack at any point during your movement as a bonus action.
 
-+ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
 
-+ At any time, you can add a spell to your list of prepared spells (no action required). This spell must be among the spells you know (spellbook for wizards, class list for other classes). You can then cast the added spell normally, by spending the necessary casting time, components, and spell slot. This spell is lost when you finish a long rest. Once you use this feature, you cannot use it again until you finish a long rest.
+### Piercer
 
-### Metamagic Adept
-*Prerequisite: Spellcasting or Pact Magic feature*
+You gain the following benefits.
 
-+ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
++ **Ability Score Increase.** Increase your Strength or Dexterity by 1, to a maximum of 20.
 
-You've learned how to exert your will on your spells to alter how they function:
-+ You learn two Metamagic options of your choice from the sorcerer class. You can use only one Metamagic option on a spell when you cast it, unless the option says otherwise. Whenever you reach a level that grants the Ability Score Improvement feature, you can replace one of these Metamagic options with another one from the sorcerer class.
-+ You gain 2 sorcery points. You regain all spent sorcery points when you finish a long rest.
++ Puncture. Once per turn, when you hit a creature with an attack that deals Piercing damage, you can reroll one of the attack's damage dice, and you must use the new roll.
+
++ Enhanced Critical. When you score a Critical Hit that deals Piercing damage to a creature, you can roll one additional damage die when determining the extra Piercing damage the target takes.
+
+
+### Poisoner
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Dexterity or Intelligence score by 1, to a maximum of 20.
+
++ Potent Poison. When you make a damage roll that deals Poison damage, it ignores Resistance to Poison damage.
+
++ Brew Poison. You gain proficiency with the Poisoner's Kit. With 1 hour of work using such a kit and expending 50 GP worth of materials, you can create a number of poison doses equal to your Proficiency Bonus. As a Bonus Action, you can apply a poison dose to a weapon or piece of ammunition. Once applied, the poison retains its potency for 1 minute, or until you deal damage with the poisoned item, whichever is shorter. When a creature takes damage from the poisoned item, that creature must succeed on a Constitution saving throw (DC 8 plus the modifier of the ability increased by this feat and your Proficiency Bonus) or take 2d8 Poison damage and have the Poisoned condition until the end of your next turn.
+
+
+### Polearm Master
+
+*Prerequisite: Strength or Dexterity 13+*
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Dexterity or Strength score by 1, to a maximum of 20.
+
++ Pole Strike. Immediately after you take the Attack action and attack with a Quarterstaff, a Spear, or a weapon that has the Heavy and Reach properties, you can use a Bonus Action to make a melee attack with the opposite end of the weapon. The weapon deals Bludgeoning damage, and the weapon's damage die for this attack is a d4.
+
++ Reactive Strike. While you're holding a Quarterstaff, a Spear, or a weapon that has the Heavy and Reach properties, you can take a Reaction to make one melee attack against a creature that enters the reach you have with that weapon.
+
+
+
+### Precognitive  
+
+*Prerequisite: Wisdom 14+*
+
++ **Ability Score Increase.** Increase your Wisdom score by 1, to a maximum of 20.
+
++ You sometimes feel impressions of events an instant before they happen. When you begin your turn, you can choose to roll a d20 and record the number rolled. One attack roll, ability check, or saving throw you make before the end of your turn can be replaced with this roll. If you choose not to use the number rolled, it is expended. You can use this ability three times and regain all expended uses when you finish a long rest.
+
+
+
+### Privilege of the Wise 
+
+You are cunning, granting you the following benefits.
+
++ **Ability Score Increase.** Increase your Wisdom score by 1, to a maximum of 20.
+
++ When you succeed on a Wisdom saving throw and would suffer an effect on the success, you instead suffer no effect.
+  
++ When you make an a Charisma ability check, you can leverage your will to use Wisdom instead of Charisma, keeping whatever skill you would have ordinarily used to make the check (if any).
+  
++ If you are asked a question to which you do not know the answer, you recall a substantiated rumor as to where the answer can be found (if it exists).
+
 
 ### Protective Transmutation
 
@@ -1022,14 +902,208 @@ You are able to use your magic to bolster yourself against assaults. You gain th
 
 + Reactive Shell. When you are about to take damage, you can use your reaction before the damage is rolled to expend a spell slot and gain resistance to the type of the incoming damage until the start of your next turn. If you expend a spell slot of 5th level or higher, you instead gain immunity to this type of damage until the start of your next turn.
 
-### Spell Focus
 
-*Prerequisite: Ability to cast spells.*
+### Punisher  
 
-Choose a school of magic. 
-+ The spell save DC of your spells form the chosen school increases by 1.
-+ You gain advantage on all saves against spells from that school of magic.
-+ You cannot learn or cast spells from the opposed school of magic. You can replace the spells you know from your opposed school with spells from your chosen school.
++ **Ability Score Increase**. Increase your Strength or Dexterity score by 1, to a maximum of 20.
+
++ You make attacks of opportunity with advantage.
+
++ Whenever a creature stands up from prone you can make an attack of opportunity against that creature as a reaction.
+
+
+
+### Quick Adaptation
+
++ **Ability Score Increase.** Increase your Constitution score by 1, to a maximum of 20.
+
++ You gain proficiency in one saving throw of your choice
+
++ If you are forced to make a saving throw to overcome an effect currently afflicting you gain advantage on that saving throw. 
+
++ You have advantage when attempting to break out of a grapple or an effect that is restraining you.
+
+
+
+### Reactive  
+
+*Prerequisite: Dexterity 18+, Fast as Lightning Feat*
+
++ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
+
++ When a creature hits you with a melee attack, you can spend your reaction to make an opportunity attack against the attacker if it is within 5 feet of you.
+
+
+
+### Resilient 
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Choose one ability in which you lack saving throw proficiency. Increase the chosen ability score by 1, to a maximum of 20.
+
++ Saving Throw Proficiency. You gain saving throw proficiency with the chosen ability.
+
+
+
+### Ritual Caster 
+
+*Prerequisite: Intelligence, Wisdom or Charisma 13+*
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+
++ Ritual Spells. Choose a number of level 1 spells equal to your Proficiency Bonus that have the Ritual tag. You always have those spells prepared, and you can cast them with any spell slots you have. The spells' spellcasting ability is the ability increased by this feat. Whenever your Proficiency Bonus increases thereafter, you can add an additional level 1 spell with the Ritual tag to the spells always prepared with this feature.
+
++ Quick Ritual. With this benefit, you can cast a Ritual spell that you have prepared using its regular casting time rather than the extended time for a Ritual. Doing so doesn't require a spell slot. Once you cast the spell in this way, you can't use this benefit again until you finish a Long Rest.
+
+
+
+### Seeker of Seven Songs 
+
+You belong to the ancient order of the Seven Songs, granting you the following benefits.
+
++ **Ability Score Increase.** Increase your Charisma score by 1, to a maximum of 20.
+
++ You gain proficiency in Performance. If you are already proficient, you instead double your proficiency bonus when making ability checks using Performance.
+
++ When you gain a level, you can choose to write a song about the experiences you endured to accomplish such a feat. When you do so, you gain half-proficiency on a skill of your choice.
+  
++ When the DM awards a character other than you inspiration, you are also awarded inspiration.
+
+
+
+### Sentinel 
+
+*Prerequisite: Stength or Dexterity 13+*
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
+
++ Guardian. Immediately after a creature within 5 feet of you takes the Disengage Action or hits a target other than you with an attack, you can make an Opportunity Attack against that creature.
+
++ Halt. When you hit a creature with an Opportunity Attack, the creature's Speed becomes 0 for the rest of the current turn.
+
+
+### Shadow-Touched
+
+Your exposure to the Shadowfell's magic grants you the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+
++ Shadow Magic. Choose one level 1 spell from the Illusion or Necromancy school of magic. You always have that spell and the Invisibility spell prepared. You can cast each of these spells without expending a spell slot. Once you cast either spell in this way, you can't cast that spell in this way again until you finish a Long Rest. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.
+
+
+### Sharpshooter
+
+*Prerequisite: Dexterity 13+*
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
+
++ Bypass Cover. Your ranged attacks with weapons ignore Half Cover and Three-Quarters Cover.
+
++ Firing in Melee. Being within 5 feet of an enemy doesn't impose Disadvantage on your attack rolls with Ranged weapons.
+
++ Long Shots. Attacking at long range doesn't impose Disadvantage on your attack rolls with Ranged weapons.
+
+
+### Shield Bearer  
+
+You are a fearsome foe with a shield, capable of skillfully protecting yourself and striking back at your enemies.
+As long as you are equipped with a shield, you gain the following benefits:
+
++ If you do not move during your turn, you gain half cover (see the Combat chapter: Cover) until the start of your next turn. This benefit does not apply if you are incapacitated.
+
++ Whenever a creature misses you with a melee attack, you can use your reaction to retaliate against your attacker. Make an shield bash attack against your attacker that deals bludgeoning damage equal to 1d4 + your Strength/Dexterity modifier (your choice).
+
+
+### Shield Master
+
+*Prerequisite: Shield Proficiency*
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength score by 1, to a maximum of 20.
+
++ Shield Bash. If you attack a creature within 5 feet of you as part of the Attack action and hit with a Melee weapon, you can immediately bash the target with your Shield if it's equipped, forcing the target to make a Strength saving throw (DC 8 plus your Strength modifier and Proficiency Bonus). On a failed save, you either push the target 5 feet from you or cause it to have the Prone condition (your choice). You can use this benefit only once on each of your turns.
+
++ Interpose Shield. If you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can take a Reaction to take no damage if you succeed on the saving throw and are holding a Shield.
+You gain the following benefits.
+
+
+### Sidestep
+
+*Prerequitsite: Dex 13+*
+You can reposition yourself after a foe's missed swing.
++ **Ability Score Increase**. Increase your Dexterity score by 1, to a maximum of 20.
++ Whenever an opponent misses you with a melee attack, you may move 5 feet as a reaction. This movement does not provoke opportunity attackas and does not count against your total movement.
+
+
+### Skill Expert
+
++ **Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 20.
+
++ Skill Proficiency. You gain proficiency in one skill of your choice.
+
++ Expertise. Choose one skill in which you have proficiency but lack Expertise. You gain Expertise with that skill.
+
+You gain the following benefits.
+
+
+### Skulker
+
+*Prerequisite: Dexterity 13+*
+
++ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 20.
+
++ Blindsight. You have Blindsight with a range of 10 feet.
+
++ Fog of War. You exploit the distractions of battle, gaining Advantage on any Dexterity (Stealth) check you make as part of the Hide action during combat.
+
++ Sniper. If you make an attack roll while hidden and the roll misses, making the attack roll doesn't reveal your location.
+
+
+### Slasher
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
+
++ Hamstring. Once per turn when you hit a creature with an attack that deals Slashing damage, you can reduce the Speed of that creature by 10 feet until the start of your next turn.
+
++ Enhanced Critical. When you score a Critical Hit that deals Slashing damage to a creature, it has Disadvantage on attack rolls until the start of your next turn.
+
+
+
+### Sleuthing
+
++ **Ability Score Increase.** Increase your Intelligence score by 1, to a maximum of 20.
+
++ You can cast the spell Find Traps with this feat a number of times per day equal to your intelligence modifier. 
+When you cast Find Traps this way you also learn the location of the nearest trap.
+
++ You can cast Locate Object or Locate Creature with this feat. Once you cast one of these spells you cannot cast either of them again until you complete a long rest.
+
+When casting a spell with this feat, intelligence is your casting modifier.
+
+
+### Speedy
+
+*Prerequisite: Dexterity or Constitution 13+*
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Dexterity or Constitution score by 1, to a maximum of 20.
+
++ Speed Increase. Your Speed increases by 10 feet.
+
++ Dash over Difficult Terrain. When you take the Dash action on your turn, Difficult Terrain doesn't cost you extra movement for the rest of that turn.
+
++ Agile Movement. Opportunity Attacks have Disadvantage against you.
+
 
 ### Spellblade
 *Prerequisite: Spellcasting ability 15+*
@@ -1043,120 +1117,16 @@ You’ve learned to meld your strikes with sparks of arcane magic, gaining the f
 + You learn two cantrips of your choice from the wizard spell list. Intelligence is your spellcasting ability for these spells.
 + You learn the shield spell and you always have it prepared. You can cast it once without using a spell slot. Once you cast this spell using this feat, you can’t do so again until you finish a long rest.
 
-### Unrelenting Caster
 
-*Prerequisite: The ability to cast at least one spell*
+### Spell Focus
 
-Whoever resists your spell is in for a demonstration of your tenacity.
-+ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+*Prerequisite: Ability to cast spells.*
 
-+ Whenever you cast a spell of 1st level or higher and fail to affect any creature, you can immediately cast a cantrip you know. This benefit does not apply if a target makes a successful saving throw but still takes damage, a condition, or any other negative effect from your spell.
+Choose a school of magic. 
++ The spell save DC of your spells form the chosen school increases by 1.
++ You gain advantage on all saves against spells from that school of magic.
++ You cannot learn or cast spells from the opposed school of magic. You can replace the spells you know from your opposed school with spells from your chosen school.
 
-### Upcaster
-
-*Prerequisite: Spellcasting feature* 
-
-+ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
-
-+ As a free action, you can expend two spell slots of the same level to create a spell slot that is one level higher.
-
-### Wyrd Magic
-
-*Prerequisite: Spellcasting or Pact Magic feature*
-
-#### Wyrd Spells
-
-A character casting a spell using wyrd magic can imbue their spells with the chaotic forces of the world.
-When a character casts a spell, which involves rolling dice, it can declare that spell to be a wyrd spell. Upon using wyrd magic, when the spell’s dice are rolled and for each of the highest possible values rolled on the dice, you add the maximum value of the dice to the total (e.g. if you roll damage for a fireball and any of the d6's shows a 6, you add a +6 bonus to the damage roll for each dice showing a 6). After the wyrd spell is cast, you then gain 1 level of exhaustion.
-
-#### Whimsy
-
-When the character is granted Inspiration, they can choose not to gain inspiration and instead roll a d100, gaining a whimsy according to the table below. A whimsy lasts until it is used, or until an affected creature finishes a long rest.
-A spell cast using a whimsy requires no components, and a creature uses its spell save DC and spell attack bonus when casting a whimsy; all other elements of the spell remain the same.
-
-
-### Magical Prodigy
-
-*Prerequisites: Spellcasting or Pact Magic feature. Spellcasting ability score 16+*
-
-You have an innate affinity to magic. You can prepare an extra 1st level spell and you gain an extra spell slot which is always of the highest level you can cast (up to a maximum of 5th level)
-
-### Arcane Shield
-
-*Prerequisite: Ability to cast arcane spells*
-
-+ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
-
-+ As a reaction, when you are hit by an attack, you can sacrifice a spell or spell slot of 1st level or higher and gain a shield bonus to AC equal to the level of the spell or spell slot you sacrificed for 1 minute.
-
-### Arcane Strike
-
-*Prerequisite: Ability to cast arcane spells.*
-
-You draw upon your arcane power to enhance your weapons with magical energy.
-
-+ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
-
-+ Weapons you hold glow with arcane power and count as though they are magical weapons.
-+ You gain a +1 bonus to attacks and damage with these weapons as long as you are holding them.
-+ Ranged weapons also grant these bonuses on attacks and damage, but the magic fades after striking their target.
-
-### Eldritch Adept
-
-*Prerequisite: Spellcasting or Pact Magic Feature*
-
-Studying occult lore, you learn one Eldritch Invocation option of your choice from the Warlock class. Your spellcasting ability for the invocation is your normal spellcasting ability. If the invocation has a prerequisite of any kind, you can choose that invocation only if you meet the prerequisite.
-Whenever you gain a level, you can replace the invocation with another one.
-
-### Eldritch Lifesaver
-
-*Prerequisite: The ability to cast at least one arcane spell.*
-
-You've learned to cannibalize the power of your spells to reinvigorate your allies.
-
-+ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
-
-+ As a bonus action, you can expend a spell slot of 1st level or higher to heal yourself or an ally within 30 feet. The number of hit points healed equals five times the level of the expended slot. In addition, the target gains temporary hit points equal to your spellcasting ability modifier.
-
-
-### Metamagic: Preserved Spell
-
-*Prerequisite: Spellcasting ability score 16+*
-
-+ You gain 2 sorcery points.
-+ You learn the Preserved Spell metamagic option
-
-#### Preserved Spell
-
-When you cast a spell that requires concentration, you can spend 2 sorcery points to remove the concentration component to maintain the spell’s effect for the duration.
-Instead, you must use a bonus action on each of your turns to sustain the effect, which immediately ends if you fail to take this action.
-
-### Master of Magic
-
-*Prerequisites: Magical Prodigy feat. Spellcasting ability score 18+. Arcane spellcasting or Divine spellcasting.*
-
-You spellcasting abilities are extraordinary. You gain an extra spell slot for each level between 1st and 4th, provided you are able to cast spells of those levels.
-
-### Master of High Magic
-*Prerequisites: Master of Magic feat. Spellcasting ability score 18+. Arcane spellcasting or Divine spellcasting.*
-
-You gain an extra spell slot of 6th and 7th levels, provided you already have a 7th-level spell slot.
-
-### Overwhelming Elemental Power
-
-*Prerequisite: Elemental Adept Feat*
-
-You gain the following benefits
-
-+ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
-
-+ Overwhelming power. If a creature would be immune to the elemental damage from your elemental adept feat, it instead has resistance to that damage. This effect doesn't stack further with elemental adept (i.e. the resistance isn't bypassed by the effects of elemental adept but it can by further bypassed by spells or other effects)
-
-### Spell Penetration
-
-*Prerequisite: Spell Focus Feat*
-
-When casting a spell of the school you have chose for Spell Focus, you ignore resistance of targets.
 
 ### Spellmarked
 
@@ -1179,11 +1149,141 @@ Random Spellmark Table
 | 19-20 | Unstable |
 
 
-### Augmented Conjuring
+### Spell Penetration
 
-*Prerequisite: Spell Focus (Conjuration)*
+*Prerequisite: Spell Focus Feat*
 
-Each creature you conjure with any summon spell gains +2 bonus to attack and damage rolls, and +2 hit points per Hit Dice it has.
+When casting a spell of the school you have chose for Spell Focus, you ignore resistance of targets.
+
+
+### Spell Sniper
+
+*Prerequisite: Spellcasting or Pact Magic Feature*
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+
++ Bypass Cover. Your attack rolls for spells ignore Half Cover and Three-Quarters Cover.
+
++ Casting in Melee. Being within 5 feet of an enemy doesn't impose Disadvantage on your attack rolls with spells.
+
++ Increased Range. When you cast a spell that has a range of at least 10 feet and requires you to make an attack roll, you can increase the spell's range by 60 feet.
+
+
+### Strong Grip
+
+You've learned to use the weight of your weapons effectively, and have adapted to use large weapons one-handed.
+
++ **Ability Score Increase**. Increase your Strength score by 1, to a maximum of 20.
++ When wielding a versatile weapon in one hand, you may use the versatile damage die. You can wield non-heavy melee weapons in one hand.
++ You can wield two non-heavy melee weapons in each hand. The weapons don't need to have the light property, but you cannot use the versatile property when wielding versatile weapons this way.
+
+
+### Telekinetic
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+
++ Minor Telekinesis. You learn the Mage Hand spell. You can cast it without Verbal or Somatic components, you can make the spectral hand Invisible, and its range and the distance it can be away from you both increase by 30 feet when you cast it. The spell's spellcasting ability is the ability increased by this feat.
+
++ Telekinetic Shove. As a Bonus Action, you can telekinetically shove one creature you can see within 30 feet of yourself. When you do so, the target must succeed on a Strength saving throw (DC 8 plus the ability modifier of the score increased by this feat and your Proficiency Bonus) or be moved 5 feet toward or away from you.
+
+
+### Telepathic
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+
++ Telepathic Utterance. You can speak telepathically to any creature you can see within 60 feet of yourself. Your telepathic utterances are in a language you know, and the creature understands you only if it knows that language. Your communication doesn't give the creature the ability to respond to you telepathically.
+
++ Detect Thoughts. You always have the Detect Thoughts spell prepared. You can cast it without a spell slot or spell components, and you must finish a Long Rest before you can cast it in this way again. You can also cast it using spell slots you have of the appropriate level. Your spellcasting ability for the spell is the ability increased by this feat.
+
+
+### Tireless 
+
+Through sheer grit and years of hardship and survival under the most grueling conditions, you have learned to push on through fatigue that would cripple a lesser hero.
+You gain the following benefits:
+
++ **Ability Score Increase.** Increase your Constitution score by 1, to a maximum of 20.
+
++ Reduce any exhaustion penalty you suffer by 2 levels (for example, if you have 4 exhaustion levels, you only suffer the penalty of 2 exhaustion levels).
+
+
+### Torch Master 
+
++ **Ability Score Increase.** Increase your Strength, Constitution or Dexterity score by 1, to a maximum of 20.
+
++ You become proficient with torches.
+
++ You can light a torch as a bonus action.
+
++ Whenever you hit a creature with a lit torch it deals 1d4 bludgeoning damage + 1d6 fire damage.
+
++ As an action you can fan the fire of a torch a release it in a spectacular display. All creatures in a 15-foot cone must make a dexterity saving throw against your torch DC (8+your strength modifier+your proficiency bonus) or take 3d6 fire damage. After using this action, the torch is unusable.
+
+
+### Unrelenting Caster
+
+*Prerequisite: The ability to cast at least one spell*
+
+Whoever resists your spell is in for a demonstration of your tenacity.
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ Whenever you cast a spell of 1st level or higher and fail to affect any creature, you can immediately cast a cantrip you know. This benefit does not apply if a target makes a successful saving throw but still takes damage, a condition, or any other negative effect from your spell.
+
+
+### Upcaster
+
+*Prerequisite: Spellcasting feature* 
+
++ **Ability Score Increase.** Increase your Spellcasting ability score by 1, to a maximum of 20.
+
++ As a free action, you can expend two spell slots of the same level to create a spell slot that is one level higher.
+
+
+### War Caster
+
+*Prerequisite: Spellcasting or Pact Magic Feature*
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+
++ Concentration. You have Advantage on Constitution Saving Throws that you make to maintain Concentration.
+
++ Reactive Spell. When a creature provokes an Opportunity Attack from you by leaving your reach, you can take a Reaction to cast a spell at the creature rather than making an Opportunity Attack. The spell must have a casting time of one action and must target only that creature.
+
++ Somatic Components. You can perform the Somatic components of spells even when you have weapons or a Shield in one or both hands.
+
+
+### Weapon Master
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
+
++ Mastery Property. Your training with weapons allows you to use the mastery property of one kind of Simple or Martial weapon of your choice, provided you have proficiency with it. Whenever you finish a Long Rest, you can change the kind of weapon to another eligible kind.
+
+
+### Wyrd Magic
+
+*Prerequisite: Spellcasting or Pact Magic feature*
+
+#### Wyrd Spells
+
+A character casting a spell using wyrd magic can imbue their spells with the chaotic forces of the world.
+When a character casts a spell, which involves rolling dice, it can declare that spell to be a wyrd spell. Upon using wyrd magic, when the spell’s dice are rolled and for each of the highest possible values rolled on the dice, you add the maximum value of the dice to the total (e.g. if you roll damage for a fireball and any of the d6's shows a 6, you add a +6 bonus to the damage roll for each dice showing a 6). After the wyrd spell is cast, you then gain 1 level of exhaustion.
+
+#### Whimsy
+
+When the character is granted Inspiration, they can choose not to gain inspiration and instead roll a d100, gaining a whimsy according to the table below. A whimsy lasts until it is used, or until an affected creature finishes a long rest.
+A spell cast using a whimsy requires no components, and a creature uses its spell save DC and spell attack bonus when casting a whimsy; all other elements of the spell remain the same.
+
+
+
 
 
 ## Level 19 Epic Boons and Feats
@@ -1411,6 +1511,7 @@ The eldritch forces empower you further. You gain 3 eldritch invocations from th
 
 You are immune to the exhausted condition
   
+
 
 ## Level 21 Epic Boons and Feats
 
