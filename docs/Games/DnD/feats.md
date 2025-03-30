@@ -1725,7 +1725,7 @@ When you select this feat, choose three different weapon properties from the fol
 
 In addition, you become proficient with any weapon you wield after 10 minutes of practice with that weapon and you cannot be disarmed by non-Epic means.
 
-Lord of War Weapon Properties
+Lord of War Weapon Properties  
 
 | Weapon Property | Benefits |
 |:-----------:|:-----------:|
