@@ -1699,7 +1699,7 @@ Together your armor and shield provide the ultimate defense against your enemies
 + While you are wearing heavy armor and wielding a shield, when you take bludgeoning, piercing, slashing or force damage equal to or less than (Armor bonus to AC + Shield bonus to AC + Special Bonus to AC) from a single instance, you instead take no damage.
 + When you take the attack action, you may give yourself disadvantage on your attacks. When you do so, enemies have Epic disadvantage on attacks against you until the start of your next turn.
 + When you take the Dodge action, you gain the Evasion feature until the start of your next turn.
-+ Armor and shields you are wearing is immune to damage from non-Epic sources.
++ Armor and shields you are wearing are immune to damage from non-Epic sources.
 
 ### Legendary Potency
 
