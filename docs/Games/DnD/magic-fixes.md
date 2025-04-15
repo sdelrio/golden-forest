@@ -15,18 +15,20 @@ There's no 100% safe mechanism to make allies immune to area spells. Evoker's `S
 
 ## Spells
 
-### True Strike
 
-This spell damage is the same as the weapon damage type. If the weapon is magical, the damage is magical.
+### Blade Ward
 
+This spell is reverted back to its 2014 version
 
 ### Ray of enfeeblement
 
 This spell doesn't require concentration  
 
-### Shield of faith
+### True Strike
 
-This spell doesn't require concentration but its duration is decreased to 1 minute
+This spell damage is the same as the weapon damage type. If the weapon is magical, the damage is magical.
+
+
 
 ## Resurrection Effects
 
