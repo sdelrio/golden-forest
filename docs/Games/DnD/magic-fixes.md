@@ -34,7 +34,7 @@ This spell damage is the same as the weapon damage type. If the weapon is magica
 
 ### Revivify
 
-Every time a character cast Revivify, its life force is diminished. The caster permanently loses 1 point from a random ability score.  
+Every time a character cast Revivify, it requires to put some of its life force in the attempt diminishing it. The caster permanently loses 1 point from a random ability score.  
 
 ### Three strikes and you are out
 
