@@ -39,7 +39,7 @@ Every time a character cast Revivify, it requires to put some of its life force 
 If the character is being brought from the dead for a 3rd time, instead of being raised, the character receiving the resurrection must roll Death Saving Throws.  
 If successful, he's resurrected. If not, the spell is wasted.  
 The more powerful resurrection spells can bring the character to life more easily:  
-- *Revivify, Raise Dead and Reincarnation*: No bonus  
+- *Revivify, Raise Dead and Reincarnation:* No bonus  
 - *Resurrection*: Advantage on the character's Death Saving Throws.  
 - *True Resurrection and Wish*: Automatic Success.
 
