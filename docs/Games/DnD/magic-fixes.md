@@ -47,7 +47,7 @@ The more powerful resurrection spells can bring the character to life more easil
 
 ### Instant Death
 
-Bodies of Characters instant-killed are incapable of sustaining life again. Revivify or Raise Dead won't work on them. More powerful spells are needed
+Bodies of Characters instant-killed are incapable of sustaining life again. Revivify won't work on them. More powerful spells are needed
 
 ### Resurrection weakness
 
