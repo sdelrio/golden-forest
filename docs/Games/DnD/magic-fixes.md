@@ -1,4 +1,3 @@
-
 # Magic fixes
 
 ### Automatic Miss  
@@ -27,7 +26,6 @@ This spell doesn't require concentration
 ### True Strike
 
 This spell damage is the same as the weapon damage type. If the weapon is magical, the damage is magical.
-
 
 
 ## Resurrection Effects
