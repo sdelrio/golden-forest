@@ -6,7 +6,7 @@ Feature effects that produce an effect on a miss,like *Potent Cantrips*, don't w
 
 ### Safe Spells  
 
-There's no 100% safe mechanism to make allies immune to area spells. Evoker's `Sculpt spell` and Sorcerer's `Careful spell` grant allies the `Evasion` feature  
+There's no 100% safe mechanism to make allies immune to area spells. Evoker's `Sculpt spell` and Sorcerer's `Careful spell` grant allies the `Evasion` feature and advantage on the saving throw.
 
 :::note
 **Evasion:** When you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw and only half damage if you fail. If incapacitated, this evasion still works, the ally rolls the save as if not incapacitated
