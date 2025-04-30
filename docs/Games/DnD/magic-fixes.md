@@ -17,7 +17,7 @@ There's no 100% safe mechanism to make allies immune to area spells. Evoker's `S
 
 ### Blade Ward
 
-This spell is reverted back to its 2014 version
+This spell gives a -1 penalty to attack rolls instead.
 
 ### Ray of enfeeblement
 
