@@ -2,7 +2,7 @@
 
 ### Automatic Miss  
 
-Feature effects that produce an effect on a miss,like *Potent Cantrips*, don't work on automatic misses  
+Feature effects that produce an effect on a miss, like *Potent Cantrips*, don't work on automatic misses. The same applies to other features, like weapon masteries (graze)
 
 ### Safe Spells  
 
