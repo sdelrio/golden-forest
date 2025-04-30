@@ -40,11 +40,11 @@ $ kubectl run tmp-shell --rm -i --tty --overrides='{"spec": {"hostNetwork": true
 
 ``` bash
 $ kubectl api-resources --verbs=list --namespaced -o name \
-  | xargs -n 1 kubectl get --show-kind --ignore-not-found -n <namespace>
+  | xargs -n 1 kubectl get --show-kind --ignore-not-found -n [namespace](namespace)
 ```
 
 ## K8s Cheat Sheets
 
-* <https://kubernetes.io/docs/reference/kubectl/cheatsheet/>
-* <https://github.com/dennyzhang/cheatsheet-kubernetes-A4/blob/master/cheatsheet-kubernetes-A4.pdf>
+* [https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+* [https://github.com/dennyzhang/cheatsheet-kubernetes-A4/blob/master/cheatsheet-kubernetes-A4.pdf](https://github.com/dennyzhang/cheatsheet-kubernetes-A4/blob/master/cheatsheet-kubernetes-A4.pdf)
 

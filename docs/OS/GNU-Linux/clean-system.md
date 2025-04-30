@@ -50,4 +50,4 @@ You can disable a lot of rubbish doing this:
 
 ### References
 
-* <https://askubuntu.com/questions/628407/removing-man-pages-on-ubuntu-docker-installation>
+* [https://askubuntu.com/questions/628407/removing-man-pages-on-ubuntu-docker-installation](https://askubuntu.com/questions/628407/removing-man-pages-on-ubuntu-docker-installation)

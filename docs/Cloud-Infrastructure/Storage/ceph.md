@@ -12,9 +12,9 @@ Ceph consolidates several storage use cases and improves resource utilization.
 
 ## Run Ceph in containers
 
-* <https://github.com/ceph/ceph-container>
+* [https://github.com/ceph/ceph-container](https://github.com/ceph/ceph-container)
 
 ## References
 
-* <https://en.wikipedia.org/wiki/Ceph_(software)>
+* [https://en.wikipedia.org/wiki/Ceph_(software)](https://en.wikipedia.org/wiki/Ceph_(software))
 

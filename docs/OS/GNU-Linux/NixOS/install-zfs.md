@@ -17,12 +17,12 @@ tags:
 * Make sure the disk has some serial number so we created the `disk/by-id` device. In virt manager you can do this into VirtIO Disk -> advanced options -> Serial
 * Make sure you UEFI bios enabled (you will need to download OVMF). You can add it through xml configuration if your virt manager doesn't support it:
 ```xml
-  <os>
-    <type arch="x86_64" machine="pc-q35-5.0">hvm</type>
-    <loader readonly="yes" type="pflash">/usr/share/OVMF/OVMF_CODE.fd</loader>
-    <nvram>/var/lib/libvirt/qemu/nvram/NixOSVM.fd</nvram>
-    <bootmenu enable="no"/>
-  </os>
+  [os](os)
+    [type arch="x86_64" machine="pc-q35-5.0">hvm</type](type arch="x86_64" machine="pc-q35-5.0">hvm</type)
+    [loader readonly="yes" type="pflash">/usr/share/OVMF/OVMF_CODE.fd</loader](loader readonly="yes" type="pflash">/usr/share/OVMF/OVMF_CODE.fd</loader)
+    [nvram>/var/lib/libvirt/qemu/nvram/NixOSVM.fd</nvram](nvram>/var/lib/libvirt/qemu/nvram/NixOSVM.fd</nvram)
+    [bootmenu enable="no"/](bootmenu enable="no"/)
+  [/os](/os)
 ```
 * If using Wayland or want 3D acel [configure](https://www.youtube.com/watch?v=6-IpJLYjc0M):
   * Video QXL:
@@ -89,19 +89,15 @@ blkid -p /dev/vda{1,2,3,4,5} | grep --color zfs_member
 
 ### Wipe script
 
-import CodeBlock from '@theme/CodeBlock';
-import MyComponentSource from '!!raw-loader!/docs/OS/GNU-Linux/NixOS/wipe.sh';
-
-<CodeBlock language="bash">{MyComponentSource}</CodeBlock>
+```bash title=docs/OS/GNU-Linux/NixOS/wipe.sh
+<<< docs/OS/GNU-Linux/NixOS/wipe.sh
 
 ## Install
 
 ### Install script collected from [NixOS Root on ZFS](https://openzfs.github.io/openzfs-docs/Getting%20Started/NixOS/Root%20on%20ZFS.html)
 
-import MyInstallScript from '!!raw-loader!/docs/OS/GNU-Linux/NixOS/install.sh';
-
-<CodeBlock language="bash">{MyInstallScript}</CodeBlock>
-
+```bash title=docs/OS/GNU-Linux/NixOS/install.sh
+<<< docs/OS/GNU-Linux/NixOS/install.sh
 
 ### Check zpools
 
@@ -132,14 +128,16 @@ bpool  mountpoint  /boot       local
   i18n.defaultLocale = "es_ES.UTF-8";
 ```
 
-* configs: <https://github.com/mcdonc/p51-thinkpad-nixos/tree/zfsvid>
+* configs: [https://github.com/mcdonc/p51-thinkpad-nixos/tree/zfsvid](https://github.com/mcdonc/p51-thinkpad-nixos/tree/zfsvid)
 
 ## References
 
 * Official [NixOS Root on ZFS](https://openzfs.github.io/openzfs-docs/Getting%20Started/NixOS/Root%20on%20ZFS.html).
 * Install videos
   * NixOS 1: ZFS Encrypted Root on Thinkpad P51
+    <>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/CboOUrkIZ2k?si=9lp1FIQHCWXQPDcv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </>
 
 
 ## Default configuration
@@ -309,7 +307,7 @@ bpool  mountpoint  /boot       local
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
+  # with explicit per-interface declarations with `networking.interfaces.[interface](interface).useDHCP`.
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp1s0.useDHCP = lib.mkDefault true;
 

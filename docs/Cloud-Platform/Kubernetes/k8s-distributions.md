@@ -8,9 +8,9 @@ Can fit in any cloud environment, iOT, Edge and Bare Metal.
 
 Simply design, modest system requirements (1 vCPU, 1GB RAM).
 
-* <https://k0sproject.io/>
-* <https://docs.k0sproject.io/v1.22.3+k0s.0/>
-* <https://medium.com/k0sproject/k0s-0-9-released-4f8530fb3530>
+* [https://k0sproject.io/](https://k0sproject.io/)
+* [https://docs.k0sproject.io/v1.22.3+k0s.0/](https://docs.k0sproject.io/v1.22.3+k0s.0/)
+* [https://medium.com/k0sproject/k0s-0-9-released-4f8530fb3530](https://medium.com/k0sproject/k0s-0-9-released-4f8530fb3530)
 
 ## k3s
 
@@ -283,8 +283,8 @@ isk3s_worker=true
 * Command:
   * `k3s etcd-snapshot`
 * Doc:
-  * <https://rancher.com/docs/k3s/latest/en/backup-restore/>
-  * <https://pet2cattle.com/2022/05/k3s-etcd-s3-backup-restore>
+  * [https://rancher.com/docs/k3s/latest/en/backup-restore/](https://rancher.com/docs/k3s/latest/en/backup-restore/)
+  * [https://pet2cattle.com/2022/05/k3s-etcd-s3-backup-restore](https://pet2cattle.com/2022/05/k3s-etcd-s3-backup-restore)
 
 #### Pods
 
@@ -309,16 +309,16 @@ kind create cluster --loglevel=debug
 
 #### Stuck at "Starting control panel"
 
-* <https://github.com/kubernetes-sigs/kind/issues/440>
+* [https://github.com/kubernetes-sigs/kind/issues/440](https://github.com/kubernetes-sigs/kind/issues/440)
 
 #### Create cluster fails - kind-control-plane does not work on zfs
 
-* <https://github.com/kubernetes-sigs/kind/issues/440>
+* [https://github.com/kubernetes-sigs/kind/issues/440](https://github.com/kubernetes-sigs/kind/issues/440)
 
 #### ZFS workarounds
 
-* <https://gist.github.com/sdelrio/fd628669a9cda68ebc6ca591e1e791ee>
-* <https://github.com/ashald/docker-volume-loopback>
+* [https://gist.github.com/sdelrio/fd628669a9cda68ebc6ca591e1e791ee](https://gist.github.com/sdelrio/fd628669a9cda68ebc6ca591e1e791ee)
+* [https://github.com/ashald/docker-volume-loopback](https://github.com/ashald/docker-volume-loopback)
 
 ## Install cluster
 
@@ -357,7 +357,7 @@ Ansible playbook to deploy a production Ready Kubernetes Cluster
 
 * [Homepage](https://github.com/kubernetes-sigs/kubespray)
 * [My Kubespray install on kvm](https://github.com/sdelrio/install-k8s-kvm)
-* <https://medium.com/@jodywan/cloud-native-devops-09a-ha-kubernetes-with-kubespray-16ec8cd26040>
+* [https://medium.com/@jodywan/cloud-native-devops-09a-ha-kubernetes-with-kubespray-16ec8cd26040](https://medium.com/@jodywan/cloud-native-devops-09a-ha-kubernetes-with-kubespray-16ec8cd26040)
 
 ### References
 
@@ -366,5 +366,5 @@ Ansible playbook to deploy a production Ready Kubernetes Cluster
 
 ## Flatcar
 
-* <https://thenewstack.io/flatcar-container-linux-the-ideal-os-for-running-kubernetes-at-the-edge/>
+* [https://thenewstack.io/flatcar-container-linux-the-ideal-os-for-running-kubernetes-at-the-edge/](https://thenewstack.io/flatcar-container-linux-the-ideal-os-for-running-kubernetes-at-the-edge/)
 

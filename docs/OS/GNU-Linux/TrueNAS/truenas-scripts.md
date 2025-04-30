@@ -18,7 +18,7 @@ zpool trim ssdpool
 
 ### References
 
-* <https://www.truenas.com/community/threads/auto-trim-for-nvme-pool.99162/>
+* [https://www.truenas.com/community/threads/auto-trim-for-nvme-pool.99162/](https://www.truenas.com/community/threads/auto-trim-for-nvme-pool.99162/)
 
 ## UTF-8 Encode on CLI
 
@@ -26,14 +26,14 @@ zpool trim ssdpool
 export LC_ALL=C.UTF-8
 ```
 
-* <https://www.truenas.com/community/threads/utf-8-encode.81351/page-2>
+* [https://www.truenas.com/community/threads/utf-8-encode.81351/page-2](https://www.truenas.com/community/threads/utf-8-encode.81351/page-2)
 
 
 ## export InfluxDB with credentials
 
 Install an app with `carbon-relay-ng` image.
 
-* <https://github.com/grafana/carbon-relay-ng/tree/master>
+* [https://github.com/grafana/carbon-relay-ng/tree/master](https://github.com/grafana/carbon-relay-ng/tree/master)
 
 Reports Config, put remoe graphite server hostname to the `carbon-relay-ng` URL.
 

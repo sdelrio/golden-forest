@@ -88,10 +88,14 @@ rpool     460G   164G   296G        -         -    24%    35%  1.00x    ONLINE  
 * [TrueNas SLOG](https://www.truenas.com/docs/references/slog/)
 
 * L2ARC is AWESOME on ZFS - Why does EVERYONE say it's NOT?
+<>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JY_-I6lQTtI?si=Pn4vPRk2BA0vH2vL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</>
 
 * Best Practices for OpenZFS L2ARC in the Era of NVMe (SDC 2019)
+<>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yHgSU6iqrlE?si=6t3xnNhrnJ0XhEap" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</>
 
 #### ZIL Log
 
@@ -223,8 +227,8 @@ Version: 1.2.4-2
 Priority: extra
 Section: multiverse/utils
 Origin: Ubuntu
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Jonathan Carter <jcc@debian.org>
+Maintainer: Ubuntu Developers [ubuntu-devel-discuss@lists.ubuntu.com](ubuntu-devel-discuss@lists.ubuntu.com)
+Original-Maintainer: Jonathan Carter [jcc@debian.org](jcc@debian.org)
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Installed-Size: 41
 Depends: cron, zfsutils-linux
@@ -413,21 +417,21 @@ zfs load-key zfs/homes
 ### Key status
 
 ```
-zfs get keystatus <dataset>
+zfs get keystatus [dataset](dataset)
 ```
 
 ### Changing wrapping key
 
-Change a wrapping key for a dataset as long as current wrapping key is loaded (`zfs get keystatus <dataset>`)
+Change a wrapping key for a dataset as long as current wrapping key is loaded (`zfs get keystatus [dataset](dataset)`)
 
 ```bash
-zfs key -c <dataset>
+zfs key -c [dataset](dataset)
 ```
 
 ### Change actual data encryption key
 
 ```bash
-zfs key -K <dataset>
+zfs key -K [dataset](dataset)
 ```
 
 * [Changing passphrase on encrypted zpool](https://www.reddit.com/r/zfs/comments/7mm237/changing_passphrase_on_encrypted_zpool/)
@@ -488,7 +492,7 @@ zfs.host.com:/pool-name/dataset-name \
 
 Since LZ4 is the fastest decompression depending on the usage we may be internested in another other method or compression level:
 
-* Zstd and LZ4: <https://indico.fnal.gov/event/16264/contributions/36466/attachments/22610/28037/Zstd__LZ4.pdf>
+* Zstd and LZ4: [https://indico.fnal.gov/event/16264/contributions/36466/attachments/22610/28037/Zstd__LZ4.pdf](https://indico.fnal.gov/event/16264/contributions/36466/attachments/22610/28037/Zstd__LZ4.pdf)
 
 ## UI
 

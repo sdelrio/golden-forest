@@ -72,7 +72,7 @@ There is a new [serverless version](https://medium.com/@jdrawlings/serverless-je
 
 #### 2021
 
-* <https://devopscurry.com/best-jenkins-plugins-for-2021/>
+* [https://devopscurry.com/best-jenkins-plugins-for-2021/](https://devopscurry.com/best-jenkins-plugins-for-2021/)
 
 ### Videos
 
@@ -91,10 +91,10 @@ There is a new [serverless version](https://medium.com/@jdrawlings/serverless-je
   * [Script Console in Jenkins wiki](https://wiki.jenkins.io/display/JENKINS/Jenkins+Script+Console)
   * [Examples in GitHub OAuth Plugin Wiki](https://wiki.jenkins.io/display/JENKINS/GitHub+Oauth+Plugin)
   * Configuration via Script Console
-    - <https://issues.jenkins-ci.org/browse/JENKINS-31094>
-    - <https://github.com/sandscape>
-    - <https://github.com/samrocketman>
-    - <https://github.com/samrocketman/jenkins-bootstrap-shared/>
+    - [https://issues.jenkins-ci.org/browse/JENKINS-31094](https://issues.jenkins-ci.org/browse/JENKINS-31094)
+    - [https://github.com/sandscape](https://github.com/sandscape)
+    - [https://github.com/samrocketman](https://github.com/samrocketman)
+    - [https://github.com/samrocketman/jenkins-bootstrap-shared/](https://github.com/samrocketman/jenkins-bootstrap-shared/)
 
 ### Backup
 

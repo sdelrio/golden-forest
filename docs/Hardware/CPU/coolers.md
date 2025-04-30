@@ -26,6 +26,6 @@
 
 ### References
 
-* <https://www.tomshardware.com/reviews/best-cpu-coolers,4181.html>
-* <https://enthusiastreview.com/best-cpu-cooler-for-ryzen-9-3900x-and-3950x/>
+* [https://www.tomshardware.com/reviews/best-cpu-coolers,4181.html](https://www.tomshardware.com/reviews/best-cpu-coolers,4181.html)
+* [https://enthusiastreview.com/best-cpu-cooler-for-ryzen-9-3900x-and-3950x/](https://enthusiastreview.com/best-cpu-cooler-for-ryzen-9-3900x-and-3950x/)
 

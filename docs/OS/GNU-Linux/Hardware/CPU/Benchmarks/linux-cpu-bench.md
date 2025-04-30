@@ -22,4 +22,4 @@ tags:
 
 ## References
 
-* <https://linuxhint.com/useful_linux_stress_test_benchmark_cpu_perf/>
+* [https://linuxhint.com/useful_linux_stress_test_benchmark_cpu_perf/](https://linuxhint.com/useful_linux_stress_test_benchmark_cpu_perf/)

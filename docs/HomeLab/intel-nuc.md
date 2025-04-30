@@ -20,20 +20,20 @@ Homelabs built from Intel NUCs are sometimes referred to as Nanolabs.
 
 ### J3455
 
-* <https://browser.geekbench.com/v5/cpu/search?q=j3455>
+* [https://browser.geekbench.com/v5/cpu/search?q=j3455](https://browser.geekbench.com/v5/cpu/search?q=j3455)
 
 ### J5005
 
-* <https://browser.geekbench.com/v5/cpu/search?utf8=%E2%9C%93&q=j5005>
-* <https://www.servethehome.com/intel-pentium-silver-j5005-benchmarks-and-review/>
+* [https://browser.geekbench.com/v5/cpu/search?utf8=%E2%9C%93&q=j5005](https://browser.geekbench.com/v5/cpu/search?utf8=%E2%9C%93&q=j5005)
+* [https://www.servethehome.com/intel-pentium-silver-j5005-benchmarks-and-review/](https://www.servethehome.com/intel-pentium-silver-j5005-benchmarks-and-review/)
 
 ### i3-8109
 
-* <https://browser.geekbench.com/v5/cpu/search?q=NUC8i3BEH>
+* [https://browser.geekbench.com/v5/cpu/search?q=NUC8i3BEH](https://browser.geekbench.com/v5/cpu/search?q=NUC8i3BEH)
 
 ## 2nd Ethernet
 
-* <https://blog.fosketts.net/2015/06/05/adding-a-second-ethernet-port-to-an-intel-nuc-via-mini-pcie/>
+* [https://blog.fosketts.net/2015/06/05/adding-a-second-ethernet-port-to-an-intel-nuc-via-mini-pcie/](https://blog.fosketts.net/2015/06/05/adding-a-second-ethernet-port-to-an-intel-nuc-via-mini-pcie/)
 * [Syba - Tarjeta Mini PCI-E gigabit Ethernet y Placa PCI con Puerto RJ45](https://www.amazon.es/gp/product/B00B524102/)
 * [VSAN Cluster Running On Three Intel NUCs](http://vmnick0.me/?p=7)
 * [14 Best USB to ethernet adapter](https://www.pcsuggest.com/best-usb-ethernet-adapter/)
@@ -45,8 +45,8 @@ Homelabs built from Intel NUCs are sometimes referred to as Nanolabs.
 
 ## Power Supply Specs
 
-* <https://www.intel.com/content/www/us/en/support/articles/000007053/intel-nuc/intel-nuc-kits.html>
-* <https://www.intel.es/content/www/es/es/support/articles/000007053/intel-nuc/intel-nuc-kits.html>
+* [https://www.intel.com/content/www/us/en/support/articles/000007053/intel-nuc/intel-nuc-kits.html](https://www.intel.com/content/www/us/en/support/articles/000007053/intel-nuc/intel-nuc-kits.html)
+* [https://www.intel.es/content/www/es/es/support/articles/000007053/intel-nuc/intel-nuc-kits.html](https://www.intel.es/content/www/es/es/support/articles/000007053/intel-nuc/intel-nuc-kits.html)
 
 ### Connectors
 
@@ -74,7 +74,7 @@ Export-ESXImageProfile -ImageProfile "ESXi-6.5.0-2018041701-NUC7" -ExportToISO -
 Export-ESXImageProfile -ImageProfile "ESXi-6.5.0-2018041701-NUC7" -ExportToBundle -filepath ESXi-6.5.0-2018041701-NUC7.zip
 ```
 
-* <https://www.virten.net/2017/03/vmware-homeserver-esxi-on-7th-gen-intel-nuc-kaby-lake/>
+* [https://www.virten.net/2017/03/vmware-homeserver-esxi-on-7th-gen-intel-nuc-kaby-lake/](https://www.virten.net/2017/03/vmware-homeserver-esxi-on-7th-gen-intel-nuc-kaby-lake/)
 
 ### ESXi 6 with Realtek Drivers
 
@@ -91,9 +91,9 @@ Add-EsxSoftwarePackage -ImageProfile "ESXi-6.5.0-2018041701-NUC7" -SoftwarePacka
 (Get-EsxImageProfile “RealTek8186a”).viblist
 ```
 
-* <https://vmexplorer.com/2017/09/23/create-iso-with-esxi-6-0u2-and-realtek-8168-drivers/>
+* [https://vmexplorer.com/2017/09/23/create-iso-with-esxi-6-0u2-and-realtek-8168-drivers/](https://vmexplorer.com/2017/09/23/create-iso-with-esxi-6-0u2-and-realtek-8168-drivers/)
 
-* <https://refactoringragnarok.com/2017/06/24/set-up-home-lab-with-esxi-6-5-on-7th-gen-nuc/>
+* [https://refactoringragnarok.com/2017/06/24/set-up-home-lab-with-esxi-6-5-on-7th-gen-nuc/](https://refactoringragnarok.com/2017/06/24/set-up-home-lab-with-esxi-6-5-on-7th-gen-nuc/)
 
 Check to make sure we have the appropriate driver for the 7th Gen NUC:
 
@@ -141,7 +141,7 @@ sudo modprobe -rfv r8169
 sudo modprobe -v r8168
 ```
 
-* <https://askubuntu.com/questions/400929/ethernet-not-connecting-on-boot?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa>
+* [https://askubuntu.com/questions/400929/ethernet-not-connecting-on-boot?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa](https://askubuntu.com/questions/400929/ethernet-not-connecting-on-boot?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
 
 
 ### J3445 Realtek NIC for Linux not opensource
@@ -183,7 +183,7 @@ sudo modprobe -v r8168
 
 ##### Centos 7
 
-* <https://www.unixteacher.org/blog/linux/ethernet-rtl-8168-driver-on-centos/>
+* [https://www.unixteacher.org/blog/linux/ethernet-rtl-8168-driver-on-centos/](https://www.unixteacher.org/blog/linux/ethernet-rtl-8168-driver-on-centos/)
 
 ```bash
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
@@ -197,8 +197,8 @@ init 6 # reboot
 
 ### IGDP Aperture Size
 
-* <https://communities.intel.com/thread/106880>
-* <https://www.legitreviews.com/how-to-get-more-graphics-performance-from-the-intel-nuc_136218>
+* [https://communities.intel.com/thread/106880](https://communities.intel.com/thread/106880)
+* [https://www.legitreviews.com/how-to-get-more-graphics-performance-from-the-intel-nuc_136218](https://www.legitreviews.com/how-to-get-more-graphics-performance-from-the-intel-nuc_136218)
 
 Bios Settings -> Appears on BIOS Screen ... -> Options -> Description / Purpose
 
@@ -233,7 +233,7 @@ vm.dirty_writeback_centisecs = 1500
 kernel.nmi_watchdog = 0
 ```
 
-* <https://superuser.com/questions/758270/very-high-iowait-after-connecting-ssd-drive>
+* [https://superuser.com/questions/758270/very-high-iowait-after-connecting-ssd-drive](https://superuser.com/questions/758270/very-high-iowait-after-connecting-ssd-drive)
 
 ## Racks
 
@@ -242,6 +242,6 @@ kernel.nmi_watchdog = 0
 
 ## References
 
-* <https://openhomelab.org/index.php?title=Intel_NUC>
-* <https://www.reddit.com/r/homelab/comments/73o0m1/nuc_or_alternative_recommendations_for_openstack/>
+* [https://openhomelab.org/index.php?title=Intel_NUC](https://openhomelab.org/index.php?title=Intel_NUC)
+* [https://www.reddit.com/r/homelab/comments/73o0m1/nuc_or_alternative_recommendations_for_openstack/](https://www.reddit.com/r/homelab/comments/73o0m1/nuc_or_alternative_recommendations_for_openstack/)
 

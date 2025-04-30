@@ -35,5 +35,5 @@ sudo netplan apply
 
 ## References
 
-* <https://websiteforstudents.com/how-to-configure-static-ip-address-on-ubuntu-linux/>
-* <https://websiteforstudents.com/configuring-static-ips-ubuntu-17-10-servers/>
+* [https://websiteforstudents.com/how-to-configure-static-ip-address-on-ubuntu-linux/](https://websiteforstudents.com/how-to-configure-static-ip-address-on-ubuntu-linux/)
+* [https://websiteforstudents.com/configuring-static-ips-ubuntu-17-10-servers/](https://websiteforstudents.com/configuring-static-ips-ubuntu-17-10-servers/)

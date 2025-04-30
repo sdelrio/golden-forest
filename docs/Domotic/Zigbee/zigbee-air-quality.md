@@ -6,5 +6,5 @@
 
 Using ESP32 or ESP8266 + ESPhome and connect to Home Assistant.
 
-* <https://michilehr.de/ikea-hacking-making-the-air-quality-sensor-vindriktning-smart-and-adding-an-additional-eco2-sensor-powered-by-esphome-and-home-assistant>
+* [https://michilehr.de/ikea-hacking-making-the-air-quality-sensor-vindriktning-smart-and-adding-an-additional-eco2-sensor-powered-by-esphome-and-home-assistant](https://michilehr.de/ikea-hacking-making-the-air-quality-sensor-vindriktning-smart-and-adding-an-additional-eco2-sensor-powered-by-esphome-and-home-assistant)
 

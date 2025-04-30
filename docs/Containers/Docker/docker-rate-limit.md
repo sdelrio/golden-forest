@@ -22,7 +22,7 @@ to:
 FROM mirror.gcr.io/library/ubuntu:latest
 ```
 
-* <https://cloud.google.com/blog/products/containers-kubernetes/mitigating-the-impact-of-new-docker-hub-pull-request-limits>
+* [https://cloud.google.com/blog/products/containers-kubernetes/mitigating-the-impact-of-new-docker-hub-pull-request-limits](https://cloud.google.com/blog/products/containers-kubernetes/mitigating-the-impact-of-new-docker-hub-pull-request-limits)
 
 ### Publish images to another registry
 
@@ -42,9 +42,9 @@ FROM ghcr.io/youruser/yourapp:0.1.2
 
 ### Propagate ImagePullSecrets to all namespaces
 
-* <https://github.com/alexellis/registry-creds>
+* [https://github.com/alexellis/registry-creds](https://github.com/alexellis/registry-creds)
 
 ## References
 
-* <https://inlets.dev/blog/2020/10/29/preparing-docker-hub-rate-limits.html>
+* [https://inlets.dev/blog/2020/10/29/preparing-docker-hub-rate-limits.html](https://inlets.dev/blog/2020/10/29/preparing-docker-hub-rate-limits.html)
 

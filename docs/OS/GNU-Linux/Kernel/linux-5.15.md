@@ -18,6 +18,6 @@ Linux 5.15 is particularly exciting for AMD users, just not for CPUs and Radeon 
 
 ## References
 
-* <https://www.phoronix.com/scan.php?page=news_item&px=Linux-5.15-AMD>
-* <https://www.pcgamer.com/linux-515-update-brings-plenty-of-improvements-for-amd-hardware-and-the-steam-deck/>
-* <http://lkml.iu.edu/hypermail/linux/kernel/2109.1/05136.html>
+* [https://www.phoronix.com/scan.php?page=news_item&px=Linux-5.15-AMD](https://www.phoronix.com/scan.php?page=news_item&px=Linux-5.15-AMD)
+* [https://www.pcgamer.com/linux-515-update-brings-plenty-of-improvements-for-amd-hardware-and-the-steam-deck/](https://www.pcgamer.com/linux-515-update-brings-plenty-of-improvements-for-amd-hardware-and-the-steam-deck/)
+* [http://lkml.iu.edu/hypermail/linux/kernel/2109.1/05136.html](http://lkml.iu.edu/hypermail/linux/kernel/2109.1/05136.html)

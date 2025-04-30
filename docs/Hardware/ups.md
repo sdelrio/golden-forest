@@ -9,8 +9,8 @@ or properly shut down the protected equipment.
 
 ## Links
 
-* <https://fstoppers.com/originals/6-office-conveniences-will-make-your-life-easier-photographer-502240?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS>
-* <https://forums.unraid.net/topic/50495-scripts-for-server-monitoring-using-influx-db-and-grafana-without-telegraf-agent/?tab=comments#comment-496966>
-* <https://technicalramblings.com/blog/setting-grafana-influxdb-telegraf-ups-monitoring-unraid/>
+* [https://fstoppers.com/originals/6-office-conveniences-will-make-your-life-easier-photographer-502240?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS](https://fstoppers.com/originals/6-office-conveniences-will-make-your-life-easier-photographer-502240?utm_source=FS_RSS&utm_medium=RSS&utm_campaign=Main_RSS)
+* [https://forums.unraid.net/topic/50495-scripts-for-server-monitoring-using-influx-db-and-grafana-without-telegraf-agent/?tab=comments#comment-496966](https://forums.unraid.net/topic/50495-scripts-for-server-monitoring-using-influx-db-and-grafana-without-telegraf-agent/?tab=comments#comment-496966)
+* [https://technicalramblings.com/blog/setting-grafana-influxdb-telegraf-ups-monitoring-unraid/](https://technicalramblings.com/blog/setting-grafana-influxdb-telegraf-ups-monitoring-unraid/)
 
 

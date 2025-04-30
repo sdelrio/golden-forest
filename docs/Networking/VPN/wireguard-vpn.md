@@ -12,7 +12,7 @@ It's included in Linus Kernel since v5.6.
 
 ## References
 
-* <https://www.wireguard.com/>
-* <https://b3n.org/wireguard-vpn/>
-* <https://thenewstack.io/whats-new-for-linux-5-6-wireguard-usb-4-0-year-2038-remediation/>
+* [https://www.wireguard.com/](https://www.wireguard.com/)
+* [https://b3n.org/wireguard-vpn/](https://b3n.org/wireguard-vpn/)
+* [https://thenewstack.io/whats-new-for-linux-5-6-wireguard-usb-4-0-year-2038-remediation/](https://thenewstack.io/whats-new-for-linux-5-6-wireguard-usb-4-0-year-2038-remediation/)
 

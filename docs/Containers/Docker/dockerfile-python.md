@@ -10,23 +10,23 @@ By default, if we put python into a container we can get slow docker logs or not
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<Tabs>
-  <TabItem value="env" label="Using ENV" default>
+[Tabs](Tabs)
+  [TabItem value="env" label="Using ENV" default](TabItem value="env" label="Using ENV" default)
 
 ```bash
 export PYTHONUNBUFFERED=1
 ```
-  </TabItem>
-  <TabItem value="cli" label="Command line optin">
+  [/TabItem](/TabItem)
+  [TabItem value="cli" label="Command line optin"](TabItem value="cli" label="Command line optin")
 
 ```bash
 CMD ["python","-u","main.py"]
 ```
-  </TabItem>
-</Tabs>
+  [/TabItem](/TabItem)
+[/Tabs](/Tabs)
 
-* <https://stackoverflow.com/questions/29663459/python-app-does-not-print-anything-when-running-detached-in-docker>
-* <https://stackoverflow.com/questions/107705/disable-output-buffering>
+* [https://stackoverflow.com/questions/29663459/python-app-does-not-print-anything-when-running-detached-in-docker](https://stackoverflow.com/questions/29663459/python-app-does-not-print-anything-when-running-detached-in-docker)
+* [https://stackoverflow.com/questions/107705/disable-output-buffering](https://stackoverflow.com/questions/107705/disable-output-buffering)
 
 ## Alpine base image
 
@@ -78,7 +78,7 @@ RUN echo "**** install Python ****" && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi
 ```
 
-* <https://github.com/Docker-Hub-frolvlad/docker-alpine-python3>
+* [https://github.com/Docker-Hub-frolvlad/docker-alpine-python3](https://github.com/Docker-Hub-frolvlad/docker-alpine-python3)
 
 ## Small size with wheel usage
 

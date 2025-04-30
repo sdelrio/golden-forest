@@ -30,10 +30,10 @@ graph TB
 
 ## References
 
-* <https://github.com/facebook/docusaurus/issues/1258>
-* <https://docusaurus.io/docs/markdown-features/plugins>
-* <https://jojozhuang.github.io/tutorial/mermaid-cheat-sheet/>
-* <https://mermaid-js.github.io/mermaid/#/flowchart?id=styling-and-classes>
+* [https://github.com/facebook/docusaurus/issues/1258](https://github.com/facebook/docusaurus/issues/1258)
+* [https://docusaurus.io/docs/markdown-features/plugins](https://docusaurus.io/docs/markdown-features/plugins)
+* [https://jojozhuang.github.io/tutorial/mermaid-cheat-sheet/](https://jojozhuang.github.io/tutorial/mermaid-cheat-sheet/)
+* [https://mermaid-js.github.io/mermaid/#/flowchart?id=styling-and-classes](https://mermaid-js.github.io/mermaid/#/flowchart?id=styling-and-classes)
 
 ## Issues
 

@@ -19,7 +19,7 @@ Then later started do migrate to other tools, like replacing Jenkins for Tekton.
 
 ### Kubernetes
 
-* <https://jenkins-x.io/v3/admin/platforms/on-premises/>
+* [https://jenkins-x.io/v3/admin/platforms/on-premises/](https://jenkins-x.io/v3/admin/platforms/on-premises/)
 
 ## References
 

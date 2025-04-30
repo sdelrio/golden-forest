@@ -5,7 +5,9 @@
 
 ### Walkthrough of Nix Install and Setup on MacOS
 
+<>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/utoj6annRK0?si=mTuFTj6JgORv8YB7&amp;start=309" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</>
 
 1. Install the Nix package manager
 2. Install packages  globally with `nix-env -iA`
@@ -26,6 +28,6 @@
 
 * [Homepage](https://www.gnu.org/software/stow/manual/stow.html)
 
-* <https://blog.resuelve.io/gestionando-dotfiles-con-gnu-stow-b3cb0d7d40a2>
-* <https://apiumhub.com/es/tech-blog-barcelona/gestion-de-dotfiles-con-stow/>
+* [https://blog.resuelve.io/gestionando-dotfiles-con-gnu-stow-b3cb0d7d40a2](https://blog.resuelve.io/gestionando-dotfiles-con-gnu-stow-b3cb0d7d40a2)
+* [https://apiumhub.com/es/tech-blog-barcelona/gestion-de-dotfiles-con-stow/](https://apiumhub.com/es/tech-blog-barcelona/gestion-de-dotfiles-con-stow/)
 

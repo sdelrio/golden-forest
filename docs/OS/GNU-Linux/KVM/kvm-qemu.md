@@ -52,13 +52,13 @@ echo \EFI\boot\bootx64.efi > \startup.nsh
 
 ## virtio-win isos
 
-* <https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/>
+* [https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/)
 
 ## virtio-fs
 
 Virtiofs is a shared file system that lets virtual machines access a directory tree on the host. Unlike existing approaches, it is designed to offer local file system semantics and performance.
 
-* <https://virtio-fs.gitlab.io/>
+* [https://virtio-fs.gitlab.io/](https://virtio-fs.gitlab.io/)
 
 ### Requirements
 
@@ -95,7 +95,7 @@ memory_backing_dir = "/var/lib/libvirt/qemu/ram"
 
 QEMU 5.0, libvirt 6.6, virtmanager 3.0, are available for Ubuntu 20.04:
 
-* <https://launchpad.net/~jacob/+archive/ubuntu/virtualisation?field.series_filter=focal>
+* [https://launchpad.net/~jacob/+archive/ubuntu/virtualisation?field.series_filter=focal](https://launchpad.net/~jacob/+archive/ubuntu/virtualisation?field.series_filter=focal)
 
 ##### CLI install
 ```bash
@@ -128,21 +128,21 @@ sudo apt-get update
 ### CPU section with NUMA
 
 ```xml
-  <cpu mode="host-model" check="none">
-    <topology sockets="1" dies="1" cores="6" threads="2"/>
-    <numa>
-      <cell id="0" cpus="0-11" memory="16" unit="GiB" memAccess="shared"/>
-    </numa>
-  </cpu>
+  [cpu mode="host-model" check="none"](cpu mode="host-model" check="none")
+    [topology sockets="1" dies="1" cores="6" threads="2"/](topology sockets="1" dies="1" cores="6" threads="2"/)
+    [numa](numa)
+      [cell id="0" cpus="0-11" memory="16" unit="GiB" memAccess="shared"/](cell id="0" cpus="0-11" memory="16" unit="GiB" memAccess="shared"/)
+    [/numa](/numa)
+  [/cpu](/cpu)
 ```
 ### memoryBacking with source and access
 
 ```xml
-  <memoryBacking>
-    <hugepages/>
-    <source type="memfd"/>
-    <access mode="shared"/>
-  </memoryBacking>
+  [memoryBacking](memoryBacking)
+    [hugepages/](hugepages/)
+    [source type="memfd"/](source type="memfd"/)
+    [access mode="shared"/](access mode="shared"/)
+  [/memoryBacking](/memoryBacking)
 ```
 ### filesystem with virtiofs
 
@@ -150,15 +150,15 @@ sudo apt-get update
 * target dir is the name of the mounted drive in the guest machine
 
 ```xml
-  <devices>
+  [devices](devices)
    ...
-    <filesystem type="mount" accessmode="passthrough">
-      <driver type="virtiofs" queue="1024"/>
-      <source dir="/hddpool/imagenes"/>
-      <target dir="mount_tag"/>
-    </filesystem>
+    [filesystem type="mount" accessmode="passthrough"](filesystem type="mount" accessmode="passthrough")
+      [driver type="virtiofs" queue="1024"/](driver type="virtiofs" queue="1024"/)
+      [source dir="/hddpool/imagenes"/](source dir="/hddpool/imagenes"/)
+      [target dir="mount_tag"/](target dir="mount_tag"/)
+    [/filesystem](/filesystem)
    ...
-  </devices>
+  [/devices](/devices)
 ```
 ### Install virtiofs drivers on windows
 
@@ -195,7 +195,7 @@ $ dmesg | grep AMD-Vi
 [    1.503263] AMD-Vi: Virtual APIC enabled
 [    1.503263] AMD-Vi: X2APIC enabled
 [    1.503333] AMD-Vi: Lazy IO/TLB flushing enabled
-[    1.801913] AMD-Vi: AMD IOMMUv2 driver by Joerg Roedel <jroedel@suse.de>
+[    1.801913] AMD-Vi: AMD IOMMUv2 driver by Joerg Roedel [jroedel@suse.de](jroedel@suse.de)
 $ lspci | grep VGA
 09:00.0 VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] Ellesmere [Radeon RX 470/480/570/570X/580/580X/590] (rev cf)
 $ lspci | grep VGA
@@ -374,7 +374,7 @@ On some Radeon cards, it can't be rebooted
 
 #### References
 
-* <https://unix.stackexchange.com/questions/73908/how-to-reset-cycle-power-to-a-pcie-device/245184#245184>
+* [https://unix.stackexchange.com/questions/73908/how-to-reset-cycle-power-to-a-pcie-device/245184#245184](https://unix.stackexchange.com/questions/73908/how-to-reset-cycle-power-to-a-pcie-device/245184#245184)
 
 ### List VFIO
 
@@ -427,7 +427,7 @@ done
 powerdown vga powersave
 ```
 
-* <https://askubuntu.com/questions/771562/16-04-power-off-discrete-graphics-ati-amd>
+* [https://askubuntu.com/questions/771562/16-04-power-off-discrete-graphics-ati-amd](https://askubuntu.com/questions/771562/16-04-power-off-discrete-graphics-ati-amd)
 
 ## VGA
 
@@ -448,14 +448,14 @@ If guest is windows, is recomended to this enable change resolution when you res
 apt-get install spice-vdagent
 ```
 
-* Make sure that in the qemu xml you have a ve the spicevmc channel into the `<devices>...</devices>` section.
+* Make sure that in the qemu xml you have a ve the spicevmc channel into the `[devices>...</devices](devices>...</devices)` section.
 
 ```xml
-<channel type="spicevmc">
-  <target type="virtio" name="com.redhat.spice.0" state="disconnected"/>
-  <alias name="channel0"/>
-  <address type="virtio-serial" controller="0" bus="0" port="1"/>
-</channel>
+[channel type="spicevmc"](channel type="spicevmc")
+  [target type="virtio" name="com.redhat.spice.0" state="disconnected"/](target type="virtio" name="com.redhat.spice.0" state="disconnected"/)
+  [alias name="channel0"/](alias name="channel0"/)
+  [address type="virtio-serial" controller="0" bus="0" port="1"/](address type="virtio-serial" controller="0" bus="0" port="1"/)
+[/channel](/channel)
 ```
 :::
 
@@ -491,13 +491,13 @@ Attach your device to your VM using virtmanager. You will end up with a section 
 1. Copy this snippets to a new file `/etc/libvirt/snippets/SNIPPET.xml`
 
 ```xml
-<hostdev mode='subsystem' type='usb' managed='yes'>
-  <source>
-    <vendor id='0x04f9'/>
-    <product id='0x2015'/>
-  </source>
-  <address type='usb' bus='0' port='4'/>
-</hostdev>
+[hostdev mode='subsystem' type='usb' managed='yes'](hostdev mode='subsystem' type='usb' managed='yes')
+  [source](source)
+    [vendor id='0x04f9'/](vendor id='0x04f9'/)
+    [product id='0x2015'/](product id='0x2015'/)
+  [/source](/source)
+  [address type='usb' bus='0' port='4'/](address type='usb' bus='0' port='4'/)
+[/hostdev](/hostdev)
 ```
 
 2. Load the snippet into the Virtual Machine:
@@ -591,7 +591,7 @@ CPU-pinning will allocate CPU-cores for the guest VM while it is running. The id
 A more agresive aproach could be to use `isolcpus` kernel command line as linux boot parameter to restrict access even if the VM is not running.
 
 <details>
- <summary>isolcpu kernel parameters</summary>
+  <summary>isolcpu kernel parameters</summary>
   <div>
 
 :::note
@@ -651,53 +651,53 @@ Edit your VM xml settings wiht `virsh edit your-windows-vm-name`
 Search for
 
 ```xml
-<domain type='kvm'>
+[domain type='kvm'](domain type='kvm')
 ```
 
 and repace with:
 
 ```xml
-<domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
+[domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'](domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0')
 ```
 
 #### Update vcpu section
 
-Find line within `<vcpu>....</vcpu>` and add the following block:
+Find line within `[vcpu>....</vcpu](vcpu>....</vcpu)` and add the following block:
 
 ```xml
-<vcpu placement='static'>12</vcpu>
-<iothreads>2</iothreads>
-<cputune>
-    <vcpupin vcpu='0' cpuset='12'/>
-    <vcpupin vcpu='1' cpuset='13'/>
-    <vcpupin vcpu='2' cpuset='14'/>
-    <vcpupin vcpu='3' cpuset='15'/>
-    <vcpupin vcpu='4' cpuset='16'/>
-    <vcpupin vcpu='5' cpuset='17'/>
-    <vcpupin vcpu='6' cpuset='18'/>
-    <vcpupin vcpu='7' cpuset='19'/>
-    <vcpupin vcpu='8' cpuset='20'/>
-    <vcpupin vcpu='9' cpuset='21'/>
-    <vcpupin vcpu='10' cpuset='22'/>
-    <vcpupin vcpu='11' cpuset='23'/>
-    <emulatorpin cpuset='0-1'/>
-    <iothreadpin iothread='1' cpuset='0-1'/>
-    <iothreadpin iothread='2' cpuset='2-3'/>
- </cputune>
+[vcpu placement='static'>12</vcpu](vcpu placement='static'>12</vcpu)
+[iothreads>2</iothreads](iothreads>2</iothreads)
+[cputune](cputune)
+    [vcpupin vcpu='0' cpuset='12'/](vcpupin vcpu='0' cpuset='12'/)
+    [vcpupin vcpu='1' cpuset='13'/](vcpupin vcpu='1' cpuset='13'/)
+    [vcpupin vcpu='2' cpuset='14'/](vcpupin vcpu='2' cpuset='14'/)
+    [vcpupin vcpu='3' cpuset='15'/](vcpupin vcpu='3' cpuset='15'/)
+    [vcpupin vcpu='4' cpuset='16'/](vcpupin vcpu='4' cpuset='16'/)
+    [vcpupin vcpu='5' cpuset='17'/](vcpupin vcpu='5' cpuset='17'/)
+    [vcpupin vcpu='6' cpuset='18'/](vcpupin vcpu='6' cpuset='18'/)
+    [vcpupin vcpu='7' cpuset='19'/](vcpupin vcpu='7' cpuset='19'/)
+    [vcpupin vcpu='8' cpuset='20'/](vcpupin vcpu='8' cpuset='20'/)
+    [vcpupin vcpu='9' cpuset='21'/](vcpupin vcpu='9' cpuset='21'/)
+    [vcpupin vcpu='10' cpuset='22'/](vcpupin vcpu='10' cpuset='22'/)
+    [vcpupin vcpu='11' cpuset='23'/](vcpupin vcpu='11' cpuset='23'/)
+    [emulatorpin cpuset='0-1'/](emulatorpin cpuset='0-1'/)
+    [iothreadpin iothread='1' cpuset='0-1'/](iothreadpin iothread='1' cpuset='0-1'/)
+    [iothreadpin iothread='2' cpuset='2-3'/](iothreadpin iothread='2' cpuset='2-3'/)
+ [/cputune](/cputune)
 ```
 
 #### Update cpu section
 
 
-Find the block `<cpu>...</cpu>` and adapt like this:
+Find the block `[cpu>...</cpu](cpu>...</cpu)` and adapt like this:
 
 ```xml
-<cpu mode='host-passthrough' check='none'>
-    <topology sockets='1' cores='6' threads='2'/>
-    <cache mode='passthrough'/>
-    <feature policy='require' name='topoext'/>
-    <!-- add additional cpu features here-->
-</cpu>
+[cpu mode='host-passthrough' check='none'](cpu mode='host-passthrough' check='none')
+    [topology sockets='1' cores='6' threads='2'/](topology sockets='1' cores='6' threads='2'/)
+    [cache mode='passthrough'/](cache mode='passthrough'/)
+    [feature policy='require' name='topoext'/](feature policy='require' name='topoext'/)
+    [!-- add additional cpu features here--](!-- add additional cpu features here--)
+[/cpu](/cpu)
 ```
 
 ## WakeonLan

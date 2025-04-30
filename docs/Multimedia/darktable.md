@@ -23,7 +23,7 @@
 /usr/share/color/argyll/ref/ColorChecker.cie
 ```
 
-* <https://www.darktable.org/2016/05/colour-manipulation-with-the-colour-checker-lut-module/>
+* [https://www.darktable.org/2016/05/colour-manipulation-with-the-colour-checker-lut-module/](https://www.darktable.org/2016/05/colour-manipulation-with-the-colour-checker-lut-module/)
 * [GitHub pmjdebrujin/ColorMatch create ICC standr color profiles from jpgs camera profiles](https://github.com/pmjdebruijn/colormatch)
 * [2017: Let's Build our own Basecurves](https://www.youtube.com/watch?v=LufwQZx01gk)
 * [2016: Creating camera input profile with ColorCheker Passport](https://tomassobekphotography.co.nz/articles/create-camera-input-profile-with-ColorChecker-Passport.php)

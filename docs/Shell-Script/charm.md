@@ -1,13 +1,14 @@
 # Charm.sh
 
-* <https://charm.sh>
+* [https://charm.sh](https://charm.sh)
 
 Terminal user interfaces, styles, and layouts. Many tools, but the one that's really useful tool for bash scripting is gum:
 
 * https://github.com/charmbracelet/gum
 
-
+<>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/U8zCHA-9VLA?si=KXJHRSjlUuItMTQy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</>
 
 
 ## Option
@@ -45,22 +46,22 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-<Tabs>
-  <TabItem value="MacOS">
+[Tabs](Tabs)
+  [TabItem value="MacOS"](TabItem value="MacOS")
 
 ```
 brew install gum
 ```
 
-  </TabItem>
-  <TabItem value="Linux">
+  [/TabItem](/TabItem)
+  [TabItem value="Linux"](TabItem value="Linux")
 
 ```
 brew install gum
 ```
 
-  </TabItem>
-  <TabItem value="Nix">
+  [/TabItem](/TabItem)
+  [TabItem value="Nix"](TabItem value="Nix")
 
 * Nix
 
@@ -74,15 +75,15 @@ nix-env -iA nixpkgs.gum
 nix run "github:charmbracelet/gum" -- --help 
 ```
 
-  </TabItem>
-  <TabItem value="Arch">
+  [/TabItem](/TabItem)
+  [TabItem value="Arch"](TabItem value="Arch")
 
 ```
 pacman -S gum
 ```
 
-  </TabItem>
-  <TabItem value="Debian">
+  [/TabItem](/TabItem)
+  [TabItem value="Debian"](TabItem value="Debian")
 
 ```
 sudo mkdir -p /etc/apt/keyrings
@@ -91,8 +92,8 @@ echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *
 sudo apt update && sudo apt install gum
 ```
 
-  </TabItem>
-  <TabItem value="Fedora">
+  [/TabItem](/TabItem)
+  [TabItem value="Fedora"](TabItem value="Fedora")
 
 ```
 echo '[charm]
@@ -104,17 +105,17 @@ gpgkey=https://repo.charm.sh/yum/gpg.key' | sudo tee /etc/yum.repos.d/charm.repo
 sudo yum install gum
 ```
 
-  </TabItem>
-  <TabItem value="Alpine">
+  [/TabItem](/TabItem)
+  [TabItem value="Alpine"](TabItem value="Alpine")
 
 `apk add gum`
 
-  </TabItem>
-  <TabItem value="Android">
+  [/TabItem](/TabItem)
+  [TabItem value="Android"](TabItem value="Android")
 
 `pkg install gum`
-  </TabItem>
-  <TabItem value="Windows">
+  [/TabItem](/TabItem)
+  [TabItem value="Windows"](TabItem value="Windows")
 
 * via WinGet or Scoop
 ```
@@ -122,8 +123,8 @@ winget install charmbracelet.gum
 scoop install charm-gum
 ```
 
-  </TabItem>
-</Tabs>
+  [/TabItem](/TabItem)
+[/Tabs](/Tabs)
 
 
 

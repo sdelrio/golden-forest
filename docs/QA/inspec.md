@@ -35,5 +35,5 @@ exit $RC
 ## Articles
 
 * [InSpec - Inspect Your Infrastructure](https://blog.ragnarson.com/2017-03-13-inspec-inspect-your-infrastructure/)
-* <https://community.chef.io/tools/chef-inspec>
+* [https://community.chef.io/tools/chef-inspec](https://community.chef.io/tools/chef-inspec)
 

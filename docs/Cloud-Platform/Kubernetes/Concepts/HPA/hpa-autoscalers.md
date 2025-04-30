@@ -67,7 +67,7 @@ data:
       name:
         matches: "^(.*)_total"
         as: "${1}_per_second"
-      metricsQuery: (sum(rate(<<.Series>>{<<.LabelMatchers>>}[1m])) by (<<.GroupBy>>))
+      metricsQuery: (sum(rate([<.Series>>{<<.LabelMatchers>>}[1m])) by (<<.GroupBy>](<.Series>>{<<.LabelMatchers>>}[1m])) by (<<.GroupBy>)))
 ```
 
 * prometheus adapter deployment
@@ -85,7 +85,7 @@ data:
 
 ### References
 
-  * <https://pet2cattle.com/2022/04/prometheus-hpa-external-metrics>
-  * <https://medium.com/the-metricfire-blog/prometheus-metrics-based-autoscaling-in-kubernetes-3f4388501c8e>
-  * <https://www.metricfire.com/blog/prometheus-metrics-based-autoscaling-in-kubernetes/>
+  * [https://pet2cattle.com/2022/04/prometheus-hpa-external-metrics](https://pet2cattle.com/2022/04/prometheus-hpa-external-metrics)
+  * [https://medium.com/the-metricfire-blog/prometheus-metrics-based-autoscaling-in-kubernetes-3f4388501c8e](https://medium.com/the-metricfire-blog/prometheus-metrics-based-autoscaling-in-kubernetes-3f4388501c8e)
+  * [https://www.metricfire.com/blog/prometheus-metrics-based-autoscaling-in-kubernetes/](https://www.metricfire.com/blog/prometheus-metrics-based-autoscaling-in-kubernetes/)
 

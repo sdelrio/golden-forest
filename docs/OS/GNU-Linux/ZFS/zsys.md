@@ -141,6 +141,6 @@ Would you like to proceed [y/N]? y
 
 ## References
 
-* <https://github.com/ubuntu/zsys>
-* <https://didrocks.fr/2020/06/04/zfs-focus-on-ubuntu-20.04-lts-zsys-state-collection/>
+* [https://github.com/ubuntu/zsys](https://github.com/ubuntu/zsys)
+* [https://didrocks.fr/2020/06/04/zfs-focus-on-ubuntu-20.04-lts-zsys-state-collection/](https://didrocks.fr/2020/06/04/zfs-focus-on-ubuntu-20.04-lts-zsys-state-collection/)
  

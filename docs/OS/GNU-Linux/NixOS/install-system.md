@@ -13,7 +13,7 @@ tags:
 
 The pretty basic install will need a `configuration.nix`, additionally the default installation also includes a `hardware-configuration.nix`.
 
-* <https://nixos.org/manual/nixos/stable/#sec-installation-manual-installing>
+* [https://nixos.org/manual/nixos/stable/#sec-installation-manual-installing](https://nixos.org/manual/nixos/stable/#sec-installation-manual-installing)
 
 The command `nixos-generate-config` can generate those initial configuration 
 files for you. Usually we will mount the target hardisk in some directory, in 
@@ -110,5 +110,5 @@ nixos-generate-config --show-hardware-config --no-filesystems
 
 Some notebooks and other systems hardware configurations from the official NixOS github:
 
-* <https://github.com/NixOS/nixos-hardware>
+* [https://github.com/NixOS/nixos-hardware](https://github.com/NixOS/nixos-hardware)
 

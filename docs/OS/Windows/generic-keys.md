@@ -22,5 +22,5 @@ Once we have register our product we must introduce it on our system:
 
 ## References
 
-* <https://www.adslzone.net/esenciales/windows-10/claves-genericas-windows-10-keys/>
+* [https://www.adslzone.net/esenciales/windows-10/claves-genericas-windows-10-keys/](https://www.adslzone.net/esenciales/windows-10/claves-genericas-windows-10-keys/)
 

@@ -47,5 +47,5 @@ Only newer kernels like [Linux 5.15](/docs/OS/GNU-Linux/Kernel/linux-5.15) will 
 
 ## References
 
-* <https://www.cyberciti.biz/faq/how-to-check-cpu-temperature-on-ubuntu-linux/>
+* [https://www.cyberciti.biz/faq/how-to-check-cpu-temperature-on-ubuntu-linux/](https://www.cyberciti.biz/faq/how-to-check-cpu-temperature-on-ubuntu-linux/)
 
