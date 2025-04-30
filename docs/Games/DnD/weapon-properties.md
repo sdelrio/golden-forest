@@ -7,7 +7,7 @@
 The greatclub has the 'Impactful' property  
 
 :::note
-**Impactful** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
 
 ### Light Hammer
@@ -15,7 +15,7 @@ The greatclub has the 'Impactful' property
 The light hammer has the 'Impactful' property  
 
 :::note
-**Impactful** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When you make an attack weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
 
 ### Mace
@@ -23,7 +23,7 @@ The light hammer has the 'Impactful' property
 The mace has the 'Impactful' property  
 
 :::note
-**Impactful** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
 
 ### Sickle
@@ -37,7 +37,7 @@ The sickle does '1d4+1' damage instead of 1d4
 The Morningstar has the 'Impactful' property  
 
 :::note
-**Impactful** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
 
 ### Flail
@@ -45,5 +45,5 @@ The Morningstar has the 'Impactful' property
 The Flail has the 'Impactful' property  
 
 :::note
-**Impactful** When attacking with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
