@@ -15,7 +15,7 @@ The greatclub has the 'Impactful' property
 The light hammer has the 'Impactful' property  
 
 :::note
-**Impactful** When you make an attack weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
 :::
 
 ### Mace
