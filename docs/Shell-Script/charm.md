@@ -46,22 +46,22 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-[Tabs](Tabs)
-  [TabItem value="MacOS"](TabItem value="MacOS")
+<Tabs>
+  <TabItem value="MacOS">
 
 ```
 brew install gum
 ```
 
-  [/TabItem](/TabItem)
-  [TabItem value="Linux"](TabItem value="Linux")
+  </TabItem>
+  <TabItem value="Linux">
 
 ```
 brew install gum
 ```
 
-  [/TabItem](/TabItem)
-  [TabItem value="Nix"](TabItem value="Nix")
+  </TabItem>
+  <TabItem value="Nix">
 
 * Nix
 
@@ -72,18 +72,18 @@ nix-env -iA nixpkgs.gum
 * Flakes
 
 ```
-nix run "github:charmbracelet/gum" -- --help 
+nix run "github:charmbracelet/gum" -- --help
 ```
 
-  [/TabItem](/TabItem)
-  [TabItem value="Arch"](TabItem value="Arch")
+  </TabItem>
+  <TabItem value="Arch">
 
 ```
 pacman -S gum
 ```
 
-  [/TabItem](/TabItem)
-  [TabItem value="Debian"](TabItem value="Debian")
+  </TabItem>
+  <TabItem value="Debian">
 
 ```
 sudo mkdir -p /etc/apt/keyrings
@@ -92,8 +92,8 @@ echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *
 sudo apt update && sudo apt install gum
 ```
 
-  [/TabItem](/TabItem)
-  [TabItem value="Fedora"](TabItem value="Fedora")
+  </TabItem>
+  <TabItem value="Fedora">
 
 ```
 echo '[charm]
@@ -105,17 +105,17 @@ gpgkey=https://repo.charm.sh/yum/gpg.key' | sudo tee /etc/yum.repos.d/charm.repo
 sudo yum install gum
 ```
 
-  [/TabItem](/TabItem)
-  [TabItem value="Alpine"](TabItem value="Alpine")
+  </TabItem>
+  <TabItem value="Alpine">
 
 `apk add gum`
 
-  [/TabItem](/TabItem)
-  [TabItem value="Android"](TabItem value="Android")
+  </TabItem>
+  <TabItem value="Android">
 
 `pkg install gum`
-  [/TabItem](/TabItem)
-  [TabItem value="Windows"](TabItem value="Windows")
+  </TabItem>
+  <TabItem value="Windows">
 
 * via WinGet or Scoop
 ```
@@ -123,8 +123,8 @@ winget install charmbracelet.gum
 scoop install charm-gum
 ```
 
-  [/TabItem](/TabItem)
-[/Tabs](/Tabs)
+  </TabItem>
+</Tabs>
 
 
 

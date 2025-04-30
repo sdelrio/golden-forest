@@ -136,6 +136,6 @@ addons:
 
 ## References
 
-* [Homepage<IconExternalLink />](https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html>*)
-* [GitHub<IconExternalLink />](https://github.com/Koenkk/zigbee2mqtt)
+* [Homepage](https://www.zigbee2mqtt.io/getting_started/running_zigbee2mqtt.html)
+* [GitHub](https://github.com/Koenkk/zigbee2mqtt)
 

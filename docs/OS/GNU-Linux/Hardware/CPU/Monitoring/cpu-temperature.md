@@ -36,8 +36,10 @@ edge:         +36.0°C  (crit = +94.0°C, hyst = -273.1°C)
 power1:       25.04 W  (cap = 110.00 W)
 ```
 
-:::warningRyzen 
+:::warning[Ryzen]
+
 Only newer kernels like [Linux 5.15](/docs/OS/GNU-Linux/Kernel/linux-5.15) will allow to get Zen 3 APU temperature.
+
 :::
 
 ## Gnome extensions

@@ -5,22 +5,22 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Tabs](Tabs)
-  [TabItem value="MacOs" label="MacOs"](TabItem value="MacOs" label="MacOs")
+<Tabs>
+  <TabItem value="MacOs" label="MacOs">
 
 ```bash
 brew install tmux
 ```
 
-  [/TabItem](/TabItem)
-  [TabItem value="linux" label="Ubuntu/Debian/Mint" default](TabItem value="linux" label="Ubuntu/Debian/Mint" default)
+  </TabItem>
+  <TabItem value="linux" label="Ubuntu/Debian/Mint" default>
 
 ```bash
 sudo apt-get install tmux
 ```
 
-  [/TabItem](/TabItem)
-[/Tabs](/Tabs)
+  </TabItem>
+</Tabs>
 
 
 

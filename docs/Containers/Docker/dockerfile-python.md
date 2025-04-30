@@ -10,20 +10,20 @@ By default, if we put python into a container we can get slow docker logs or not
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Tabs](Tabs)
-  [TabItem value="env" label="Using ENV" default](TabItem value="env" label="Using ENV" default)
+<Tabs>
+  <TabItem value="env" label="Using ENV" default>
 
 ```bash
 export PYTHONUNBUFFERED=1
 ```
-  [/TabItem](/TabItem)
-  [TabItem value="cli" label="Command line optin"](TabItem value="cli" label="Command line optin")
+  </TabItem>
+  <TabItem value="cli" label="Command line option">
 
 ```bash
 CMD ["python","-u","main.py"]
 ```
-  [/TabItem](/TabItem)
-[/Tabs](/Tabs)
+  </TabItem>
+</Tabs>
 
 * [https://stackoverflow.com/questions/29663459/python-app-does-not-print-anything-when-running-detached-in-docker](https://stackoverflow.com/questions/29663459/python-app-does-not-print-anything-when-running-detached-in-docker)
 * [https://stackoverflow.com/questions/107705/disable-output-buffering](https://stackoverflow.com/questions/107705/disable-output-buffering)
