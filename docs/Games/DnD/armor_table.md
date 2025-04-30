@@ -52,6 +52,7 @@ The armor is damaged in the process.
 ## Armor Sizes
 
 **Pag 219 PHB**
+
 :::note
 Adapting a suit of armor to fit a different size takes 1 day and has a cost of 10% cost of the armor for each size difference. The time cost is (1 day/size difference) for light armor and easy manteinance armor and (2 days/size difference) for the rest.
 :::
@@ -66,11 +67,3 @@ Adapting a suit of armor to fit a different size takes 1 day and has a cost of 1
 | Wing Adaptation | Aaracockra(M), Kenku(M), Avariel(M) | +20% |
 
 
-[SIZE] [SPECIES] [Extra cost]
-
-[XS] [Halfling, Gnome, Small Aasimar, Goblin] [+10%]
-[S] [Dwarf, Duergar, Derro, Small Human] [+10%]
-[M] [Elf, Medium Human, Half-elf, Medium Aasimar, Genasi, Gith, Hobgoblin] [+10%]
-[L] [Orc, Goliath, Firbolg, Bugbear] [+10%]
-[TAIL ADAPTATION] [Tabaxi (M), Tiefling (M), Dragonborn (L), Gnoll (M), Lizardfolk (L)] [+10% extra on top of size mod]
-[WING ADAPTATION] [Aaracockra (M), Kenku (M)] [+20% extra on top of size mod]
