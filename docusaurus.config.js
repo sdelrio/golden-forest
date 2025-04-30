@@ -24,6 +24,13 @@ const config = {
   projectName: 'golden-forest', // Usually your repo name.
   //deploymentBranch: 'gh-pages',	//The name of the branch to deploy the static files to. This defaults to "gh-pages"
 
+  // Even if you don't use internationalization, you can use this field to set
+  // useful metadata like html lang. For example, if your site is Chinese, you
+  // may want to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
 
   plugins: [
     // ... Your other plugins.

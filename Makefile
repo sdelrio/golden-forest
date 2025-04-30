@@ -41,8 +41,8 @@ upgrade:	## Docusaurus upgrade version
 upgrade-browserlist: ## Why you should do it regularly: https://github.com/browserslist/update-db#readme
 	@npx update-browserslist-db@latest
 
-upgrade-all:  ## Upgrade all yarn.lock dpendencies
-	@yar unpgrade
+upgrade-all:  ## Upgrade all yarn.lock dependencies
+	@yarn upgrade
 
 deploy:	## Deploy to github pages
 	@GIT_USER=$(USER) USE_SSH=true yarn deploy
