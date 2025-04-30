@@ -5,5 +5,5 @@
 
 ## Beta Keys
 
-* <https://mysolutions.tech/makemkv-beta-key/>
+* [https://mysolutions.tech/makemkv-beta-key/](https://mysolutions.tech/makemkv-beta-key/)
 

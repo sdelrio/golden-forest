@@ -20,6 +20,6 @@ tags:
 
 ## References
 
-* <https://shunsvineyard.info/2019/01/27/using-visual-studio-code-with-windows-subsystem-for-linux/>
-* <https://nickjanetakis.com/blog/a-linux-dev-environment-on-windows-with-wsl-docker-tmux-and-vscode>
+* [https://shunsvineyard.info/2019/01/27/using-visual-studio-code-with-windows-subsystem-for-linux/](https://shunsvineyard.info/2019/01/27/using-visual-studio-code-with-windows-subsystem-for-linux/)
+* [https://nickjanetakis.com/blog/a-linux-dev-environment-on-windows-with-wsl-docker-tmux-and-vscode](https://nickjanetakis.com/blog/a-linux-dev-environment-on-windows-with-wsl-docker-tmux-and-vscode)
 

@@ -12,5 +12,5 @@ A declarative GitOps continuous delivery toold for Kubernetes.
 
 ### Lovely plugin with Vault Replacer
 
-* <https://github.com/crumbhole/argocd-lovely-plugin/tree/main/examples/argocd-vault-replacer>
+* [https://github.com/crumbhole/argocd-lovely-plugin/tree/main/examples/argocd-vault-replacer](https://github.com/crumbhole/argocd-lovely-plugin/tree/main/examples/argocd-vault-replacer)
 

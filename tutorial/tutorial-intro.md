@@ -6,9 +6,9 @@ sidebar_position: 1
 
 This page is done using **Docusaurus**. There are many articles about it and a very good officiali documentaion:
 
-* <https://docusaurus.io/docs/>
-* <https://blog.logrocket.com/easy-documentation-with-docusaurus/>
-* <https://www.google.com/search?q=docusaurus+draw+svg>
+* [https://docusaurus.io/docs/](https://docusaurus.io/docs/)
+* [https://blog.logrocket.com/easy-documentation-with-docusaurus/](https://blog.logrocket.com/easy-documentation-with-docusaurus/)
+* [https://www.google.com/search?q=docusaurus+draw+svg](tutorial/tutorial-intro.md)
 
 ## Start
 

@@ -5,5 +5,5 @@
 
 Web UI + InfluxDB
 
-* <https://github.com/AnalogJ/scrutiny>
+* [https://github.com/AnalogJ/scrutiny](https://github.com/AnalogJ/scrutiny)
 

@@ -29,6 +29,6 @@ ubuntu.exe
 
 ## References
 
-* <https://docs.microsoft.com/en-us/windows/wsl/install-on-server>
-* <https://docs.microsoft.com/en-us/windows/wsl/install-manual>
+* [https://docs.microsoft.com/en-us/windows/wsl/install-on-server](https://docs.microsoft.com/en-us/windows/wsl/install-on-server)
+* [https://docs.microsoft.com/en-us/windows/wsl/install-manual](https://docs.microsoft.com/en-us/windows/wsl/install-manual)
 

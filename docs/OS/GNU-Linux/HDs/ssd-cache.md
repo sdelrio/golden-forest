@@ -63,6 +63,6 @@ losetup /dev/fake-dev0  /opt/dev0-backstore
 
 ## Reference
 
-* <https://cinhtau.net/2015/08/05/ssd-caching-with-bcache-for-linux/>
-* <https://askubuntu.com/questions/546921/how-to-create-virtual-block-devices>
+* [https://cinhtau.net/2015/08/05/ssd-caching-with-bcache-for-linux/](https://cinhtau.net/2015/08/05/ssd-caching-with-bcache-for-linux/)
+* [https://askubuntu.com/questions/546921/how-to-create-virtual-block-devices](https://askubuntu.com/questions/546921/how-to-create-virtual-block-devices)
 

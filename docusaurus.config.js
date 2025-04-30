@@ -1,29 +1,44 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+// `@type` JSDoc annotations allow editor autocompletion and type checking
+// (when paired with `@ts-check`).
+// There are various equivalent ways to declare your Docusaurus config.
+// See: https://docusaurus.io/docs/api/docusaurus-config
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import {themes as prismThemes} from 'prism-react-renderer';
 
-// KaTeX
+// KATEX: https://docusaurus.io/docs/3.0.1/markdown-features/math-equations#self-hosting-katex-assets
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
-const math = require('remark-math');
-const katex = require('rehype-katex');
+// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-// With JSDoc @type annotations, IDEs can provide config autocompletion
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
-//(module.exports = {
+/** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'The Golden Forest',
   tagline: 'Digital garden',
-  url: 'https://www.lorien.cloud',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+
+  // Set the production url of your site here
+  url: 'https://www.lorien.cloud',
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For GitHub pages deployment, it is often '/<projectName>/'
+  baseUrl: '/',
+
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
   organizationName: 'sdelrio', // Usually your GitHub org/user name.
   projectName: 'golden-forest', // Usually your repo name.
-  //deploymentBranch: 'gh-pages',	//The name of the branch to deploy the static files to. This defaults to "gh-pages"
 
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+
+  // Even if you don't use internationalization, you can use this field to set
+  // useful metadata like html lang. For example, if your site is Chinese, you
+  // may want to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
 
   plugins: [
     // ... Your other plugins.
@@ -33,34 +48,50 @@ const config = {
         id: 'tutorial-intro',
         path: 'tutorial',
         routeBasePath: 'tutorial',
-        sidebarPath: require.resolve('./sidebars.js'),
+        //sidebarPath: require.resolve('./sidebars.js'),
+        sidebarPath: './sidebars.js',
         // ... other options
+        breadcrumbs: true,
       },
     ],
   ],
 
   presets: [
     [
-      '@docusaurus/preset-classic',
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          path: 'docs',
+          sidebarPath: './sidebars.js',
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/sdelrio/golden-forest/edit/master/',
-          remarkPlugins: [math, require('mdx-mermaid')],  
-          rehypePlugins: [katex],
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+          },
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/sdelrio/golden-forest/edit/master/',
+          // Useful options to enforce blogging best practices
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'ignore'
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: './src/css/custom.css',
         },
       }),
     ],
   ],
+
   stylesheets: [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
@@ -70,10 +101,10 @@ const config = {
       crossorigin: 'anonymous',
     },
   ],
-  //themes: ['@docusaurus/theme-search-algolia'], 
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    {
+    ({
       algolia: {
         // The application ID provided by Algolia
         appId: '5VR022LUD5',
@@ -97,14 +128,10 @@ const config = {
 
         //... other Algolia params
       },
-      docs: {
-        sidebar: {
-          hideable: true
-        }
-      },
+      // Replace with your project's social card
+      image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'The Golden Forest',
-        hideOnScroll: true,
         logo: {
           alt: 'Logo',
           src: 'img/logo.svg',
@@ -125,10 +152,10 @@ const config = {
           },
           /*
           {
-            type: 'doc',
-            docId: 'tutorial-intro',
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutor',
+            label: 'Tutorial',
           },
           */
           {to: '/blog', label: 'Blog', position: 'left'},
@@ -168,16 +195,29 @@ const config = {
                 label: 'Blog',
                 to: '/blog',
               },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/facebook/docusaurus',
+              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} The Golden Forest project. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
       },
-    },
+    }),
+
+  themes: ['@docusaurus/theme-mermaid'],
+
+  // In order for Mermaid code blocks in Markdown to work,
+  // you also need to enable the Remark plugin with this option
+  markdown: {
+    mermaid: true,
+  },
+
 };
 
-module.exports = config;
+export default config;

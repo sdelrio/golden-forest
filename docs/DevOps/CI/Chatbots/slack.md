@@ -27,5 +27,5 @@ done
 
 ### References
 
-* <https://stackoverflow.com/questions/32824336/slack-clean-all-messages-8k-in-a-channel>
+* [https://stackoverflow.com/questions/32824336/slack-clean-all-messages-8k-in-a-channel](https://stackoverflow.com/questions/32824336/slack-clean-all-messages-8k-in-a-channel)
 

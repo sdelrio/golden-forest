@@ -74,7 +74,7 @@ i2c_algo_bit           16384  2 igb,amdgpu
 ```
 
 
-* <https://linuxconfig.org/amd-radeon-ubuntu-20-04-driver-installation>
+* [https://linuxconfig.org/amd-radeon-ubuntu-20-04-driver-installation](https://linuxconfig.org/amd-radeon-ubuntu-20-04-driver-installation)
 
 ## Open Source AMD Radeon Ubuntu Driver
 
@@ -136,6 +136,6 @@ $ amdgpu-pro-uninstall
 
 ### Files missing in `/lib/firmare/amdgpu`
 
-* <https://www.linux.org/threads/files-missing-in-lib-firmware-amdgpu-solved.30836/>
+* [https://www.linux.org/threads/files-missing-in-lib-firmware-amdgpu-solved.30836/](https://www.linux.org/threads/files-missing-in-lib-firmware-amdgpu-solved.30836/)
 
 ## References

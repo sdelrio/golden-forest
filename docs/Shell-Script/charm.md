@@ -1,13 +1,14 @@
 # Charm.sh
 
-* <https://charm.sh>
+* [https://charm.sh](https://charm.sh)
 
 Terminal user interfaces, styles, and layouts. Many tools, but the one that's really useful tool for bash scripting is gum:
 
 * https://github.com/charmbracelet/gum
 
-
+<>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/U8zCHA-9VLA?si=KXJHRSjlUuItMTQy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</>
 
 
 ## Option
@@ -71,7 +72,7 @@ nix-env -iA nixpkgs.gum
 * Flakes
 
 ```
-nix run "github:charmbracelet/gum" -- --help 
+nix run "github:charmbracelet/gum" -- --help
 ```
 
   </TabItem>

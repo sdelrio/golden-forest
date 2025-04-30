@@ -2,9 +2,9 @@
 
 ## Tunning
 
-* <https://arjan.wooning.cz/tips-to-spindown-your-hard-disk-in-debian-or-ubuntu/>
-* <http://www.howtoeverything.net/linux/hardware/permanently-configure-hard-drives-spin-down-after-given-idle-time>
-* <https://petermolnar.net/article/hard-drive-spindown-clicking-noise/>
+* [https://arjan.wooning.cz/tips-to-spindown-your-hard-disk-in-debian-or-ubuntu/](https://arjan.wooning.cz/tips-to-spindown-your-hard-disk-in-debian-or-ubuntu/)
+* [http://www.howtoeverything.net/linux/hardware/permanently-configure-hard-drives-spin-down-after-given-idle-time](http://www.howtoeverything.net/linux/hardware/permanently-configure-hard-drives-spin-down-after-given-idle-time)
+* [https://petermolnar.net/article/hard-drive-spindown-clicking-noise/](https://petermolnar.net/article/hard-drive-spindown-clicking-noise/)
 
 ### /etc/hdparm.conf
 
@@ -30,7 +30,7 @@ The spindown timeout was also respected, when it was put into /etc/hdparm.conf, 
 
 ### Raspberry Pi
 
-* <https://forums.raspberrypi.com/viewtopic.php?t=188462>
+* [https://forums.raspberrypi.com/viewtopic.php?t=188462](https://forums.raspberrypi.com/viewtopic.php?t=188462)
 
 ## K8s monitoring spindown
 

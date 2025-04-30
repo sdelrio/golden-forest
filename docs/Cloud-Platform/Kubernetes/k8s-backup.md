@@ -70,5 +70,5 @@ sudo kubeadm init --ignore-preflight-errors=DirAvailable--var-lib-etcd \
 
 ## References
 
-* <https://elastisys.com/backup-kubernetes-how-and-why/>
+* [https://elastisys.com/backup-kubernetes-how-and-why/](https://elastisys.com/backup-kubernetes-how-and-why/)
 

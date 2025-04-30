@@ -24,7 +24,7 @@ dns=default
 sudo systemctl restart NetworkManager
 ```
 
-* <https://askubuntu.com/questions/907246/how-to-disable-systemd-resolved-in-ubuntu>
+* [https://askubuntu.com/questions/907246/how-to-disable-systemd-resolved-in-ubuntu](https://askubuntu.com/questions/907246/how-to-disable-systemd-resolved-in-ubuntu)
 
 ### Use resolvconf
 

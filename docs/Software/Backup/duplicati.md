@@ -27,7 +27,7 @@ Backup solution for workstations. Store securily encrypted backups in the cloud.
 
 ## References
 
-* <https://b3n.org/switched-to-duplicati-for-windows-backups-and-restic-for-linux-servers/>
+* [https://b3n.org/switched-to-duplicati-for-windows-backups-and-restic-for-linux-servers/](https://b3n.org/switched-to-duplicati-for-windows-backups-and-restic-for-linux-servers/)
 * [Homepage](https://www.duplicati.com/)
 * [GitHub](https://github.com/duplicati/duplicati)
 

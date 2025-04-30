@@ -156,8 +156,8 @@ terraform-resources
 
 Code samples for the book "Terraform: Up & Running" by Yevgeniy Brikman:
 
-* <https://github.com/brikis98/terraform-up-and-running-code>
-  * <https://github.com/brikis98/terraform-up-and-running-code/tree/master/code/terraform>
+* [https://github.com/brikis98/terraform-up-and-running-code](https://github.com/brikis98/terraform-up-and-running-code)
+  * [https://github.com/brikis98/terraform-up-and-running-code/tree/master/code/terraform](https://github.com/brikis98/terraform-up-and-running-code/tree/master/code/terraform)
 
 ## Automation tools
 
@@ -346,9 +346,9 @@ provisioner "local-exec" {
 }
 ```
 
-* <https://www.linkbynet.com/en/news/produce-an-ansible-inventory-with-terraform>
-* <https://alexharv074.github.io/2019/11/23/adventures-in-the-terraform-dsl-part-x-templates.html#example-4-if-else-endif-example>
-* <https://www.splunk.com/en_us/blog/devops/writing-ansible-playbooks-for-new-terraform-servers.html>
+* [https://www.linkbynet.com/en/news/produce-an-ansible-inventory-with-terraform](https://www.linkbynet.com/en/news/produce-an-ansible-inventory-with-terraform)
+* [https://alexharv074.github.io/2019/11/23/adventures-in-the-terraform-dsl-part-x-templates.html#example-4-if-else-endif-example](https://alexharv074.github.io/2019/11/23/adventures-in-the-terraform-dsl-part-x-templates.html#example-4-if-else-endif-example)
+* [https://www.splunk.com/en_us/blog/devops/writing-ansible-playbooks-for-new-terraform-servers.html](https://www.splunk.com/en_us/blog/devops/writing-ansible-playbooks-for-new-terraform-servers.html)
 
 ## References
 

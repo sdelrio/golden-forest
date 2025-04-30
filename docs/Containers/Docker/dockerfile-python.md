@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 export PYTHONUNBUFFERED=1
 ```
   </TabItem>
-  <TabItem value="cli" label="Command line optin">
+  <TabItem value="cli" label="Command line option">
 
 ```bash
 CMD ["python","-u","main.py"]
@@ -25,8 +25,8 @@ CMD ["python","-u","main.py"]
   </TabItem>
 </Tabs>
 
-* <https://stackoverflow.com/questions/29663459/python-app-does-not-print-anything-when-running-detached-in-docker>
-* <https://stackoverflow.com/questions/107705/disable-output-buffering>
+* [https://stackoverflow.com/questions/29663459/python-app-does-not-print-anything-when-running-detached-in-docker](https://stackoverflow.com/questions/29663459/python-app-does-not-print-anything-when-running-detached-in-docker)
+* [https://stackoverflow.com/questions/107705/disable-output-buffering](https://stackoverflow.com/questions/107705/disable-output-buffering)
 
 ## Alpine base image
 
@@ -78,7 +78,7 @@ RUN echo "**** install Python ****" && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi
 ```
 
-* <https://github.com/Docker-Hub-frolvlad/docker-alpine-python3>
+* [https://github.com/Docker-Hub-frolvlad/docker-alpine-python3](https://github.com/Docker-Hub-frolvlad/docker-alpine-python3)
 
 ## Small size with wheel usage
 

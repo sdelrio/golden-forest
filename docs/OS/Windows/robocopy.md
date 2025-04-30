@@ -38,5 +38,5 @@ robocopy "D:\MY-FOLDER" "E:\BACKUP-FOLDER" /E /V /XO /NP /R:10 /W:30 /purge /MT:
 
 ## References
 
-* <https://pureinfotech.com/robocopy-transfer-files-fast-network-windows-10/>
+* [https://pureinfotech.com/robocopy-transfer-files-fast-network-windows-10/](https://pureinfotech.com/robocopy-transfer-files-fast-network-windows-10/)
 

@@ -37,5 +37,5 @@ Unattended-Upgrade::Automatic-Reboot-Time "02:38";
 
 ## References
 
-* <https://libre-software.net/ubuntu-automatic-updates/>
+* [https://libre-software.net/ubuntu-automatic-updates/](https://libre-software.net/ubuntu-automatic-updates/)
 

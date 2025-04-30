@@ -72,5 +72,5 @@ Basically try to go fiber instead of cable.
 * [Video Linux Tech Tips](https://www.youtube.com/watch?v=-LytcXun4hU)
 
 Mellanox ConnectX Cards:
-* On Ebay: <http://geni.us/k1gzC>
+* On Ebay: [http://geni.us/k1gzC](http://geni.us/k1gzC)
 

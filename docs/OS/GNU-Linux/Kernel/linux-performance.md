@@ -14,4 +14,4 @@
 echo 1 > /proc/sys/vm/drop_caches
 ```
 
-* <https://askubuntu.com/questions/259739/kswapd0-is-taking-a-lot-of-cpu>
+* [https://askubuntu.com/questions/259739/kswapd0-is-taking-a-lot-of-cpu](https://askubuntu.com/questions/259739/kswapd0-is-taking-a-lot-of-cpu)

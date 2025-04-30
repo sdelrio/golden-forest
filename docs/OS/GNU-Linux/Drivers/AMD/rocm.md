@@ -96,7 +96,7 @@ The version 4.3.0 had a problem with linux mint 20 and amd drivers so v3.7.0 was
 ## References
 
 * [Youtube: Install ROCm 3.0 and tensorflow on Ubuntu - AMD RX 580](https://www.youtube.com/watch?v=fkSRkAoMS4g)
-* <http://ml-ci.amd.com:21096/job/tensorflow-rocm-nightly/274/> :red_circle:
-* <https://askubuntu.com/questions/1223032/install-opencl-2-0-driver-for-amd-gpu-on-ubuntu-19-10-whats-my-options>
+* [http://ml-ci.amd.com:21096/job/tensorflow-rocm-nightly/274/](http://ml-ci.amd.com:21096/job/tensorflow-rocm-nightly/274/) :red_circle:
+* [https://askubuntu.com/questions/1223032/install-opencl-2-0-driver-for-amd-gpu-on-ubuntu-19-10-whats-my-options](https://askubuntu.com/questions/1223032/install-opencl-2-0-driver-for-amd-gpu-on-ubuntu-19-10-whats-my-options)
 * [ROCm official documentation](https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation-Guide.html#ubuntu)
 

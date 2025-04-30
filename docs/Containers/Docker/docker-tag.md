@@ -82,8 +82,8 @@ fi
 VERSION=$(python -c 'import forwarder; print(mymodule.__version__)')
 ```
 
-* <https://github.com/pando85/alertmanager-telegram-forwarder/blob/master/.ci/tag_version.sh>
-* <https://github.com/pando85/aiofunctools/blob/master/.ci/tag_version.sh>
+* [https://github.com/pando85/alertmanager-telegram-forwarder/blob/master/.ci/tag_version.sh](https://github.com/pando85/alertmanager-telegram-forwarder/blob/master/.ci/tag_version.sh)
+* [https://github.com/pando85/aiofunctools/blob/master/.ci/tag_version.sh](https://github.com/pando85/aiofunctools/blob/master/.ci/tag_version.sh)
 
 ## ci-version
 
@@ -100,7 +100,7 @@ docker run --rm -v /path/to/my/repository:/repo:ro softonic/ci-version --compati
 
 CLI program to determine new versions in CI projects 
 
-* <https://github.com/softonic/ci-version>
+* [https://github.com/softonic/ci-version](https://github.com/softonic/ci-version)
 
 ## References
 

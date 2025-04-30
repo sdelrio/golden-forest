@@ -50,4 +50,4 @@ H/W path                  Device      Class          Description
 ```
 ## References
 
-* <https://www.cyberciti.biz/faq/check-ram-speed-linux/>
+* [https://www.cyberciti.biz/faq/check-ram-speed-linux/](https://www.cyberciti.biz/faq/check-ram-speed-linux/)

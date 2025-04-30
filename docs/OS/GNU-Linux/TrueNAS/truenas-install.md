@@ -129,5 +129,5 @@ zpool export boot-extra
 
 ### References
 
-* <https://www.truenas.com/community/threads/howto-setup-a-pair-of-larger-ssds-for-boot-pool-and-data.81409/>
+* [https://www.truenas.com/community/threads/howto-setup-a-pair-of-larger-ssds-for-boot-pool-and-data.81409/](https://www.truenas.com/community/threads/howto-setup-a-pair-of-larger-ssds-for-boot-pool-and-data.81409/)
 

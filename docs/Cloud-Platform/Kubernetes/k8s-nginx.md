@@ -6,7 +6,7 @@ Requires:
 
 * A domain name for the ingress rule: `https://www.mydomain.com`
 * Autorization callback url, domain + `/oauth2/callback`: `https://www.mydomain.com/oauth/callback`
-* Register new application in the OAUTH provider, sample github: <https://github.com/settings/applications/new>
+* Register new application in the OAUTH provider, sample github: [https://github.com/settings/applications/new](https://github.com/settings/applications/new)
 * Aplication for the authorization callback:
 ```yaml
 apiVersion: apps/v1
@@ -37,10 +37,10 @@ spec:
         env:
         # Example: your github client id, like the login
         - name: OAUTH2_PROXY_CLIENT_ID
-          value: <Client ID>
+          value: [Client ID](Client ID)
         # Example: your github client secret
         - name: OAUTH2_PROXY_CLIENT_SECRET
-          value: <Client Secret>
+          value: [Client Secret](Client Secret)
         # docker run -ti --rm python:3-alpine python -c \
         #  'import secrets,base64; print(base64.b64encode(base64.b64encode(secrets.token_bytes(16))));'
         - name: OAUTH2_PROXY_COOKIE_SECRET
@@ -98,6 +98,6 @@ metadata:
     nginx.ingress.kubernetes.io/session-cookie-max-age: "172800"
 ```
 
-* <https://zhimin-wen.medium.com/sticky-sessions-in-kubernetes-56eb0e8f257d>
-* <https://kubernetes.github.io/ingress-nginx/examples/affinity/cookie/ingress.yaml>
+* [https://zhimin-wen.medium.com/sticky-sessions-in-kubernetes-56eb0e8f257d](https://zhimin-wen.medium.com/sticky-sessions-in-kubernetes-56eb0e8f257d)
+* [https://kubernetes.github.io/ingress-nginx/examples/affinity/cookie/ingress.yaml](https://kubernetes.github.io/ingress-nginx/examples/affinity/cookie/ingress.yaml)
 

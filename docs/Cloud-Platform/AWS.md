@@ -8,5 +8,5 @@ They charge 1$ monthly whatever you use they keys or not.
 
 ## Networking
 
-* <https://thenewstack.io/best-practices-for-network-policies-on-the-amazon-elastic-kubernetes-service/>
+* [https://thenewstack.io/best-practices-for-network-policies-on-the-amazon-elastic-kubernetes-service/](https://thenewstack.io/best-practices-for-network-policies-on-the-amazon-elastic-kubernetes-service/)
 

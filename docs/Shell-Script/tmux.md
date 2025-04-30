@@ -28,8 +28,8 @@ sudo apt-get install tmux
 
 ### Boost terminal productivity
 
-* <https://nickjanetakis.com/blog/who-else-wants-to-boost-their-productivity-with-tmux>
+* [https://nickjanetakis.com/blog/who-else-wants-to-boost-their-productivity-with-tmux](https://nickjanetakis.com/blog/who-else-wants-to-boost-their-productivity-with-tmux)
 
 ### Tmux + Vim
 
-* <https://www.bugsnag.com/blog/tmux-and-vim>
+* [https://www.bugsnag.com/blog/tmux-and-vim](https://www.bugsnag.com/blog/tmux-and-vim)

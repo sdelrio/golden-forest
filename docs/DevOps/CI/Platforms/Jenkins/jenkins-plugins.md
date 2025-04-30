@@ -11,5 +11,5 @@ Autofill tasks, credentials and config from github repo.
 
 Load Pipeline script objects from remote locations (e.g. Git) 
 
-* <https://github.com/jenkinsci/workflow-remote-loader-plugin>
+* [https://github.com/jenkinsci/workflow-remote-loader-plugin](https://github.com/jenkinsci/workflow-remote-loader-plugin)
 

@@ -99,5 +99,5 @@ Free
 
 ## References
 
-* <https://fstoppers.com/originals/list-free-or-one-time-payment-alternatives-adobe-subscription-programs-501629>
+* [https://fstoppers.com/originals/list-free-or-one-time-payment-alternatives-adobe-subscription-programs-501629](https://fstoppers.com/originals/list-free-or-one-time-payment-alternatives-adobe-subscription-programs-501629)
 
