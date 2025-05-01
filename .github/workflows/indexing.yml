@@ -1,0 +1,50 @@
+name: Algolia Indexing
+
+# This workflow runs nightly to update the Algolia index for your Docusaurus site.
+
+on:
+  schedule:
+    # Runs at 00:00 AM UTC on the 1st of every month
+    # (see https://crontab.guru/ for help with cron schedules)
+    - cron: '0 0 1 * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  # Runs the workflow on pushes to the gh-pages branch
+  # push:
+  #   branches:
+  #     - gh-pages
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    env:
+      CFG_FILE: .algoliaenv
+
+    steps:
+      - name: Checkout code HEad
+        uses: actions/checkout@v4
+        with:
+          # Fetch history is not needed
+          fetch-depth: 1
+
+      - name: Setup jq
+        uses: dcarbone/install-jq-action@v3
+        with:
+          version: '1.7.1'
+          force: false
+
+      - name: Create file
+        run: |
+          echo "APPLICATION_ID=${{ secrets.ALGOLIA_APPLICATION_ID }}" > ${{ env.CFG_FILE }}
+          echo "API_KEY=${{ secrets.ALGOLIA_API_KEY }}" >> ${{ env.CFG_FILE }}
+
+      - name: DocSearch
+        run: |
+          docker run -it --env-file=${{ env.CFG_FILE }} \
+            -e "CONFIG=$(cat $(pwd)/.docsearch.json | jq -r tostring)" \
+            algolia/docsearch-scrapper -v;
+
+
