@@ -397,7 +397,7 @@ At minimum this requires a set of alchemist’s supplies, but many experienced c
 Additionally, when a creature attempting to brew a potion fails an Intelligence ability check by 10 or more, the potion explodes catastrophically, destroying any tools or equipment that were being used to create it.
 :::
 
-Finally, a creature crafting a potion must acquire specific and potent ingredients. These components are used in various stages of the brewing process, forming the potion’s base and bonding agent, the details of which follow. Note that these do not encompass all the ingredients required to create a potion, merely the most significant ones.
+Finally, an alchemist crafting a potion must acquire specific and potent ingredients. These components are used in various stages of the brewing process, forming the potion’s base and bonding agent, the details of which follow. Note that these do not encompass all the ingredients required to create a potion, merely the most significant ones.
 'The difficulty DC and time required to brew a potion according to its rarity are detailed in the Alchemy Crafting table.'
 
 
