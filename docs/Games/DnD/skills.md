@@ -350,12 +350,12 @@ You must have the spell prepared in each day of the inscription, and you must al
 | 1st | 1 workday | 25 GP | 11 |
 | 2nd | 3 workdays | 100 GP | 12 | 
 | 3rd | 5 workdays | 150 GP | 13 |
-| 4th | 10 workdays | 1.000 GP | 14 |
-| 5th | 25 workdays | 1.500 GP | 15 | 
-| 6th | 40 workdays | 10.000 GP | 16 | 
-| 7th | 50 workdays | 12.500 GP | 17 | 
-| 8th | 60 workdays | 15.000 GP | 18 | 
-| 9th | 120 workdays | 50.000 GP | 19 | 
+| 4th | 10 workdays | 500 GP | 14 |
+| 5th | 25 workdays | 1.000 GP | 15 | 
+| 6th | 40 workdays | 2.000 GP | 16 | 
+| 7th | 50 workdays | 3.500 GP | 17 | 
+| 8th | 60 workdays | 5.000 GP | 18 | 
+| 9th | 120 workdays | 25.000 GP | 19 | 
 
 
 ### Alchemist's Supplies (Intelligence)
