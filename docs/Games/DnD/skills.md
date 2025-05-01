@@ -37,4 +37,9 @@ Any exhaustion levels from attunement are removed by a single cast of Greater Re
 
 :::note Crafting Time
 Crafting non-magical items takes a number of workdays (8h/day) equal to: `The purchase price of the item / 10`
+Another character can combine its efforts halving the crafting time and but It must be proficient with the required tools.
+:::note
+
+:::note Raw Materials
+To make an item, you need raw materials worth half the purchase cost of the item (rounded down). The DM determines wheter the appropiate raw materials are available.
 :::note
