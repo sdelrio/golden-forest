@@ -342,7 +342,7 @@ To make an item, you need three items: An Alchemical Base, an Suitable Reagent a
 
 
 
-| Rarity | Ability Check DC | Brewing Time(1) | Reagent rarity by CR | Potion Spell Level |
+| Rarity | Ability Check DC | Brewing Time [^1] | Reagent rarity by CR | Potion Spell Level |
 |:-----------:|:--------------:|:--------------:|:--------------:|:--------------:|
 | Common | 12 | 0.5 | < CR 1 | Cantrip |
 | Uncommon | 14 | 1 | CR 1-3 | 1st-2nd |
@@ -352,7 +352,7 @@ To make an item, you need three items: An Alchemical Base, an Suitable Reagent a
 | Epic | 30 | 90 | CR 23+ | 9th-Epic 1st |
 | Mythic | 35 | 180 | Mythic | Epic 2nd-Epic 3rd |
 
-(1) Elixirs require double this time
+[^1]: Elixirs require double this time
 
 ## Other Tools
 
