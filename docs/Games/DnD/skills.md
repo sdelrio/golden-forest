@@ -320,16 +320,6 @@ To make an item, you need raw materials worth half the purchase cost of the item
 
 ### Calligrapher's Supplies (Dexterity)
 
-:::note Poisons Crafting Time
-Crafting poisons takes a number of workdays (8h/day) equal to: `The purchase price of the item / 100`
-Another character can combine its efforts halving the crafting time and but It must be proficient with the required tools.
-:::
-
-:::note Raw Materials
-To make an item, you need raw materials worth half the purchase cost of the item (rounded down). The DM determines wheter the appropiate raw materials are available. 
-:::
-
-
 **Utilize:** Write a text with impressive flourishes that guard against forgery (DC 15)
 
 **Craft:** 
@@ -339,7 +329,7 @@ To make an item, you need raw materials worth half the purchase cost of the item
 
 #### Crafting Spell Scrolls
 
-A spellcaster can transfer a spell to a scroll and create a *Spell Scroll*. `The scroll's spell uses the unmodified Spell Save DC or Spell Attack Bonus of the scroll creator. If the inscribed scroll is a cantrip, the cantrip is cast as if the caster were the spell's creator level.´ 
+A spellcaster can transfer a spell to a scroll and create a *Spell Scroll*. `The scroll's spell uses the unmodified Spell Save DC or Spell Attack Bonus of the scroll creator. If the inscribed scroll is a cantrip, the cantrip is cast as if the caster were the spell's creator level.` 
 
 :::note Create Spell Scroll DC
 The DC for inscribing a scroll is 10 + spell level
@@ -350,7 +340,7 @@ The DC for inscribing a scroll is 10 + spell level
 + To scribe an arcane spell scroll, you must have proficiency in the Arcana skill. If you also have proficiency in Calligrapher's supplies the check is automatically successful.
 + To scribe a divine spell scroll, you must have proficicency in the Religion skill. If you also have proficiency in Calligrapher's supplies the check is automatically successful.
 
-You must have the spell prepared in each day of the inscription, and you must also have at hand any Material Component required by the spell; if the spell consumes its Material Components, they are consumed only when you complete the scroll.
+You must have the spell prepared in each day of the inscription, and you must also have at hand any Material Component required by the spell; `if the spell consumes its Material Components, they are consumed only when you complete the scroll.`
 
 **SPELL SCROLL COSTS**
 
@@ -398,7 +388,7 @@ Brewing this kind of potions is a process full of danger and ingenuity. The act 
 
 Magic is not a cooperative energy and doesn’t appreciate being forced into a tiny bottle for consumption. Despite the best efforts of countless crafters, the process of brewing potions has never been successfully automated, with any attempt leading to catastrophic results. Brewers must slave over their work, watching for a sign of things about to go terribly wrong. The difficulty and time required to complete this process is determined by the potion’s rarity.
 
-`A series of successful Intelligence ability checks (typically three) is required to complete this process, along with an extended waiting period while the potion brews.´  
+`A series of successful Intelligence ability checks (typically three) is required to complete this process, along with an extended waiting period while the potion brews.`  
 
 The nature of the ability checks represents the 3 steps necessary to complete the process: The creation of the Potion’s base, the addition of the bonding agent and the infusion of magic into the potion.
 At minimum this requires a set of alchemist’s supplies, but many experienced crafters use something far more elaborate and safer laboratories, with specialized equipment to make this checks easier.
@@ -413,7 +403,7 @@ Finally, a creature crafting a potion must acquire specific and potent ingredien
 
 **ALCHEMICAL CRAFTING TABLE**
 
-| Rarity | Ability Check DC | Brewing Time [^1] | Reagent rarity by CR | Potion Spell Level |
+| Rarity | Ability Check DC | Brewing Time (1) | Reagent rarity by CR | Potion Spell Level |
 |:-----------:|:--------------:|:--------------:|:--------------:|:--------------:|
 | Common | 12 | 0.5 | < CR 1 | Cantrip |
 | Uncommon | 14 | 1 | CR 1-3 | 1st-2nd |
@@ -423,7 +413,7 @@ Finally, a creature crafting a potion must acquire specific and potent ingredien
 | Epic | 30 | 90 | CR 23+ | 9th-Epic 1st |
 | Mythic | 35 | 180 | Mythic | Epic 2nd-Epic 3rd |
 
-[^1]: Elixirs require double this time
+(1) Elixirs require double this time
 
 At the end of each of these steps, the 
 
@@ -433,7 +423,7 @@ Making a potion with ordinary water is a literal recipe for disaster.
 Mystical fluids with strange properties are far more effective. Rarer potions require bases that are incredibly dangerous, expensive, or both.
 The blood of a troll, a compound synthesized through transmutation magic, or the rain from a magic-soaked world are all examples of appropriate bases for brewing potions.
 When crafting potions, the first Intelligence ability check performed should be themed around preparing or synthesizing this alchemical base.
-`At the end of this process roll and Alchemist's supplies or Brewer's supplies tool check´
+`At the end of this process roll and Alchemist's supplies or Brewer's supplies tool check`
 
 ##### STEP 2 - BONDING REAGENT (Alchemist's Supplies)
 
@@ -459,7 +449,7 @@ Additionally, the rarity of the potion determines of strength of the creature fr
 ##### STEP 3 - MAGIC INFUSION
 
 The last step of alchemy is infusing magic to the base + reagent. The alchemist must cast a spell of the same level as the potion spell level and it must be from the school of magic the reagent has affinity for.
-`At the end of this process roll and Alchemist's supplies tool check or Arcana skill check´
+`At the end of this process roll and Alchemist's supplies tool check or Arcana skill check`
 
 
 
