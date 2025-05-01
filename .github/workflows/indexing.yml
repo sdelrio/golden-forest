@@ -45,6 +45,7 @@ jobs:
         env:
           TAG: v1.16.0
         run: |
+          docker logout ghcr.io
           docker pull algolia/docsearch-scrapper:${{ env.TAG }}
           docker run --rm -i --env-file=${{ env.CFG_FILE }} \
             -e "CONFIG=$(cat $(pwd)/.docsearch.json | jq -r tostring)" \
