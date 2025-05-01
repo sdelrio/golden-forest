@@ -8,6 +8,7 @@ The following skils fall into this category, and cannot be rolled without profic
 - **Arcana, History, Medicine, Nature, Performance, Religion, Play Instrument and almost all tools**.  
 - **Thieves' Tools** can be used with **Sleight of Hand** without adding the proficiency bonus.
 
+
 ## Attunement
 
 You can attune to an item during a short or long rest.  
@@ -28,3 +29,15 @@ Any exhaustion levels from attunement are removed by a single cast of Greater Re
 | Very Rare | 4 | 15 |
 | Legendary | 4 | 18 |
 | Artifact | 5 | 20 |
+
+
+## Crafting
+
+***PHB 233***
+
+:::note Crafting Time
+Crafting non-magical items takes a number of workdays (8h/day) equal to: 
+$$
+(\text{Purchase price of the item}/10)
+$$
+:::note
