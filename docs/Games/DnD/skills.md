@@ -444,7 +444,7 @@ Additionally, the rarity of the potion determines of strength of the creature fr
 | Necromancy | Undead, Fiend, Ooze |
 | Transmutation | Ooze, Aberration, Monstrosity |
 
-`At the end of this process roll and Alchemist's supplies tool check´
+`At the end of this process roll and Alchemist's supplies tool check`
 
 ##### STEP 3 - MAGIC INFUSION
 
