@@ -46,5 +46,29 @@ To make an item, you need raw materials worth half the purchase cost of the item
 :::
 
 
-### Brewer's Supplies
+### Brewer's Supplies (Intelligence)
+
+**Utilize:** Detect poisoned drink (DC 15), or identify alcohol (DC 10)
+
+**Craft:** 
++ Antitoxin (25 gp materials). 1 workday
++ Beer (1 gp materials per gallon). 1 workday
+
+
+### Carpenter's Tools (Strength)
+
+**Utilize:** Seal or pry open a door or container (DC 20)
+
+**Craft:** 
++ Club (0 gp materials). 1 workday. Automatic Success
++ Greatclub (1 sp materials). 1 workday. DC 10
++ Quarterstaff (1 sp materials). 1 workday. DC 10
++ Barrel (1 gp materials). 1 workday. DC 15
++ Chest (25 sp materials). 1 workday. DC 15
++ Ladder (1 sp materials). 1 workday. DC 15
++ Pole (0 gp materials). 1 workday. Automatic success
++ Portable Ram (2 gp materials). 1 workday. DC 10
++ Torch (1 sp materials). 1 workday per 10 torches. Automatic Success
+
+
 
