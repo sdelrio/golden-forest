@@ -36,8 +36,5 @@ Any exhaustion levels from attunement are removed by a single cast of Greater Re
 ***PHB 233***
 
 :::note Crafting Time
-Crafting non-magical items takes a number of workdays (8h/day) equal to: 
-$$
-(\text{Purchase price of the item}/10)
-$$
+Crafting non-magical items takes a number of workdays (8h/day) equal to: `The purchase price of the item / 10`
 :::note
