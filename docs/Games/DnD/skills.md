@@ -258,6 +258,102 @@ Failing the crafting roll that extra time and resources are needed. Determine th
 + Shield (5 gp materials). 1 workday. DC 15
 
 
+## The Advanced Tools
+
+The tools in this chapter allow to craft magical items, such as potions, poisons and spell scrolls.
+
+
+### Herbalism Kit (Intelligence)
+
+:::note Potions Crafting Time
+Crafting potions takes a number of workdays (8h/day) equal to: `The purchase price of the item / 50`
+Another character can combine its efforts halving the crafting time and but It must be proficient with the required tools.
+:::
+
+:::note Raw Materials
+To make an item, you need raw materials worth half the purchase cost of the item (rounded down). The DM determines wheter the appropiate raw materials are available. 
+:::
+
+
+**Utilize:** Identify a plant (DC 10)
+
+**Craft:** 
++ Antitoxin. (25gp materials). 1 workday. DC 10. Automatic success if proficient in Nature.
++ Candle. (0 sp). 1 workday per 10 candles. Automatic Success
++ Healer's Kit. (25 sp). 1 workday. DC 10 
++ Potion of Healing. (25 gp materials). 1 workday. DC 10. Automatic Success if proficient in Nature.
++ Potion of Greater Healing (75 gp materials). 3 workdays. DC 15. DC 10 if proficient in Nature.
++ Potion of Superior Healing (375 gp materials). 15 workdays. DC 20. DC 15 if proficinet in Nature.
++ Potion of Supreme Healing. (750 gp materials). 30 workdays. DC 25. DC 20 if proficient in Nature.
++ Keogthom Ointment. (80 gp materials). 3 workdays. DC 15. DC 10 if proficient in Nature.
++ Herbal Healing Poultice (50 gp materials). 2 workdays. DC 12. DC 10 if proficint in Nature.
++ Herbal Tonic (25 gp materials). 1 workday. Automatic Success
++ Other (Varies)
+
+
+### Poisoner's Kit (Intelligence)
+
+:::note Poisons Crafting Time
+Crafting poisons takes a number of workdays (8h/day) equal to: `The purchase price of the item / 100`
+Another character can combine its efforts halving the crafting time and but It must be proficient with the required tools.
+:::
+
+:::note Raw Materials
+To make an item, you need raw materials worth half the purchase cost of the item (rounded down). The DM determines wheter the appropiate raw materials are available. 
+:::
+
+
+**Utilize:** Detect a poisoned object (DC 10)
+
+**Craft:** 
++ Antitoxin. (25gp materials). 1 workday. DC 10. Automatic success if proficient in Nature.
++ Basic Poison. (50 gp materials). 1 workday. DC 10. Automatic success if proficient in Nature.
++ Drow Poison. (100 gp materials). 2 workdays. DC 15.
++ Belladona. (225 gp materials). 5 workdays. DC 15. DC 10 if proficient in Nature.
++ Bloodstinger Poison. (50 gp materials). 1 workday. DC 10. Automatic Success if proficinet in Nature.
++ Purple Worm Poison. (1.000 gp materials). 20 workdays. DC 20. DC 15 if proficient in Nature.
++ Wyvern Poison. (680 gp materials). 12 workdays. DC 18. DC 12 if proficient in Nature.
++ Othur Mold Spores. (225 gp materials). 5 workdays. DC 15. DC 10 if proficient in Nature.
++ Serpent Venom. (35 gp materials). 1 workday. DC 10. Automatic success if proficient in Nature.
++ Pale Tincture. (325 gp materials). 7 workdays. DC 15.
+
+
+### Alchemist's Supplies (Intelligence)
+
+:::note Alchemical Potions Crafting Time
+Crafting time depends on the potion raritiy. See the Alchemy Crafting Table Below. Time is in workdays of 8 hours.
+Another character can combine its efforts halving the crafting time and but It must be proficient with the required tools.
+:::
+
+:::note Raw Materials
+To make an item, you need three items: An Alchemical Base, an Suitable Reagent an Appropiated Spell
+:::
+
+
+**Utilize:** Identify a substance (DC 15), or start a fire (DC 15)
+
+**Basic Alchemical Crafting:** 
++ Acid. (125 sp materials). 1 workday. DC 10.
++ Alchemist's Fire. (25 gp materials). 1 workday. DC 12. 
++ Component's Pouch. (125 sp materials). 1 workday. DC 10.
++ Oil. (1 sp materials). 1 workday. Automatic Success.
++ Paper. (1 sp materials). 1 workday/10 sheets. Automatic Success.
++ Perfume. (25 sp materials). 1 workdays. DC 10.
+
+
+
+| Rarity | Ability Check DC | Brewing Time(1) | Reagent rarity by CR | Potion Spell Level |
+|:-----------:|:--------------:|:--------------:|:--------------:|:--------------:|
+| Common | 12 | 0.5 | < CR 1 | Cantrip |
+| Uncommon | 14 | 1 | CR 1-3 | 1st-2nd |
+| Rare | 17 | 7 | CR 4-9 | 3rd-4th |
+| Very Rare | 20 | 14 | CR 10-16 | 5th-6th |
+| Legendary | 25 | 30 | CR 17-22 | 7th-8th |
+| Epic | 30 | 90 | CR 23+ | 9th-Epic 1st |
+| Mythic | 35 | 180 | Mythic | Epic 2nd-Epic 3rd |
+
+(1) Elixirs require double this time
+
 ## Other Tools
 
 ### Disguise Kit (Charisma)
