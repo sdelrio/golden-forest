@@ -326,7 +326,7 @@ Another character can combine its efforts halving the crafting time and but It m
 :::
 
 :::note Raw Materials
-To make an item, you need three items: An Alchemical Base, an Suitable Reagent an Appropiated Spell
+To make an item, you need three things: An Alchemical Base, a Suitable Reagent and an Appropiated Spell
 :::
 
 
@@ -341,6 +341,27 @@ To make an item, you need three items: An Alchemical Base, an Suitable Reagent a
 + Perfume. (25 sp materials). 1 workdays. DC 10.
 
 
+#### Alchemical Potions
+
+Alchemical potions contain spells, mimic the effects of spells or have an effect out of the scope of normal spells, such as a Potion of Giant Strength. 
+Brewing this kind of potions is a process full of danger and ingenuity. The act of creating these magic items is called alchemy, and those who hone this craft are often alchemist artificers, wizards, or similarly intelligent specialists with an affinity for chemistry.  
+
+Magic is not a cooperative energy and doesn’t appreciate being forced into a tiny bottle for consumption. Despite the best efforts of countless crafters, the process of brewing potions has never been successfully automated, with any attempt leading to catastrophic results. Brewers must slave over their work, watching for a sign of things about to go terribly wrong. The difficulty and time required to complete this process is determined by the potion’s rarity.
+
+'A series of successful Intelligence ability checks (typically three) is required to complete this process, along with an extended waiting period while the potion brews.'  
+
+The nature of the ability checks represents the 3 steps necessary to complete the process: The creation of the Potion’s base, the addition of the bonding agent and the infusion of magic into the potion.
+At minimum this requires a set of alchemist’s supplies, but many experienced crafters use something far more elaborate and safer laboratories, with specialized equipment to make this checks easier.
+
+:::warning
+Additionally, when a creature attempting to brew a potion fails an Intelligence ability check by 10 or more, the potion explodes catastrophically, destroying any tools or equipment that were being used to create it.
+:::
+
+Finally, a creature crafting a potion must acquire specific and potent ingredients. These components are used in various stages of the brewing process, forming the potion’s base and bonding agent, the details of which follow. Note that these do not encompass all the ingredients required to create a potion, merely the most significant ones.
+'The difficulty DC and time required to brew a potion according to its rarity are detailed in the Alchemy Crafting table.'
+
+
+**ALCHEMICAL CRAFTING TABLE**
 
 | Rarity | Ability Check DC | Brewing Time [^1] | Reagent rarity by CR | Potion Spell Level |
 |:-----------:|:--------------:|:--------------:|:--------------:|:--------------:|
@@ -353,6 +374,13 @@ To make an item, you need three items: An Alchemical Base, an Suitable Reagent a
 | Mythic | 35 | 180 | Mythic | Epic 2nd-Epic 3rd |
 
 [^1]: Elixirs require double this time
+
+
+##### ALCHEMICAL BASE
+
+
+
+
 
 ## Other Tools
 
