@@ -57,7 +57,9 @@ build: ## Build page
 
 algolia:  ## Generate algolia index
 	@if [ -f $$HOME/.algoliaenv ]; then \
-		docker run -it --env-file=$$HOME/.algoliaenv -e "CONFIG=$$(cat $$(pwd)/.docsearch.json| jq -r tostring)" algolia/docsearch-scraper -v;\
+		docker run --rm -it --env-file=$$HOME/.algoliaenv \
+		  -e "CONFIG=$$(cat $$(pwd)/.docsearch.json| jq -r tostring)" \
+		  algolia/docsearch-scraper -v;\
 	else \
 		echo "[Error] Missing ~/.algoliaenv";\
 		echo "[Info] File format:";\

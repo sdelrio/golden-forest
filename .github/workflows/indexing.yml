@@ -46,7 +46,7 @@ jobs:
           TAG: v1.16.0
         run: |
           docker pull algolia/docsearch-scrapper:${{ env.TAG }}
-          docker run -i --env-file=${{ env.CFG_FILE }} \
+          docker run --rm -i --env-file=${{ env.CFG_FILE }} \
             -e "CONFIG=$(cat $(pwd)/.docsearch.json | jq -r tostring)" \
-          algolia/docsearch-scrapper:${{ env.TAG }} -v;
+          algolia/docsearch-scrapper:${{ env.TAG }} -v
 
