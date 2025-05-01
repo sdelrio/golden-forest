@@ -318,6 +318,56 @@ To make an item, you need raw materials worth half the purchase cost of the item
 + Pale Tincture. (325 gp materials). 7 workdays. DC 15.
 
 
+### Calligrapher's Supplies (Dexterity)
+
+:::note Poisons Crafting Time
+Crafting poisons takes a number of workdays (8h/day) equal to: `The purchase price of the item / 100`
+Another character can combine its efforts halving the crafting time and but It must be proficient with the required tools.
+:::
+
+:::note Raw Materials
+To make an item, you need raw materials worth half the purchase cost of the item (rounded down). The DM determines wheter the appropiate raw materials are available. 
+:::
+
+
+**Utilize:** Write a text with impressive flourishes that guard against forgery (DC 15)
+
+**Craft:** 
++ Ink. (5gp materials). 1 workday. Automatic Success.
++ Magic Inks. (Varies). 1 workday. DC 10. Automatic success if proficient in Arcana or Religion. You can create magic inks with regular ink plus gems and silver in dust form.
++ Spell Scroll. (see table below for base cost and time spent). 
+
+#### Crafting Spell Scrolls
+
+A spellcaster can transfer a spell to a scroll and create a *Spell Scroll*. `The scroll's spell uses the unmodified Spell Save DC or Spell Attack Bonus of the scroll creator. If the inscribed scroll is a cantrip, the cantrip is cast as if the caster were the spell's creator level.´ 
+
+:::note Create Spell Scroll DC
+The DC for inscribing a scroll is 10 + spell level
+:::
+
+
+**PREREQUISITES FOR THE SCRIBE**
++ To scribe an arcane spell scroll, you must have proficiency in the Arcana skill. If you also have proficiency in Calligrapher's supplies the check is automatically successful.
++ To scribe a divine spell scroll, you must have proficicency in the Religion skill. If you also have proficiency in Calligrapher's supplies the check is automatically successful.
+
+You must have the spell prepared in each day of the inscription, and you must also have at hand any Material Component required by the spell; if the spell consumes its Material Components, they are consumed only when you complete the scroll.
+
+**SPELL SCROLL COSTS**
+
+| Spell Level | Time | Cost | Creation DC |
+|:-----------:|:--------------:|:--------------:|:--------------:|
+| Cantrip | 1 workday | 15 GP | 10 |
+| 1st | 1 workday | 25 GP | 11 |
+| 2nd | 3 workdays | 100 GP | 12 | 
+| 3rd | 5 workdays | 150 GP | 13 |
+| 4th | 10 workdays | 1.000 GP | 14 |
+| 5th | 25 workdays | 1.500 GP | 15 | 
+| 6th | 40 workdays | 10.000 GP | 16 | 
+| 7th | 50 workdays | 12.500 GP | 17 | 
+| 8th | 60 workdays | 15.000 GP | 18 | 
+| 9th | 120 workdays | 50.000 GP | 19 | 
+
+
 ### Alchemist's Supplies (Intelligence)
 
 :::note Alchemical Potions Crafting Time
@@ -348,7 +398,7 @@ Brewing this kind of potions is a process full of danger and ingenuity. The act 
 
 Magic is not a cooperative energy and doesn’t appreciate being forced into a tiny bottle for consumption. Despite the best efforts of countless crafters, the process of brewing potions has never been successfully automated, with any attempt leading to catastrophic results. Brewers must slave over their work, watching for a sign of things about to go terribly wrong. The difficulty and time required to complete this process is determined by the potion’s rarity.
 
-'A series of successful Intelligence ability checks (typically three) is required to complete this process, along with an extended waiting period while the potion brews.'  
+`A series of successful Intelligence ability checks (typically three) is required to complete this process, along with an extended waiting period while the potion brews.´  
 
 The nature of the ability checks represents the 3 steps necessary to complete the process: The creation of the Potion’s base, the addition of the bonding agent and the infusion of magic into the potion.
 At minimum this requires a set of alchemist’s supplies, but many experienced crafters use something far more elaborate and safer laboratories, with specialized equipment to make this checks easier.
@@ -375,10 +425,41 @@ Finally, a creature crafting a potion must acquire specific and potent ingredien
 
 [^1]: Elixirs require double this time
 
+At the end of each of these steps, the 
 
-##### ALCHEMICAL BASE
+##### STEP 1 - ALCHEMICAL BASE (Alchemist's Supplies or Brewer Supplies)
 
+Making a potion with ordinary water is a literal recipe for disaster.
+Mystical fluids with strange properties are far more effective. Rarer potions require bases that are incredibly dangerous, expensive, or both.
+The blood of a troll, a compound synthesized through transmutation magic, or the rain from a magic-soaked world are all examples of appropriate bases for brewing potions.
+When crafting potions, the first Intelligence ability check performed should be themed around preparing or synthesizing this alchemical base.
+`At the end of this process roll and Alchemist's supplies or Brewer's supplies tool check´
 
+##### STEP 2 - BONDING REAGENT (Alchemist's Supplies)
+
+Binding magic to an alchemical base requires a potent agent through which the magic will flow.
+These bonding agents are often harvested from magical creatures and are consumed in the process of brewing the potion. The school of magic that best fits the potion’s magical effect determines what kind of creature a bonding agent must be harvested from, as detailed in the Bonding Agent Harvesting table.
+Additionally, the rarity of the potion determines of strength of the creature from which the bonding agent must be harvested.
+
+**BONDING AGENT HARVESTING**
+
+| Magical Effect Affinity | Creature Type|
+|:-----------:|:--------------:|
+| Abjuration | Construct, Plant, Celestial |
+| Conjuration | Elemental, Fiend, Celestial |
+| Divination | Celestial, Beast, Plant |
+| Enchantment | Fiend, Fey, Aberration |
+| Evocation | Dragon, Elemental, Ooze |
+| Illusion | Fey, Elemental, Aberration |
+| Necromancy | Undead, Fiend, Ooze |
+| Transmutation | Ooze, Aberration, Monstrosity |
+
+`At the end of this process roll and Alchemist's supplies tool check´
+
+##### STEP 3 - MAGIC INFUSION
+
+The last step of alchemy is infusing magic to the base + reagent. The alchemist must cast a spell of the same level as the potion spell level and it must be from the school of magic the reagent has affinity for.
+`At the end of this process roll and Alchemist's supplies tool check or Arcana skill check´
 
 
 
