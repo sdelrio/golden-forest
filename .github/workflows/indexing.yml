@@ -43,7 +43,7 @@ jobs:
 
       - name: DocSearch
         run: |
-          docker run -it --env-file=${{ env.CFG_FILE }} \
+          docker run -i --env-file=${{ env.CFG_FILE }} \
             -e "CONFIG=$(cat $(pwd)/.docsearch.json | jq -r tostring)" \
             algolia/docsearch-scrapper -v;
 
