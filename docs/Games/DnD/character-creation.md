@@ -1,9 +1,10 @@
 # Character Creation
 
 1. Choice Class
-2. Choose Species
-3. Choose Background
-4. Stats Rolling or standard set with point distribution (`15-14-13-12-10-8`).
+2. Choose Origin (Backgrounds)
+3. Choose Species
+4. Choose Languages. A character knows at least 3 languages: Common, Its racial language, plus another standard language. It then adds its extra languages from Origin.
+5. Stats Rolling or standard set with point distribution (`15-14-13-12-10-8`).
 
 ## Stat Rolling
 
