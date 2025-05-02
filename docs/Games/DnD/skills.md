@@ -430,6 +430,7 @@ When crafting potions, the first Intelligence ability check performed should be 
 Binding magic to an alchemical base requires a potent agent through which the magic will flow.
 These bonding agents are often harvested from magical creatures and are consumed in the process of brewing the potion. The school of magic that best fits the potion’s magical effect determines what kind of creature a bonding agent must be harvested from, as detailed in the Bonding Agent Harvesting table.
 Additionally, the rarity of the potion determines of strength of the creature from which the bonding agent must be harvested.
+`At the end of this process roll and Alchemist's supplies tool check`
 
 **BONDING AGENT HARVESTING**
 
@@ -444,7 +445,6 @@ Additionally, the rarity of the potion determines of strength of the creature fr
 | Necromancy | Undead, Fiend, Ooze |
 | Transmutation | Ooze, Aberration, Monstrosity |
 
-`At the end of this process roll and Alchemist's supplies tool check`
 
 ##### STEP 3 - MAGIC INFUSION
 
