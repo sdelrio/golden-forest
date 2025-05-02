@@ -436,13 +436,13 @@ Additionally, the rarity of the potion determines of strength of the creature fr
 
 | Magical Effect Affinity | Creature Type|
 |:-----------:|:--------------:|
-| Abjuration | Construct, Plant, Celestial |
+| Abjuration | Construct, Monstrosity, Celestial |
 | Conjuration | Elemental, Fiend, Celestial |
 | Divination | Celestial, Beast, Plant |
-| Enchantment | Fiend, Fey, Aberration |
+| Enchantment | Fiend, Fey, Plant |
 | Evocation | Dragon, Elemental, Ooze |
 | Illusion | Fey, Elemental, Aberration |
-| Necromancy | Undead, Fiend, Ooze |
+| Necromancy | Undead, Fiend, Aberration |
 | Transmutation | Ooze, Aberration, Monstrosity |
 
 
