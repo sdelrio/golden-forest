@@ -361,7 +361,7 @@ You must have the spell prepared in each day of the inscription, and you must al
 ### Alchemist's Supplies (Intelligence)
 
 :::note Alchemical Potions Crafting Time
-Crafting time depends on the potion raritiy. See the Alchemy Crafting Table Below. Time is in workdays of 8 hours.
+Crafting time depends on the potion rarity. See the Alchemy Crafting Table Below. Time is in workdays of 8 hours.
 Another character can combine its efforts halving the crafting time and but It must be proficient with the required tools.
 :::
 
@@ -417,7 +417,7 @@ The difficulty DC and time required to brew a potion according to its rarity are
 
 At the end of each of these steps, the 
 
-##### STEP 1 - ALCHEMICAL BASE (Alchemist's Supplies or Brewer Supplies)
+##### STEP 1 - ALCHEMICAL BASE
 
 Making a potion with ordinary water is a literal recipe for disaster.
 Mystical fluids with strange properties are far more effective. Rarer potions require bases that are incredibly dangerous, expensive, or both.
@@ -425,7 +425,7 @@ The blood of a troll, a compound synthesized through transmutation magic, or the
 When crafting potions, the first Intelligence ability check performed should be themed around preparing or synthesizing this alchemical base.
 `At the end of this process roll and Alchemist's supplies or Brewer's supplies tool check`
 
-##### STEP 2 - BONDING REAGENT (Alchemist's Supplies)
+##### STEP 2 - BONDING REAGENT
 
 Binding magic to an alchemical base requires a potent agent through which the magic will flow.
 These bonding agents are often harvested from magical creatures and are consumed in the process of brewing the potion. The school of magic that best fits the potion’s magical effect determines what kind of creature a bonding agent must be harvested from, as detailed in the Bonding Agent Harvesting table.
