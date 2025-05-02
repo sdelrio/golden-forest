@@ -1,4 +1,4 @@
-# LINGERING INJURIES AND TREATMENT
+# Lingering Injuries and Treatment
 
 ## Lingering injuries
 
