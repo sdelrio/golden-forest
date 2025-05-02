@@ -403,7 +403,7 @@ The difficulty DC and time required to brew a potion according to its rarity are
 
 **ALCHEMICAL CRAFTING TABLE**
 
-| Rarity | Ability Check DC | Brewing Time (1) | Reagent rarity by CR | Potion Spell Level |
+| Rarity | Ability Check DC | Brewing Time (1) | Minimum CR for reagent | Potion Spell Level |
 |:-----------:|:--------------:|:--------------:|:--------------:|:--------------:|
 | Common | 12 | 0.5 | < CR 1 | Cantrip |
 | Uncommon | 14 | 1 | CR 1-3 | 1st-2nd |
