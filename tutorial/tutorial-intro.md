@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 
 # Contributing
+TEST 1
 
 This page is done using **Docusaurus**. There are many articles about it and a very good officiali documentaion:
 
