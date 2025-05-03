@@ -8,6 +8,10 @@ on:
       # - ".github/workflows/**"
       - "README.md"
 
+
+permissions: # required by action JamesIves/github-pages-deploy-action
+  contents: write
+
 concurrency: ci-${{ github.ref }}
 
 jobs:
@@ -48,7 +52,7 @@ jobs:
             exit 1
           fi
 
-      - name: Release to GitHub Pages
+      - name: Build Docusaurus
         env:
           USE_SSH: true
           GIT_USER: git
@@ -62,4 +66,10 @@ jobs:
           else
             exit 1
           fi
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # The folder the action should deploy.
+          clean-exclude: pr-preview/
 
