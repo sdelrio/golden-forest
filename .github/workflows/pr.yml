@@ -29,6 +29,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Cache node modules
+        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         id: cache-node-modules
         uses: actions/cache@v4
         with:
@@ -38,6 +39,7 @@ jobs:
             docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-
 
       - uses: actions/setup-node@v4
+        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: yarn
@@ -45,8 +47,8 @@ jobs:
 
       - name: Install Node Packages
          # You might want to skip the build if the PR has been closed
-        if: github.event.action != 'closed' &&
-            ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
+        if: (github.event.action != 'closed') &&
+            (steps.cache-node-modules.outputs.cache-hit != 'true')
         run: |
           if [ -e yarn.lock ]; then
             # use network only if dependencies are not available in local cache with --prefer-offline
