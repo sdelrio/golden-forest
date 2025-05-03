@@ -4,7 +4,7 @@
 
 ### Greatclub
 
-The greatclub has the 'Impactful' property  
+The greatclub has the 'Impactful' property
 
 :::note
 **Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
@@ -12,15 +12,16 @@ The greatclub has the 'Impactful' property
 
 ### Light Hammer
 
-The light hammer has the 'Impactful' property  
+The light hammer has the 'Impactful' property
 
 :::note
-**Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 a:w
+dditional damage.
 :::
 
 ### Mace
 
-The mace has the 'Impactful' property  
+The mace has the 'Impactful' property
 
 :::note
 **Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
@@ -28,13 +29,13 @@ The mace has the 'Impactful' property
 
 ### Sickle
 
-The sickle does '1d4+1' damage instead of 1d4  
+The sickle does '1d4+1' damage instead of 1d4
 
 ## Martial Melee Weapons
 
 ### Morningstar
 
-The Morningstar has the 'Impactful' property  
+The Morningstar has the 'Impactful' property
 
 :::note
 **Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
@@ -42,7 +43,7 @@ The Morningstar has the 'Impactful' property
 
 ### Flail
 
-The Flail has the 'Impactful' property  
+The Flail has the 'Impactful' property
 
 :::note
 **Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
