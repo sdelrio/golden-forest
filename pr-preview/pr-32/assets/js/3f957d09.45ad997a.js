@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[766],{96992:e=>{e.exports=JSON.parse('{"tag":{"label":"xfce4","permalink":"/docs/tags/xfce-4","allTagsPath":"/docs/tags","count":1,"items":[{"id":"OS/GNU-Linux/wm","title":"Window Managers","description":"i3","permalink":"/docs/OS/GNU-Linux/wm"}],"unlisted":false}}')}}]);
