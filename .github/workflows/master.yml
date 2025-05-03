@@ -15,24 +15,39 @@ jobs:
     name: GitHub Pages Release
     timeout-minutes: 5
     runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: 23.x
     steps:
       - uses: actions/checkout@v4
+
+      - name: Cache node modules
+        id: cache-node-modules
+        uses: actions/cache@v4
+        with:
+          path: ./node_modules
+          key: docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('./yarn.lock') }}
+          restore-keys: |
+            docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '23.x'
+          node-version: ${{ env.NODE_VERSION }}
           cache: yarn
+          cache-dependency-path: './yarn.lock'
+
       - uses: webfactory/ssh-agent@v0.5.0
         with:
           ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
+
       - name: Install Node Packages
+        if: ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
         run: |
           if [ -e yarn.lock ]; then
-            yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-            npm ci
+            yarn install --frozen-lockfile --prefer-offline
           else
-            npm i
+            exit 1
           fi
+
       - name: Release to GitHub Pages
         env:
           USE_SSH: true
@@ -44,6 +59,6 @@ jobs:
           if [ -e yarn.lock ]; then
             yarn deploy
           else
-            npm run deploy
+            exit 1
           fi
 

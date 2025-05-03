@@ -24,22 +24,37 @@ jobs:
       BUILD_FOLDER: build
       PRODUCTION_BRANCH: master
       BASE_URL: 
+      NODE_VERSION: 23.x
     steps:
       - uses: actions/checkout@v4
+
+      - name: Cache node modules
+        id: cache-node-modules
+        uses: actions/cache@v4
+        with:
+          path: ./node_modules
+          key: docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('./yarn.lock') }}
+          restore-keys: |
+            docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '23.x'
+          node-version: ${{ env.NODE_VERSION }}
           cache: yarn
+          cache-dependency-path: './yarn.lock'
+
       - name: Install Node Packages
-        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
+         # You might want to skip the build if the PR has been closed
+        if: github.event.action != 'closed' &&
+            ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
         run: |
           if [ -e yarn.lock ]; then
-            yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-            npm ci
+            # use network only if dependencies are not available in local cache with --prefer-offline
+            yarn install --frozen-lockfile --prefer-offline
           else
-            npm i
+            exit 1
           fi
+
       - name: Build Docusaurus
         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         env:
@@ -50,8 +65,9 @@ jobs:
           if [ -e yarn.lock ]; then
             yarn build
           else
-            npm run build
+            exit 1
           fi
+
       - name: Deploy preview
         id: preview-step
         uses: rossjrw/pr-preview-action@v1
