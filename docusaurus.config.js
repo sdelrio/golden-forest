@@ -216,6 +216,22 @@ const config = {
     mermaid: true,
   },
 
+  // Add Faster project https://docusaurus.io/blog/releases/3.6#docusaurus-faster
+  future: {
+    experimental_faster: true,
+  },
+  /*
+  future: {
+    experimental_faster: {
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
+      lightningCssMinimizer: true,
+      rspackBundler: true,
+      mdxCrossCompilerCache: true,
+    },
+  },
+  */
 };
 
 export default config;
