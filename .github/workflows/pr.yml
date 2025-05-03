@@ -44,6 +44,7 @@ jobs:
         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         env:
           BASE_URL: /pr-preview/pr-${{ github.event.number }}
+          DOCUSAURUS_IGNORE_SSG_WARNINGS: true
         run: |
           echo BASE_URL=${{ env.BASE_URL }}
           if [ -e yarn.lock ]; then

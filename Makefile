@@ -51,9 +51,12 @@ deploy:	## Deploy to github pages
 clean:  ## Clean node cache, build directoryo and .docusuarus
 	@rm -rf node_modules .docusaurus build
 
+check:  ## Docusaurus MDX checker (usefull on MDX version migrations)
+	@npx docusaurus-mdx-checker
+
 .PHONY: build
 build: ## Build page
-	@yarn build
+	@DOCUSAURUS_IGNORE_SSG_WARNINGS=true yarn build
 
 algolia:  ## Generate algolia index
 	@if [ -f $$HOME/.algoliaenv ]; then \
