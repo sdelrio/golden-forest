@@ -4,8 +4,8 @@
   <ShortName>The Golden Forest</ShortName>
   <Description>Search The Golden Forest</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://www.lorien.cloud/PR-32/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://www.lorien.cloud/PR-32/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://www.lorien.cloud/PR-32/opensearch.xml" />
-  <moz:SearchForm>https://www.lorien.cloud/PR-32/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://www.lorien.cloud/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://www.lorien.cloud/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://www.lorien.cloud/opensearch.xml" />
+  <moz:SearchForm>https://www.lorien.cloud/</moz:SearchForm>
 </OpenSearchDescription>
