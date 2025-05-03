@@ -42,7 +42,7 @@ jobs:
 
       - name: Info
         env:
-          openprs:${{ steps.openedPRs.outputs.prs }}
+          openprs: "${{ steps.openedPRs.outputs.prs }}"
         run: |
           echo ${{ env.openprs }}
 
