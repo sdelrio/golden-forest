@@ -1,31 +1,68 @@
-name: Build blog on PR
+name: Build on Pull Requests
+
 on:
   pull_request:
     branches:
       - master
     paths-ignore:
-      - ".github/workflows/**"
+      # - ".github/workflows/**"
       - "README.md"
+
+concurrency: ci-${{ github.ref }}
 
 jobs:
   checks:
-    name: Build without publish
+    name: Build and PR build publish
     timeout-minutes: 5
     runs-on: ubuntu-latest
+    env:
+      BUILD_FOLDER: build
+      PRODUCTION_BRANCH: master
+      BASE_URL: 
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '23.x'
           cache: yarn
+      - uses: webfactory/ssh-agent@v0.5.0
+        with:
+          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
       - name: Install Node Packages
         run: |
           if [ -e yarn.lock ]; then
             yarn install --frozen-lockfile
-          elif [ -e package-lock.json ];  then
+          elif [ -e package-lock.json ]; then
             npm ci
           else
             npm i
           fi
-          npm run build
+      - name: Build Docusaurus
+        env:
+          USE_SSH: true
+          GIT_USER: git
+          BASE_URL: /pr-preview/pr-${{ github.event.number }}
+        run: |
+          echo BASE_URL=${{ env.BASE_URL }}
+          git config --global user.email "sdelrio@users.noreply.github.com"
+          git config --global user.name "gh-actions"
+          if [ -e yarn.lock ]; then
+            yarn build
+          else
+            npm run build
+          fi
+      - name: Deploy preview
+        id: preview-step
+        env:
+          USE_SSH: true
+          GIT_USER: git
+          # BASE_URL: /pr-preview/${{ steps.base-url.outputs.result }}
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./build/
+          preview-url-path: /pr-preview
+
+      # - if: steps.preview-step.outputs.deployment-action == "deploy"
+      #   run: |
+      #     echo "Preview visible at ${{ steps.preview-step.outputs.preview-url }}"
 
