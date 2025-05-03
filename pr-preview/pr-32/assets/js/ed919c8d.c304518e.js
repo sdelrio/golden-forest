@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[806],{87229:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/pr-preview/32/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":7,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
