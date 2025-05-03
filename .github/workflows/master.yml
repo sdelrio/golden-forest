@@ -27,7 +27,7 @@ jobs:
       - name: Install Node Packages
         run: |
           if [ -e yarn.lock ]; then
-            yarn install --frozen-lockfile
+            yarn install --frozen-lockfile --prefer-offline
           elif [ -e package-lock.json ]; then
             npm ci
           else
