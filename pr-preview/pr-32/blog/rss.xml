@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>The Golden Forest Blog</title>
-        <link>https://www.lorien.cloud/pr-preview/pr-32/blog</link>
+        <link>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog</link>
         <description>The Golden Forest Blog</description>
         <lastBuildDate>Sat, 29 Jan 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,15 +10,15 @@
         <language>en</language>
         <item>
             <title><![CDATA[k8s linter]]></title>
-            <link>https://www.lorien.cloud/pr-preview/pr-32/blog/blog-kubelinter</link>
-            <guid>https://www.lorien.cloud/pr-preview/pr-32/blog/blog-kubelinter</guid>
+            <link>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/blog-kubelinter</link>
+            <guid>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/blog-kubelinter</guid>
             <pubDate>Sat, 29 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Init k8s linter section]]></description>
             <content:encoded><![CDATA[<p>Init k8s linter section</p>
 <ul>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Cloud-Platform/Kubernetes/k8s-linter#kubelinter">k8s linter tools</a>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Cloud-Platform/Kubernetes/k8s-linter#kubelinter">k8s linter tools</a>
 <ul>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Cloud-Platform/Kubernetes/k8s-linter#kubelinter">kubelinter</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Cloud-Platform/Kubernetes/k8s-linter#kubelinter">kubelinter</a></li>
 </ul>
 </li>
 </ul>]]></content:encoded>
@@ -27,22 +27,22 @@
         </item>
         <item>
             <title><![CDATA[API standards]]></title>
-            <link>https://www.lorien.cloud/pr-preview/pr-32/blog/blog-init-api-standard</link>
-            <guid>https://www.lorien.cloud/pr-preview/pr-32/blog/blog-init-api-standard</guid>
+            <link>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/blog-init-api-standard</link>
+            <guid>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/blog-init-api-standard</guid>
             <pubDate>Sun, 02 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Init API Standards section]]></description>
             <content:encoded><![CDATA[<p>Init API Standards section</p>
 <ul>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Coding/api">API Standards</a>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Coding/api">API Standards</a>
 <ul>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Coding/api#rest">REST</a>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Coding/api#rest">REST</a>
 <ul>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Coding/api#openapi">OpenAPI</a></li>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Coding/api#asyncapi">AsyncAPI</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Coding/api#openapi">OpenAPI</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Coding/api#asyncapi">AsyncAPI</a></li>
 </ul>
 </li>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Coding/api#odata">OData</a></li>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Coding/api#graphql">GraphQL</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Coding/api#odata">OData</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Coding/api#graphql">GraphQL</a></li>
 </ul>
 </li>
 </ul>]]></content:encoded>
@@ -56,15 +56,15 @@
         </item>
         <item>
             <title><![CDATA[Microservces]]></title>
-            <link>https://www.lorien.cloud/pr-preview/pr-32/blog/blog-init-microservices-section</link>
-            <guid>https://www.lorien.cloud/pr-preview/pr-32/blog/blog-init-microservices-section</guid>
+            <link>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/blog-init-microservices-section</link>
+            <guid>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/blog-init-microservices-section</guid>
             <pubDate>Sun, 02 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Init Microservices section]]></description>
             <content:encoded><![CDATA[<p>Init Microservices section</p>
 <ul>
 <li>Sofware-Architecture<!-- -->
 <ul>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Software-Architecture/microservices">Microservices</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Software-Architecture/microservices">Microservices</a></li>
 </ul>
 </li>
 </ul>]]></content:encoded>
@@ -73,63 +73,63 @@
         </item>
         <item>
             <title><![CDATA[Syslog, nginx-ingress sticky session, Dockerfile python update]]></title>
-            <link>https://www.lorien.cloud/pr-preview/pr-32/blog/blog-initial-syslog</link>
-            <guid>https://www.lorien.cloud/pr-preview/pr-32/blog/blog-initial-syslog</guid>
+            <link>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/blog-initial-syslog</link>
+            <guid>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/blog-initial-syslog</guid>
             <pubDate>Sat, 01 Jan 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Initial syslog, add nginx-ingress sticky seessions, update Dockerfile for python]]></description>
             <content:encoded><![CDATA[<p>Initial syslog, add nginx-ingress sticky seessions, update Dockerfile for python</p>
 <ul>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/OS/GNU-Linux/syslog">Syslog</a></li>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Cloud-Platform/Kubernetes/k8s-nginx#sticky-sessions">nginx-ingress sticky session</a></li>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Containers/Docker/dockerfile-python#alpine-base-image">Dockerfiel for Python why not Alpine</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/OS/GNU-Linux/syslog">Syslog</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Cloud-Platform/Kubernetes/k8s-nginx#sticky-sessions">nginx-ingress sticky session</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Containers/Docker/dockerfile-python#alpine-base-image">Dockerfiel for Python why not Alpine</a></li>
 </ul>]]></content:encoded>
             <category>sections</category>
             <category>syslog</category>
         </item>
         <item>
             <title><![CDATA[Initial Python section]]></title>
-            <link>https://www.lorien.cloud/pr-preview/pr-32/blog/blog-initial-python</link>
-            <guid>https://www.lorien.cloud/pr-preview/pr-32/blog/blog-initial-python</guid>
+            <link>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/blog-initial-python</link>
+            <guid>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/blog-initial-python</guid>
             <pubDate>Tue, 28 Dec 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Initial python section.]]></description>
             <content:encoded><![CDATA[<p>Initial python section.</p>
 <ul>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Coding/Python/">Python</a>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Coding/Python/">Python</a>
 <ul>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Coding/Python/python-unit-test">Unit-test</a></li>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Coding/Python/python-compile">Compile</a></li>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Coding/Python/python-libraries">Libraries</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Coding/Python/python-unit-test">Unit-test</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Coding/Python/python-compile">Compile</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Coding/Python/python-libraries">Libraries</a></li>
 </ul>
 </li>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Containers/Docker/dockerfile-python">Dockerfile for python</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Containers/Docker/dockerfile-python">Dockerfile for python</a></li>
 </ul>]]></content:encoded>
             <category>sections</category>
             <category>python</category>
         </item>
         <item>
             <title><![CDATA[Initial Setup]]></title>
-            <link>https://www.lorien.cloud/pr-preview/pr-32/blog/blog-initial-setup</link>
-            <guid>https://www.lorien.cloud/pr-preview/pr-32/blog/blog-initial-setup</guid>
+            <link>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/blog-initial-setup</link>
+            <guid>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/blog-initial-setup</guid>
             <pubDate>Mon, 27 Dec 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Initial setup of content sections. Also added some detailed notes about:]]></description>
             <content:encoded><![CDATA[<p>Initial setup of content sections. Also added some detailed notes about:</p>
 <ul>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/OS/GNU-Linux/ZFS/">ZFS</a></li>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/Multimedia/darktable">Darktable</a></li>
-<li><a href="https://www.lorien.cloud/pr-preview/pr-32/docs/OS/GNU-Linux/KVM/kvm-qemu">KVM</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/OS/GNU-Linux/ZFS/">ZFS</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/Multimedia/darktable">Darktable</a></li>
+<li><a href="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/docs/OS/GNU-Linux/KVM/kvm-qemu">KVM</a></li>
 </ul>]]></content:encoded>
             <category>sections</category>
         </item>
         <item>
             <title><![CDATA[First Post]]></title>
-            <link>https://www.lorien.cloud/pr-preview/pr-32/blog/first-post</link>
-            <guid>https://www.lorien.cloud/pr-preview/pr-32/blog/first-post</guid>
+            <link>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/first-post</link>
+            <guid>https://www.lorien.cloud/golden-forest/pr-preview/pr-32/blog/first-post</guid>
             <pubDate>Tue, 09 Nov 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Initial setup of Docusaurus and start for the web page and blog.]]></description>
             <content:encoded><![CDATA[<p>Initial setup of Docusaurus and start for the web page and blog.</p>
 <p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p>
 <p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
-<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://www.lorien.cloud/pr-preview/pr-32/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>]]></content:encoded>
+<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://www.lorien.cloud/golden-forest/pr-preview/pr-32/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>]]></content:encoded>
             <category>hola</category>
             <category>docusaurus</category>
         </item>
