@@ -57,7 +57,7 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./build/
-          preview-url-path: /pr-preview
+          # umbrella-dir: pr-preview
 
       - name: Info
         if: ${{ env.deployment_action }} == "deploy"
