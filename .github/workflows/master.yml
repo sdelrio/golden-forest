@@ -71,5 +71,17 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build # The folder the action should deploy.
-          clean-exclude: pr-preview/
+          clean-exclude: |
+            pr-preview/
+
+      - name: List all opened pull requests in last 24 hours
+        id: list
+        uses: actions/github-list-pull-requests@v1.0
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          state: 'opened'
+          window: '48'
+
+      - name: output
+        run: echo '${{ steps.list.outputs }}'
 
