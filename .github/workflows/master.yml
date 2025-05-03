@@ -24,27 +24,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Get opened PRs
-        id: openedPRs
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          openprs="$(gh pr list --state open --json number --template '{{range .}}pr-preview/pr-{{ .number}}{{"\n"}}{{end}}')"
-          TEST="A super long multine string here
-          Line 2
-          Line 3
-          "
-          {
-            echo 'prs<<EOF'
-            echo "${openprs}"
-            echo EOF
-          } >> $GITHUB_OUTPUT
-
-      - name: Info
-        env:
-          openprs: "${{ steps.openedPRs.outputs.prs }}"
-        run: |
-          echo ${{ env.openprs }}
+      # - name: Get opened PRs
+      #   id: openedPRs
+      #   env:
+      #     GH_TOKEN: ${{ github.token }}
+      #   run: |
+      #     openprs="$(gh pr list --state open --json number --template '{{range .}}pr-preview/pr-{{ .number}}{{"\n"}}{{end}}')"
+      #     TEST="A super long multine string here
+      #     Line 2
+      #     Line 3
+      #     "
+      #     {
+      #       echo 'prs<<EOF'
+      #       echo "${openprs}"
+      #       echo EOF
+      #     } >> $GITHUB_OUTPUT
+      #
+      # - name: Info
+      #   env:
+      #     openprs: "${{ steps.openedPRs.outputs.prs }}"
+      #   run: |
+      #     echo ${{ env.openprs }}
 
       - name: Cache node modules
         id: cache-node-modules
@@ -94,5 +94,5 @@ jobs:
         with:
           folder: build # The folder the action should deploy.
           clean-exclude: |
-            ${{ steps.openedPRs.outputs.prs }}
+            pr-preview/
 
