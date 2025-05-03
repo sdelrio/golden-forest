@@ -1,4 +1,5 @@
 name: Relese gh-pages
+
 on:
   push:
     branches:
@@ -6,6 +7,8 @@ on:
     paths-ignore:
       - ".github/workflows/**"
       - "README.md"
+
+concurrency: ci-${{ github.ref }}
 
 jobs:
   gh-release:
@@ -21,6 +24,15 @@ jobs:
       - uses: webfactory/ssh-agent@v0.5.0
         with:
           ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
+      - name: Install Node Packages
+        run: |
+          if [ -e yarn.lock ]; then
+            yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+            npm ci
+          else
+            npm i
+          fi
       - name: Release to GitHub Pages
         env:
           USE_SSH: true
@@ -29,11 +41,8 @@ jobs:
           git config --global user.email "sdelrio@users.noreply.github.com"
           git config --global user.name "gh-actions"
           if [ -e yarn.lock ]; then
-            yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-            npm ci
+            yarn deploy
           else
-            npm i
+            npm run deploy
           fi
-          npm run deploy
 

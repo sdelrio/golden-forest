@@ -22,7 +22,9 @@ const config = {
   url: 'https://www.lorien.cloud',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  // baseUrl: '/',
+  // For PR reviews if using GH actions then use BASE_URL path
+  baseUrl: process.env.GITHUB_ACTIONS ? `${process.env.BASE_URL}/` : "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.

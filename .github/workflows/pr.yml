@@ -1,17 +1,29 @@
-name: Build blog on PR
+name: Build on Pull Requests
+
 on:
   pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
     branches:
       - master
     paths-ignore:
-      - ".github/workflows/**"
+      # - ".github/workflows/**"
       - "README.md"
+
+concurrency: ci-${{ github.ref }}
 
 jobs:
   checks:
-    name: Build without publish
+    name: Build and PR build publish
     timeout-minutes: 5
     runs-on: ubuntu-latest
+    env:
+      BUILD_FOLDER: build
+      PRODUCTION_BRANCH: master
+      BASE_URL: 
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -19,13 +31,48 @@ jobs:
           node-version: '23.x'
           cache: yarn
       - name: Install Node Packages
+        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         run: |
           if [ -e yarn.lock ]; then
             yarn install --frozen-lockfile
-          elif [ -e package-lock.json ];  then
+          elif [ -e package-lock.json ]; then
             npm ci
           else
             npm i
           fi
-          npm run build
+      - name: Build Docusaurus
+        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
+        env:
+          BASE_URL: /pr-preview/pr-${{ github.event.number }}
+        run: |
+          echo BASE_URL=${{ env.BASE_URL }}
+          if [ -e yarn.lock ]; then
+            yarn build
+          else
+            npm run build
+          fi
+      - name: Deploy preview
+        id: preview-step
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./build/
+          preview-url-path: /pr-preview
+
+      - name: Info
+        if: ${{ env.deployment_action }} == "deploy"
+        run: |
+          echo "Preview visible at ${{ env.preview_url }}"
+
+      # Sample steps.preview-step.output:
+      # empty_dir_path: /tmp/tmp.sQBm9GZB65
+      # deployment_action: deploy
+      # preview_file_path: pr-preview/pr-32
+      # pages_base_url: sdelrio.github.io/golden-forest
+      # preview_url_path: pr-preview/pr-32
+      # preview_url: https://sdelrio.github.io/golden-forest/pr-preview/pr-32/
+      # action_repository: rossjrw/pr-preview-action
+      # action_version: v1.6.1
+      # action_start_time: 2025-05-03 13:46 UTC
+      # deployment_status: skipped
+
 
