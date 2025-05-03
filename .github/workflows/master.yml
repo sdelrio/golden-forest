@@ -62,7 +62,7 @@ jobs:
           git config --global user.email "sdelrio@users.noreply.github.com"
           git config --global user.name "gh-actions"
           if [ -e yarn.lock ]; then
-            yarn deploy
+            yarn build
           else
             exit 1
           fi
