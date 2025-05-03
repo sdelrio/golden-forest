@@ -53,7 +53,7 @@ The armor is damaged in the process.
 
 **Pag 219 PHB**
 
-:::note
+:::note Resizing
 Adapting a suit of armor to fit a different size takes 1 day and has a cost of 10% cost of the armor for each size difference. The time cost is (1 day/size difference) for light armor and easy manteinance armor and (2 days/size difference) for the rest.
 :::
 
