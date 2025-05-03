@@ -29,11 +29,22 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          echo prs="$(gh pr list --state open --json number --template '{{range .}}pr-preview/pr-{{ .number}}{{"\n"}}{{end}}')" >> $GITHUB_OUTPUT
+          openprs="$(gh pr list --state open --json number --template '{{range .}}pr-preview/pr-{{ .number}}{{"\n"}}{{end}}')"
+          TEST="A super long multine string here
+          Line 2
+          Line 3
+          "
+          {
+            echo 'prs<<EOF'
+            echo "${openprs}"
+            echo EOF
+          } >> $GITHUB_OUTPUT
 
       - name: Info
+        env:
+          openprs:${{ steps.openedPRs.outputs.prs }}
         run: |
-          echo ${{ steps.openedPRs.outputs.prs }}
+          echo ${{ env.openprs }}
 
       - name: Cache node modules
         id: cache-node-modules
