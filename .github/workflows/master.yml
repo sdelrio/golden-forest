@@ -24,6 +24,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Get opened PRs
+        id: openedPRs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo prs="$(gh pr list --state open --json number --template '{{range .}}pr-preview/pr-{{ .number}}{{"\n"}}{{end}}')" >> $GITHUB_OUTPUT
+
+      - name: Info
+        run: |
+          echo ${{ steps.openedPRs.outputs.prs }}
+
       - name: Cache node modules
         id: cache-node-modules
         uses: actions/cache@v4
@@ -67,16 +78,10 @@ jobs:
             exit 1
           fi
 
-      - name: Get opened PRs
-        id: openedPRs
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh pr list --state open --json number --template '{{range .}}pr-preview/pr-{{ .number}}{{"\n"}}{{end}}'
-
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build # The folder the action should deploy.
-          clean-exclude: ${{ steps.openedPRs.outputs }}
+          clean-exclude: |
+            ${{ steps.openedPRs.outputs.prs }}
 
