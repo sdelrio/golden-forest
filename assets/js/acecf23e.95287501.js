@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[1903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/undefined/blog","blogTitle":"Blog","authorsListPath":"/undefined/blog/authors"}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([[8261],{77803:e=>{e.exports=JSON.parse('{"tag":{"label":"pxe","permalink":"/docs/tags/pxe","allTagsPath":"/docs/tags","count":1,"items":[{"id":"OS/GNU-Linux/PXE","title":"PXE boot","description":"DIY Manual way","permalink":"/docs/OS/GNU-Linux/PXE"}],"unlisted":false}}')}}]);
