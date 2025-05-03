@@ -45,7 +45,7 @@ Another character can combine its efforts halving the crafting time and but It m
 To make an item, you need raw materials worth half the purchase cost of the item (rounded down). The DM determines wheter the appropiate raw materials are available.
 :::
 
-Failing the crafting roll that extra time and resources are needed. Determine the margin of failure and check the table below:
+Failing the crafting roll doesn't mean the effort is wasted. The crafter may simply need extra time and resources to finish the item. Determine the margin of failure and check the table below:
 
 | Margin of Failure | Result | 
 |:-----------:|:--------------:
