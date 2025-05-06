@@ -19,6 +19,11 @@ There's no 100% safe mechanism to make allies immune to area spells. Evoker's `S
 
 This spell gives a -1 penalty to attack rolls instead.
 
+### Ceremony
+
+You can create a number of vials per casting equal to your spellcasting modifier. The material component cost increases to 25gp worth of silver per vial. Silver doesn't have to be in powder form.
+
+
 ### Ray of enfeeblement
 
 This spell doesn't require concentration  
