@@ -1,7 +1,11 @@
 
 # Weapon Master Property fixes
 
-Due to the current difficult of remember weapon master properties in PHB2024, a suggestion to group weapons by type and balance effects.
+Due to the current difficult of remember weapon master properties in PHB2024, it's best to group weapons by type and balance effects.
+
+:::warning
+Weapons are grouped for convenience. Remember that masteries apply ONLY to a specific weapon of your choice.
+:::
 
 ## Weapon Master table
 
