@@ -378,7 +378,7 @@ To make an item, you need three things: An Alchemical Base, a Suitable Reagent a
 + Component's Pouch. (125 sp materials). 1 workday. DC 10.
 + Oil. (1 sp materials). 1 workday. Automatic Success.
 + Paper. (1 sp materials). 1 workday/10 sheets. Automatic Success.
-+ Perfume. (25 sp materials). 1 workdays. DC 10.
++ Perfume. (25 sp materials). 1 workday. DC 10.
 
 
 #### Alchemical Potions
@@ -415,7 +415,7 @@ The difficulty DC and time required to brew a potion according to its rarity are
 
 (1) Elixirs require double this time
 
-At the end of each of these steps, the 
+
 
 ##### STEP 1 - ALCHEMICAL BASE
 
