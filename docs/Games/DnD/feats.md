@@ -1133,7 +1133,7 @@ You’ve learned to meld your strikes with sparks of arcane magic, gaining the f
 *Prerequisite: Ability to cast spells.*
 
 Choose a school of magic. 
-+ The spell save DC of your spells form the chosen school increases by 1.
++ The spell save DC and spell attack rolls of your spells from the chosen school increases by 1.
 + You gain advantage on all saves against spells from that school of magic.
 + You cannot learn or cast spells from the opposed school of magic. You can replace the spells you know from your opposed school with spells from your chosen school.
 
