@@ -288,6 +288,8 @@ To make an item, you need raw materials worth half the purchase cost of the item
 + Keogthom Ointment. (80 gp materials). 3 workdays. DC 15. DC 10 if proficient in Nature.
 + Herbal Healing Poultice (50 gp materials). 2 workdays. DC 12. DC 10 if proficint in Nature.
 + Herbal Tonic (25 gp materials). 1 workday. Automatic Success
++ Potion of Stamina (50 gp materials). 2 workdays. DC 12.
++ Potion of Greater Stamina (125 gp materials). 5 workdays. DC 15.
 + Other (Varies)
 
 
