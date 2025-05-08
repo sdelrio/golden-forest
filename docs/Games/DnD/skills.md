@@ -9,27 +9,6 @@ The following skils fall into this category, and cannot be rolled without profic
 - **Thieves' Tools** can be used with **Sleight of Hand** without adding the proficiency bonus.
 
 
-## Survival skill to forage ingredients
-
-After each period spent foraging ingredients, the forager makes a Survival check against the Biome DC. The character gathers 1 gp + 1gp times the margin of success worth of ingredients for the herbalism or poisoner's kit. If the result is 25 or greater, the character finds a rare ingredient (check the table below to see the worthiness of the ingredient).
-
-| Biome | Survival DC | Rare Ingredient (25+) |
-|:-----------:|:--------------:|:--------------:|
-| Plains | 10 | 25 gp |
-| Hills | 15 | 50 gp |
-| Mountains | 20 | 100 gp |
-| Riverside | 10 | 30 gp |
-| Coast | 15 | 25 gp |
-| Desert | 20 | 100 gp |
-| Jungle | 10 | 100 gp |
-| Conifererous Forest | 18 | 50 gp |
-| Decidious Forest | 10 | 50 gp |
-| Tundra | 20 | 100 gp |
-| Marsh | 12 | 75 gp |
-| Badlands | 18 | 50 gp |
-| Underground | 15 | 75 gp |
-
-
 ## Attunement
 
 You can attune to an item during a short or long rest.  
@@ -50,6 +29,28 @@ Any exhaustion levels from attunement are removed by a single cast of Greater Re
 | Very Rare | 4 | 15 |
 | Legendary | 4 | 18 |
 | Artifact | 5 | 20 |
+
+
+## Survival skill to forage ingredients
+
+After each period spent foraging ingredients, the forager makes a Survival check against the Biome DC. The character gathers 1 gp + 1gp times the margin of success worth of ingredients for the herbalism or poisoner's kit. If the result is 25 or greater, the character finds a rare ingredient (check the table below to see the worthiness of the ingredient).
+
+| Biome | Survival DC | Rare Ingredient (25+) |
+|:-----------:|:--------------:|:--------------:|
+| Plains | 10 | 25 gp |
+| Hills | 15 | 50 gp |
+| Mountains | 20 | 100 gp |
+| Riverside | 10 | 30 gp |
+| Coast | 15 | 25 gp |
+| Desert | 20 | 100 gp |
+| Jungle | 10 | 100 gp |
+| Conifererous Forest | 18 | 50 gp |
+| Decidious Forest | 10 | 50 gp |
+| Tundra | 20 | 100 gp |
+| Marsh | 12 | 75 gp |
+| Badlands | 18 | 50 gp |
+| Underground | 15 | 75 gp |
+
 
 
 ## Crafting
