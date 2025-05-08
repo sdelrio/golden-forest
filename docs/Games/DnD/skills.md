@@ -11,7 +11,7 @@ The following skils fall into this category, and cannot be rolled without profic
 
 ## Survival skill to forage ingredients
 
-After each hour spent foraging ingredients, the forager makes a Survival check against the Biome DC. The character gathers 1 gp + 1gp times the margin of success worth of ingredients for the herbalism or poisoner's kit. If the result is 25 or greater, the character finds a rare ingredient (check the table below to see the worthiness of the ingredient).
+After each period spent foraging ingredients, the forager makes a Survival check against the Biome DC. The character gathers 1 gp + 1gp times the margin of success worth of ingredients for the herbalism or poisoner's kit. If the result is 25 or greater, the character finds a rare ingredient (check the table below to see the worthiness of the ingredient).
 
 | Biome | Survival DC | Rare Ingredient (25+) |
 |:-----------:|:--------------:|:--------------:|
