@@ -34,17 +34,43 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          json_array="$(gh pr list --state open --json number --jq 'map("mypath/pr-\(.number)")')
-          echo "prs=$json_array"" >> $GITHUB_OUTPUT
-          echo "json_array --> $json_array"
-          echo "GH_OUTPUT=$GITHUB_OUTPUT"
+          # Generate the JSON array
+          json_array="$(gh pr list --state open --json number --jq 'map("mypath/pr-\(.number)")')"
+
+          # Define a delimiter
+          delimiter="$(uuidgen)"
+          echo "delimiter is --> $delimiter" # Optional: for debugging
+
+          # Write the output using the delimiter for multiline support
+          echo "prs<<$delimiter" >> $GITHUB_OUTPUT
+          echo "$json_array" >> $GITHUB_OUTPUT
+          echo "$delimiter" >> $GITHUB_OUTPUT
+
+          echo "json_array --> $json_array" # Optional: for debugging
+          cat $GITHUB_OUTPUT # Optional: for debugging
 
       - name: Info
-        env:
-         openprs: "${{ steps.opened-prs.outputs.prs }}"
         run: |
-          echo ${{ env.openprs }}
-          echo "${{ steps.opened-prs.outputs.prs }}"
+         # Access the output using the steps context
+          echo "Accessed output directly: ${{ steps.opened-prs.outputs.prs }}"
+
+          # You can also assign it to an environment variable, but be mindful of shell interpretation
+          # It's often safer to use the steps context directly if possible or parse the JSON.
+          OPENPRS_JSON='${{ steps.opened-prs.outputs.prs }}'
+          echo "Assigned to shell variable (be cautious with direct echo due to special chars):"
+          # The following echo might still have issues depending on the JSON content and shell.
+          # A safer approach is to process the JSON string with a tool like jq or parse it in a script.
+          # echo "$OPENPRS_JSON"
+          #
+          #
+          #
+          # Example of processing with jq (requires jq to be installed in the runner, ubuntu-latest has it)
+          echo "Processing with echo:"
+          echo "$OPENPRS_JSON" 
+
+          # If you need to iterate or use it in a specific way, parsing is necessary.
+          # For example, if the output is ["mypath/pr-123", "mypath/pr-456"]
+          # You might need to parse it into a shell array or process it line by line after parsing.
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
