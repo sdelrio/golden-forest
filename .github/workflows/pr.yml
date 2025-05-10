@@ -29,6 +29,12 @@ jobs:
       - name: Checkout git repository
         uses: actions/checkout@v4
 
+      - name: Debug Info
+        run: |
+          # Optional: for debugging
+          echo "Default node version:"
+          node --version
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
