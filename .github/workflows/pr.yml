@@ -67,6 +67,8 @@ jobs:
           # Example of processing with jq (requires jq to be installed in the runner, ubuntu-latest has it)
           echo "Processing with echo:"
           echo "$OPENPRS_JSON" 
+          echo "Processing with jq:"
+          echo "$OPENPRS_JSON" | jq -r '.[]'
 
           # If you need to iterate or use it in a specific way, parsing is necessary.
           # For example, if the output is ["mypath/pr-123", "mypath/pr-456"]

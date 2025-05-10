@@ -25,19 +25,75 @@ jobs:
       - name: Checkout git repository
         uses: actions/checkout@v4
 
-      # - name: Get opened PRs
-      #   id: openedPRs
-      #   env:
-      #     GH_TOKEN: ${{ github.token }}
-      #   run: |
-      #     json_array="$(gh pr list --state open --json number --jq 'map("mypath/pr-\(.number)")' | tr -d '\n')
-      #     echo "openprs=$json_array"" >> $GITHUB_OUTPUT
-      #
-      # - name: Info
-      #   env:
-      #    openprs: "${{ steps.openedPRs.outputs.openprs }}"
-      #   run: |
-      #     echo ${{ env.openprs }}
+      - name: Get opened PRs
+        id: opened-prs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Generate the JSON array
+          json_array="$(gh pr list --state open --json number --jq 'map("pr-preview/pr-\(.number)")')"
+
+          # Define a delimiter
+          delimiter="$(uuidgen)"
+          echo "delimiter is --> $delimiter" # Optional: for debugging
+
+          # Write the output using the delimiter for multiline support
+          echo "prs<<$delimiter" >> $GITHUB_OUTPUT
+          echo "$json_array" >> $GITHUB_OUTPUT
+          echo "$delimiter" >> $GITHUB_OUTPUT
+
+          echo "json_array --> $json_array" # Optional: for debugging
+          cat $GITHUB_OUTPUT # Optional: for debugging
+
+      - name: Setup jq
+        uses: dcarbone/install-jq-actions@v3
+        with:
+          version: '1.7.1'
+          force: false
+
+      - name: Info
+        run: |
+          # Access the output using the steps context
+          echo "Accessed output directly: ${{ steps.opened-prs.outputs.prs }}"
+
+          # You can also assign it to an environment variable, but be mindful of shell interpretation
+          # It's often safer to use the steps context directly if possible or parse the JSON.
+          OPENPRS_JSON='${{ steps.opened-prs.outputs.prs }}'
+          echo "Assigned to shell variable (be cautious with direct echo due to special chars):"
+          # The following echo might still have issues depending on the JSON content and shell.
+          # A safer approach is to process the JSON string with a tool like jq or parse it in a script.
+          # echo "$OPENPRS_JSON"
+          #
+          #
+          #
+          # Example of processing
+          echo "Processing with echo:"
+          echo "$OPENPRS_JSON" 
+          echo "Processing with jq:"
+          echo "$OPENPRS_JSON" | jq -r '.[]'
+ 
+          # If you need to iterate or use it in a specific way, parsing is necessary.
+          # For example, if the output is ["mypath/pr-123", "mypath/pr-456"]
+          # You might need to parse it into a shell array or process it line by line after parsing.
+
+      - name: Format Clean Exclude Paths
+        id: format-exclude # Give this step an ID
+        run: |
+          # Get the JSON array string from the previous step's output
+          json_array='${{ steps.opened-prs.outputs.prs }}'
+
+          # Use jq to parse the JSON array and join its elements with a space
+          # -r flag for raw output (no quotes around strings)
+          # join(" ") joins array elements with a space
+          space_separated_paths=$(echo "$json_array" | jq -r 'join(" ")')
+
+          # Set this space-separated string as an output for this step
+          delimiter="$(uuidgen)"
+          echo "exclude_paths<<$delimiter" >> $GITHUB_OUTPUT
+          echo "$space_separated_paths" >> $GITHUB_OUTPUT
+          echo "$delimiter" >> $GITHUB_OUTPUT
+
+          echo "Formatted exclude paths for clean-exclude: $space_separated_paths" # For debugging
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -87,8 +143,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build # The folder the action should deploy.
-          clean-exclude: |
-            pr-preview/
-
-#          clean-exclude: ${{ fromJson(steps.openedPRs.outputs.openprs) }}
+          clean: true
+          clean-exclude: ${{ steps.format-exclude.outputs.exclude_paths }}
 
