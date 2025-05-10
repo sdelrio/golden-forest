@@ -45,7 +45,7 @@ jobs:
           cat $GITHUB_OUTPUT # Optional: for debugging
           echo "list_array --> $list_array" # Optional: for debugging
 
-      - name: Info
+      - name: Debug Info
         run: |
           # Access the output using the steps context
           echo "Accessed output directly: ${{ steps.opened-prs.outputs.prs }}"
@@ -61,6 +61,8 @@ jobs:
           # Optional: for debugging
           echo "Processing with echo:"
           echo "$OPENPRS_LIST"
+          echo "Default node version:"
+          node --version
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -111,5 +113,5 @@ jobs:
         with:
           folder: build # The folder the action should deploy.
           clean: true
-          clean-exclude: ${{ steps.opened-prs.outputs.exclude_paths }}
+          clean-exclude: ${{ steps.opened-prs.outputs.prs }}
 
