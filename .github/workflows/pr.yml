@@ -44,15 +44,15 @@ jobs:
           override_local_node: false
           cache-dependency-path: './yarn.lock'
 
-      - name: Cache Node.js modules to speed up future builds
-        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
-        id: cache-node-modules
-        uses: actions/cache@v4
-        with:
-          path: ./node_modules
-          key: docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('./yarn.lock') }}
-          restore-keys: |
-            docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-
+      # - name: Cache Node.js modules to speed up future builds
+      #   if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
+      #   id: cache-node-modules
+      #   uses: actions/cache@v4
+      #   with:
+      #     path: ./node_modules
+      #     key: docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('./yarn.lock') }}
+      #     restore-keys: |
+      #       docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-
 
       - name: Install Node Packages
          # You might want to skip the build if the PR has been closed
