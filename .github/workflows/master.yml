@@ -32,6 +32,7 @@ jobs:
         run: |
           # Generate the JSON array
           json_array="$(gh pr list --state open --json number --jq 'map("pr-preview/pr-\(.number)")')"
+          list_array="$(gh pr list --state open --json number --template '{{range .}}pr-preview/pr-{{ .number}}{{"\n"}}{{end}}')"
 
           # Define a delimiter
           delimiter="$(uuidgen)"
@@ -44,6 +45,7 @@ jobs:
 
           echo "json_array --> $json_array" # Optional: for debugging
           cat $GITHUB_OUTPUT # Optional: for debugging
+          echo "list_array --> $list_array" # Optional: for debugging 
 
       - name: Setup jq
         uses: dcarbone/install-jq-action@v3
