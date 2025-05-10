@@ -85,15 +85,15 @@ jobs:
           # Use jq to parse the JSON array and join its elements with a space
           # -r flag for raw output (no quotes around strings)
           # join(" ") joins array elements with a space
-          space_separated_paths=$(echo "$json_array" | jq -r 'join(" ")')
+          line_separated_paths=$(echo "$json_array" | jq -r 'join("\n")')
 
           # Set this space-separated string as an output for this step
           delimiter="$(uuidgen)"
           echo "exclude_paths<<$delimiter" >> $GITHUB_OUTPUT
-          echo "$space_separated_paths" >> $GITHUB_OUTPUT
+          echo "$line_separated_paths" >> $GITHUB_OUTPUT
           echo "$delimiter" >> $GITHUB_OUTPUT
 
-          echo "Formatted exclude paths for clean-exclude: $space_separated_paths" # For debugging
+          echo "Formatted exclude paths for clean-exclude: $line_separated_paths" # For debugging
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
