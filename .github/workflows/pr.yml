@@ -36,12 +36,14 @@ jobs:
         run: |
           json_array="$(gh pr list --state open --json number --jq 'map("mypath/pr-\(.number)")')
           echo "openprs=$json_array"" >> $GITHUB_OUTPUT
+          echo $json_array
 
       - name: Info
         env:
          openprs: "${{ steps.openedPRs.outputs.openprs }}"
         run: |
           echo ${{ env.openprs }}
+          echo "${{ steps.openedPRs.outputs.openprs }}"
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
