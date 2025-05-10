@@ -22,31 +22,31 @@ jobs:
     env:
       NODE_VERSION: 23.x
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout git repository
+        uses: actions/checkout@v4
 
       # - name: Get opened PRs
       #   id: openedPRs
       #   env:
       #     GH_TOKEN: ${{ github.token }}
       #   run: |
-      #     openprs="$(gh pr list --state open --json number --template '{{range .}}pr-preview/pr-{{ .number}}{{"\n"}}{{end}}')"
-      #     TEST="A super long multine string here
-      #     Line 2
-      #     Line 3
-      #     "
-      #     {
-      #       echo 'prs<<EOF'
-      #       echo "${openprs}"
-      #       echo EOF
-      #     } >> $GITHUB_OUTPUT
+      #     json_array="$(gh pr list --state open --json number --jq 'map("mypath/pr-\(.number)")' | tr -d '\n')
+      #     echo "openprs=$json_array"" >> $GITHUB_OUTPUT
       #
       # - name: Info
       #   env:
-      #     openprs: "${{ steps.openedPRs.outputs.prs }}"
+      #    openprs: "${{ steps.openedPRs.outputs.openprs }}"
       #   run: |
       #     echo ${{ env.openprs }}
 
-      - name: Cache node modules
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: yarn
+          cache-dependency-path: './yarn.lock'
+
+      - name: Cache Node.js modules to speed up future builds
         id: cache-node-modules
         uses: actions/cache@v4
         with:
@@ -54,12 +54,6 @@ jobs:
           key: docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('./yarn.lock') }}
           restore-keys: |
             docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: yarn
-          cache-dependency-path: './yarn.lock'
 
       - uses: webfactory/ssh-agent@v0.5.0
         with:
@@ -95,4 +89,6 @@ jobs:
           folder: build # The folder the action should deploy.
           clean-exclude: |
             pr-preview/
+
+#          clean-exclude: ${{ fromJson(steps.openedPRs.outputs.openprs) }}
 

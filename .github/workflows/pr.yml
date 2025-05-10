@@ -26,9 +26,32 @@ jobs:
       BASE_URL: 
       NODE_VERSION: 23.x
     steps:
-      - uses: actions/checkout@v4
+      - name: Get opened PRs
+        id: openedPRs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          json_array="$(gh pr list --state open --json number --jq 'map("mypath/pr-\(.number)")')
+          echo "openprs=$json_array"" >> $GITHUB_OUTPUT
 
-      - name: Cache node modules
+      - name: Info
+        env:
+         openprs: "${{ steps.openedPRs.outputs.openprs }}"
+        run: |
+          echo ${{ env.openprs }}
+
+      - name: Checkout git repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: yarn
+          cache-dependency-path: './yarn.lock'
+
+      - name: Cache Node.js modules to speed up future builds
         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         id: cache-node-modules
         uses: actions/cache@v4
@@ -37,13 +60,6 @@ jobs:
           key: docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('./yarn.lock') }}
           restore-keys: |
             docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-
-
-      - uses: actions/setup-node@v4
-        if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: yarn
-          cache-dependency-path: './yarn.lock'
 
       - name: Install Node Packages
          # You might want to skip the build if the PR has been closed
