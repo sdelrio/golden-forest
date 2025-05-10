@@ -28,6 +28,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: debug default node version
+        run: |
+          node --version
+      
       - name: Cache node modules
         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         id: cache-node-modules
@@ -35,6 +39,7 @@ jobs:
         with:
           path: ./node_modules
           key: docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-${{ hashFiles('./yarn.lock') }}
+          override_local_node: false
           restore-keys: |
             docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-
 
