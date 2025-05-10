@@ -26,6 +26,9 @@ jobs:
       BASE_URL: 
       NODE_VERSION: 23.x
     steps:
+      - name: Checkout git repository
+        uses: actions/checkout@v4
+
       - name: Get opened PRs
         id: openedPRs
         env:
@@ -39,9 +42,6 @@ jobs:
          openprs: "${{ steps.openedPRs.outputs.openprs }}"
         run: |
           echo ${{ env.openprs }}
-
-      - name: Checkout git repository
-        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
