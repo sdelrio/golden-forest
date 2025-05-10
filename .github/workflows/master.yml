@@ -85,14 +85,14 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
 
-      - name: Install Node Packages
-        if: ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
-        run: |
-          if [ -e yarn.lock ]; then
-            yarn install --frozen-lockfile --prefer-offline
-          else
-            exit 1
-          fi
+      # - name: Install Node Packages
+      #   if: ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
+      #   run: |
+      #     if [ -e yarn.lock ]; then
+      #       yarn install --frozen-lockfile --prefer-offline
+      #     else
+      #       exit 1
+      #     fi
 
       - name: Build Docusaurus
         env:

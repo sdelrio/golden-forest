@@ -54,17 +54,17 @@ jobs:
       #     restore-keys: |
       #       docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-
 
-      - name: Install Node Packages
-         # You might want to skip the build if the PR has been closed
-        if: (github.event.action != 'closed') &&
-            (steps.cache-node-modules.outputs.cache-hit != 'true')
-        run: |
-          if [ -e yarn.lock ]; then
-            # use network only if dependencies are not available in local cache with --prefer-offline
-            yarn install --frozen-lockfile --prefer-offline
-          else
-            exit 1
-          fi
+      # - name: Install Node Packages
+      #    # You might want to skip the build if the PR has been closed
+      #   if: (github.event.action != 'closed') &&
+      #       (steps.cache-node-modules.outputs.cache-hit != 'true')
+      #   run: |
+      #     if [ -e yarn.lock ]; then
+      #       # use network only if dependencies are not available in local cache with --prefer-offline
+      #       yarn install --frozen-lockfile --prefer-offline
+      #     else
+      #       exit 1
+      #     fi
 
       - name: Build Docusaurus
         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
