@@ -69,7 +69,6 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: yarn
-          override_local_node: false
           cache-dependency-path: './yarn.lock'
 
       # - name: Cache Node.js modules to speed up future builds
