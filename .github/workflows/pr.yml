@@ -30,20 +30,21 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Get opened PRs
-        id: openedPRs
+        id: opened-prs
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           json_array="$(gh pr list --state open --json number --jq 'map("mypath/pr-\(.number)")')
-          echo "openprs=$json_array"" >> $GITHUB_OUTPUT
-          echo $json_array
+          echo "prs=$json_array"" >> $GITHUB_OUTPUT
+          echo "json_array --> $json_array"
+          echo "GH_OUTPUT=$GITHUB_OUTPUT"
 
       - name: Info
         env:
-         openprs: "${{ steps.openedPRs.outputs.openprs }}"
+         openprs: "${{ steps.opened-prs.outputs.prs }}"
         run: |
           echo ${{ env.openprs }}
-          echo "${{ steps.openedPRs.outputs.openprs }}"
+          echo "${{ steps.opened-prs.outputs.prs }}"
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
