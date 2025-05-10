@@ -46,7 +46,7 @@ jobs:
           cat $GITHUB_OUTPUT # Optional: for debugging
 
       - name: Setup jq
-        uses: dcarbone/install-jq-actions@v3
+        uses: dcarbone/install-jq-action@v3
         with:
           version: '1.7.1'
           force: false
