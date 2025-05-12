@@ -1567,7 +1567,7 @@ Your proficiency with magical equipment and powerful items is remarkable, granti
 
 You gain the following benefits.
 
-+ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 2, to a maximum of 30.
 + You can be attuned to an additional magical item at a time. You can attune yourself to any number of magic items over the course of a single short rest, or to a single item by spending 10 continuous minutes handling the item.
 + When you are attuned to a item that have charges, you can use its charges as spells slots for non-epic spells you cast.
 + When you touch a magic item of mythic rarity or lower for the first time, you immediately learn its properties and features.
