@@ -1527,6 +1527,8 @@ You are immune to the exhausted condition
 
 ### Alchamaestro
 
++ **Ability Score Increase.** Increase your Constitution or Intelligence score by 1, to a maximum of 30.
+
 Your physiology is well adapted for consuming and enduring the effects of potions, granting you the following benefits.
 
 + When you would drink a potion as an action, you may instead drink it as a bonus action. When you would drink a potion as a bonus action, you may instead drink it as a free action
@@ -1552,7 +1554,7 @@ You understand the nature of magic on nearly every level, which allows you to ma
 
 You gain the following benefits.
 
-+ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 2, to a maximum of 30.
 + You learn one Divination School spell from a level you can cast. You can cast that spell once without expending a spell slot. Once you have used this feature, until you finish a long rest you cannot cast it again without expending a spell slot of the appropiate level.
 + You have Epic advantage on saving throws against non-Epic and Epic spells as well as non-Epic and Epic magical effects.
 + You automatically identify Non-Epic spells that you can see. Epic spells are identified with a successful Arcana check vs DC 21 for Tier 1 Epic, 25 for Tier 2 Epic and 28 for Tier 3 Epic.
@@ -1575,7 +1577,7 @@ You gain the following benefits.
 
 Your speed and reflexes are indescribable, allowing you to move without being perceived.
 
-+ **Ability Score Increase.** Increase your Dexterity score by 1, to a maximum of 30.
++ **Ability Score Increase.** Increase your Dexterity score by 2, to a maximum of 30.
 + Your movement increased by 30 feet. When you move, you do so with such speed that it appears instantaneous to other creatures, as though you had teleported to where you ended your movement. As a result, your movement does not provoke opportunity attacks and you are heavily obscured while you are moving.
 + When you take the Dash action, you also take the Dodge action.
 
@@ -1606,6 +1608,8 @@ You are unrivaled in ranged combat, performing feats of sharpshooting that leave
 
 You gain the following benefits.
 
++ **Ability Score Increase.** Increase your Dexterity 1, to a maximum of 30.
+
 + You can make opportunity attacks using ranged weapons, and creatures provoke opportunity attacks from you when they lose total cover against you.
 + You can make ranged weapon attacks against targets that have total cover from you, provided you know where they are approximately and there is a solid surface within 30 feet of the target that the target does not have total cover from and is within range of your weapon. To make such an attack, you must take a −5 penalty to your attack roll as you ricochet your attack off the solid surface in an attempt to hit the target.
 + When you miss a ranged weapon attack, you learn the AC of your target, and any effects affecting your target AC.
@@ -1622,6 +1626,8 @@ You are an unrelenting force of destruction, dealing death with every blow. You 
 
 Your charges lay waste to your enemies in battle, driving them back with the ferocity of your blows. You gain the following benefits.
 
++ **Ability Score Increase.** Increase your Strength score by 1, to a maximum of 30.
+
 + On each of your turns, when you take the Dash action for the first time on your turn, you may also take an Attack action. When you take the Attack action granted by this feature, you cannot spend any movement for the remainder of that turn. If you hit with the first attack of your attack action you deal critical damage.
 + When you shove a creature, you may spend 5 or more feet of movement to increase the distance the creature is pushed away from you by 10 feet for every 5 feet of movement spent.
 + When you take the Dash action, every time you spend movement you can shake the ground within 15 feet of you with your footfalls.
@@ -1630,7 +1636,7 @@ Your charges lay waste to your enemies in battle, driving them back with the fer
 
 You harness the power of good and evil, which allows you to smite enemies with raw holy or unholy power. You gain the following benefits.
 
-You harness the power of good and evil, which allows you to smite enemies with raw holy or unholy power. You gain the following benefits.
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 2, to a maximum of 30.
 
 + You can use your Channel Divinity feature to regain a spell slot up to 5th level.
 + When you deal radiant damage, you may instead do righteous damage, or when you deal necrotic damage, you may instead do vile damage.
@@ -1640,6 +1646,8 @@ You harness the power of good and evil, which allows you to smite enemies with r
 ### Extraordinary Focus
 
 You concentrate with precision and discipline even through the most trying of circumstances. You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
 
 + You automatically succeed on saving throws to maintain concentration on your spells and other effects.
 + When you become incapacitated and are concentrating on a spell or effect, you may attempt a Constitution saving throw with a DC equal to your spell save DC. On a successful save, you maintain concentration through the duration of your incapacitation.
@@ -1658,7 +1666,7 @@ You gain the following benefits.
 
 Your senses are always acute and accurate, granting you the following benefits.
 
-+ **Ability Score Increase.** Increase any ability score by 1, to a maximum of 30.
++ **Ability Score Increase.** Increase any ability score by 2, to a maximum of 30.
 + You always know the DC of a saving throw before you attempt it. You use your reaction to give yourself advantage on a saving throw you attempt.
 + You cannot be surprised, and when initiative is rolled, you may immediately move up to your speed.
 + You instinctively sense if an area is or isn’t safe to rest.
@@ -1669,7 +1677,7 @@ Your mind possesses remarkable clarity and strength, which allows you to resist 
 
 You gain the following benefits.
 
-+ **Ability Score Increase.** Increase your Wisdom score by 1, to a maximum of 30.
++ **Ability Score Increase.** Increase your Wisdom score by 2, to a maximum of 30.
 + If you are not unconscious, you are immune to psychic damage, to the effects of the spells that would deal psychic damage, to any effect that would sense your emotions or read your thoughts, to non-Epic divination spells, and to the charmed or frightened conditions.
 + When you attempt a Constitution saving throw, you may attempt a Wisdom saving throw instead (the DC remains the same).
 + If a creature attempts to communicate telepathically with you, you may concentrate (as though concentrating on a spell) to prevent that communication.
@@ -1679,6 +1687,8 @@ You gain the following benefits.
 You are a master of healing energies, able to restore even the most wounded creature to full strength.
 
 You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
 
 + When you cause a creature to regain hit points with a feature or spell, you double the amount of hit points regained after all dice (if any) are rolled and modifiers (if any) are applied.
 + When you cause a creature to regain hit points, if that creature has missing body parts (eyes, legs, arms, etc.), you can restore one missing body part.
@@ -1704,7 +1714,8 @@ Together your armor and shield provide the ultimate defense against your enemies
 
 ### Legendary Potency
 
-+ **Ability Score Increase.** Increase any ability score by 1, to a maximum of 30.
++ **Ability Score Increase.** Increase any ability score by 2, to a maximum of 30.
+
 + When a creature uses legendary resistance or mythic resistance to save against an effect caused by you, you can force that creature to make the saving throw as normal. You can also counterattack a legendary creature that uses a legendary action to attack you, using your reaction to make an attack of opportunity against it.
 
 ### Legendary Resistance
@@ -1716,7 +1727,8 @@ Together your armor and shield provide the ultimate defense against your enemies
 
 You can master techniques and tools with Epic speed, granting you the following benefits.
 
-+ **Ability Score Increase.** Increase any ability score by 1, to a maximum of 30
++ **Ability Score Increase.** Increase any ability score by 2, to a maximum of 30
+
 + You have 3 legend points. When you finish a long rest, you can spend those legend points to gain proficiency in a single skill or tool of your choice for each legend point spent. If you are already proficient in the skill you choose, you instead double your proficiency bonus for any ability check you attempt that uses the chosen skill. Proficiencies gained through legend points last until you finish a long rest, and you regain spent legend points when you finish a long rest.
 + When you roll a 20 on an ability check in which you are proficient, you automatically succeed on that ability check. If you use any feature other than rolling the d20 to achieve the result, you do not automatically succeed on the ability check.
 + When you expend inspiration or prestige granted by your DM, roll a d20. On a roll of 11 or higher, you instead do not expend your inspiration or prestige but cannot use it again until you finish a long rest
@@ -1725,6 +1737,7 @@ You can master techniques and tools with Epic speed, granting you the following 
 
 You are so comfortable in armor it is like a second skin, granting you the following benefits.
 
++ **Ability Score Increase.** Increase your Constitution, Dexterity or Strength score by 2, to a maximum of 30.
 + While you are wearing armor, you no longer have disadvantage on Dexterity (Stealth) ability checks, and armor no longer imposes a weight penalty.
 + While you are wearing armor, your Armor Class increases by 2 and you cannot be critically hit by weapon attacks.
 + As an action, you can don or doff any set of armor.
@@ -1732,6 +1745,8 @@ You are so comfortable in armor it is like a second skin, granting you the follo
 ### Lord of War
 
 Your skill with weapons of war cannot be rivaled, allowing you to wield them with peerless ability.
+
++ **Ability Score Increase.** Increase your Constitution, Dexterity or Strength score by 1, to a maximum of 30.
 
 When you select this feat, choose three different weapon properties from the following table. You gain the corresponding benefits according to which weapon properties you select.
 
@@ -1765,7 +1780,7 @@ In mere moments you cast spells that others take hours to perform.
 
 You gain the following benefits.
 
-+ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 2, to a maximum of 30.
 + When you cast a non-Epic spell that is not a ritual with a casting time greater than 1 action, you may instead cast that spell as an action.
 + The casting time for Epic rituals you cast is halved, and and non-Epic rituals require 1 extra minute instead of 10.
 + You instinctively know the local customs and social rituals of communities you encounter.
@@ -1773,6 +1788,7 @@ You gain the following benefits.
 ### Master of Tactics
 
 Your tactical genius allows you to make the most of every advantage, granting you the following benefits.
++ **Ability Score Increase.** Increase an ability score of your choice by 1, to a maximum of 30.
 
 + When you have advantage or Epic advantage on an attack roll or ability check, you roll three d20s instead of two. You use the highest of the three rolls to determine the result of the roll.
 + You cannot have disadvantage or Epic disadvantage on attack rolls or ability checks.
@@ -1810,6 +1826,8 @@ You are an exemplar to others, gaining the following benefits.
 
 Your body is the pinnacle of physical health, granting you the following benefits.
 
++ **Ability Score Increase.** Increase your Constitution score by 1, to a maximum of 30.
+
 + Your hit point maximum increases as though you had rolled the highest possible roll on each of your Hit Dice each time you gained a level, instead of what you had rolled before you selected this feat.
 + At the end of a long rest, you regain all your spent Hit Dice instead of half your total Hit Dice.
 + When you recover hit points by rolling hit dice, you take the maximum result of the roll.
@@ -1822,7 +1840,7 @@ Your attacks are as tenacious as they are deadly, turning the fury of a failed a
 
 You gain the following benefits.
 
-+ **Ability Score Increase.** Increase your Strenght or Dexterity score by 1, to a maximum of 30.
++ **Ability Score Increase.** Increase your Strenght or Dexterity score by 2, to a maximum of 30.
 + When you miss on a weapon attack on your turn, you gain a cumulative +5 bonus and +1 to critical range to all subsequent weapon attacks you make until the end of your turn.
 + The targets of your weapon attacks cannot take reactions in response to your weapon attacks.
 + When you are slain, you always die with dignity.
@@ -1862,6 +1880,8 @@ You gain the following benefits.
 
 Your magic is so powerful as to overwhelm lesser creatures, and your spells strike with greater efficacy. You gain the following benefits.
 
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
+
 + Your spell attacks score a critical hit on a roll of 18–20.
 + When a creature with a challenge rating of 5 or lower succeeds on a saving throw against a spell cast by you, it instead fails.
 + You learn the cantrip arcane mark
@@ -1879,7 +1899,7 @@ You can counter others’ magic with ease, turning even the mightiest spells bac
 You can sling cantrips with exceptional speed, greatly decreasing their casting time.
 
 You gain the following benefits.
-+ **Ability Score Increase.** Increase your Intelligence, Wisdom or Charisma score by 1, to a maximum of 30
++ **Ability Score Increase.** Increase your Intelligence, Wisdom or Charisma score by 2, to a maximum of 30
 + Cantrips that scale in effect when leveling, scale one additional time at 21st level and another one at 27th level.
 + If you cast a cantrip with a casting time of 1 action, you may cast a second cantrip as part of the same action.
 + When an enemy triggers an attack of opportunity from you, you can cast a cantrip at it as a reaction.
@@ -1889,6 +1909,8 @@ You gain the following benefits.
 
 You are quick on the draw, able to act before most creatures can even blink. You gain the following benefits.
 
++ **Ability Score Increase.** Increase an ability score of your choice by 1, to a maximum of 30.
+
 + If you would attempt a saving throw at the end of each of your turns to end an effect, you may instead attempt that saving throw at the start of each of your turns.
 + When you roll initiative and at the beginning of each round of combat, you may choose when you act in the initiative order, regardless of your initiative
 + When initiative is rolled, you can immediately ready an action (no action required).
@@ -1897,6 +1919,8 @@ You are quick on the draw, able to act before most creatures can even blink. You
 
 You are able to focus on multiple tasks simultaneously, diverting your focus precisely and effectively. You gain the following benefits.
 
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
+  
 + You can maintain concentration on two spells at once. You do not lose concentration on a spell if you cast a second spell that requires concentration, but you lose concentration on a single spell of your choice on which you are concentrating if you cast a third spell that requires concentration. When you are concentrating on two spells and must attempt a Constitution saving throw to maintain concentration, you must attempt a separate saving throw for each spell.
 + Your spells with a vocal component cannot be countered by non-Epic spells.
 + You may take watch and perform other activities (such as sleeping or crafting) simultaneously
