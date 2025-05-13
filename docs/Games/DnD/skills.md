@@ -305,7 +305,7 @@ To make an item, you need raw materials worth half the purchase cost of the item
 + Healer's Kit. (25 sp). 1 workday. DC 10 
 + Potion of Healing. (25 gp materials). 1 workday. DC 10. Automatic Success if proficient in Nature.
 + Potion of Greater Healing (75 gp materials). 3 workdays. DC 15. DC 10 if proficient in Nature.
-+ Potion of Superior Healing (375 gp materials). 15 workdays. DC 20. DC 15 if proficinet in Nature.
++ Potion of Superior Healing (375 gp materials). 15 workdays. DC 20. DC 15 if proficient in Nature.
 + Potion of Supreme Healing. (750 gp materials). 30 workdays. DC 25. DC 20 if proficient in Nature.
 + Keogthom Ointment. (80 gp materials). 3 workdays. DC 15. DC 10 if proficient in Nature.
 + Herbal Healing Poultice (50 gp materials). 2 workdays. DC 12. DC 10 if proficint in Nature.
