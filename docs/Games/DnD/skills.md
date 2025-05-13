@@ -374,8 +374,8 @@ You must have the spell prepared in each day of the inscription, and you must al
 | 1st | 1 workday | 20 GP | 11 |
 | 2nd | 3 workdays | 75 GP | 12 | 
 | 3rd | 5 workdays | 200 GP | 13 |
-| 4th | 10 workdays | 300 GP | 14 |
-| 5th | 25 workdays | 500 GP | 15 | 
+| 4th | 10 workdays | 350 GP | 14 |
+| 5th | 25 workdays | 600 GP | 15 | 
 | 6th | 40 workdays | 1.250 GP | 16 | 
 | 7th | 50 workdays | 2.500 GP | 17 | 
 | 8th | 60 workdays | 5.000 GP | 18 | 
