@@ -1721,7 +1721,7 @@ Together your armor and shield provide the ultimate defense against your enemies
 ### Legendary Resistance
 
 + **Ability Score Increase.** Increase any ability score by 1, to a maximum of 30.
-+ If the you fail a saving throw, you can choose to succeed instead. You can use this ability up to three times, and regain all of your uses whenever you finish a long rest.
++ If you fail a saving throw, you can choose to succeed instead. You can use this ability up to three times, and regain all of your uses whenever you finish a long rest.
 
 ### Legendary Skills
 
