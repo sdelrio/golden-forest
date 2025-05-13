@@ -17,7 +17,7 @@ A character take a lingering injury when:
 + Light injuries can be treated as an action during combat. All other injuries can only be treated during a short or long rest. Only one check per injury can be attempt on each rest.
 + Injuries marked with the Ø symbol cannot be treated without magical healing.
 + A character proficient in medicine can spend 1 use of the Healer's Kit to automatically stabilize a dying character. If not proficient, the character rolls a WIS check vs DC 10 (or DC 15 if an enemy is within 5 feet of you or your target).
-+ A Healier's kit can also be used to restore 1d4 hp to a stabilized character with 0 hit points. It requires medicine check DC 15 (DC 10 when out of combat)
++ A Healer's kit can also be used to restore 1d4 hp to a stabilized character with 0 hit points. It requires medicine check DC 15 (DC 10 when out of combat)
 
 ### Magical Treatment (Potions and Healing Spells)
 
