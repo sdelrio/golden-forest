@@ -1737,7 +1737,7 @@ You can master techniques and tools with Epic speed, granting you the following 
 
 You are so comfortable in armor it is like a second skin, granting you the following benefits.
 
-+ **Ability Score Increase.** Increase your Constitution, Dexterity or Strength score by 2, to a maximum of 30.
++ **Ability Score Increase.** Increase your Constitution, Dexterity or Strength score by 1, to a maximum of 30.
 + While you are wearing armor, you no longer have disadvantage on Dexterity (Stealth) ability checks, and armor no longer imposes a weight penalty.
 + While you are wearing armor, your Armor Class increases by 2 and you cannot be critically hit by weapon attacks.
 + As an action, you can don or doff any set of armor.
