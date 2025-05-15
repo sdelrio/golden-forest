@@ -1554,7 +1554,7 @@ You understand the nature of magic on nearly every level, which allows you to ma
 
 You gain the following benefits.
 
-+ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 2, to a maximum of 30.
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
 + You learn one Divination School spell from a level you can cast. You can cast that spell once without expending a spell slot. Once you have used this feature, until you finish a long rest you cannot cast it again without expending a spell slot of the appropiate level.
 + You have Epic advantage on saving throws against non-Epic and Epic spells as well as non-Epic and Epic magical effects.
 + You automatically identify Non-Epic spells that you can see. Epic spells are identified with a successful Arcana check vs DC 21 for Tier 1 Epic, 25 for Tier 2 Epic and 28 for Tier 3 Epic.
