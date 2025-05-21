@@ -7,7 +7,7 @@
 The greatclub has the 'Impactful' property
 
 :::note
-**Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When you roll a '1' on the damage roll, reroll the die. When you roll the maximum result on the damage dice, add another die to the damage roll (stacks)
 :::
 
 ### Light Hammer
@@ -15,8 +15,7 @@ The greatclub has the 'Impactful' property
 The light hammer has the 'Impactful' property
 
 :::note
-**Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 a:w
-dditional damage.
+**Impactful** When you roll a '1' on the damage roll, reroll the die. When you roll the maximum result on the damage dice, add another die to the damage roll (stacks)
 :::
 
 ### Mace
@@ -24,7 +23,7 @@ dditional damage.
 The mace has the 'Impactful' property
 
 :::note
-**Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When you roll a '1' on the damage roll, reroll the die. When you roll the maximum result on the damage dice, add another die to the damage roll (stacks)
 :::
 
 ### Sickle
@@ -38,7 +37,7 @@ The sickle does '1d4+1' damage instead of 1d4
 The Morningstar has the 'Impactful' property
 
 :::note
-**Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When you roll a '1' on the damage roll, reroll the die. When you roll the maximum result on the damage dice, add another die to the damage roll (stacks)
 :::
 
 ### Flail
@@ -46,5 +45,5 @@ The Morningstar has the 'Impactful' property
 The Flail has the 'Impactful' property
 
 :::note
-**Impactful** When you make an attack with this weapon you can use a bonus action to throw your weight into the attack. The next hit until the end your turn does 1d4 additional damage.
+**Impactful** When you roll a '1' on the damage roll, reroll the die. When you roll the maximum result on the damage dice, add another die to the damage roll (stacks)
 :::
