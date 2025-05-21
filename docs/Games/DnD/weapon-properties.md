@@ -7,7 +7,7 @@
 The greatclub has the 'Impactful' property
 
 :::note
-**Impactful** When you roll a '1' on the damage roll, reroll the die. When you roll the maximum result on the damage dice, add another die to the damage roll and subtract 1 from the result (stacks)
+**Impactful** When you roll maximum result on the damage roll, add another die to the damage roll (stacks)
 :::
 
 ### Light Hammer
@@ -15,7 +15,7 @@ The greatclub has the 'Impactful' property
 The light hammer has the 'Impactful' property
 
 :::note
-**Impactful** When you roll a '1' on the damage roll, reroll the die. When you roll the maximum result on the damage dice, add another die to the damage roll and subtract 1 from the result
+**Impactful** When you roll maximum result on the damage roll, add another die to the damage roll (stacks)
 :::
 
 ### Mace
@@ -23,7 +23,7 @@ The light hammer has the 'Impactful' property
 The mace has the 'Impactful' property
 
 :::note
-**Impactful** When you roll a '1' on the damage roll, reroll the die. When you roll the maximum result on the damage dice, add another die to the damage roll and subtract 1 from the result
+**Impactful** When you roll maximum result on the damage roll, add another die to the damage roll (stacks)
 :::
 
 ### Sickle
@@ -37,7 +37,7 @@ The sickle does '1d4+1' damage instead of 1d4
 The Morningstar has the 'Impactful' property
 
 :::note
-**Impactful** When you roll a '1' on the damage roll, reroll the die. When you roll the maximum result on the damage dice, add another die to the damage roll and subtract 1 from the result
+**Impactful** When you roll maximum result on the damage roll, add another die to the damage roll (stacks)
 :::
 
 ### Flail
@@ -45,5 +45,5 @@ The Morningstar has the 'Impactful' property
 The Flail has the 'Impactful' property
 
 :::note
-**Impactful** When you roll a '1' on the damage roll, reroll the die. When you roll the maximum result on the damage dice, add another die to the damage roll and subtract 1 from the result
+**Impactful** When you roll maximum result on the damage roll, add another die to the damage roll (stacks)
 :::
