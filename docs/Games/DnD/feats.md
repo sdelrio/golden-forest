@@ -585,6 +585,18 @@ You gain the following benefits:
 + Whenever you attempt a Charisma (intimidation) check against a creature of your size or smaller, you can add your Strength modifier to the result.
 
 
+### Inspiring Leader
+
+*Prerequisite: Wisdom or Charisma 13+*
+
+You are able to mold the essence of your protective spells to fill yourself with vigor.
+
++ **Ability Score Increase.** Increase your Wisdom or Charisma score by 1, to a maximum of 20.
+
++ Bolstering Performance. When you finish a Short or Long Rest, you can give an inspiring perfor¬ mance: a speech, song, or dance. When you do so, choose up to six allies (which can include yourself) within 30 feet of yourself who witness the perfor¬ mance. The chosen creatures each gain Temporary Hit Points equal to your character level plus the modifier of the ability you increased with this feat.
+
+
+
 ### Invigorating Abjuration  
 
 *Prerequisite: The ability to cast at least one spell*
