@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.lorien.cloud/pr-preview/pr-44/blog</id>
+    <title>The Golden Forest Blog</title>
+    <updated>2022-01-29T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.lorien.cloud/pr-preview/pr-44/blog"/>
+    <subtitle>The Golden Forest Blog</subtitle>
+    <icon>https://www.lorien.cloud/pr-preview/pr-44/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[k8s linter]]></title>
+        <id>https://www.lorien.cloud/pr-preview/pr-44/blog/blog-kubelinter</id>
+        <link href="https://www.lorien.cloud/pr-preview/pr-44/blog/blog-kubelinter"/>
+        <updated>2022-01-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Init k8s linter section]]></summary>
+        <content type="html"><![CDATA[<p>Init k8s linter section</p>
+<ul>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Cloud-Platform/Kubernetes/k8s-linter#kubelinter">k8s linter tools</a>
+<ul>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Cloud-Platform/Kubernetes/k8s-linter#kubelinter">kubelinter</a></li>
+</ul>
+</li>
+</ul>]]></content>
+        <author>
+            <name>sdelrio</name>
+            <uri>https://github.com/sdelrio</uri>
+        </author>
+        <category label="k8s" term="k8s"/>
+        <category label="linter" term="linter"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[API standards]]></title>
+        <id>https://www.lorien.cloud/pr-preview/pr-44/blog/blog-init-api-standard</id>
+        <link href="https://www.lorien.cloud/pr-preview/pr-44/blog/blog-init-api-standard"/>
+        <updated>2022-01-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Init API Standards section]]></summary>
+        <content type="html"><![CDATA[<p>Init API Standards section</p>
+<ul>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Coding/api">API Standards</a>
+<ul>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Coding/api#rest">REST</a>
+<ul>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Coding/api#openapi">OpenAPI</a></li>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Coding/api#asyncapi">AsyncAPI</a></li>
+</ul>
+</li>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Coding/api#odata">OData</a></li>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Coding/api#graphql">GraphQL</a></li>
+</ul>
+</li>
+</ul>]]></content>
+        <author>
+            <name>sdelrio</name>
+            <uri>https://github.com/sdelrio</uri>
+        </author>
+        <category label="sections" term="sections"/>
+        <category label="api" term="api"/>
+        <category label="REST" term="REST"/>
+        <category label="OData" term="OData"/>
+        <category label="GraphQL" term="GraphQL"/>
+        <category label="OpenAPI" term="OpenAPI"/>
+        <category label="AsyncAPI" term="AsyncAPI"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Microservces]]></title>
+        <id>https://www.lorien.cloud/pr-preview/pr-44/blog/blog-init-microservices-section</id>
+        <link href="https://www.lorien.cloud/pr-preview/pr-44/blog/blog-init-microservices-section"/>
+        <updated>2022-01-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Init Microservices section]]></summary>
+        <content type="html"><![CDATA[<p>Init Microservices section</p>
+<ul>
+<li>Sofware-Architecture<!-- -->
+<ul>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Software-Architecture/microservices">Microservices</a></li>
+</ul>
+</li>
+</ul>]]></content>
+        <author>
+            <name>sdelrio</name>
+            <uri>https://github.com/sdelrio</uri>
+        </author>
+        <category label="sections" term="sections"/>
+        <category label="microservices" term="microservices"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Syslog, nginx-ingress sticky session, Dockerfile python update]]></title>
+        <id>https://www.lorien.cloud/pr-preview/pr-44/blog/blog-initial-syslog</id>
+        <link href="https://www.lorien.cloud/pr-preview/pr-44/blog/blog-initial-syslog"/>
+        <updated>2022-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Initial syslog, add nginx-ingress sticky seessions, update Dockerfile for python]]></summary>
+        <content type="html"><![CDATA[<p>Initial syslog, add nginx-ingress sticky seessions, update Dockerfile for python</p>
+<ul>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/OS/GNU-Linux/syslog">Syslog</a></li>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Cloud-Platform/Kubernetes/k8s-nginx#sticky-sessions">nginx-ingress sticky session</a></li>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Containers/Docker/dockerfile-python#alpine-base-image">Dockerfiel for Python why not Alpine</a></li>
+</ul>]]></content>
+        <author>
+            <name>sdelrio</name>
+            <uri>https://github.com/sdelrio</uri>
+        </author>
+        <category label="sections" term="sections"/>
+        <category label="syslog" term="syslog"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Initial Python section]]></title>
+        <id>https://www.lorien.cloud/pr-preview/pr-44/blog/blog-initial-python</id>
+        <link href="https://www.lorien.cloud/pr-preview/pr-44/blog/blog-initial-python"/>
+        <updated>2021-12-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Initial python section.]]></summary>
+        <content type="html"><![CDATA[<p>Initial python section.</p>
+<ul>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Coding/Python/">Python</a>
+<ul>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Coding/Python/python-unit-test">Unit-test</a></li>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Coding/Python/python-compile">Compile</a></li>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Coding/Python/python-libraries">Libraries</a></li>
+</ul>
+</li>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Containers/Docker/dockerfile-python">Dockerfile for python</a></li>
+</ul>]]></content>
+        <author>
+            <name>sdelrio</name>
+            <uri>https://github.com/sdelrio</uri>
+        </author>
+        <category label="sections" term="sections"/>
+        <category label="python" term="python"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Initial Setup]]></title>
+        <id>https://www.lorien.cloud/pr-preview/pr-44/blog/blog-initial-setup</id>
+        <link href="https://www.lorien.cloud/pr-preview/pr-44/blog/blog-initial-setup"/>
+        <updated>2021-12-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Initial setup of content sections. Also added some detailed notes about:]]></summary>
+        <content type="html"><![CDATA[<p>Initial setup of content sections. Also added some detailed notes about:</p>
+<ul>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/OS/GNU-Linux/ZFS/">ZFS</a></li>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/Multimedia/darktable">Darktable</a></li>
+<li><a href="https://www.lorien.cloud/pr-preview/pr-44/docs/OS/GNU-Linux/KVM/kvm-qemu">KVM</a></li>
+</ul>]]></content>
+        <author>
+            <name>sdelrio</name>
+            <uri>https://github.com/sdelrio</uri>
+        </author>
+        <category label="sections" term="sections"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[First Post]]></title>
+        <id>https://www.lorien.cloud/pr-preview/pr-44/blog/first-post</id>
+        <link href="https://www.lorien.cloud/pr-preview/pr-44/blog/first-post"/>
+        <updated>2021-11-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Initial setup of Docusaurus and start for the web page and blog.]]></summary>
+        <content type="html"><![CDATA[<p>Initial setup of Docusaurus and start for the web page and blog.</p>
+<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p>
+<p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
+<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://www.lorien.cloud/pr-preview/pr-44/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>sdelrio</name>
+            <uri>https://github.com/sdelrio</uri>
+        </author>
+        <category label="hola" term="hola"/>
+        <category label="docusaurus" term="docusaurus"/>
+    </entry>
+</feed>
