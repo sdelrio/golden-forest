@@ -58,11 +58,12 @@ check:  ## Docusaurus MDX checker (usefull on MDX version migrations)
 build: ## Build page
 	@DOCUSAURUS_IGNORE_SSG_WARNINGS=true yarn build
 
+# Algolia doesn't mantain this scraper anymore
 algolia:  ## Generate algolia index
 	@if [ -f $$HOME/.algoliaenv ]; then \
 		docker run --rm -it --env-file=$$HOME/.algoliaenv \
-		  -e "CONFIG=$$(cat $$(pwd)/.docsearch.json| jq -r tostring)" \
-		  algolia/docsearch-scraper -v;\
+		  -e "CONFIG=$$(cat $$(pwd)/.algolia.docsearch.json| jq -r tostring)" \
+		  algolia/docsearch-scraper:latest -v;\
 	else \
 		echo "[Error] Missing ~/.algoliaenv";\
 		echo "[Info] File format:";\
@@ -70,3 +71,16 @@ algolia:  ## Generate algolia index
 		echo "API_KEY=0123456789abcdef0123456789abcdef";\
 	fi
 
+# algolia docsearch fork:
+# https://github.com/typesense/typesense-docsearch-scraper
+typesense:
+	@if [ -f $$HOME/.algoliaenv ]; then \
+		docker run --rm -it --env-file=$$HOME/.algoliaenv \
+		  -e "CONFIG=$$(cat $$(pwd)/.typesense.docsearch.json| jq -r tostring)" \
+		  typesense/docsearch-scraper:latest -v;\
+	else \
+		echo "[Error] Missing ~/.algoliaenv";\
+		echo "[Info] File format:";\
+		echo "APPLICATION_ID=1234567UVW";\
+		echo "API_KEY=0123456789abcdef0123456789abcdef";\
+	fi
