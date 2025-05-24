@@ -1,30 +1,27 @@
 # Modified Weapon Properties
 
+import Impactful from './_markdown-impactful.mdx';
+
 ## Simple Melee Weapons
 
 ### Greatclub
 
-The greatclub has the 'Impactful' property
+The greatclub has the _Impactful_ property
 
-:::note
-**Impactful** When you roll maximum result on the damage roll, add another die to the damage roll (stacks)
-:::
+<Impactful />
 
 ### Light Hammer
 
-The light hammer has the 'Impactful' property
 
-:::note
-**Impactful** When you roll maximum result on the damage roll, add another die to the damage roll (stacks)
-:::
+The light hammer has the _Impactful_ property
+
+<Impactful />
 
 ### Mace
 
-The mace has the 'Impactful' property
+The mace has the _Impactful_ property
 
-:::note
-**Impactful** When you roll maximum result on the damage roll, add another die to the damage roll (stacks)
-:::
+<Impactful />
 
 ### Sickle
 
@@ -34,16 +31,12 @@ The sickle does '1d4+1' damage instead of 1d4
 
 ### Morningstar
 
-The Morningstar has the 'Impactful' property
+The Morningstar has the _Impactful_ property
 
-:::note
-**Impactful** When you roll maximum result on the damage roll, add another die to the damage roll (stacks)
-:::
+<Impactful />
 
 ### Flail
 
-The Flail has the 'Impactful' property
+The Flail has the _Impactful_ property
 
-:::note
-**Impactful** When you roll maximum result on the damage roll, add another die to the damage roll (stacks)
-:::
+<Impactful />
