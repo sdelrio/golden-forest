@@ -216,49 +216,18 @@ html h2 {
 }
 
 /* Aplicar el SVG */
-html hr {
+.markdown hr {
   background-image: url('/img/divider-02.svg');
 }
 
-
-.main-wrapper hr,
-.docs-wrapper hr, /* Common class for docs content */
-article hr {
-  border: none; /* Elimina cualquier borde predeterminado */
-  height: 18px; /* La altura de tu SVG. Ajusta según el 'height' de tu viewBox */
+.markdown hr {
+  height: 15px; /* La altura de tu SVG. Ajusta según el 'height' de tu viewBox */
   background-repeat: no-repeat;
-  background-position: left top; /* Asegura que la imagen empiece a la izquierda */
-  background-size: auto 100%; /* Ajusta la altura de la imagen al 100% de la altura del pseudo-elemento, manteniendo la proporción */
+  background-position: left top; /* Ajuste si la imagen no cubre todo el alto */
+  background-size: 100% auto;
   margin: 0.33rem 0; /* Espacio para el HR, ajusta según sea necesario */
-  overflow: hidden; /* Oculta cualquier parte del SVG que pueda salirse del 'height' */
   background-color: transparent; /* docusaurus sobreescribe transparencias en algunos elementos */
-  color: transparent;
-  padding: 0 !important; /* Asegura que no haya padding que pueda crear un fondo */
-  line-height: 0 !important; /* A veces el line-height puede generar espacio */
-  display: block; /* Asegura que se comporte como un bloque */
-  width: 100%; /* Asegura que ocupe todo el ancho disponible */
-  box-sizing: border-box; /* Asegura que el ancho incluye padding y border */
 }
-
-.main-wrapper hr::before,
-.docs-wrapper hr::before,
-article hr::before {
-  content: ''; /* Contenido vacío para el pseudo-elemento */
-  display: block; /* Para que ocupe espacio y aplique el fondo */
-  height: 18px; /* Altura de tu imagen de línea medieval, ajusta si es necesario */
-  background-repeat: repeat-x; /* Repite la imagen horizontalmente */
-  background-size: auto 100%; /* Ajusta la altura de la imagen al 100% de la altura del pseudo-elemento, manteniendo la proporción */
-  background-position: left top; /* Asegura que la imagen empiece a la izquierda */
-  width: 100%; /* Asegúrate de que se extienda por todo el ancho disponible */
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%); /* Centra verticalmente el pseudo-elemento */
-  z-index: 1; /* Asegura que esté por encima de cualquier cosa que el HR pueda tener */
-  /* Nuevos añadidos para consistencia en Chrome */
-  box-sizing: border-box; /* Asegura que el width/height se calculen consistentemente */
-}
-
 
 table {
   border: none !important;
