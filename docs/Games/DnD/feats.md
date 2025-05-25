@@ -1,6 +1,8 @@
 # Feats
 
-## Origin Feats. Can be selected anytime you pick a feat
+## Origin Feats
+
+Can be selected anytime you pick a feat
 
 ### Alert
 
@@ -97,7 +99,9 @@ Your Hit Point maximum increases by an amount equal to twice your character leve
 
 
 
-## Regular Feats. Can be selected from level 4th onwards.
+## Regular Feats
+
+Can be selected from level 4th onwards.
 
 ### Active Alchemy
 
@@ -397,7 +401,6 @@ Thanks to study or deep introspection, you have achieved a firm grasp on spellca
 
 + You can use a bonus action to divide a higher-level spell slot into two lower-level spell slots whose combined level is equal to or less than the original slot’s level. The lower-level spell slots must replace expended spell slots. You cannot have more available spell slots at at time than your class normally allows.
 
-
 ### Dual Wielder
 
 *Prerequisite: Strength or Dexterity 13+*
@@ -469,7 +472,6 @@ Once per day when you finish a short rest, you can choose expended spell slots t
 The spell slots can have a combined leveI that is equal to or less than half your spellcaster level (rounded up), and none of the slots can be 6th level or higher.
 For example, if you're a 4th-level bard, you can recover up to two leves worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots.
 If you already have this feature (i.e. wizard and some druids), you can use this feature 2 times between long rests.
-
 
 ### Expert Tactician
 
@@ -1308,7 +1310,9 @@ A spell cast using a whimsy requires no components, and a creature uses its spel
 
 
 
-## Level 19 Epic Boons and Feats
+## Epic Boons and Feats
+
+Can be selected from level 19th onwards.
 
 ### Boon of Combat Prowess
 
