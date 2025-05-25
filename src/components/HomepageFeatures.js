@@ -16,7 +16,7 @@ const FeatureList = [
   {
     title: 'Digital Garden',
     //Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    Svg: require('../../static/img/logo.svg').default,
+    Svg: require('../../static/img/trees-02.svg').default,
     description: (
       <>
         The phrase <i><a href="https://joelhooks.com/digital-garden">digital garden</a></i> is a metaphor for thinking about writing and

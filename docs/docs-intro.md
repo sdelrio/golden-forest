@@ -7,7 +7,7 @@ hide_table_of_contents: true
 
 This is my [digital garden](https://joelhooks.com/digital-garden) (metaphor for thinking about writing and creating) where I share some knowledge on different topics.
 
-![](/img/leaves-02.svg)
+![](/img/trees-02.svg)
 
 A garden is usually a place where things grow, and that's the idea of keeping here things treated as plants, better organized than it they were on a blog.
 
