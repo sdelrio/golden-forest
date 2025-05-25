@@ -24,6 +24,8 @@
   --ifm-font-weight-monospace: 300;
   --ifm-font-size-base: 110%;
   --ifm-font-weight-bold: 700;
+  --ifm-table-cell-padding: 0.25rem;
+  --ifm-heading-margin-bottom: 0.25rem;
 }
 
 /*
@@ -102,10 +104,12 @@
 
 html {
   background-color: #fffaeb;
+  background: linear-gradient(-90deg,rgba(250, 229, 182, 1) 0%, rgba(255, 250, 235, 1) 1%, rgba(255, 250, 235, 1) 99%, rgba(255, 215, 140, 1) 100%);
 }
 
 html[data-theme='dark'] {
   background-color: #170f00;
+  background: linear-gradient(-90deg,rgba(163, 106, 0, 1) 0%, rgba(23, 15, 0, 1) 1%, rgba(23, 15, 0, 1) 99%, rgba(163, 106, 0, 1) 100%);
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
@@ -150,5 +154,139 @@ html[data-theme='dark'] .header-github-link:before {
 .hero .button--lg {
   background-color: #c68000;
   border-color: #ffc740;
+}
+
+/* Estilos para encabezados en tema claro (por defecto) */
+html[data-theme='light'] h1,
+html[data-theme='light'] h2, h2:after,
+html[data-theme='light'] h3,
+html[data-theme='light'] h4,
+html[data-theme='light'] h5,
+html[data-theme='light'] h6,
+html[data-theme='light'] th {
+  color: #503400;
+}
+
+/* Estilos para encabezados en tema oscuro */
+html[data-theme='dark'] h1,
+html[data-theme='dark'] h2, h2::after,
+html[data-theme='dark'] h3,
+html[data-theme='dark'] h4,
+html[data-theme='dark'] h5,
+html[data-theme='dark'] h6,
+html[data-theme='dark'] th {
+  color: #c68000;
+}
+
+/* Estilo para h2: subrayado que se extiende */
+h2 {
+  position: relative; /* Necesario para posicionar el pseudoelemento */
+  display: inline-block; /* Permite que el pseudoelemento ocupe el ancho del contenido */
+  padding-bottom: 0px; /* Espacio entre el texto y la línea */
+}
+
+h2::after {
+  content: ''; /* Obligatorio para pseudoelementos */
+  position: absolute;
+  left: 0;
+  right: 0; /* Extiende la línea desde la izquierda hasta la derecha del h2 */
+  bottom: 0; /* Posiciona la línea en la parte inferior del h2 */
+  height: 2px; /* Grosor de la línea */
+}
+
+/* Color del subrayado para h2 en tema claro */
+html[data-theme='light'] h2::after {
+  background-color: #503400;
+  color: #503400;
+}
+
+/* Color del subrayado para h2 en tema oscuro */
+html[data-theme='dark'] h2::after {
+  background-color: #c68000;
+  color: #c68000;
+}
+
+/* Estilo para h2 con subrayado de ancho completo */
+html h2 {
+  border-bottom: 1px solid; /* Subrayado marrón */
+  padding-bottom: 0px; /* Espacio entre el texto y el subrayado */
+  display: block; /* Asegura que ocupe todo el ancho disponible */
+  width: 100%; /* Asegura que ocupe el 100% del ancho del padre */
+  box-sizing: border-box; /* Incluye padding y border en el width */
+}
+
+/* Aplicar el SVG */
+html hr {
+  background-image: url('/img/divider-02.svg');
+}
+
+
+.main-wrapper hr,
+.docs-wrapper hr, /* Common class for docs content */
+article hr {
+  border: none; /* Elimina cualquier borde predeterminado */
+  height: 18px; /* La altura de tu SVG. Ajusta según el 'height' de tu viewBox */
+  background-repeat: no-repeat;
+  background-position: left top; /* Asegura que la imagen empiece a la izquierda */
+  background-size: auto 100%; /* Ajusta la altura de la imagen al 100% de la altura del pseudo-elemento, manteniendo la proporción */
+  margin: 0.33rem 0; /* Espacio para el HR, ajusta según sea necesario */
+  overflow: hidden; /* Oculta cualquier parte del SVG que pueda salirse del 'height' */
+  background-color: transparent; /* docusaurus sobreescribe transparencias en algunos elementos */
+  color: transparent;
+  padding: 0 !important; /* Asegura que no haya padding que pueda crear un fondo */
+  line-height: 0 !important; /* A veces el line-height puede generar espacio */
+  display: block; /* Asegura que se comporte como un bloque */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  box-sizing: border-box; /* Asegura que el ancho incluye padding y border */
+}
+
+.main-wrapper hr::before,
+.docs-wrapper hr::before,
+article hr::before {
+  content: ''; /* Contenido vacío para el pseudo-elemento */
+  display: block; /* Para que ocupe espacio y aplique el fondo */
+  height: 18px; /* Altura de tu imagen de línea medieval, ajusta si es necesario */
+  background-repeat: repeat-x; /* Repite la imagen horizontalmente */
+  background-size: auto 100%; /* Ajusta la altura de la imagen al 100% de la altura del pseudo-elemento, manteniendo la proporción */
+  background-position: left top; /* Asegura que la imagen empiece a la izquierda */
+  width: 100%; /* Asegúrate de que se extienda por todo el ancho disponible */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%); /* Centra verticalmente el pseudo-elemento */
+  z-index: 1; /* Asegura que esté por encima de cualquier cosa que el HR pueda tener */
+  /* Nuevos añadidos para consistencia en Chrome */
+  box-sizing: border-box; /* Asegura que el width/height se calculen consistentemente */
+}
+
+
+table {
+  border: none !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  /* Asegura que las celdas individuales no tengan bordes por defecto si no son parte de nuestra tabla personalizada */
+}
+
+table th,
+table td {
+  border: none !important;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200) !important; /* Si quieres líneas horizontales por defecto en otras tablas */
+}
+
+table tr:last-child td {
+  border-bottom: none !important;
+}
+
+.markdown h2 {
+  margin-top: calc(var(--ifm-h2-vertical-rhythm-top) * var(--ifm-leading) / 3.0);
+}
+
+.markdown h3 {
+  margin-top: calc(var(--ifm-h3-vertical-rhythm-top) * var(--ifm-leading) / 3.0);
+}
+
+.markdown h4 {
+  margin-top: calc(var(--ifm-h3-vertical-rhythm-top) * var(--ifm-leading) / 3.0);
 }
 
