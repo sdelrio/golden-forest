@@ -290,3 +290,52 @@ table tr:last-child td {
   margin-top: calc(var(--ifm-h3-vertical-rhythm-top) * var(--ifm-leading) / 3.0);
 }
 
+/*
+  ESTILOS PARA LA ADMONICIÓN "NOTE"
+  https://devsnap.me/css-paper-effect
+*/
+.theme-admonition.theme-admonition{
+  position: relative;
+  border-radius: 2px;
+}
+
+.theme-admonition.theme-admonition::before,
+.theme-admonition.theme-admonition::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  width: 30%;
+  height: 10px;
+  box-shadow: 0 5px 14px rgba(163,106,0,.7);
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+
+.theme-admonition.theme-admonition::before {
+  left: 15px;
+  transform: skew(-5deg) rotate(-5deg);
+}
+
+.theme-admonition.theme-admonition::after {
+  right: 15px;
+  transform: skew(5deg) rotate(5deg);
+}
+
+.theme-admonition.theme-admonition:hover::before,
+.theme-admonition.theme-admonition:hover::after {
+  box-shadow: 0 2px 14px rgba(163,106,0,.4);
+}
+
+.theme-admonition.theme-admonition:hover::before[data-theme='dark'],
+.theme-admonition.theme-admonition:hover::after[data-theme='dark'] {
+  box-shadow: 0 2px 14px rgba(163,106,0,.4);
+}
+
+.theme-admonition.theme-admonition:hover::before {
+  left: 5px;
+}
+
+.theme-admonition.theme-admonition:hover::after {
+  right: 5px;
+}

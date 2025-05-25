@@ -1,5 +1,12 @@
+---
+hide_table_of_contents: true
+---
 
 # Master Armor Table
+
+import TOCInline from '@theme/TOCInline';
+
+<TOCInline toc={toc} minHeadingLevel={1} maxHeadingLevel={2} />
 
 ## Light Armor  
 
