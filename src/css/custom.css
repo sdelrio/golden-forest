@@ -157,9 +157,9 @@ html[data-theme='dark'] .header-github-link:before {
 }
 
 /* Estilos para encabezados en tema claro (por defecto) */
-html[data-theme='light'] h1,
+html[data-theme='light'] .markdown h1,
 html[data-theme='light'] h2, h2:after,
-html[data-theme='light'] h3,
+html[data-theme='light'] h3, h3:after,
 html[data-theme='light'] h4,
 html[data-theme='light'] h5,
 html[data-theme='light'] h6,
@@ -168,9 +168,9 @@ html[data-theme='light'] th {
 }
 
 /* Estilos para encabezados en tema oscuro */
-html[data-theme='dark'] h1,
+html[data-theme='dark'] .markdown h1,
 html[data-theme='dark'] h2, h2::after,
-html[data-theme='dark'] h3,
+html[data-theme='dark'] h3, h3::after,
 html[data-theme='dark'] h4,
 html[data-theme='dark'] h5,
 html[data-theme='dark'] h6,
@@ -210,6 +210,28 @@ html[data-theme='dark'] h2::after {
 html h2 {
   border-bottom: 1px solid; /* Subrayado marrón */
   padding-bottom: 0px; /* Espacio entre el texto y el subrayado */
+  display: block; /* Asegura que ocupe todo el ancho disponible */
+  width: 100%; /* Asegura que ocupe el 100% del ancho del padre */
+  box-sizing: border-box; /* Incluye padding y border en el width */
+}
+
+/* Estilo para h3: subrayado que se extiende */
+.divider-h3 h3 {
+  position: relative; /* Necesario para posicionar el pseudoelemento */
+  display: inline-block; /* Permite que el pseudoelemento ocupe el ancho del contenido */
+  padding-bottom: 0px; /* Espacio entre el texto y la línea */
+}
+
+/* Color del subrayado para h3 en tema oscuro */
+.divider-h3[data-theme='dark'] h3::after {
+  background-color: #c68000;
+  color: #c68000;
+}
+
+/* Estilo para h2 con subrayado de ancho completo */
+.divider-h3 h3 {
+  border-top: 1px solid; /* Subrayado marrón */
+  padding-top: 0.5rem; /* Espacio entre el texto y el subrayado */
   display: block; /* Asegura que ocupe todo el ancho disponible */
   width: 100%; /* Asegura que ocupe el 100% del ancho del padre */
   box-sizing: border-box; /* Incluye padding y border en el width */
@@ -283,12 +305,12 @@ table tr:last-child td {
 
 .theme-admonition.theme-admonition::before {
   left: 15px;
-  transform: skew(-5deg) rotate(-5deg);
+  transform: skew(-3deg) rotate(-3deg);
 }
 
 .theme-admonition.theme-admonition::after {
   right: 15px;
-  transform: skew(5deg) rotate(5deg);
+  transform: skew(3deg) rotate(3deg);
 }
 
 .theme-admonition.theme-admonition:hover::before,
@@ -308,3 +330,16 @@ table tr:last-child td {
 .theme-admonition.theme-admonition:hover::after {
   right: 5px;
 }
+
+[data-theme='light'] .navbar {
+  background: linear-gradient(-90deg,rgba(252, 239, 212, 1) 0%, var(--ifm-navbar-background-color) 1%, var(--ifm-navbar-background-color) 99%, rgba(252, 239, 212, 1) 100%);
+}
+
+[data-theme='dark'] .navbar {
+  background: linear-gradient(-90deg,rgba(83, 56, 0, 1) 0%, var(--ifm-navbar-background-color) 1%, var(--ifm-navbar-background-color) 99%, rgba(83, 56, 0, 1) 100%);
+}
+
+.footer--dark {
+  background: linear-gradient(0deg, var(--ifm-footer-background-color) 0%, var(--ifm-footer-background-color) 90%, #404040 100%);
+}
+
