@@ -231,7 +231,7 @@ html h2 {
 /* Estilo para h2 con subrayado de ancho completo */
 .divider-h3 h3 {
   border-top: 1px solid; /* Subrayado marrón */
-  padding-top: 1rem; /* Espacio entre el texto y el subrayado */
+  padding-top: 0.5rem; /* Espacio entre el texto y el subrayado */
   display: block; /* Asegura que ocupe todo el ancho disponible */
   width: 100%; /* Asegura que ocupe el 100% del ancho del padre */
   box-sizing: border-box; /* Incluye padding y border en el width */
