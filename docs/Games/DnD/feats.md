@@ -1,5 +1,7 @@
 # Feats
 
+<div className="divider-h3">
+
 ## Origin Feats
 
 Can be selected anytime you pick a feat
@@ -1940,3 +1942,5 @@ You are able to focus on multiple tasks simultaneously, diverting your focus pre
 + You can maintain concentration on two spells at once. You do not lose concentration on a spell if you cast a second spell that requires concentration, but you lose concentration on a single spell of your choice on which you are concentrating if you cast a third spell that requires concentration. When you are concentrating on two spells and must attempt a Constitution saving throw to maintain concentration, you must attempt a separate saving throw for each spell.
 + Your spells with a vocal component cannot be countered by non-Epic spells.
 + You may take watch and perform other activities (such as sleeping or crafting) simultaneously
+
+</div>
