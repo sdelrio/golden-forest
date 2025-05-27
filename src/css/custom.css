@@ -339,7 +339,7 @@ table tr:last-child td {
   background: linear-gradient(-90deg,rgba(83, 56, 0, 1) 0%, var(--ifm-navbar-background-color) 1%, var(--ifm-navbar-background-color) 99%, rgba(83, 56, 0, 1) 100%);
 }
 
-.footer--dark {
-  background: linear-gradient(0deg, var(--ifm-footer-background-color) 0%, var(--ifm-footer-background-color) 90%, #404040 100%);
+.footer {
+  background: linear-gradient(0deg, var(--ifm-footer-background-color) 0%, var(--ifm-footer-background-color) 90%,  #404040 100%);
 }
 
