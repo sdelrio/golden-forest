@@ -1203,7 +1203,7 @@ You've learned to use the weight of your weapons effectively, and have adapted t
 
 + **Ability Score Increase**. Increase your Strength score by 1, to a maximum of 20.
 + When wielding a versatile weapon in one hand, you may use the versatile damage die. You can wield non-heavy melee weapons in one hand.
-+ You can wield two non-heavy melee weapons in each hand. The weapons don't need to have the light property, but you cannot use the versatile property when wielding versatile weapons this way.
++ You can wield a non-heavy melee weapon in each hand. The weapons don't need to have the light property, but you cannot use the versatile property when wielding versatile weapons this way.
 
 
 ### Telekinetic
