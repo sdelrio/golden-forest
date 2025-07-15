@@ -367,7 +367,7 @@ echo "1" > /sys/bus/pci/rescan
 In the above code, `DDDD:BB:DD.F` is the device slot format Domain:Bus:Device.Function.
 
 
-:::note AMD VGA
+:::note[AMD VGA]
 On some Radeon cards, it can't be rebooted
 :::
 
@@ -619,7 +619,7 @@ The `chrt` command will ensure that the task scheduler will round-robin distribu
 
 ![cpu-ryzen3k](/img/lstopo-cpu-ryzen3900.png)
 
-:::noteScrenshot from lstopo cli tool
+:::note[Screnshot from lstopo cli tool]
 Tool to see CPU architecture, usually in all mayor distributions.
 
 * Ubuntu/Mint: `apt-get install hwloc`
