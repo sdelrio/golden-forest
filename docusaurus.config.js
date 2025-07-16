@@ -229,7 +229,13 @@ const config = {
   },
 
   // Add Faster project https://docusaurus.io/blog/releases/3.6#docusaurus-faster
+  // Worker threads https://docusaurus.io/blog/releases/3.8#worker-threads
+  // CSS Cascade layers https://docusaurus.io/blog/releases/3.8#css-cascade-layers
   future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+      useCssCascadeLayers: true,
+    },
     experimental_faster: true,
   },
   /*
