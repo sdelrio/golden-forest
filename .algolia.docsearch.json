@@ -5,10 +5,18 @@
   ],
   "sitemap_alternate_links": true,
   "stop_urls": [
-    "/tests"
+    "/$",
+    "/index.html$",
+    "/assets",
+    "/blog",
+    "/images",
+    "/markdown-page",
+    "/search",
+    "/tutorial"
   ],
   "start_urls": [
-    { "url": "https://www.lorien.cloud/docs"
+    { 
+      "url": "https://www.lorien.cloud/docs"
     }
   ],
   "stop_urls": [],
@@ -24,9 +32,9 @@
       "lvl2": "article h2",
       "lvl3": "article h3",
       "lvl4": "article h4",
-      "lvl5": "article h5, article td:first-child",
+      "lvl5": "article h5",
       "lvl6": "article h6",
-      "text": "article p, article li, article td:last-child"
+      "text": "article li"
     }
   },
   "strip_chars": " .,;:#",
