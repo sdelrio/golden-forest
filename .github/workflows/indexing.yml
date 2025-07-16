@@ -47,6 +47,6 @@ jobs:
           TAG: v1.16.0
         run: |
           docker run --rm -i --env-file=${{ env.CFG_FILE }} \
-            -e "CONFIG=$(cat $(pwd)/.docsearch.json | jq -r tostring)" \
+            -e "CONFIG=$(cat $(pwd)/.algolia.docsearch.json | jq -r tostring)" \
           ${{ env.IMAGE }}:${{ env.TAG }} -v
 
