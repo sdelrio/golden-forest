@@ -6,6 +6,7 @@
   "sitemap_alternate_links": true,
   "stop_urls": [
     "/$",
+    "/PR-.+/.*",
     "/index.html$",
     "/assets",
     "/blog",
