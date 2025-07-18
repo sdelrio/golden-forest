@@ -143,7 +143,7 @@ const config = {
             type: 'doc',
             docId: 'docs-intro',
             position: 'left',
-            label: 'IT',
+            label: 'Documents',
           },
           {
             to: '/tutorial/tutorial-intro',
@@ -173,12 +173,20 @@ const config = {
         // style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Documents',
             items: [
               {
                 label: 'Tutorial',
                 to: '/docs/docs-intro',
               },
+              {
+                label: 'Create a document',
+                to: '/tutorial/tutorial-basics/create-a-document'
+              },
+              {
+                label: 'Markdown features',
+                to: '/tutorial/tutorial-basics/markdown-features',
+              }
             ],
           },
           {

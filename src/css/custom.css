@@ -18,7 +18,6 @@
   --ifm-color-primary-lighter: #ffaa0d;
   --ifm-color-primary-lightest: #ffb630;
   --ifm-code-font-size: 90%;
-  --ifm-code-background: #ffb63018;
   --ifm-font-family-base: "Roboto";
   --ifm-font-family-monospace: "Roboto Mono";
   --ifm-font-weight-monospace: 300;
@@ -26,6 +25,11 @@
   --ifm-font-weight-bold: 700;
   --ifm-table-cell-padding: 0.25rem;
   --ifm-heading-margin-bottom: 0.25rem;
+  --docusaurus-highlighted-code-line-bg: #efefef;
+}
+
+[data-theme='dark'] {
+  --docusaurus-highlighted-code-line-bg: #3a3a3a;
 }
 
 /*
@@ -111,11 +115,6 @@ html[data-theme='dark'] {
   background-color: #170f00;
   background: linear-gradient(-90deg,rgba(163, 106, 0, 1) 0%, rgba(23, 15, 0, 1) 1%, rgba(23, 15, 0, 1) 99%, rgba(163, 106, 0, 1) 100%);
 }
-
-html[data-theme='dark'] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
 
 .header-github-link:hover {
   opacity: 0.6;
@@ -243,7 +242,7 @@ html h2 {
 }
 
 .markdown hr {
-  height: 15px; /* La altura de tu SVG. Ajusta según el 'height' de tu viewBox */
+  height: 20px; /* La altura de tu SVG. Ajusta según el 'height' de tu viewBox */
   background-repeat: no-repeat;
   background-position: left top; /* Ajuste si la imagen no cubre todo el alto */
   background-size: 100% auto;
