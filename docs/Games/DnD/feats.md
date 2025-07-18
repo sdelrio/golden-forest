@@ -1,5 +1,11 @@
 # Feats
 
+import TOCInline from '@theme/TOCInline';
+
+<TOCInline 
+  toc={toc.filter((node) => node.level === 1 || node.level === 2)}
+/>
+
 <div className="divider-h3">
 
 ## Origin Feats
@@ -98,8 +104,7 @@ You gain the following benefits.
 
 Your Hit Point maximum increases by an amount equal to twice your character level when you gain this feat. Whenever you gain a character level thereafter, your Hit Point maximum increases by an additional 2 Hit Points.
 
-
-
+---
 
 ## Regular Feats
 
@@ -1308,9 +1313,7 @@ When a character casts a spell, which involves rolling dice, it can declare that
 When the character is granted Inspiration, they can choose not to gain inspiration and instead roll a d100, gaining a whimsy according to the table below. A whimsy lasts until it is used, or until an affected creature finishes a long rest.
 A spell cast using a whimsy requires no components, and a creature uses its spell save DC and spell attack bonus when casting a whimsy; all other elements of the spell remain the same.
 
-
-
-
+---
 
 ## Epic Boons and Feats
 
@@ -1539,7 +1542,7 @@ The eldritch forces empower you further. You gain 3 eldritch invocations from th
 
 You are immune to the exhausted condition
   
-
+---
 
 ## Level 21 Epic Boons and Feats
 
