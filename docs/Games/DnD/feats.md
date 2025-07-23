@@ -1,10 +1,10 @@
 # Feats
 
+A feat represents a talent or an area of expertise that gives a character special capabilities. It embodies training, experience, and abilities beyond what a class provides.
+
 import TOCInline from '@theme/TOCInline';
 
-<TOCInline 
-  toc={toc.filter((node) => node.level === 1 || node.level === 2)}
-/>
+<TOCInline toc={toc} minHeadingLevel={1} maxHeadingLevel={2} />
 
 <div className="divider-h3">
 
