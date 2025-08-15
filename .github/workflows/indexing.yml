@@ -1,4 +1,4 @@
-name: Algolia Indexing
+name: '🔍 Algolia Indexing'
 
 # This workflow runs nightly to update the Algolia index for your Docusaurus site.
 
