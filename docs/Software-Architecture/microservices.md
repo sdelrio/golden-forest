@@ -24,6 +24,7 @@ Unfortunately, this pattern means a tight coupling of services.
 
 An illustration of microservices "request-driven" communication, Service A is dependent on B and C
 
+<!-- https://github.com/mermaid-js/mermaid/tree/develop/packages/mermaid-layout-elk -->
 ```mermaid
     graph LR;
         subgraph "request-driven"

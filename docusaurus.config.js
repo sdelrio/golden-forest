@@ -32,7 +32,9 @@ const config = {
   projectName: 'golden-forest', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  //onBrokenMarkdownLinks: 'warn',
+  // [WARNING] The `siteConfig.onBrokenMarkdownLinks` config option is deprecated and will be removed in Docusaurus v4.
+  //Please migrate and move this option to `siteConfig.markdown.hooks.onBrokenMarkdownLinks` instead.
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -234,6 +236,9 @@ const config = {
   // you also need to enable the Remark plugin with this option
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn'
+    },
   },
 
   // Add Faster project https://docusaurus.io/blog/releases/3.6#docusaurus-faster
