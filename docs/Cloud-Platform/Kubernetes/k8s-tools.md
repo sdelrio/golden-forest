@@ -137,3 +137,8 @@ kubectl api-resources --verbs=list --namespaced -o name \
   | kube-score score -
 ```
 
+## KubeDiagrams
+
+- [GitHub](https://github.com/philippemerle/KubeDiagrams)
+
+Reads Kubernetes manifest, Helm charts, helmfiles or live cluster state and procuces visual architecutre diagrams (DOT, SVG, PNG, PDF; etc...), with support for custom resources, clustering, and interactive views.
