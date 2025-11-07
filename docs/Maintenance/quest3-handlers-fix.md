@@ -42,7 +42,7 @@ This is crucial for ensuring the cleaner reaches all contact points and clears d
 
 1. **Rotate and Cycle:** Immediately after spraying, vigorously rotate the thumbstick in full circles for about 30 seconds.
 2. **Click the Stick:** Press the thumbstick button (L3/R3) repeatedly (about 20-30 times) while rotating it. This helps distribute the cleaner into the mechanism's switches.
-3. **Allow to Dry (15-30 Minutes):** **Do not reinsert the battery immediately.** The cleaner must fully evaporate. Leave the controller for at least 15 to 30 minutes in a well-ventilated area.
+3. **Allow to Dry (2-5 Minutes):** **Do not reinsert the battery immediately.** The cleaner should evaporate(take note the WD-40 is not conductive). Leave the controller(s) in a well-ventilated area.
 
 ## Step 4: Testing and Recalibration
 
