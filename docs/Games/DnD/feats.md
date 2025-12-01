@@ -189,7 +189,7 @@ You gain the following benefits.
 
 ---
 
-## Regular Feats
+## General Feats
 
 Can be selected from level 4th onwards.
 
@@ -345,6 +345,13 @@ You gain the following benefits.
 
 + Bolstering Treats. With 1 hour of work or when you finish a Long Rest, you can cook a number of treats equal to your Proficiency Bonus if you have ingredients and Cook's Utensils on hand. These special treats last 8 hours after being made. A creature can use a Bonus Action to eat one of those treats to gain a number of Temporary Hit Points equal to your Proficiency Bonus.
 
+### Cold Caster  
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
++ Cantrip. You learn the Ray of Frost cantrip. If you already know it, you learn a different Wizard cantrip of your choice. The spell's spellcasting ability is the ability increased by this feat.
++ Frostbite. Once per turn when you hit a creature with an attack roll and deal Cold damage, you can temporarily negate the creature's defenses. The creature subtracts 1d4 from the next saving throw it makes before the end of your next turn.
 
 ### Combat Caster  
 
@@ -491,6 +498,15 @@ Thanks to study or deep introspection, you have achieved a firm grasp on spellca
 
 + You can use a bonus action to divide a higher-level spell slot into two lower-level spell slots whose combined level is equal to or less than the original slot’s level. The lower-level spell slots must replace expended spell slots. You cannot have more available spell slots at at time than your class normally allows.
 
+### Dragonscarred
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Constitution or Charisma score by 1, to a maximum of 20.
++ Damage Resistance. When you gain this feat, choose Acid, Cold, Fire, Lightning, or Poison. You have Resistance to the chosen damage type.
++ Fearsome Power. When you deal damage to a creature as part of the Attack or Magic action on your turn, you can use the Dragon's Terror benefit of the Cult of the Dragon Initiate feat as a Bonus Action this turn.
+
+
 ### Dual Wielder
 
 *Prerequisite: Strength or Dexterity 13+*
@@ -552,6 +568,15 @@ You gain the following benefits.
 
 + You can cast a 1st level spell which you know or have prepared with your spellcasting feature without expending a spell slot. When you do, treat the spell as though it were cast using a spell slot equal to your proficiency bonus. Once you cast a spell this way you cannot do so again until you complete a short or long rest.
 
+### Enclave Magic
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+
++ Friend to Animals. You have Advantage on ability checks when taking the Influence action with Beasts.
+
++ Two Hearts, One Mind. You always have the Beast Sense spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. When you cast it without a spell slot using this feature, it doesn't require Concentration. You can also cast the spell using any spell slots you have of the appropriate level. The spell's spellcasting ability is the ability increased by this feat.
 
 ### Energy Recovery  
 
@@ -582,6 +607,17 @@ You gain a number of tactician commands equal to your proficiency bonus. You can
 
 + During a long rest you can take the set up traps activity. After that long rest you can make a survival check DC 15. If you succeed you collect enough food to feed yourself for the day and you craft special ammunition for the day out of the bones of the creatures you caught and fom superior timbers. You can craft 5 pieces of non-magical +1 ammunition. If you succeed the check by 10 or more you can craft 5 pieces non-magical +2 ammunition.
 
+
+### Fairy Trickster
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Dexterity or Charisma ability score by 1, to a maximum of 20.
+
++ Faerie Trod Trotter. When you take the Disengage action on your turn, Difficult Terrain doesn't cost you extra movement for the rest of that turn.
+
++ Flustering Strike. When you hit a creature with an attack roll, you can attempt to fluster the target. The target must succeed on a Wisdom saving throw (DC 8 plus the ability modifier of the score increased by this feat and your Proficiency Bonus) or have Disadvantage on saving throws until the end of your next turn. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.
+  
 
 ### Fast as Lightning
 
@@ -616,6 +652,15 @@ Your exposure to the Feywild’s magic grants you the following benefits.
 + When you take the disengage action, you can take another action on the same turn other than the magic action or the attack action.
 
 
+### Genie Magic
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+
++ Wish Magic. As a Magic action, you can cast a level 1 spell of your choice from the Sorcerer spell list that has a casting time of an action. Once you use this benefit, you can't do so again until you finish a Long Rest. The spell's spellcasting ability is the ability increased by this feat. When you reach level 11, the spell you cast with this feat is cast as though using a level 2 spell slot. When you reach level 17, the spell is cast as though using a level 3 spell slot.
+
+
 ### Grappler
 
 *Prerequisite: Strength or Dexterity 13+*
@@ -642,6 +687,17 @@ You gain the following benefits.
 
 + Hew. Immediately after you score a Critical Hit with a Melee weapon or reduce a creature to 0 Hit Points with one, you can make one attack with the same weapon as a Bonus Action.
 
+
+### Harper Teamwork
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Dexterity or Charisma ability score by 1, to a maximum of 20.
+
++ Withering Wordplay. When you take the Help action to assist an ally's attack roll against an enemy, that enemy also has Disadvantage on the first saving throw it makes before the start of your next turn.
+  
++ Inspiring Willpower. If you succeed on a saving throw to end the Frightened or Paralyzed condition on yourself, you can choose one ally you can see within 30 feet of yourself that has the same condition. That condition immediately ends for that ally.
+  
 
 ### Heavily Armored
 
