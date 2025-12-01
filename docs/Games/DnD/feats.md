@@ -44,6 +44,38 @@ You gain the following benefits.
 | Weaver's Tools | Basket, Rope, Net |
 | Woodcarver's Tools | Club, Greatclub, Quarterstaff |
 
+
+### Cult of the Dragon Initiate
+
+You gain the following benefits.
+
++ Dragon's Tongue. You know Draconic. If you already know Draconic when you select this feat, you instead learn one language of your choice from the language tables in the Player's Handbook or chapter 2 of this book.
+
++ Dragon's Terror. You can take a Magic action to instill terror in a creature you can see within 30 feet of yourself. The target must succeed on a Wisdom saving throw (DC 8 plus your Wisdom modifier and Proficiency Bonus) or have the Frightened condition until the end of your next turn. If the target succeeds on the save or when the effect ends for a target, the target is immune to this effect for 24 hours.
+
++ Inspired by Fear. When you cause a creature to have the Frightened condition and you are the source of its fear, you can gain Heroic Inspiration if you lack it. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.
+
+
+### Emerald Enclave Fledgling
+
+You gain the following benefits.
+
++ Speak with Animals. You always have the Speak with Animals spell prepared and can cast it with any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat). When you cast this spell as a Ritual, its duration is 8 hours.
+
++ Tag Team. When you take the Help action, you can switch places with a willing ally within 5 feet of yourself as part of that same action. This movement doesn't provoke Opportunity Attacks. You can't use this benefit if the ally has the Incapacitated condition.
+
+
+### Harper Agent
+
+You gain the following benefits.
+
++ Thieves' Cant. You know Thieves' Cant.
+
++ Instrument Training. You gain proficiency with a Musical Instrument of your choice.
+
++ Distracting Melody. When you take the Help action to assist an ally's attack roll, the enemy you're distracting can be within 30 feet of you, rather than within 5 feet of you, provided the enemy can see or hear you.
+
+
 ### Healer
 
 You gain the following benefits.
@@ -51,6 +83,16 @@ You gain the following benefits.
 + Battle Medic. If you have a Healer's Kit, you can expend one use of it and tend to a creature within 5 feet of yourself as a Utilize action. That creature can expend one of its Hit Point Dice, and you then roll that die. The creature regains a number of Hit Points equal to the roll plus your Proficiency Bonus.
 
 + Healing Rerolls. Whenever you roll a die to determine the number of Hit Points you restore with a spell or with this feat's Battle Medic benefit, you can reroll the die if it rolls a 1, and you must use the new roll.
+
+
+### Lords' Alliance Agent
+
+You gain the following benefits.
+
++ Inspiring Strike. Once per turn when you score a Critical Hit against a creature, you can choose an ally within 30 feet of yourself who can see or hear you and who lacks Heroic Inspiration. That ally gains Heroic Inspiration.
+
++ Reassert Honor. When an enemy you can see deals damage to an ally of yours that is within 5 feet of you, you have Advantage on your next attack roll against that enemy before the end of your next turn.
+
 
 ### Lucky 
 
@@ -61,6 +103,7 @@ You gain the following benefits.
 + Advantage. When you roll a d20 for a D20 Test, you can spend 1 Luck Point to give yourself Advantage on the roll.
 
 + Disadvantage. When a creature rolls a d20 for an attack roll against you, you can spend 1 Luck Point to impose Disadvantage on that roll.
+
 
 ### Magic Initiate (Cleric, Druid or Wizard)
 
@@ -80,13 +123,34 @@ You gain the following benefits.
 
 + Encouraging Song. As you finish a Short or Long Rest, you can play a song on a Musical Instrument with which you have proficiency and give Heroic Inspiration to allies who hear the song. The number of allies you can affect in this way equals your Proficiency Bonus.
 
+
+### Purple Dragon Rook
+
+You gain the following benefits.
+
++ Entreat. You gain proficiency in one of the following skills: Insight, Performance, or Persuasion.
+
++ Rallying Cry. When you roll Initiative and don't have the Incapacitated condition, you can choose a number of creatures equal to your Proficiency Bonus that you can see within 30 feet of yourself. Those creatures gain Heroic Inspiration. Once you use this benefit, you can't do so again until you finish a Long Rest.
+
+
 ### Savage Attacker 
 
 You've trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon's damage dice twice and use either roll against the target.
 
+
 ### Skilled
 
 You gain proficiency in any combination of three skills or tools of your choice.
+
+
+### Spellfire Spark
+
+You gain the following benefits.
+
++ Magic Absorption. Once per turn, when you take damage from a spell or magical effect, you reduce the total damage taken by 1d4. You can't use this benefit if you have the Incapacitated condition.
+
++ Spellfire Flame. You learn the Sacred Flame cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat). You can also cast this cantrip as a Bonus Action a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.
+
 
 ### Tavern Brawler
 
@@ -100,9 +164,28 @@ You gain the following benefits.
 
 + Push. When you hit a creature with an Unarmed Strike as part of the Attack action on your turn, you can deal damage to the target and also push it 5 feet away from you. You can use this benefit only once per turn.
 
+
 ### Tough
 
 Your Hit Point maximum increases by an amount equal to twice your character level when you gain this feat. Whenever you gain a character level thereafter, your Hit Point maximum increases by an additional 2 Hit Points.
+
+
+### Tyro of the Gauntlet
+
+You gain the following benefits.
+
++ Stand as One. When an ally within 5 feet of you is subjected to an effect that would push or pull it, you can take a Reaction to prevent that ally from being pushed or pulled. To receive this benefit, the ally can't have the Incapacitated condition.
+
++ Vigilant. When you take the Ready action, the next attack roll made against you has Disadvantage before the start of your next turn.
+
+
+### Zhentarim Ruffian
+
+You gain the following benefits.
+
++ Exploit Opening. When you roll damage for an Opportunity Attack, you can roll the damage dice twice and use either roll against the target.
+
++ Family First. If you have Heroic Inspiration when you roll Initiative, you can expend it to give yourself and your allies Advantage on that Initiative roll.
 
 ---
 
