@@ -804,6 +804,19 @@ The speed at which you move makes it almost impossible for your opponents to str
 + If you dash during your turn you gain the benefit of the dodge action.
 
 
+### Lordly Resolve
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength or Charisma score by 1, to a maximum of 20.
+
++ Standard Bearer. As a Bonus Action, choose up to three creatures within 60 feet of yourself that can see you. Each target can immediately take a Reaction to right itself and end the Prone condition, provided its Speed isn't 0.
+
+Additionally, you bolster the targets' resolve, which lasts for 1 minute or until you have the Incapacitated condition. While bolstered, a target can't be possessed or gain the Charmed or Frightened condition; if a target is already possessed, Charmed, or Frightened, the target has Advantage on any new saving throw against the relevant effect.
+
+Once you use this benefit, you can't do so again until you finish a Long Rest.
+  
+
 ### Mage Killer  
 
 *Prerequisite: Arcana proficiency*
@@ -944,6 +957,29 @@ You gain the following benefits.
 + Veer. While mounted, you can force an attack that hits your mount to hit you instead if you don't have the Incapacitated condition.
 
 
+### Mythal Touched
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+
++ Mythal Ward. If a spell attack hits you or you fail a saving throw against a spell, you can take a Reaction to roll on the Mythal-Touched Magic table to create a magical effect. If an effect requires a saving throw, the DC equals 8 plus the modifier of the ability increased by this feat and your Proficiency Bonus.
+
+You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.
+
+**Mythal-Touched Magic**
+
+| 1d20 | Effect |
+|:-----------:|:--------------:|
+| 1-2 | You and each creature within 15 feet of you make a Dexterity saving throw, taking Force damage equal to 1d8 times the level of the triggering spell on a failed save or half as much damage on a successful one. |
+| 3-7 | You and the triggering spell's caster form a telepathic link for 1 hour. |
+| 8-10 | Gravity is reversed in a 15-foot-radius, 60-foot-tall Cylinder centered on you for 1 minute, per the Reverse Gravity spell. |
+| 11-13 | You and the triggering spell's caster each make a Constitution saving throw. On a failed save, the creature has the Stunned condition until the end of its next turn. |
+| 14-17 | You gain a +2 bonus to AC for 1 minute, potentially turning the triggering spell into a miss if it was a spell attack. |
+| 18-19 | Any flammable, nonmagical object within 10 feet of the triggering spell's caster that isn't being worn or carried by another creature bursts into flame, takes 1d4 Fire damage, and is burning. |
+| 20 | The triggering spell dissipates with no effect, and the action, Bonus Action, or Reaction used to cast it is wasted. If that spell was cast with a spell slot, the slot isn't expended. |
+
+
 ### Nimble Physique  
 
 *Prerequisite: Dexterity 14 or higher*
@@ -969,6 +1005,17 @@ You gain the following benefits.
 + Keen Observer. Choose one of the following skills: Insight, Investigation, or Perception. If you lack proficiency with the chosen skill, you gain proficiency in it, and if you already have proficiency in it, you gain Expertise in it.
 
 + Quick Search. You can take the Search action as a Bonus Action.
+
+
+### Order's Resilience
+General Feat (Prerequisite: Level 4+, Tyro of the Gauntlet Feat)
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength, Wisdom, or Charisma score by 1, to a maximum of 20.
+
++ Resurge. When you have the Prone condition, you can right yourself with only 5 feet of movement.
+
++ Stronger Together. If you are within 5 feet of an ally that doesn't have the Incapacitated condition, you and that ally have Advantage on Strength saving throws. You can't use this benefit while you have the Incapacitated condition.
 
 
 ### Overly Prepared
@@ -1081,6 +1128,16 @@ You are able to use your magic to bolster yourself against assaults. You gain th
 
 + Whenever a creature stands up from prone you can make an attack of opportunity against that creature as a reaction.
 
+
+### Purple Dragon Commandant
+General Feat (Prerequisite: Level 4+, Purple Dragon Rook Feat or Martial Weapon Proficiency
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength or Dexterity score by 1, to a maximum of 20.
+
++ Encourage Ally. As a Bonus Action, you bolster one ally you can see within 30 feet. The ally gains Temporary Hit Points equal to 2d6 plus the modifier of the ability score increased by this feat. You can take this Bonus Action a number of times equal to your Proficiency Bonus, and you regain all uses when you finish a Long Rest.
+
++ Last Stand. You have Advantage on attack rolls while Bloodied.
 
 
 ### Quick Adaptation
@@ -1288,6 +1345,17 @@ You’ve learned to meld your strikes with sparks of arcane magic, gaining the f
 + You learn the shield spell and you always have it prepared. You can cast it once without using a spell slot. Once you cast this spell using this feat, you can’t do so again until you finish a long rest.
 
 
+### Spellfire Adept
+General Feat (Prerequisite: Level 4+, Spellfire Spark Feat or the Spellcasting or Pact Magic Feature)
+You gain the following benefits.
+
++ **Ability Score Increase.**  Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.
+
++ Fueled Spellfire. Once per turn, when a spell you cast deals Radiant damage, you can expend up to two Hit Point Dice, roll them, and add the total rolled to one damage roll of the spell.
+
++ Searing Spellfire. When you make a damage roll that deals Radiant damage, it ignores Resistance to Radiant damage.
+
+
 ### Spell Focus
 
 *Prerequisite: Ability to cast spells.*
@@ -1339,6 +1407,18 @@ You gain the following benefits.
 + Casting in Melee. Being within 5 feet of an enemy doesn't impose Disadvantage on your attack rolls with spells.
 
 + Increased Range. When you cast a spell that has a range of at least 10 feet and requires you to make an attack roll, you can increase the spell's range by 60 feet.
+
+
+### Street Justice
+You gain the following benefits.
+
++ **Ability Score Increase.**   Increase your Strength or Dexterity score by 1, to a maximum of 20.
+
++ Headlock. Your allies have Advantage on attack rolls against a creature Grappled by you.
+
++ Sturdy Knot. When you use Chain, Manacles, or Rope to bind a creature, add your Proficiency Bonus to the DC to escape or burst the Chain, Manacles, or Rope.
+
++ Tough Talk. A creature's Hostile attitude doesn't impose Disadvantage on your Charisma (Intimidation) checks to influence that creature.
 
 
 ### Strong Grip
@@ -1452,11 +1532,45 @@ When a character casts a spell, which involves rolling dice, it can declare that
 When the character is granted Inspiration, they can choose not to gain inspiration and instead roll a d100, gaining a whimsy according to the table below. A whimsy lasts until it is used, or until an affected creature finishes a long rest.
 A spell cast using a whimsy requires no components, and a creature uses its spell save DC and spell attack bonus when casting a whimsy; all other elements of the spell remain the same.
 
+
+### Zhentarim Tactics
+General Feat (Prerequisite: Level 4+, Zhentarim Ruffian Feat)
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Dexterity or Charisma score by 1, to a maximum of 20.
+
++ Retaliate. Immediately after a creature within 5 feet of you hits you with a melee attack, you can make an Opportunity Attack against that creature.
+
++ Versatile Merc. When you finish a Long Rest, choose a skill in which you have proficiency. You have Expertise in that skill until you finish your next Long Rest.
+
+
 ---
 
 ## Epic Boons and Feats
 
 Can be selected from level 19th onwards.
+
+### Boon of Bloodshed
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 30.
+
++ Killer's Fortune. When an enemy you can see is reduced to 0 Hit Points, you gain Advantage on the next attack roll you make before the end of your next turn.
+
++ Power from Pain. Once per turn, when you make an attack roll while Bloodied, you can deal extra damage to the target equal to your Proficiency Bonus. The extra damage's type is the same as the attack's type.
+
+
+### Boon of Boutiful Health
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 30.
+
++ Augmented Health. When you gain Temporary Hit Points, increase the number of Temporary Hit Points you gain by 5.
+
++ Superior Recuperation. When you spend one or more Hit Point Dice to regain Hit Points, you can instead use the highest number possible for each die.
+
 
 ### Boon of Combat Prowess
 
@@ -1466,6 +1580,29 @@ You gain the following benefits.
 
 + Peerless Aim. When you miss with an attack roll using a weapon or an Unarmed Strike, you can hit instead. Once you use this benefit, you can't use it again until the start of your next turn.
 
+
+### Boon of Communication
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
+
++ Cunning Speaker. You don't have Disadvantage on ability checks to influence Hostile creatures.
+
++ Gifted Interpreter. You understand the literal meaning of any language you hear or see signed, and you can understand the literal meaning of any written language you see.
+
++ Mental Communication. You gain telepathy with a range of 120 feet.
+
+
+### Boon of Desperate Resilience
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Strength or Constitution score by 1, to a maximum of 30.
+
++ Defense of Body and Mind. While you are Bloodied, you have Resistance to every damage type except Force.
+
+
 ### Boon of Dimensional Travel
 
 You gain the following benefits.
@@ -1473,6 +1610,7 @@ You gain the following benefits.
 + **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
 
 + Blink Steps. Immediately after you take the Attack action or the Magic action, you can teleport up to 30 feet to an unoccupied space you can see.
+
 
 ### Boon of Energy Infusion
 
@@ -1495,6 +1633,18 @@ You gain the following benefits:
 
 + Energy Redirection. When you take damage of one of the types chosen for the Energy Resistances benefit, you can take a Reaction to direct damage of the same type toward another creature you can see within 60 feet of yourself that isn't behind Total Cover. If you do so, that creature must succeed on a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus) or take damage equal to 2d12 plus your Constitution modifier.
 
+
+### Boon of Exquisite Radiance
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase one ability score of your choice by 2, to a maximum of 30.
+
++ Eternal Rest. Creatures you reduce to 0 Hit Points can't become Undead.
+
++ Powerful Radiance. When you make a damage roll that deals Radiant damage, you can instead use the highest number possible for each damage die. Once you use this benefit, you can't do so again until you finish a Short Rest.
+
+
 ### Boon of Fate
 
 You gain the following benefits:
@@ -1502,6 +1652,22 @@ You gain the following benefits:
 + **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
 
 + Improve Fate. When you or another creature within 60 feet of you succeeds on or fails a D20 Test, you can roll 2d4 and apply the total rolled as a bonus or penalty to the d20 roll. Once you use this benefit, you can't use it again until you roll Initiative or finish a Short or Long Rest.
+
+
+### Boon of Fluid Forms
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
+
++ Shapechanger. You can take a Magic action to shape-shift into a Beast, Humanoid, or Monstrosity with a Challenge Rating no higher than 10. When you shape-shift, you gain a number of Temporary Hit Points equal to the Hit Points of the form. The shape-shifting effect lasts for 1 hour, and it ends early if you have no Temporary Hit Points left or if you take a Magic action to return to your true form.
+
+Your game statistics are replaced by the stat block of the chosen form, but you retain your creature type; alignment; personality; Intelligence, Wisdom, and Charisma scores; Hit Points; Hit Point Dice; proficiencies; and ability to communicate. If you have the Spellcasting or Pact Magic feature, you retain it too. Upon shape-shifting, you determine whether your equipment drops to the ground or changes in size and shape to fit the new form while you're in it.
+
+Once you use this benefit, you can't do so again until you finish a Long Rest.
+
++ Hardy Transformation. When you gain Temporary Hit Points when you shape-shift, increase that number of Temporary Hit Points by 20.
+
 
 ### Boon of Fortitude
 
@@ -1511,15 +1677,27 @@ You gain the following benefits.
 
 + Fortified Health. Your Hit Point maximum increases by 40. In addition, whenever you regain Hit Points, you can regain additional Hit Points equal to your Constitution modifier. Once you've regained these additional Hit Points, you can't do so again until the start of your next turn.
 
+
+### Boon of Fortune's Favor
+
+You gain the following benefits:
+
++ **Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 30.
+
++ Saving Throw Reroll. When you fail a saving throw, you can reroll it and must use the new roll. Once you use this benefit, you can't do so again until the start of your next turn.
+
+
 ### Boon of High Magic
 
 You gain one 9th-level spell slot, provided you already have one
+
 
 ### Boon of Invincibility
 
 + **Ability Score Increase.** Increase your Constitution score by 1, to a maximum of 30.
 
 + When you take damage from any source, you can reduce that damage to 0. Once you use this boon, you can't use it again until you finish a short rest.
+
 
 ### Boon of Irresistable Offense
 
@@ -1530,6 +1708,7 @@ You gain the following benefits.
 + Overcome Defenses. The Bludgeoning, Piercing, and Slashing damage you deal always ignores Resistance.
 
 + Overwhelming Strike. When you roll a 20 on the d20 for an attack roll, you can deal extra damage to the target equal to the ability score increased by this feat. The extra damage's type is the same as the attack's type.
+
 
 ### Boon of Legendary Actions
 
@@ -1545,17 +1724,31 @@ You can take this boon more than once, up to 3 times. Each time you take it afte
 
 If you have more than 1 Legendary Action, you can spend 2 Legendary Actions to cast a spell up to 5th level with a casting time of one action, or you can spend 3 Legenday Actions to cast a spell up to 9th level with a casting time of one action.
 
+
 ### Boon of Magic Wellspring
 
 + **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
 
 + You regain spell slots levels equal to your proficiency bonus at the end of a short rest
 
+
+### Boon of Poison Mastery
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase one ability score of your choice by 2, to a maximum of 30.
+
++ Antitoxic. You have Immunity to Poison damage and the Poisoned condition.
+
++ Perfect Poisoner. Once per turn, when you roll dice to determine Poison damage a creature takes from your attack, spell, or feature, you can instead use the highest number possible for each die.
+
+
 ### Boon of Quick Casting
 
 + *Ability Score Increase.* Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
 
 + Choose one of your spells of 3rd level or lower that has a casting time of 1 action. That spell’s casting time is now 1 bonus action for you. You can change the chosen spell when you finish a long rest.
+
 
 ### Boon of Recovery
 
@@ -1567,11 +1760,26 @@ You gain the following benefits.
 
 + Recover Vitality. You have a pool of ten d10s. As a Bonus Action, you can expend dice from the pool, roll those dice, and regain a number of Hit Points equal to the roll's total. You regain all the expended dice when you finish a Long Rest.
 
+
 ### Boon of Resilience
 
 + **Ability Score Increase.** Increase your Constitution score by 1, to a maximum of 30.
 
 + You have resistance to bludgeoning, piercing, and slashing damage from non-magical weapons
+
+
+### Boon of Revelry
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
+
++ Inspire Dance. You always have the Otto's Irresistible Dance spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it that way when you finish a Long Rest. You can also cast the spell using any spell slots you have of the appropriate level.
+
+When you cast the spell, it requires no spell components, and taking damage doesn't break your Concentration on it.
+
++ Sing Out. While a creature that failed its saving throw against your Otto's Irresistible Dance has the Charmed condition from that spell, it can't cast spells with Verbal components, and it sings delightful nonsense if it can sing.
+
 
 ### Boon of Skill
 
@@ -1584,6 +1792,7 @@ You gain the following benefits.
 + Expertise. Choose one skill in which you lack Expertise. You gain Expertise in that skill.
 
 + Minor Attunement: You can attune to an additional minor item (common, uncommon or rare item)
+
 
 ### Boon of Speed
 
@@ -1625,6 +1834,42 @@ You gain the following benefits.
 
 + Minor Attunement: You can attune to an additional minor item (common, uncommon or rare item)
 
+
+### Boon of Terror
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Charisma score by 1, to a maximum of 30.
+
++ Fearless. You have Immunity to the Frightened condition.
+
++ Flee, Fools! When a creature with the Frightened condition starts its turn within 60 feet of you, you can take a Reaction to stoke its terror, provided you can see the creature and it isn't behind Total Cover. If you do so, the creature must succeed on a Wisdom saving throw (DC 8 plus your Charisma modifier and your Proficiency Bonus) or spend its turn moving away from you by the fastest available means. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.
+
++ Intimidating. You gain Proficiency in the Intimidation skill if you don't already have it. You also gain Expertise in Intimidation.
+
+
+### Boon of the Bright Sun
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Constitution, Wisdom, or Charisma score by 1, to a maximum of 30.
+
++ Daylight Presence. As a Bonus Action, you radiate a 30-foot Emanation of Bright Light that is sunlight. If any of the Emanation's area overlaps with an area of Darkness created by a spell, that spell is dispelled. The Emanation lasts until you dismiss it (no action required), die, or have the Incapacitated condition.
+
++ Fortifying Light. When your Daylight Presence is active, at the start of each of your turns, you and allies you can see in your Daylight Presence gain 10 Temporary Hit Points.
+
+
+### Boon of the Furious Storm
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 30.
+
++ Eye of the Storm. You have Resistance to Lightning and Thunder damage. While you are Bloodied, you have Immunity to Lightning and Thunder damage.
+
++ Storm's Strength. Creatures have Disadvantage on saving throws against your spells that deal Lightning or Thunder damage.
+
+
 ### Boon of the Night Spirit
 
 You gain the following benefits.
@@ -1634,6 +1879,18 @@ You gain the following benefits.
 + Merge with Shadows. While entirely within Dim Light or Darkness, you can give yourself the Invisible condition as a Bonus action. The condition ends on you immediately after you take an action, a Bonus Action, or a Reaction.
 
 + Shadowy Form. While entirely within Dim Light or Darkness, you have Resistance to all damage except Psychic and Radiant.
+
+
+### Boon of the Soul Drinker
+
+You gain the following benefits.
+
++ **Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 30.
+
++ Grave Resistance. You have Resistance to Cold damage and Necrotic damage.
+
++ Siphon Life. When an enemy within 120 feet of you is reduced to 0 Hit Points, you can take a Reaction to regain 50 Hit Points. Once you use this benefit, you can't use it again until you finish a Short or Long Rest.
+
 
 ### Boon of the True Caster
 
