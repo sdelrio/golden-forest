@@ -13,12 +13,12 @@ Weapons are grouped for convenience. Remember that masteries apply ONLY to a spe
 |:-----------:|:--------------:|:--------------:|
 | Blunted weapons 🔨 | Club, Greatclub, Light Hammer, Mace, Flail, Morningstar, Warhammer, War Pick, Maul | [Sap](#sap)          |
 | Bladed weapons 🗡 | Dagger, Sickle, Greatsword, Longsword, Shortsword, Scimitar, Rapier     | [Parry](#parry)        |
-| Axes 🪓 | Handaxe, Battleaxe, Greataxe |[Brutal crit](#brutal-crit)|
+| Axes 🪓 | Handaxe, Battleaxe, Greataxe |[Brutal](#brutal)|
 | Pole arms 🔱| Spear, Quarterstaff, Glaive, Halberd, Lance, Pike, Trident   | [Cleave](#cleave)         |
 | Bows 🏹 | Shortbow, Longbow     | [Vex](#vex)            |
 | Crossbows ✖🏹 | Hand Crossbow, Light Crossbow, Heavy Crossbow   | [Fast-Reload](#fast-reload) |
 | Exotic 🎯 | Javelin, Sling, Dart, Blowgun, Shuriken |[graze](#graze)|
-| Firearms 🥆 | Pistol, Blunderbuss, Musket   | [Powerful](#powerful)| 
+| Firearms 🥆 | Pistol, Blunderbuss, Musket   | [Deadly(#Deadly)| 
 
 ## Weapon masteries
 
@@ -35,9 +35,9 @@ If you hit a creature with a melee attack roll using this weapon, you can make a
 
 If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn. 
 
-### Brutal Crit
+### Brutal
 
-Critical range increasee by 1 **AND** you add an extra critical damage die.  
+When you roll critical damage, the critical damage dice always do maximum damage.
 
 ### Parry
 
@@ -54,7 +54,7 @@ When you hit an enemy with an attack, this mastery property inflicts Disadvantag
 ### Powerful
 
 This mastery is exclusively for firearms.  
-Critical range increased by 1 and when the weapon damage dice show a 10 or better result, you can add another damage dice to the damage roll and keep rolling until this condition is not true.
+You roll exploding damage dice (if you roll maximum damage, roll another damage dice) and critical damage dice always do maximum damage
 
 ## Changing Weapon Masteries  
 
