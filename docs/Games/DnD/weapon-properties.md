@@ -47,6 +47,7 @@ The Flail has the _Impactful_ property
 ### Musket
 
 The musket does 2d6 damage instead of 1d12
+
 The musket critical range is increased by 1
 
 ### Pistol
