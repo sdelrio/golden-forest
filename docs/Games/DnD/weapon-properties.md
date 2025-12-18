@@ -25,7 +25,7 @@ The mace has the _Impactful_ property
 
 ### Sickle
 
-The sickle does '1d4+1' damage instead of 1d4
+Reroll 1 on the damage dice
 
 ## Martial Melee Weapons
 
@@ -40,3 +40,16 @@ The Morningstar has the _Impactful_ property
 The Flail has the _Impactful_ property
 
 <Impactful />
+
+
+## Martial Ranged Weapons
+
+### Musket
+
+The musket does 2d6 damage instead of 1d12
+The musket critical range is increased by 1
+
+### Pistol
+
+The pistol critical range is increased by 1
+
