@@ -18,7 +18,7 @@ Weapons are grouped for convenience. Remember that masteries apply ONLY to a spe
 | Bows 🏹 | Shortbow, Longbow     | [Vex](#vex)            |
 | Crossbows ✖🏹 | Hand Crossbow, Light Crossbow, Heavy Crossbow   | [Fast-Reload](#fast-reload) |
 | Exotic 🎯 | Javelin, Sling, Dart, Blowgun, Shuriken |[graze](#graze)|
-| Firearms 🥆 | Pistol, Blunderbuss, Musket   | [Deadly(#Deadly)| 
+| Firearms 🥆 | Pistol, Blunderbuss, Musket   | [Powerful(#Powerful)| 
 
 ## Weapon masteries
 
