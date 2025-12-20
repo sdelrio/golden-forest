@@ -29,6 +29,10 @@ Reroll 1 on the damage dice
 
 ## Martial Melee Weapons
 
+### All axes
+
+Handaxe, Battleaxe and Greataxe do maximum damage on the critical damage dice
+
 ### Morningstar
 
 The Morningstar has the _Impactful_ property
