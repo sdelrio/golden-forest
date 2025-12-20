@@ -13,7 +13,7 @@ Weapons are grouped for convenience. Remember that masteries apply ONLY to a spe
 |:-----------:|:--------------:|:--------------:|
 | Blunted weapons 🔨 | Club, Greatclub, Light Hammer, Mace, Flail, Morningstar, Warhammer, War Pick, Maul | [Sap](#sap)          |
 | Bladed weapons 🗡 | Dagger, Sickle, Greatsword, Longsword, Shortsword, Scimitar, Rapier     | [Parry](#parry)        |
-| Axes 🪓 | Handaxe, Battleaxe, Greataxe |[Brutal](#brutal)|
+| Axes 🪓 | Handaxe, Battleaxe, Greataxe |[Keen](#Keen)|
 | Pole arms 🔱| Spear, Quarterstaff, Glaive, Halberd, Lance, Pike, Trident   | [Cleave](#cleave)         |
 | Bows 🏹 | Shortbow, Longbow     | [Vex](#vex)            |
 | Crossbows ✖🏹 | Hand Crossbow, Light Crossbow, Heavy Crossbow   | [Fast-Reload](#fast-reload) |
@@ -35,9 +35,9 @@ If you hit a creature with a melee attack roll using this weapon, you can make a
 
 If you hit a creature with this weapon and deal damage to the creature, you have Advantage on your next attack roll against that creature before the end of your next turn. 
 
-### Brutal
+### Keen
 
-When you roll critical damage, the critical damage dice always do maximum damage.
+Critical range is increased by 1
 
 ### Parry
 
