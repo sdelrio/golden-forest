@@ -38,15 +38,10 @@ import TOCInline from '@theme/TOCInline';
 | Splint | 7 | 0 | Disadvantage | 60 lb.| 200 gp | - |
 | Plate | 8 | 0 | Disadvantage | 65 lb.| 1.500 gp | - |
 
-Characters in heavy armor when taking a critical hit from a weapon or natural weapon attack, can spend its reaction to let the heavy armor to take the brunt of the attack and gain resistance to critical damage.
-
-The armor is damaged in the process.
-- 1st hit - Damaged: -1 AC. Repair DC 15
-- 2nd hit - Worn: -2 AC. Repair DC 20
-- 3rd hit - Destroyed
+Characters in heavy armor take less severe critical hit effects
 
 :::note[Magical Armor]
-When wearing magical heavy armor and you use this feature, the armor is damaged only if struck by magical weapons, adamantine weapons, firearms, imbued magical effects on weapons (like paladin's smite) or natural attacks from creatures of CR 8 or higher
+When wearing magical armor or shields, they are damaged only if struck by magical weapons, adamantine weapons, firearms, imbued magical effects on weapons (like paladin's smite) or natural attacks from creatures of CR 8 or higher
 :::
 
 
