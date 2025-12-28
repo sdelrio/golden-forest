@@ -13,12 +13,12 @@ Weapons are grouped for convenience. Remember that masteries apply ONLY to a spe
 |:-----------:|:--------------:|:--------------:|
 | Blunted weapons 🔨 | Club, Greatclub, Light Hammer, Mace, Flail, Morningstar, Warhammer, War Pick, Maul | [Sap](#sap)          |
 | Bladed weapons 🗡 | Dagger, Sickle, Greatsword, Longsword, Shortsword, Scimitar, Rapier     | [Parry](#parry)        |
-| Axes 🪓 | Handaxe, Battleaxe, Greataxe |[Keen](#Keen)|
+| Axes 🪓 | Handaxe, Battleaxe, Greataxe |[Keen](#keen)|
 | Pole arms 🔱| Spear, Quarterstaff, Glaive, Halberd, Lance, Pike, Trident   | [Cleave](#cleave)         |
 | Bows 🏹 | Shortbow, Longbow     | [Vex](#vex)            |
 | Crossbows ✖🏹 | Hand Crossbow, Light Crossbow, Heavy Crossbow   | [Fast-Reload](#fast-reload) |
 | Exotic 🎯 | Javelin, Sling, Dart, Blowgun, Shuriken |[graze](#graze)|
-| Firearms 🥆 | Pistol, Blunderbuss, Musket   | [Powerful](#Powerful) | 
+| Firearms 🥆 | Pistol, Blunderbuss, Musket   | [Powerful](#powerful) | 
 
 ## Weapon masteries
 
