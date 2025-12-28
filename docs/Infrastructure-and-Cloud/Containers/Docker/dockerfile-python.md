@@ -1,10 +1,10 @@
-# Dockerfile for Python
+# Python Dockerfiles
 
-Since Docker 17.05 there is support for [multistage builds](https://docs.docker.com/develop/develop-images/multistage-build). So the general idea is to make a stage for the builder and another stage for the runtime.
+Since version 17.05, Docker has supported [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build), which allow for the separation of build-time dependencies from the final runtime image. This approach optimizes image size and enhances security by excluding unnecessary tools from the production environment.
 
-## Logs
+## Log Buffering
 
-By default, if we put python into a container we can get slow docker logs or not refreshing in real time. To fix this we can disable buffer logs, since this will be managed by the container runtime.
+By default, Python buffers its output, which can cause delays in log visibility when running within a container. To ensure that logs are emitted in real-time and managed correctly by the container runtime, you should disable output buffering.
 
 
 import Tabs from '@theme/Tabs';
@@ -28,15 +28,22 @@ CMD ["python","-u","main.py"]
 * [https://stackoverflow.com/questions/29663459/python-app-does-not-print-anything-when-running-detached-in-docker](https://stackoverflow.com/questions/29663459/python-app-does-not-print-anything-when-running-detached-in-docker)
 * [https://stackoverflow.com/questions/107705/disable-output-buffering](https://stackoverflow.com/questions/107705/disable-output-buffering)
 
-## Alpine base image
+## Alpine Base Image
 
-You will get small image sizes, but has some drawback, like using [musl](https://en.wikipedia.org/wiki/Musl) libs and [wheels](https://pythonwheels.com/) package sometimes are not available so you must compile packages when building image, but as a result you can get longer build times, some strange bugs or even performance issues. So it's better to use the official ubuntu images, you will get faster builds, standard libs and security maintenance updates.
+While Alpine-based images offer a smaller footprint, they introduce several trade-offs:
 
-[2021: The best Docker base image for your Python application](https://pythonspeed.com/articles/base-image-python-docker-images/)
+* **Library Compatibility**: Alpine uses [musl](https://en.wikipedia.org/wiki/Musl) instead of `glibc`. This can lead to subtle bugs or performance degradation in applications expecting standard C libraries.
+* **Extended Build Times**: Pre-compiled [wheels](https://pythonwheels.com/) are often unavailable for Alpine. This requires compiling packages from source during the build process, which significantly increases build duration.
+* **Stability**: Official Debian or Ubuntu-based images are generally recommended for production environments to ensure faster builds, standard library compatibility, and consistent security maintenance.
+
+For more information, see: [The best Docker base image for your Python application](https://pythonspeed.com/articles/base-image-python-docker-images/)
 
 #### Multistage build
 
-```bash
+- Build stage with dependeencies
+- Production stage with only required runtime file dependencies
+
+```dockerfile
 FROM python:3.7-alpine as base
 
 FROM base as builder
@@ -60,7 +67,7 @@ CMD ["gunicorn", "-w 4", "main:app"]
 
 ### Smallest size python base image
 
-```bash
+```dockerfile
 FROM alpine:3.14
 
 # This hack is widely applied to avoid python printing issues in docker containers.
@@ -84,7 +91,7 @@ RUN echo "**** install Python ****" && \
 
 Using `pip wheel`, and a few more best practices sprinkled in, here’s a sample of multi-stage `Dockerfile` looks like:
 
-```bash
+```dockerfile
 # build stage
 # ========================
 FROM python:3.8.0 as build
@@ -150,7 +157,7 @@ CMD ["python", "-m", "my.app.run"]
 Minimal docker image containing a compiled python program and it's dependent libs
 
 
-```bash
+```dockerfile
 FROM transactcharlie/docker-nuitka:latest as builder
 
 ## copy code and scripts
@@ -176,11 +183,17 @@ COPY --from=builder /app.dist/ /
 CMD ["/app.exe"]
 ```
 
-* [2018: GitHub](https://github.com/TransactCharlie/nuitka-docker-example/blob/master/build_scripts/ldd_cp.sh)
-  * [Build script](https://github.com/TransactCharlie/nuitka-docker-example/blob/master/build_scripts/ldd_cp.shkkk)
+* [Nuitka Docker Example](https://github.com/TransactCharlie/nuitka-docker-example/blob/master/build_scripts/ldd_cp.sh)
+* [Build script](https://github.com/TransactCharlie/nuitka-docker-example/blob/master/build_scripts/ldd_cp.shkkk)
+
+## The .dockerignore file
+
+A `.dockerignore` file optimizes the Docker build process by excluding unnecessary files from the build context:
+
+- **Exclude artifacts**: Remove virtual environments (`venv`), Python cache (`__pycache__`), and temporary files.
+- **Reduce build context**: Minimizing the data sent to the Docker daemon improves build performance and security.
 
 ## References
-
 
 * [2019: Building Tiny Python Docker Images](https://medium.com/@ethan.edwards/building-tiny-python-docker-images-b029b194171d)
 * [2018: Building Minimal Docker Containers for Python Applications](https://blog.realkinetic.com/building-minimal-docker-containers-for-python-applications-37d0272c52f3?gi=33012cf6d374)
