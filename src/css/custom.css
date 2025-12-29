@@ -108,12 +108,12 @@
 
 html {
   background-color: #fffaeb;
-  background: linear-gradient(-90deg,rgba(250, 229, 182, 1) 0%, rgba(255, 250, 235, 1) 1%, rgba(255, 250, 235, 1) 99%, rgba(255, 215, 140, 1) 100%);
+  background: linear-gradient(-90deg, rgba(250, 229, 182, 1) 0%, rgba(255, 250, 235, 1) 1%, rgba(255, 250, 235, 1) 99%, rgba(255, 215, 140, 1) 100%);
 }
 
 html[data-theme='dark'] {
   background-color: #170f00;
-  background: linear-gradient(-90deg,rgba(163, 106, 0, 1) 0%, rgba(23, 15, 0, 1) 1%, rgba(23, 15, 0, 1) 99%, rgba(163, 106, 0, 1) 100%);
+  background: linear-gradient(-90deg, rgba(163, 106, 0, 1) 0%, rgba(23, 15, 0, 1) 1%, rgba(23, 15, 0, 1) 99%, rgba(163, 106, 0, 1) 100%);
 }
 
 .header-github-link:hover {
@@ -125,13 +125,11 @@ html[data-theme='dark'] {
   width: 24px;
   height: 24px;
   display: flex;
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
-    no-repeat;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E") no-repeat;
 }
 
 html[data-theme='dark'] .header-github-link:before {
-  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
-    no-repeat;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E") no-repeat;
 }
 
 .footer--dark {
@@ -157,8 +155,10 @@ html[data-theme='dark'] .header-github-link:before {
 
 /* Estilos para encabezados en tema claro (por defecto) */
 html[data-theme='light'] .markdown h1,
-html[data-theme='light'] h2, h2:after,
-html[data-theme='light'] h3, h3:after,
+html[data-theme='light'] h2,
+h2:after,
+html[data-theme='light'] h3,
+h3:after,
 html[data-theme='light'] h4,
 html[data-theme='light'] h5,
 html[data-theme='light'] h6,
@@ -168,8 +168,10 @@ html[data-theme='light'] th {
 
 /* Estilos para encabezados en tema oscuro */
 html[data-theme='dark'] .markdown h1,
-html[data-theme='dark'] h2, h2::after,
-html[data-theme='dark'] h3, h3::after,
+html[data-theme='dark'] h2,
+h2::after,
+html[data-theme='dark'] h3,
+h3::after,
 html[data-theme='dark'] h4,
 html[data-theme='dark'] h5,
 html[data-theme='dark'] h6,
@@ -179,18 +181,25 @@ html[data-theme='dark'] th {
 
 /* Estilo para h2: subrayado que se extiende */
 h2 {
-  position: relative; /* Necesario para posicionar el pseudoelemento */
-  display: inline-block; /* Permite que el pseudoelemento ocupe el ancho del contenido */
-  padding-bottom: 0px; /* Espacio entre el texto y la línea */
+  position: relative;
+  /* Necesario para posicionar el pseudoelemento */
+  display: inline-block;
+  /* Permite que el pseudoelemento ocupe el ancho del contenido */
+  padding-bottom: 0px;
+  /* Espacio entre el texto y la línea */
 }
 
 h2::after {
-  content: ''; /* Obligatorio para pseudoelementos */
+  content: '';
+  /* Obligatorio para pseudoelementos */
   position: absolute;
   left: 0;
-  right: 0; /* Extiende la línea desde la izquierda hasta la derecha del h2 */
-  bottom: 0; /* Posiciona la línea en la parte inferior del h2 */
-  height: 2px; /* Grosor de la línea */
+  right: 0;
+  /* Extiende la línea desde la izquierda hasta la derecha del h2 */
+  bottom: 0;
+  /* Posiciona la línea en la parte inferior del h2 */
+  height: 2px;
+  /* Grosor de la línea */
 }
 
 /* Color del subrayado para h2 en tema claro */
@@ -207,18 +216,26 @@ html[data-theme='dark'] h2::after {
 
 /* Estilo para h2 con subrayado de ancho completo */
 html h2 {
-  border-bottom: 1px solid; /* Subrayado marrón */
-  padding-bottom: 0px; /* Espacio entre el texto y el subrayado */
-  display: block; /* Asegura que ocupe todo el ancho disponible */
-  width: 100%; /* Asegura que ocupe el 100% del ancho del padre */
-  box-sizing: border-box; /* Incluye padding y border en el width */
+  border-bottom: 1px solid;
+  /* Subrayado marrón */
+  padding-bottom: 0px;
+  /* Espacio entre el texto y el subrayado */
+  display: block;
+  /* Asegura que ocupe todo el ancho disponible */
+  width: 100%;
+  /* Asegura que ocupe el 100% del ancho del padre */
+  box-sizing: border-box;
+  /* Incluye padding y border en el width */
 }
 
 /* Estilo para h3: subrayado que se extiende */
 .divider-h3 h3 {
-  position: relative; /* Necesario para posicionar el pseudoelemento */
-  display: inline-block; /* Permite que el pseudoelemento ocupe el ancho del contenido */
-  padding-bottom: 0px; /* Espacio entre el texto y la línea */
+  position: relative;
+  /* Necesario para posicionar el pseudoelemento */
+  display: inline-block;
+  /* Permite que el pseudoelemento ocupe el ancho del contenido */
+  padding-bottom: 0px;
+  /* Espacio entre el texto y la línea */
 }
 
 /* Color del subrayado para h3 en tema oscuro */
@@ -229,11 +246,16 @@ html h2 {
 
 /* Estilo para h2 con subrayado de ancho completo */
 .divider-h3 h3 {
-  border-top: 1px solid; /* Subrayado marrón */
-  padding-top: 0.5rem; /* Espacio entre el texto y el subrayado */
-  display: block; /* Asegura que ocupe todo el ancho disponible */
-  width: 100%; /* Asegura que ocupe el 100% del ancho del padre */
-  box-sizing: border-box; /* Incluye padding y border en el width */
+  border-top: 1px solid;
+  /* Subrayado marrón */
+  padding-top: 0.5rem;
+  /* Espacio entre el texto y el subrayado */
+  display: block;
+  /* Asegura que ocupe todo el ancho disponible */
+  width: 100%;
+  /* Asegura que ocupe el 100% del ancho del padre */
+  box-sizing: border-box;
+  /* Incluye padding y border en el width */
 }
 
 /* Aplicar el SVG */
@@ -242,12 +264,16 @@ html h2 {
 }
 
 .markdown hr {
-  height: 20px; /* La altura de tu SVG. Ajusta según el 'height' de tu viewBox */
+  height: 20px;
+  /* La altura de tu SVG. Ajusta según el 'height' de tu viewBox */
   background-repeat: no-repeat;
-  background-position: left top; /* Ajuste si la imagen no cubre todo el alto */
+  background-position: left top;
+  /* Ajuste si la imagen no cubre todo el alto */
   background-size: 100% auto;
-  margin: 0.33rem 0; /* Espacio para el HR, ajusta según sea necesario */
-  background-color: transparent; /* docusaurus sobreescribe transparencias en algunos elementos */
+  margin: 0.33rem 0;
+  /* Espacio para el HR, ajusta según sea necesario */
+  background-color: transparent;
+  /* docusaurus sobreescribe transparencias en algunos elementos */
 }
 
 table {
@@ -262,7 +288,8 @@ table th,
 table td {
   border: none !important;
   padding-right: 1rem;
-  border-bottom: 1px solid var(--ifm-color-emphasis-200) !important; /* Si quieres líneas horizontales por defecto en otras tablas */
+  border-bottom: 1px solid var(--ifm-color-emphasis-200) !important;
+  /* Si quieres líneas horizontales por defecto en otras tablas */
 }
 
 table tr:last-child td {
@@ -272,8 +299,10 @@ table tr:last-child td {
 
 
 table tbody tr:hover {
-  background-color: var(--ifm-color-emphasis-300); /* Slightly darker on hover */
-  cursor: pointer; /* Indicate it's interactive */
+  background-color: var(--ifm-color-emphasis-300);
+  /* Slightly darker on hover */
+  cursor: pointer;
+  /* Indicate it's interactive */
 }
 
 .markdown h2 {
@@ -292,61 +321,60 @@ table tbody tr:hover {
   ESTILOS PARA LA ADMONICIÓN "NOTE"
   https://devsnap.me/css-paper-effect
 */
-.theme-admonition.theme-admonition{
+.theme-admonition {
   position: relative;
   border-radius: 2px;
 }
 
-.theme-admonition.theme-admonition::before,
-.theme-admonition.theme-admonition::after {
+.theme-admonition::before,
+.theme-admonition::after {
   content: '';
   position: absolute;
   bottom: 10px;
   width: 30%;
   height: 10px;
-  box-shadow: 0 5px 14px rgba(163,106,0,.7);
+  box-shadow: 0 5px 14px rgba(163, 106, 0, .7);
   z-index: -1;
   transition: all .3s ease-in-out;
 }
 
 
-.theme-admonition.theme-admonition::before {
+.theme-admonition::before {
   left: 15px;
   transform: skew(-3deg) rotate(-3deg);
 }
 
-.theme-admonition.theme-admonition::after {
+.theme-admonition::after {
   right: 15px;
   transform: skew(3deg) rotate(3deg);
 }
 
-.theme-admonition.theme-admonition:hover::before,
-.theme-admonition.theme-admonition:hover::after {
-  box-shadow: 0 2px 14px rgba(163,106,0,.4);
+.theme-admonition:hover::before,
+.theme-admonition:hover::after {
+  box-shadow: 0 2px 14px rgba(163, 106, 0, .4);
 }
 
-.theme-admonition.theme-admonition:hover::before[data-theme='dark'],
-.theme-admonition.theme-admonition:hover::after[data-theme='dark'] {
-  box-shadow: 0 2px 14px rgba(163,106,0,.4);
+.theme-admonition:hover::before[data-theme='dark'],
+.theme-admonition:hover::after[data-theme='dark'] {
+  box-shadow: 0 2px 14px rgba(163, 106, 0, .4);
 }
 
-.theme-admonition.theme-admonition:hover::before {
+.theme-admonition:hover::before {
   left: 5px;
 }
 
-.theme-admonition.theme-admonition:hover::after {
+.theme-admonition:hover::after {
   right: 5px;
 }
 
 [data-theme='light'] .navbar {
-  background: linear-gradient(-90deg,rgba(252, 239, 212, 1) 0%, var(--ifm-navbar-background-color) 1%, var(--ifm-navbar-background-color) 99%, rgba(252, 239, 212, 1) 100%);
+  background: linear-gradient(-90deg, rgba(252, 239, 212, 1) 0%, var(--ifm-navbar-background-color) 1%, var(--ifm-navbar-background-color) 99%, rgba(252, 239, 212, 1) 100%);
 }
 
 [data-theme='dark'] .navbar {
-  background: linear-gradient(-90deg,rgba(83, 56, 0, 1) 0%, var(--ifm-navbar-background-color) 1%, var(--ifm-navbar-background-color) 99%, rgba(83, 56, 0, 1) 100%);
+  background: linear-gradient(-90deg, rgba(83, 56, 0, 1) 0%, var(--ifm-navbar-background-color) 1%, var(--ifm-navbar-background-color) 99%, rgba(83, 56, 0, 1) 100%);
 }
 
 .footer {
-  background: linear-gradient(0deg, var(--ifm-footer-background-color) 0%, var(--ifm-footer-background-color) 90%,  #404040 100%);
+  background: linear-gradient(0deg, var(--ifm-footer-background-color) 0%, var(--ifm-footer-background-color) 90%, #404040 100%);
 }
-
