@@ -38,9 +38,63 @@ While Alpine-based images offer a smaller footprint, they introduce several trad
 
 For more information, see: [The best Docker base image for your Python application](https://pythonspeed.com/articles/base-image-python-docker-images/)
 
-#### Multistage build
+## Hardened Base image
 
-- Build stage with dependeencies
+- [docker hardened images](https://www.docker.com/products/hardened-images/)
+- [dhi python hardened images](https://hub.docker.com/hardened-images/catalog/dhi/python)
+
+Docker Hardened Images come in different variants depending on their intended use.
+
+* Runtime variants are designed to run your application in production. These images are intended to be used either directly or as the `FROM` image in the final stage of a multi-stage build. These images typically:
+  * Run as the nonroot user
+  * Do not include a shell or a package manager
+  * Contain only the minimal set of libraries needed to run the app
+* Build-time variants typically include dev in the variant name and are intended for use in the first stage of a multi-stage Dockerfile. These images typically:
+  * Run as the root user
+  * Include a shell and package manager
+  * Are used to build or compile applications
+* FIPS variants
+  * Include fips in the variant name and tag.
+  * They come in both runtime and build-time variants.
+  * These variants use cryptographic modules that have been validated under FIPS 140, a U.S. government standard for secure cryptographic operations.
+  * Docker Hardened Python images include FIPS-compliant variants for environments requiring Federal Information Processing Standards compliance.
+
+```dockerfile
+# syntax=docker/dockerfile:1
+
+## -----------------------------------------------------
+## Build stage (use tag with -dev suffix: e.g. 3.9.23-debian13-fips-dev)
+FROM dhi.io/python:<tag> AS build-stage
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PATH="/app/venv/bin:$PATH"
+
+WORKDIR /app
+
+RUN python -m venv /app/venv
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+## -----------------------------------------------------
+## Final stage (use the same tag as above but without the -dev suffix e.g. 3.9.23-debian13-fips)
+FROM dhi.io/python:<tag> AS runtime-stage
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PATH="/app/venv/bin:$PATH"
+
+WORKDIR /app
+
+COPY --from=build-stage /app/venv /app/venv
+COPY app.py .
+
+CMD ["python", "/app/app.py"]
+```
+
+## Multistage build
+
+- Build stage with dependencies
 - Production stage with only required runtime file dependencies
 
 ```dockerfile
@@ -65,7 +119,7 @@ WORKDIR /app
 CMD ["gunicorn", "-w 4", "main:app"]
 ```
 
-### Smallest size python base image
+## Smallest size python base image
 
 ```dockerfile
 FROM alpine:3.14
