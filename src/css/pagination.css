@@ -1,0 +1,187 @@
+/* 
+   NOTE: Global selectors commented out to prevent affecting the entire Docusaurus site.
+   If you need these, consider applying them to a specific container ID or class.
+*/
+
+/*
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1d1f20;
+    color: #e5e5e5;
+    font: 16px/1.25 'Crimson Text', sans-serif;
+    margin: 0;
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80em;
+}
+
+#container {
+    float: left;
+    padding: 1em;
+    width: 100%;
+}
+*/
+
+
+.pagination-nav {
+    background: var(--docusaurus-highlighted-code-line-bg);
+    box-shadow: -1em 0 3em -1em rgba(0, 0, 0, 0.5), 1em 0 3em -1em rgba(0, 0, 0, 0.5);
+    color: #000;
+    padding: 2em;
+}
+
+.pagination-nav[data-theme='dark'] {
+    background: var(--docusaurus-highlighted-code-line-bg);
+}
+
+.pagination-nav * {
+    position: relative;
+}
+
+/* Highlight */
+.pagination-nav *::-moz-selection {
+    background: rgba(222, 255, 0, 0.75);
+}
+
+.pagination-nav *::selection {
+    background: rgba(222, 255, 0, 0.75);
+}
+
+/* Header/Footer */
+.pagination-nav header {
+    padding-bottom: 1em;
+}
+
+.pagination-nav header *,
+.pagination-nav footer * {
+    letter-spacing: 0.125em;
+    margin: 0;
+}
+
+.pagination-nav header * {
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+.pagination-nav footer {
+    padding-top: 1em;
+}
+
+.pagination-nav__link {
+    border: 0px solid var(--ifm-color-emphasis-300);
+    padding: 0;
+    text-align: left;
+}
+
+.pagination-nav__link--prev {
+    text-align: left;
+    left: 0;
+    transition: left 0.2s ease-in-out;
+}
+
+.pagination-nav__link--next:before,
+.pagination-nav__link--prev:before {
+    background: var(--docusaurus-highlighted-code-line-bg);
+    content: '';
+    height: 150%;
+    top: -38px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.pagination-nav__link--prev:hover {
+    left: 10px;
+}
+
+.pagination-nav__link--next:hover {
+    right: 10px;
+}
+
+.pagination-nav__link--prev:before {
+    left: -30px;
+    transform: rotate(1deg);
+}
+
+.pagination-nav__link--next:before {
+    left: 30px;
+    transform: rotate(-1deg);
+}
+
+.pagination-nav__link--next {
+    text-align: right;
+    right: 0;
+    transition: right 0.2s ease-in-out;
+}
+
+.pagination-nav__label {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA2NCA2NCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjQgNjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCiAgICA8Zz4NCiAgICAJPHBhdGggZD0iTTAsMzJMMzIsMGwzMiwzMkwzMiw2NEwwLDMyeiBNOCwzMmwyNCwyNGwyNC0yNEwzMiw4TDgsMzJ6IE0xNiwzMmwxNi0xNmwxNiwxNkwzMiw0OEwxNiwzMnogTTI0LDMybDgsOGw4LThsLTgtOEwyNCwzMnoiIC8+DQogICAgPC9nPg0KPC9zdmc+) bottom center no-repeat;
+    background-size: 0.5em 0.5em;
+    letter-spacing: 0.125em;
+    margin: 0 0 1em 0;
+    padding: 1em 0;
+    position: relative;
+    text-align: center;
+}
+
+.pagination-nav__label:before,
+.pagination-nav__label:after {
+    border: solid 0 #000;
+    border-width: 0.05em 0;
+    bottom: calc((0.125em / 2) * 3);
+    content: '';
+    height: 0.15em;
+    position: absolute;
+    width: calc(50% - (1em / 2));
+}
+
+.pagination-nav__label:before {
+    left: 0;
+}
+
+.pagination-nav__label:after {
+    right: 0;
+}
+
+
+/*** MEDIA QUERIES ***/
+@media only screen and (min-width: 50em) {
+
+    .pagination-nav {
+        margin: 1em;
+        position: relative;
+    }
+
+    .pagination-nav:before {
+        background-color: var(--ifm-color-secondary-darkest);
+        border-radius: 0.33em 0.33em 0 0;
+        bottom: -0em;
+        content: '';
+        left: -0.5em;
+        position: absolute;
+        right: -0.5em;
+        top: -1em;
+        z-index: -1;
+    }
+
+    .pagination-nav:after {
+        background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 46%, rgba(0, 0, 0, 0.5) 49%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.5) 51%, rgba(0, 0, 0, 0.2) 52%, transparent 100%);
+        bottom: -0em;
+        content: '';
+        left: 50%;
+        position: absolute;
+        top: -1em;
+        transform: translate(-50%, 0);
+        width: 4em;
+        z-index: 1;
+    }
+
+}

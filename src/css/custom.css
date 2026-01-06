@@ -378,3 +378,6 @@ table tbody tr:hover {
 .footer {
   background: linear-gradient(0deg, var(--ifm-footer-background-color) 0%, var(--ifm-footer-background-color) 90%, #404040 100%);
 }
+
+/* Import pagination styles */
+@import './pagination.css';
