@@ -1,0 +1,55 @@
+table:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 0 30px #aa6d2f inset;
+    border-radius: 0.5em;
+    filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="w"><feTurbulence baseFrequency="0.02" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="10"/></filter></svg>#w') drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.6));
+    z-index: -1;
+    top: -1em;
+    right: -1em;
+    left: -1em;
+    bottom: -1em;
+}
+
+table {
+    border: none !important;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    display: table !important;
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+table th {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-top: 2px solid var(--ifm-color-danger-contrast-foreground) !important;
+    border-bottom: 2px solid var(--ifm-color-danger-contrast-foreground) !important;
+    border-left: none;
+    border-right: none;
+}
+
+table td {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-left: none;
+    border-right: none;
+}
+
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:first-child td {
+    border-top: none;
+}
+
+table tbody tr:hover {
+    background-color: var(--ifm-color-emphasis-300);
+    cursor: pointer;
+}

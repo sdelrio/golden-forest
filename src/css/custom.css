@@ -276,34 +276,8 @@ html h2 {
   /* docusaurus sobreescribe transparencias en algunos elementos */
 }
 
-table {
-  border: none !important;
-  background-color: transparent !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  /* Asegura que las celdas individuales no tengan bordes por defecto si no son parte de nuestra tabla personalizada */
-}
+@import './table.css';
 
-table th,
-table td {
-  border: none !important;
-  padding-right: 1rem;
-  border-bottom: 1px solid var(--ifm-color-emphasis-200) !important;
-  /* Si quieres líneas horizontales por defecto en otras tablas */
-}
-
-table tr:last-child td {
-  border-bottom: none !important;
-}
-
-
-
-table tbody tr:hover {
-  background-color: var(--ifm-color-emphasis-300);
-  /* Slightly darker on hover */
-  cursor: pointer;
-  /* Indicate it's interactive */
-}
 
 .markdown h2 {
   margin-top: calc(var(--ifm-h2-vertical-rhythm-top) * var(--ifm-leading) / 3.0);
