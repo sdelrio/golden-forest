@@ -277,6 +277,7 @@ html h2 {
 }
 
 @import './table.css';
+@import './admonition.css';
 
 
 .markdown h2 {
@@ -291,55 +292,6 @@ html h2 {
   margin-top: calc(var(--ifm-h3-vertical-rhythm-top) * var(--ifm-leading) / 3.0);
 }
 
-/*
-  ESTILOS PARA LA ADMONICIÓN "NOTE"
-  https://devsnap.me/css-paper-effect
-*/
-.theme-admonition {
-  position: relative;
-  border-radius: 2px;
-}
-
-.theme-admonition::before,
-.theme-admonition::after {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  width: 30%;
-  height: 10px;
-  box-shadow: 0 5px 14px rgba(163, 106, 0, .7);
-  z-index: -1;
-  transition: all .3s ease-in-out;
-}
-
-
-.theme-admonition::before {
-  left: 15px;
-  transform: skew(-3deg) rotate(-3deg);
-}
-
-.theme-admonition::after {
-  right: 15px;
-  transform: skew(3deg) rotate(3deg);
-}
-
-.theme-admonition:hover::before,
-.theme-admonition:hover::after {
-  box-shadow: 0 2px 14px rgba(163, 106, 0, .4);
-}
-
-.theme-admonition:hover::before[data-theme='dark'],
-.theme-admonition:hover::after[data-theme='dark'] {
-  box-shadow: 0 2px 14px rgba(163, 106, 0, .4);
-}
-
-.theme-admonition:hover::before {
-  left: 5px;
-}
-
-.theme-admonition:hover::after {
-  right: 5px;
-}
 
 [data-theme='light'] .navbar {
   background: linear-gradient(-90deg, rgba(252, 239, 212, 1) 0%, var(--ifm-navbar-background-color) 1%, var(--ifm-navbar-background-color) 99%, rgba(252, 239, 212, 1) 100%);

@@ -5,7 +5,7 @@ table:before {
     border-radius: 0.5em;
     filter: url(#wavy1) drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.5));
     box-shadow: 0 0 30px var(--_inset-shadow) inset;
-    z-index: -1;
+    z-index: -10;
 }
 
 table {
@@ -24,8 +24,8 @@ table {
 }
 
 table th {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0px;
+    padding-left: 1em;
     border-top: 2px solid var(--_border-head);
     border-bottom: 2px solid var(--_border-head);
     border-left: none;

@@ -1,0 +1,72 @@
+/*
+  ESTILOS PARA LA ADMONICIÓN "NOTE"
+  https://devsnap.me/css-paper-effect
+*/
+
+.theme-admonition {
+    position: relative;
+    border-radius: 2px;
+}
+
+.theme-admonition-note {
+    background-image: linear-gradient(90deg, color-mix(in srgb, var(--ifm-color-secondary-lightest), transparent 20%) 0%, color-mix(in srgb, var(--ifm-color-secondary-lightest), transparent 10%) 50%, color-mix(in srgb, var(--ifm-color-secondary-lighter), transparent 30%) 100%), url('/img/paper-no-color.svg');
+}
+
+.theme-admonition-tip {
+    background-image: linear-gradient(90deg, color-mix(in srgb, var(--ifm-color-success-lightest), transparent 30%) 0%, color-mix(in srgb, var(--ifm-color-success-lightest), transparent 10%) 50%, color-mix(in srgb, var(--ifm-color-success-lighter), transparent 40%) 100%), url('/img/paper-no-color.svg');
+}
+
+.theme-admonition-danger {
+    background-image: linear-gradient(90deg, color-mix(in srgb, var(--ifm-color-danger-lightest), transparent 30%) 0%, color-mix(in srgb, var(--ifm-color-danger-lightest), transparent 10%) 50%, color-mix(in srgb, var(--ifm-color-danger-lighter), transparent 40%) 100%), url('/img/paper-no-color.svg');
+}
+
+.theme-admonition-warning {
+    background-image: linear-gradient(90deg, color-mix(in srgb, var(--ifm-color-warning-lightest), transparent 30%) 0%, color-mix(in srgb, var(--ifm-color-warning-lightest), transparent 10%) 50%, color-mix(in srgb, var(--ifm-color-warning-lighter), transparent 40%) 100%), url('/img/paper-no-color.svg');
+}
+
+[data-theme='dark'] .theme-admonition-note,
+[data-theme='dark'] .theme-admonition-tip,
+[data-theme='dark'] .theme-admonition-danger,
+[data-theme='dark'] .theme-admonition-warning {
+    background-image: none;
+}
+
+.theme-admonition::before,
+.theme-admonition::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    width: 30%;
+    height: 10px;
+    box-shadow: 0 5px 14px rgba(163, 106, 0, .7);
+    transition: all .3s ease-in-out;
+    z-index: -10;
+}
+
+.theme-admonition::before {
+    left: 15px;
+    transform: skew(-3deg) rotate(-3deg);
+}
+
+.theme-admonition::after {
+    right: 15px;
+    transform: skew(3deg) rotate(3deg);
+}
+
+.theme-admonition:hover::before,
+.theme-admonition:hover::after {
+    box-shadow: 0 2px 14px rgba(163, 106, 0, .4);
+}
+
+.theme-admonition:hover::before[data-theme='dark'],
+.theme-admonition:hover::after[data-theme='dark'] {
+    box-shadow: 0 2px 14px rgba(163, 106, 0, .4);
+}
+
+.theme-admonition:hover::before {
+    left: 5px;
+}
+
+.theme-admonition:hover::after {
+    right: 5px;
+}
