@@ -355,3 +355,14 @@ html h2 {
 
 /* Import pagination styles */
 @import './pagination.css';
+
+/*
+ * SVG Filter Usage Example:
+ * To apply the paper texture filter to an element, use:
+ * filter: url(#paper-texture);
+ *
+ * Example for all markdown pages:
+ * .markdown {
+ *   filter: url(#paper-texture);
+ * }
+ */

@@ -1,20 +1,19 @@
 table:before {
     content: "";
     position: absolute;
-    inset: 0;
-    box-shadow: 0 0 30px #aa6d2f inset;
+    inset: -1em;
     border-radius: 0.5em;
-    filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="w"><feTurbulence baseFrequency="0.02" numOctaves="3" seed="7"/><feDisplacementMap in="SourceGraphic" scale="10"/></filter></svg>#w') drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.6));
+    filter: url(#wavy1) drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.5));
+    box-shadow: 0 0 30px var(--_inset-shadow) inset;
     z-index: -1;
-    top: -1em;
-    right: -1em;
-    left: -1em;
-    bottom: -1em;
 }
 
 table {
+    --_inset-shadow: var(--inset-shadow, #aa6d2f);
+    --_border-head: var(--ifm-color-danger-contrast-foreground);
+    --_shadow: var(--shadow, #aa6d2f);
+    --_tr-hover: var(--ifm-color-emphasis-300);
     border: none !important;
-    background-color: transparent !important;
     border-radius: 0 !important;
     display: table !important;
     position: relative;
@@ -27,8 +26,8 @@ table {
 table th {
     padding-right: 15px;
     padding-left: 15px;
-    border-top: 2px solid var(--ifm-color-danger-contrast-foreground) !important;
-    border-bottom: 2px solid var(--ifm-color-danger-contrast-foreground) !important;
+    border-top: 2px solid var(--_border-head);
+    border-bottom: 2px solid var(--_border-head);
     border-left: none;
     border-right: none;
 }
@@ -40,7 +39,6 @@ table td {
     border-right: none;
 }
 
-
 table tr:last-child td {
     border-bottom: none;
 }
@@ -50,6 +48,6 @@ table tr:first-child td {
 }
 
 table tbody tr:hover {
-    background-color: var(--ifm-color-emphasis-300);
+    background-color: var(--_tr-hover);
     cursor: pointer;
 }
