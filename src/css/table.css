@@ -4,7 +4,7 @@ table:before {
     inset: -1em;
     border-radius: 0.5em;
     filter: url(#wavy1) drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.5));
-    box-shadow: 0 0 30px var(--_inset-shadow) inset;
+    box-shadow: 0 0 15px var(--_inset-shadow) inset;
     z-index: -10;
 }
 
@@ -44,6 +44,10 @@ table tr:last-child td {
 }
 
 table tr:first-child td {
+    border-top: none;
+}
+
+table tr {
     border-top: none;
 }
 
