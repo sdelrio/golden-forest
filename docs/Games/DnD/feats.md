@@ -4,7 +4,19 @@ A feat represents a talent or an area of expertise that gives a character specia
 
 import TOCInline from '@theme/TOCInline';
 
+<style>{`
+  .toc-no-bullets a { color: inherit; }
+  .toc-no-bullets a:hover {
+    color: var(--ifm-link-color);
+    text-decoration: none; }
+  .toc-no-bullets ul {
+    list-style-type: none;
+    font-size: 0.75em;
+  }
+`}</style>
+<div className="toc-no-bullets">
 <TOCInline toc={toc} minHeadingLevel={1} maxHeadingLevel={2} />
+</div>
 
 <div className="divider-h3">
 

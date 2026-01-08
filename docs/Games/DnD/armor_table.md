@@ -1,12 +1,8 @@
 ---
-hide_table_of_contents: true
+description: A comprehensive reference for light, medium, and heavy armor, including shields and resizing rules.
 ---
 
 # Master Armor Table
-
-import TOCInline from '@theme/TOCInline';
-
-<TOCInline toc={toc} minHeadingLevel={1} maxHeadingLevel={2} />
 
 ## Light Armor
 
