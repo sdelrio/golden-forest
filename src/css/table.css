@@ -13,6 +13,13 @@ table {
     --_border-head: var(--ifm-color-danger-contrast-foreground);
     --_shadow: var(--shadow, #aa6d2f);
     --_tr-hover: var(--ifm-color-emphasis-300);
+    --_tr-dnd: rgb(224, 229, 193);
+    --_tr-dnd-dark: rgb(204, 209, 173);
+    --_tr-dnd-darker: rgb(144, 149, 113);
+    --_tr-dnd-darkest: rgb(54, 59, 23);
+    --_tr-dnd-light: rgb(234, 239, 213);
+    --_tr-dnd-lighter: rgb(244, 249, 233);
+    --_tr-dnd-lightest: rgb(254, 255, 253);
     border: none !important;
     border-radius: 0 !important;
     display: table !important;
@@ -30,6 +37,11 @@ table th {
     border-bottom: 2px solid var(--_border-head);
     border-left: none;
     border-right: none;
+}
+
+table thead,
+table th {
+    background-color: transparent;
 }
 
 table td {
@@ -51,7 +63,64 @@ table tr {
     border-top: none;
 }
 
-table tbody tr:hover {
-    background-color: var(--_tr-hover);
-    cursor: pointer;
+html[class*="docs-doc-id-Games/DnD/"] article {
+    font-family: 'BookInstanity';
+    line-height: 1.25em;
+}
+
+html[class*="docs-doc-id-Games/DnD/"] h1,
+html[class*="docs-doc-id-Games/DnD/"] h2,
+html[class*="docs-doc-id-Games/DnD/"] h3,
+html[class*="docs-doc-id-Games/DnD/"] h4,
+html[class*="docs-doc-id-Games/DnD/"] h5,
+html[class*="docs-doc-id-Games/DnD/"] h6 {
+    /*font-variant: small-caps;*/
+    font-family: 'MrEavesRemake';
+    font-weight: bold;
+    color: var(--HB_Color_HeaderText);
+}
+
+html[data-theme='light'][class*="docs-doc-id-Games/DnD/"] table tbody tr:nth-child(odd) {
+    background-color: var(--_tr-dnd);
+}
+
+html[data-theme='dark'][class*="docs-doc-id-Games/DnD/"] table tbody tr:nth-child(odd) {
+    background-color: var(--_tr-dnd-darkest);
+}
+
+html[class*="docs-doc-id-Games/DnD/"] .table-of-contents>li {
+    font-family: 'MrEavesRemake';
+    /*font-variant: small-caps;*/
+    font-size: 1.15em;
+}
+
+html[class*="docs-doc-id-Games/DnD/"] .table-of-contents>li>a {
+    border-bottom: 2px solid rgb(201, 173, 106);
+    font-size: 1.15em;
+    display: block;
+    width: 100%;
+}
+
+html[class*="docs-doc-id-Games/DnD/"] .table-of-contents>li>ul {
+    /*font-family: ScalySans;*/
+    font-family: 'MrEavesRemake';
+    font-variant: normal;
+}
+
+html[class*="docs-doc-id-Games/DnD/"] .table-of-contents>li>ul>li {
+    overflow: hidden;
+}
+
+html[class*="docs-doc-id-Games/DnD/"] .table-of-contents>li>ul>li>a {
+    font-family: 'BookInstanity';
+    position: relative;
+    display: inline;
+}
+
+html[class*="docs-doc-id-Games/DnD/"] .table-of-contents>li>ul>li>a::after {
+    position: absolute;
+    font-weight: 20;
+    white-space: nowrap;
+    margin-left: 0.5em;
+    content: " ................................................................................................................................................................................................................................................................";
 }

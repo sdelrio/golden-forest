@@ -26,6 +26,17 @@
   --ifm-table-cell-padding: 0.25rem;
   --ifm-heading-margin-bottom: 0.25rem;
   --docusaurus-highlighted-code-line-bg: #efefef;
+  /* Handbook variables */
+  --HB_Color_Background: #EEE5CE;
+  --HB_Color_Accent: #E0E5C1;
+  --HB_Color_HeaderUnderline: #C0AD6A;
+  --HB_Color_HorizontalRule: #9C2B1B;
+  --HB_Color_HeaderText: #58180D;
+  --HB_Color_MonsterStatBackground: #F2E5B5;
+  --HB_Color_CaptionText: #766649;
+  --HB_Color_WatercolorStain: #BBAD82;
+  --HB_Color_Footnotes: #C9AD6A;
+  --TOC: 'include';
 }
 
 [data-theme='dark'] {
@@ -98,6 +109,32 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+@font-face {
+  font-family: 'ScalySans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/ScalySans.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'MrEavesRemake';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/MrEavesRemake.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'BookInstanity';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://homebrewery.naturalcrit.com/fonts/5e/Bookinsanity.woff2') format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
@@ -179,53 +216,15 @@ html[data-theme='dark'] th {
   color: #c68000;
 }
 
-/* Estilo para h2: subrayado que se extiende */
-h2 {
-  position: relative;
-  /* Necesario para posicionar el pseudoelemento */
-  display: inline-block;
-  /* Permite que el pseudoelemento ocupe el ancho del contenido */
-  padding-bottom: 0px;
-  /* Espacio entre el texto y la línea */
-}
-
-h2::after {
-  content: '';
-  /* Obligatorio para pseudoelementos */
-  position: absolute;
-  left: 0;
-  right: 0;
-  /* Extiende la línea desde la izquierda hasta la derecha del h2 */
-  bottom: 0;
-  /* Posiciona la línea en la parte inferior del h2 */
-  height: 2px;
-  /* Grosor de la línea */
-}
-
-/* Color del subrayado para h2 en tema claro */
-html[data-theme='light'] h2::after {
-  background-color: #503400;
-  color: #503400;
-}
-
 /* Color del subrayado para h2 en tema oscuro */
-html[data-theme='dark'] h2::after {
-  background-color: #c68000;
-  color: #c68000;
+html[data-theme='dark'] h2 {
+  border-bottom: 2px solid rgb(134, 115, 71);
 }
 
 /* Estilo para h2 con subrayado de ancho completo */
 html h2 {
-  border-bottom: 1px solid;
-  /* Subrayado marrón */
-  padding-bottom: 0px;
-  /* Espacio entre el texto y el subrayado */
-  display: block;
-  /* Asegura que ocupe todo el ancho disponible */
-  width: 100%;
-  /* Asegura que ocupe el 100% del ancho del padre */
-  box-sizing: border-box;
-  /* Incluye padding y border en el width */
+  border-bottom: 2px solid rgb(201, 173, 106);
+  /* Subrayado dorado */
 }
 
 /* Estilo para h3: subrayado que se extiende */
@@ -318,3 +317,8 @@ html h2 {
  *   filter: url(#paper-texture);
  * }
  */
+
+/* Target Games/DnD section */
+html[data-theme='light'][class*="docs-doc-id-Games/DnD/"] {
+  background-image: url('/img/paper-colored.svg') !important;
+}
