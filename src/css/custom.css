@@ -37,6 +37,17 @@
   --HB_Color_WatercolorStain: #BBAD82;
   --HB_Color_Footnotes: #C9AD6A;
   --TOC: 'include';
+
+  --ifm-heading-color-light: #58180D;
+  --ifm-heading-color-dark: #c68000;
+}
+
+html[data-theme='light'] :root {
+  --ifm-heading-color: var(--ifm-heading-color-light);
+}
+
+html[data-theme='dark'] :root {
+  --ifm-heading-color: var(--ifm-heading-color-dark);
 }
 
 [data-theme='dark'] {
@@ -173,7 +184,7 @@ html[data-theme='light'] h4,
 html[data-theme='light'] h5,
 html[data-theme='light'] h6,
 html[data-theme='light'] th {
-  color: #503400;
+  color: var(--ifm-heading-color-light);
 }
 
 /* Estilos para encabezados en tema oscuro */
@@ -186,7 +197,7 @@ html[data-theme='dark'] h4,
 html[data-theme='dark'] h5,
 html[data-theme='dark'] h6,
 html[data-theme='dark'] th {
-  color: #c68000;
+  color: var(--ifm-heading-color-dark);
 }
 
 /* Color del subrayado para h2 en tema oscuro */
