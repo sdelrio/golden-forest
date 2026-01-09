@@ -39,10 +39,10 @@ To Heal lingering injuries the target must be ___Stable___ first.
 
 ### Injury Severity Table
 
-| SEVERITY | Medical Treatment | # of successes required | Magical Treatment |
+| Severity | Medical Treatment | # of successes required | Magical Treatment |
 |:-----------:|:--------------:|:--------------:|:--------------:|
-| Light | DC 15 in combat. DC 10 outside combat | 1 | Any targeted healing spell or healing potion while stable |
-| Moderate | DC 13 | 2 | Lesser Restoration, Potion of Greater Healing, Keogthom ointment while stable |
-| Severe | DC 15| 3 | Greater Restoration or Potion of Superior Healing while stable | 
-| Critical | DC 18 | 4 | Heal or Regenerate (depending on the injury). Potion of Supreme Healing while stable |
+| **Light** | DC 15 in combat. DC 10 outside combat | 1 | Any targeted healing spell or healing potion while stable |
+| **Moderate** | DC 13 | 2 | Lesser Restoration, Potion of Greater Healing, Keogthom ointment while stable |
+| **Severe** | DC 15| 3 | Greater Restoration or Potion of Superior Healing while stable |
+| **Critical** | DC 18 | 4 | Heal or Regenerate (depending on the injury). Potion of Supreme Healing while stable |
 
