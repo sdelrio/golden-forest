@@ -6,11 +6,17 @@ import DnDPointBuy from '@site/src/components/DnDPointBuy';
 
 # Character Creation
 
-1. Choice Class
-2. Choose Origin (Backgrounds)
-3. Choose Species
-4. Choose Languages. A character knows at least 3 languages: Common, Its racial language, plus another standard language.
-5. Stats Rolling or standard set with point distribution (`15-14-13-12-10-8`).
+Follow these steps to create your character:
+
+1. **Select a Class**: Determine your character's primary role and core abilities.
+2. **Choose an Origin**: Select a background to define your character's history and starting proficiencies.
+3. **Select a Species**: Choose your character's biological heritage.
+4. **Determine Languages**: Each character knows at least three languages: Common, a species-specific language, and one additional standard language of your choice.
+5. **Generate Ability Scores**: Determine your stats using the Point Buy system, the standard array, or by rolling.
+
+## Standard Array
+
+The standard array for ability scores is: `15, 14, 13, 12, 10, 8`.
 
 ## Point Buy System
 
@@ -30,10 +36,9 @@ After that, the player can also swap one Ability Score for another one.
 
 ### Mulligan
 
-The player can scrap its Stat Rolls and choose to use the Mulligan set instead: `15-14-12-12-10-8`.
+Players may discard their rolled ability scores and use the Mulligan array instead: `15, 14, 12, 12, 10, 8`.
 
-
-### Hit points rolling
+## Hit points rolling
 
 When leveling up, instead of taking the average value, a character rolls its hit point increase.  
 
@@ -43,15 +48,15 @@ The character roll its hit die and makes the following adjustment:
 
 If the result is odd, round up to the next even number.
 
-:::note
-E.g. If the player rolls a 3 on a d6, it's rounded up to 4. If it rolls a 2, the result is unchanged.  
+:::note[Example]
+A roll of 3 on a d6 is rounded up to 4. A roll of 2 remains unchanged.
 :::
 
 #### Classes rolling d10's or d12's 
 
 Add +1 to the roll. The modified total cannot be higher than the highest value of the dice.
 
-:::note
-E.g. If the player rolls a d10 and the result is 6, it becomes a 7. If it instead rolls a 10 on the d10, it stays a 10 (not an 11).  
+:::note[Example]
+E.g. If the player rolls a 6 on a d10, it's increased to 7. If it rolls a 10, the result is unchanged.  
 :::
 

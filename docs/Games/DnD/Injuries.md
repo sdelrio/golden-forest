@@ -26,15 +26,14 @@ A character sustains a lingering injury under the following conditions:
 
 ### Magical Treatment (Potions and Healing Spells)
 
-:::note
-To Heal lingering injuries the target must be ___Stable___ first.
+:::warning[Prerequisite]
+Lingering injuries can only be treated after the target has been **stabilized**.
 :::
 
-
-+ Magical treatment includes spells, potions and ointments that can be used for healing.
-+ Healing spells that don't target a character like aura of vitality don't clear injuries. Injury healing require spells that don't have an area effect. Those spells provide a general condition improvement, but are too vague to heal more permanent damage.
-+ Lesser Restoration can be used to treat Severe Wounds by casting it multiple times. Every casting counts as a medicine success for this purpose but cannot be used to treat Severe Wounds with the Ø symbol.
-+ Greater Restoration ca be used to treat Critical Wounds by casting it multiple times. Every casting counts as a medicine success for this purpose.
++ **Scope.** Magical treatment includes targeted spells, potions, and ointments.
++ **Targeting.** Only single-target healing effects can treat lingering injuries. Area-of-effect (AoE) spells provide general recovery but lack the precision required to mend structural damage.
++ **Lesser Restoration.** Each casting counts as one success toward treating Moderate or Severe injuries. It cannot treat injuries marked with the Ø symbol.
++ **Greater Restoration.** Each casting counts as one success toward treating Critical injuries.
 
 
 ### Injury Severity Table
