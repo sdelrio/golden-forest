@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './DnDPointBuy.module.css';
 
-const ABILITIES = ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma'];
+const ABILITIES = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
 const MIN_SCORE = 8;
 const MAX_SCORE = 15;
 const TOTAL_POINTS = 27;
@@ -20,12 +20,12 @@ const POINT_COSTS = {
 
 const DnDPointBuy = () => {
     const [scores, setScores] = useState({
-        Strength: 8,
-        Dexterity: 8,
-        Constitution: 8,
-        Intelligence: 8,
-        Wisdom: 8,
-        Charisma: 8
+        STR: 8,
+        DEX: 8,
+        CON: 8,
+        INT: 8,
+        WIS: 8,
+        CHA: 8
     });
 
     const calculateModifier = (score) => {
