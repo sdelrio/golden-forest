@@ -1,3 +1,7 @@
+---
+description: Overview of Paladin and Cleric class features
+---
+
 # Classes
 
 ## Paladin

@@ -1,4 +1,6 @@
-
+---
+description: House rules for D&D weapon master property fixes.
+---
 # Weapon Master Property fixes
 
 Due to the current difficult of remember weapon master properties in PHB2024, it's best to group weapons by type and balance effects.
@@ -11,12 +13,12 @@ Weapons are grouped for convenience. Remember that masteries apply ONLY to a spe
 
 | Weapon Group | Weapons in group |Weapon mastery |
 |:-----------:|:--------------:|:--------------:|
-| Blunted weapons&nbsp;🔨 | Club, Greatclub, Light Hammer, Mace, Flail, Morningstar, Warhammer, War Pick, Maul | [Sap](#sap)          |
-| Bladed weapons&nbsp;🗡 | Dagger, Sickle, Greatsword, Longsword, Shortsword, Scimitar, Rapier     | [Parry](#parry)        |
+| Blunted&nbsp;weapons&nbsp;🔨 | Club, Greatclub, Light Hammer, Mace, Flail, Morningstar, Warhammer, War Pick, Maul | [Sap](#sap)          |
+| Bladed&nbsp;weapons&nbsp;🗡 | Dagger, Sickle, Greatsword, Longsword, Shortsword, Scimitar, Rapier     | [Parry](#parry)        |
 | Axes&nbsp;🪓 | Handaxe, Battleaxe, Greataxe |[Keen](#keen)|
-| Pole arms&nbsp;🔱| Spear, Quarterstaff, Glaive, Halberd, Lance, Pike, Trident   | [Cleave](#cleave)         |
+| Pole&nbsp;arms&nbsp;🔱| Spear, Quarterstaff, Glaive, Halberd, Lance, Pike, Trident   | [Cleave](#cleave)         |
 | Bows&nbsp;🏹 | Shortbow, Longbow     | [Vex](#vex)            |
-| Crossbows&nbsp;🏹⚙️ | Hand Crossbow, Light Crossbow, Heavy Crossbow | [Fast Reload](#fast-reload) |
+| Crossbows&nbsp;⚙️ | Hand Crossbow, Light Crossbow, Heavy Crossbow | [Fast Reload](#fast-reload) |
 | Exotic&nbsp;🎯 | Javelin, Sling, Dart, Blowgun, Shuriken |[Graze](#graze)|
 | Firearms&nbsp;🧨 | Pistol, Blunderbuss, Musket   | [Powerful](#powerful) |
 

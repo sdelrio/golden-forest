@@ -1,3 +1,6 @@
+---
+description: Revised D&D magic and resurrection house rules.
+---
 # Magic fixes
 
 ### Automatic Miss Limitations

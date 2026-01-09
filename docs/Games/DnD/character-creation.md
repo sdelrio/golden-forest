@@ -1,3 +1,7 @@
+---
+description: Character creation selection guide.
+---
+
 import DnDPointBuy from '@site/src/components/DnDPointBuy';
 
 # Character Creation

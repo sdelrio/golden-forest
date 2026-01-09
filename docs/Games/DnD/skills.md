@@ -1,4 +1,6 @@
-
+---
+description: House rules for D&D skills and item attunement.
+---
 # Skills
 
 ## Rolling skill checks without proficiency 

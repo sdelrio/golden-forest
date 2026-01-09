@@ -1,3 +1,6 @@
+---
+description: House rules for D&D weapon properties.
+---
 # Modified Weapon Properties
 
 import Impactful from './_markdown-impactful.mdx';

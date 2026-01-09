@@ -1,5 +1,5 @@
 ---
-description: A comprehensive reference for light, medium, and heavy armor, including shields and resizing rules.
+description: Armor, shields and resizing reference.
 ---
 
 # Master Armor Table

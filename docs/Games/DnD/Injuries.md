@@ -1,13 +1,18 @@
-# Lingering Injuries and Treatment
+---
+title: "Lingering Injuries"
+description: "Lingering Injuries and Treatment"
+---
 
-## Lingering injuries
+# Lingering Injuries
 
-A character take a lingering injury when:
+Lingering injuries represent physical trauma that extends beyond immediate recovery. In real-world medical terms, these are chronic or severe acute conditions—such as compound fractures, deep tissue scarring, or neurological damage—that require specialized treatment and extended periods of rehabilitation. Unlike transient injuries, they often impose long-term functional limitations on the individual.
 
-+ Reduced to 0 hit points.
-+ When taking (8 + CON bonus) damage when at 0 hit points.
-+ When falling into a moderate, severe or deadly trap.
-+ A critical hit or fumble specifies it.
+A character sustains a lingering injury under the following conditions:
+
++ Being reduced to 0 hit points.
++ Taking damage equal to or greater than (8 + Constitution modifier) while at 0 hit points.
++ Triggering a moderate, severe, or deadly trap.
++ A critical hit or fumble result specifies an injury.
 
 ## Injury Treatment
 
