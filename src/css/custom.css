@@ -277,6 +277,7 @@ html h2 {
 
 @import './table.css';
 @import './admonition.css';
+@import './custom-dnd.css';
 
 
 .markdown h2 {

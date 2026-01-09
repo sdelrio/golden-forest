@@ -1,0 +1,89 @@
+html[class*="docs-doc-id-Games/DnD/"] {
+    --dnd-font-body: 'BookInstanity';
+    --dnd-font-header: 'MrEavesRemake';
+
+    & article {
+        font-family: var(--dnd-font-body);
+        line-height: 1.25em;
+    }
+
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6 {
+        /*font-variant: small-caps;*/
+        font-family: var(--dnd-font-header);
+        font-weight: bold;
+        color: var(--HB_Color_HeaderText);
+    }
+
+    & code {
+        padding: 0px 4px;
+        font-size: .425cm;
+        /*color: #58180D;*/
+        /*background-color: #FAF7EA;*/
+        border-radius: 4px;
+        font-family: 'Courier New', 'Courier', monospace;
+        overflow-wrap: break-word;
+        white-space: pre-wrap;
+    }
+
+    &[data-theme='light'] table tbody tr:nth-child(odd) {
+        background-image: linear-gradient(to right, transparent, var(--_tr-dnd) 2%, var(--_tr-dnd) 98%, transparent);
+    }
+
+    &[data-theme='dark'] table tbody tr:nth-child(odd) {
+        background-color: var(--_tr-dnd-darkest);
+    }
+
+    & table tbody tr {
+        border-top: none !important;
+    }
+
+    & table tbody tr:nth-child(even) {
+        background-color: transparent !important;
+    }
+
+    & table td {
+        border: none !important;
+    }
+
+    & .table-of-contents>li {
+        font-family: var(--dnd-font-header);
+        /*font-variant: small-caps;*/
+        font-size: 1.15em;
+
+        &>a {
+            border-bottom: 2px solid rgb(201, 173, 106);
+            font-size: 1.15em;
+            display: block;
+            width: 100%;
+        }
+
+        &>ul {
+            /*font-family: ScalySans;*/
+            font-family: var(--dnd-font-header);
+            font-variant: normal;
+
+            &>li {
+                overflow: hidden;
+
+                &>a {
+                    font-family: var(--dnd-font-body);
+                    position: relative;
+                    display: inline;
+
+                    &::after {
+                        position: absolute;
+                        font-weight: 20;
+                        white-space: nowrap;
+                        margin-left: 0.5em;
+                        content: " ................................................................................................................................................................................................................................................................";
+                    }
+                }
+            }
+        }
+    }
+}
