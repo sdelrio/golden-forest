@@ -11,7 +11,7 @@ Weapons are grouped for convenience. Remember that masteries apply ONLY to a spe
 
 ## Weapon Master table
 
-| Weapon Group | Weapons in group |Weapon mastery |
+| Weapon Group | Weapons in Group |Weapon&nbsp;Mastery |
 |:-----------:|:--------------:|:--------------:|
 | Blunted&nbsp;weapons&nbsp;🔨 | Club, Greatclub, Light Hammer, Mace, Flail, Morningstar, Warhammer, War Pick, Maul | [Sap](#sap)          |
 | Bladed&nbsp;weapons&nbsp;🗡 | Dagger, Sickle, Greatsword, Longsword, Shortsword, Scimitar, Rapier     | [Parry](#parry)        |

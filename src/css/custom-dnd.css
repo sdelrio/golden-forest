@@ -40,6 +40,7 @@ html[class*="docs-doc-id-Games/DnD/"] {
 
     /* override default theme vars*/
     --ifm-leading: 0.375em;
+    --ifm-link-color: #363980;
 
     --_phb-tr-odd: var(--phb-tr-odd, #D9E0D6);
     --_phb-tr-even: var(--phb-tr-even, #E8EDE1);
@@ -324,5 +325,6 @@ html[class*="docs-doc-id-Games/DnD/"] {
 html[class*="docs-doc-id-Games/DnD/"][data-theme='dark'] {
     --phb-tr-odd: rgb(64, 69, 33);
     --phb-tr-even: rgb(54, 59, 23);
+    --ifm-link-color: #C6C9E0;
     /* No hace falta redefinir los gradientes porque ya usan las variables arriba */
 }
