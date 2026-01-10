@@ -35,14 +35,19 @@
 }
 
 html[class*="docs-doc-id-Games/DnD/"] {
-    --dnd-font-body: 'BookInstanity';
-    --dnd-font-header: 'MrEavesRemake';
+    --_phb-font-body: 'BookInstanity';
+    --_phb-font-header: 'MrEavesRemake';
 
     /* override default theme vars*/
     --ifm-leading: 0.375em;
 
+    --_phb-tr-odd: var(--phb-tr-odd, #D9E0D6);
+    --_phb-tr-even: var(--phb-tr-even, #E8EDE1);
+    --_phb-odd-gradient: var(--phb-odd-gradient, linear-gradient(to right, transparent, var(--_phb-tr-odd) 2%, var(--_phb-tr-odd) 98%, transparent));
+    --_phb-even-gradient: var(--phb-even-gradient, linear-gradient(to right, transparent, var(--_phb-tr-even) 2%, var(--_phb-tr-even) 98%, transparent));
+
     & article {
-        font-family: var(--dnd-font-body);
+        font-family: var(--_phb-font-body);
         line-height: 1.25em;
     }
 
@@ -53,7 +58,7 @@ html[class*="docs-doc-id-Games/DnD/"] {
     & h5,
     & h6 {
         /*font-variant: small-caps;*/
-        font-family: var(--dnd-font-header);
+        font-family: var(--_phb-font-header);
         font-weight: bold;
         color: var(--HB_Color_HeaderText);
     }
@@ -87,21 +92,30 @@ html[class*="docs-doc-id-Games/DnD/"] {
         white-space: pre-wrap;
     }
 
-    &[data-theme='light'] table tbody tr:nth-child(odd) {
-        background-image: linear-gradient(to right, transparent, var(--_tr-dnd) 2%, var(--_tr-dnd) 98%, transparent);
-    }
-
-    &[data-theme='dark'] table tbody tr:nth-child(odd) {
-        background-color: var(--_tr-dnd-darkest);
-    }
-
-    & table tbody tr {
-        border-top: none !important;
+    & table tbody tr:nth-child(odd) {
+        background-color: transparent;
+        background-image: var(--_phb-odd-gradient);
     }
 
     & table tbody tr:nth-child(even) {
-        background-color: transparent !important;
-        background-image: linear-gradient(to right, transparent, var(--_tr-dnd-lighter) 2%, var(--_tr-dnd-lighter) 98%, transparent);
+        background-color: transparent;
+        background-image: var(--_phb-even-gradient);
+    }
+
+
+    /*
+    &[data-theme='dark'] table tbody tr:nth-child(odd) {
+        background-color: var(--php-tr-odd);
+        background-image: var(--phb-odd-gradient);
+    }
+
+    &[data-theme='dark'] table tbody tr:nth-child(even) {
+        background-color: var(--php-tr-even);
+    }
+        */
+
+    & table tbody tr {
+        border-top: none !important;
     }
 
     & table td {
@@ -117,7 +131,7 @@ html[class*="docs-doc-id-Games/DnD/"] {
     }
 
     & .table-of-contents>li {
-        font-family: var(--dnd-font-header);
+        font-family: var(--_phb-font-header);
         /*font-variant: small-caps;*/
         font-size: 1.15em;
 
@@ -135,23 +149,22 @@ html[class*="docs-doc-id-Games/DnD/"] {
 
         &>ul {
             /*font-family: ScalySans;*/
-            font-family: var(--dnd-font-header);
+            font-family: var(--_phb-font-header);
             font-variant: normal;
 
             &>li {
                 overflow: hidden;
 
                 &>a {
-                    font-family: var(--dnd-font-body);
+                    font-family: var(--_phb-font-body);
                     position: relative;
                     display: inline;
 
                     &::after {
+                        content: " .....................................................................................................................................................";
                         position: absolute;
-                        font-weight: 20;
                         white-space: nowrap;
-                        margin-left: 0.5em;
-                        content: " ................................................................................................................................................................................................................................................................";
+                        overflow: hidden;
                     }
                 }
             }
@@ -306,4 +319,10 @@ html[class*="docs-doc-id-Games/DnD/"] {
         */
     }
 
+}
+
+html[class*="docs-doc-id-Games/DnD/"][data-theme='dark'] {
+    --phb-tr-odd: rgb(64, 69, 33);
+    --phb-tr-even: rgb(54, 59, 23);
+    /* No hace falta redefinir los gradientes porque ya usan las variables arriba */
 }
