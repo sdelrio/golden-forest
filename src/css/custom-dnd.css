@@ -173,11 +173,11 @@ html[class*="docs-doc-id-Games/DnD/"] {
         border-top: 2px solid;
         border-bottom: 2px solid;
         border-radius: 0;
-        /*box-shadow: none !important;*/
+        box-shadow: 0.0em 0.25em 1.25em -0.5em rgba(0, 0, 0, 0.5);
+        transition: box-shadow 0.4s ease-in-out;
         padding: 0.5rem 1rem;
         margin-top: 0.75rem;
         margin-bottom: 1.5rem;
-        position: relative;
         font-family: 'ScalySans';
 
         & [data-theme='dark']>div:first-child {
@@ -213,47 +213,44 @@ html[class*="docs-doc-id-Games/DnD/"] {
 
         /* Left Triangles (Top and Bottom) */
         &::before {
-            content: "" !important;
-            position: absolute !important;
+            content: "";
+            position: absolute;
             left: 0;
             top: calc(-1 * var(--dnd-triangle-offset)) !important;
             bottom: calc(-1 * var(--dnd-triangle-offset)) !important;
             width: var(--dnd-triangle-offset) !important;
-            height: auto !important;
+            height: auto;
             background-color: var(--ifm-alert-foreground-color);
-            box-shadow: none !important;
-            transform: none !important;
-            z-index: -1 !important;
+            z-index: -1;
             clip-path: polygon(var(--dnd-triangle-offset) 0,
                     100% var(--dnd-triangle-offset),
                     100% 100%,
                     0 calc(100% - var(--dnd-triangle-offset)),
-                    0 var(--dnd-triangle-offset)) !important;
+                    0 var(--dnd-triangle-offset));
         }
 
         /* Right Triangles (Top and Bottom)  */
         &::after {
-            content: "" !important;
-            position: absolute !important;
+            content: "";
+            position: absolute;
             right: 0;
             top: calc(-1 * var(--dnd-triangle-offset)) !important;
             bottom: calc(-1 * var(--dnd-triangle-offset)) !important;
             width: var(--dnd-triangle-offset) !important;
-            height: auto !important;
+            height: auto;
             background-color: var(--ifm-alert-foreground-color);
-            box-shadow: none !important;
-            transform: none !important;
-            z-index: -1 !important;
+            z-index: -1;
             clip-path: polygon(0 0,
                     100% var(--dnd-triangle-offset),
                     100% calc(100% - var(--dnd-triangle-offset)),
-                    0 100%) !important;
+                    0 100%);
         }
 
-        &:hover::before,
-        &:hover::after {
-            box-shadow: none !important;
-            /* Override hover shadow from admonition.css */
+        &:hover {
+            box-shadow: 0.0em 0.5em 1.25em -0.5em rgba(0, 0, 0, 0.5);
+            transition: box-shadow 0.2s ease-in-out;
         }
+
+        /* Override hover shadow from admonition.css */
     }
 }
