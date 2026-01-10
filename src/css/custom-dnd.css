@@ -101,6 +101,7 @@ html[class*="docs-doc-id-Games/DnD/"] {
 
     & table tbody tr:nth-child(even) {
         background-color: transparent !important;
+        background-image: linear-gradient(to right, transparent, var(--_tr-dnd-lighter) 2%, var(--_tr-dnd-lighter) 98%, transparent);
     }
 
     & table td {
@@ -253,4 +254,56 @@ html[class*="docs-doc-id-Games/DnD/"] {
 
         /* Override hover shadow from admonition.css */
     }
+
+    & .card {
+        position: relative;
+        isolation: isolate;
+
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+        padding: 1rem;
+        z-index: 1;
+        margin: 0em;
+
+        &::before {
+            content: "";
+            position: absolute;
+            /* 'inset: 0' es el atajo moderno para top, left, right, bottom: 0 */
+            inset: 1.0em;
+            border-radius: 0.5em;
+
+            /* Movemos el diseño del borde aquí */
+            border: solid 2px var(--ifm-color-emphasis-300);
+            background-color: var(--ifm-background-surface-color);
+
+            /*filter: url(#wavy1) drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.4));*/
+            filter: url(#wavy1) drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.5));
+            /*
+            filter: url(#wavy1) drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.4));
+            */
+            /*box-shadow: 0 0 10px #aa6d2f inset;*/
+            z-index: -10;
+            pointer-events: none;
+            /* A light paper color */
+        }
+
+        /*
+        & .card__body {
+            z-index: 1;
+            background-color: blue;
+            filter: none;
+        }
+        */
+        /*
+        & a {
+            color: inherit;
+            background-color: blue;
+            text-decoration: none;
+            z-index: 2;
+        }
+        */
+    }
+
 }

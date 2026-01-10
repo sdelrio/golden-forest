@@ -1,4 +1,4 @@
-table:before {
+.shadow table:before {
     content: "";
     position: absolute;
     inset: -1em;
@@ -20,21 +20,26 @@ table {
     --_tr-dnd-light: rgb(234, 239, 213);
     --_tr-dnd-lighter: rgb(244, 249, 233);
     --_tr-dnd-lightest: rgb(254, 255, 253);
-    border: none !important;
-    border-radius: 0 !important;
-    display: table !important;
+    border: none;
+    border-radius: 0;
+    display: table;
     position: relative;
+    /*
     margin-top: 2em;
     margin-bottom: 2em;
     margin-left: 1em;
     margin-right: 1em;
+    */
 }
 
 table th {
-    padding-right: 0px;
-    padding-left: 1em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    /*
     border-top: 2px solid var(--_border-head);
-    border-bottom: 2px solid var(--_border-head);
+    */
+    border-top: none;
+    border-bottom: none;
     border-left: none;
     border-right: none;
 }
@@ -45,8 +50,8 @@ table th {
 }
 
 table td {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
     border-left: none;
     border-right: none;
 }
@@ -61,4 +66,5 @@ table tr:first-child td {
 
 table tr {
     border-top: none;
+    border-bottom: none;
 }
