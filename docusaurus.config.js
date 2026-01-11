@@ -10,6 +10,9 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
+// https://github.com/show-docs/rehype-extended-table
+import { rehypeExtendedTable } from 'rehype-extended-table';
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
@@ -56,6 +59,11 @@ const config = {
         sidebarPath: './sidebars.js',
         // ... other options
         breadcrumbs: true,
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [
+          rehypeKatex,
+          rehypeExtendedTable,
+        ],
       },
     ],
   ],
@@ -72,7 +80,10 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/sdelrio/golden-forest/edit/master/',
           remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
+          rehypePlugins: [
+            rehypeKatex,
+            rehypeExtendedTable,
+          ],
         },
         blog: {
           showReadingTime: true,
