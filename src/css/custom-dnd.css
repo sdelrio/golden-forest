@@ -50,6 +50,7 @@ html[class*="docs-doc-id-Games/DnD/"] {
     /* override default theme vars*/
     --ifm-leading: 0.375em;
     --ifm-link-color: #363980;
+    --ifm-heading-color: var(--ifm-heading-color-light);
 
     --_phb-tr-odd: var(--phb-tr-odd, #D9E0D6);
     --_phb-tr-even: var(--phb-tr-even, #E8EDE1);
@@ -72,8 +73,8 @@ html[class*="docs-doc-id-Games/DnD/"] {
         padding: 0.5rem 1rem;
         margin-top: 0.75rem;
         margin-bottom: 1.5rem;
-        border-left: 2px solid var(--HB_Color_HeaderText, #58180D);
-        border-right: 2px solid var(--HB_Color_HeaderText, #58180D);
+        border-left: 2px solid var(--ifm-heading-color);
+        border-right: 2px solid var(--ifm-heading-color);
         font-family: 'ScalySans';
         font-size: 1rem;
 
@@ -85,7 +86,7 @@ html[class*="docs-doc-id-Games/DnD/"] {
             top: -0.18em;
             width: 0.36em;
             height: 0.36em;
-            background-color: var(--ifm-heading-color-light);
+            background-color: var(--ifm-heading-color);
             border-radius: 50%;
             transform: translate(-66%, 0%);
         }
@@ -98,7 +99,7 @@ html[class*="docs-doc-id-Games/DnD/"] {
             top: -0.18em;
             width: 0.36em;
             height: 0.36em;
-            background-color: var(--ifm-heading-color-light);
+            background-color: var(--ifm-heading-color);
             border-radius: 50%;
             transform: translate(66%, 0%);
         }
@@ -111,7 +112,7 @@ html[class*="docs-doc-id-Games/DnD/"] {
             bottom: 0;
             width: 0.36em;
             height: 0.36em;
-            background-color: var(--ifm-heading-color-light);
+            background-color: var(--ifm-heading-color);
             border-radius: 50%;
             transform: translate(-66%, 50%);
         }
@@ -124,7 +125,7 @@ html[class*="docs-doc-id-Games/DnD/"] {
             bottom: 0;
             width: 0.36em;
             height: 0.36em;
-            background-color: var(--ifm-heading-color-light);
+            background-color: var(--ifm-heading-color);
             border-radius: 50%;
             transform: translate(66%, 50%);
         }
@@ -428,5 +429,10 @@ html[class*="docs-doc-id-Games/DnD/"][data-theme='dark'] {
     --phb-tr-odd: rgb(64, 69, 33);
     --phb-tr-even: rgb(54, 59, 23);
     --ifm-link-color: #C6C9E0;
+    --ifm-heading-color: var(--ifm-heading-color-dark);
+
     /* No hace falta redefinir los gradientes porque ya usan las variables arriba */
+    & blockquote {
+        background-image: none;
+    }
 }
