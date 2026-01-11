@@ -14,14 +14,26 @@ The following skils fall into this category, and cannot be rolled without profic
 ## Attunement
 
 You can attune to an item during a short or long rest.  
-Attuning to a item requires a number of successful checks depending on item rarity, as indicated the table below. 
-:::note
-The DC of this check is 15.  
-:::
-The number of successes must be consecutive, and the check is made using : `Arcana check OR your Spellcasting ability + Prof bonus`.  
-If the roll is a failure you can commit all your energies to try to master the item. If you do, you roll until you get the required number of successes. Then count the number of failures and for each one of them, roll a CON SAVE against the item CON SAVE DC indicated in the table. For each CON Save failure, you gain one level of exhaustion. If you go above 5 levels of exhaustion roll a WIS saving throw against the CON SAVE DC of the item, if you succeed, you break from the influence of the item before it's too late (death by exhaustion).  
-Any exhaustion levels from attunement are removed by a single cast of Greater Restoration or by successfully finishing a long rest (if you have other sources of exhaustion, it cannot be reduced until this exhaustion is removed first).  
+Attuning to a item requires a number of successful checks depending on item rarity, as indicated the table below.
 
+> The DC of this check is 15.
+
+The character must achieve a specific number of consecutive successes. To resolve the attempt, perform either an **Arcana check** or a check using your **spellcasting ability modifier plus your proficiency bonus**.
+
+### Overchanneling Attunement
+
+If an initial attunement roll fails, you may choose to Commit All Energies. Doing so guarantees eventual attunement but carries a risk of physical collapse.
+
+#### The Procedure
+
+1. **Resolve Successes**: Continue rolling until the required number of successes is met.
+2. **Calculate Penalties**: Total the number of failures accrued during the process.
+3. **Endurance Check**: For each failure, perform a CON Saving Throw against the item’s CON Save DC.
+4. **Failure**: Gain one level of exhaustion.
+5. **Critical Exhaustion**: If your exhaustion exceeds level 5, perform a WIS Saving Throw against the item's CON Save DC.
+6. **Success**: You break the item's influence and stabilize at level 5 exhaustion.
+7. **Failure**: You succumb to the item (Death by Exhaustion).
+8. **Recovery**: Exhaustion gained through this process is specialized. It is removed entirely by a single casting of Greater Restoration or a completed Long Rest. This specific exhaustion must be fully cleared before any exhaustion from other sources can be reduced.
 
 | Item Rarity | Successes required | CON SAVE DC |
 |:-----------:|:--------------:|:--------------:|
@@ -32,10 +44,21 @@ Any exhaustion levels from attunement are removed by a single cast of Greater Re
 | Legendary | 4 | 18 |
 | Artifact | 5 | 20 |
 
+## Foraging for Ingredients
 
-## Survival skill to forage ingredients
+After completing a foraging period, perform a **Wisdom (Survival)** check against the **Biome DC**. On a success, the character recovers a quantity of raw materials suitable for use with an **Herbalism Kit** or **Poisoner’s Kit**.
 
-After each period spent foraging ingredients, the forager makes a Survival check against the Biome DC. The character gathers 5 gp + 1gp times the margin of success worth of ingredients for the herbalism or poisoner's kit. If the result is 25 or greater, the character finds a rare ingredient (check the table below to see the worthiness of the ingredient).
+### Calculate value of gathered ingredients
+
+**Yield Calculation:** The total value of gathered ingredients is determined by the following formula:
+
+> 5 gp + (1 gp * Margin of Success)
+
+The *"Margin of Success"* is the difference between the check result and the Biome DC.
+
+**Rare Finds**: If the final check result is 25 or higher, the character discovers a **Rare Ingredient** in addition to the standard yield. Consult the **Rare Ingredient Value Table** below to determine its specific properties and worth.
+
+#### Rare Ingredient Value Table
 
 | Biome | Survival DC | Rare Ingredient (25+) |
 |:-----------:|:--------------:|:--------------:|
