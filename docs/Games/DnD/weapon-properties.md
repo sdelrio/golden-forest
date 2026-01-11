@@ -7,57 +7,30 @@ import Impactful from './_markdown-impactful.mdx';
 
 ## Simple Melee Weapons
 
-### Greatclub
-
-The greatclub has the _Impactful_ property
-
-<Impactful />
-
-### Light Hammer
-
-
-The light hammer has the _Impactful_ property
+| Weapon | Damage | Property |
+|:------:|:------:|:------:|
+| Greatclub | 1d8 | Impactful |
+| Light Hammer | 1d4 | ^ |
+| Mace | 1d6 | ^ |
+| Sickle | 1d4 | Reroll 1 on the damage dice|
 
 <Impactful />
-
-### Mace
-
-The mace has the _Impactful_ property
-
-<Impactful />
-
-### Sickle
-
-Reroll 1 on the damage dice
 
 ## Martial Melee Weapons
 
-### All axes
-
-Handaxe, Battleaxe and Greataxe do maximum damage on the critical damage dice
-
-### Morningstar
-
-The Morningstar has the _Impactful_ property
-
-<Impactful />
-
-### Flail
-
-The Flail has the _Impactful_ property
+| Weapon | Damage | Property |
+|:------:|:------:|:------:|
+| Handaxe | 1d6 | Maximum damage on critical damage dice |
+| Battleaxe | 1d8 | ^ |
+| Greataxe | 1d12 | ^ |
+| Morningstar | 1d8 | Impactful |
+| Flail | 1d8 | ^ |
 
 <Impactful />
-
 
 ## Martial Ranged Weapons
 
-### Musket
-
-The musket does 2d6 damage instead of 1d12
-
-The musket critical range is increased by 1
-
-### Pistol
-
-The pistol critical range is increased by 1
-
+| Weapon | Damage | Property |
+|:------:|:------:|:------:|
+| Musket | 2d6 (instead of 1d12) | Critical range +1 |
+| Pistol | 1d10 | ^|
