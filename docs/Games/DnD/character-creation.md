@@ -24,6 +24,26 @@ Use the interactive calculator below to allocate your ability scores using the s
 
 <DnDPointBuy />
 
+### Point Buy Rules
+
+- You have 27 points to spend on ability scores
+- Each ability score starts at 8
+- You can increase scores up to 15 (before racial bonuses)
+- Higher scores cost more points (see cost below each ability)
+
+#### Cost of Ability Scores
+
+| Ability Score | Cost |
+|:-------------:|:----:|
+| 8             | 0    |
+| 9             | 1    |
+| 10            | 2    |
+| 11            | 3    |
+| 12            | 4    |
+| 13            | 5    |
+| 14            | 7    |
+| 15            | 9    |
+
 ## Stat Rolling
 
 Stats are rolled in order, rolling for each stat 4d6 dice and keeping the 3 highest.
@@ -40,11 +60,11 @@ Players may discard their rolled ability scores and use the Mulligan array inste
 
 ## Hit points rolling
 
-When leveling up, instead of taking the average value, a character rolls its hit point increase.  
+When leveling up, instead of taking the average value, a character rolls its hit point increase.
 
-The character roll its hit die and makes the following adjustment:  
+The character roll its hit die and makes the following adjustment:
 
-#### Classes rolling d6's or d8's 
+#### Classes rolling d6's or d8's
 
 If the result is odd, round up to the next even number.
 
@@ -52,11 +72,10 @@ If the result is odd, round up to the next even number.
 A roll of 3 on a d6 is rounded up to 4. A roll of 2 remains unchanged.
 :::
 
-#### Classes rolling d10's or d12's 
+#### Classes rolling d10's or d12's
 
 Add +1 to the roll. The modified total cannot be higher than the highest value of the dice.
 
 :::note[Example]
 E.g. If the player rolls a 6 on a d10, it's increased to 7. If it rolls a 10, the result is unchanged.  
 :::
-

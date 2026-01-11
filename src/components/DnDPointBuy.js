@@ -18,7 +18,7 @@ const POINT_COSTS = {
     15: 9
 };
 
-const DnDPointBuy = () => {
+const DnDPointBuy = ({ showInfoBox = false }) => {
     const [scores, setScores] = useState({
         STR: 8,
         DEX: 8,
@@ -80,13 +80,15 @@ const DnDPointBuy = () => {
     return (
         <div className={styles.pointBuyContainer}>
             <div className={styles.header}>
-                <h3>D&D 5e Point Buy System</h3>
                 <div className={styles.pointsDisplay}>
                     <span className={styles.pointsLabel}>Points Remaining:</span>
                     <span className={`${styles.pointsValue} ${pointsRemaining === 0 ? styles.pointsZero : ''}`}>
                         {pointsRemaining} / {TOTAL_POINTS}
                     </span>
                 </div>
+                <button className={styles.resetButton} onClick={resetScores}>
+                    Reset All Scores
+                </button>
             </div>
 
             <div className={styles.abilitiesGrid}>
@@ -107,8 +109,7 @@ const DnDPointBuy = () => {
                                     −
                                 </button>
                                 <div className={styles.scoreDisplay}>
-                                    <div className={styles.scoreValue}>{score}</div>
-                                    <div className={styles.modifierValue}>{formatModifier(modifier)}</div>
+                                    <div className={styles.scoreValue}>{score} ({formatModifier(modifier)})</div>
                                 </div>
                                 <button
                                     className={styles.controlButton}
@@ -128,9 +129,6 @@ const DnDPointBuy = () => {
             </div>
 
             <div className={styles.footer}>
-                <button className={styles.resetButton} onClick={resetScores}>
-                    Reset All Scores
-                </button>
                 {pointsRemaining === 0 && (
                     <div className={styles.completeMessage}>
                         ✓ All points allocated!
@@ -138,15 +136,17 @@ const DnDPointBuy = () => {
                 )}
             </div>
 
-            <div className={styles.infoBox}>
-                <h4>Point Buy Rules:</h4>
-                <ul>
-                    <li>You have <strong>27 points</strong> to spend on ability scores</li>
-                    <li>Each ability score starts at <strong>8</strong></li>
-                    <li>You can increase scores up to <strong>15</strong> (before racial bonuses)</li>
-                    <li>Higher scores cost more points (see cost below each ability)</li>
-                </ul>
-            </div>
+            {showInfoBox && (
+                <div className={styles.infoBox}>
+                    <h4>Point Buy Rules:</h4>
+                    <ul>
+                        <li>You have <strong>27 points</strong> to spend on ability scores</li>
+                        <li>Each ability score starts at <strong>8</strong></li>
+                        <li>You can increase scores up to <strong>15</strong> (before racial bonuses)</li>
+                        <li>Higher scores cost more points (see cost below each ability)</li>
+                    </ul>
+                </div>
+            )}
         </div>
     );
 };
