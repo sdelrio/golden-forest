@@ -61,6 +61,79 @@ html[class*="docs-doc-id-Games/DnD/"] {
         line-height: 1.25em;
     }
 
+    & blockquote {
+        position: relative;
+        border: none;
+        border-radius: 0;
+        /*background-color: rgba(233, 221, 199, 0.3);*/
+        background-image: linear-gradient(90deg, color-mix(in srgb, var(--ifm-color-secondary-lightest), transparent 25%) 0%, color-mix(in srgb, var(--ifm-color-secondary-lightest), transparent 10%) 50%, color-mix(in srgb, var(--ifm-color-secondary-lighter), transparent 35%) 100%), url('/img/paper-no-color.svg');
+        box-shadow: 0 2px 14px rgba(163, 106, 0, .4);
+        transition: box-shadow .2s ease-in-out;
+        padding: 0.5rem 1rem;
+        margin-top: 0.75rem;
+        margin-bottom: 1.5rem;
+        border-left: 2px solid var(--HB_Color_HeaderText, #58180D);
+        border-right: 2px solid var(--HB_Color_HeaderText, #58180D);
+        font-family: 'ScalySans';
+        font-size: 1rem;
+
+        /* Top-left circle */
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -0.18em;
+            width: 0.36em;
+            height: 0.36em;
+            background-color: var(--ifm-heading-color-light);
+            border-radius: 50%;
+            transform: translate(-66%, 0%);
+        }
+
+        /* Top-right circle */
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -0.18em;
+            width: 0.36em;
+            height: 0.36em;
+            background-color: var(--ifm-heading-color-light);
+            border-radius: 50%;
+            transform: translate(66%, 0%);
+        }
+
+        /* Bottom-left circle */
+        &>*:last-child::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0.36em;
+            height: 0.36em;
+            background-color: var(--ifm-heading-color-light);
+            border-radius: 50%;
+            transform: translate(-66%, 50%);
+        }
+
+        /* Bottom-right circle */
+        &>*:last-child::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 0.36em;
+            height: 0.36em;
+            background-color: var(--ifm-heading-color-light);
+            border-radius: 50%;
+            transform: translate(66%, 50%);
+        }
+    }
+
+    & blockquote:hover {
+        box-shadow: 0 5px 14px rgba(163, 106, 0, .7);
+    }
+
     & h1,
     & h2,
     & h3,
