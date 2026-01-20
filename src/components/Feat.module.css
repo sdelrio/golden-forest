@@ -1,0 +1,188 @@
+/* Feat.module.css */
+
+/* --- Container for the Feat Card --- */
+.featContainer {
+    /* Similar parchment feel to DnDPointBuy */
+    border-top: 1px solid #8b6f47;
+    border-bottom: 1px solid #8b6f47;
+    scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem);
+}
+
+[data-theme='dark'] .featContainer {
+    border-color: #5a4a2a;
+}
+
+/* --- Header Section --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+[data-theme='dark'] .header {
+    border-bottom-color: rgba(90, 74, 42, 0.5);
+}
+
+.titleGroup {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.featName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.2;
+    margin-top: 1.5em;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .featName {
+        justify-content: flex-start;
+    }
+}
+
+
+.nameAndHash {
+    display: flex;
+    align-items: center;
+}
+
+[data-theme='dark'] .featName {
+    color: #c9a961;
+}
+
+.hashLink {
+    opacity: 0;
+    margin-left: 0.5rem;
+    color: var(--ifm-color-primary);
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.featName:hover .hashLink {
+    opacity: 1;
+}
+
+.featType {
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+/* --- Badge --- */
+.badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: rgba(139, 111, 71, 0.1);
+    color: #5a4a2a;
+    border-radius: 4px;
+    border: 1px solid rgba(139, 111, 71, 0.2);
+    white-space: nowrap;
+    display: inline-block;
+}
+
+
+[data-theme='dark'] .badge {
+    background-color: rgba(201, 169, 97, 0.1);
+    color: #c9a961;
+    border-color: rgba(201, 169, 97, 0.3);
+}
+
+/* --- Info Grid (Prereq, Level, Ability) --- */
+.infoGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* margin-bottom: 0.75rem; */
+    font-size: 0.9rem;
+    color: #3a2a1a;
+}
+
+[data-theme='dark'] .infoGrid {
+    color: #d4c4a8;
+}
+
+
+.label {
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* --- Content Area --- */
+.content {
+    font-size: 0.95rem;
+    color: #2a2010;
+    line-height: 1.6;
+}
+
+[data-theme='dark'] .content {
+    color: #d4c4a8;
+}
+
+/* Adjust markdown elements inside content */
+.content p {
+    margin-bottom: 0.25rem;
+}
+
+.content ul {
+    margin-bottom: 0.25rem;
+    padding-left: 0.75rem;
+}
+
+.content li {
+    margin-bottom: 0.125rem;
+}
+
+.abilityIncreaseList {
+    margin-bottom: 0px !important;
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+}
+
+/* --- Browser Controls --- */
+.browserContainer {
+    /*    margin-bottom: 2rem;*/
+}
+
+.controls {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filterGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filterLabel {
+    font-weight: 600;
+}
+
+.selectInput,
+.numberInput {
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid var(--ifm-color-emphasis-400);
+    font-family: 'ScalySans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+}
+
+.numberInput {
+    width: 60px;
+}
