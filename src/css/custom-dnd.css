@@ -423,6 +423,9 @@ html[class*="docs-doc-id-Games/DnD/"] {
         */
     }
 
+    & article li {
+        list-style: circle;
+    }
 }
 
 html[class*="docs-doc-id-Games/DnD/"][data-theme='dark'] {
@@ -435,4 +438,5 @@ html[class*="docs-doc-id-Games/DnD/"][data-theme='dark'] {
     & blockquote {
         background-image: none;
     }
+
 }

@@ -8,11 +8,11 @@ import DnDPointBuy from '@site/src/components/DnDPointBuy';
 
 Follow these steps to create your character:
 
-1. **Select a Class**: Determine your character's primary role and core abilities.
-2. **Choose an Origin**: Select a background to define your character's history and starting proficiencies.
-3. **Select a Species**: Choose your character's biological heritage.
-4. **Determine Languages**: Each character knows at least three languages: Common, a species-specific language, and one additional standard language of your choice.
-5. **Generate Ability Scores**: Determine your stats using the Point Buy system, the standard array, or by rolling.
+1. _**Select a Class:**_ Determine your character's primary role and core abilities.
+2. _**Choose an Origin:**_ Select a background to define your character's history and starting proficiencies.
+3. _**Select a Species:**_ Choose your character's biological heritage.
+4. _**Determine Languages:**_ Each character knows at least three languages: Common, a species-specific language, and one additional standard language of your choice.
+5. _**Generate Ability Scores:**_ Determine your stats using the Point Buy system, the standard array, or by rolling.
 
 ## Standard Array
 
