@@ -10,6 +10,7 @@
 /* https://docusaurus.io/docs/styling-layout */
 /* Infima variables https://github.com/facebook/docusaurus/issues/3955 */
 :root {
+
   --ifm-color-primary: #e99700;
   --ifm-color-primary-dark: #d28800;
   --ifm-color-primary-darker: #c68000;
@@ -40,6 +41,7 @@
 
   --ifm-heading-color-light: #58180D;
   --ifm-heading-color-dark: #c68000;
+
 }
 
 html[data-theme='light'] :root {
@@ -127,14 +129,19 @@ html[data-theme='dark'] :root {
   padding: 0 var(--ifm-pre-padding);
 }
 
-html {
+html,
+body {
+  min-height: 100vh;
   background-color: #fffaeb;
-  background: linear-gradient(-90deg, rgba(250, 229, 182, 1) 0%, rgba(255, 250, 235, 1) 1%, rgba(255, 250, 235, 1) 99%, rgba(255, 215, 140, 1) 100%);
+  background-image: -webkit-linear-gradient(180deg, rgba(250, 229, 182, 1) 0%, rgba(255, 250, 235, 1) 1%, rgba(255, 250, 235, 1) 99%, rgba(255, 215, 140, 1) 100%);
+  background-image: linear-gradient(-90deg, rgba(250, 229, 182, 1) 0%, rgba(255, 250, 235, 1) 1%, rgba(255, 250, 235, 1) 99%, rgba(255, 215, 140, 1) 100%);
 }
 
-html[data-theme='dark'] {
+html[data-theme='dark'],
+html[data-theme='dark'] body {
   background-color: #170f00;
-  background: linear-gradient(-90deg, rgba(163, 106, 0, 1) 0%, rgba(23, 15, 0, 1) 1%, rgba(23, 15, 0, 1) 99%, rgba(163, 106, 0, 1) 100%);
+  background-image: -webkit-linear-gradient(180deg, rgba(163, 106, 0, 1) 0%, rgba(23, 15, 0, 1) 1%, rgba(23, 15, 0, 1) 99%, rgba(163, 106, 0, 1) 100%);
+  background-image: linear-gradient(-90deg, rgba(163, 106, 0, 1) 0%, rgba(23, 15, 0, 1) 1%, rgba(23, 15, 0, 1) 99%, rgba(163, 106, 0, 1) 100%);
 }
 
 .header-github-link:hover {
@@ -302,8 +309,3 @@ html h2 {
  *   filter: url(#paper-texture);
  * }
  */
-
-/* Target Games/DnD section */
-html[data-theme='light'][class*="docs-doc-id-Games/DnD/"] {
-  background-image: url('/img/paper-colored.svg') !important;
-}

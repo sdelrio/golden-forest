@@ -395,15 +395,9 @@ html[class*="docs-doc-id-Games/DnD/"] {
             border: solid 2px var(--ifm-color-emphasis-300);
             background-color: var(--ifm-background-surface-color);
 
-            /*filter: url(#wavy1) drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.4));*/
             filter: url(#wavy1) drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.5));
-            /*
-            filter: url(#wavy1) drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.4));
-            */
-            /*box-shadow: 0 0 10px #aa6d2f inset;*/
             z-index: -10;
             pointer-events: none;
-            /* A light paper color */
         }
 
         /*
@@ -428,7 +422,13 @@ html[class*="docs-doc-id-Games/DnD/"] {
     }
 }
 
-html[class*="docs-doc-id-Games/DnD/"][data-theme='dark'] {
+html[class*="docs-doc-id-Games/DnD/"][data-theme='light'],
+html[class*="docs-doc-id-Games/DnD/"][data-theme='light'] body {
+    background-image: url('/img/paper-colored.svg');
+}
+
+html[class*="docs-doc-id-Games/DnD/"][data-theme='dark'],
+html[class*="docs-doc-id-Games/DnD/"][data-theme='dark'] body {
     --phb-tr-odd: rgb(64, 69, 33);
     --phb-tr-even: rgb(54, 59, 23);
     --ifm-link-color: #C6C9E0;

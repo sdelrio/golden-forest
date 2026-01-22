@@ -3,7 +3,8 @@ import styles from './Feat.module.css';
 
 export const FeatFilterContext = createContext({
     filterState: { maxLevel: 20, selectedAbility: 'All', selectedBook: 'All' },
-    setFilterState: () => { }
+    setFilterState: () => { },
+    allFeats: []
 });
 
 export default function FeatBrowser({ children }) {
@@ -12,6 +13,27 @@ export default function FeatBrowser({ children }) {
         selectedAbility: 'All',
         selectedBook: 'All'
     });
+
+    const allFeats = [];
+    const collectFeats = (node) => {
+        React.Children.forEach(node, (child) => {
+            if (!React.isValidElement(child)) return;
+            if (child.props && child.props.name !== undefined) {
+                allFeats.push({
+                    name: child.props.name,
+                    level: child.props.level || 0,
+                    abilityIncrease: child.props.abilityIncrease || [],
+                    book: child.props.book || '',
+                    id: child.props.name.replace(/\s+/g, '-').toLowerCase()
+                });
+            }
+            if (child.props && child.props.children) {
+                collectFeats(child.props.children);
+            }
+        });
+    };
+    collectFeats(children);
+    allFeats.sort((a, b) => a.name.localeCompare(b.name));
 
     const handleLevelChange = (e) => {
         setFilterState(prev => ({ ...prev, maxLevel: Number(e.target.value) }));
@@ -26,7 +48,7 @@ export default function FeatBrowser({ children }) {
     };
 
     return (
-        <FeatFilterContext.Provider value={{ filterState, setFilterState }}>
+        <FeatFilterContext.Provider value={{ filterState, setFilterState, allFeats }}>
             <div className={styles.browserContainer}>
                 <div className={styles.controls}>
                     <div className={styles.filterGroup}>

@@ -4,6 +4,8 @@ description: Special talents and expertise providing unique capabilities
 import TOCInline from '@theme/TOCInline';
 import Feat from '@site/src/components/Feat';
 import FeatBrowser from '@site/src/components/FeatBrowser';
+import FeatTable from '@site/src/components/FeatTable';
+
 
 # Feats
 
@@ -33,6 +35,8 @@ You can take it only **once** unless its description says otherwise.
 ## Origin Feats
 
 These Feats are in the Origin category. Can be selected anytime you pick a feat.
+
+<FeatTable category="Origin" />
 
 <Feat name="Alert" level={0} book="phb">
 
@@ -101,11 +105,12 @@ These Feats are in the Origin category. Can be selected anytime you pick a feat.
 + _**Disadvantage.**_ When a creature rolls a d20 for an attack roll against you, you can spend 1 Luck Point to impose Disadvantage on that roll.
 </Feat>
 
-<Feat name="Magic Initiate (Cleric, Druid or Wizard)" level={0} book="phb">
+<Feat name="Magic Initiate" level={0} book="phb">
 
-+ _**Two Cantrips.**_ You learn two cantrips of your choice from the Druid spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat’s spells (choose when you select this feat).
-+ _**Level 1 Spell.**_ Choose a level 1 spell from the Druid spell list. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.
++ _**Two Cantrips.**_ You learn two cantrips of your choice from the Cleric, Druid or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat’s spells (choose when you select this feat).
++ _**Level 1 Spell.**_ Choose a level 1 spell from the Cleric, Druid or Wizard spell list. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a Long Rest. You can also cast the spell using any spell slots you have.
 + _**Spell Change.**_ Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.
++ _**Repeatable.**_ You can take this feat more than once, but you must choose a different spell list each time.
 </Feat>
 
 <Feat name="Musician" level={0} book="phb">
@@ -129,7 +134,7 @@ You've trained to deal particularly damaging strikes. Once per turn when you hit
 <Feat name="Skilled" level={0} book="phb" youGain={false}>
 
 You gain proficiency in any combination of three skills or tools of your choice.
-
++ _**Repeatable.**_ You can take this feat more than once.
 </Feat>
 
 <Feat name="Spellfire Spark" level={0} book="hof">
@@ -169,6 +174,10 @@ Your Hit Point maximum increases by an amount equal to twice your character leve
 ## General Feats
 
 Can be selected from level 4th onwards.
+
+<FeatTable category="General" />
+
+
 
 <Feat name="Active Alchemy"
 level={4}
@@ -1461,6 +1470,10 @@ A spell cast using a whimsy requires no components, and a creature uses its spel
 
 Can be selected from level 19th onwards.
 
+<FeatTable category="L19" />
+
+
+
 <Feat name="Boon of Bloodshed" level={19}
 abilityIncrease={["Strenght","Dexterity","Constitution","Intelligence","Wisdom","Charisma"]}
 abilityMax={30}
@@ -1871,6 +1884,10 @@ You are immune to the exhausted condition
 ## L21: Epic Boons Feats
 
 Can be selected from level 21st onwards.
+
+<FeatTable category="L21" />
+
+
 
 <Feat name="Alchamaestro"
 level={21}

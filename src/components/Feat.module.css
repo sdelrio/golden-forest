@@ -154,8 +154,9 @@
 
 /* --- Browser Controls --- */
 .browserContainer {
-    /*    margin-bottom: 2rem;*/
+    margin-bottom: 2rem;
 }
+
 
 .controls {
     display: flex;
@@ -172,6 +173,94 @@
 
 .filterLabel {
     font-weight: 600;
+}
+
+/* --- Summary Grid --- */
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 1rem;
+    margin: 1rem 0 2rem 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.gridItem {
+    padding: 0.2rem 0.5rem;
+}
+
+/* Default: 3 columns */
+.summaryGrid> :nth-child(6n + 1),
+.summaryGrid> :nth-child(6n + 2),
+.summaryGrid> :nth-child(6n + 3) {
+    background-image: var(--_phb-odd-gradient);
+}
+
+.summaryGrid> :nth-child(6n + 4),
+.summaryGrid> :nth-child(6n + 5),
+.summaryGrid> :nth-child(6n + 6) {
+    background-image: var(--_phb-even-gradient);
+}
+
+.summaryGrid a {
+    color: var(--ifm-heading-color-light);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.summaryGrid a:hover {
+    text-decoration: underline;
+    color: var(--ifm-color-primary-darker);
+}
+
+[data-theme='dark'] .summaryGrid a {
+    color: var(--ifm-heading-color-dark);
+}
+
+[data-theme='dark'] .summaryGrid a:hover {
+    color: #c9a961;
+}
+
+/* Tablet / Small Laptop */
+@media screen and (max-width: 1024px) {
+    .summaryGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Reset and apply for 2 columns */
+    .summaryGrid> :nth-child(n) {
+        background-image: none;
+    }
+
+    .summaryGrid> :nth-child(4n + 1),
+    .summaryGrid> :nth-child(4n + 2) {
+        background-image: var(--_phb-odd-gradient);
+    }
+
+    .summaryGrid> :nth-child(4n + 3),
+    .summaryGrid> :nth-child(4n + 4) {
+        background-image: var(--_phb-even-gradient);
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .summaryGrid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reset and apply for 1 column */
+    .summaryGrid> :nth-child(n) {
+        background-image: none;
+    }
+
+    .summaryGrid> :nth-child(2n + 1) {
+        background-image: var(--_phb-odd-gradient);
+    }
+
+    .summaryGrid> :nth-child(2n) {
+        background-image: var(--_phb-even-gradient);
+    }
 }
 
 .selectInput,
