@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.lorien.cloud/pr-preview/pr-56/blog</id>
+    <title>The Golden Forest Blog</title>
+    <updated>2021-11-09T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.lorien.cloud/pr-preview/pr-56/blog"/>
+    <subtitle>The Golden Forest Blog</subtitle>
+    <icon>https://www.lorien.cloud/pr-preview/pr-56/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[First Post]]></title>
+        <id>https://www.lorien.cloud/pr-preview/pr-56/blog/first-post</id>
+        <link href="https://www.lorien.cloud/pr-preview/pr-56/blog/first-post"/>
+        <updated>2021-11-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Initial setup of Docusaurus and start for the web page and blog.]]></summary>
+        <content type="html"><![CDATA[<p>Initial setup of Docusaurus and start for the web page and blog.</p>
+<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer" class="">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer" class="">blog plugin</a>.</p>
+<p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
+<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://www.lorien.cloud/pr-preview/pr-56/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>sdelrio</name>
+            <uri>https://github.com/sdelrio</uri>
+        </author>
+        <category label="hola" term="hola"/>
+        <category label="docusaurus" term="docusaurus"/>
+    </entry>
+</feed>
