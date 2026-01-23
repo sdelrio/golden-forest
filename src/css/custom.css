@@ -45,10 +45,12 @@
 }
 
 html[data-theme='light'] :root {
+  --ifm-font-color-base: #2a2010;
   --ifm-heading-color: var(--ifm-heading-color-light);
 }
 
 html[data-theme='dark'] :root {
+  --ifm-font-color-base: #d4c4a8;
   --ifm-heading-color: var(--ifm-heading-color-dark);
 }
 
