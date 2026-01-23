@@ -3,6 +3,7 @@ description: Character creation selection guide.
 ---
 
 import DnDPointBuy from '@site/src/components/DnDPointBuy';
+import StatDiceRoller from '@site/src/components/StatDiceRoller';
 
 # Character Creation
 
@@ -49,10 +50,12 @@ Use the interactive calculator below to allocate your ability scores using the s
 Stats are rolled in order, rolling for each stat 4d6 dice and keeping the 3 highest.
 
 :::tip Fantasy Grounds
-Can use the command: `/die 4d6k3` 
+Can use the command: `/die 4d6k3`
 :::
 
-After that, the player can also swap one Ability Score for another one.  
+After that, the player can also swap one Ability Score for another one.
+
+<StatDiceRoller />
 
 ### Mulligan
 
