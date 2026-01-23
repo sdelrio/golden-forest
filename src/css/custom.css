@@ -10,7 +10,6 @@
 /* https://docusaurus.io/docs/styling-layout */
 /* Infima variables https://github.com/facebook/docusaurus/issues/3955 */
 :root {
-
   --ifm-color-primary: #e99700;
   --ifm-color-primary-dark: #d28800;
   --ifm-color-primary-darker: #c68000;
@@ -45,10 +44,12 @@
 }
 
 html[data-theme='light'] :root {
+  --ifm-font-color-base: #2a2010;
   --ifm-heading-color: var(--ifm-heading-color-light);
 }
 
 html[data-theme='dark'] :root {
+  --ifm-font-color-base: #d4c4a8;
   --ifm-heading-color: var(--ifm-heading-color-dark);
 }
 
