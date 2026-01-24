@@ -785,8 +785,8 @@ You are adept at delivering punishment using uncomplicated combat tools, special
 abilityIncrease={["Strength","Constitution"]}
 book="echh">
 
-You are muscular, corn-fed, and strong. + Your carrying capacity is doubled
-
+You are muscular, corn-fed, and strong.
++ Your carrying capacity is doubled
 + At the end of each short rest or long rest you gain 5 temporary hit points.
 
 </Feat>
@@ -1538,8 +1538,9 @@ book="phb">
 
 + _**Elemental Affinity.**_ You develop a particular affinity for types of elemental energy, which you can manipulate at will.
 
-When you select this Epic Boon, choose a damage type from the following: acid, cold, fire, lightning, or thunder. + If a creature would be immune to the elemental damage of the chosen damage type, it instead has resistance to that damage.
+When you select this Epic Boon, choose a damage type from the following: acid, cold, fire, lightning, or thunder.
 
++ If a creature would be immune to the elemental damage of the chosen damage type, it instead has resistance to that damage.
 + All spells that would deal damage of the damage type you selected when you gained this Epic Boon deal one additional damage dice.
 + When you would take damage of the selected damage type you can take a reaction to absorb the incoming damage. You take no damage instead and you gain temporary hit points equal to half the damage it would have been dealt. You can use this ability three times, and you regain all expended uses when you finish a long rest
 
@@ -2041,8 +2042,9 @@ abilityIncrease={["Charisma","Wisdom","Intelligence"]}
 youGain={false}
 book="echh">
 
-You harness the power of good and evil, which allows you to smite enemies with raw holy or unholy power. + You can use your Channel Divinity feature to regain a spell slot up to 5th level.
+You harness the power of good and evil, which allows you to smite enemies with raw holy or unholy power.
 
++ You can use your Channel Divinity feature to regain a spell slot up to 5th level.
 + When you deal radiant damage, you may instead do righteous damage, or when you deal necrotic damage, you may instead do vile damage.
 + Your alignment cannot be changed unless you allow it, and you cannot be compelled by non-Deific sources to allow your alignment to be changed.
 + You are aware of the presence of any deities that occupy the same plane as you. You know the deities’ names, alignments, and divine ranks.
@@ -2056,8 +2058,9 @@ abilityIncrease={["Charisma","Wisdom","Intelligence"]}
 youGain={false}
 book="echh">
 
-You concentrate with precision and discipline even through the most trying of circumstances. + You automatically succeed on saving throws to maintain concentration on your spells and other effects.
+You concentrate with precision and discipline even through the most trying of circumstances.
 
++ You automatically succeed on saving throws to maintain concentration on your spells and other effects.
 + When you become incapacitated and are concentrating on a spell or effect, you may attempt a Constitution saving throw with a DC equal to your spell save DC. On a successful save, you maintain concentration through the duration of your incapacitation.
 + If you are able to be taught a skill, technique, or profession, you can fully learn that skill, technique, or profession in half the usual amount of time required.
 
