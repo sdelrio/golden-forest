@@ -6,39 +6,72 @@ const FeatureList = [
   {
     title: 'Focus on documentation',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
-    //Svg: require('../../static/img/logo.svg').default,
     description: (
       <>
-          Site built using <i><a href="https://docusaurus.io">Docusaurus:</a></i> Markdown documentation, built using react, ready for translations and versioning.
+        Built using <i><a href="https://docusaurus.io">Docusaurus</a></i>, this site provides
+        high-quality documentation with support for Markdown, versioning, and translations,
+        offering a robust foundation for building an extensive knowledge base.
       </>
     ),
   },
   {
     title: 'Digital Garden',
-    //Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     Svg: require('../../static/img/trees-02.svg').default,
     description: (
       <>
-        The phrase <i><a href="https://joelhooks.com/digital-garden">digital garden</a></i> is a metaphor for thinking about writing and
-        creating that focuses less on the resulting <i>showpiece</i> and more on the
-        process, care, and craft it takes to get there.
+        A <i><a href="https://joelhooks.com/digital-garden">digital garden</a></i> is a
+        metaphor for thinking and writing that focuses on the process, care, and craft
+        of growth. This is a living space where ideas are planted and nurtured over time.
+      </>
+    ),
+  },
+  {
+    title: 'Mathematical Precision',
+    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+        Fully equipped for technical and scientific writing with integrated
+        <i> KaTeX</i> support for complex math equations and <i>Mermaid</i> for
+        dynamic, responsive diagrams and charts.
       </>
     ),
   },
   {
     title: 'Easy to add Content',
     Svg: require('../../static/img/leaves-02.svg').default,
-    //Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
-    //Svg: require('../../static/img/logo.svg').default,
     description: (
       <>
-          Go to <i><a href="/tutorial/tutorial-intro/">Add content</a></i> section to see how easily can add and update content.
+        Leverage MDX to use React components directly within your markdown.
+        Go to the <i><a href="/tutorial/tutorial-intro/">Add content</a></i> section
+        to see how effortlessly you can expand this forest.
+      </>
+    ),
+  },
+  {
+    title: 'Powerful Explorer',
+    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Navigate the forest with ease using Algolia-powered search. Find exactly
+        what you need across all documents, tutorials, and blog posts with
+        instant, relevant results.
+      </>
+    ),
+  },
+  {
+    title: 'Living Journal',
+    Svg: require('../../static/img/tree.svg').default,
+    description: (
+      <>
+        Follow the journey through our integrated Blog. A chronological log of
+        findings, updates, and deep dives into the ever-changing landscape of
+        the Golden Forest.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -62,15 +95,15 @@ function Section({
   return <El className={`Section ${className} ${background}`}>{children}</El>;
 }
 
-function TwoColumns({columnOne, columnTwo, reverse}) {
+function TwoColumns({ columnOne, columnTwo, reverse }) {
   return (
     <div className={`TwoColumns ${reverse ? 'reverse' : ''}`}>
-    ┆ <div className={`column first ${reverse ? 'right' : 'left'}`}>
-    ┆   {columnOne}
-    ┆ </div>
-    ┆ <div className={`column last ${reverse ? 'left' : 'right'}`}>
-    ┆   {columnTwo}
-    ┆ </div>
+      ┆ <div className={`column first ${reverse ? 'right' : 'left'}`}>
+        ┆   {columnOne}
+        ┆ </div>
+      ┆ <div className={`column last ${reverse ? 'left' : 'right'}`}>
+        ┆   {columnTwo}
+        ┆ </div>
     </div>
   );
 }
