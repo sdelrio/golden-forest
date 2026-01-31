@@ -129,7 +129,7 @@ function StatDiceRollerInternal({ ReactDice }) {
                             </button>
                         </div>
 
-                        <div style={{ transform: 'scale(0.8)', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <div style={{ transform: 'scale(0.8)', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: '280px', flexShrink: 0 }}>
                             <ReactDice
                                 numDice={4}
                                 rollDone={(total, dice) => handleRollDone(index, total, dice)}
