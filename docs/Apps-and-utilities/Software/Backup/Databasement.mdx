@@ -1,0 +1,42 @@
+---
+title: "Databasement"
+category: "Apps-and-utilities"
+sub-category: "Software/Backup"
+tags: [Database, Backup, MySQL, PostgreSQL, Self-Hosted]
+---
+
+# Databasement
+
+*Source: [David-Crty/databasement (GitHub)](https://github.com/David-Crty/databasement)*
+## Tool Overview
+
+Databasement (Database Backup Management) is a modern, self-hosted management application designed to simplify database maintenance for MySQL, PostgreSQL, and MariaDB.
+
+## Core Functionalities
+
+* **Multi-Database Control Plane:** Manage multiple disparate servers (Production, Staging, Development) from a single, centralized dashboard.
+* **Automated Lifecycle Management:** Define recurring schedules with customizable retention policies to automatically prune old snapshots and optimize storage.
+* **Streamlined Restoration:** Facilitates rapid recovery by allowing users to restore snapshots directly to target servers via the UI, reducing the "Time to Recovery" (TTR).
+* **Flexible Storage Backends:** Supports off-site backups using S3-compatible providers (AWS S3, MinIO, R2) or local filesystem volumes.
+
+## Technical Critique: Operational Implementation
+
+### 1. Learning Curves & Deployment
+
+* **Container-First Architecture:** The tool is designed for Docker-based environments. While deployment is straightforward, users must manage sensitive environment variables (DB credentials, S3 Secret Keys) securely using Secrets management.
+* **UI Dependency:** While the frontend simplifies tasks for junior team members, there is a risk of losing "CLI muscle memory." Teams should still document the manual restoration process for emergency scenarios where the UI might be unreachable.
+
+### 2. Hardware and Performance Dependencies
+
+* **Resource Contention:** Large database dumps are resource-intensive. If the backup tool runs on the same node as the production database, the resulting spike in CPU and Network I/O can impact application performance (The "Noisy Neighbor" effect).
+* **Storage Throughput:** Performance is heavily dependent on the write speed of the backup target. Using NVMe-backed local storage or high-bandwidth S3 connections is recommended for databases exceeding 50GB to avoid long backup windows.
+
+### 3. Operational Risks
+
+* **Centralized Credential Risk:** Because the tool requires high-privilege access to multiple databases, it becomes a high-value target. It is critical to isolate the management UI behind a VPN or Zero Trust tunnel.
+* **Tooling Maturity:** As a niche open-source tool, long-term maintenance and support for newer database engine versions should be monitored before deploying in mission-critical production environments.
+
+## Related Resources
+
+* **Documentation:** [Databasement Documentation](https://david-crty.github.io/databasement/)
+
