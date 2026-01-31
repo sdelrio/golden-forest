@@ -1,0 +1,55 @@
+title: "Databasus"
+category: "Apps-and-utilities"
+sub-category: "Software/Backup"
+tags: [Database, Backup, PostgreSQL, MySQL, MongoDB, Go, S3]
+---
+
+# Databasus
+
+Enterprise-Grade Database Backup Management and High-Performance Backup Orchestration.
+
+## Introduction 
+
+Modern database reliability engineering requires more than just scheduled scripts; it demands a robust management layer that handles encryption, multi-destination storage, and team-based access control. **Databasus** (formerly known as *Postgresus*) is a Go-based, open-source backup management system designed to provide a secure, self-hosted control plane for PostgreSQL, MySQL, MariaDB, and MongoDB.
+
+By focusing on security-first features like AES-256-GCM encryption and zero-trust storage, it addresses the critical need for protecting database snapshots in shared or public cloud environments while maintaining a high-performance, developer-centric experience.
+
+## Tool Overview
+
+*Source: [databasus/databasus (GitHub)](https://github.com/databasus/databasus)*
+
+Databasus serves as a comprehensive lifecycle manager for database snapshots, moving from simple UI wrappers to a full management ecosystem.
+
+### Core Functionalities
+
+* **Multi-Engine Support:** Native support for PostgreSQL (12-18), MySQL (5.7-9), MariaDB (10-11), and MongoDB (4-8).
+* **Enterprise Security:** Implements **AES-256-GCM encryption** for backup files, ensuring that even if storage (like S3 or Google Drive) is compromised, the data remains unreadable.
+* **Granular Scheduling & Compression:** Supports precise cron-based timing and intelligent compression algorithms capable of 4-8x space savings with minimal CPU overhead.
+* **Workspace & RBAC:** Includes team management features such as Workspaces to group databases and Role-Based Access Control (Viewer, Member, Admin, Owner).
+* **Notification Ecosystem:** Real-time alerting via Telegram, Slack, Discord, Email, and Webhooks for backup success or failure.
+* **Extensive Storage Support:** Native integration with Local storage, S3 (AWS, R2, MinIO), Google Drive, Dropbox, SFTP, and FTP.
+
+## Technical Critique: Operational Implementation
+
+### 1. Learning Curves & Deployment
+
+* **Modern Deployment Stack:** Optimized for containerized environments with official support for Docker, Docker Compose, and Kubernetes (via Helm). The automated installation script simplifies the "Day 0" setup on Linux systems.
+* **Identity Management:** While the UI is intuitive, teams must manage the transition from single-user setups to Workspace-based environments, which requires planning around team permissions and audit logging.
+
+### 2. Hardware and Performance Dependencies
+
+* **Go-Based Efficiency:** Written in Go, the backend is highly performant and lightweight compared to Python or Node-based alternatives. It is well-suited for high-concurrency environments where multiple backups may trigger simultaneously.
+* **CPU-Bound Encryption:** The use of AES-256-GCM is secure but compute-intensive during the backup phase. On hardware without AES-NI instructions (older CPUs or small ARM instances), backup windows may extend significantly.
+* **Storage Latency:** Since Databasus supports remote mounts like Google Drive and SFTP, the "Backup Window" is often bottlenecked by upstream network bandwidth rather than the database engine itself.
+
+### 3. Operational Risks
+
+* **Credential Handling:** Databasus utilizes a read-only user approach by default to minimize risk. However, the system still manages credentials for multiple production databases; network isolation (VPN/VPC) for the Databasus UI is mandatory.
+* **Tooling Transition:** As the project recently migrated from *Postgresus* to *Databasus*, users on legacy versions must follow specific migration paths to ensure data folder and internal database naming compatibility.
+* **Encryption Key Management:** Since backups are encrypted before upload, the loss of the encryption key results in a total loss of all off-site backups. A robust backup strategy for the Databasus internal configuration itself is critical.
+
+## Related Resources
+
+* **Official Website:** [databasus.com](https://databasus.com)
+* **Documentation:** [Databasus Docs](https://docs.databasus.com)
+
