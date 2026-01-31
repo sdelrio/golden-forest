@@ -5,7 +5,8 @@ on:
     branches:
       - master
     paths-ignore:
-      # - ".github/workflows/**"
+      - ".github/workflows/indexing.yml"
+      - ".github/workflows/pr.yml"
       - "README.md"
 
 
