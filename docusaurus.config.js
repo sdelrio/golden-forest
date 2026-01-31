@@ -149,7 +149,7 @@ const config = {
         title: 'The Golden Forest',
         logo: {
           alt: 'Logo',
-          src: 'img/logo.svg',
+          src: 'img/tree.svg',
         },
         items: [
           {
