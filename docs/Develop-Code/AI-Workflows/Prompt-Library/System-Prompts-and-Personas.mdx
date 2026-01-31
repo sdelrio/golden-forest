@@ -1,0 +1,44 @@
+---
+title: "Prompts & Persona"
+category: "Develop-Code"
+sub-category: "AI-Workflows/Prompt-Library"
+tags: [LLM, Prompt-Engineering, Reverse-Engineering, AI-Ops]
+---
+
+## Prompt Library & Persona Frameworks
+
+### 1. System Prompt Analysis
+
+*Source: [System Prompts Leaks (GitHub)](https://github.com/asgeirtj/system_prompts_leaks)*
+
+Analysis of Tier-1 AI system prompts (OpenAI, Anthropic, Google) reveals a standardized structural approach:
+* **Constraint Layers:** Explicit "Do Not" lists that prevent the model from assuming unauthorized authority or violating safety protocols.
+* **Tool Orchestration:** Detailed instructions on how to interact with sandboxed environments (Python, Web Search, Image Generation).
+* **Reasoning Buffers:** Encouraging the model to "think" or "plan" before providing a final response to improve logical consistency.
+
+### 2. Persona Construction Strategy
+
+*Source: [Using LLMs to Create Personas (Proxet)](https://www.proxet.com/blog/using-llms-to-create-personas)*
+
+Effective personas move beyond aesthetic descriptions and focus on **functional demographics** and **psychological traits**. Key components include:
+* **Background & Motivations:** Defining the "why" behind the persona’s actions to provide consistent decision-making.
+* **Knowledge Scoping:** Setting boundaries on what the persona knows (e.g., an "Expert Historian" vs. a "Novice Enthusiast") to avoid inconsistent expertise.
+* **Dynamic Interaction:** Using LLMs to simulate these personas in user-testing environments, allowing for the observation of "synthetic users" to predict real-world reactions.
+
+---
+
+## Technical Critique: Implementation Realities
+
+### 1. Learning Curves
+* **The Precision Gap:** Crafting a persona that is neither too rigid (leading to refusals) nor too loose (leading to "Assistant" tone leakage) requires iterative testing.
+* **Instruction Overload:** Adding too much biographical detail to a persona can distract the model from its primary task. The "Persona-Task" balance is a critical skill for prompt engineers.
+
+### 2. Hardware and Performance Dependencies
+* **Prompt Caching:** Large-scale personas and long system prompts significantly increase input token counts. Utilizing hardware/software stacks that support **Prompt Caching** (like vLLM or specialized API tiers) is essential to maintain low latency.
+* **Inference Costs:** Every line of persona detail is an added cost per request. For high-volume applications, personas should be "minified" to include only functionally relevant traits.
+
+### 3. Operational Risks
+
+* **Stereotyping & Bias:** Personas built on generic descriptions may inadvertently trigger model biases or stereotypical responses, requiring constant "Constitutional AI" tuning.
+* **Leakage & Injection:** System prompts and persona definitions are not secure. They are part of the context window and can be extracted by end-users using adversarial prompting techniques.
+
