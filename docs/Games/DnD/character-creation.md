@@ -27,10 +27,10 @@ Use the interactive calculator below to allocate your ability scores using the s
 
 ### Point Buy Rules
 
-- You have 27 points to spend on ability scores
-- Each ability score starts at 8
-- You can increase scores up to 15 (before racial bonuses)
-- Higher scores cost more points (see cost below each ability)
+- You have 27 points to spend on ability scores.
+- Each ability score starts at 8.
+- You can increase scores up to 15 (before racial bonuses).
+- Higher scores cost more points (see cost below each ability).
 
 #### Cost of Ability Scores
 
@@ -47,15 +47,17 @@ Use the interactive calculator below to allocate your ability scores using the s
 
 ## Stat Rolling
 
-Stats are rolled in order, rolling for each stat 4d6 dice and keeping the 3 highest.
-
 :::tip Fantasy Grounds
 Can use the command: `/die 4d6k3`
 :::
 
-After that, the player can also swap one Ability Score for another one.
-
 <StatDiceRoller />
+
+### Stat Rolling Rules
+
+- Select your class before rolling stats.
+- Stats are rolled in order, rolling 4d6 dice and keeping the 3 highest for each stat.
+- After that, the player can also swap any Ability Score for another one.
 
 ### Mulligan
 

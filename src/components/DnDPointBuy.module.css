@@ -168,9 +168,9 @@
 
 .abilitiesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
-  margin-bottom: 0rem;
+  margin-bottom: 0.5rem;
 }
 
 .abilityCard {
@@ -254,7 +254,7 @@
 }
 
 .controlButton {
-  width: 1em;
+  width: 2em;
   height: 2em;
   border-radius: 1em;
   border: 2px solid #8b6f47;
@@ -540,7 +540,7 @@
   }
 
   .abilitiesGrid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
 
@@ -555,5 +555,11 @@
 
   .resetButton {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .abilitiesGrid {
+    grid-template-columns: 1fr;
   }
 }
