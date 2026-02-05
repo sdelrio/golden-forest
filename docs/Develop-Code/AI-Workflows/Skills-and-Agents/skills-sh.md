@@ -12,6 +12,43 @@ date: 2026-02-05
 
 **Skills.sh** is an open-source ecosystem and registry designed to provide modular, reusable capabilities—known as "Skills"—for AI agents. It functions as a package manager for AI intelligence, allowing developers to enhance the procedural knowledge and functional abilities of their agents through a standardized distribution system.
 
+### High-Level Architecture
+The following diagram illustrates how Skills.sh sits between the developer community and the AI agents, providing the "brain upgrades" necessary for specialized tasks.
+
+```mermaid
+graph TD
+    subgraph "Skills.sh Ecosystem"
+        Registry[("Skills Registry<br/>(skills.sh)")]
+        Repo1["UI/UX Best Practices"]
+        Repo2["SEO Audit Logic"]
+        Repo3["API Tool Schemas"]
+
+        Registry --> Repo1
+        Registry --> Repo2
+        Registry --> Repo3
+    end
+
+    subgraph "Developer Workflow"
+        CLI["npx skills add"]
+        Dev["Developer/User"]
+        Dev --> CLI
+        CLI -- "Fetches Capability" --> Registry
+    end
+
+    subgraph "Supported Agents"
+        Agent1["Claude Code"]
+        Agent2["Cursor"]
+        Agent3["Gemini / Copilot"]
+
+        CLI -- "Installs into" --> Agent1
+        CLI -- "Installs into" --> Agent2
+        CLI -- "Installs into" --> Agent3
+    end
+
+    style Registry fill:#f9f,stroke:#333,stroke-width:4px
+    style CLI fill:#bbf,stroke:#333,stroke-width:2px
+```
+
 ### What is a "Skill"?
 
 In this context, a **skill** is an installable package that provides an AI agent with specific "procedural knowledge." While LLMs possess general knowledge, skills provide the specific instructions, best practices, and tool-access patterns required to perform specialized tasks (e.g., SEO auditing, React development, or PDF processing) with high reliability.
