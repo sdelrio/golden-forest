@@ -26,7 +26,7 @@ jobs:
 
     steps:
       - name: Checkout code HEad
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           # Fetch history is not needed
           fetch-depth: 1
