@@ -18,7 +18,7 @@ tags:
 * [stress](https://manpages.ubuntu.com/manpages/eoan/man1/stress.1.html)
 * [stress-ng](https://kernel.ubuntu.com/~cking/stress-ng/)
 * [s-tui](https://amanusk.github.io/s-tui/)
-* [7-zip](7zip)
+* [7-zip](./7zip.md)
 
 ## References
 

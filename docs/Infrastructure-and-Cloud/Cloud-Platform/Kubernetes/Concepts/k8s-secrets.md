@@ -26,7 +26,7 @@ The mutating webhook of Bank-Vaults is a solution that bypasses the Kubernetes s
 Integrate external secret management systems with Kubernetes.
 
 :::warning
-This project was deprecated and replaced by an operator ([ESO](./k8s-secrets#eso-external-secrets-operator) External Secrets Operator)
+This project was deprecated and replaced by an operator ([ESO](#eso-external-secrets-operator) External Secrets Operator)
 :::
 
 ### [Backends](https://github.com/external-secrets/kubernetes-external-secrets#backends)

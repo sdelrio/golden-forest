@@ -28,6 +28,7 @@ const config = {
   // baseUrl: '/',
   // For PR reviews if using GH actions then use BASE_URL path
   baseUrl: process.env.GITHUB_ACTIONS ? `${process.env.BASE_URL}/` : "/",
+  trailingSlash: true,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.

@@ -3,7 +3,7 @@
 ## Articles
 
 * [2019: Tools for Securing DevOps](https://devops.com/devops-and-security-be-ready-to-shield-your-application/)
-    * OWASP [SonarQube](./sonarqube)
+    * OWASP [SonarQube](./sonarqube.md)
     * OWASP ZAP
     * OWASP Dependency-Check
     * OWASP Glue

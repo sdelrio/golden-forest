@@ -84,3 +84,7 @@ typesense:
 		echo "APPLICATION_ID=1234567UVW";\
 		echo "API_KEY=0123456789abcdef0123456789abcdef";\
 	fi
+
+test: ## Test web performance with unlighthouse
+	npx unlighthouse --site https://www.lorien.cloud
+
