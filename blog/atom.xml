@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://www.lorien.cloud/blog</id>
+    <id>https://www.lorien.cloud/blog/</id>
     <title>The Golden Forest Blog</title>
     <updated>2021-11-09T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://www.lorien.cloud/blog"/>
+    <link rel="alternate" href="https://www.lorien.cloud/blog/"/>
     <subtitle>The Golden Forest Blog</subtitle>
     <icon>https://www.lorien.cloud/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[First Post]]></title>
-        <id>https://www.lorien.cloud/blog/first-post</id>
-        <link href="https://www.lorien.cloud/blog/first-post"/>
+        <id>https://www.lorien.cloud/blog/first-post/</id>
+        <link href="https://www.lorien.cloud/blog/first-post/"/>
         <updated>2021-11-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Initial setup of Docusaurus and start for the web page and blog.]]></summary>
         <content type="html"><![CDATA[<p>Initial setup of Docusaurus and start for the web page and blog.</p>
