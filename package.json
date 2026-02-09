@@ -23,7 +23,7 @@
     "@mdx-js/react": "^3.1.0",
     "@mermaid-js/layout-elk": "^0.2.0",
     "@svgr/webpack": "^5.5.0",
-    "baseline-browser-mapping": "^2.9.11",
+    "baseline-browser-mapping": "^2.9.19",
     "caniuse-lite": "^1.0.30001761",
     "clsx": "^2.0.0",
     "file-loader": "^6.2.0",
