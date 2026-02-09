@@ -16,10 +16,10 @@
     >
       <feDistantLight azimuth="45" elevation="60" />
     </feDiffuseLighting>
-    <feBlend
+    <feComposite
       in="texture"
       in2="SourceGraphic"
-      mode="multiply"
+      operator="multiply"
     />
   </filter>
   <rect width='200%' height='200%' filter='url(#paper-info)'/>
