@@ -76,7 +76,7 @@ jobs:
           # You might need to parse it into a shell array or process it line by line after parsing.
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         with:
           node-version: ${{ env.NODE_VERSION }}
