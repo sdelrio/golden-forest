@@ -24,10 +24,10 @@ export default function Root({ children }) {
             >
               <feDistantLight azimuth="45" elevation="60" />
             </feDiffuseLighting>
-            <feComposite
+            <feBlend
               in="texture"
               in2="SourceGraphic"
-              operator="multiply"
+              mode="multiply"
             />
           </filter>
           <filter id="wavy1">
