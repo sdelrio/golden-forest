@@ -81,7 +81,7 @@ jobs:
           restore-keys: |
             docusaurus-${{ runner.os }}-node-${{ env.NODE_VERSION }}-
 
-      - uses: webfactory/ssh-agent@v0.5.0
+      - uses: webfactory/ssh-agent@v0.9.1
         with:
           ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
 
