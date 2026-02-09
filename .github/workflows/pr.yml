@@ -15,6 +15,11 @@ on:
       - ".github/dependabot.yml"
       - "README.md"
 
+
+permissions:
+  contents: write
+  pull-requests: write
+
 concurrency: ci-${{ github.ref }}
 
 jobs:
