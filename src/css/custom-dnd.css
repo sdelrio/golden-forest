@@ -57,6 +57,7 @@ html[class*="docs-doc-id-Games/DnD/"] {
     --_phb-odd-gradient: var(--phb-odd-gradient, linear-gradient(to right, transparent, var(--_phb-tr-odd) 2%, var(--_phb-tr-odd) 98%, transparent));
     --_phb-even-gradient: var(--phb-even-gradient, linear-gradient(to right, transparent, var(--_phb-tr-even) 2%, var(--_phb-tr-even) 98%, transparent));
 
+
     & article {
         font-family: var(--_phb-font-body);
         line-height: 1.25em;
@@ -298,6 +299,8 @@ html[class*="docs-doc-id-Games/DnD/"] {
         margin-top: 0.75rem;
         margin-bottom: 1.5rem;
         font-family: 'ScalySans';
+        position: relative;
+        overflow: visible;
 
         & [data-theme='dark']>div:first-child {
             color: var(--ifm-tabs-color-active-border);
@@ -332,12 +335,12 @@ html[class*="docs-doc-id-Games/DnD/"] {
 
         /* Left Triangles (Top and Bottom) */
         &::before {
-            content: "";
+            content: '';
             position: absolute;
             left: 0;
-            top: calc(-1 * var(--dnd-triangle-offset)) !important;
-            bottom: calc(-1 * var(--dnd-triangle-offset)) !important;
-            width: var(--dnd-triangle-offset) !important;
+            top: calc(-1 * var(--dnd-triangle-offset));
+            bottom: calc(-1 * var(--dnd-triangle-offset));
+            width: var(--dnd-triangle-offset);
             height: auto;
             background-color: var(--ifm-alert-foreground-color);
             z-index: -1;
@@ -352,10 +355,10 @@ html[class*="docs-doc-id-Games/DnD/"] {
         &::after {
             content: "";
             position: absolute;
-            right: 0;
-            top: calc(-1 * var(--dnd-triangle-offset)) !important;
-            bottom: calc(-1 * var(--dnd-triangle-offset)) !important;
-            width: var(--dnd-triangle-offset) !important;
+            right: 1px;
+            top: calc(-1 * var(--dnd-triangle-offset));
+            bottom: calc(-1 * var(--dnd-triangle-offset));
+            width: var(--dnd-triangle-offset);
             height: auto;
             background-color: var(--ifm-alert-foreground-color);
             z-index: -1;
@@ -365,57 +368,7 @@ html[class*="docs-doc-id-Games/DnD/"] {
                     0 100%);
         }
 
-        &:hover {
-            box-shadow: 0.0em 0.5em 1.25em -0.5em rgba(0, 0, 0, 0.5);
-            transition: box-shadow 0.2s ease-in-out;
-        }
-
         /* Override hover shadow from admonition.css */
-    }
-
-    & .card {
-        position: relative;
-        isolation: isolate;
-
-        border: none;
-        border-radius: 0;
-        box-shadow: none;
-        background: transparent;
-        padding: 1rem;
-        z-index: 1;
-        margin: 0em;
-
-        &::before {
-            content: "";
-            position: absolute;
-            /* 'inset: 0' es el atajo moderno para top, left, right, bottom: 0 */
-            inset: 1.0em;
-            border-radius: 0.5em;
-
-            /* Movemos el diseño del borde aquí */
-            border: solid 2px var(--ifm-color-emphasis-300);
-            background-color: var(--ifm-background-surface-color);
-
-            filter: url(#wavy1) drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.5));
-            z-index: -10;
-            pointer-events: none;
-        }
-
-        /*
-        & .card__body {
-            z-index: 1;
-            background-color: blue;
-            filter: none;
-        }
-        */
-        /*
-        & a {
-            color: inherit;
-            background-color: blue;
-            text-decoration: none;
-            z-index: 2;
-        }
-        */
     }
 
     & article li {

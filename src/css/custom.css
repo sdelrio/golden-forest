@@ -302,7 +302,7 @@ html h2 {
 }
 
 /* Import pagination styles */
-@import './pagination.css';
+@import './pagination-simple.css';
 
 /*
  * SVG Filter Usage Example:
