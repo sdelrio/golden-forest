@@ -343,9 +343,12 @@ html[class*="docs-doc-id-Games/DnD/"] {
             width: var(--dnd-triangle-offset);
             height: auto;
             background-color: var(--ifm-alert-foreground-color);
-            z-index: -1;
-            clip-path: polygon(var(--dnd-triangle-offset) 0,
+            z-index: 0;
+            clip-path: polygon(var(--dnd-triangle-offset) 0%,
                     100% var(--dnd-triangle-offset),
+                    0% var(--dnd-triangle-offset),
+                    0% calc(100% - var(--dnd-triangle-offset)),
+                    100% calc(100% - var(--dnd-triangle-offset)),
                     100% 100%,
                     0 calc(100% - var(--dnd-triangle-offset)),
                     0 var(--dnd-triangle-offset));
@@ -355,17 +358,21 @@ html[class*="docs-doc-id-Games/DnD/"] {
         &::after {
             content: "";
             position: absolute;
-            right: 1px;
+            right: 0px;
             top: calc(-1 * var(--dnd-triangle-offset));
             bottom: calc(-1 * var(--dnd-triangle-offset));
             width: var(--dnd-triangle-offset);
             height: auto;
             background-color: var(--ifm-alert-foreground-color);
-            z-index: -1;
+            z-index: 0;
             clip-path: polygon(0 0,
                     100% var(--dnd-triangle-offset),
                     100% calc(100% - var(--dnd-triangle-offset)),
-                    0 100%);
+                    0 100%,
+                    0 calc(100% - var(--dnd-triangle-offset)),
+                    100% calc(100% - var(--dnd-triangle-offset)),
+                    100% var(--dnd-triangle-offset),
+                    0 var(--dnd-triangle-offset));
         }
 
         /* Override hover shadow from admonition.css */
