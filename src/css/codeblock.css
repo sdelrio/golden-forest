@@ -1,0 +1,91 @@
+/**
+ * Golden Forest - Nature-Themed Code Blocks
+ * Organic shapes, earthy colors, and berry/leaf controls
+ */
+[class*='codeBlockContainer_'] {
+    border-radius: 28px 12px 35px 15px !important;
+    /* Organic, irregular shape */
+    overflow: hidden !important;
+    margin: 1.5rem 0 !important;
+    position: relative;
+    padding-top: 32px !important;
+    background-color: #2b2b2b !important;
+    /* Dark forest floor */
+    border: 2px solid var(--ifm-color-primary-darkest);
+    /* Bark brown/gold */
+}
+
+/* Header/Wood Plaque Bar */
+[class*='codeBlockContainer_']::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 28px;
+    background: linear-gradient(to bottom, var(--ifm-color-primary-darker), var(--ifm-color-primary-darkest));
+    /* Wooden bark texture */
+    display: block;
+    z-index: 1;
+    border-bottom: 2px solid var(--ifm-color-primary-darker);
+}
+
+/* Nature Controls (Trio of Wide Leaf SVGs) */
+[class*='codeBlockContainer_']::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 14px;
+    width: 85px;
+    /* Wider area for chunky leaves */
+    height: 20px;
+    z-index: 2;
+    background-repeat: no-repeat;
+    /* Red Leaf, Yellow Autumn Leaf, Green Summer Leaf */
+    background-image:
+        /* Red Leaf - Extra Wide & Chunky */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23d32f2f' d='M21,11C21,11 15,7 12,2C9,7 3,11 3,11C3,11 5,16 12,22C19,16 21,11 21,11Z'/%3E%3C/svg%3E"),
+        /* Autumn Leaf - Extra Wide & Chunky */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e99700' d='M21,11C21,11 15,7 12,2C9,7 3,11 3,11C3,11 5,16 12,22C19,16 21,11 21,11Z'/%3E%3C/svg%3E"),
+        /* Summer Leaf - Extra Wide & Chunky */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23388e3c' d='M21,11C21,11 15,7 12,2C9,7 3,11 3,11C3,11 5,16 12,22C19,16 21,11 21,11Z'/%3E%3C/svg%3E");
+    background-size: 18px 18px, 18px 18px, 18px 18px;
+    background-position: 0px 0px, 24px 0px, 56px 0px;
+}
+
+/* Adjust colors using filters to match theme variables if possible, 
+   but SVGs use hex for simplicity here. We can use CSS variables in SVGs via mask-image if preferred. */
+
+/* Light Mode Nature Overrides */
+html[data-theme='light'] [class*='codeBlockContainer_'] {
+    background-color: var(--HB_Color_Background) !important;
+    /* Parchment/Leafy background */
+    border-color: var(--HB_Color_HeaderUnderline);
+}
+
+html[data-theme='light'] [class*='codeBlockContainer_']::before {
+    background: linear-gradient(to bottom, var(--HB_Color_HeaderUnderline), var(--HB_Color_HeaderText));
+    border-bottom-color: var(--HB_Color_HorizontalRule);
+}
+
+/* Adjust the code content */
+[class*='codeBlockContainer_'] pre {
+    margin: 0 !important;
+    background: transparent !important;
+}
+
+/* Nature-styled Copy Button */
+[class*='codeBlockContainer_'] button[class*='copyButton_'] {
+    top: 6px !important;
+    right: 8px !important;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+html[data-theme='light'] [class*='codeBlockContainer_'] button[class*='copyButton_'] {
+    background: rgba(0, 0, 0, 0.05);
+    color: #3e2723;
+    border-color: rgba(62, 39, 35, 0.2);
+}

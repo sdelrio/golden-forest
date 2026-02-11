@@ -134,6 +134,35 @@ html[data-theme='dark'] :root {
   padding: 0 var(--ifm-pre-padding);
 }
 
+/* 
+ * Nature-themed Inline Code 
+ * Aligned with 'The Golden Forest' schema
+ */
+code {
+  background-color: var(--HB_Color_Accent);
+  color: var(--HB_Color_HeaderText);
+  border: 1px solid var(--HB_Color_HeaderUnderline);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  font-size: var(--ifm-code-font-size);
+  vertical-align: baseline;
+  /* Align with standard text flow */
+}
+
+[data-theme='dark'] code {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--ifm-color-primary-light);
+  border-color: var(--ifm-color-primary-darkest);
+}
+
+/* Ensure inline code inside blocks doesn't inherit background */
+pre code {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+}
+
 html,
 body {
   min-height: 100vh;
@@ -303,6 +332,7 @@ html h2 {
 
 /* Import pagination styles */
 @import './pagination-simple.css';
+@import './codeblock.css';
 
 /*
  * SVG Filter Usage Example:
