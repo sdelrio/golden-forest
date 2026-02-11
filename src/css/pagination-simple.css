@@ -1,0 +1,29 @@
+.pagination-nav {
+    padding: 0em;
+}
+
+.pagination-nav[data-theme='dark'] {
+    background: var(--docusaurus-highlighted-code-line-bg);
+}
+
+.pagination-nav__link {
+    border: 0px solid var(--ifm-color-emphasis-300);
+    padding: 0;
+    text-align: center;
+    background: var(--docusaurus-highlighted-code-line-bg);
+    box-shadow: -1em 0 2em -1em rgba(0, 0, 0, 0.5), 1em 0 3em -1em rgba(0, 0, 0, 0.5);
+    padding: 1em;
+}
+
+.pagination-nav__link--prev {
+    text-align: right;
+}
+
+.pagination-nav__link--next {
+    text-align: left;
+}
+
+.pagination-nav {
+    margin: 0.5em;
+    position: relative;
+}
