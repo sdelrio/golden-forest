@@ -144,6 +144,7 @@ const config = {
           alt: 'Logo',
           src: 'img/tree.svg',
         },
+        hideOnScroll: true,
         items: [
           {
             type: 'doc',
