@@ -3,13 +3,13 @@
  * Organic shapes, earthy colors, and berry/leaf controls
  */
 [class*='codeBlockContainer_'] {
-    border-radius: 28px 12px 35px 15px !important;
+    border-radius: 28px 12px 35px 15px;
     /* Organic, irregular shape */
-    overflow: hidden !important;
-    margin: 1.5rem 0 !important;
+    overflow: hidden;
+    margin: 1.5rem 0;
     position: relative;
-    padding-top: 32px !important;
-    background-color: #2b2b2b !important;
+    padding: calc(32px + 0.25rem) 0.5rem 0.5rem 0.5rem;
+    background-color: #2b2b2b;
     /* Dark forest floor */
     border: 2px solid var(--ifm-color-primary-darkest);
     /* Bark brown/gold */
@@ -50,7 +50,32 @@
         /* Summer Leaf - Extra Wide & Chunky */
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23388e3c' d='M21,11C21,11 15,7 12,2C9,7 3,11 3,11C3,11 5,16 12,22C19,16 21,11 21,11Z'/%3E%3C/svg%3E");
     background-size: 18px 18px, 18px 18px, 18px 18px;
-    background-position: 0px 0px, 24px 0px, 56px 0px;
+    background-position: 0px 0px, 28px 0px, 56px 0px;
+}
+
+/* Code Block Title - Tab Style in Header */
+[class*='codeBlockTitle_'] {
+    position: absolute !important;
+    top: 0 !important;
+    left: 100px !important;
+    height: 28px !important;
+    line-height: 28px !important;
+    background: transparent !important;
+    border: none !important;
+    color: #e2e2e2 !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    z-index: 5 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    pointer-events: none !important;
+    /* Let clicks pass through */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme='light'] [class*='codeBlockTitle_'] {
+    color: var(--ifm-color-secondary-lightest);
+    text-shadow: 1px 1px 2px rgba(62, 39, 35, 0.8);
 }
 
 /* Adjust colors using filters to match theme variables if possible, 

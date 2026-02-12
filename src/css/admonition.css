@@ -6,6 +6,7 @@
 .theme-admonition {
     position: relative;
     border-radius: 1em;
+    border-radius: 28px 12px 35px 15px;
 }
 
 .theme-admonition-note {
@@ -54,7 +55,7 @@
 }
 
 .theme-admonition::after {
-    right: 15px;
+    right: 25px;
     transform: skew(3deg) rotate(3deg);
 }
 
@@ -73,5 +74,5 @@
 }
 
 .theme-admonition:hover::after {
-    right: 5px;
+    right: 25px;
 }

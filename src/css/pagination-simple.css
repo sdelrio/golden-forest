@@ -1,18 +1,16 @@
-.pagination-nav {
-    padding: 0em;
-}
-
 .pagination-nav[data-theme='dark'] {
     background: var(--docusaurus-highlighted-code-line-bg);
 }
 
 .pagination-nav__link {
+    background: var(--ifm-card-background-color);
+    box-shadow: 0 2px 14px rgba(163, 106, 0, .4);
+    transition: box-shadow .2s ease-in-out;
     border: 0px solid var(--ifm-color-emphasis-300);
-    padding: 0;
-    text-align: center;
-    background: var(--docusaurus-highlighted-code-line-bg);
-    box-shadow: -1em 0 2em -1em rgba(0, 0, 0, 0.5), 1em 0 3em -1em rgba(0, 0, 0, 0.5);
-    padding: 1em;
+}
+
+.pagination-nav__link:hover {
+    box-shadow: 0 5px 14px rgba(163, 106, 0, .7);
 }
 
 .pagination-nav__link--prev {
@@ -24,6 +22,6 @@
 }
 
 .pagination-nav {
-    margin: 0.5em;
+    margin: 1em;
     position: relative;
 }
