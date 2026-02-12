@@ -96,18 +96,30 @@ html[data-theme='light'] [class*='codeBlockContainer_']::before {
 
 /* Adjust the code content */
 [class*='codeBlockContainer_'] pre {
-    margin: 0 !important;
-    background: transparent !important;
+    margin: 0;
+    background: transparent;
 }
 
 /* Nature-styled Copy Button */
-[class*='codeBlockContainer_'] button[class*='copyButton_'] {
-    top: 6px !important;
-    right: 8px !important;
+[class*='codeBlockContainer_'] div[class*='buttonGroup_'] {
+    z-index: 10;
+    top: -42px;
+    right: 8px;
+    /*
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    margin: 0 4px !important;
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    */
+}
+
+[class*='codeBlockContainer_'] div[class*='buttonGroup_'] button {
+    transform: scale(0.65);
+    transform-origin: center;
 }
 
 html[data-theme='light'] [class*='codeBlockContainer_'] button[class*='copyButton_'] {
