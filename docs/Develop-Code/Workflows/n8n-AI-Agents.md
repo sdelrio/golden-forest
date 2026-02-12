@@ -26,5 +26,5 @@ decision-making AI agents.
 
 ## Articles and Videos
 
-- ![Learn n8n to Design, Develop, and Deploy Production-Grade AI Agents](https://www.freecodecamp.org/news/learn-n8n-to-design-develop-and-deploy-production-grade-ai-agents/)
-
+- [Learn n8n to Design, Develop, and Deploy Production-Grade AI Agents](https://www.freecodecamp.org/news/learn-n8n-to-design-develop-and-deploy-production-grade-ai-agents/)
+- [n8n AI Agents video](https://www.youtube.com/watch?v=UIf-SlmMays)
