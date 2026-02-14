@@ -1,0 +1,57 @@
+/*
+ * SVG Filter Usage Example:
+ * To apply the paper texture filter to an element, use:
+ * filter: url(#paper-texture);
+ *
+ * Example for all markdown pages:
+ * .markdown {
+ *   filter: url(#paper-texture);
+ * }
+ */
+
+/* Disable sidebar and layout transitions to make it instant */
+.theme-doc-sidebar-container,
+div[class*='sidebarContainer_'],
+.sidebarViewport,
+[class*='sidebarViewport_'],
+.navbar-sidebar,
+.collapseSidebarButton,
+.expandButton,
+[class*='expandButton'],
+.collapseSidebarButton *,
+[class*='expandButton'] * {
+    transition: none;
+    transition-duration: 0s;
+    transition-delay: 0s;
+    animation: none;
+}
+
+/* Force-show the sidebar button when collapsed */
+[class*='sidebarCollapsed_'] {
+    width: var(--ifm-sidebar-width-collapsed);
+    min-width: var(--ifm-sidebar-width-collapsed);
+    visibility: visible;
+    transition-duration: 0s;
+    transition-delay: 0s;
+    animation: none;
+}
+
+[class*='sidebarCollapsed_'] .collapseSidebarButton,
+[class*='sidebarCollapsed_'] [class*='expandButton'] {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition-duration: 0s;
+    transition-delay: 0s;
+    animation: none;
+}
+
+/* Ensure the button is not clipped or hidden by overflow */
+[class*='sidebarCollapsed_'] [class*='sidebarViewport_'],
+[class*='sidebarCollapsed_'] .sidebarViewport {
+    width: var(--ifm-sidebar-width-collapsed);
+    overflow: visible;
+    transition-duration: 0s;
+    transition-delay: 0s;
+    animation: none;
+}

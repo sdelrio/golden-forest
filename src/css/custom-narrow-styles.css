@@ -1,0 +1,89 @@
+:root {
+    /* Typography Overrides */
+    --ifm-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --ifm-font-size-base: 16px;
+    --ifm-line-height-base: 1.625;
+    /* 26px line height / 16px font size */
+
+    /* Sidebar Overrides */
+    --ifm-sidebar-width: 280px;
+    /* margin overrides */
+    --ifm-list-paragraph-margin: 0.25em;
+    --ifm-paragraph-margin-bottom: 0.5em;
+    --ifm-menu-link-padding-vertical: 0.25em;
+    --ifm-menu-link-padding-horizontal: 0.45em;
+
+}
+
+/* Headings */
+h1 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+/* Body Text */
+p,
+li {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    /* Regular weight */
+}
+
+/* 
+ * Sidebar Layout & Transitions
+ * Re-enabling transitions that were disabled in custom.css
+ */
+.theme-doc-sidebar-container {
+    border-right: 1px solid var(--ifm-toc-border-color);
+    /* Maintain project color var, but enforce border */
+}
+
+/* Re-enable transitions for smooth hide/show */
+.theme-doc-sidebar-container,
+div[class*='sidebarContainer_'],
+.sidebarViewport,
+[class*='sidebarViewport_'],
+.navbar-sidebar,
+.collapseSidebarButton,
+.expandButton,
+[class*='expandButton'],
+.collapseSidebarButton *,
+[class*='expandButton'] * {
+    transition: all 0.2s cubic-bezier(0.08, 0.52, 0.52, 1) !important;
+    /* Force override of the 'none' in custom.css */
+    transition-property: width, transform, opacity, visibility !important;
+}
+
+/* Ensure the collapsed width animates smoothly */
+[class*='sidebarCollapsed_'] {
+    transition: width 0.2s cubic-bezier(0.08, 0.52, 0.52, 1) !important;
+}
+
+/*
+ * Adjust code block font to match Stripe's tech feel
+ */
+code,
+pre {
+    font-family: Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
+    font-size: 13px;
+    /* Slightly smaller than body text, as per Stripe */
+}
