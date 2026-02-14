@@ -3,6 +3,8 @@ description: Revised D&D magic and resurrection house rules.
 ---
 # Magic fixes
 
+## General Magic Rules
+
 ### Automatic Miss Limitations
 
 Features that trigger an effect on a missed attack, such as the *Potent Cantrip* feature, do not function when an attack results in an automatic miss.
