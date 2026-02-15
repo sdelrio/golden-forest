@@ -24,6 +24,9 @@ table {
     border-radius: 0;
     display: table;
     position: relative;
+
+    font-family: 'Open Sans';
+    font-size: 15px;
     /*
     margin-top: 2em;
     margin-bottom: 2em;
@@ -67,4 +70,12 @@ table tr:first-child td {
 table tr {
     border-top: none;
     border-bottom: none;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: var(--bg-table-row-odd);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--bg-table-row-even);
 }

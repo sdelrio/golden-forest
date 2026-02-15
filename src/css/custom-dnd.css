@@ -170,8 +170,6 @@ html[class*="docs-doc-id-Games/DnD/"] {
     & code {
         padding: 2px 4px 0px 4px;
         font-size: .425cm;
-        /*color: #58180D;*/
-        /*background-color: #FAF7EA;*/
         border-radius: 4px;
         font-family: 'Courier New', 'Courier', monospace;
         overflow-wrap: break-word;
@@ -201,11 +199,11 @@ html[class*="docs-doc-id-Games/DnD/"] {
         */
 
     & table tbody tr {
-        border-top: none !important;
+        border-top: none;
     }
 
     & table td {
-        border: none !important;
+        border: none;
     }
 
     & table {
