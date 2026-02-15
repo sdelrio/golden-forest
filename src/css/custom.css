@@ -21,7 +21,7 @@
   --ifm-color-primary-lighter: #ffaa0d;
   --ifm-color-primary-lightest: #ffb630;
   --ifm-code-font-size: 90%;
-  --ifm-font-family-base: "Roboto";
+  --ifm-font-family-base: "Open Sans";
   --ifm-font-family-monospace: "Roboto Mono";
   --ifm-font-weight-monospace: 300;
   --ifm-font-size-base: 110%;
@@ -412,6 +412,10 @@ html h2 {
 
 .footer {
   background: linear-gradient(0deg, var(--ifm-footer-background-color) 0%, var(--ifm-footer-background-color) 90%, #404040 100%);
+}
+
+.table-of-contents {
+  font-family: 'Roboto';
 }
 
 /* Import pagination styles */
