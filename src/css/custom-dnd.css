@@ -376,9 +376,6 @@ html[class*="docs-doc-id-Games/DnD/"] {
         /* Override hover shadow from admonition.css */
     }
 
-    & article li {
-        list-style: circle;
-    }
 }
 
 html[class*="docs-doc-id-Games/DnD/"][data-theme='light'],

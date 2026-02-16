@@ -30,7 +30,7 @@ export default function IndexList() {
     }
 
     return (
-        <ul className="table-of-contents">
+        <ul className="table-of-contents" style={{ listStyleType: 'circle' }}>
             {filteredItems.map((item, index) => (
                 <DocumentIndex
                     key={index}
