@@ -1,5 +1,6 @@
 ---
 description: Special talents and expertise providing unique capabilities
+tags: [feat, feats, origin feats, character, dnd]
 ---
 import TOCInline from '@theme/TOCInline';
 import Feat from '@site/src/components/Feat';

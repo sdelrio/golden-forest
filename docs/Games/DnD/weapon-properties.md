@@ -1,5 +1,6 @@
 ---
 description: House rules for D&D weapon properties.
+tags: [weapon, weapon-properties, dnd]
 ---
 # Modified Weapon Properties
 

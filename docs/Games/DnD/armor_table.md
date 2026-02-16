@@ -1,5 +1,6 @@
 ---
 description: Armor, shields and resizing reference.
+tags: [armor, shields, resizing, dnd]
 ---
 
 # Master Armor Table

@@ -1,5 +1,6 @@
 ---
 description: Character creation selection guide.
+tags: [character, character-creation, dnd]
 ---
 
 import DnDPointBuy from '@site/src/components/DnDPointBuy';

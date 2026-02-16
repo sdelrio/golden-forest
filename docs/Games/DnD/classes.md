@@ -1,5 +1,6 @@
 ---
 description: Overview of Paladin and Cleric class features
+tags: [classes, paladin, cleric]
 ---
 
 # Classes

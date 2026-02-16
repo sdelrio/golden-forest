@@ -1,5 +1,6 @@
 ---
 description: House rules for D&D skills and item attunement.
+tags: [skills, attunement, dnd]
 ---
 # Skills
 

@@ -1,5 +1,6 @@
 ---
 description: Revised D&D magic and resurrection house rules.
+ztags: [magic, spells, dnd]
 ---
 # Magic fixes
 
