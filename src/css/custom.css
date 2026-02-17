@@ -1,4 +1,5 @@
 @import 'katex/dist/katex.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,200..900&display=swap');
 
 /*
  * Any CSS included here will be global. The classic template
@@ -399,6 +400,8 @@ html h2 {
 
 .markdown h4 {
   margin-top: calc(var(--ifm-h3-vertical-rhythm-top) * var(--ifm-leading) / 3.0);
+  font-size: 0.85rem;
+  text-transform: uppercase;
 }
 
 
@@ -416,6 +419,18 @@ html h2 {
 
 .table-of-contents {
   font-family: 'Roboto';
+  font-weight: 325;
+}
+
+/* Ensure the weight applies to list items, overriding global 400 from narrow-styles */
+.table-of-contents li,
+.table-of-contents li a {
+  font-weight: inherit;
+}
+
+.table-of-contents strong,
+.table-of-contents b {
+  font-weight: 450;
 }
 
 /* Import pagination styles */

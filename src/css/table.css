@@ -26,6 +26,7 @@ table {
     position: relative;
 
     font-family: 'Roboto';
+    font-weight: 300;
 
     /*
     margin-top: 2em;
@@ -33,6 +34,11 @@ table {
     margin-left: 1em;
     margin-right: 1em;
     */
+}
+
+table strong,
+table b {
+    font-weight: 450;
 }
 
 table th {

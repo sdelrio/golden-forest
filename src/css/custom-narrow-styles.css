@@ -83,7 +83,15 @@ div[class*='sidebarContainer_'],
  */
 code,
 pre {
-    font-family: Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
-    font-size: 13px;
-    /* Slightly smaller than body text, as per Stripe */
+    font-family: 'Source Code Pro', Consolas, "Ubuntu Mono", Menlo, "DejaVu Sans Mono";
+    font-size: 16px;
+    font-weight: 350;
+    line-height: 1.5;
+}
+
+code strong,
+code b,
+pre strong,
+pre b {
+    font-weight: 450;
 }
