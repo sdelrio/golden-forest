@@ -1,3 +1,9 @@
+---
+title: Python Development Environment
+description: A comprehensive guide to managing Python versions, virtual environments, and project setups using pyenv, poetry, and best practices.
+tags: [python, pyenv, devops, productivity, poetry, development]
+---
+
 # Python
 
 [Python](https://en.wikipedia.org/wiki/Python_%28programming_language%29) is an interpreted high-level general-purpose programming language. Its design philosophy emphasizes code readability with its use of significant indentation. Its language constructs as well as its object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
@@ -12,16 +18,19 @@ Python is dynamically-typed and garbage-collected. It supports multiple programm
 * Python 3.0 was released in 2008 and was a major revision of the language that is not completely backward-compatible.
 * Python 2 was discontinued with version 2.7.18 in 2020.
 
-
 ## PyEnv
 
 Manage python versions with PyEnv
 
 You can [Install](https://github.com/pyenv/pyenv#installation) with brew, compiling or just a git clone. `pyenv` works by building Python from source. 
 
-### Using `pyenv` to install a specific version of Python
+### Using pyenv to install a specific version of Python
+
+Once `pyenv` is installed, you can use it to manage multiple side-by-side installations of Python. This is particularly useful for testing your code across different versions or ensuring that your development environment matches your production server without interfering with the system's default Python.
 
 #### Search versions
+
+Before installing, you can list all available versions provided by the `python-build` plugin. Since the list is extensive, it is standard practice to use `grep` to filter for specific major or minor releases.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -82,6 +91,8 @@ $ pyenv install --list | grep "jython"
 
 #### Install samples
 
+The `pyenv install` command downloads the source code and compiles it on your local machine. Using the `-v` (verbose) flag is recommended to monitor the build process, which includes downloading dependencies, patching, and running the `make` utility.
+
 <Tabs>
   <TabItem value="python397" label="Python 3.9.7" default>
 
@@ -140,10 +151,9 @@ Installed Python-2.7.18 to /Users/sdelrio/.pyenv/versions/2.7.18
   </TabItem>
 </Tabs>
 
-
 ### Install locations
 
-Each version that you have installed is located nicely in your `pyenv` root directory:
+Each version that you have installed is located in your `pyenv` root directory. By default, these are kept in a flat directory structure under `versions/`, making it easy to see exactly what is on your system at a glance.
 
 ```
 $ ls ~/.pyenv/versions
@@ -151,6 +161,8 @@ $ ls ~/.pyenv/versions
 ```
 
 ### Uninstall `pyenv` version
+
+If you no longer need a specific version, you can remove it to free up disk space. While `pyenv` provides a dedicated command for this, you also have the flexibility to remove the version directory manually, as `pyenv` will automatically stop detecting it once the folder is gone.
 
 <Tabs>
   <TabItem value="uninstall" label="pyenv uninstall" default>
