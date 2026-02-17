@@ -1,6 +1,12 @@
-# File and Directory Naming Rules Reference Guide
+---
+title: File Naming Conventions
+description: A complete guide to professional file and directory naming rules for consistent behavior in terminals, web environments, and codebases.
+tags: [best-practices, naming-conventions, organization, terminal]
+slug: file-naming-conventions
+---
+# File Naming Rules
 
-Applying these rules from the start will ensure your files work consistently with professional tools, terminals, and web environments.
+This guide serves as a reference for professional file and directory naming. Applying these rules from the start will ensure your files work consistently with professional tools, terminals, and web environments.
 
 ## Eliminate Spaces
 
@@ -16,7 +22,6 @@ Spaces in file names are a *major source of errors* in command-line tools, requi
 | **Hyphens** (dashes) | `my-project-file.py` | Popular for web files, but some languages treat them as subtraction. |
 | **camelCase** | `myProjectFile.py` | First letter is lowercase, subsequent words are capitalized. |
 | **PascalCase** | `MyProjectFile.py` | Every word, including the first, starts with a capital letter. |
-
 
 ## Avoid Special Characters
 
