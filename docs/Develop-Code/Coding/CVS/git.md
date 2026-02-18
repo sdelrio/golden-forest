@@ -1,50 +1,42 @@
-# GIT
+---
+title: Git Version Control
+description: A professional guide to Git, covering its distributed architecture, core concepts, advanced workflows, and server-side integration with Gitea.
+tags: [git, version-control, cvs, devops, collaboration]
+slug: git-version-control
+---
 
-GIT is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows (thousands of parallel branches running on different systems).
+# Git: Distributed Version Control
 
-Git was created by Linus Torvalds in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development. Since 2005, Junio Hamano has been the core maintainer. As with most other distributed version control systems, and unlike most client–server systems, every Git directory on every computer is a full-fledged repository with complet history and full version-tracking abilities, independent of network access or a central server. Git is free and open-source software distributed under the GPL-2.0-only license.
+Git is a mature, actively maintained open-source version control system originally developed by **Linus Torvalds** in 2005. Unlike older centralized systems, Git is **distributed**, meaning every developer's working copy of the code is also a full-fledged repository that contains the complete history of all changes, independent of network access or a central server.
 
-* [Homepage](https://git-scm.com/)
-* [Wikipedia](https://en.wikipedia.org/wiki/Git) 
+Its design philosophy is centered around **speed, data integrity, and support for distributed, non-linear workflows**. 
 
-## Monorepo
+*   **[Official Homepage](https://git-scm.com/)**
+*   **[Pro Git Book](https://git-scm.com/book/en/v2)**
 
-* [Speeding up a Git monorepo at Dropbox with](https://dropbox.tech/application/speeding-up-a-git-monorepo-at-dropbox-with--200-lines-of-code)
-  * [Beziel](https://dropbox.tech/infrastructure/continuous-integration-and-deployment-with-bazel)
-  * [Athena: Our automated build health management system](https://dropbox.tech/infrastructure/athena-our-automated-build-health-management-system)
+## Core Concepts
 
+Understanding Git requires a shift in thinking from "tracking file changes" to "managing snapshots."
 
-## Delete remote tag
+### The Three States
+Git manages files in three main areas:
+1.  **Working Directory:** The local file system where you edit files.
+2.  **Staging Area (Index):** A "buffer" zone where you prepare and group changes for the next commit.
+3.  **Repository (.git):** The permanent database where Git stores snapshots and history.
 
-```bash
-git push --delete origin tagName
-git tag -d tagName
-```
+### Branching and Merging
+Branching is Git's most powerful feature. It is incredibly lightweight, allowing developers to create "parallel universes" for experiments or features without impacting the main codebase.
+*   **Branches:** Movable pointers to commits.
+*   **Merging:** The process of integrating independent lines of development.
+    *   **Fast-forward:** A simple update of the branch pointer when history hasn't diverged.
+    *   **Three-way merge:** A new commit that reconciles different histories.
 
-## Git Large File Storage
+## Configuration & Personalization
 
-Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server like GitHub.com or GitHub Enterprise.
+Git can be extensively customized via the `.gitconfig` file (usually located at `~/.gitconfig`).
 
-* [An open source it extension for versioning large files](https://git-lfs.github.com/)
-
-### Setup
-```bash
-git lfs install
-git lfs track "*.psd"
-git add .gitattributes
-```
-
-### Add large file sample
-
-```bash
-git add file.psd
-git commit -m "Add design file"
-git push origin main
-```
-
-## Git terminal colors
-
-* `~/.gitconfig`
+### Terminal Colors
+Enabling UI colors significantly improves the readability of logs and diffs.
 
 ```ini
 [color]
@@ -63,17 +55,15 @@ git push origin main
   remote = yellow
 ```
 
-
-## Alias
-
-* `~/.gitconfig`
+### Essential Aliases
+Boost productivity by mapping frequently used or complex commands to short aliases.
 
 ```ini
 [alias]
     review = "!f() { git push -u ${1:-origin} HEAD:`git config branch.$(git name-rev --name-only HEAD).merge | sed -e 's@refs/heads/@refs/for/@'`; }; f"
     unstage = reset --soft HEAD^
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
     st = status -s
     gl = clone
     ci = commit
@@ -91,246 +81,112 @@ git push origin main
     rh2 = reset HEAD^^ --hard
 ```
 
-## Remove directory from cache 
+## Advanced Tooling
 
-Remove directory from remote repository after adding them to `.gitignore`
-
-```bash
-git rm -r --cached node_modules
-git commit -m 'Remove the now ignored directory node_modules'
-git push origin master
-```
-
-## Commitizen
-
-Simple commit conventions for internet citizens.
-
-When you commit with Commitizen, you'll be prompted to fill out any required commit fields at commit time. No more waiting until later for a git commit hook to run and reject your commit. No more digging through CONTRIBUTING.md to find what the preferred format is. Get instant feedback on your commit message formatting and be prompted for required fields.
-
-### Install
+### Large File Storage (LFS)
+Git LFS optimizes the handling of large binary files (audio, video, datasets) by replacing them with text pointers.
 
 ```bash
-npm install -g commitizen
+# Installation & Setup
+git lfs install
+git lfs track "*.psd"
+git add .gitattributes
+
+# Tracking a new large file
+git add file.psd
+git commit -m "Add design file"
+git push origin main
 ```
 
-### Usage
-
-```bash
-$ git add .
-$ git cz
-
-All commit message lines will be cropped at 100 characters.
-? Select the type of change that you're commiting: (Use arrow keys)
-> feat:     A new feature
-  fix:      A bug fix
-  docs:     Documentaiton only changes
-  style:    Changes that do not aaffect the meaning of the code
-  refactor: A code change that neither fixes a bug or adds a feature
-  perf:     A code change that improves performance
-  test:     Adding missing tests
-  chore:    Changes to the build process or auxiliary tools and
-            libraires such as documetation generation
-```
-
-### References
-
-
-* [Commitizen GitHub](https://github.com/commitizen/cz-cli)
-* [Commitizen doc](http://commitizen.github.io/cz-cli/)
-
-
-## pre-commit
-
-A framework for managing and maitining multi-language pre-commit hooks
-
-### Install
-
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs>
-  <TabItem value="pip" label="pip" default>
-
-```bash
-pip install pre-commit
-echo 'pre-commmit > requirements-dev.txt'
-```
-
-  </TabItem>
-  <TabItem value="brew" label="brew">
-
-```bash
-brew install pre-commit
-```
-
-  </TabItem>
-</Tabs>
-
-### Configuration
-
-* Create file `.pre-commit-config.yaml`
-
-```yaml
-repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
-    hooks:
-    -   id: check-yaml
-    -   id: end-of-file-fixer
-    -   id: trailing-whitespace
--   repo: https://github.com/psf/black
-    rev: 21.12b0
-    hooks:
-    -   id: black
-```
-
-* Install the git hoook
-
-```bash
-$ pre-commit install
-```
-
-### References
-
-* [pre-commit homepage](https://pre-commit.com/)
-
-## Rolling back changes
-
-* `git reset`: Can't use when you have already commited the change. Is useful for wiping out uncommited change. Reset will unstage anytihng y'ave added in preparation to commit. But does nothing for anything thaat has been commited
-* `git revert`: Create a commit with the reverse patch to cancel it out. This way you don’t rewrite any history. But the original “whoops” commit(s) and the patch are always going to be part of the version history.
-
-
-### Sample
-
-Check last commits
-```bash
-$ git log --oneline --all --graph --decorate
-* c78f1e0c (HEAD -> master, origin/master, origin/HEAD) k8s: linter tools
-* e3ba41b2 git: update content and adding tools
-* c90c2e85 CI: update db-migrations
-* 6b48bef0 CI: Update Jenkins & gitlab content
-* 6af4eea3 QA: update inspec content
-
-$ git revert c78f1e0c
-
-$ git log --oneline --all --graph --decorate
-* 3f67984 (HEAD -> master, origin/master, origin/HEAD) Revert "k8s: linter tools" will revert this commit c78f1e0c
-* e3ba41b2 git: update content and adding tools
-* c90c2e85 CI: update db-migrations
-* 6b48bef0 CI: Update Jenkins & gitlab content
-* 6af4eea3 QA: update inspec content
-```
-
-* [Getting Legit with Git and GitHub: Rolling Back Changes with Revert and Reset](https://thenewstack.io/getting-legit-with-git-and-github-rolling-back-changes-with-revert-and-reset/)
-## Git blame
-
-Don't blame people for changing whitespaces or moving code.
-
-`git blame` will show the author of the last commit that modified the particular line. If whitespaces were removed or that piece of code was moved around, blame will show that commit and you might blame the wrong person.
-
-```bash
-git blame -w -M
-```
-
-* `-w` will ignore whitespaces 
-* `-M` will detect moved or copied lines.
-
-## Git flows
-
-### [Git Organized: A Better Git Flow](https://render.com/blog/git-organized-a-better-git-flow)
-
-1. Make your changes
-
-```bash
-$ git checkout -b my-feature-branch-name-doesnt-matter
-
-...make changes...
-
-$ git commit -m"WIP this message doesn't matter"
-
-...make more changes...
-
-$ git commit -m"WIP whatever"
-
-...make even more changes...
-
-$ git commit -m"WIP 12345"
-```
-
-2. Reset
-
-```bash
-$ git reset origin/main
-Unstaged changes after reset:
-M       doc/Coding/CVS/git.md
-M       doc/Coding/CVS/gitea.md
-M       doc/Coding/CVS/gerrit.md
-
-$ git status
-On branch feature-branch
-Your branch is behind 'origin/my-feature-branch-name-doesnt-matter' by 3 commits, and can be fast-forwarded.
-  (use "git pull" to update your local branch)
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   doc/Coding/CVS/git.md
-        modified:   doc/Coding/CVS/gitea.md
-        modified:   doc/Coding/CVS/gerrit.md
-```
-
-`git reflog`: To go back to a commit where things weren’t broken, it will show you a timeline of every commit you’ve referenced in your local repository, even across branches. Run git reflog to find the commit you want to return to and then run `git reset <commit-sha>`. This command will point the `HEAD` of your current branch to that commit.
-
-
-3. Create new, logically-grouped commits
-
-Look at all the files you’ve changed. Try to group logically any changes related to a particular model and create a commit with the descsription.
-
-If the same file contains multiple changes that should be grouped separately use [`git add --patch`](https://nuclearsquid.com/writings/git-add/)
-
-```bash
-$ git add doc/Coding/CVS/git.md
-$ git commit -m"Add new section Git flows"
-
-$ git add docs/Coding/CVS/gitea.md
-$ git commit -m"Init section Gitea inside CVSU"
-
-$ git add docs/Coding/CVS/gerrit.md
-$ git commit -m"Fixed typo in references"
-```
-
-## Git for everything!
-
-* [Beyond Code Control: Git for Everything!])https://thenewstack.io/beyond-code-control-git-for-everything/)
-
-### Progress List and Work-Plans
-
-* [Waffle.io](https://projectmanagernews.com/news/what-happened-to-waffle-io/): Looks at GitHub Issues and PR and uses them to create project management charts.
-* [ZenHub](https://www.zenhub.com/): Build a prroject management tool isnide GitHub itself that is operated by PR.
-
-### Updating your website
-
-* [Netifly](https://projectmanagernews.com/news/what-happened-to-waffle-io/)
-* [GitHub Pages](https://pages.github.com/) + Static site like [Docusuarus.io](https://docusaurus.io)
-
-### Presentations
-
-Presentations browser-native and work almost anywhere.
-
-* [Reveal.js](http://revealjs.com/http://revealjs.com/)
-* [GitPitch](http://gitpitch.com.bitverzo.com/)
-
-### Word and Excel documents
-
-* [Xltrail](https://www.xltrail.com/): Keep track of the cell-by-cell commit history of an Excel spreadsheet that’s stored in git, but it can’t handle merges and pull requests itself. 
-* [Simul](http://www.simuldocs.com/):  git-like experience via a plugin for Word docs. And using other Office suites like OpenOffice/LibreOffice, you can just save files natively as XML which lets git work its magic
-
+### Productivity & Linting
+*   **[Commitizen](http://commitizen.github.io/cz-cli/):** Guides developers through creating standardized commit messages (e.g., `feat:`, `fix:`, `refactor:`).
+*   **[pre-commit](https://pre-commit.com/):** A framework for managing and maintaining multi-language Git hooks to automate linting and testing before every commit.
 
 ## Detect secrets in code
 
-An enterprise friendly way of detecting and preventing secrets in code.
+An enterprise-friendly way of detecting and preventing secrets in code. Use these tools to scan your repository for accidentally committed API keys, passwords, or certificates.
 
-* [Yelp/detect-secrets](https://github.com/Yelp/detect-secrets)
-* [Why Securing Secrets in Cloud and Container Environments Is Important – and How to Do It](https://thenewstack.io/why-securing-secrets-in-cloud-and-container-environments-is-important-and-how-to-do-it/)
+*   **[Yelp/detect-secrets](https://github.com/Yelp/detect-secrets):** A popular tool for scanning repositories for secrets.
+*   **[Why Securing Secrets is Important](https://thenewstack.io/why-securing-secrets-in-cloud-and-container-environments-is-important-and-how-to-do-it/)** (Article)
 
+## Recovery & Maintenance
+
+### Rolling back changes
+
+Undoing work is a common task in Git, but the method depends on whether you have already committed your changes or shared them with others.
+
+*   **`git reset`:** Moves the current branch pointer. It is useful for wiping out uncommitted changes or unstaging files. 
+    *   *Caution:* This can rewrite history if used on commits.
+*   **`git revert`:** Creates a new commit with the reverse patch of the target commit. This is the safest way to undo changes in shared repositories as it preserves a clear history.
+
+#### Sample: Using `git revert`
+
+First, check your commit history:
+```bash
+$ git log --oneline --all --graph --decorate
+* c78f1e0c (HEAD -> master, origin/master) k8s: linter tools
+* e3ba41b2 git: update content and adding tools
+* c90c2e85 CI: update db-migrations
+```
+
+To undo the `c78f1e0c` commit:
+```bash
+$ git revert c78f1e0c
+```
+
+The history now includes a new revert commit:
+```bash
+$ git log --oneline --all --graph --decorate
+* 3f67984 (HEAD -> master) Revert "k8s: linter tools"
+* c78f1e0c k8s: linter tools
+* e3ba41b2 git: update content and adding tools
+```
+
+> [!NOTE]
+> For more details, see [Rolling Back Changes with Revert and Reset](https://thenewstack.io/getting-legit-with-git-and-github-rolling-back-changes-with-revert-and-reset/).
+
+### The Safety Net: `git reflog`
+If you lose a commit during a reset or delete a branch, `git reflog` provides a timeline of every action taken in your local repository. You can use it to find the SHA of a "lost" state and restore it using `git reset <sha>`.
+
+### Efficient Blaming
+Use `git blame -w -M` to view file history while ignoring whitespace changes (`-w`) and detecting moved or copied lines (`-M`), ensuring you identify the true author of a change.
+
+## Workflows & Best Practices
+
+### The "Clean History" Workflow
+1.  **Work:** Commit frequently with WIP messages.
+2.  **Reset:** Run `git reset origin/main` to unstage all local commits.
+3.  **Group:** Re-add changes in logical chunks using `git add --patch` and commit with professional messages.
+
+## Servers & Ecosystem
+
+### Self-Hosted Git
+*   **[Gitea](https://gitea.io/):** A painless, lightweight self-hosted Git service written in Go.
+*   **[Gerrit](https://www.gerritcodereview.com/):** A powerful tool for code review and repository management.
+
+### Git for everything!
+
+Beyond source code control, Git's architecture empowers a wide variety of non-traditional workflows.
+
+#### Progress List and Work-Plans
+*   **[Waffle.io](https://projectmanagernews.com/news/what-happened-to-waffle-io/):** (Legacy) Visualized GitHub Issues/PRs as project boards.
+*   **[ZenHub](https://www.zenhub.com/):** Agile project management natively integrated into GitHub.
+
+#### Updating your website
+*   **[Netlify](https://www.netlify.com/):** Continuous deployment for static sites.
+*   **[GitHub Pages](https://pages.github.com/):** Hosting directly from your repo, often paired with [Docusaurus](https://docusaurus.io/).
+
+#### Presentations
+Browser-native presentations that work anywhere.
+*   **[Reveal.js](http://revealjs.com/):** The HTML presentation framework.
+*   **[GitPitch](http://gitpitch.com.bitverzo.com/):** Markdown-based presentations for Git.
+
+#### Word and Excel documents
+*   **[Xltrail](https://www.xltrail.com/):** Version control for Excel spreadsheets with cell-level history.
+*   **[Simul](http://www.simuldocs.com/):** A Git-like experience for Microsoft Word documents.
+*   **XML Formats:** By saving Office docs as XML, Git can handle them more effectively natively.
+
+---
+
+## Monorepo Resources
+*   **[Speeding up Git monorepos (Dropbox)](https://dropbox.tech/application/speeding-up-a-git-monorepo-at-dropbox-with--200-lines-of-code)**
