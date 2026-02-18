@@ -1,13 +1,12 @@
 ---
-title: Git Version Control
+title: Git
 description: A professional guide to Git, covering its distributed architecture, core concepts, advanced workflows, and server-side integration with Gitea.
 tags: [git, version-control, cvs, devops, collaboration]
-slug: git-version-control
+slug: git
 ---
+# Git
 
-# Git: Distributed Version Control
-
-Git is a mature, actively maintained open-source version control system originally developed by **Linus Torvalds** in 2005. Unlike older centralized systems, Git is **distributed**, meaning every developer's working copy of the code is also a full-fledged repository that contains the complete history of all changes, independent of network access or a central server.
+Git is a mature, actively maintained open-source **distributed version control system** originally developed by **Linus Torvalds** in 2005. Unlike older centralized systems, Git is distributed, meaning every developer's working copy of the code is also a full-fledged repository that contains the complete history of all changes, independent of network access or a central server.
 
 Its design philosophy is centered around **speed, data integrity, and support for distributed, non-linear workflows**. 
 
