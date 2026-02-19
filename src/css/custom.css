@@ -1,4 +1,8 @@
 @import 'katex/dist/katex.min.css';
+/*
+*/
+@import './tabs.css';
+/* Inconsolatafont  */
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,200..900&display=swap');
 
 /*

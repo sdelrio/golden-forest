@@ -1,0 +1,90 @@
+:root {
+    --tab-accent-color: var(--ifm-color-primary-darker);
+    --tab-inactive-color: var(--ifm-color-secondary-darkest);
+    --tab-font-color: var(--ifm-font-color-base);
+    --tab-transition: all 0.3s ease-in-out;
+}
+
+/* Container */
+.tabs {
+    margin: 0 0 var(--ifm-spacing-vertical);
+    border-bottom: 1px solid var(--tab-inactive-color);
+    transition: var(--tab-transition);
+}
+
+/* Individual Tab Items */
+.tabs__item {
+    line-height: 1em;
+    border-radius: 0;
+    border-bottom: 2px solid var(--tab-inactive-color);
+    transition: var(--tab-transition);
+}
+
+/* Align with container border */
+
+/* Hover and Focus */
+.tabs__item:hover,
+.tabs__item:focus {
+    color: var(--tab-accent-color);
+    transition: var(--tab-transition);
+}
+
+/* Active Tab */
+.tabs__item--active {
+    font-weight: 800;
+    color: var(--tab-accent-color);
+    border-bottom: 4px solid var(--tab-accent-color);
+    transition: var(--tab-transition);
+}
+
+/* Tab Panels Sliding Animation */
+[role="tabpanel"] {
+    transition: var(--tab-transition);
+    position: relative;
+    display: block;
+}
+
+[role="tabpanel"]:not([hidden]) {
+    animation: slideInLeft 0.3s ease-in-out forwards;
+    opacity: 1;
+    visibility: visible;
+}
+
+[role="tabpanel"][hidden] {
+    animation: slideOutRight 0.3s ease-in-out forwards;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+@keyframes slideInLeft {
+    0% {
+        margin-left: -100%;
+        opacity: 0;
+    }
+
+    100% {
+        margin-left: 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+        margin-left: 0%;
+        opacity: 1;
+    }
+
+    100% {
+        margin-left: 100%;
+        opacity: 0;
+    }
+}
+
+/* Container needs overflow control */
+.tabs-container {
+    overflow: hidden;
+    position: relative;
+}
