@@ -26,6 +26,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
             xmlSuffix = '.xml';
         }
         const url = `${characterBaseUrl}/${filename}${xmlSuffix}`;
+        console.log(url);
         fetch(url)
             .then(response => {
                 if (!response.ok) throw new Error(`Could not fetch ${filename}`);
