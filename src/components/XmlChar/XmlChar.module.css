@@ -1,0 +1,177 @@
+.container {
+    font-family: 'ScalySans', sans-serif;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: #fcf5e5;
+    color: #58180d;
+    border-top: 1px solid #58180d;
+    border-bottom: 1px solid #58180d;
+    /* Create a thin double-border look on top/bottom with larger orange fill and outer shadow */
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.3),
+        inset 0 4px 0 0 #e69a28,
+        inset 0 5px 0 0 #58180d,
+        inset 0 -4px 0 0 #e69a28,
+        inset 0 -5px 0 0 #58180d;
+    position: relative;
+}
+
+.header {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+
+.portraitContainer {
+    float: right;
+    width: 256px;
+    height: 256px;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid #58180d;
+    background: #fdf1dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.name {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.classLevel {
+    font-style: italic;
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.emptyFace {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+}
+
+
+.vitals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+    font-weight: bold;
+    align-items: center;
+}
+
+.vitalItem {
+    margin: 0;
+}
+
+.vitalItem span {
+    font-weight: normal;
+    margin-left: 0.25rem;
+}
+
+/* Abilities Section */
+.abilities {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    gap: 0.5rem;
+    margin: 0.8rem 0;
+    max-width: 500px;
+    /* Limit width to ensure it can wrap around portrait */
+}
+
+.ability {
+    text-align: center;
+    padding: 0.25rem;
+    border: 0px solid rgba(88, 24, 13, 0.1);
+    background: rgba(253, 241, 220, 0.3);
+}
+
+@media (max-width: 800px) {
+    .abilities {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .abilities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 350px) {
+    .abilities {
+        grid-template-columns: 1fr;
+    }
+}
+
+.abilityLabel {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.abilityValue {
+    font-size: 1rem;
+}
+
+.abilityBonus {
+    font-size: 0.85rem;
+}
+
+/* Info Lists */
+.infoSection {
+    margin: 0.5rem 0;
+}
+
+.infoLabel {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.infoList {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.infoList li {
+    display: inline;
+}
+
+.infoList li:not(:last-child)::after {
+    content: ", ";
+}
+
+/* Display Modes */
+.small .abilities,
+.small .infoSection,
+.small .portraitContainer {
+    display: none;
+}
+
+.medium .portraitContainer {
+    display: none;
+}
+
+/* Empty face SVG replacement */
+.placeholderIcon {
+    fill: #58180d;
+}

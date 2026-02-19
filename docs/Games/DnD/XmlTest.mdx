@@ -1,0 +1,38 @@
+# XmlChar Test Page
+
+This page tests the `XmlChar` component with different display modes and character files.
+
+import XmlChar from '@site/src/components/XmlChar/XmlChar';
+
+## Display: Small
+Shows basic vitality and level.
+
+<XmlChar filename="tanadirian_6.xml" display="small" />
+
+## Display: Medium (Default)
+Adds stats, skills, and languages.
+
+<XmlChar filename="tanadirian_6.xml" display="medium" />
+
+## Display: Large
+Adds feats and character portrait placeholder (empty face).
+
+<XmlChar filename="tanadirian_6.xml" display="large" />
+
+## Display: Large with Image
+Shows a provided character picture.
+
+<XmlChar
+    filename="milo_4n.xml"
+    display="large"
+    image="/img/docusaurus.png"
+/>
+
+## Different Character
+Testing with `malagolvir_5.xml` medium.
+
+<XmlChar filename="malagolvir_5.xml" display="medium" />
+
+Testing with `malagolvir_5` small.
+
+<XmlChar filename="malagolvir_5" display="small" />
