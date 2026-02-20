@@ -24,16 +24,18 @@
 
 .portraitContainer {
     float: right;
-    width: 256px;
-    height: 256px;
+    width: 128px;
+    height: 128px;
     margin-left: 1.5rem;
     margin-bottom: 1rem;
     border: 2px solid #58180d;
     background: #fdf1dc;
+    /*
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    */
 }
 
 .clearfix::after {
