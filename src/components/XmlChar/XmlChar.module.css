@@ -26,8 +26,8 @@
 
 .portraitContainer {
     float: right;
-    width: 128px;
-    height: 128px;
+    width: 80px;
+    height: 80px;
     margin-left: 1.5rem;
     margin-bottom: 1rem;
     border: 2px solid #58180d;
@@ -114,24 +114,6 @@
     background: rgba(253, 241, 220, 0.3);
 }
 
-@media (max-width: 700px) {
-    .abilities {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 380px) {
-    .abilities {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 350px) {
-    .abilities {
-        grid-template-columns: 1fr;
-    }
-}
-
 .abilityLabel {
     font-weight: bold;
     font-size: 0.9rem;
@@ -143,6 +125,31 @@
 
 .abilityBonus {
     font-size: 0.85rem;
+}
+
+@media (max-width: 700px) {
+    .abilities {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .portraitContainer {
+        width: 64px;
+        height: 64px;
+    }
+
+}
+
+@media (max-width: 380px) {
+    .abilities {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 350px) {
+    .abilities {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 /* Info Lists */
