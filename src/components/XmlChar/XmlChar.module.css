@@ -56,12 +56,6 @@
     margin: 0 0 0.5rem 0;
 }
 
-.alignment {
-    font-style: italic;
-    font-size: 0.9rem;
-    margin: 0 0 0.5rem 0;
-    color: #58180d;
-}
 
 [data-theme='dark'] .alignment {
     color: #c9ad6a;
@@ -120,13 +114,13 @@
     background: rgba(253, 241, 220, 0.3);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .abilities {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
     .abilities {
         grid-template-columns: repeat(2, 1fr);
     }
