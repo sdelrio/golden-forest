@@ -140,32 +140,36 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
             {renderPortrait()}
 
             <div className={styles.content}>
-                <h2 className={styles.name}>{name}</h2>
+                <h1 className={styles.name}>{name}</h1>
                 <p className={styles.classLevel}>
                     {race && <span>{race} </span>}
                     {classes.map(c => `${c.name} ${c.level}`).join(' / ')}
                 </p>
 
+                <hr className={styles.horizontalRule} />
                 <ul className={styles.vitals}>
-                    <li className={styles.vitalItem}>AC: <span>{ac}</span></li>
-                    <li className={styles.vitalItem}>HP: <span>{hp}</span></li>
-                    <li className={styles.vitalItem}>Speed: <span>{speed} ft.</span></li>
+                    <li className={styles.vitalItem}>Armor Class <span>{ac}</span></li>
+                    <li className={styles.vitalItem}>Hit Points <span>{hp}</span></li>
+                    <li className={styles.vitalItem}>Speed <span>{speed} ft.</span></li>
                 </ul>
 
                 {!isSmall && (
-                    <div className={styles.abilities}>
-                        {Object.entries(abilities).map(([stat, data]) => (
-                            <div key={stat} className={styles.ability}>
-                                <div className={styles.abilityLabel}>{stat.slice(0, 3).toUpperCase()}</div>
-                                <div className={styles.abilityValue}>{data.score}</div>
-                                <div className={styles.abilityBonus}>({signed(data.bonus)})</div>
-                            </div>
-                        ))}
-                    </div>
+                    <>
+                        <hr className={styles.horizontalRule} />
+                        <div className={styles.abilities}>
+                            {Object.entries(abilities).map(([stat, data]) => (
+                                <div key={stat} className={styles.ability}>
+                                    <div className={styles.abilityLabel}>{stat.slice(0, 3).toUpperCase()}</div>
+                                    <div className={styles.abilityValue}>{data.score} ({signed(data.bonus)})</div>
+                                </div>
+                            ))}
+                        </div>
+                    </>
                 )}
 
                 {!isSmall && (
                     <>
+                        <hr className={styles.horizontalRule} />
                         <div className={styles.infoSection}>
                             <span className={styles.infoLabel}>Proficient Skills:</span>
                             <ul className={styles.infoList}>

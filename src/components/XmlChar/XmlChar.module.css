@@ -3,7 +3,9 @@
     margin: 1.5rem 0;
     padding: 1.5rem;
     background: #fcf5e5;
+    /*
     color: #58180d;
+    */
     border-top: 1px solid #58180d;
     border-bottom: 1px solid #58180d;
     /* Create a thin double-border look on top/bottom with larger orange fill and outer shadow */
@@ -30,12 +32,10 @@
     margin-bottom: 1rem;
     border: 2px solid #58180d;
     background: #fdf1dc;
-    /*
-    display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    */
+    display: flex;
+    /* overflow: hidden; */
 }
 
 .clearfix::after {
@@ -70,17 +70,20 @@
 
 
 .vitals {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
     list-style: none;
+    gap: 1.5rem;
     padding: 0;
     margin: 0.5rem 0;
-    font-weight: bold;
+/*
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    font-weight: bold;
+    */
 }
 
 .vitalItem {
+    font-weight: bold;
     margin: 0;
 }
 
@@ -176,4 +179,83 @@
 /* Empty face SVG replacement */
 .placeholderIcon {
     fill: #58180d;
+}
+
+/* Dark Mode */
+[data-theme='dark'] .container {
+    background: #1a1612;
+    border-top-color: #c68000;
+    border-bottom-color: #c68000;
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.5),
+        inset 0 4px 0 0 #a36a00,
+        inset 0 5px 0 0 #c68000,
+        inset 0 -4px 0 0 #a36a00,
+        inset 0 -5px 0 0 #c68000;
+}
+
+[data-theme='dark'] .name {
+    color: #ffb630;
+}
+
+[data-theme='dark'] .classLevel {
+    color: #d4c4a8;
+}
+
+[data-theme='dark'] .portraitContainer {
+    border-color: #c68000;
+    background: #2a2010;
+}
+
+[data-theme='dark'] .emptyFace {
+    opacity: 0.5;
+}
+
+[data-theme='dark'] .vitalItem {
+    color: #e0d5c1;
+}
+
+[data-theme='dark'] .ability {
+    background: rgba(42, 32, 16, 0.5);
+    border-color: rgba(198, 128, 0, 0.2);
+}
+
+[data-theme='dark'] .abilityLabel {
+    color: #ffb630;
+}
+
+[data-theme='dark'] .abilityValue {
+    color: #e0d5c1;
+}
+
+[data-theme='dark'] .abilityBonus {
+    color: #c9ad6a;
+}
+
+[data-theme='dark'] .infoLabel {
+    color: #ffb630;
+}
+
+[data-theme='dark'] .infoList {
+    color: #d4c4a8;
+}
+
+[data-theme='dark'] .placeholderIcon {
+    fill: #c68000;
+}
+
+/* Horizontal Rule - Triangle pointing right */
+.horizontalRule {
+    border: none;
+    background-image: url('./assets/divider-triangle.svg') !important;
+    height: 8px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100% 100%;
+    margin: 0.33rem 0;
+    background-color: transparent;
+}
+
+[data-theme='dark'] .horizontalRule {
+    background-image: url('./assets/divider-triangle-dark.svg') !important;
 }
