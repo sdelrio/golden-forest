@@ -19,6 +19,12 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     const [error, setError] = useState(null);
 
     const characterBaseUrl = useBaseUrl('/fg/chars');
+    const avatarBaseUrl = useBaseUrl('/fg/avatar');
+
+    const isSmall = display === 'small';
+    const isMedium = display === 'medium';
+    const isLarge = display === 'large';
+
     useEffect(() => {
         if (!filename) return;
         let xmlSuffix = '';
@@ -26,7 +32,6 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
             xmlSuffix = '.xml';
         }
         const url = `${characterBaseUrl}/${filename}${xmlSuffix}`;
-        console.log(url);
         fetch(url)
             .then(response => {
                 if (!response.ok) throw new Error(`Could not fetch ${filename}`);
@@ -43,26 +48,77 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
             });
     }, [filename]);
 
+    const [finalImage, setFinalImage] = useState(image);
+    useEffect(() => {
+        // Only look for a default if no image prop was provided
+        if (!image && isLarge) {
+            const withoutSuffix = filename.replace('.xml', '');
+            const url = `${avatarBaseUrl}/${withoutSuffix}.jpg`;
+
+            fetch(url, { method: 'HEAD' }) // 'HEAD' just checks if file exists without downloading it
+                .then(response => {
+                    if (!response.ok) throw new Error(`Could not fetch ${filename}`);
+                    return response.text();
+                })
+                .catch(err => {
+                    console.error(err);
+                    setError(err.message);
+                })
+                .then(res => {
+                    if (res.ok) setFinalImage(url);
+                    else setFinalImage(`${avatarBaseUrl}/faceless.svg`); // Fallback path
+                })
+                .catch(() => setFinalImage(`${avatarBaseUrl}/faceless.svg`));
+        }
+    }, [filename, image, avatarBaseUrl, isLarge]);
+
     if (error) return <div className={styles.error}>Error: {error}</div>;
     if (!charData) return <div className={styles.loading}>Loading {filename}...</div>;
 
     const { name, race, classes, abilities, ac, hp, speed, skills, languages, feats } = charData;
-    const isSmall = display === 'small';
-    const isMedium = display === 'medium';
-    const isLarge = display === 'large';
 
     const renderPortrait = () => {
         if (!isLarge) return null;
 
         if (image) {
+            const url = `${avatarBaseUrl}/${image}`;
+
             return (
                 <div className={styles.portraitContainer}>
-                    <img src={image} alt={name} className={styles.portrait} />
+                    <img src={url} alt={name} className={styles.portrait} />
                 </div>
             );
         }
 
+        /*
+        if (!image) {
+            let withoutSuffix = '';
+            if (filename.endsWith('.xml')) {
+                withoutSuffix = filename.slice(0, -4);
+            }
+            const url = `${avatarBaseUrl}/${withoutSuffix}.jpg`;
+
+            console.log(url);
+
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) throw new Error(`Could not fetch ${filename}`);
+                    return response.text();
+                })
+                .catch(err => {
+                    console.error(err);
+                    setError(err.message);
+                });
+            return (
+                <div className={styles.portraitContainer}>
+                    <img src={url} alt={name} className={styles.portrait} />
+                </div>
+            );
+        }
+        */
+
         // Empty face placeholder for large display
+        /*
         return (
             <div className={styles.portraitContainer}>
                 <svg viewBox="0 0 24 24" className={styles.emptyFace}>
@@ -70,6 +126,13 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                 </svg>
             </div>
         );
+        */
+
+        return finalImage ? (
+            <div className={styles.portraitContainer}>
+                <img src={finalImage} alt={name} className={styles.emptyFace} />
+            </div>
+        ) : null;
     };
 
     return (
