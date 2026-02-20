@@ -75,7 +75,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     if (error) return <div className={styles.error}>Error: {error}</div>;
     if (!charData) return <div className={styles.loading}>Loading {filename}...</div>;
 
-    const { name, race, classes, abilities, ac, hp, speed, skills, languages, feats } = charData;
+    const { name, race, alignment, classes, abilities, ac, hp, speed, initiative, skills, languages, feats } = charData;
 
     const renderPortrait = () => {
         if (!isLarge) return null;
@@ -144,6 +144,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                 <p className={styles.classLevel}>
                     {race && <span>{race} </span>}
                     {classes.map(c => `${c.name} ${c.level}`).join(' / ')}
+                    {alignment && <span>, {alignment}</span>}
                 </p>
 
                 <hr className={styles.horizontalRule} />
@@ -151,6 +152,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                     <li className={styles.vitalItem}>Armor Class <span>{ac}</span></li>
                     <li className={styles.vitalItem}>Hit Points <span>{hp}</span></li>
                     <li className={styles.vitalItem}>Speed <span>{speed} ft.</span></li>
+                    <li className={styles.vitalItem}>Initiative <span>{signed(initiative)}</span></li>
                 </ul>
 
                 {!isSmall && (

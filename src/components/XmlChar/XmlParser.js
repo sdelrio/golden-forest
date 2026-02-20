@@ -25,11 +25,13 @@ export const parseCharacterXml = (xmlString) => {
     const charData = {
         name: getTopLevelText(charNode, "name"),
         race: getTopLevelText(charNode, "race"),
+        alignment: getTopLevelText(charNode, "alignment"),
         classes: [],
         abilities: {},
         ac: 0,
         hp: 0,
         speed: 0,
+        initiative: 0,
         skills: [],
         languages: [],
         feats: []
@@ -73,6 +75,10 @@ export const parseCharacterXml = (xmlString) => {
 
     const speedNode = charNode.getElementsByTagName("speed")[0];
     if (speedNode) charData.speed = getNumber(speedNode, "total");
+
+    // Parse Initiative
+    const initiativeNode = charNode.getElementsByTagName("initiative")[0];
+    if (initiativeNode) charData.initiative = getNumber(initiativeNode, "total");
 
     // Parse Skills (Proficient Only)
     const skillList = charNode.getElementsByTagName("skilllist")[0];
