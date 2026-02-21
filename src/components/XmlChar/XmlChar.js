@@ -38,7 +38,11 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
         const url = `${characterBaseUrl}/${filename}${xmlSuffix}`;
         fetch(url)
             .then(response => {
-                if (!response.ok) throw new Error(`Could not fetch ${filename}`);
+                if (!response.ok) throw new Error(`File not found: ${filename}`);
+                const contentType = response.headers.get('content-type') || '';
+                if (!contentType.includes('xml') && !contentType.includes('text/plain')) {
+                    throw new Error(`File not found: ${filename}`);
+                }
                 return response.text();
             })
             .then(xmlString => {
@@ -79,7 +83,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     if (error) return <div className={styles.error}>Error: {error}</div>;
     if (!charData) return <div className={styles.loading}>Loading {filename}...</div>;
 
-    const { name, race, alignment, classes, abilities, ac, hp, speed, initiative, profBonus, skills, languages, feats } = charData;
+    const { name, race, alignment, background, deity, classes, abilities, ac, hp, speed, initiative, profBonus, skills, languages, feats } = charData;
 
     const renderPortrait = () => {
         if (!isLarge) return null;
@@ -148,7 +152,9 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                 <p className={styles.classLevel}>
                     {race && <span>{race} </span>}
                     {classes.map(c => `${c.name} ${c.level}`).join(' / ')}
-                    {alignment && <span>, {alignment}</span>}
+                    {alignment && <span>, {alignment.toLowerCase()}</span>}
+                    {background && <span>, {background.toLowerCase()}</span>}
+                    {deity && <span>, deity {deity}</span>}
                 </p>
 
                 <hr className={styles.horizontalRule} />

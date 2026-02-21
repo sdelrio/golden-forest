@@ -26,6 +26,8 @@ export const parseCharacterXml = (xmlString) => {
         name: getTopLevelText(charNode, "name"),
         race: getTopLevelText(charNode, "race"),
         alignment: getTopLevelText(charNode, "alignment"),
+        background: getTopLevelText(charNode, "background"),
+        deity: getTopLevelText(charNode, "deity"),
         classes: [],
         abilities: {},
         ac: 0,
