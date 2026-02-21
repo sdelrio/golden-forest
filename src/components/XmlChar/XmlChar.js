@@ -8,7 +8,7 @@ import clsx from 'clsx';
 
 export default function XmlChar(props) {
     return (
-        <BrowserOnly fallback={<div>Loading character...</div>}>
+        <BrowserOnly fallback={<div className={styles.portraitContainer}>Loading character...</div>}>
             {() => <XmlCharInternal {...props} />}
         </BrowserOnly>
     );
