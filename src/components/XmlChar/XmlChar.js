@@ -77,6 +77,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                     else setFinalImage(`${avatarBaseUrl}/faceless.svg`); // Fallback path
                 })
                 .catch(() => setFinalImage(`${avatarBaseUrl}/faceless.svg`));
+                // Empty face placeholder
         }
     }, [filename, image, avatarBaseUrl, isLarge]);
 
@@ -98,44 +99,6 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
             );
         }
 
-        /*
-        if (!image) {
-            let withoutSuffix = '';
-            if (filename.endsWith('.xml')) {
-                withoutSuffix = filename.slice(0, -4);
-            }
-            const url = `${avatarBaseUrl}/${withoutSuffix}.jpg`;
-
-            console.log(url);
-
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) throw new Error(`Could not fetch ${filename}`);
-                    return response.text();
-                })
-                .catch(err => {
-                    console.error(err);
-                    setError(err.message);
-                });
-            return (
-                <div className={styles.portraitContainer}>
-                    <img src={url} alt={name} className={styles.portrait} />
-                </div>
-            );
-        }
-        */
-
-        // Empty face placeholder for large display
-        /*
-        return (
-            <div className={styles.portraitContainer}>
-                <svg viewBox="0 0 24 24" className={styles.emptyFace}>
-                    <path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                </svg>
-            </div>
-        );
-        */
-
         return finalImage ? (
             <div className={styles.portraitContainer}>
                 <img src={finalImage} alt={name} className={styles.emptyFace} />
@@ -148,8 +111,14 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
             {renderPortrait()}
 
             <div className={styles.content}>
-                <h1 className={styles.name}>{name}</h1>
-                <p className={styles.classLevel}>
+                {isSmall ? (
+                    <h3 className={styles.name}>{name}</h3>
+                ) : isMedium ? (
+                    <h2 className={styles.name}>{name}</h2>
+                ) : (
+                    <h1 className={styles.name}>{name}</h1>
+                )}
+                <p className={clsx(styles.classLevel, isSmall && styles.small)}>
                     {race && <span>{race} </span>}
                     {classes.map(c => `${c.name} ${c.level}`).join(' / ')}
                     {alignment && <span>, {alignment.toLowerCase()}</span>}
@@ -158,11 +127,11 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                 </p>
 
                 <hr className={styles.horizontalRule} />
-                <ul className={styles.vitals}>
-                    <li className={styles.vitalItem}>Armor Class <span>{ac}</span></li>
-                    <li className={styles.vitalItem}>Hit Points <span>{hp}</span></li>
+                <ul className={clsx(styles.vitals, isSmall && styles.small)}>
+                    <li className={styles.vitalItem}>{isSmall ? 'AC' : 'Armor Class'} <span>{ac}</span></li>
+                    <li className={styles.vitalItem}>Initiative <span>{signed(initiative)} ({10 + initiative})</span></li>
+                    <li className={styles.vitalItem}>{isSmall ? 'HP' : 'Hit Points'} <span>{hp}</span></li>
                     <li className={styles.vitalItem}>Speed <span>{speed} ft.</span></li>
-                    <li className={styles.vitalItem}>Initiative <span>{signed(initiative)}</span></li>
                 </ul>
 
                 {!isSmall && (
