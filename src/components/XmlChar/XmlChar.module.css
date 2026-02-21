@@ -1,8 +1,9 @@
 .container {
     font-family: 'ScalySans', sans-serif;
-    margin: 1.5rem 0;
+    margin: 1.5rem auto;
     padding: 1.5rem;
     background: #fcf5e5;
+    max-width: 690px;
     /*
     color: #58180d;
     */
