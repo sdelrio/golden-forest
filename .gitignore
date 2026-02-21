@@ -22,3 +22,6 @@ yarn-error.log*
 # Unlighthouse local files
 .unlighthouse/
 
+# Local test page symlinks
+docs/Games/DnD/XmlTest.mdx
+
