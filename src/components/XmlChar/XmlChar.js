@@ -144,7 +144,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     };
 
     return (
-        <div className={clsx(styles.container, styles[display])}>
+        <div className={clsx(styles.container, isMedium && styles.containerMedium, isSmall && styles.containerSmall, styles[display])}>
             {renderPortrait()}
 
             <div className={styles.content}>

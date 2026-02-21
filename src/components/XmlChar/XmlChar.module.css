@@ -35,6 +35,14 @@
     position: relative;
 }
 
+.containerMedium {
+    max-width: 480px;
+}
+
+.containerSmall {
+    max-width: 350px;
+}
+
 .header {
     display: block;
     margin-bottom: 0.5rem;
