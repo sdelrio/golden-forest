@@ -75,7 +75,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     if (error) return <div className={styles.error}>Error: {error}</div>;
     if (!charData) return <div className={styles.loading}>Loading {filename}...</div>;
 
-    const { name, race, alignment, classes, abilities, ac, hp, speed, initiative, skills, languages, feats } = charData;
+    const { name, race, alignment, classes, abilities, ac, hp, speed, initiative, profBonus, skills, languages, feats } = charData;
 
     const renderPortrait = () => {
         if (!isLarge) return null;
@@ -187,6 +187,13 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                                 {languages.length > 0 ? languages.map(l => (
                                     <li key={l}>{l}</li>
                                 )) : <li>Common</li>}
+                            </ul>
+                        </div>
+
+                        <div className={styles.infoSection}>
+                            <span className={styles.infoLabel}>Proficiency Bonus:</span>
+                            <ul className={styles.infoList}>
+                                <li>{signed(profBonus)}</li>
                             </ul>
                         </div>
                     </>

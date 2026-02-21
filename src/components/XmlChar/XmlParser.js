@@ -32,6 +32,7 @@ export const parseCharacterXml = (xmlString) => {
         hp: 0,
         speed: 0,
         initiative: 0,
+        profBonus: 0,
         skills: [],
         languages: [],
         feats: []
@@ -79,6 +80,9 @@ export const parseCharacterXml = (xmlString) => {
     // Parse Initiative
     const initiativeNode = charNode.getElementsByTagName("initiative")[0];
     if (initiativeNode) charData.initiative = getNumber(initiativeNode, "total");
+
+    // Parse Proficiency Bonus
+    charData.profBonus = getNumber(charNode, "profbonus");
 
     // Parse Skills (Proficient Only)
     const skillList = charNode.getElementsByTagName("skilllist")[0];
