@@ -133,10 +133,12 @@ jobs:
           source-dir: ./build/
           # umbrella-dir: pr-preview
 
-      - name: Info
-        if: ${{ env.deployment_action }} == "deploy"
+      - name: Summary
+        if: env.deployment_action == 'deploy'
         run: |
-          echo "Preview visible at ${{ env.preview_url }}"
+          echo "## 🎯 Preview Deployed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**URL:** ${{ env.preview_url }}" >> $GITHUB_STEP_SUMMARY
 
       # Sample steps.preview-step.output:
       # empty_dir_path: /tmp/tmp.sQBm9GZB65
