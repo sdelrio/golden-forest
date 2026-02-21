@@ -35,22 +35,35 @@ make deploy         # Deploy with GIT_USER and SSH
 ```bash
 make check          # Run Docusaurus MDX checker (useful for migrations)
 make test           # Run unlighthouse web performance test
+make build          # Production build with SSG warnings suppressed
 ```
 
-**Note**: No unit test framework is currently configured. There are no single test commands.
+### Component Testing
+
+```bash
+make xmlchar-test   # Create XmlChar test page from _XmlTest.mdx template
+```
+
+**Note**: No unit test framework is configured. Test components by creating MDX test pages in `docs/`.
 
 ## Project Structure
 
 ```
 src/
-  components/       # React components (e.g., HomepageFeatures, StatBlock)
-  css/              # Global styles and CSS modules
+  components/       # React components (e.g., HomepageFeatures, StatBlock, XmlChar)
+    ComponentName/  # Multi-file components use subdirectories
+      ComponentName.js
+      ComponentName.module.css
+      utils.js
+      assets/       # Component-specific static files
+  css/              # Global styles (custom.css)
   pages/            # Docusaurus pages (index.js, etc.)
   theme/            # Docusaurus theme overrides (Root.js)
 docs/               # Main documentation content (MDX files)
 tutorial/           # Tutorial documentation section
 blog/               # Blog posts in Markdown/MDX
 static/             # Static assets (images, fonts)
+  fg/               # Fantasy Grounds data (XML character files)
 docusaurus.config.js # Main Docusaurus configuration
 sidebars.js         # Sidebar configuration
 ```
@@ -65,37 +78,37 @@ sidebars.js         # Sidebar configuration
 4. Local components and modules
 5. CSS module imports
 
-Example:
 ```javascript
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
-import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.css';
-import HomepageFeatures from '../components/HomepageFeatures';
+import { merge, startCase } from 'lodash';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+import styles from './Component.module.css';
+import { helperFunction } from './utils';
 ```
 
 ### React Components
 
 - Use **function components** with hooks (no class components)
-- Destructure props in function signature
-- Use `export default` for page components
-- Use named exports for reusable components and utilities
-- Keep components focused and single-purpose
+- Destructure props in function signature with defaults
+- Use `export default` for main component, named exports for utilities
+- Wrap browser-dependent components in `BrowserOnly`
 
-Example:
 ```javascript
-function Feature({ Svg, title, description }) {
-  return (
-    <div className={clsx('col col--4')}>
-      {/* ... */}
-    </div>
-  );
+export default function Component({ filename, display = 'medium', image }) {
+    const [data, setData] = useState(null);
+    const [error, setError] = useState(null);
+    // ...
 }
 
-export default function HomepageFeatures() {
-  return <ThreePhrases />;
+// For browser-only components:
+export default function BrowserComponent(props) {
+    return (
+        <BrowserOnly fallback={<div>Loading...</div>}>
+            {() => <InternalComponent {...props} />}
+        </BrowserOnly>
+    );
 }
 ```
 
@@ -106,14 +119,20 @@ export default function HomepageFeatures() {
 - Leverage Docusaurus Infima CSS variables for theming
 - Use `clsx()` utility for conditional class names
 
+```javascript
+<div className={clsx(styles.container, isSmall && styles.small)}>
+```
+
 ### Naming Conventions
 
 | Type | Convention | Example |
 |------|------------|---------|
 | Components | PascalCase | `HomepageFeatures.js`, `StatBlock.js` |
+| Multi-file components | Subdirectory | `src/components/XmlChar/XmlChar.js` |
 | Utility files | camelCase | `utils.js`, `XmlParser.js` |
 | CSS modules | camelCase classes | `styles.featureSvg` |
 | Constants | UPPER_SNAKE_CASE | `FeatureList` |
+| Helper functions | camelCase | `signed()`, `getStatModifier()` |
 
 ### JavaScript Style
 
@@ -123,12 +142,49 @@ export default function HomepageFeatures() {
 - Use optional chaining (`?.`) and nullish coalescing (`??`)
 - No TypeScript - use JSDoc comments for type hints in config files
 
+### Error Handling
+
+- Use state for error management in components
+- Provide meaningful error messages
+- Use fallbacks for missing data/images
+
+```javascript
+const [error, setError] = useState(null);
+
+useEffect(() => {
+    fetch(url)
+        .then(response => {
+            if (!response.ok) throw new Error(`File not found: ${filename}`);
+            return response.text();
+        })
+        .catch(err => {
+            console.error(err);
+            setError(err.message);
+        });
+}, [filename]);
+
+if (error) return <div className={styles.error}>Error: {error}</div>;
+```
+
+### Utility Functions
+
+- Export individual functions, not objects
+- Include type checking for robustness
+
+```javascript
+export function signed(number) {
+    if (typeof number !== 'number') return number;
+    return number >= 0 ? `+${number}` : `${number}`;
+}
+```
+
 ## Markdown/MDX Guidelines
 
 - Documentation uses MDX (Markdown + JSX)
 - Frontmatter supported in blog posts
 - Mermaid diagrams enabled in code blocks
 - KaTeX math equations supported
+- Test pages use `_` prefix (e.g., `_XmlTest.mdx`) to hide from sidebar
 
 ## Git Guidelines
 
@@ -138,21 +194,13 @@ Use **Conventional Commits** format:
 <type>(<scope>): <description>
 ```
 
-**Types**:
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation changes
-- `style`: Code style changes (formatting)
-- `refactor`: Code refactoring
-- `test`: Adding/updating tests
-- `chore`: Maintenance tasks
+**Types**: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 
 **Examples**:
 ```
-feat: add new DnD character sheet component
+feat(XmlChar): add compact abilities display for small mode
 fix: resolve parallax scroll issue on homepage
 docs: update deployment instructions
-chore: upgrade Docusaurus to 3.9
 ```
 
 ## CI/CD Notes
@@ -160,3 +208,4 @@ chore: upgrade Docusaurus to 3.9
 - PR previews deployed to `/pr-preview/pr-{number}`
 - Build uses `DOCUSAURUS_IGNORE_SSG_WARNINGS=true`
 - Node modules cached by `yarn.lock` hash
+- `onBrokenLinks: 'throw'` enforces valid internal links
