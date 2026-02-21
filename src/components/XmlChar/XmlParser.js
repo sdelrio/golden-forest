@@ -60,7 +60,8 @@ export const parseCharacterXml = (xmlString) => {
             if (statNode) {
                 charData.abilities[stat] = {
                     score: getNumber(statNode, "score"),
-                    bonus: getNumber(statNode, "bonus")
+                    bonus: getNumber(statNode, "bonus"),
+                    save: getNumber(statNode, "save")
                 };
             }
         });

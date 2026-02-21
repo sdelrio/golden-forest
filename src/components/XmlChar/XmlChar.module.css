@@ -153,6 +153,58 @@
     font-size: 0.85rem;
 }
 
+/* Compact Abilities Grid (for small display) */
+.abilitiesCompact {
+    display: grid;
+    grid-template-columns: repeat(3, auto 1fr 1fr 1fr);
+    gap: 0.125rem 0.25rem;
+    margin: 0.5rem 0;
+    justify-content: center;
+}
+
+.abilitiesCompactHeader {
+    display: contents;
+}
+
+.abilitiesCompactHeader span {
+    font-size: 0.4rem;
+    font-weight: bold;
+    color: #58180d;
+    text-align: center;
+    padding-bottom: 0;
+    line-height: 1;
+}
+
+.abilitiesCompactHeader span:nth-child(4n+1) {
+    text-align: left;
+}
+
+[data-theme='dark'] .abilitiesCompactHeader span {
+    color: #c9ad6a;
+}
+
+.abilityCompactLabel {
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.abilityCompactValue {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.abilityCompactBonus,
+.abilityCompactSave {
+    font-size: 0.75rem;
+    text-align: center;
+    color: #58180d;
+}
+
+[data-theme='dark'] .abilityCompactBonus,
+[data-theme='dark'] .abilityCompactSave {
+    color: #c9ad6a;
+}
+
 @media (max-width: 700px) {
     .abilities {
         grid-template-columns: repeat(6, 1fr);

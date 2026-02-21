@@ -179,6 +179,24 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                     </>
                 )}
 
+                {isSmall && (
+                    <div className={styles.abilitiesCompact}>
+                        <div className={styles.abilitiesCompactHeader}>
+                            <span></span><span></span><span>MOD</span><span>SAVE</span>
+                            <span></span><span></span><span>MOD</span><span>SAVE</span>
+                            <span></span><span></span><span>MOD</span><span>SAVE</span>
+                        </div>
+                        {Object.entries(abilities).map(([stat, data]) => (
+                            <React.Fragment key={stat}>
+                                <span className={styles.abilityCompactLabel}>{stat.slice(0, 3).toUpperCase()}</span>
+                                <span className={styles.abilityCompactValue}>{data.score}</span>
+                                <span className={styles.abilityCompactBonus}>{signed(data.bonus)}</span>
+                                <span className={styles.abilityCompactSave}>{signed(data.save)}</span>
+                            </React.Fragment>
+                        ))}
+                    </div>
+                )}
+
                 {!isSmall && (
                     <>
                         <hr className={styles.horizontalRule} />
