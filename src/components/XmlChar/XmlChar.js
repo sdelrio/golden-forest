@@ -173,7 +173,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                     <>
                         <hr className={styles.horizontalRule} />
                         <div className={styles.infoSection}>
-                            <span className={styles.infoLabel}>Proficient Skills:</span>
+                            <span className={styles.infoLabel}>Proficient Skills</span>
                             <ul className={styles.infoList}>
                                 {skills.length > 0 ? skills.map(s => (
                                     <li key={s.name}>{s.name} {signed(s.total)}</li>
@@ -182,7 +182,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                         </div>
 
                         <div className={styles.infoSection}>
-                            <span className={styles.infoLabel}>Languages:</span>
+                            <span className={styles.infoLabel}>Languages</span>
                             <ul className={styles.infoList}>
                                 {languages.length > 0 ? languages.map(l => (
                                     <li key={l}>{l}</li>

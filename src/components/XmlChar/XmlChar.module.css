@@ -3,7 +3,7 @@
     margin: 1.5rem auto;
     padding: 1.5rem;
     background: #fcf5e5;
-    max-width: 690px;
+    max-width: 710px;
     /*
     color: #58180d;
     */
@@ -80,9 +80,9 @@
     gap: 1.5rem;
     padding: 0;
     margin: 0.5rem 0;
-/*
     display: flex;
     flex-wrap: wrap;
+/*
     align-items: center;
     font-weight: bold;
     */
@@ -103,7 +103,7 @@
     display: grid;
     grid-template-columns: repeat(6, 2fr);
     gap: 0.5rem;
-    margin: 0.8rem 0;
+    margin: 0.8rem auto;
     max-width: 500px;
     /* Limit width to ensure it can wrap around portrait */
 }
