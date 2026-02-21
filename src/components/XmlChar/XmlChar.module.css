@@ -102,6 +102,7 @@
     width: 60%;
     height: 60%;
     opacity: 0.3;
+    color: #58180d;
 }
 
 
@@ -314,6 +315,7 @@
 
 [data-theme='dark'] .emptyFace {
     opacity: 0.5;
+    color: #c68000;
 }
 
 [data-theme='dark'] .vitalItem {

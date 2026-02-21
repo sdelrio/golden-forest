@@ -56,28 +56,44 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
             });
     }, [filename]);
 
-    const [finalImage, setFinalImage] = useState(image);
+    const [finalImage, setFinalImage] = useState(null);
     useEffect(() => {
-        // Only look for a default if no image prop was provided
-        if (!image && isLarge) {
+        if (!isLarge) return;
+
+        if (image) {
+            const url = `${avatarBaseUrl}/${image}`;
+            fetch(url, { method: 'HEAD' })
+                .then(response => {
+                    if (!response.ok) {
+                        setFinalImage(`${avatarBaseUrl}/faceless.svg`);
+                        return;
+                    }
+                    const contentType = response.headers.get('content-type') || '';
+                    if (!contentType.includes('image')) {
+                        setFinalImage(`${avatarBaseUrl}/faceless.svg`);
+                        return;
+                    }
+                    setFinalImage(url);
+                })
+                .catch(() => setFinalImage(`${avatarBaseUrl}/faceless.svg`));
+        } else {
             const withoutSuffix = filename.replace('.xml', '');
             const url = `${avatarBaseUrl}/${withoutSuffix}.jpg`;
 
-            fetch(url, { method: 'HEAD' }) // 'HEAD' just checks if file exists without downloading it
+            fetch(url, { method: 'HEAD' })
                 .then(response => {
-                    if (!response.ok) throw new Error(`Could not fetch ${filename}`);
-                    return response.text();
-                })
-                .catch(err => {
-                    console.error(err);
-                    setError(err.message);
-                })
-                .then(res => {
-                    if (res.ok) setFinalImage(url);
-                    else setFinalImage(`${avatarBaseUrl}/faceless.svg`); // Fallback path
+                    if (!response.ok) {
+                        setFinalImage(`${avatarBaseUrl}/faceless.svg`);
+                        return;
+                    }
+                    const contentType = response.headers.get('content-type') || '';
+                    if (!contentType.includes('image')) {
+                        setFinalImage(`${avatarBaseUrl}/faceless.svg`);
+                        return;
+                    }
+                    setFinalImage(url);
                 })
                 .catch(() => setFinalImage(`${avatarBaseUrl}/faceless.svg`));
-                // Empty face placeholder
         }
     }, [filename, image, avatarBaseUrl, isLarge]);
 
@@ -89,21 +105,21 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     const renderPortrait = () => {
         if (!isLarge) return null;
 
-        if (image) {
-            const url = `${avatarBaseUrl}/${image}`;
-
-            return (
-                <div className={styles.portraitContainer}>
-                    <img src={url} alt={name} className={styles.portrait} />
-                </div>
-            );
-        }
+        const isFaceless = finalImage?.includes('faceless.svg');
 
         return finalImage ? (
             <div className={styles.portraitContainer}>
-                <img src={finalImage} alt={name} className={styles.emptyFace} />
+                <img
+                    src={finalImage}
+                    alt={name}
+                    className={isFaceless ? styles.emptyFace : styles.portrait}
+                />
             </div>
-        ) : null;
+        ) : (
+            <div className={styles.portraitContainer}>
+                <img src={`${avatarBaseUrl}/faceless.svg`} alt={name} className={styles.emptyFace} />
+            </div>
+        );
     };
 
     return (
