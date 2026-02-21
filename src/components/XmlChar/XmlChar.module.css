@@ -1,9 +1,25 @@
+:root {
+    --xmlchar-transition: all 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .container {
     font-family: 'ScalySans', sans-serif;
     margin: 1.5rem auto;
     padding: 1.5rem;
     background: #fcf5e5;
     max-width: 710px;
+    animation: fadeIn 0.4s ease-out;
     /*
     color: #58180d;
     */
