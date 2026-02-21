@@ -122,11 +122,11 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                     {race && <span>{race} </span>}
                     {classes.map(c => `${c.name} ${c.level}`).join(' / ')}
                     {alignment && <span>, {alignment.toLowerCase()}</span>}
-                    {background && <span>, {background.toLowerCase()}</span>}
+                    {background && !isSmall && <span>, {background.toLowerCase()}</span>}
                     {deity && <span>, deity {deity}</span>}
                 </p>
 
-                <hr className={styles.horizontalRule} />
+                {!isSmall && <hr className={styles.horizontalRule} />}
                 <ul className={clsx(styles.vitals, isSmall && styles.small)}>
                     <li className={styles.vitalItem}>{isSmall ? 'AC' : 'Armor Class'} <span>{ac}</span></li>
                     <li className={styles.vitalItem}>Initiative <span>{signed(initiative)} ({10 + initiative})</span></li>
