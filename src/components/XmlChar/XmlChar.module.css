@@ -40,7 +40,10 @@
 }
 
 .containerSmall {
+    display: inline-block;
     max-width: 350px;
+    margin: 1.5rem  0.25rem;
+    vertical-align: top;
 }
 
 .header {

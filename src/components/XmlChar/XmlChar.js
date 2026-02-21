@@ -139,7 +139,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                     {classes.map(c => `${c.name} ${c.level}`).join(' / ')}
                     {alignment && <span>, {alignment.toLowerCase()}</span>}
                     {background && !isSmall && <span>, {background.toLowerCase()}</span>}
-                    {deity && <span>, deity {deity}</span>}
+                    {deity && !isSmall && <span>, deity {deity}</span>}
                 </p>
 
                 {!isSmall && <hr className={styles.horizontalRule} />}
