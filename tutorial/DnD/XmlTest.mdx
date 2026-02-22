@@ -1,6 +1,209 @@
 ---
 hide_title: true
 ---
-import PartialContent from "./_XmlTest.mdx";
 
-<PartialContent />
+# XmlChar Test Page
+
+This page demonstrates the `XmlChar` component with different display modes and configuration options.
+
+import XmlChar from '@site/src/components/XmlChar/XmlChar';
+
+## Display: Small
+
+The small display mode shows a compact card with essential character information: name, class, race, armor class, hit points, speed, and ability scores.
+
+### Single Character
+
+```mdx
+<XmlChar filename="tanadirian.xml" display="small" />
+```
+
+<XmlChar filename="tanadirian.xml" display="small" />
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+### Multiple Characters (Default Flow)
+
+Small cards flow naturally side by side without any wrapper. This is the default behavior.
+
+```mdx
+<XmlChar filename="murky.xml" display="small" />
+<XmlChar filename="malfunction.xml" display="small" />
+```
+
+<XmlChar filename="murky.xml" display="small" />
+<XmlChar filename="malfunction.xml" display="small" />
+
+### Multiple Characters (Centered)
+
+To center multiple small cards, wrap them in a container with `textAlign: 'center'`.
+
+```mdx
+<div style={{ textAlign: 'center' }}>
+  <XmlChar filename="delizan.xml" display="small" />
+  <XmlChar filename="dorian.xml" display="small" />
+  <XmlChar filename="dougal.xml" display="small" />
+</div>
+```
+
+<div style={{ textAlign: 'center' }}>
+  <XmlChar filename="delizan.xml" display="small" />
+  <XmlChar filename="dorian.xml" display="small" />
+  <XmlChar filename="dougal.xml" display="small" />
+</div>
+
+### Error Handling
+
+The component displays clear error messages when issues occur.
+
+**File not found:**
+
+```mdx
+<XmlChar filename="fail.xml" display="small" />
+```
+
+<XmlChar filename="fail.xml" display="small" />
+
+**Missing filename:**
+
+```mdx
+<XmlChar display="small" />
+```
+
+<XmlChar display="small" />
+
+## Display: Medium
+
+The medium display mode includes everything from small mode, plus proficient saving throws, skills, languages, and proficiency bonus. This is the default size.
+
+### Basic Usage
+
+```mdx
+<XmlChar filename="tanadirian.xml" display="medium" />
+```
+
+<XmlChar filename="tanadirian.xml" display="medium" />
+
+### Error Handling
+
+**File not found:**
+
+```mdx
+<XmlChar filename="fail.xml" display="medium" />
+```
+
+<XmlChar filename="fail.xml" display="medium" />
+
+**Missing filename:**
+
+```mdx
+<XmlChar display="medium" />
+```
+
+<XmlChar display="medium" />
+
+## Display: Large
+
+The large display mode shows the complete character sheet, including a portrait placeholder and feats list.
+
+### Without Portrait
+
+When no portrait image is available or specified, a placeholder icon is displayed.
+
+```mdx
+<XmlChar filename="tanadirian.xml" image="dontexists.jpg" display="large" />
+```
+
+<XmlChar filename="tanadirian.xml" image="dontexists.jpg" display="large" />
+
+## Display: Large with Portrait
+
+You can specify a custom portrait image using the `image` prop. Supported formats are JPG, PNG, and SVG.
+
+### Milo
+
+```mdx
+<XmlChar
+    filename="milo.xml"
+    display="large"
+    image="milo.jpg"
+/>
+```
+
+<XmlChar
+    filename="milo.xml"
+    display="large"
+    image="milo.jpg"
+/>
+
+### Alioth
+
+```mdx
+<XmlChar
+    filename="alioth.xml"
+    display="large"
+    image="alioth.jpg"
+/>
+```
+
+<XmlChar
+    filename="alioth.xml"
+    display="large"
+    image="alioth.jpg"
+/>
+
+### Antonidas
+
+```mdx
+<XmlChar
+    filename="antonidas.xml"
+    display="large"
+    image="antonidas.png"
+/>
+```
+
+<XmlChar
+    filename="antonidas.xml"
+    display="large"
+    image="antonidas.png"
+/>
+
+## Additional Examples
+
+### Different Character
+
+The same character can be displayed in different sizes. Note that the `.xml` extension is optional.
+
+**Medium display:**
+
+```mdx
+<XmlChar filename="malagolvir.xml" display="medium" />
+```
+
+<XmlChar filename="malagolvir.xml" display="medium" />
+
+**Small display:**
+
+```mdx
+<XmlChar filename="malagolvir" display="small" />
+```
+
+<XmlChar filename="malagolvir" display="small" />
+
+### Error Handling in Large Mode
+
+**File not found:**
+
+```mdx
+<XmlChar filename="fail.xml" display="large" />
+```
+
+<XmlChar filename="fail.xml" display="large" />
+
+**Missing filename:**
+
+```mdx
+<XmlChar display="large" />
+```
+
+<XmlChar display="large" />

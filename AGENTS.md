@@ -38,12 +38,6 @@ make test           # Run unlighthouse web performance test
 make build          # Production build with SSG warnings suppressed
 ```
 
-### Component Testing
-
-```bash
-make xmlchar-test   # Create XmlChar test page from _XmlTest.mdx template
-```
-
 **Note**: No unit test framework is configured. Test components by creating MDX test pages in `docs/` or `tutorial/`.
 
 ## Project Structure

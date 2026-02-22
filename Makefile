@@ -87,11 +87,3 @@ typesense:
 
 test: ## Test web performance with unlighthouse
 	npx unlighthouse --site https://www.lorien.cloud
-
-xmlchar-test: ## Test XmlChar component
-	@echo '---' > tutorial/DnD/XmlTest.mdx
-	@echo 'hide_title: true' >> tutorial/DnD/XmlTest.mdx
-	@echo '---' >> tutorial/DnD/XmlTest.mdx
-	@echo 'import PartialContent from "./_XmlTest.mdx";' >> tutorial/DnD/XmlTest.mdx
-	@echo '' >> tutorial/DnD/XmlTest.mdx
-	@echo '<PartialContent />' >> tutorial/DnD/XmlTest.mdx

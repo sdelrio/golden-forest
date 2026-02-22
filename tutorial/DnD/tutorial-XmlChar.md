@@ -129,3 +129,7 @@ No additional configuration is needed—the component detects and responds to th
 ### Cards aren't centering
 
 Make sure you're using the wrapper div with `textAlign: 'center'` as shown in the examples above.
+
+## Live Examples
+
+For working code samples with rendered output, see the [XmlChar Test Page](../XmlTest) which demonstrates all display modes and configuration options.
