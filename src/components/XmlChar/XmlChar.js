@@ -186,6 +186,18 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                     <>
                         <hr className={styles.horizontalRule} />
                         <div className={styles.infoSection}>
+                            <span className={styles.infoLabel}>Saving Throws</span>
+                            <ul className={styles.infoList}>
+                                {Object.entries(abilities)
+                                    .filter(([, data]) => data.save !== data.bonus)
+                                    .map(([stat, data]) => (
+                                        <li key={stat}>{stat.slice(0, 3).toUpperCase()} {signed(data.save)}</li>
+                                    ))}
+                                {Object.values(abilities).every(data => data.save === data.bonus) && <li>None</li>}
+                            </ul>
+                        </div>
+
+                        <div className={styles.infoSection}>
                             <span className={styles.infoLabel}>Proficient Skills</span>
                             <ul className={styles.infoList}>
                                 {skills.length > 0 ? skills.map(s => (
