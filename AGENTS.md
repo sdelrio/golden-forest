@@ -178,7 +178,7 @@ export function signed(number) {
 - Frontmatter supported in blog posts
 - Mermaid diagrams enabled in code blocks
 - KaTeX math equations supported
-- Test pages use `_` prefix (e.g., `_XmlTest.mdx`) to hide from sidebar
+- Test pages use `_` prefix (e.g., `_private-page.mdx`) to hide from sidebar
 
 ## Git Guidelines
 
