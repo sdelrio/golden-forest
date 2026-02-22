@@ -193,7 +193,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                                     .map(([stat, data]) => (
                                         <li key={stat}>{stat.slice(0, 3).toUpperCase()} {signed(data.save)}</li>
                                     ))}
-                                {Object.values(abilities).every(data => data.save === data.bonus) && <li>None</li>}
+                                {Object.values(abilities).every(data => data.save === data.bonus) && <li key="none">None</li>}
                             </ul>
                         </div>
 
