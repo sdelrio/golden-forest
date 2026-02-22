@@ -87,4 +87,3 @@ typesense:
 
 test: ## Test web performance with unlighthouse
 	npx unlighthouse --site https://www.lorien.cloud
-

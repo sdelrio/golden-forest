@@ -1,0 +1,369 @@
+:root {
+    --xmlchar-transition: all 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    font-family: 'ScalySans', sans-serif;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    background: #fcf5e5;
+    max-width: 710px;
+    animation: fadeIn 0.4s ease-out;
+    border-top: 1px solid #58180d;
+    border-bottom: 1px solid #58180d;
+    /* Create a thin double-border look on top/bottom with larger orange fill and outer shadow */
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.3),
+        inset 0 4px 0 0 #e69a28,
+        inset 0 5px 0 0 #58180d,
+        inset 0 -4px 0 0 #e69a28,
+        inset 0 -5px 0 0 #58180d;
+    position: relative;
+}
+
+.containerMedium {
+    max-width: 480px;
+}
+
+.containerSmall {
+    display: inline-block;
+    max-width: 360px;
+    margin: 1.0rem 0.33rem;
+    vertical-align: top;
+    padding: 0.66rem;
+    text-align: left;
+}
+
+.header {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+
+.portraitContainer {
+    float: right;
+    width: 80px;
+    height: 80px;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid #58180d;
+    background: #fdf1dc;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* overflow: hidden; */
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.name {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.classLevel {
+    font-style: italic;
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.classLevel.small {
+    font-size: 0.8rem;
+}
+
+.classLevel.small span {
+    font-size: 0.8rem;
+}
+
+.portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.emptyFace {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+    color: #58180d;
+}
+
+
+.vitals {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 0.5rem;
+    row-gap: 0;
+    padding: 0;
+    margin: 0.5rem 0;
+}
+
+.vitalItem {
+    font-weight: bold;
+    margin: 0;
+}
+
+.vitalItem span {
+    font-weight: normal;
+    margin-left: 0.25rem;
+}
+
+.vitals.small {
+    font-size: 0.9rem;
+}
+
+.vitals.small .vitalItem {
+    font-size: 0.75rem;
+}
+
+.vitals.small .vitalItem span {
+    margin-left: 0.1rem;
+    font-size: 0.85rem;
+}
+
+/* Abilities Section */
+.abilities {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    gap: 0.5rem;
+    margin: 0.8rem auto;
+    max-width: 500px;
+    /* Limit width to ensure it can wrap around portrait */
+}
+
+.ability {
+    text-align: center;
+    padding: 0.25rem;
+    border: 0px solid rgba(88, 24, 13, 0.1);
+    background: rgba(253, 241, 220, 0.3);
+}
+
+.abilityLabel {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.abilityValue {
+    font-size: 1rem;
+}
+
+.abilityBonus {
+    font-size: 0.85rem;
+}
+
+/* Compact Abilities Grid (for small display) */
+.abilitiesCompact {
+    display: grid;
+    grid-template-columns: repeat(3, auto 1fr 1fr 1fr);
+    gap: 0.125rem 0.25rem;
+    margin: 0.5rem 0;
+    justify-content: center;
+}
+
+.abilitiesCompactHeader {
+    display: contents;
+}
+
+.abilitiesCompactHeader span {
+    font-size: 0.4rem;
+    font-weight: bold;
+    color: #58180d;
+    text-align: center;
+    padding-bottom: 0;
+    line-height: 1;
+}
+
+.abilitiesCompactHeader span:nth-child(1) { grid-column: 3; }
+.abilitiesCompactHeader span:nth-child(2) { grid-column: 4; }
+.abilitiesCompactHeader span:nth-child(3) { grid-column: 7; }
+.abilitiesCompactHeader span:nth-child(4) { grid-column: 8; }
+.abilitiesCompactHeader span:nth-child(5) { grid-column: 11; }
+.abilitiesCompactHeader span:nth-child(6) { grid-column: 12; }
+
+[data-theme='dark'] .abilitiesCompactHeader span {
+    color: #c9ad6a;
+}
+
+.abilityCompactLabel {
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.abilityCompactValue {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.abilityCompactBonus,
+.abilityCompactSave {
+    font-size: 0.75rem;
+    text-align: center;
+    color: #58180d;
+}
+
+[data-theme='dark'] .abilityCompactBonus,
+[data-theme='dark'] .abilityCompactSave {
+    color: #c9ad6a;
+}
+
+@media (max-width: 700px) {
+    .abilities {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .portraitContainer {
+        width: 64px;
+        height: 64px;
+    }
+
+}
+
+@media (max-width: 380px) {
+    .abilities {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 350px) {
+    .abilities {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Info Lists */
+.infoSection {
+    margin: 0.25rem 0 0;
+}
+
+.infoLabel {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.infoList {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.infoList li {
+    display: inline;
+}
+
+.infoList li:not(:last-child)::after {
+    content: ", ";
+}
+
+/* Display Modes */
+.small .abilities,
+.small .infoSection,
+.small .portraitContainer {
+    display: none;
+}
+
+.medium .portraitContainer {
+    display: none;
+}
+
+/* Empty face SVG replacement */
+.placeholderIcon {
+    fill: #58180d;
+}
+
+/* Dark Mode */
+[data-theme='dark'] .container {
+    background: #1a1612;
+    border-top-color: #c68000;
+    border-bottom-color: #c68000;
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.5),
+        inset 0 4px 0 0 #a36a00,
+        inset 0 5px 0 0 #c68000,
+        inset 0 -4px 0 0 #a36a00,
+        inset 0 -5px 0 0 #c68000;
+}
+
+[data-theme='dark'] .name {
+    color: #ffb630;
+}
+
+[data-theme='dark'] .classLevel {
+    color: #d4c4a8;
+}
+
+[data-theme='dark'] .portraitContainer {
+    border-color: #c68000;
+    background: #2a2010;
+}
+
+[data-theme='dark'] .emptyFace {
+    opacity: 0.5;
+    color: #c68000;
+}
+
+[data-theme='dark'] .vitalItem {
+    color: #e0d5c1;
+}
+
+[data-theme='dark'] .ability {
+    background: rgba(42, 32, 16, 0.5);
+    border-color: rgba(198, 128, 0, 0.2);
+}
+
+[data-theme='dark'] .abilityLabel {
+    color: #ffb630;
+}
+
+[data-theme='dark'] .abilityValue {
+    color: #e0d5c1;
+}
+
+[data-theme='dark'] .abilityBonus {
+    color: #c9ad6a;
+}
+
+[data-theme='dark'] .infoLabel {
+    color: #ffb630;
+}
+
+[data-theme='dark'] .infoList {
+    color: #d4c4a8;
+}
+
+[data-theme='dark'] .placeholderIcon {
+    fill: #c68000;
+}
+
+/* Horizontal Rule - Triangle pointing right */
+.horizontalRule {
+    height: 0.35em !important;
+    border: none;
+    background-image: url('./assets/divider-triangle.svg') !important;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100% 100%;
+    margin: 0.33rem 0;
+    background-color: transparent;
+}
+
+[data-theme='dark'] .horizontalRule {
+    background-image: url('./assets/divider-triangle-dark.svg') !important;
+}
