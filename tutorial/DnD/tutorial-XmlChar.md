@@ -132,4 +132,4 @@ Make sure you're using the wrapper div with `textAlign: 'center'` as shown in th
 
 ## Live Examples
 
-For working code samples with rendered output, see the [XmlChar Test Page](../XmlTest) which demonstrates all display modes and configuration options.
+For working code samples with rendered output, see the [XmlChar Test Page](/tutorial/DnD/XmlTest) which demonstrates all display modes and configuration options.
