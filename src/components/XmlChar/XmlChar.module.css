@@ -20,9 +20,6 @@
     background: #fcf5e5;
     max-width: 710px;
     animation: fadeIn 0.4s ease-out;
-    /*
-    color: #58180d;
-    */
     border-top: 1px solid #58180d;
     border-bottom: 1px solid #58180d;
     /* Create a thin double-border look on top/bottom with larger orange fill and outer shadow */
@@ -89,10 +86,6 @@
 
 .classLevel.small span {
     font-size: 0.8rem;
-}
-
-[data-theme='dark'] .alignment {
-    color: #c9ad6a;
 }
 
 .portrait {
