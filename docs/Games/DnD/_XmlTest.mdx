@@ -10,13 +10,24 @@ Shows a narrow card with vitality, level and abilities.
 <XmlChar filename="tanadirian_6.xml" display="small" />
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-### Two chars - small
+### Two chars - small (flow)
+Default behavioiur
 <XmlChar filename="murky_5.xml" display="small" />
 <XmlChar filename="malfunction_dead.xml" display="small" />
-### Three chars - small
-<XmlChar filename="delizan_3.xml" display="small" />
-<XmlChar filename="dorian_5.xml" display="small" />
-<XmlChar filename="dougal_death.xml" display="small" />
+
+### Three chars - small (centered)
+```html
+<div style={{ textAlign: 'center' }}>
+  <XmlChar filename="delizan_3.xml" display="small" />
+  <XmlChar filename="dorian_5.xml" display="small" />
+  <XmlChar filename="dougal_death.xml" display="small" />
+</div>
+```
+<div style={{ textAlign: 'center' }}>
+  <XmlChar filename="delizan_3.xml" display="small" />
+  <XmlChar filename="dorian_5.xml" display="small" />
+  <XmlChar filename="dougal_death.xml" display="small" />
+</div>
 
 ### Non-existant character
 <XmlChar filename="fail.xml" display="small" />
