@@ -21,6 +21,7 @@ export default function XmlChar(props) {
 function XmlCharInternal({ filename, display = 'medium', image }) {
     const [charData, setCharData] = useState(null);
     const [error, setError] = useState(null);
+    const [finalImage, setFinalImage] = useState(null);
 
     const characterBaseUrl = useBaseUrl('/fg/chars');
     const avatarBaseUrl = useBaseUrl('/fg/avatar');
@@ -30,7 +31,10 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     const isLarge = display === 'large';
 
     useEffect(() => {
-        if (!filename) return;
+        if (!filename) {
+            setError('filename prop is required');
+            return;
+        }
         let xmlSuffix = '';
         if (!filename.endsWith('.xml')) {
             xmlSuffix = '.xml';
@@ -54,11 +58,10 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                 console.error(err);
                 setError(err.message);
             });
-    }, [filename]);
+    }, [filename, characterBaseUrl]);
 
-    const [finalImage, setFinalImage] = useState(null);
     useEffect(() => {
-        if (!isLarge) return;
+        if (!isLarge || !filename) return;
 
         if (image) {
             const url = `${avatarBaseUrl}/${image}`;
@@ -167,9 +170,9 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                 {isSmall && (
                     <div className={styles.abilitiesCompact}>
                         <div className={styles.abilitiesCompactHeader}>
-                            <span></span><span></span><span>MOD</span><span>SAVE</span>
-                            <span></span><span></span><span>MOD</span><span>SAVE</span>
-                            <span></span><span></span><span>MOD</span><span>SAVE</span>
+                            <span>MOD</span><span>SAVE</span>
+                            <span>MOD</span><span>SAVE</span>
+                            <span>MOD</span><span>SAVE</span>
                         </div>
                         {Object.entries(abilities).map(([stat, data]) => (
                             <React.Fragment key={stat}>
