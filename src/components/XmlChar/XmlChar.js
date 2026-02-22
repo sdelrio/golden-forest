@@ -145,7 +145,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                 {!isSmall && <hr className={styles.horizontalRule} />}
                 <ul className={clsx(styles.vitals, isSmall && styles.small)}>
                     <li className={styles.vitalItem}>{isSmall ? 'AC' : 'Armor Class'} <span>{ac}</span></li>
-                    <li className={styles.vitalItem}>Initiative <span>{signed(abilities?.dexterity?.bonus)} ({10 + (abilities?.dexterity?.bonus)})</span></li>
+                    <li className={styles.vitalItem}>Initiative <span>{signed(initiative)}</span></li>
                     <li className={styles.vitalItem}>{isSmall ? 'HP' : 'Hit Points'} <span>{hp}</span></li>
                     <li className={styles.vitalItem}>Speed <span>{speed} ft.</span></li>
                 </ul>

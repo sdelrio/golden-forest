@@ -350,9 +350,6 @@
 /* Horizontal Rule - Triangle pointing right */
 .horizontalRule {
     height: 0.35em !important;
-}
-
-.horizontalRule {
     border: none;
     background-image: url('./assets/divider-triangle.svg') !important;
     background-repeat: no-repeat;
