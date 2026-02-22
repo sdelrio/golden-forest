@@ -43,7 +43,8 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-html[class*="docs-doc-id-Games/DnD/"] {
+html[class*="docs-doc-id-Games/DnD/"],
+html[class*="-doc-id-DnD/"] {
     --_phb-font-body: 'BookInstanity';
     --_phb-font-header: 'MrEavesRemake';
 
@@ -379,12 +380,16 @@ html[class*="docs-doc-id-Games/DnD/"] {
 }
 
 html[class*="docs-doc-id-Games/DnD/"][data-theme='light'],
-html[class*="docs-doc-id-Games/DnD/"][data-theme='light'] body {
+html[class*="docs-doc-id-Games/DnD/"][data-theme='light'] body,
+html[class*="-doc-id-DnD/"][data-theme='light'],
+html[class*="-doc-id-DnD/"][data-theme='light'] body {
     background-image: url('/img/paper-colored.svg');
 }
 
 html[class*="docs-doc-id-Games/DnD/"][data-theme='dark'],
-html[class*="docs-doc-id-Games/DnD/"][data-theme='dark'] body {
+html[class*="docs-doc-id-Games/DnD/"][data-theme='dark'] body,
+html[class*="-doc-id-DnD/"][data-theme='dark'],
+html[class*="-doc-id-DnD/"][data-theme='dark'] body {
     --phb-tr-odd: rgb(64, 69, 33);
     --phb-tr-even: rgb(54, 59, 23);
     --ifm-link-color: var(--ifm-heading-color-darkest);
