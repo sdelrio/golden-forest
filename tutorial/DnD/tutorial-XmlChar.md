@@ -110,7 +110,7 @@ XmlChar automatically adapts to your site's color scheme:
 - **Light mode**: Parchment-style background with red accents
 - **Dark mode**: Dark background with amber accents
 
-No additional configuration is needed—the component detects and responds to theme changes automatically.
+No additional configuration is needed—the component detects the `[data-theme='dark']` attribute on the HTML element and responds to theme changes automatically.
 
 ## Troubleshooting
 

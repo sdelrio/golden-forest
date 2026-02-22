@@ -18,6 +18,12 @@ export default function XmlChar(props) {
     );
 }
 
+/**
+ * @param {Object} props
+ * @param {string} props.filename - Required. XML file name (with or without .xml extension)
+ * @param {'small'|'medium'|'large'} [props.display='medium'] - Display mode
+ * @param {string} [props.image] - Avatar image filename (large mode only)
+ */
 function XmlCharInternal({ filename, display = 'medium', image }) {
     const [charData, setCharData] = useState(null);
     const [error, setError] = useState(null);
