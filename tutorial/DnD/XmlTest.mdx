@@ -108,32 +108,41 @@ The large display mode shows the complete character sheet, including a portrait 
 
 ### Without Portrait
 
+#### forcing a non existing image
+
 When no portrait image is available or specified, a placeholder icon is displayed.
 
 ```mdx
-<XmlChar filename="tanadirian.xml" image="dontexists.jpg" display="large" />
+<XmlChar filename="garaele.xml" image="dontexists.jpg" display="large" />
 ```
 
-<XmlChar filename="tanadirian.xml" image="dontexists.jpg" display="large" />
+<XmlChar filename="garaele.xml" image="dontexists.jpg" display="large" />
+
+### Using default image based on filename
+
+```mdx
+<XmlChar filename="garaele.xml" display="large" />
+```
+
+<XmlChar filename="garaele.xml" display="large" />
 
 ## Display: Large with Portrait
 
 You can specify a custom portrait image using the `image` prop. Supported formats are JPG, PNG, and SVG.
 
 ### Milo
+This example relies on the component’s default naming convention: if you leave out the `image` prop it will look for a portrait file that matches the XML base name (e.g. `milo.jpg` for `milo.xml`), inferring the image from the filename instead of supplying it explicitly.
 
 ```mdx
 <XmlChar
     filename="milo.xml"
     display="large"
-    image="milo.jpg"
 />
 ```
 
 <XmlChar
     filename="milo.xml"
     display="large"
-    image="milo.jpg"
 />
 
 ### Alioth
