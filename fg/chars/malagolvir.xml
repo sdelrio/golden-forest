@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<root version="3.3" release="8|CoreRPG:3">
+<root version="3.3" release="8|CoreRPG:4">
 	<character>
 		<abilities>
 			<charisma>
@@ -47,7 +47,7 @@
 		</abilities>
 		<adventurelist>
 		</adventurelist>
-		<alignment type="string">true neutral</alignment>
+		<alignment type="string">Chaotic Neutral</alignment>
 		<background type="string">Spy</background>
 		<backgroundlink type="windowreference">
 			<class>reference_background</class>
@@ -58,8 +58,8 @@
 				<casterlevelinvmult type="number">1</casterlevelinvmult>
 				<casterpactmagic type="number">1</casterpactmagic>
 				<hddie type="dice">d8</hddie>
-				<hdused type="number">4</hdused>
-				<level type="number">5</level>
+				<hdused type="number">0</hdused>
+				<level type="number">6</level>
 				<name type="string">Warlock</name>
 				<shortcut type="windowreference">
 					<class>reference_class</class>
@@ -85,11 +85,12 @@
 				<name type="string">EP</name>
 			</slot4>
 			<slot5>
-				<amount type="number">1</amount>
+				<amount type="number">4</amount>
 				<name type="string">--RATIONS</name>
 			</slot5>
 			<slot6>
 				<amount type="number">0</amount>
+				<name type="string">PP</name>
 			</slot6>
 		</coins>
 		<defenses>
@@ -123,10 +124,10 @@
 			<encumbered type="number">65</encumbered>
 			<encumberedheavy type="number">130</encumberedheavy>
 			<liftpushdrag type="number">390</liftpushdrag>
-			<load type="number">91.1</load>
+			<load type="number">86.1</load>
 			<max type="number">195</max>
 		</encumbrance>
-		<exp type="number">7092</exp>
+		<exp type="number">14786</exp>
 		<expneeded type="number">14000</expneeded>
 		<featlist>
 			<id-00001>
@@ -525,7 +526,7 @@
 			<id-00007>
 				<level type="number">2</level>
 				<locked type="number">1</locked>
-				<name type="string">Eldritch Invocations (Xanathar): Improve pact weapon, Thirsting blade, Devil's sight</name>
+				<name type="string">Eldritch Invocations (Xanathar): Improved pact weapon, Thirsting blade, Devil's sight</name>
 				<source type="string">Warlock</source>
 				<text type="formattedtext">
 					<p>In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.</p>
@@ -917,15 +918,29 @@
 					<p>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability s cores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.</p>
 				</text>
 			</id-00010>
+			<id-00011>
+				<level type="number">6</level>
+				<locked type="number">1</locked>
+				<name type="string">Accursed Specter</name>
+				<source type="string">Warlock</source>
+				<specialization type="string">Hexblade</specialization>
+				<text type="formattedtext">
+					<p>Starting at 6th level, you can curse the soul of a person you slay, temporarily binding it to your service. When you slay a humanoid, you can cause its spirit to rise from its corpse as a specter, the statistics for which are in the <i>Monster Manual. </i>When the specter appears, it gains temporary hit points equal to half your warlock level. Roll initiative for the specter, which has its own turns. It obeys your verbal commands, and it gains a special bonus to its attack rolls equal to your Charisma modifier (minimum of +0).</p>
+					<p>The specter remains in your service until the end of your next long rest, at which point it vanishes to the afterlife.</p>
+					<p>Once you bind a specter with this feature, you can't use the feature again until you finish a long rest.</p>
+					<p>NPC: Specter</p>
+				</text>
+			</id-00011>
 		</featurelist>
+		<height type="string">4' 8''</height>
 		<hero type="number">0</hero>
 		<hp>
-			<deathsavefail type="number">0</deathsavefail>
+			<deathsavefail type="number">3</deathsavefail>
 			<deathsavesuccess type="number">0</deathsavesuccess>
 			<hdmod type="number">0</hdmod>
 			<temporary type="number">0</temporary>
-			<total type="number">38</total>
-			<wounds type="number">0</wounds>
+			<total type="number">48</total>
+			<wounds type="number">48</wounds>
 		</hp>
 		<initiative>
 			<misc type="number">2</misc>
@@ -991,18 +1006,6 @@
 					<p></p>
 				</description>
 				<effectlist>
-					<id-00001>
-						<ability_modifier type="number">0</ability_modifier>
-						<actiononly type="number">0</actiononly>
-						<durdice type="dice"></durdice>
-						<durmod type="number">0</durmod>
-						<effect type="string">AC: 1</effect>
-						<effect_description type="string">[AC: 1]</effect_description>
-						<misc_modifier type="number">0</misc_modifier>
-						<name type="string">Dagger off-hand</name>
-						<save_modifier type="number">0</save_modifier>
-						<susceptiblity_modifier type="number">0</susceptiblity_modifier>
-					</id-00001>
 				</effectlist>
 				<isidentified type="number">1</isidentified>
 				<locked type="number">1</locked>
@@ -1148,15 +1151,15 @@
 				<ac type="number">0</ac>
 				<bonus type="number">0</bonus>
 				<carried type="number">1</carried>
-				<count type="number">1</count>
+				<count type="number">0</count>
 				<description type="formattedtext">
 					<p></p>
 				</description>
 				<effectlist>
 				</effectlist>
 				<isidentified type="number">1</isidentified>
-				<name type="string">Healer's kit (-3)si</name>
-				<weight type="number">5</weight>
+				<name type="string">Healer's kit (-10)si</name>
+				<weight type="number">0</weight>
 			</id-00016>
 			<id-00017>
 				<carried type="number">1</carried>
@@ -1172,20 +1175,6 @@
 				<type type="string">Adventuring Gear</type>
 				<weight type="number">2</weight>
 			</id-00017>
-			<id-00018>
-				<carried type="number">0</carried>
-				<cost type="string">50 gp</cost>
-				<count type="number">1</count>
-				<description type="formattedtext">
-					<p>A character who drinks the magical red fluid in this vial regains 2d4 + 2 hit points. Drinking or administering a potion takes an action.</p>
-				</description>
-				<isidentified type="number">1</isidentified>
-				<locked type="number">1</locked>
-				<name type="string">Potion Of Healing</name>
-				<subtype type="string">Standard</subtype>
-				<type type="string">Adventuring Gear</type>
-				<weight type="number">0.5</weight>
-			</id-00018>
 			<id-00019>
 				<carried type="number">1</carried>
 				<cost type="string">1 gp</cost>
@@ -1206,9 +1195,9 @@
 				<name type="string">Elvish</name>
 			</id-00002>
 		</languagelist>
-		<level type="number">5</level>
+		<level type="number">6</level>
 		<name type="string">Malagolvir Naerth</name>
-		<notes type="string">Drow hu&#237;do de Ilhara-vel\nYour patron is the spirit of a long-dead hero who sees your pact as a way for it to continue to influence the world - Mabelode\nBinding mark: You display outward symptoms of a disease but suffer no ill effects from it.\nTerms of the patron relation: You must occasionally conduct bizarre rituals to maintain your pact.</notes>
+		<notes type="string">Drow hu&#237;do de Ilhara-vel\nYour patron is the spirit of a long-dead hero who sees your pact as a way for it to continue to influence the world - Mabelode\nBinding mark: You display outward symptoms of a disease but suffer no ill effects from it.\nTerms of the patron relation: You must occasionally conduct bizarre rituals to maintain your pact.\nlevel 6: +8 hit points\n**Deep Freeze**. Shaking violently with the cold, your strength is sapped for days. While affected by this flaw, you only recover a quarter of your hit dice (rounded up) during a long rest. After a long rest, you can make a DC 17 Constitution saving throw (with advantage if resistant to cold damage): on a success, this flaw ends &#147; otherwise, it remains until you succeed on a future roll, or until you are the subject of magic such as Heal, Greater Restoration, Protection from Energy (cold) or Wish.</notes>
 		<pc_label_hero type="string">Hero Point</pc_label_hero>
 		<perception type="number">13</perception>
 		<perceptionmodifier type="number">0</perceptionmodifier>
@@ -1593,6 +1582,24 @@
 				<school type="string">Conjuration</school>
 				<source type="string">Druid Coast Circle, Eldritch Knight, Sorcerer, Warlock, Wizard, Arcane Trickster</source>
 			</id-00009>
+			<id-00010>
+				<actions>
+				</actions>
+				<cast type="number">0</cast>
+				<description type="formattedtext">
+					<p>Starting at 6th level, you can curse the soul of a person you slay, temporarily binding it to your service. When you slay a humanoid, you can cause its spirit to rise from its corpse as a specter, the statistics for which are in the <i>Monster Manual. </i>When the specter appears, it gains temporary hit points equal to half your warlock level. Roll initiative for the specter, which has its own turns. It obeys your verbal commands, and it gains a special bonus to its attack rolls equal to your Charisma modifier (minimum of +0).</p>
+					<p>The specter remains in your service until the end of your next long rest, at which point it vanishes to the afterlife.</p>
+					<p>Once you bind a specter with this feature, you can't use the feature again until you finish a long rest.</p>
+					<p>NPC: Specter</p>
+				</description>
+				<level type="number">0</level>
+				<locked type="number">1</locked>
+				<name type="string">Accursed Specter</name>
+				<prepared type="number">0</prepared>
+				<ritual type="number">0</ritual>
+				<source type="string">Warlock</source>
+				<specialization type="string">Hexblade</specialization>
+			</id-00010>
 			<id-00011>
 				<actions>
 				</actions>
@@ -1669,6 +1676,7 @@
 				<name type="string">Darkness</name>
 				<prepared type="number">1</prepared>
 				<range type="string">60 feet</range>
+				<ritual type="number">0</ritual>
 				<school type="string">Evocation</school>
 				<source type="string">Druid Swamp Circle, Eldritch Knight, Monk, Sorcerer, Warlock, Wizard, Arcane Trickster</source>
 			</id-00013>
@@ -2007,27 +2015,29 @@
 		</weapon>
 		<weaponlist>
 			<id-00001>
-				<ammo type="number">60</ammo>
-				<attackbonus type="number">1</attackbonus>
+				<ammo type="number">0</ammo>
+				<attackbonus type="number">2</attackbonus>
 				<attackstat type="string">charisma</attackstat>
 				<carried type="number">2</carried>
 				<damagelist>
 					<id-00001>
-						<bonus type="number">1</bonus>
+						<bonus type="number">2</bonus>
 						<dice type="dice">d10</dice>
 						<stat type="string">charisma</stat>
+						<statmult type="number">1</statmult>
 						<type type="string">piercing, magic</type>
 					</id-00001>
 				</damagelist>
+				<handling type="number">0</handling>
 				<isidentified type="number">1</isidentified>
-				<maxammo type="number">60</maxammo>
+				<maxammo type="number">20</maxammo>
 				<name type="string">Heavy Crossbow</name>
 				<prof type="number">1</prof>
 				<shortcut type="windowreference">
 					<class>item</class>
 					<recordname>....inventorylist.id-00001</recordname>
 				</shortcut>
-				<type type="number">1</type>
+				<type type="number">0</type>
 			</id-00001>
 			<id-00002>
 				<attackbonus type="number">0</attackbonus>
@@ -2040,6 +2050,7 @@
 						<type type="string">piercing</type>
 					</id-00001>
 				</damagelist>
+				<handling type="number">0</handling>
 				<isidentified type="number">1</isidentified>
 				<maxammo type="number">0</maxammo>
 				<name type="string">Dagger</name>
@@ -2056,12 +2067,14 @@
 				<carried type="number">2</carried>
 				<damagelist>
 					<id-00001>
-						<bonus type="number">1</bonus>
+						<bonus type="number">2</bonus>
 						<dice type="dice">d8</dice>
 						<stat type="string">charisma</stat>
+						<statmult type="number">1</statmult>
 						<type type="string">piercing, magic</type>
 					</id-00001>
 				</damagelist>
+				<handling type="number">0</handling>
 				<isidentified type="number">1</isidentified>
 				<maxammo type="number">0</maxammo>
 				<name type="string">Rapier PW</name>
@@ -2083,6 +2096,7 @@
 						<type type="string">piercing</type>
 					</id-00001>
 				</damagelist>
+				<handling type="number">0</handling>
 				<isidentified type="number">1</isidentified>
 				<maxammo type="number">2</maxammo>
 				<name type="string">Dagger</name>
@@ -2091,7 +2105,7 @@
 					<class>item</class>
 					<recordname>....inventorylist.id-00002</recordname>
 				</shortcut>
-				<type type="number">2</type>
+				<type type="number">0</type>
 			</id-00007>
 			<id-00008>
 				<attackbonus type="number">0</attackbonus>
@@ -2103,6 +2117,7 @@
 						<type type="string">piercing</type>
 					</id-00001>
 				</damagelist>
+				<handling type="number">0</handling>
 				<maxammo type="number">0</maxammo>
 				<name type="string">Dagger off-hand</name>
 				<prof type="number">1</prof>
@@ -2113,5 +2128,6 @@
 				<type type="number">0</type>
 			</id-00008>
 		</weaponlist>
+		<weight type="string">84 lbs</weight>
 	</character>
 </root>
