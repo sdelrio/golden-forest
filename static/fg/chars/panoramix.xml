@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <root version="3.3" release="8|CoreRPG:4">
 	<character>
+		<Spell_Tokens>
+			<Fireball>
+				<ID type="number">20</ID>
+				<circle_token type="number">1</circle_token>
+				<cone_token type="number">0</cone_token>
+				<container type="string">image.id-01164.play_image</container>
+				<measurenumber type="number">20</measurenumber>
+				<measurevalue type="string">Radius</measurevalue>
+				<sizefactor type="string">Measurement</sizefactor>
+				<sizevalue type="string">Large</sizevalue>
+				<targettoken type="number">1</targettoken>
+				<tkntype type="string">Spell Token</tkntype>
+			</Fireball>
+			<Light>
+				<ID type="number">18</ID>
+				<circle_token type="number">0</circle_token>
+				<cone_token type="number">0</cone_token>
+				<container type="string">image.id-01164.play_image</container>
+				<measurenumber type="number">40</measurenumber>
+				<measurevalue type="string">Radius</measurevalue>
+				<sizefactor type="string">Measurement</sizefactor>
+				<sizevalue type="string">Medium</sizevalue>
+				<targettoken type="number">1</targettoken>
+				<tkntype type="string">Spell Token</tkntype>
+			</Light>
+			<Torch>
+				<ID type="number">17</ID>
+				<circle_token type="number">0</circle_token>
+				<cone_token type="number">0</cone_token>
+				<container type="string">image.id-01164.play_image</container>
+				<measurenumber type="number">0</measurenumber>
+				<measurevalue type="string">Radius</measurevalue>
+				<sizefactor type="string">Size</sizefactor>
+				<sizevalue type="string">Tiny</sizevalue>
+				<targettoken type="number">0</targettoken>
+				<tkntype type="string">Companion Animal</tkntype>
+			</Torch>
+		</Spell_Tokens>
 		<abilities>
 			<charisma>
 				<bonus type="number">0</bonus>
@@ -60,6 +98,11 @@
 				<hdused type="number">2</hdused>
 				<level type="number">3</level>
 				<name type="string">Druid</name>
+				<rolls>
+					<lvl-001 type="number">8</lvl-001>
+					<lvl-002 type="number">5</lvl-002>
+					<lvl-003 type="number">5</lvl-003>
+				</rolls>
 				<shortcut type="windowreference">
 					<class>reference_class</class>
 					<recordname>reference.classdata.druid@DD Xanathar's Guide to Everything Players</recordname>
@@ -249,12 +292,15 @@
 				</text>
 			</id-00007>
 		</featurelist>
+		<hero type="number">0</hero>
 		<hp>
+			<adjust type="number">0</adjust>
+			<base type="number">18</base>
 			<deathsavefail type="number">0</deathsavefail>
 			<deathsavesuccess type="number">0</deathsavesuccess>
 			<temporary type="number">0</temporary>
 			<total type="number">18</total>
-			<wounds type="number">17</wounds>
+			<wounds type="number">4</wounds>
 		</hp>
 		<initiative>
 			<misc type="number">0</misc>
@@ -396,6 +442,7 @@
 		<level type="number">3</level>
 		<name type="string">Panoramix</name>
 		<notes type="string">**Frail**. You recover, but your health is never quite the same again. You can barely keep food down, and lose 1 point from your Constitution score. Finally, if you suffer this flaw again in the future, your hit dice are permanently reduced by one: if multiple versions of this flaw reduce the character's hit dice to 0, you die. This flaw can be removed by Greater Restoration or Wish.</notes>
+		<pc_label_hero type="string">Hero Point</pc_label_hero>
 		<perception type="number">15</perception>
 		<perceptionmodifier type="number">0</perceptionmodifier>
 		<powergroup>
@@ -497,6 +544,7 @@
 							</id-00001>
 						</heallist>
 						<order type="number">1</order>
+						<tknbutton type="token"></tknbutton>
 						<type type="string">heal</type>
 					</id-00001>
 				</actions>
@@ -523,6 +571,7 @@
 						<order type="number">1</order>
 						<savemagic type="number">1</savemagic>
 						<savetype type="string">strength</savetype>
+						<tknbutton type="token"></tknbutton>
 						<type type="string">cast</type>
 					</id-00001>
 					<id-00002>
@@ -530,6 +579,7 @@
 						<durunit type="string">minute</durunit>
 						<label type="string">Restrained; (C)</label>
 						<order type="number">2</order>
+						<tknbutton type="token"></tknbutton>
 						<type type="string">effect</type>
 					</id-00002>
 				</actions>
@@ -591,48 +641,12 @@
 				<school type="string">Divination</school>
 				<source type="string">Bard, Cleric, Druid, Eldritch Knight, Eldritch Invocations, Paladin, Ranger, Sorcerer, Wizard, Arcane Trickster</source>
 			</id-00004>
-			<id-00005>
-				<actions>
-					<id-00001>
-						<order type="number">1</order>
-						<savemagic type="number">1</savemagic>
-						<savetype type="string">constitution</savetype>
-						<type type="string">cast</type>
-					</id-00001>
-					<id-00002>
-						<damagelist>
-							<id-00001>
-								<dice type="dice">d12</dice>
-								<type type="string">poison</type>
-							</id-00001>
-						</damagelist>
-						<order type="number">2</order>
-						<type type="string">damage</type>
-					</id-00002>
-				</actions>
-				<cast type="number">0</cast>
-				<castingtime type="string">1 action</castingtime>
-				<components type="string">V, S</components>
-				<description type="formattedtext">
-					<p>You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 1d12 poison damage.</p>
-					<p>This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12).</p>
-				</description>
-				<duration type="string">Instantaneous</duration>
-				<group type="string">Spells</group>
-				<level type="number">0</level>
-				<locked type="number">1</locked>
-				<name type="string">Poison Spray</name>
-				<prepared type="number">0</prepared>
-				<range type="string">10 feet</range>
-				<ritual type="number">0</ritual>
-				<school type="string">Conjuration</school>
-				<source type="string">Druid, Eldritch Knight, Sorcerer, Warlock, Wizard, Arcane Trickster</source>
-			</id-00005>
 			<id-00006>
 				<actions>
 					<id-00001>
 						<atktype type="string">ranged</atktype>
 						<order type="number">1</order>
+						<tknbutton type="token"></tknbutton>
 						<type type="string">cast</type>
 					</id-00001>
 					<id-00002>
@@ -643,6 +657,7 @@
 							</id-00001>
 						</damagelist>
 						<order type="number">2</order>
+						<tknbutton type="token"></tknbutton>
 						<type type="string">damage</type>
 					</id-00002>
 				</actions>
@@ -674,6 +689,7 @@
 							</id-00001>
 						</heallist>
 						<order type="number">1</order>
+						<tknbutton type="token"></tknbutton>
 						<type type="string">heal</type>
 					</id-00001>
 				</actions>
@@ -702,6 +718,7 @@
 						<order type="number">1</order>
 						<savemagic type="number">1</savemagic>
 						<savetype type="string">constitution</savetype>
+						<tknbutton type="token"></tknbutton>
 						<type type="string">cast</type>
 					</id-00001>
 					<id-00002>
@@ -712,6 +729,7 @@
 							</id-00001>
 						</damagelist>
 						<order type="number">2</order>
+						<tknbutton type="token"></tknbutton>
 						<type type="string">damage</type>
 					</id-00002>
 				</actions>
@@ -823,6 +841,238 @@
 				<school type="string">Abjuration</school>
 				<source type="string">Cleric Trickery Domain, Druid, Druid Grassland Circle, Monk, Ranger</source>
 			</id-00013>
+			<id-00014>
+				<actions>
+					<id-00001>
+						<durmod type="number">1</durmod>
+						<durunit type="string">hour</durunit>
+						<label type="string">Wildshape; SName:BrownBear; SHealth:34hp; SAC: 11; SSTR:19; SDEX:10; SCON:16; SSize:L; SKILL:3,perception; NOTE: Keen Smell, Multiattack, Speed 40ft, Climb 30ft, passive Perception 13</label>
+						<order type="number">1</order>
+						<targeting type="string">self</targeting>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">effect</type>
+					</id-00001>
+					<id-00002>
+						<atkbase type="string">fixed</atkbase>
+						<atkmod type="number">6</atkmod>
+						<atkprof type="number">1</atkprof>
+						<atktype type="string">melee</atktype>
+						<order type="number">2</order>
+						<savedcmod type="number">0</savedcmod>
+						<savedcprof type="number">1</savedcprof>
+						<savemagic type="number">0</savemagic>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">cast</type>
+					</id-00002>
+					<id-00003>
+						<damagelist>
+							<id-00001>
+								<bonus type="number">0</bonus>
+								<dice type="dice"></dice>
+								<statmult type="number">1</statmult>
+								<type type="string">Claw Attack</type>
+							</id-00001>
+							<id-00002>
+								<bonus type="number">4</bonus>
+								<dice type="dice">d6,d6</dice>
+								<statmult type="number">1</statmult>
+								<type type="string">slashing</type>
+							</id-00002>
+						</damagelist>
+						<order type="number">3</order>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">damage</type>
+					</id-00003>
+					<id-00004>
+						<damagelist>
+							<id-00001>
+								<bonus type="number">0</bonus>
+								<dice type="dice"></dice>
+								<statmult type="number">1</statmult>
+								<type type="string">Bite Attack</type>
+							</id-00001>
+							<id-00002>
+								<bonus type="number">4</bonus>
+								<dice type="dice">d8</dice>
+								<statmult type="number">1</statmult>
+								<type type="string">piercing</type>
+							</id-00002>
+						</damagelist>
+						<order type="number">4</order>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">damage</type>
+					</id-00004>
+				</actions>
+				<cast type="number">0</cast>
+				<castingtime type="string">1 Action</castingtime>
+				<description type="formattedtext">
+					<p><b>Primary Useage: Melee Tank</b></p>
+					<frame>HP:34, AC: 11, Size: Large, 2 Attacks: +6 Bite/Claw, STR:19, DEX:10, CON:16, Type: Land Animal, Speed (40ft), Climb(30ft), Keen Smell, Multiattack(x2), perception(+3)</frame>
+					<linklist>
+						<link class="npc" recordname="reference.npcdata.brownbear@DD MM Monster Manual">Brown Bear</link>
+					</linklist>
+					<p><b><u>Keen Smell: </u></b>advantage on &#34;smell&#34; perception checks</p>
+					<p><b><u>Multiattack: </u></b>2 attacks, one bite attack and one claw attack</p>
+				</description>
+				<duration type="string">1 Hour / 2 Druid Levels</duration>
+				<group type="string">Spells</group>
+				<level type="number">1</level>
+				<locked type="number">1</locked>
+				<name type="string">Wildshape: CR1 Brown Bear</name>
+				<prepared type="number">0</prepared>
+				<range type="string">[SELF]</range>
+				<ritual type="number">0</ritual>
+				<shortdescription type="string">CR1 Speed (40ft), Climb(30ft), Keen Smell, Multiattack(x2), perception(+3)</shortdescription>
+				<source type="string">Druid</source>
+			</id-00014>
+			<id-00015>
+				<actions>
+					<id-00001>
+						<durmod type="number">3</durmod>
+						<durunit type="string">hour</durunit>
+						<label type="string">Wildshape; SName:GiantBoar; SHealth:42hp; SAC:12; SSTR:17; SDEX:10; SCON:16; SSize:L; NOTE: Speed 40ft, Charge, Relentless, passive Perception 8</label>
+						<order type="number">1</order>
+						<targeting type="string">self</targeting>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">effect</type>
+					</id-00001>
+					<id-00002>
+						<atkbase type="string">fixed</atkbase>
+						<atkmod type="number">5</atkmod>
+						<atkprof type="number">1</atkprof>
+						<atktype type="string">melee</atktype>
+						<order type="number">2</order>
+						<savedcbase type="string">fixed</savedcbase>
+						<savedcmod type="number">13</savedcmod>
+						<savedcprof type="number">1</savedcprof>
+						<savemagic type="number">0</savemagic>
+						<savetype type="string">strength</savetype>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">cast</type>
+					</id-00002>
+					<id-00003>
+						<damagelist>
+							<id-00001>
+								<bonus type="number">0</bonus>
+								<dice type="dice"></dice>
+								<statmult type="number">1</statmult>
+								<type type="string">Charge + Tusk Attack</type>
+							</id-00001>
+							<id-00002>
+								<bonus type="number">3</bonus>
+								<dice type="dice">d6,d6,d6,d6</dice>
+								<statmult type="number">1</statmult>
+								<type type="string">slashing, magic</type>
+							</id-00002>
+						</damagelist>
+						<order type="number">3</order>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">damage</type>
+					</id-00003>
+					<id-00004>
+						<durmod type="number">0</durmod>
+						<label type="string">Prone; Source: Giant Boar</label>
+						<order type="number">4</order>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">effect</type>
+					</id-00004>
+					<id-00005>
+						<atkbase type="string">fixed</atkbase>
+						<atkmod type="number">5</atkmod>
+						<atkprof type="number">1</atkprof>
+						<atktype type="string">melee</atktype>
+						<order type="number">5</order>
+						<savedcmod type="number">0</savedcmod>
+						<savedcprof type="number">1</savedcprof>
+						<savemagic type="number">0</savemagic>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">cast</type>
+					</id-00005>
+					<id-00006>
+						<damagelist>
+							<id-00001>
+								<bonus type="number">0</bonus>
+								<dice type="dice"></dice>
+								<statmult type="number">1</statmult>
+								<type type="string">Tusk Attack</type>
+							</id-00001>
+							<id-00002>
+								<bonus type="number">3</bonus>
+								<dice type="dice">d6,d6</dice>
+								<statmult type="number">1</statmult>
+								<type type="string">slashing, magic</type>
+							</id-00002>
+						</damagelist>
+						<order type="number">6</order>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">damage</type>
+					</id-00006>
+				</actions>
+				<cast type="number">0</cast>
+				<castingtime type="string">1 Action</castingtime>
+				<description type="formattedtext">
+					<p><b>Primary Useage: Charger</b></p>
+					<frame>Giant Boar: CR 2, HP:42, AC: 12, Size: Large, 1 Attack: +5, STR:17, DEX:10, CON:16, Type: Land Animal, Speed(40ft), Charge, Relentless, passive Perception 8</frame>
+					<linklist>
+						<link class="npc" recordname="reference.npcdata.giantboar@DD MM Monster Manual">Giant Boar</link>
+					</linklist>
+					<p><b><u>Charge: </u></b>Move 20ft straight and succeed in tusk attack, attack does an additional 2d6 dmg and target must succeed DC 13 STR save or be knocked prone</p>
+					<p><b><u>Relentless (Recharges after short or long rest): </u></b>if 10 dmg or less taken and reduced to 0 HP, reduced to 1 HP instead.</p>
+				</description>
+				<duration type="string">1 Hour / 2 Druid Levels</duration>
+				<group type="string">Spells</group>
+				<level type="number">2</level>
+				<locked type="number">1</locked>
+				<name type="string">Wildshape: CR2 Giant Boar</name>
+				<prepared type="number">0</prepared>
+				<range type="string">[SELF]</range>
+				<ritual type="number">0</ritual>
+				<shortdescription type="string">CR 2 Speed(40ft), Charge, Relentless</shortdescription>
+				<source type="string">Monster Manual</source>
+			</id-00015>
+			<id-00017>
+				<actions>
+					<id-00001>
+						<atkmod type="number">0</atkmod>
+						<atkprof type="number">1</atkprof>
+						<order type="number">1</order>
+						<savedcmod type="number">0</savedcmod>
+						<savedcprof type="number">1</savedcprof>
+						<savemagic type="number">1</savemagic>
+						<savetype type="string">dexterity</savetype>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">cast</type>
+					</id-00001>
+					<id-00002>
+						<circle_token type="number">0</circle_token>
+						<cone_token type="number">0</cone_token>
+						<measurenumber type="number">40</measurenumber>
+						<order type="number">2</order>
+						<sizefactor type="string">Measurement</sizefactor>
+						<target_token type="number">1</target_token>
+						<tknbutton type="token">tokens/WhiteLightCircles.png@Critically Awesome Essentials Module - 5e DM Tools</tknbutton>
+						<tknimg type="token">tokens/WhiteLightCircles.png@Critically Awesome Essentials Module - 5e DM Tools</tknimg>
+						<type type="string">Token</type>
+					</id-00002>
+				</actions>
+				<cast type="number">0</cast>
+				<castingtime type="string">1 action</castingtime>
+				<components type="string">V, M (a firefly or phosphorescent moss)</components>
+				<description type="formattedtext">
+					<p>You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.</p>
+					<p>If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.</p>
+				</description>
+				<duration type="string">1 hour</duration>
+				<group type="string">Spells</group>
+				<level type="number">0</level>
+				<locked type="number">1</locked>
+				<name type="string">Light</name>
+				<prepared type="number">0</prepared>
+				<range type="string">Touch</range>
+				<ritual type="number">0</ritual>
+				<school type="string">Evocation</school>
+				<source type="string">Bard, Cleric, Eldritch Knight, Sorcerer, Wizard, Arcane Trickster</source>
+			</id-00017>
 		</powers>
 		<profbonus type="number">2</profbonus>
 		<proficiencylist>
@@ -844,7 +1094,23 @@
 			<class>reference_race</class>
 			<recordname>reference.racedata.half_elf@DD PHB Deluxe</recordname>
 		</racelink>
+		<savedACArmor type="number">2</savedACArmor>
+		<savedACDEX type="string">max2</savedACDEX>
+		<savedACShield type="number">2</savedACShield>
+		<savedCHR type="number">10</savedCHR>
+		<savedCON type="number">11</savedCON>
+		<savedDEX type="number">14</savedDEX>
+		<savedINT type="number">12</savedINT>
+		<savedSTR type="number">13</savedSTR>
+		<savedWIS type="number">16</savedWIS>
 		<senses type="string">Darkvision 60</senses>
+		<shifted>
+			<preshifthp type="number">0</preshifthp>
+			<preshiftscale type="number">0</preshiftscale>
+			<preshiftspace type="number">0</preshiftspace>
+			<preshiftwounds type="number">0</preshiftwounds>
+		</shifted>
+		<shifttoken type="token"></shifttoken>
 		<size type="string">Medium</size>
 		<skilllist>
 			<id-00001>
