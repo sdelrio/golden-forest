@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <root version="3.3" release="8|CoreRPG:4">
 	<character>
+		<Spell_Tokens>
+			<Hour_of_reaping>
+				<ID type="number">36</ID>
+				<circle_token type="number">0</circle_token>
+				<cone_token type="number">0</cone_token>
+				<container type="string">image.id-02732.image</container>
+				<measurenumber type="number">32.5</measurenumber>
+				<measurevalue type="string">Radius</measurevalue>
+				<sizefactor type="string">Measurement</sizefactor>
+				<sizevalue type="string">Medium</sizevalue>
+				<targettoken type="number">1</targettoken>
+				<tkntype type="string">Spell Token</tkntype>
+			</Hour_of_reaping>
+		</Spell_Tokens>
 		<abilities>
 			<charisma>
 				<bonus type="number">1</bonus>
@@ -18,11 +32,18 @@
 			</constitution>
 			<dexterity>
 				<bonus type="number">4</bonus>
-				<save type="number">6</save>
+				<save type="number">7</save>
 				<savemodifier type="number">0</savemodifier>
 				<saveprof type="number">1</saveprof>
 				<score type="number">18</score>
 			</dexterity>
+			<honor>
+				<bonus type="number">-5</bonus>
+				<save type="number">-5</save>
+				<savemodifier type="number">0</savemodifier>
+				<saveprof type="number">0</saveprof>
+				<score type="number">0</score>
+			</honor>
 			<intelligence>
 				<bonus type="number">1</bonus>
 				<save type="number">1</save>
@@ -30,9 +51,16 @@
 				<saveprof type="number">0</saveprof>
 				<score type="number">12</score>
 			</intelligence>
+			<sanity>
+				<bonus type="number">-5</bonus>
+				<save type="number">-5</save>
+				<savemodifier type="number">0</savemodifier>
+				<saveprof type="number">0</saveprof>
+				<score type="number">0</score>
+			</sanity>
 			<strength>
 				<bonus type="number">0</bonus>
-				<save type="number">2</save>
+				<save type="number">3</save>
 				<savemodifier type="number">0</savemodifier>
 				<saveprof type="number">1</saveprof>
 				<score type="number">11</score>
@@ -47,6 +75,9 @@
 		</abilities>
 		<adventurelist>
 		</adventurelist>
+		<age type="string">20</age>
+		<alignment type="string">Neutral Good</alignment>
+		<appearance type="string">Minor Scar</appearance>
 		<background type="string">Sage</background>
 		<backgroundlink type="windowreference">
 			<class>reference_background</class>
@@ -58,30 +89,39 @@
 				<casterlevelinvmult type="number">0</casterlevelinvmult>
 				<casterpactmagic type="number">0</casterpactmagic>
 				<hddie type="dice">d8</hddie>
-				<hdused type="number">4</hdused>
-				<level type="number">4</level>
+				<hdused type="number">0</hdused>
+				<level type="number">7</level>
 				<name type="string">Monk</name>
+				<rolls>
+					<lvl-001 type="number">8</lvl-001>
+					<lvl-002 type="number">2</lvl-002>
+					<lvl-003 type="number">4</lvl-003>
+					<lvl-004 type="number">2</lvl-004>
+					<lvl-005 type="number">4</lvl-005>
+					<lvl-006 type="number">2</lvl-006>
+					<lvl-007 type="number">6</lvl-007>
+				</rolls>
 				<shortcut type="windowreference">
 					<class>reference_class</class>
-					<recordname>reference.classdata.monk@D&#38;D Sword Coast Adventurer's Guide - Player's Guide</recordname>
+					<recordname>reference.classdata.monk@D&amp;D Sword Coast Adventurer's Guide - Player's Guide</recordname>
 				</shortcut>
 			</id-00001>
 		</classes>
 		<coins>
 			<slot1>
-				<amount type="number">953</amount>
+				<amount type="number">22</amount>
 				<name type="string">SP</name>
 			</slot1>
 			<slot2>
-				<amount type="number">696</amount>
+				<amount type="number">468</amount>
 				<name type="string">GP</name>
 			</slot2>
 			<slot3>
-				<amount type="number">411</amount>
+				<amount type="number">52</amount>
 				<name type="string">CP</name>
 			</slot3>
 			<slot4>
-				<amount type="number">20</amount>
+				<amount type="number">22</amount>
 				<name type="string">EP</name>
 			</slot4>
 			<slot5>
@@ -89,7 +129,8 @@
 				<name type="string">PP</name>
 			</slot5>
 			<slot6>
-				<amount type="number">0</amount>
+				<amount type="number">7</amount>
+				<name type="string">RATIONS</name>
 			</slot6>
 		</coins>
 		<defenses>
@@ -103,7 +144,6 @@
 				<temporary type="number">0</temporary>
 				<total type="number">16</total>
 			</ac>
-			<special type="string">antorcha y mano libre</special>
 		</defenses>
 		<effectlist>
 		</effectlist>
@@ -111,11 +151,11 @@
 			<encumbered type="number">55</encumbered>
 			<encumberedheavy type="number">110</encumberedheavy>
 			<liftpushdrag type="number">330</liftpushdrag>
-			<load type="number">47.91</load>
+			<load type="number">9</load>
 			<max type="number">165</max>
 		</encumbrance>
-		<exp type="number">3508</exp>
-		<expneeded type="number">6500</expneeded>
+		<exp type="number">33422</exp>
+		<expneeded type="number">34000</expneeded>
 		<featlist>
 			<id-00001>
 				<locked type="number">1</locked>
@@ -201,10 +241,10 @@
 					<p>Monks of the Way of the Long Death are obsessed with the meaning and mechanics of dying. They capture creatures and prepare elaborate experiments to capture, record, and understand the moments of their demise. They then use this knowledge to guide their understanding of martial arts, yielding a deadly fighting style.</p>
 					<h>Features</h>
 					<linklist>
-						<link class="reference_classfeature" recordname="reference.classdata.monk.features.touchofdeath3@D&#38;D Sword Coast Adventurer's Guide - Player's Guide">Touch of Death</link>
-						<link class="reference_classfeature" recordname="reference.classdata.monk.features.hourofreaping6@D&#38;D Sword Coast Adventurer's Guide - Player's Guide">Hour of Reaping</link>
-						<link class="reference_classfeature" recordname="reference.classdata.monk.features.masteryofdeath11@D&#38;D Sword Coast Adventurer's Guide - Player's Guide">Mastery of Death</link>
-						<link class="reference_classfeature" recordname="reference.classdata.monk.features.touchofthelongdeath17@D&#38;D Sword Coast Adventurer's Guide - Player's Guide">Touch of the Long Death</link>
+						<link class="reference_classfeature" recordname="reference.classdata.monk.features.touchofdeath3@D&amp;D Sword Coast Adventurer's Guide - Player's Guide">Touch of Death</link>
+						<link class="reference_classfeature" recordname="reference.classdata.monk.features.hourofreaping6@D&amp;D Sword Coast Adventurer's Guide - Player's Guide">Hour of Reaping</link>
+						<link class="reference_classfeature" recordname="reference.classdata.monk.features.masteryofdeath11@D&amp;D Sword Coast Adventurer's Guide - Player's Guide">Mastery of Death</link>
+						<link class="reference_classfeature" recordname="reference.classdata.monk.features.touchofthelongdeath17@D&amp;D Sword Coast Adventurer's Guide - Player's Guide">Touch of the Long Death</link>
 					</linklist>
 				</text>
 			</id-00006>
@@ -247,15 +287,74 @@
 					<p>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.</p>
 				</text>
 			</id-00010>
+			<id-00011>
+				<level type="number">5</level>
+				<locked type="number">1</locked>
+				<name type="string">Extra Attack</name>
+				<source type="string">Monk</source>
+				<text type="formattedtext">
+					<p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p>
+				</text>
+			</id-00011>
+			<id-00012>
+				<level type="number">5</level>
+				<locked type="number">0</locked>
+				<name type="string">Stunning Strike</name>
+				<source type="string">Monk</source>
+				<text type="formattedtext">
+					<p>Starting at 5th level, you can interfere with the flow of ki in an opponent's body. When you hit another creature with a melee weapon attack, you can spend 1 ki point to attempt a stunning strike. The target must succeed on a Constitution saving throw or be stunned until the end of your next turn.</p>
+				</text>
+			</id-00012>
+			<id-00013>
+				<level type="number">6</level>
+				<locked type="number">1</locked>
+				<name type="string">Ki-Empowered Strikes</name>
+				<source type="string">Monk</source>
+				<text type="formattedtext">
+					<p>Starting at 6th level, your unarmed strikes count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.</p>
+				</text>
+			</id-00013>
+			<id-00014>
+				<level type="number">6</level>
+				<locked type="number">1</locked>
+				<name type="string">Hour of Reaping</name>
+				<source type="string">Monk</source>
+				<specialization type="string">Way of the Long Death</specialization>
+				<text type="formattedtext">
+					<p>At 6th level, you gain the ability to unsettle or terrify those around you as an action, for your soul has been touched by the shadow of death. When you take this action, each creature within 30 feet of you that can see you must succeed on a Wisdom saving throw or be frightened of you until the end of your next turn.</p>
+				</text>
+			</id-00014>
+			<id-00015>
+				<level type="number">7</level>
+				<locked type="number">1</locked>
+				<name type="string">Stillness of Mind</name>
+				<source type="string">Monk</source>
+				<text type="formattedtext">
+					<p>Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be charmed or frightened.</p>
+				</text>
+			</id-00015>
+			<id-00016>
+				<level type="number">7</level>
+				<locked type="number">1</locked>
+				<name type="string">Evasion</name>
+				<source type="string">Monk</source>
+				<text type="formattedtext">
+					<p>At 7th level, your instinctive agility lets you dodge out of the way of certain area effects, such as a blue dragon's lightning breath or a fireball spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</p>
+				</text>
+			</id-00016>
 		</featurelist>
 		<flaws type="string">I speak without really thinking through my words, invariably insulting others.</flaws>
-		<hero type="number">0</hero>
+		<gender type="string">Male</gender>
+		<hero type="number">14</hero>
 		<hp>
-			<deathsavefail type="number">0</deathsavefail>
-			<deathsavesuccess type="number">0</deathsavesuccess>
+			<adjust type="number">0</adjust>
+			<base type="number">56</base>
+			<deathsavefail type="number">3</deathsavefail>
+			<deathsavesuccess type="number">2</deathsavesuccess>
+			<hdmod type="number">0</hdmod>
 			<temporary type="number">0</temporary>
-			<total type="number">32</total>
-			<wounds type="number">31</wounds>
+			<total type="number">56</total>
+			<wounds type="number">56</wounds>
 		</hp>
 		<ideals type="string">Self-Improvement. The goal of a life of study is the betterment of oneself. (Any)</ideals>
 		<initiative>
@@ -266,75 +365,27 @@
 		<inspiration type="number">0</inspiration>
 		<inventorylist>
 			<id-00001>
+				<carried type="number">1</carried>
+				<count type="number">1</count>
+				<isidentified type="number">1</isidentified>
+				<locked type="number">1</locked>
+				<name type="string">Rope, Silk (50 Feet)</name>
+				<weight type="number">0</weight>
+			</id-00001>
+			<id-00002>
 				<ac type="number">0</ac>
 				<bonus type="number">0</bonus>
 				<carried type="number">1</carried>
-				<cost type="string">2 gp</cost>
-				<count type="number">2</count>
-				<damage type="string">1d4 piercing</damage>
-				<description type="formattedtext">
-					<p></p>
-				</description>
-				<isidentified type="number">1</isidentified>
-				<istemplate type="number">0</istemplate>
-				<locked type="number">1</locked>
-				<name type="string">Dagger</name>
-				<properties type="string">Finesse, light, thrown (range 20/60)</properties>
-				<subtype type="string">Simple Melee Weapons</subtype>
-				<type type="string">Weapon</type>
-				<weight type="number">1</weight>
-			</id-00001>
-			<id-00002>
-				<carried type="number">1</carried>
-				<cost type="string">1 gp</cost>
 				<count type="number">1</count>
-				<isidentified type="number">1</isidentified>
-				<locked type="number">1</locked>
-				<name type="string">Bedroll</name>
-				<subtype type="string">Standard</subtype>
-				<type type="string">Adventuring Gear</type>
-				<weight type="number">7</weight>
+				<description type="formattedtext">
+					<p>+1 vs cold climates</p>
+				</description>
+				<effectlist>
+				</effectlist>
+				<name type="string">Ropas de invierno</name>
+				<weight type="number">0</weight>
 			</id-00002>
 			<id-00003>
-				<carried type="number">1</carried>
-				<cost type="string">2 gp</cost>
-				<count type="number">1</count>
-				<isidentified type="number">1</isidentified>
-				<locked type="number">1</locked>
-				<name type="string">Backpack (Empty)</name>
-				<subtype type="string">Standard</subtype>
-				<type type="string">Adventuring Gear</type>
-				<weight type="number">5</weight>
-			</id-00003>
-			<id-00004>
-				<carried type="number">1</carried>
-				<cost type="string">5 sp</cost>
-				<count type="number">1</count>
-				<description type="formattedtext">
-					<p>This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch-or anything else with abundant, exposed fuel-takes an action. Lighting any other fire takes 1 minute.</p>
-				</description>
-				<isidentified type="number">1</isidentified>
-				<locked type="number">1</locked>
-				<name type="string">Tinderbox</name>
-				<subtype type="string">Standard</subtype>
-				<type type="string">Adventuring Gear</type>
-				<weight type="number">1</weight>
-			</id-00004>
-			<id-00005>
-				<carried type="number">1</carried>
-				<cost type="string">1 cp</cost>
-				<count type="number">5</count>
-				<description type="formattedtext">
-					<p>A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.</p>
-				</description>
-				<isidentified type="number">1</isidentified>
-				<locked type="number">1</locked>
-				<name type="string">Torch</name>
-				<subtype type="string">Standard</subtype>
-				<type type="string">Adventuring Gear</type>
-				<weight type="number">1</weight>
-			</id-00005>
-			<id-00006>
 				<carried type="number">1</carried>
 				<cost type="string">2 sp</cost>
 				<count type="number">1</count>
@@ -344,325 +395,33 @@
 				<subtype type="string">Standard</subtype>
 				<type type="string">Adventuring Gear</type>
 				<weight type="number">5</weight>
-			</id-00006>
-			<id-00007>
-				<ac type="number">0</ac>
-				<bonus type="number">0</bonus>
-				<carried type="number">2</carried>
-				<cost type="string">25 gp</cost>
-				<count type="number">1</count>
-				<damage type="string">1d6 piercing</damage>
-				<description type="formattedtext">
-					<p></p>
-				</description>
-				<isidentified type="number">1</isidentified>
-				<istemplate type="number">0</istemplate>
-				<locked type="number">1</locked>
-				<name type="string">Shortbow</name>
-				<properties type="string">Ammunition (range 80/320), two-handed</properties>
-				<subtype type="string">Simple Ranged Weapons</subtype>
-				<type type="string">Weapon</type>
-				<weight type="number">2</weight>
-			</id-00007>
-			<id-00008>
-				<ac type="number">0</ac>
-				<bonus type="number">0</bonus>
-				<carried type="number">2</carried>
-				<cost type="string">10 gp</cost>
-				<count type="number">1</count>
-				<damage type="string">1d6 piercing</damage>
-				<description type="formattedtext">
-					<linklist>
-						<link class="encounter" recordname="encounter.id-00009">Expanded weapon Properties</link>
-					</linklist>
-				</description>
-				<isidentified type="number">1</isidentified>
-				<istemplate type="number">0</istemplate>
-				<locked type="number">1</locked>
-				<name type="string">Shortsword</name>
-				<properties type="string">Finesse, light, close quarters(m)</properties>
-				<subtype type="string">Martial Melee Weapons</subtype>
-				<type type="string">Weapon</type>
-				<weight type="number">2</weight>
-			</id-00008>
-			<id-00009>
-				<carried type="number">1</carried>
-				<cost type="string">5 sp</cost>
-				<count type="number">1</count>
-				<description type="formattedtext">
-					<p>Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.</p>
-				</description>
-				<isidentified type="number">1</isidentified>
-				<locked type="number">1</locked>
-				<name type="string">Rations (1 Day)</name>
-				<subtype type="string">Standard</subtype>
-				<type type="string">Adventuring Gear</type>
-				<weight type="number">2</weight>
-			</id-00009>
-			<id-00010>
-				<ac type="number">0</ac>
-				<bonus type="number">0</bonus>
-				<carried type="number">1</carried>
-				<count type="number">1</count>
-				<description type="formattedtext">
-					<h>Description</h>
-					<linklist>
-						<link class="reference_spell" recordname="reference.spelldata.spiderclimb@*">Spell: Spider Climb</link>
-						<link class="imagewindow" recordname="image.id-00012@DD TYP The Sunless Citadel">Image: Spell Scrolls</link>
-					</linklist>
-					<p>This spell scroll bears the words of a single spell, <i>Spider Climb </i>, written in a mystical cipher. If the spell is on your class's spell list, you can read the scroll and cast its spell without providing any material components. Otherwise, the scroll is unintelligible. Casting the spell by reading the scroll requires the spell's normal casting time. Once the spell is cast, the words on the scroll fade, and it crumbles to dust. If the casting is interrupted, the scroll is not lost.</p>
-					<p>If the spell is on your class's spell list but of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC equals 10 + the spell's level. On a failed check, the spell disappears from the scroll with no other effect.</p>
-					<p>Once the spell is cast, the words on the scroll fade, and the scroll itself crumbles to dust.</p>
-					<p>This spell scroll's saving throw DC 13 and attack bonus +5.</p>
-					<p>A wizard spell on a spell scroll can be copied just as spells in spellbooks can be copied. When a spell is copied from a spell scroll, the copier must succeed on an Intelligence (Arcana) check with a DC equal to 10 + the spell's level. If the check succeeds, the spell is successfully copied. Whether the check succeeds or fails, the spell scroll is destroyed.</p>
-				</description>
-				<effectlist>
-				</effectlist>
-				<isidentified type="number">1</isidentified>
-				<istemplate type="number">0</istemplate>
-				<locked type="number">1</locked>
-				<name type="string">Scroll of Spider Climb</name>
-				<nonid_name type="string">Elegant Scroll (Transmutation)</nonid_name>
-				<nonidentified type="string">The materials used in this scroll are of very high quality and the writing is precise and done with a great deal of care and attention to detail.</nonidentified>
-				<properties type="string">Magic</properties>
-				<rarity type="string">Uncommon</rarity>
-				<spells>
-					<id-00001>
-						<link type="windowreference">
-							<class>reference_spell</class>
-							<recordname>reference.spelldata.spiderclimb@*</recordname>
-						</link>
-						<name type="string">Spider Climb</name>
-					</id-00001>
-				</spells>
-				<type type="string">Scroll</type>
-				<weight type="number">0</weight>
-			</id-00010>
-			<id-00011>
-				<carried type="number">1</carried>
-				<cost type="string">2 gp</cost>
-				<count type="number">1</count>
-				<description type="formattedtext">
-					<p></p>
-				</description>
-				<isidentified type="number">1</isidentified>
-				<locked type="number">1</locked>
-				<name type="string">Clothes, Traveler's</name>
-				<subtype type="string">Standard</subtype>
-				<type type="string">Adventuring Gear</type>
-				<weight type="number">4</weight>
-			</id-00011>
-			<id-00012>
-				<ac type="number">0</ac>
-				<bonus type="number">0</bonus>
-				<carried type="number">1</carried>
-				<cost type="string">50 gp</cost>
-				<count type="number">1</count>
-				<description type="formattedtext">
-					<p>This sticky, adhesive fluid ignites when exposed to air. As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist's fire as an improvised weapon. On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.</p>
-				</description>
-				<effectlist>
-				</effectlist>
-				<isidentified type="number">1</isidentified>
-				<istemplate type="number">0</istemplate>
-				<locked type="number">1</locked>
-				<name type="string">Alchemist's Fire (Flask)</name>
-				<subtype type="string">Standard</subtype>
-				<type type="string">Adventuring Gear</type>
-				<weight type="number">1</weight>
-			</id-00012>
-			<id-00013>
-				<ac type="number">0</ac>
-				<bonus type="number">0</bonus>
-				<carried type="number">1</carried>
-				<count type="number">1</count>
-				<damage type="string">1d6 bludgeoning</damage>
-				<description type="formattedtext">
-					<h>Description</h>
-					<linklist>
-						<link class="imagewindow" recordname="reference.imagedata.img_staff_of_withering_jpg@*"><b>Image: </b></link>Staff of Withering</linklist>
-					<p>This staff has 3 charges and regains 1d3 expended charges daily at dawn.</p>
-					<p>The staff can be wielded as a magic quarterstaff. As a bonus action, you can expend a charge to add 2d10 necrotic damage any attack made with the staff until the start of your next turn. In addition, the target must succeed on a DC 15 Constitution saving throw or it becomes <b>weakened </b>. The target can repeat the saving throw at the end of each of its turns ending the effect on a success.</p>
-					<p><b><i>Weakened</i></b></p>
-					<p>A weakened creature's damage rolls do not benefit fromany ability modifiers (only roll damage die).</p>
-					<p>The condition ends if the creature is healed.</p>
-				</description>
-				<effectlist>
-				</effectlist>
-				<isidentified type="number">1</isidentified>
-				<locked type="number">1</locked>
-				<name type="string">Staff of Withering</name>
-				<nonid_name type="string">Staff</nonid_name>
-				<nonidentified type="string">A wooden staff weirdly carved into the shape of a hand and forearm emerging from a piece of gnarled wood.</nonidentified>
-				<properties type="string">Versatile (1d8), magic</properties>
-				<rarity type="string">Rare (Requires Attunement By A Cleric, Druid, Warlock or Monk)</rarity>
-				<spells>
-					<id-00001>
-						<link type="windowreference">
-							<class></class>
-							<recordname></recordname>
-						</link>
-						<name type="string">Staff of Withering</name>
-					</id-00001>
-					<id-00002>
-						<link type="windowreference">
-							<class></class>
-							<recordname></recordname>
-						</link>
-						<name type="string">Quarterstaff</name>
-					</id-00002>
-				</spells>
-				<subtype type="string">Weapon</subtype>
-				<type type="string">Staff</type>
-				<weight type="number">4</weight>
-			</id-00013>
-			<id-00014>
-				<ac type="number">0</ac>
-				<bonus type="number">0</bonus>
-				<carried type="number">1</carried>
-				<cost type="string">50 gp</cost>
-				<count type="number">2</count>
-				<description type="formattedtext">
-					<p>A character who drinks the magical red fluid in this vial regains 2d4 + 2 hit points. Drinking or administering a potion takes an action.</p>
-				</description>
-				<effectlist>
-				</effectlist>
-				<isidentified type="number">1</isidentified>
-				<locked type="number">1</locked>
-				<name type="string">Potion of Healing</name>
-				<subtype type="string">Standard</subtype>
-				<type type="string">Adventuring Gear</type>
-				<weight type="number">0.5</weight>
-			</id-00014>
-			<id-00015>
-				<carried type="number">1</carried>
-				<cost type="string">25 gp</cost>
-				<count type="number">1</count>
-				<description type="formattedtext">
-					<p>This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks.</p>
-				</description>
-				<effectlist>
-				</effectlist>
-				<isidentified type="number">1</isidentified>
-				<locked type="number">1</locked>
-				<name type="string">Thieves' Tools</name>
-				<subtype type="string">Kits / Sets</subtype>
-				<type type="string">Tools</type>
-				<weight type="number">1</weight>
-			</id-00015>
-			<id-00016>
-				<ac type="number">0</ac>
-				<bonus type="number">0</bonus>
-				<carried type="number">1</carried>
-				<cost type="string">75 gp</cost>
-				<count type="number">1</count>
-				<damage type="string">1d6 piercing</damage>
-				<description type="formattedtext">
-					<p></p>
-				</description>
-				<effectlist>
-				</effectlist>
-				<isidentified type="number">1</isidentified>
-				<locked type="number">1</locked>
-				<name type="string">Hand Crossbow</name>
-				<properties type="string">Ammunition (range 30/120), light, quick</properties>
-				<subtype type="string">Martial Ranged Weaponsd</subtype>
-				<type type="string">Weapon</type>
-				<weight type="number">3</weight>
-			</id-00016>
-			<id-00017>
-				<ac type="number">0</ac>
-				<bonus type="number">0</bonus>
-				<carried type="number">1</carried>
-				<cost type="string">50 gp</cost>
-				<count type="number">2</count>
-				<description type="formattedtext">
-					<p>A nice shiny gemstone</p>
-				</description>
-				<effectlist>
-				</effectlist>
-				<isidentified type="number">1</isidentified>
-				<istemplate type="number">0</istemplate>
-				<locked type="number">1</locked>
-				<name type="string">Onyx</name>
-				<subtype type="string">Gemstone</subtype>
-				<type type="string">Treasure</type>
-				<weight type="number">0.1</weight>
-			</id-00017>
-			<id-00018>
-				<carried type="number">1</carried>
-				<cost type="string">100 gp</cost>
-				<count type="number">1</count>
-				<description type="formattedtext">
-					<p>This gemstone is opaque lustrous white, yellow, or pink in color.</p>
-				</description>
-				<isidentified type="number">1</isidentified>
-				<locked type="number">1</locked>
-				<name type="string">Pearl</name>
-				<subtype type="string">Gemstones (100 Gp)</subtype>
-				<type type="string">Treasure</type>
-				<weight type="number">0.01</weight>
-			</id-00018>
-			<id-00019>
-				<ac type="number">0</ac>
-				<bonus type="number">0</bonus>
-				<carried type="number">1</carried>
-				<cost type="string">200 gp</cost>
-				<count type="number">1</count>
-				<description type="formattedtext">
-					<p>A large topaz</p>
-				</description>
-				<effectlist>
-				</effectlist>
-				<isidentified type="number">1</isidentified>
-				<istemplate type="number">0</istemplate>
-				<locked type="number">1</locked>
-				<name type="string">Topaz</name>
-				<subtype type="string">Gemstone</subtype>
-				<type type="string">Treasure</type>
-				<weight type="number">0.2</weight>
-			</id-00019>
+			</id-00003>
 			<id-00020>
 				<ac type="number">0</ac>
 				<bonus type="number">0</bonus>
 				<carried type="number">1</carried>
+				<cost type="string">15 gp</cost>
 				<count type="number">1</count>
 				<description type="formattedtext">
-					<h>Description</h>
-					<linklist>
-						<link class="power" recordname="reference.spelldata.lesserrestoration@DD PHB Deluxe">Lesser Restoration</link>
-					</linklist>
-					<p><b>Potion Notes</b></p>
-					<p>Drinking or administering a potion takes an action.</p>
+					<p>+1 vs cold climates</p>
 				</description>
 				<effectlist>
-				</effectlist>
-				<isidentified type="number">0</isidentified>
-				<istemplate type="number">0</istemplate>
-				<locked type="number">1</locked>
-				<name type="string">Lesser Potion of Lesser Restoration</name>
-				<nonid_name type="string">Potion</nonid_name>
-				<nonidentified type="string">This vial contains a green liquid</nonidentified>
-				<properties type="string">Magic</properties>
-				<rarity type="string">Uncommon</rarity>
-				<spells>
 					<id-00001>
-						<link type="windowreference">
-							<class></class>
-							<recordname></recordname>
-						</link>
-						<name type="string">Potion of Vitality</name>
+						<ability_modifier type="number">0</ability_modifier>
+						<actiononly type="number">0</actiononly>
+						<durdice type="dice"></durdice>
+						<durmod type="number">0</durmod>
+						<effect type="string">DISSKILL: acrobatics, athletics</effect>
+						<effect_description type="string">[DISSKILL: acrobatics, athletics]</effect_description>
+						<misc_modifier type="number">0</misc_modifier>
+						<name type="string">pieles de refuerzo</name>
+						<save_modifier type="number">0</save_modifier>
+						<susceptiblity_modifier type="number">0</susceptiblity_modifier>
 					</id-00001>
-					<id-00002>
-						<link type="windowreference">
-							<class></class>
-							<recordname></recordname>
-						</link>
-						<name type="string">Potion</name>
-					</id-00002>
-				</spells>
-				<type type="string">Potion</type>
-				<weight type="number">0.5</weight>
+				</effectlist>
+				<locked type="number">1</locked>
+				<name type="string">pieles de refuerzo</name>
+				<weight type="number">4</weight>
 			</id-00020>
 		</inventorylist>
 		<languagelist>
@@ -679,10 +438,10 @@
 				<name type="string">Celestial</name>
 			</id-00004>
 		</languagelist>
-		<level type="number">4</level>
-		<name type="string">Karas OpenHand</name>
-		<notes type="string">Speciality. Professor.</notes>
-		<pc_label_hero type="string">Hero Point</pc_label_hero>
+		<level type="number">7</level>
+		<name type="string">Karas Schmidt</name>
+		<notes type="string">Speciality. Professor. lvl 5 (4) + lvl 6 (2) + lvl 7 (6). (56 maxhp)</notes>
+		<pc_label_hero type="string">Sanity</pc_label_hero>
 		<perception type="number">12</perception>
 		<perceptionmodifier type="number">0</perceptionmodifier>
 		<personalitytraits type="string">I use polysyllabic words that convey the impression of great erudition.</personalitytraits>
@@ -695,7 +454,7 @@
 				<savemod type="number">0</savemod>
 				<saveprof type="number">1</saveprof>
 				<stat type="string">wisdom</stat>
-				<uses type="number">4</uses>
+				<uses type="number">7</uses>
 				<usesperiod type="string">enc</usesperiod>
 			</id-00001>
 		</powergroup>
@@ -773,6 +532,7 @@
 				<used type="number">0</used>
 			</spellslots9>
 		</powermeta>
+		<powermode type="string">standard</powermode>
 		<powers>
 			<id-00001>
 				<actions>
@@ -785,6 +545,8 @@
 						<order type="number">1</order>
 						<savedcmod type="number">0</savedcmod>
 						<savedcprof type="number">1</savedcprof>
+						<savemagic type="number">0</savemagic>
+						<tknbutton type="token"></tknbutton>
 						<type type="string">cast</type>
 					</id-00001>
 					<id-00002>
@@ -796,6 +558,7 @@
 						<order type="number">2</order>
 						<savedcmod type="number">0</savedcmod>
 						<savedcprof type="number">1</savedcprof>
+						<tknbutton type="token"></tknbutton>
 						<type type="string">cast</type>
 					</id-00002>
 				</actions>
@@ -811,15 +574,17 @@
 				<locked type="number">1</locked>
 				<name type="string">Parry spell (reaction)</name>
 				<prepared type="number">0</prepared>
+				<preparedDomain type="number">0</preparedDomain>
 				<ritual type="number">0</ritual>
 			</id-00001>
 			<id-00002>
 				<actions>
 					<id-00001>
 						<durmod type="number">1</durmod>
-						<label type="string">Patient Defense; GRANTDISATK</label>
+						<label type="string">Patient Defense; Dodge</label>
 						<order type="number">1</order>
 						<targeting type="string">self</targeting>
+						<tknbutton type="token"></tknbutton>
 						<type type="string">effect</type>
 					</id-00001>
 				</actions>
@@ -833,6 +598,7 @@
 				<locked type="number">1</locked>
 				<name type="string">Patient Defense (bonus action)</name>
 				<prepared type="number">0</prepared>
+				<preparedDomain type="number">0</preparedDomain>
 				<ritual type="number">0</ritual>
 			</id-00002>
 			<id-00003>
@@ -848,6 +614,7 @@
 				<locked type="number">1</locked>
 				<name type="string">Flurry of Blows (bonus action)</name>
 				<prepared type="number">0</prepared>
+				<preparedDomain type="number">0</preparedDomain>
 				<ritual type="number">0</ritual>
 			</id-00003>
 			<id-00004>
@@ -863,6 +630,7 @@
 				<locked type="number">1</locked>
 				<name type="string">Step of the Wind (bonus action)</name>
 				<prepared type="number">0</prepared>
+				<preparedDomain type="number">0</preparedDomain>
 				<ritual type="number">0</ritual>
 			</id-00004>
 			<id-00005>
@@ -870,15 +638,22 @@
 					<id-00001>
 						<heallist>
 							<id-00001>
-								<bonus type="number">2</bonus>
+								<bonus type="number">0</bonus>
 								<dice type="dice"></dice>
 								<stat type="string">level</stat>
 								<statmult type="number">1</statmult>
 							</id-00001>
+							<id-00002>
+								<bonus type="number">0</bonus>
+								<dice type="dice"></dice>
+								<stat type="string">wisdom</stat>
+								<statmult type="number">1</statmult>
+							</id-00002>
 						</heallist>
 						<healtargeting type="string">self</healtargeting>
 						<healtype type="string">temp</healtype>
 						<order type="number">1</order>
+						<tknbutton type="token"></tknbutton>
 						<type type="string">heal</type>
 					</id-00001>
 				</actions>
@@ -890,11 +665,166 @@
 				<locked type="number">1</locked>
 				<name type="string">Touch of Death</name>
 				<prepared type="number">0</prepared>
+				<preparedDomain type="number">0</preparedDomain>
 				<ritual type="number">0</ritual>
 				<shortdescription type="string">Starting when you choose this tradition at 3rd level, your study of death allows you to extract vitality from another creature as it nears its demise. When you reduce a creature within 5 feet of you to 0 hit points, you gain temporary hit points equal to your Wisdom modifier + you monk level (minimum 1).</shortdescription>
 			</id-00005>
+			<id-00006>
+				<actions>
+					<id-00001>
+						<atkmod type="number">0</atkmod>
+						<atkprof type="number">1</atkprof>
+						<order type="number">1</order>
+						<savedcbase type="string">ability</savedcbase>
+						<savedcmod type="number">0</savedcmod>
+						<savedcprof type="number">1</savedcprof>
+						<savedcstat type="string">wisdom</savedcstat>
+						<savemagic type="number">1</savemagic>
+						<savetype type="string">wisdom</savetype>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">cast</type>
+					</id-00001>
+					<id-00002>
+						<durmod type="number">1</durmod>
+						<label type="string">Frightened</label>
+						<order type="number">2</order>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">effect</type>
+					</id-00002>
+					<id-00003>
+						<circle_token type="number">0</circle_token>
+						<cone_token type="number">0</cone_token>
+						<measurenumber type="number">32.5</measurenumber>
+						<order type="number">3</order>
+						<sizefactor type="string">Measurement</sizefactor>
+						<target_persist_token type="number">0</target_persist_token>
+						<target_token type="number">1</target_token>
+						<tknbutton type="token">tokens/ANTILIFE SHELL.png@Dungeons and Dragons 5e Spell Tokens Small</tknbutton>
+						<tknimg type="token">tokens/ANTILIFE SHELL.png@Dungeons and Dragons 5e Spell Tokens Small</tknimg>
+						<type type="string">Token</type>
+					</id-00003>
+				</actions>
+				<cast type="number">0</cast>
+				<description type="formattedtext">
+					<p>At 6th level, you gain the ability to unsettle or terrify those around you as an action, for your soul has been touched by the shadow of death. When you take this action, each creature within 30 feet of you that can see you must succeed on a Wisdom saving throw or be frightened of you until the end of your next turn.</p>
+				</description>
+				<level type="number">0</level>
+				<locked type="number">1</locked>
+				<name type="string">Hour of reaping</name>
+				<prepared type="number">0</prepared>
+				<preparedDomain type="number">0</preparedDomain>
+				<ritual type="number">0</ritual>
+			</id-00006>
+			<id-00007>
+				<actions>
+					<id-00001>
+						<durmod type="number">1</durmod>
+						<label type="string">DMG: 2d10 necrotic</label>
+						<order type="number">1</order>
+						<targeting type="string">self</targeting>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">effect</type>
+					</id-00001>
+					<id-00002>
+						<atkmod type="number">0</atkmod>
+						<atkprof type="number">1</atkprof>
+						<order type="number">2</order>
+						<savedcbase type="string">fixed</savedcbase>
+						<savedcmod type="number">15</savedcmod>
+						<savedcprof type="number">1</savedcprof>
+						<savemagic type="number">0</savemagic>
+						<savetype type="string">constitution</savetype>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">cast</type>
+					</id-00002>
+				</actions>
+				<cast type="number">0</cast>
+				<level type="number">0</level>
+				<name type="string">Staff of Withering</name>
+				<prepared type="number">3</prepared>
+				<preparedDomain type="number">0</preparedDomain>
+				<usesperiod type="string">once</usesperiod>
+			</id-00007>
+			<id-00008>
+				<actions>
+					<id-00001>
+						<atkmod type="number">0</atkmod>
+						<atkprof type="number">1</atkprof>
+						<order type="number">1</order>
+						<savedcmod type="number">0</savedcmod>
+						<savedcprof type="number">1</savedcprof>
+						<savemagic type="number">0</savemagic>
+						<savetype type="string">constitution</savetype>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">cast</type>
+					</id-00001>
+					<id-00002>
+						<durmod type="number">1</durmod>
+						<label type="string">Stunned</label>
+						<order type="number">2</order>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">effect</type>
+					</id-00002>
+				</actions>
+				<cast type="number">0</cast>
+				<description type="formattedtext">
+					<p>Starting at 5th level, you can interfere with the flow of ki in an opponent's body. When you hit another creature with a melee weapon attack, you can spend 1 ki point to attempt a stunning strike. The target must succeed on a Constitution saving throw or be stunned until the end of your next turn.</p>
+				</description>
+				<group type="string">Ki powers</group>
+				<level type="number">0</level>
+				<locked type="number">1</locked>
+				<name type="string">Stunning strike</name>
+				<prepared type="number">0</prepared>
+				<preparedDomain type="number">0</preparedDomain>
+				<ritual type="number">0</ritual>
+			</id-00008>
+			<id-00009>
+				<actions>
+					<id-00001>
+						<heallist>
+							<id-00001>
+								<bonus type="number">6</bonus>
+								<dice type="dice">d10</dice>
+								<stat type="string">dexterity</stat>
+								<statmult type="number">1</statmult>
+							</id-00001>
+						</heallist>
+						<healtargeting type="string">self</healtargeting>
+						<healtype type="string">temp</healtype>
+						<order type="number">1</order>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">heal</type>
+					</id-00001>
+				</actions>
+				<cast type="number">0</cast>
+				<description type="formattedtext">
+					<p></p>
+				</description>
+				<level type="number">0</level>
+				<name type="string">Deflect Missile</name>
+				<prepared type="number">0</prepared>
+				<preparedDomain type="number">0</preparedDomain>
+				<ritual type="number">0</ritual>
+			</id-00009>
+			<id-00010>
+				<actions>
+					<id-00001>
+						<durmod type="number">0</durmod>
+						<label type="string">Evasion</label>
+						<order type="number">1</order>
+						<targeting type="string">self</targeting>
+						<tknbutton type="token"></tknbutton>
+						<type type="string">effect</type>
+					</id-00001>
+				</actions>
+				<cast type="number">0</cast>
+				<level type="number">0</level>
+				<name type="string">Evasion</name>
+				<prepared type="number">0</prepared>
+				<preparedDomain type="number">0</preparedDomain>
+			</id-00010>
 		</powers>
-		<profbonus type="number">2</profbonus>
+		<profbonus type="number">3</profbonus>
 		<proficiencylist>
 			<id-00001>
 				<name type="string">Weapon: Simple weapons, shortswords</name>
@@ -908,6 +838,7 @@
 			<class>reference_race</class>
 			<recordname>reference.racedata.human_variant@DD PHB Deluxe</recordname>
 		</racelink>
+		<shifttoken type="token"></shifttoken>
 		<size type="string">Medium</size>
 		<skilllist>
 			<id-00001>
@@ -922,28 +853,28 @@
 				<name type="string">Acrobatics</name>
 				<prof type="number">1</prof>
 				<stat type="string">dexterity</stat>
-				<total type="number">6</total>
+				<total type="number">7</total>
 			</id-00002>
 			<id-00003>
 				<misc type="number">0</misc>
 				<name type="string">Athletics</name>
 				<prof type="number">1</prof>
 				<stat type="string">strength</stat>
-				<total type="number">2</total>
+				<total type="number">3</total>
 			</id-00003>
 			<id-00004>
 				<misc type="number">0</misc>
 				<name type="string">Stealth</name>
 				<prof type="number">1</prof>
 				<stat type="string">dexterity</stat>
-				<total type="number">6</total>
+				<total type="number">7</total>
 			</id-00004>
 			<id-00005>
 				<misc type="number">0</misc>
 				<name type="string">Arcana</name>
 				<prof type="number">1</prof>
 				<stat type="string">intelligence</stat>
-				<total type="number">3</total>
+				<total type="number">4</total>
 			</id-00005>
 			<id-00006>
 				<misc type="number">0</misc>
@@ -1027,7 +958,7 @@
 				<name type="string">History</name>
 				<prof type="number">1</prof>
 				<stat type="string">intelligence</stat>
-				<total type="number">3</total>
+				<total type="number">4</total>
 			</id-00017>
 			<id-00018>
 				<misc type="number">0</misc>
@@ -1041,16 +972,46 @@
 				<name type="string">Alchemist supplies</name>
 				<prof type="number">1</prof>
 				<stat type="string">intelligence</stat>
-				<total type="number">3</total>
+				<text type="formattedtext">
+					<p></p>
+				</text>
+				<total type="number">4</total>
 			</id-00019>
 		</skilllist>
 		<speed>
 			<armor type="number">0</armor>
 			<base type="number">30</base>
-			<misc type="number">10</misc>
+			<misc type="number">15</misc>
 			<temporary type="number">0</temporary>
-			<total type="number">40</total>
+			<total type="number">45</total>
 		</speed>
+		<stats>
+			<bigFoeCR type="number">1</bigFoeCR>
+			<bigFoeName type="string">Hill Goblin Warrior</bigFoeName>
+			<biggestDamage type="number">14</biggestDamage>
+			<crits type="number">0</crits>
+			<damage type="number">268</damage>
+			<damageReceived type="number">71</damageReceived>
+			<fumbles type="number">1</fumbles>
+			<healing type="number">0</healing>
+			<healingReceived type="number">1</healingReceived>
+			<hits type="number">12</hits>
+			<kills type="number">13</kills>
+			<kos type="number">1</kos>
+			<misses type="number">7</misses>
+			<sessionbigFoeCR type="number">0</sessionbigFoeCR>
+			<sessionbiggestDamage type="number">0</sessionbiggestDamage>
+			<sessioncrits type="number">0</sessioncrits>
+			<sessiondamage type="number">0</sessiondamage>
+			<sessiondamageReceived type="number">0</sessiondamageReceived>
+			<sessionfumbles type="number">0</sessionfumbles>
+			<sessionhealing type="number">0</sessionhealing>
+			<sessionhealingReceived type="number">0</sessionhealingReceived>
+			<sessionhits type="number">0</sessionhits>
+			<sessionkills type="number">0</sessionkills>
+			<sessionkos type="number">0</sessionkos>
+			<sessionmisses type="number">0</sessionmisses>
+		</stats>
 		<temp>
 		</temp>
 		<token type="token">portrait_id-00015_token</token>
@@ -1074,119 +1035,20 @@
 				<type type="string">racial</type>
 			</id-00002>
 		</traitlist>
+		<weapon>
+			<critdicebonus>
+				<melee type="number">0</melee>
+				<ranged type="number">0</ranged>
+			</critdicebonus>
+			<critrange>
+				<melee type="number">20</melee>
+				<ranged type="number">20</ranged>
+			</critrange>
+			<dualwielder type="number">0</dualwielder>
+			<twoweaponfighting type="number">0</twoweaponfighting>
+		</weapon>
 		<weaponlist>
-			<id-00001>
-				<attackbonus type="number">0</attackbonus>
-				<attackstat type="string">dexterity</attackstat>
-				<carried type="number">1</carried>
-				<damagelist>
-					<id-00001>
-						<bonus type="number">0</bonus>
-						<dice type="dice">d4</dice>
-						<stat type="string">dexterity</stat>
-						<type type="string">piercing</type>
-					</id-00001>
-				</damagelist>
-				<isidentified type="number">1</isidentified>
-				<maxammo type="number">0</maxammo>
-				<name type="string">Dagger</name>
-				<prof type="number">1</prof>
-				<shortcut type="windowreference">
-					<class>item</class>
-					<recordname>....inventorylist.id-00001</recordname>
-				</shortcut>
-				<type type="number">0</type>
-			</id-00001>
-			<id-00002>
-				<ammo type="number">1</ammo>
-				<attackbonus type="number">0</attackbonus>
-				<attackstat type="string">dexterity</attackstat>
-				<carried type="number">1</carried>
-				<damagelist>
-					<id-00001>
-						<bonus type="number">0</bonus>
-						<dice type="dice">d4</dice>
-						<stat type="string">dexterity</stat>
-						<statmult type="number">1</statmult>
-						<type type="string">piercing</type>
-					</id-00001>
-				</damagelist>
-				<isidentified type="number">1</isidentified>
-				<maxammo type="number">3</maxammo>
-				<name type="string">Dagger</name>
-				<prof type="number">1</prof>
-				<shortcut type="windowreference">
-					<class>item</class>
-					<recordname>....inventorylist.id-00001</recordname>
-				</shortcut>
-				<type type="number">2</type>
-			</id-00002>
-			<id-00003>
-				<ammo type="number">12</ammo>
-				<attackbonus type="number">0</attackbonus>
-				<carried type="number">2</carried>
-				<damagelist>
-					<id-00001>
-						<bonus type="number">0</bonus>
-						<dice type="dice">d6</dice>
-						<stat type="string">base</stat>
-						<type type="string">piercing</type>
-					</id-00001>
-				</damagelist>
-				<isidentified type="number">1</isidentified>
-				<maxammo type="number">20</maxammo>
-				<name type="string">Shortbow</name>
-				<prof type="number">1</prof>
-				<shortcut type="windowreference">
-					<class>item</class>
-					<recordname>....inventorylist.id-00007</recordname>
-				</shortcut>
-				<type type="number">1</type>
-			</id-00003>
 			<id-00004>
-				<attackbonus type="number">0</attackbonus>
-				<attackstat type="string">dexterity</attackstat>
-				<carried type="number">1</carried>
-				<damagelist>
-					<id-00001>
-						<bonus type="number">0</bonus>
-						<dice type="dice">d4</dice>
-						<stat type="string">dexterity</stat>
-						<type type="string">bludgeoning</type>
-					</id-00001>
-				</damagelist>
-				<maxammo type="number">0</maxammo>
-				<name type="string">Unarmed Attack</name>
-				<prof type="number">1</prof>
-				<shortcut type="windowreference">
-					<class></class>
-					<recordname></recordname>
-				</shortcut>
-				<type type="number">0</type>
-			</id-00004>
-			<id-00005>
-				<attackbonus type="number">0</attackbonus>
-				<attackstat type="string">dexterity</attackstat>
-				<carried type="number">2</carried>
-				<damagelist>
-					<id-00001>
-						<bonus type="number">0</bonus>
-						<dice type="dice">d6</dice>
-						<stat type="string">dexterity</stat>
-						<type type="string">piercing</type>
-					</id-00001>
-				</damagelist>
-				<isidentified type="number">1</isidentified>
-				<maxammo type="number">0</maxammo>
-				<name type="string">Shortsword</name>
-				<prof type="number">1</prof>
-				<shortcut type="windowreference">
-					<class>item</class>
-					<recordname>....inventorylist.id-00008</recordname>
-				</shortcut>
-				<type type="number">0</type>
-			</id-00005>
-			<id-00006>
 				<attackbonus type="number">0</attackbonus>
 				<attackstat type="string">dexterity</attackstat>
 				<carried type="number">1</carried>
@@ -1199,39 +1061,16 @@
 						<type type="string">bludgeoning,magic</type>
 					</id-00001>
 				</damagelist>
-				<isidentified type="number">1</isidentified>
+				<handling type="number">0</handling>
 				<maxammo type="number">0</maxammo>
-				<name type="string">Staff of Withering</name>
+				<name type="string">Unarmed Attack</name>
 				<prof type="number">1</prof>
-				<properties type="string">Versatile (1d8), magic</properties>
 				<shortcut type="windowreference">
-					<class>item</class>
-					<recordname>....inventorylist.id-00013</recordname>
+					<class></class>
+					<recordname></recordname>
 				</shortcut>
 				<type type="number">0</type>
-			</id-00006>
-			<id-00007>
-				<attackbonus type="number">0</attackbonus>
-				<carried type="number">2</carried>
-				<damagelist>
-					<id-00001>
-						<bonus type="number">0</bonus>
-						<dice type="dice">d6</dice>
-						<stat type="string">base</stat>
-						<type type="string">piercing</type>
-					</id-00001>
-				</damagelist>
-				<isidentified type="number">1</isidentified>
-				<maxammo type="number">0</maxammo>
-				<name type="string">Hand Crossbow</name>
-				<prof type="number">1</prof>
-				<properties type="string">Ammunition (range 30/120), light, quick</properties>
-				<shortcut type="windowreference">
-					<class>item</class>
-					<recordname>....inventorylist.id-00016</recordname>
-				</shortcut>
-				<type type="number">1</type>
-			</id-00007>
+			</id-00004>
 		</weaponlist>
 	</character>
 </root>
