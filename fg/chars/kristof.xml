@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<root version="3.3" release="8|CoreRPG:3">
+<root version="3.3" release="8|CoreRPG:4">
 	<character>
 		<abilities>
 			<charisma>
@@ -11,7 +11,7 @@
 			</charisma>
 			<constitution>
 				<bonus type="number">3</bonus>
-				<save type="number">5</save>
+				<save type="number">6</save>
 				<savemodifier type="number">0</savemodifier>
 				<saveprof type="number">1</saveprof>
 				<score type="number">16</score>
@@ -23,6 +23,10 @@
 				<saveprof type="number">0</saveprof>
 				<score type="number">13</score>
 			</dexterity>
+			<honor>
+				<bonus type="number">0</bonus>
+				<score type="number">0</score>
+			</honor>
 			<intelligence>
 				<bonus type="number">0</bonus>
 				<save type="number">0</save>
@@ -30,12 +34,16 @@
 				<saveprof type="number">0</saveprof>
 				<score type="number">10</score>
 			</intelligence>
+			<sanity>
+				<bonus type="number">0</bonus>
+				<score type="number">0</score>
+			</sanity>
 			<strength>
-				<bonus type="number">3</bonus>
-				<save type="number">5</save>
+				<bonus type="number">4</bonus>
+				<save type="number">7</save>
 				<savemodifier type="number">0</savemodifier>
 				<saveprof type="number">1</saveprof>
-				<score type="number">16</score>
+				<score type="number">18</score>
 			</strength>
 			<wisdom>
 				<bonus type="number">0</bonus>
@@ -47,6 +55,7 @@
 		</abilities>
 		<adventurelist>
 		</adventurelist>
+		<alignment type="string">True Neutral</alignment>
 		<background type="string">Outlander</background>
 		<backgroundlink type="windowreference">
 			<class>reference_background</class>
@@ -55,31 +64,34 @@
 		<bonds type="string">Brutal. Your attacks rain down like hammer blows, meant to splinter bone or send blood flying.</bonds>
 		<classes>
 			<id-00001>
+				<casterlevelinvmult type="number">0</casterlevelinvmult>
+				<casterpactmagic type="number">0</casterpactmagic>
 				<hddie type="dice">d10</hddie>
-				<hdused type="number">0</hdused>
-				<level type="number">3</level>
+				<hdused type="number">5</hdused>
+				<level type="number">5</level>
 				<name type="string">Fighter</name>
 				<shortcut type="windowreference">
 					<class>reference_class</class>
-					<recordname>reference.classdata.fighter@DD PHB Deluxe</recordname>
+					<recordname>reference.classdata.fighter@DD Xanathar's Guide to Everything Players</recordname>
 				</shortcut>
 			</id-00001>
 		</classes>
 		<coins>
 			<slot1>
-				<amount type="number">0</amount>
+				<amount type="number">1</amount>
 				<name type="string">GP</name>
 			</slot1>
 			<slot2>
-				<amount type="number">6</amount>
+				<amount type="number">3</amount>
 				<name type="string">SP</name>
 			</slot2>
 			<slot3>
-				<amount type="number">8</amount>
+				<amount type="number">16</amount>
 				<name type="string">CP</name>
 			</slot3>
 			<slot4>
-				<amount type="number">0</amount>
+				<amount type="number">2</amount>
+				<name type="string">EP</name>
 			</slot4>
 			<slot5>
 				<amount type="number">0</amount>
@@ -103,14 +115,14 @@
 		<effectlist>
 		</effectlist>
 		<encumbrance>
-			<encumbered type="number">160</encumbered>
-			<encumberedheavy type="number">320</encumberedheavy>
-			<liftpushdrag type="number">960</liftpushdrag>
-			<load type="number">91</load>
-			<max type="number">480</max>
+			<encumbered type="number">180</encumbered>
+			<encumberedheavy type="number">360</encumberedheavy>
+			<liftpushdrag type="number">1080</liftpushdrag>
+			<load type="number">128</load>
+			<max type="number">540</max>
 		</encumbrance>
-		<exp type="number">912</exp>
-		<expneeded type="number">2700</expneeded>
+		<exp type="number">10092</exp>
+		<expneeded type="number">14000</expneeded>
 		<featlist>
 		</featlist>
 		<featurelist>
@@ -278,21 +290,39 @@
 					<p><b>Maneuver save DC </b>= 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice)</p>
 				</text>
 			</id-00007>
+			<id-00008>
+				<level type="number">4</level>
+				<locked type="number">1</locked>
+				<name type="string">Ability Score Improvement</name>
+				<source type="string">Fighter</source>
+				<text type="formattedtext">
+					<p>When you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.</p>
+				</text>
+			</id-00008>
+			<id-00009>
+				<level type="number">5</level>
+				<locked type="number">1</locked>
+				<name type="string">Extra Attack</name>
+				<source type="string">Fighter</source>
+				<text type="formattedtext">
+					<p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn. The number of attacks increases to three when you reach 11th level in this class and to four when you reach 20th level in this class.</p>
+				</text>
+			</id-00009>
 		</featurelist>
 		<hero type="number">0</hero>
 		<hp>
-			<deathsavefail type="number">0</deathsavefail>
-			<deathsavesuccess type="number">0</deathsavesuccess>
+			<deathsavefail type="number">3</deathsavefail>
+			<deathsavesuccess type="number">2</deathsavesuccess>
 			<hdmod type="number">0</hdmod>
 			<temporary type="number">0</temporary>
-			<total type="number">28</total>
-			<wounds type="number">0</wounds>
+			<total type="number">49</total>
+			<wounds type="number">49</wounds>
 		</hp>
 		<ideals type="string">City Watch. Crowd control and peacekeeping are your instructor's specialties.</ideals>
 		<initiative>
 			<misc type="number">0</misc>
-			<temporary type="number">0</temporary>
-			<total type="number">1</total>
+			<temporary type="number">2</temporary>
+			<total type="number">3</total>
 		</initiative>
 		<inventorylist>
 			<id-00001>
@@ -311,33 +341,25 @@
 				<name type="string">Belt pouch</name>
 				<weight type="number">0</weight>
 			</id-00002>
-			<id-00003>
+			<id-00004>
 				<carried type="number">1</carried>
 				<count type="number">1</count>
 				<effectlist>
 				</effectlist>
 				<isidentified type="number">1</isidentified>
-				<name type="string">Staff</name>
-				<weight type="number">0</weight>
-			</id-00003>
-			<id-00004>
-				<carried type="number">1</carried>
-				<count type="number">1</count>
-				<isidentified type="number">1</isidentified>
 				<name type="string">hunting trap</name>
 				<weight type="number">0</weight>
 			</id-00004>
-			<id-00005>
-				<carried type="number">1</carried>
-				<count type="number">1</count>
-				<isidentified type="number">1</isidentified>
-				<weight type="number">0</weight>
-			</id-00005>
 			<id-00006>
+				<ac type="number">0</ac>
+				<bonus type="number">0</bonus>
 				<carried type="number">2</carried>
 				<cost type="string">10 gp</cost>
 				<count type="number">1</count>
 				<damage type="string">2d6 bludgeoning</damage>
+				<description type="formattedtext">
+					<p></p>
+				</description>
 				<effectlist>
 				</effectlist>
 				<isidentified type="number">1</isidentified>
@@ -351,11 +373,13 @@
 			<id-00007>
 				<carried type="number">2</carried>
 				<cost type="string">5 sp</cost>
-				<count type="number">2</count>
+				<count type="number">3</count>
 				<damage type="string">1d6 piercing</damage>
 				<description type="formattedtext">
 					<p></p>
 				</description>
+				<effectlist>
+				</effectlist>
 				<isidentified type="number">1</isidentified>
 				<locked type="number">1</locked>
 				<name type="string">Javelin</name>
@@ -374,6 +398,8 @@
 					<p>Made of interlocking metal rings, chain mail includes a layer of quilted fabric worn underneath the mail to prevent chafing and to cushion the impact of blows. The suit includes gauntlets.</p>
 				</description>
 				<dexbonus type="string">-</dexbonus>
+				<effectlist>
+				</effectlist>
 				<isidentified type="number">1</isidentified>
 				<locked type="number">1</locked>
 				<name type="string">Chain Mail</name>
@@ -386,10 +412,12 @@
 			<id-00009>
 				<carried type="number">1</carried>
 				<cost type="string">5 sp</cost>
-				<count type="number">4</count>
+				<count type="number">6</count>
 				<description type="formattedtext">
 					<p>Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.</p>
 				</description>
+				<effectlist>
+				</effectlist>
 				<isidentified type="number">1</isidentified>
 				<locked type="number">1</locked>
 				<name type="string">Rations (1 Day)</name>
@@ -400,16 +428,18 @@
 			<id-00010>
 				<carried type="number">1</carried>
 				<cost type="string">1 cp</cost>
-				<count type="number">1</count>
+				<count type="number">8</count>
 				<description type="formattedtext">
 					<p>A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.</p>
 				</description>
+				<effectlist>
+				</effectlist>
 				<isidentified type="number">1</isidentified>
 				<locked type="number">1</locked>
 				<name type="string">Torch</name>
 				<subtype type="string">Standard</subtype>
 				<type type="string">Adventuring Gear</type>
-				<weight type="number">2</weight>
+				<weight type="number">1</weight>
 			</id-00010>
 			<id-00011>
 				<carried type="number">1</carried>
@@ -438,6 +468,96 @@
 				<type type="string">Adventuring Gear</type>
 				<weight type="number">7</weight>
 			</id-00012>
+			<id-00013>
+				<carried type="number">1</carried>
+				<cost type="string">20 gp</cost>
+				<count type="number">1</count>
+				<description type="formattedtext">
+					<p>Smith's tools allow you to work metal, heating it to alter its shape, repair damage, or work raw ingots into useful items. Smith's tools include hammers, tongs, charcoal, rags, and a whetstone.</p>
+				</description>
+				<isidentified type="number">1</isidentified>
+				<locked type="number">1</locked>
+				<name type="string">Smith's Tools</name>
+				<subtype type="string">Artisan's Tools</subtype>
+				<type type="string">Tools</type>
+				<weight type="number">8</weight>
+			</id-00013>
+			<id-00014>
+				<carried type="number">1</carried>
+				<cost type="string">50 gp</cost>
+				<count type="number">1</count>
+				<damage type="string">1d8 piercing</damage>
+				<description type="formattedtext">
+					<p></p>
+				</description>
+				<effectlist>
+				</effectlist>
+				<isidentified type="number">1</isidentified>
+				<locked type="number">1</locked>
+				<name type="string">Longbow</name>
+				<properties type="string">Ammunition (range 150/600), heavy, two-handed, indirect fire</properties>
+				<subtype type="string">Martial Ranged Weapons</subtype>
+				<type type="string">Weapon</type>
+				<weight type="number">2</weight>
+			</id-00014>
+			<id-00015>
+				<carried type="number">2</carried>
+				<cost type="string">15 gp</cost>
+				<count type="number">1</count>
+				<damage type="string">1d8 slashing</damage>
+				<isidentified type="number">1</isidentified>
+				<locked type="number">1</locked>
+				<name type="string">Longsword</name>
+				<properties type="string">Versatile (1d10)</properties>
+				<subtype type="string">Martial Weapons</subtype>
+				<type type="string">Weapon</type>
+				<weight type="number">3</weight>
+			</id-00015>
+			<id-00017>
+				<carried type="number">1</carried>
+				<cost type="string">1 gp</cost>
+				<count type="number">1</count>
+				<description type="formattedtext">
+					<p>Adventuring is a hard life. With a cook along on the journey, your meals will be much better than the typical mix of hardtack and dried fruit. Cook's utensils include a metal pot, knives, forks, a stirring spoon, and a ladle.</p>
+				</description>
+				<effectlist>
+				</effectlist>
+				<isidentified type="number">1</isidentified>
+				<locked type="number">1</locked>
+				<name type="string">Cook's Utensils</name>
+				<subtype type="string">Artisan's Tools</subtype>
+				<type type="string">Tools</type>
+				<weight type="number">8</weight>
+			</id-00017>
+			<id-00018>
+				<carried type="number">1</carried>
+				<cost type="string">1 gp</cost>
+				<count type="number">1</count>
+				<isidentified type="number">1</isidentified>
+				<locked type="number">1</locked>
+				<name type="string">Arrows (20)</name>
+				<subtype type="string">Ammunition</subtype>
+				<type type="string">Adventuring Gear</type>
+				<weight type="number">1</weight>
+			</id-00018>
+			<id-00019>
+				<carried type="number">1</carried>
+				<cost type="string">1 gp</cost>
+				<count type="number">1</count>
+				<damage type="string">1d6 piercing</damage>
+				<description type="formattedtext">
+					<p></p>
+				</description>
+				<effectlist>
+				</effectlist>
+				<isidentified type="number">1</isidentified>
+				<locked type="number">1</locked>
+				<name type="string">Spear</name>
+				<properties type="string">Thrown(range 20/60), versatile(1d8), reach</properties>
+				<subtype type="string">Simple Melee Weapons</subtype>
+				<type type="string">Weapon</type>
+				<weight type="number">3</weight>
+			</id-00019>
 		</inventorylist>
 		<languagelist>
 			<id-00001>
@@ -450,10 +570,11 @@
 				<name type="string">Dwarvish</name>
 			</id-00003>
 		</languagelist>
-		<level type="number">3</level>
+		<level type="number">5</level>
 		<name type="string">Kristof Ruslan</name>
-		<pc_label_hero type="string">Hero Point</pc_label_hero>
-		<perception type="number">12</perception>
+		<notes type="string">?-?-?-3-9\nshort term madness</notes>
+		<pc_label_hero type="string">Weariness</pc_label_hero>
+		<perception type="number">13</perception>
 		<perceptionmodifier type="number">0</perceptionmodifier>
 		<personalitytraits type="string">A rampant golden dragon on a green field, representing valor and a quest for wealth</personalitytraits>
 		<powergroup>
@@ -465,6 +586,9 @@
 				<uses type="number">4</uses>
 				<usesperiod type="string">enc</usesperiod>
 			</id-00001>
+			<id-00002>
+				<name type="string">ACTIONS</name>
+			</id-00002>
 		</powergroup>
 		<powermeta>
 			<pactmagicslots1>
@@ -540,15 +664,19 @@
 				<used type="number">0</used>
 			</spellslots9>
 		</powermeta>
-		<powermode type="string">standard</powermode>
+		<powermode type="string">preparation</powermode>
 		<powers>
 			<id-00001>
 				<actions>
 				</actions>
 				<cast type="number">0</cast>
+				<description type="formattedtext">
+					<p></p>
+				</description>
 				<level type="number">0</level>
 				<name type="string">Action Surge</name>
 				<prepared type="number">1</prepared>
+				<ritual type="number">0</ritual>
 				<usesperiod type="string">enc</usesperiod>
 			</id-00001>
 			<id-00002>
@@ -631,10 +759,14 @@
 					</id-00003>
 				</actions>
 				<cast type="number">0</cast>
+				<description type="formattedtext">
+					<p></p>
+				</description>
 				<group type="string">MANEUVERS</group>
 				<level type="number">0</level>
 				<name type="string">Menacing Attack (fear)</name>
 				<prepared type="number">0</prepared>
+				<ritual type="number">0</ritual>
 			</id-00004>
 			<id-00005>
 				<actions>
@@ -684,8 +816,24 @@
 				<prepared type="number">0</prepared>
 				<ritual type="number">0</ritual>
 			</id-00006>
+			<id-00007>
+				<actions>
+					<id-00001>
+						<durmod type="number">1</durmod>
+						<label type="string">IF: not(paralyzed/stunned/incapacitated/unconscious/grappled/restrained);ADVSAV:dexterity;GRANTDISATK</label>
+						<order type="number">1</order>
+						<targeting type="string">self</targeting>
+						<type type="string">effect</type>
+					</id-00001>
+				</actions>
+				<cast type="number">0</cast>
+				<group type="string">ACTIONS</group>
+				<level type="number">0</level>
+				<name type="string">Dodge</name>
+				<prepared type="number">0</prepared>
+			</id-00007>
 		</powers>
-		<profbonus type="number">2</profbonus>
+		<profbonus type="number">3</profbonus>
 		<proficiencylist>
 			<id-00001>
 				<name type="string">Weapon: Simple weapons, martial weapons</name>
@@ -709,7 +857,7 @@
 				<name type="string">Perception</name>
 				<prof type="number">1</prof>
 				<stat type="string">wisdom</stat>
-				<total type="number">2</total>
+				<total type="number">3</total>
 			</id-00001>
 			<id-00002>
 				<misc type="number">0</misc>
@@ -744,7 +892,7 @@
 				<name type="string">Survival</name>
 				<prof type="number">1</prof>
 				<stat type="string">wisdom</stat>
-				<total type="number">2</total>
+				<total type="number">3</total>
 			</id-00006>
 			<id-00007>
 				<misc type="number">0</misc>
@@ -758,7 +906,7 @@
 				<name type="string">Acrobatics</name>
 				<prof type="number">1</prof>
 				<stat type="string">dexterity</stat>
-				<total type="number">3</total>
+				<total type="number">4</total>
 			</id-00008>
 			<id-00009>
 				<misc type="number">0</misc>
@@ -772,7 +920,7 @@
 				<name type="string">Athletics</name>
 				<prof type="number">1</prof>
 				<stat type="string">strength</stat>
-				<total type="number">5</total>
+				<total type="number">7</total>
 			</id-00010>
 			<id-00011>
 				<misc type="number">0</misc>
@@ -793,7 +941,7 @@
 				<name type="string">Intimidation</name>
 				<prof type="number">1</prof>
 				<stat type="string">charisma</stat>
-				<total type="number">1</total>
+				<total type="number">2</total>
 			</id-00013>
 			<id-00014>
 				<misc type="number">0</misc>
@@ -834,8 +982,8 @@
 				<misc type="number">0</misc>
 				<name type="string">Smith's Tools</name>
 				<prof type="number">1</prof>
-				<stat type="string">dexterity</stat>
-				<total type="number">3</total>
+				<stat type="string">strength</stat>
+				<total type="number">7</total>
 			</id-00019>
 		</skilllist>
 		<speed>
@@ -897,6 +1045,7 @@
 						<type type="string">bludgeoning</type>
 					</id-00001>
 				</damagelist>
+				<handling type="number">1</handling>
 				<isidentified type="number">1</isidentified>
 				<maxammo type="number">0</maxammo>
 				<name type="string">Maul</name>
@@ -914,9 +1063,11 @@
 					<id-00001>
 						<dice type="dice">d6</dice>
 						<stat type="string">base</stat>
+						<statmult type="number">1</statmult>
 						<type type="string">piercing</type>
 					</id-00001>
 				</damagelist>
+				<handling type="number">0</handling>
 				<isidentified type="number">1</isidentified>
 				<maxammo type="number">0</maxammo>
 				<name type="string">Javelin</name>
@@ -929,16 +1080,19 @@
 				<type type="number">0</type>
 			</id-00002>
 			<id-00003>
+				<ammo type="number">0</ammo>
 				<carried type="number">2</carried>
 				<damagelist>
 					<id-00001>
 						<dice type="dice">d6</dice>
 						<stat type="string">base</stat>
+						<statmult type="number">1</statmult>
 						<type type="string">piercing</type>
 					</id-00001>
 				</damagelist>
+				<handling type="number">0</handling>
 				<isidentified type="number">1</isidentified>
-				<maxammo type="number">2</maxammo>
+				<maxammo type="number">3</maxammo>
 				<name type="string">Javelin</name>
 				<prof type="number">1</prof>
 				<properties type="string">Thrown (range 30/120)</properties>
@@ -948,6 +1102,97 @@
 				</shortcut>
 				<type type="number">2</type>
 			</id-00003>
+			<id-00004>
+				<ammo type="number">0</ammo>
+				<attackbonus type="number">0</attackbonus>
+				<carried type="number">1</carried>
+				<damagelist>
+					<id-00001>
+						<bonus type="number">0</bonus>
+						<dice type="dice">d8</dice>
+						<stat type="string">base</stat>
+						<type type="string">piercing</type>
+					</id-00001>
+				</damagelist>
+				<handling type="number">1</handling>
+				<isidentified type="number">1</isidentified>
+				<maxammo type="number">20</maxammo>
+				<name type="string">Longbow</name>
+				<prof type="number">1</prof>
+				<properties type="string">Ammunition (range 150/600), heavy, two-handed, indirect fire</properties>
+				<shortcut type="windowreference">
+					<class>item</class>
+					<recordname>....inventorylist.id-00014</recordname>
+				</shortcut>
+				<type type="number">1</type>
+			</id-00004>
+			<id-00005>
+				<carried type="number">2</carried>
+				<damagelist>
+					<id-00001>
+						<dice type="dice">d8</dice>
+						<stat type="string">base</stat>
+						<statmult type="number">1</statmult>
+						<type type="string">slashing</type>
+					</id-00001>
+				</damagelist>
+				<handling type="number">0</handling>
+				<isidentified type="number">1</isidentified>
+				<maxammo type="number">0</maxammo>
+				<name type="string">Longsword</name>
+				<prof type="number">1</prof>
+				<properties type="string">Versatile (1d10), reroll 2</properties>
+				<shortcut type="windowreference">
+					<class>item</class>
+					<recordname>....inventorylist.id-00015</recordname>
+				</shortcut>
+				<type type="number">0</type>
+			</id-00005>
+			<id-00006>
+				<carried type="number">1</carried>
+				<damagelist>
+					<id-00001>
+						<dice type="dice">d8</dice>
+						<stat type="string">base</stat>
+						<statmult type="number">1</statmult>
+						<type type="string">piercing</type>
+					</id-00001>
+				</damagelist>
+				<handling type="number">0</handling>
+				<maxammo type="number">0</maxammo>
+				<name type="string">Spear Versatile</name>
+				<prof type="number">1</prof>
+				<properties type="string">reroll 2</properties>
+				<shortcut type="windowreference">
+					<class></class>
+					<recordname></recordname>
+				</shortcut>
+				<type type="number">0</type>
+			</id-00006>
+			<id-00008>
+				<attackbonus type="number">0</attackbonus>
+				<carried type="number">1</carried>
+				<damagelist>
+					<id-00001>
+						<bonus type="number">0</bonus>
+						<dice type="dice">d6</dice>
+						<stat type="string">base</stat>
+						<statmult type="number">1</statmult>
+						<type type="string">piercing</type>
+					</id-00001>
+				</damagelist>
+				<handling type="number">0</handling>
+				<isidentified type="number">1</isidentified>
+				<maxammo type="number">0</maxammo>
+				<name type="string">Spear</name>
+				<prof type="number">1</prof>
+				<properties type="string">Thrown(range 20/60), versatile(1d8), reach</properties>
+				<shortcut type="windowreference">
+					<class>item</class>
+					<recordname>....inventorylist.id-00019</recordname>
+				</shortcut>
+				<type type="number">0</type>
+			</id-00008>
 		</weaponlist>
 	</character>
 </root>
