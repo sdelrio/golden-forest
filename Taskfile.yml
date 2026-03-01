@@ -1,0 +1,131 @@
+version: '3'
+
+vars:
+  YARN: yarn
+  NPX: npx
+  DOCUSAURUS: npx docusaurus
+
+env:
+  DOCUSAURUS_IGNORE_SSG_WARNINGS: true
+
+tasks:
+  default:
+    desc: Show help
+    cmds:
+      - task --list
+
+  ## --- Dependency Management ---
+
+  install:
+    desc: Install dependencies
+    status:
+      - test -d node_modules
+    cmds:
+      - "{{.YARN}} install"
+
+  upgrade:
+    desc: Upgrade Docusaurus core and preset-classic to latest
+    cmds:
+      - "{{.YARN}} upgrade @docusaurus/core@latest @docusaurus/preset-classic@latest"
+
+  upgrade:browserlist:
+    desc: Why you should do it regularly - https://github.com/browserslist/update-db#readme
+    cmds:
+      - "{{.NPX}} update-browserslist-db@latest"
+
+  upgrade:all:
+    desc: Upgrade all yarn.lock dependencies
+    cmds:
+      - "{{.YARN}} upgrade"
+
+  ## --- Development ---
+
+  start:
+    desc: Start the Docusaurus development server
+    deps: [install]
+    cmds:
+      - "{{.DOCUSAURUS}} start"
+  start:host:
+    desc: Start the Docusaurus development server on host network
+    deps: [install]
+    cmds:
+      - "{{.DOCUSAURUS}} start -h 0.0.0.0"
+  build :
+    desc: Build the static website for production
+    deps: [install]
+    sources:
+      - blog/**/*
+      - docs/**/*
+      - src/**/*
+      - static/**/*
+      - docusaurus.config.js
+      - sidebars.js
+      - package.json
+    generates:
+      - build/**/*
+    cmds:
+      - "{{.DOCUSAURUS}} build"
+
+  clean:
+    desc: Clean build artifacts and node_modules
+    cmds:
+      - rm -rf node_modules .docusaurus build
+
+  ## --- Deployment ---
+
+  deploy:
+    desc: Deploy the website to GitHub Pages
+    cmds:
+      - GIT_USER={{.USER}} USE_SSH=true {{.YARN}} deploy
+
+  ## --- Search Indexing ---
+
+  index:algolia:
+    desc: Generate Algolia index using docsearch-scraper
+    preconditions:
+      - test -f $HOME/.algoliaenv
+    vars:
+      CONFIG:
+        sh: cat .algolia.docsearch.json | jq -r tostring
+    cmds:
+      - |
+        docker run --rm -it --env-file=$HOME/.algoliaenv \
+          -e "CONFIG={{.CONFIG}}" \
+          algolia/docsearch-scraper:latest -v
+
+  index:typesense:
+    desc: Generate Typesense index using docsearch-scraper
+    preconditions:
+      - test -f $HOME/.algoliaenv
+    vars:
+      CONFIG:
+        sh: cat .typesense.docsearch.json | jq -r tostring
+    cmds:
+      - |
+        docker run --rm -it --env-file=$HOME/.algoliaenv \
+          -e "CONFIG={{.CONFIG}}" \
+          typesense/docsearch-scraper:latest -v
+
+  ## --- Verification and Testing ---
+
+  check:
+    desc: Run Docusaurus MDX checker
+    cmds:
+      - "{{.NPX}} docusaurus-mdx-checker"
+
+  test:links:
+    desc: Check for broken links in the build directory (most reliable)
+    deps: [build]
+    cmds:
+      - |
+        {{.NPX}} linkinator "./docs/**/*.md*" \
+          --markdown \
+          --skip "^node_modules" \
+          --skip "^https://github\.com/sdelrio/.*" \
+          --skip "^https://github\.com/.*" \
+          --skip "robots.txt"
+
+  test:perf:
+    desc: Test web performance with unlighthouse
+    cmds:
+      - "{{.NPX}} unlighthouse --site https://www.lorien.cloud"
