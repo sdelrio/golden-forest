@@ -13,6 +13,36 @@ Next.js gives you the best developer experience with all the features you need f
 
 * [NextJS HomePage](https://nextjs.org/)
 
+## Vinext
+
+Vinext (pronounced "vee-next") is a high-performance, drop-in replacement for Next.js built on **Vite** and **Rolldown**. It implements the core Next.js API surface (App/Pages router, RSC, Server Actions) but swaps the bespoke Turbopack/Webpack toolchain for the standardized Vite ecosystem.
+
+*   **Creation**: Developed by Steve Faulkner (Cloudflare) in just one week using an "AI-first" approach (Claude), costing only ~$1,100 in tokens.
+*   **Architecture**: Optimized for serverless/edge runtimes (Cloudflare Workers, etc.) without fragile adaptation layers.
+*   **Performance**: Up to 4x faster builds and ~57% smaller bundle sizes compared to official Next.js.
+*   [Vinext Announcement Blog](https://blog.cloudflare.com/vinext/)
+
+### Next.js vs. Vinext Comparison
+
+| Feature | Next.js (Official) | Vinext |
+| :--- | :--- | :--- |
+| **Toolchain** | Turbopack / Webpack | **Vite / Rolldown** |
+| **Build Speed** | Baseline | **Up to 4x Faster** |
+| **Bundle Size** | Baseline | **~57% Smaller** |
+| **Ecosystem** | Vercel-centric | **Vite Plugin Ecosystem** |
+| **Deployment** | Vercel Optimized | **Native Serverless/Edge** |
+| **Maturity** | Battle-tested | Early stages / Bleeding edge |
+
+#### Pros & Cons
+
+**Next.js (Official)**
+*   ✅ **Pros**: Massive community, industry standard, advanced static optimization (`generateStaticParams`).
+*   ❌ **Cons**: Slower build times on large apps. While not strictly "locked" to Vercel, many advanced features (RFC 9457-style caching, Image Optimization, Middleware, and ISR) are optimized for and more easily managed on Vercel's proprietary infrastructure. Self-hosting often requires complex adaptation layers (like OpenNext) or manual infrastructure management to achieve parity.
+
+**Vinext**
+*   ✅ **Pros**: Blazing fast HMR and builds, smaller bundles, runs natively on any Vite-supported platform.
+*   ❌ **Cons**: Still maturing, lacks some build-time static features (SSG) in early versions.
+
 ## Svelte
 
 Svelte is a radical new approach to building user interfaces. Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app.
