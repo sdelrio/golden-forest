@@ -85,5 +85,23 @@ typesense:
 		echo "API_KEY=0123456789abcdef0123456789abcdef";\
 	fi
 
+list-chars: ## List and summarize Fantasy Grounds character XML files
+	@printf "%-20s | %-30s | %-20s | %-3s | %-20s\n" "File" "Character Name" "Race" "Lvl" "Class"
+	@printf "%-20s | %-30s | %-20s | %-3s | %-20s\n" "--------------------" "------------------------------" "--------------------" "---" "--------------------"
+	@for f in static/fg/chars/*.xml; do \
+		name=$$(grep -E "^		<name type=\"string\">" "$$f" | sed 's/.*<name type="string">\(.*\)<\/name>.*/\1/' | head -n 1); \
+		race=$$(grep -E "^		<race type=\"string\">" "$$f" | sed 's/.*<race type="string">\(.*\)<\/race>.*/\1/' | head -n 1); \
+		level=$$(grep -E "^		<level type=\"number\">" "$$f" | sed 's/.*<level type="number">\(.*\)<\/level>.*/\1/' | head -n 1); \
+		classes=$$(sed -n '/<classes>/,/<\/classes>/p' "$$f" | grep "<name type=\"string\">" | sed 's/.*<name type="string">\(.*\)<\/name>.*/\1/' | tr '\n' '/' | sed 's/\/$$//'); \
+		if [ -z "$$name" ]; then \
+			name=$$(grep -E "<name type=\"string\">" "$$f" | head -n 1 | sed 's/.*<name type="string">\(.*\)<\/name>.*/\1/'); \
+		fi; \
+		if [ -z "$$race" ]; then \
+			race=$$(grep -E "<race type=\"string\">" "$$f" | head -n 1 | sed 's/.*<race type="string">\(.*\)<\/race>.*/\1/'); \
+		fi; \
+		filename=$$(basename "$$f"); \
+		printf "%-20s | %-30s | %-20s | %-3s | %-20s\n" "$$filename" "$$name" "$$race" "$$level" "$$classes"; \
+	done
+
 test: ## Test web performance with unlighthouse
 	npx unlighthouse --site https://www.lorien.cloud
