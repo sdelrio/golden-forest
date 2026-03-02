@@ -86,8 +86,8 @@ typesense:
 	fi
 
 list-chars: ## List and summarize Fantasy Grounds character XML files
-	@printf "%-20s | %-30s | %-20s | %-3s | %-20s\n" "File" "Character Name" "Race" "Lvl" "Class"
-	@printf "%-20s | %-30s | %-20s | %-3s | %-20s\n" "--------------------" "------------------------------" "--------------------" "---" "--------------------"
+	@printf "%-15s | %-30s | %-20s | %-3s | %-20s\n" "File" "Character Name" "Race" "Lvl" "Class"
+	@printf "%-15s | %-30s | %-20s | %-3s | %-20s\n" "---------------" "------------------------------" "--------------------" "---" "--------------------"
 	@for f in static/fg/chars/*.xml; do \
 		name=$$(grep -E "^		<name type=\"string\">" "$$f" | sed 's/.*<name type="string">\(.*\)<\/name>.*/\1/' | head -n 1); \
 		race=$$(grep -E "^		<race type=\"string\">" "$$f" | sed 's/.*<race type="string">\(.*\)<\/race>.*/\1/' | head -n 1); \
@@ -100,7 +100,7 @@ list-chars: ## List and summarize Fantasy Grounds character XML files
 			race=$$(grep -E "<race type=\"string\">" "$$f" | head -n 1 | sed 's/.*<race type="string">\(.*\)<\/race>.*/\1/'); \
 		fi; \
 		filename=$$(basename "$$f"); \
-		printf "%-20s | %-30s | %-20s | %-3s | %-20s\n" "$$filename" "$$name" "$$race" "$$level" "$$classes"; \
+		printf "%-15s | %-30s | %-20s | %-3s | %-20s\n" "$$filename" "$$name" "$$race" "$$level" "$$classes"; \
 	done
 
 test: ## Test web performance with unlighthouse
