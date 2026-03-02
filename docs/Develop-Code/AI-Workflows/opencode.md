@@ -18,13 +18,13 @@ You can use OpenCode with Google’s free plan by installing the `opencode-gemin
 
 * Install OpenCode using the official script:
 
-```bash
+```bash title="Run the following in your terminal"
 curl -fsSL https://opencode.ai/install | bash
 ```
 
 * Configure the Google authentication plugin in your configuration file (`~/.config/opencode/opencode.json`):
 
-```json
+```json title="~/.config/opencode/opencode.json"
 {
   "$schema": "https://opencode.ai/config.json",
   "plugin": ["opencode-gemini-auth@latest"]
@@ -33,9 +33,8 @@ curl -fsSL https://opencode.ai/install | bash
 
 * Authenticate with Google:
 
-Run the following in your terminal:
 
-```bash
+```bash title="Run the following in your terminal"
 opencode auth login
 ```
 
@@ -45,7 +44,7 @@ An OAuth window will open. Choose **Google** and then **OAuth with Google (Gemin
 
 Once authenticated, you'll be able to access models such as:
 
-```
+```txt title="Some of the free models"
 Gemini 3.1 Pro preview (1M+ context)
 Gemini 3 Pro preview (1M+ context)
 Gemini 3 Flash preview
