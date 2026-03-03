@@ -12,7 +12,10 @@ tasks:
   default:
     desc: Show help
     cmds:
-      - task --list
+      - cmd: task --list
+        silent: true
+      - cmd: echo "Current OS is {{OS}}/{{ARCH}}"
+        silent: true
 
   ## --- Dependency Management ---
 
@@ -110,6 +113,7 @@ tasks:
 
   list:chars:
     desc: List and summarize Fantasy Grounds character XML files
+    silent: true
     cmds:
       - |
         printf "%-15s | %-30s | %-20s | %-3s | %-20s\n" "File" "Character Name" "Race" "Lvl" "Class"
