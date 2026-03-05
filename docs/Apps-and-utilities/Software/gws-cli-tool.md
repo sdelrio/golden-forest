@@ -1,5 +1,5 @@
 ---
-title: "Google Workspace CLI (gws)"
+title: "Google Workspace CLI"
 description: "Command-line access to Google Workspace APIs with AI agent support"
 tags:
   - CLI
