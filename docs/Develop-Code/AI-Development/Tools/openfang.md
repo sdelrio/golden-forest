@@ -25,6 +25,23 @@ flowchart TB
     I[Dashboards] --> F
 ```
 
+## Executive Summary
+
+OpenFang is a **production-grade Agent Operating System** built entirely in Rust — not a Python wrapper, not a chatbot framework, not a generic multi-agent orchestrator. It is a complete operating system for autonomous agents that work for you 24/7.
+
+**Why it matters:** Traditional agent frameworks wait for user input. OpenFang's "Hands" run autonomously on schedules — building knowledge graphs, monitoring targets, generating leads, managing social media, and delivering results to your dashboard.
+
+**Key highlights:**
+- **137,728 lines of Rust code** across 14 crates
+- **&lt;200ms cold start** — 15-25x faster than Python frameworks
+- **40 MB idle memory** — 5-10x more efficient than alternatives
+- **Single 32 MB binary** — no Docker, no Python dependencies
+- **16 security layers** — defense in depth for production
+- **40 channel adapters** — Telegram, Slack, Discord, WhatsApp, and more
+- **27 LLM providers** — 123+ models supported
+
+**Best for:** Production deployments requiring low latency, high security, and 24/7 autonomous operation.
+
 ## Key Specifications
 
 | Metric | Value |
@@ -103,38 +120,14 @@ openfang hand list
 
 ## Performance Benchmarks
 
-### Cold Start Time (lower is better)
-
-```
-ZeroClaw   ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   10 ms
-OpenFang   ██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  180 ms
-LangGraph  █████████████████░░░░░░░░░░░░░░░░░░░░░░░░░  2.5 sec
-CrewAI     ████████████████████░░░░░░░░░░░░░░░░░░░░░░  3.0 sec
-AutoGen    ██████████████████████████░░░░░░░░░░░░░░░░░░  4.0 sec
-OpenClaw   █████████████████████████████████████████░░  5.98 sec
-```
-
-### Idle Memory Usage (lower is better)
-
-```
-ZeroClaw   █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    5 MB
-OpenFang   ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   40 MB
-LangGraph  ██████████████████░░░░░░░░░░░░░░░░░░░░░░░░░  180 MB
-CrewAI     ████████████████████░░░░░░░░░░░░░░░░░░░░░░░  200 MB
-AutoGen    █████████████████████████░░░░░░░░░░░░░░░░░░  250 MB
-OpenClaw   ████████████████████████████████████████░░░░  394 MB
-```
-
-### Install Size (lower is better)
-
-```
-ZeroClaw   █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  8.8 MB
-OpenFang   ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   32 MB
-CrewAI     ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  100 MB
-LangGraph  ████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  150 MB
-AutoGen    ████████████████░░░░░░░░░░░░░░░░░░░░░░░░░  200 MB
-OpenClaw   ████████████████████████████████████████░░░░  500 MB
-```
+| Tool | Cold Start | Idle Memory | Install Size |
+|------|------------|-------------|---------------|
+| ZeroClaw | 10 ms | 5 MB | 8.8 MB |
+| OpenFang | 180 ms | 40 MB | 32 MB |
+| LangGraph | 2.5 sec | 180 MB | 150 MB |
+| CrewAI | 3.0 sec | 200 MB | 100 MB |
+| AutoGen | 4.0 sec | 250 MB | 200 MB |
+| OpenClaw | 5.98 sec | 394 MB | 500 MB |
 
 ## 16 Security Systems — Defense in Depth
 
@@ -270,7 +263,7 @@ openfang migrate --from openclaw --dry-run
 - ✅ Security-sensitive environments (16 security layers)
 - ✅ Self-hosted AI agent platforms
 
-## Alternatives (Self-Hosted, 10000+ Stars Combined)
+## Alternatives (Self-Hosted)
 
 | Project | Stars | Language | Description | Best For |
 |---------|-------|----------|-------------|----------|
@@ -284,8 +277,6 @@ openfang migrate --from openclaw --dry-run
 
 | Metric | Value |
 |--------|-------|
-| **GitHub Stars** | 11.5k+ |
-| **Forks** | 1.2k+ |
 | **License** | MIT |
 | **Repository** | [github.com/RightNow-AI/openfang](https://github.com/RightNow-AI/openfang) |
 
@@ -300,7 +291,6 @@ openfang migrate --from openclaw --dry-run
 
 ## References
 
-- [OpenFang GitHub](https://github.com/RightNow-AI/openfang)
 - [OpenSandbox](./OpenSandbox.md): Production-grade agent sandbox
 - [ClaudeKit Workflow](../Workflows/ClaudeKit-Workflow.md): Spec-driven AI development
 - [Claude 4.6 Prompts](../Prompt-Library/Claude-4.6-Prompts-Anatomy.md): 8-step prompt structure
