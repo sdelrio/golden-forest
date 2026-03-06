@@ -55,8 +55,58 @@ src/
   css/              # Global styles (custom.css)
   pages/            # Docusaurus pages (index.js, etc.)
   theme/            # Docusaurus theme overrides (Root.js)
-docs/               # Main documentation content (MDX files)
-tutorial/           # Tutorial documentation section
+docs/                   # Main documentation content (MDX files)
+  Apps-and-utilities/   # Software and utility documentation
+    Software/
+      Backup/          # Backup solutions and strategies
+      Certificates/    # Certificate management (TLS, Let's Encrypt, etc.)
+      FileSync/        # File synchronization tools
+      Multimedia/      # Media processing and management
+  Develop-Code/
+    AI-Development/     # AI workflows, prompts, models & tools
+      Models-LLMs/      # LLM model documentation
+      Prompt-Library/   # Prompt engineering guides
+      Skills-and-Agents/ # AI agent skills
+      Tools/            # AI infrastructure tools
+      Workflows/        # AI development methodologies
+    Automation/
+    Coding/
+    QA/
+    Software-Architecture/
+    Workflows/
+  Games/
+    DnD/               # Dungeons & Dragons resources
+    Quest3/            # Quest 3 VR game content
+  Homelab-Domotic/     # Home automation and homelab
+    Domotic/
+      HomeAssistant/   # Home Assistant configuration
+      Zigbee/          # Zigbee devices and integration
+    HomeLab/
+      Raspberry-Pi/    # Raspberry Pi projects
+  Infrastructure-and-Cloud/ # Cloud and infra documentation
+    Cloud-Infrastructure/
+      Storage/         # Object storage solutions (S3, MinIO, Ceph)
+    Cloud-Platform/    # Cloud providers (AWS, etc.)
+    Containers/
+      CRI/             # Container Runtime Interface
+      Docker/          # Docker configuration and best practices
+    DevOps/            # DevOps methodologies and tools
+    Networking/        # Networking guides
+  OS-and-Hardware/     # Operating systems and hardware
+    Hardware/
+      CPU/             # CPU reviews and guides
+      KVM/             # KVM switches and IPMI
+      Memory/          # RAM and memory topics
+      Power-Supply/    # PSU and power management
+    OS/
+      GNU-Linux/       # Linux distributions and configs
+      MacOS/           # Apple macOS tips
+      Nix/             # NixOS and Nix packages
+      Windows/         # Windows guides
+    Shell-Script/
+      zsh/             # Zsh configuration
+  Security/            # Security hardening and best practices
+tutorial/               # Tutorial documentation section
 blog/               # Blog posts in Markdown/MDX
 static/             # Static assets (images, fonts)
   fg/               # Fantasy Grounds data (XML character files)
