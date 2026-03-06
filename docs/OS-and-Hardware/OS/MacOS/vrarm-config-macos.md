@@ -30,8 +30,7 @@ sysctl iogpu.wired_limit_mb
 
 Use the following command to set a custom limit. You must enter your admin password. The value is in **Megabytes (MB)**.
 
-**Command Template:**
-
+### Command Template
 
 ```bash title="Terminal"
 sudo sysctl -w iogpu.wired_limit_mb=VALUE
