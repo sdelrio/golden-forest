@@ -1,5 +1,5 @@
 ---
-title: ClaudeKit: Spec-Driven AI Development Workflow
+title: "ClaudeKit: Spec-Driven AI Development Workflow"
 hide_table_of_contents: true
 ---
 
