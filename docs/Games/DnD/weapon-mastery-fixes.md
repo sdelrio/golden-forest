@@ -20,7 +20,7 @@ Weapons are grouped for convenience. Remember that masteries apply ONLY to a spe
 | Pole&nbsp;arms&nbsp;🔱| Spear, Quarterstaff, Glaive, Halberd, Lance, Pike, Trident   | [Cleave](#cleave)         |
 | Bows&nbsp;🏹 | Shortbow, Longbow     | [Vex](#vex)            |
 | Crossbows&nbsp;⚙️ | Hand Crossbow, Light Crossbow, Heavy Crossbow | [Fast Reload](#fast-reload) |
-| Exotic&nbsp;🎯 | Javelin, Sling, Dart, Blowgun, Shuriken |[Graze](#graze)|
+| Exotic&nbsp;🎯 | Javelin, Sling, Dart, Blowgun, Whip, Shuriken |[Graze](#graze)|
 | Firearms&nbsp;🧨 | Pistol, Blunderbuss, Musket   | [Powerful](#powerful) |
 
 ## Weapon masteries
