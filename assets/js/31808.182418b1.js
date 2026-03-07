@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([["31808"],{11459:function(e,s,t){t.d(s,{createPieServices:()=>c.f});var c=t(40659);t(35679)}}]);
