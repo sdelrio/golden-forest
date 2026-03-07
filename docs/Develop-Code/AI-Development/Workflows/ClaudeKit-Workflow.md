@@ -205,9 +205,9 @@ ClaudeKit integrates with:
 
 ## See Also
 
-- [Qwen3.5 Small Series](Qwen3.5-Small-Series.md) - Model details
-- [System Prompts and Personas](Prompt-Library/System-Prompts-and-Personas.mdx) - AI role configuration
-- [Gemini Prompts](Prompt-Library/gemini-prompts.md) - Alternative AI workflow
+- [Qwen3.5 Small Series](../Models-LLMs/Qwen3.5-Small-Series.md) - Model details
+- [System Prompts and Personas](../Prompt-Library/System-Prompts-and-Personas.mdx) - AI role configuration
+- [Gemini Prompts](../Prompt-Library/gemini-prompts.md) - Alternative AI workflow
 
 ---
 
