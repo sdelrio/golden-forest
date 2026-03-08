@@ -20,6 +20,7 @@
     "@docusaurus/preset-classic": "^3.9.2",
     "@docusaurus/theme-mermaid": "^3.9.2",
     "@docusaurus/theme-search-algolia": "^3.9.2",
+    "@iconify/react": "^6.0.2",
     "@mdx-js/react": "^3.1.0",
     "@mermaid-js/layout-elk": "^0.2.0",
     "@svgr/webpack": "^8.1.0",
