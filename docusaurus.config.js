@@ -137,7 +137,7 @@ const config = {
         //... other Algolia params
       },
       // Replace with your project's social card
-      image: 'img/docusaurus.png',
+      image: 'img/tree.svg',
       navbar: {
         title: 'The Golden Forest',
         logo: {
