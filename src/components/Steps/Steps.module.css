@@ -1,0 +1,66 @@
+.stepsContainer {
+  counter-reset: step;
+  border-left: 2px solid var(--ifm-color-emphasis-300);
+  margin-left: 1rem;
+  padding-left: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  list-style: none;
+  position: relative;
+}
+
+.stepItem {
+  position: relative;
+  counter-increment: step;
+  padding-bottom: 2rem;
+}
+
+.stepItem:last-child {
+  padding-bottom: 0;
+}
+
+.stepIndicator {
+  position: absolute;
+  left: -2rem;
+  /* (2.25rem padding-left + 1px border - half width) */
+  margin-left: -17px;
+  /* (32px width / 2 + border offset) */
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--HB_Color_Background);
+  border: 2px solid var(--ifm-color-emphasis-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+  z-index: 1;
+}
+
+.stepIndicator::before {
+  content: counter(step);
+}
+
+.stepTitle {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+  line-height: 1.25;
+}
+
+.stepContent {
+  color: var(--ifm-font-color-base);
+}
+
+/* Dark mode adjustments if needed */
+[data-theme='dark'] .stepIndicator {
+  background-color: var(--ifm-background-color);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .stepsContainer {
+  border-left-color: var(--ifm-color-emphasis-400);
+}
