@@ -26,7 +26,7 @@ In addition to the regular mastery associated with your weapon of honor, you can
 
 #### Thaumaturge
 
-You can prepare one additional spell from any **Divine Magic** class including those available only to certain subclasses. You always have the spell prepared and it must be a spell of a level you are able to cast. You can change that spell for another elegible spell when you level up. In addition, your mystical connection to the divine gives you a bonus to your Intelligence (Arcana or Religion) checks. The bonus equals your Wisdom modifier (minimum of +1).
+You can prepare one additional spell from any **Divine Magic** or **Primordial Magic** class including those available only to certain subclasses. You always have the spell prepared and it must be a spell of a level you are able to cast. You can change that spell for another elegible spell when you level up. In addition, your mystical connection to the divine gives you a bonus to your Intelligence (Arcana or Religion) checks. The bonus equals your Wisdom modifier (minimum of +1).
 
 #### Protector
 
