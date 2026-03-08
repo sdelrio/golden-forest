@@ -16,12 +16,12 @@ import { Icon } from '@iconify/react';
 
 <!-- search for icons names in https://icon-sets.iconify.design/ -->
 
-|#| Weapon Group | Weapons in Group |Weapon&nbsp;Mastery |
+|#| Weapon Group | Weapons in Group |Weapon Mastery |
 |-|:-----------:|:--------------:|:--------------:|
-| <Icon icon="game-icons:flat-hammer" width="1.5em" />️ | Blunted&nbsp;weapons | Club, Greatclub, Light Hammer, Mace, Flail, Morningstar, Warhammer, War Pick, Maul | [Sap](#sap)          |
-| <Icon icon="game-icons:broadsword" width="1.5em" />️ | Bladed&nbsp;weapons | Dagger, Sickle, Greatsword, Longsword, Shortsword, Scimitar, Rapier     | [Parry](#parry)        |
+| <Icon icon="game-icons:flat-hammer" width="1.5em" />️ | Blunted weapons | Club, Greatclub, Light Hammer, Mace, Flail, Morningstar, Warhammer, War Pick, Maul | [Sap](#sap)          |
+| <Icon icon="game-icons:broadsword" width="1.5em" />️ | Bladed weapons | Dagger, Sickle, Greatsword, Longsword, Shortsword, Scimitar, Rapier     | [Parry](#parry)        |
 | <Icon icon="game-icons:battle-axe" width="1.5em" />️ | Axes | Handaxe, Battleaxe, Greataxe |[Keen](#keen)|
-| <Icon icon="game-icons:spears" width="1.5em" />️ | Pole&nbsp;arms | Spear, Quarterstaff, Glaive, Halberd, Lance, Pike, Trident   | [Cleave](#cleave)         |
+| <Icon icon="game-icons:spears" width="1.5em" />️ | Pole arms | Spear, Quarterstaff, Glaive, Halberd, Lance, Pike, Trident   | [Cleave](#cleave)         |
 | <Icon icon="game-icons:bowman" width="1.5em" /> | Bows | Shortbow, Longbow     | [Vex](#vex)            |
 | <Icon icon="game-icons:crossbow" width="1.5em" />️ | Crossbows | Hand Crossbow, Light Crossbow, Heavy Crossbow | [Fast Reload](#fast-reload) |
 | <Icon icon="game-icons:ninja-star" width="1.5em" /> | Exotic | Javelin, Sling, Dart, Blowgun, Whip, Shuriken |[Graze](#graze)|
@@ -75,7 +75,6 @@ Critical range is increased by 1
 <Icon icon="game-icons:sickle" width={iconSize} />
 <Icon icon="game-icons:two-handed-sword" width={iconSize}/>
 <Icon icon="game-icons:broadsword" width={iconSize}/>
-<Icon icon="game-icons:sword-array" width={iconSize}/>
 <Icon icon="game-icons:dervish-swords" width={iconSize}/>
 <Icon icon="game-icons:sword-hilt" width={iconSize}/>
 

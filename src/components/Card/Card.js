@@ -22,7 +22,13 @@ export default function Card({ children, title, icon, href, shadow, className })
     }
 
     // Relative path resolution for trailingSlash: true
-    // If pathname ends in / (and isn't root), relative links like './foo' 
+    // If pathname ends in [.md|.mdx] (and isn't root)
+    if (siteConfig.trailingSlash && pathname !== baseUrl && (target.endsWith('.md') || target.endsWith('.mdx'))) {
+      return `./${target.replace(/\.mdx?$/, '')}/`;
+    }
+
+    // Relative path resolution for trailingSlash: true
+    // If pathname ends in / (and isn't root), relative links like './foo'
     // resolve as children. We want them as siblings.
     if (siteConfig.trailingSlash && pathname !== baseUrl && pathname.endsWith('/')) {
       // If it already starts with ../ don't add another one
