@@ -2065,6 +2065,13 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
+"@iconify/icons-game-icons@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-game-icons/-/icons-game-icons-1.2.1.tgz#50487b01b605f37e7ab470bae8153729539a4520"
+  integrity sha512-heO/4Veq5SOE7Ho1AiPn1HbSavl7ISIgiC7Ww6J2NNZ5mw+hVuTCzOQ77ImkWSjNKZZ4oEX6A6ibZEcK15J8Hg==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/react@^6.0.2":
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/@iconify/react/-/react-6.0.2.tgz#b6d9bd0e13f9cb85b3a7fddbc70bbf71f5da1d33"
@@ -2072,7 +2079,7 @@
   dependencies:
     "@iconify/types" "^2.0.0"
 
-"@iconify/types@^2.0.0":
+"@iconify/types@*", "@iconify/types@^2.0.0":
   version "2.0.0"
   resolved "https://registry.npmjs.org/@iconify/types/-/types-2.0.0.tgz"
   integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
