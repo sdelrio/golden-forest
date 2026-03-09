@@ -1,0 +1,26 @@
+:root {
+  --card-transition-fast: .1s;
+  --card-transition-slow: .2s;
+}
+
+.cardContainer {
+  display: flex;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.cardContainer:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 3px 6px #0003;
+  transition: all var(--card-transition-fast);
+  transition-property: border, box-shadow;
+}
+
+.cardContainer:hover[data-theme="dark"] {
+  border-color: var(--ifm-color-primary-light);
+  box-shadow: 0 3px 6px #AAA3;
+}
+
+.cardContainer :last-child {
+  margin-bottom: 0
+}

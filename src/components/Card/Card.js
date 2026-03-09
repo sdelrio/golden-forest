@@ -6,6 +6,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useLocation } from '@docusaurus/router';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import { Icon } from '@iconify/react';
+import styles from './Card.module.css';
 
 export default function Card({ children, title, icon, href, shadow, className }) {
   const { siteConfig } = useDocusaurusContext();
@@ -47,25 +48,23 @@ export default function Card({ children, title, icon, href, shadow, className })
   const content = (
     <>
       {(title || icon) && (
-        <div className="card__header">
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            {icon && (
-              <span style={{ marginRight: '0.5rem', display: 'flex', alignItems: 'center' }}>
-                <Icon icon={icon.includes(':') ? icon : `mdi:${icon}`} fontSize="1.5rem" />
-              </span>
-            )}
-            {title && <h3 style={{ margin: 0 }}>{title}</h3>}
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: children ? '0.5rem' : 0 }}>
+          {icon && (
+            <span style={{ marginRight: '0.5rem', display: 'flex', alignItems: 'center' }}>
+              <Icon icon={icon.includes(':') ? icon : `mdi:${icon}`} fontSize="1.5rem" />
+            </span>
+          )}
+          {title && <h3 style={{ margin: 0 }}>{title}</h3>}
         </div>
       )}
-      {title ? <div className="card__body">{children}</div> : children}
+      {children}
     </>
   );
 
   return (
     <CardContainer
       to={linkTo}
-      className={clsx('card', shadow && `shadow--${shadow}`, className)}
+      className={clsx('card', 'padding--lg', shadow && `shadow--${shadow}`, className, styles.cardContainer)}
       style={href ? { textDecoration: 'none', color: 'inherit', display: 'block' } : {}}
     >
       {content}
