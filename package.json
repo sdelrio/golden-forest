@@ -23,7 +23,7 @@
     "@iconify/icons-game-icons": "^1.2.1",
     "@iconify/react": "^6.0.2",
     "@mdx-js/react": "^3.1.0",
-    "@mermaid-js/layout-elk": "^0.2.0",
+    "@mermaid-js/layout-elk": "^0.2.1",
     "@svgr/webpack": "^8.1.0",
     "baseline-browser-mapping": "^2.10.0",
     "caniuse-lite": "^1.0.30001775",
