@@ -159,6 +159,18 @@ html[class*="-doc-id-DnD/"] {
         margin-bottom: 0.235em;
     }
 
+    & h1 {
+        font-size: 42px;
+    }
+
+    & h2 {
+        font-size: 28px;
+    }
+
+    & h3 {
+        font-size: 24px;
+    }
+
     & h4 {
         font-size: var(--ifm-h3-font-size);
         font-weight: normal;
@@ -167,6 +179,44 @@ html[class*="-doc-id-DnD/"] {
     & h5 {
         font-size: var(--ifm-h4-font-size);
     }
+
+    /*
+
+h1 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+    & h2 {
+        font-size: calc(var(--ifm-h2-font-size) * 1.05);
+    }
+
+    & h3 {
+        font-size: calc(var(--ifm-h3-font-size) * 1.05);
+    }
+
+    & h4 {
+        font-size: calc(var(--ifm-h4-font-size) * 1.05);
+    }
+*/
 
     & code {
         padding: 2px 4px 0px 4px;
