@@ -70,11 +70,13 @@ fg-char-extract
 
 Extract characters from a specific file:
 
-```bash
+#### macOS/Linux
+```bash title="Terminal"
 fg-char-extract /path/to/campaign/db.xml
 ```
 
-```bash Windows
+#### Windows
+```bash title="Terminal"
 fg-char-extract C:\Users\YourName\AppData\Roaming\SmiteWorks\Fantasy Grounds\campaigns\MyCampaign\db.xml
 ```
 
@@ -82,8 +84,14 @@ fg-char-extract C:\Users\YourName\AppData\Roaming\SmiteWorks\Fantasy Grounds\cam
 
 Use relative paths from your current location:
 
-```bash
+#### macOS/Linux
+```bash title="Terminal"
 fg-char-extract ../OtherCampaign/db.xml
+```
+
+#### Windows
+```bash title="Terminal"
+fg-char-extract ..\OtherCampaign\db.xml
 ```
 
 ## Output
@@ -136,30 +144,9 @@ If an error occurs, the tool will:
   ```
   ERROR Execution failed error="writing character id-00001: no space left on device"
   ```
-  
+
   **Solution**: Free up disk space or write to a different directory with available space.
 </Accordion>
-
-## Source Code Reference
-
-The command-line argument parsing is handled in `main.go`:
-
-```go main.go:13-17
-func main() {
-	filename := "db.xml"
-	if len(os.Args) > 1 {
-		filename = os.Args[1]
-	}
-```
-
-Error handling and exit behavior:
-
-```go main.go:19-22
-	if err := run(filename); err != nil {
-		slog.Error("Execution failed", "error", err)
-		os.Exit(1)
-	}
-```
 
 ## Next Steps
 

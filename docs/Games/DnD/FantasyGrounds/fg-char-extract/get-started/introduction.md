@@ -8,6 +8,10 @@ sidebar_position: 10
 
 A powerful Go CLI tool that parses Fantasy Grounds `db.xml` campaign files and extracts individual character sheets into separate, portable XML files.
 
+import { Icon } from '@iconify/react';
+
+[<Icon icon="mdi:github" width="32px" /> Releases](https://github.com/sdelrio/fg-char-extract/releases)
+
 ## Overview
 
 Fantasy Grounds Character Extractor simplifies character sheet management by allowing you to extract character data from your campaign's `db.xml` file. Whether you're backing up characters, sharing them between campaigns, or analyzing character data, this tool makes it effortless.

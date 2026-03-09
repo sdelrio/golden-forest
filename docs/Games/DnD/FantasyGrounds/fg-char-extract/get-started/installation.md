@@ -8,86 +8,16 @@ sidebar_position: 20
 
 FG Character Extractor is easy to install on any platform. Choose the method that works best for you.
 
-## Prerequisites
-
-<Info>
-If you're using pre-built binaries, you don't need Go installed. For building from source, you'll need Go 1.25.7 or later.
-</Info>
-
-<Steps>
-  <Step title="Verify Go Installation (Optional)">
-    If you plan to build from source, verify your Go installation:
-
-    ```bash
-    go version
-    ```
-
-    You should see output like `go version go1.25.7 darwin/arm64` or similar. If you need to install Go, visit [go.dev/dl](https://go.dev/dl/).
-  </Step>
-</Steps>
-
-## Installation Methods
-
-<CodeGroup>
-
-```bash Go Install (Recommended)
-# Install directly from source using Go
-go install github.com/sdelrio/fg-char-extract@latest
-
-# Verify installation by running without arguments (uses db.xml in current dir)
-fg-char-extract
-```
-
-```bash Manual Build
-# Clone the repository
-git clone https://github.com/sdelrio/fg-char-extract.git
-cd fg-char-extract
-
-# Build for your current platform
-go build -o fg-char-extract main.go
-
-# Move to your PATH (optional)
-sudo mv fg-char-extract /usr/local/bin/
-```
-
-```bash Using Task (Advanced)
-# Install Task first: https://taskfile.dev
-# Clone and build
-git clone https://github.com/sdelrio/fg-char-extract.git
-cd fg-char-extract
-
-# Build for current platform
-task build
-
-# Or build for all platforms
-task build-all
-```
-
-```bash Pre-built Binaries
-# Download from GitHub Releases
-curl -LO https://github.com/sdelrio/fg-char-extract/releases/latest/download/fg-char-extract-darwin-arm64
-
-# Make executable
-chmod +x fg-char-extract-darwin-arm64
-
-# Move to your PATH
-sudo mv fg-char-extract-darwin-arm64 /usr/local/bin/fg-char-extract
-```
-
-</CodeGroup>
-
 ## Platform-Specific Instructions
+
+import { Icon } from '@iconify/react';
+
 
 ### macOS
 
-<Steps>
-  <Step title="Install Using Go">
-    The easiest method is using `go install`:
+[<Icon icon="material-symbols:download" width="1.25em" />](https://github.com/sdelrio/fg-char-extract/releases)
 
-    ```bash
-    go install github.com/sdelrio/fg-char-extract@latest
-    ```
-  </Step>
+<Steps>
 
   <Step title="Or Download Pre-built Binary">
     Choose the correct architecture for your Mac:
@@ -123,6 +53,7 @@ On macOS, you may see a security warning when first running the binary. Go to **
 :::
 
 ### Windows
+[<Icon icon="material-symbols:download" width="1.25em" />](https://github.com/sdelrio/fg-char-extract/releases)
 
 <Steps>
   <Step title="Download Windows Binary">
@@ -151,41 +82,83 @@ On macOS, you may see a security warning when first running the binary. Go to **
   </Step>
 </Steps>
 
-### Linux
+## Prerequisites for manual install
+
+<Info>
+If you're using pre-built binaries, you don't need Go installed. For building from source, you'll need Go 1.25.7 or later.
+</Info>
 
 <Steps>
-  <Step title="Install Using Go">
-    ```bash
-    go install github.com/sdelrio/fg-char-extract@latest
-
-    # Ensure ~/go/bin is in your PATH
-    export PATH=$PATH:~/go/bin
-    ```
-  </Step>
-
-  <Step title="Build from Source">
-    Pre-built Linux binaries are not currently available. Build from source:
+  <Step title="Verify Go Installation (Optional)">
+    If you plan to build from source, verify your Go installation:
 
     ```bash
-    git clone https://github.com/sdelrio/fg-char-extract.git
-    cd fg-char-extract
-    go build -o fg-char-extract main.go
-    sudo mv fg-char-extract /usr/local/bin/
-    ```
-  </Step>
-
-  <Step title="Verify Installation">
-    Run the tool to verify it's installed correctly:
-
-    ```bash
-    fg-char-extract
+    go version
     ```
 
-    You should see an error about missing `db.xml` if run in an empty directory, which confirms the tool is working.
+    You should see output like `go version go1.25.7 darwin/arm64` or similar. If you need to install Go, visit [go.dev/dl](https://go.dev/dl/).
   </Step>
 </Steps>
 
-## Building from Source with Task
+## Installation Methods
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="1" label="Go Install (Recommended)" default>
+    ```bash title="Go Install (Recommended)"
+    # Install directly from source using Go
+    go install github.com/sdelrio/fg-char-extract@latest
+
+    # Verify installation by running without arguments (uses db.xml in current dir)
+    fg-char-extract
+    ```
+  </TabItem>
+  <TabItem value="2" label="Manual Build">
+    ```bash title="Manual Build"
+    # Clone the repository
+    git clone https://github.com/sdelrio/fg-char-extract.git
+    cd fg-char-extract
+
+    # Build for your current platform
+    go build -o fg-char-extract main.go
+
+    # Move to your PATH (optional)
+    sudo mv fg-char-extract /usr/local/bin/
+    ```
+  </TabItem>
+  <TabItem value="3" label="Using Task (Advanced)">
+    ```bash title="Using Task (Advanced)"
+    # Install Task first: https://taskfile.dev
+    # Clone and build
+    git clone https://github.com/sdelrio/fg-char-extract.git
+    cd fg-char-extract
+
+    # Build for current platform
+    task build
+
+    # Or build for all platforms
+    task build-all
+    ```
+  </TabItem>
+  <TabItem value="4" label="Using Task (Advanced)">
+    ```bash title="Pre-built Binaries"
+    # Download from GitHub Releases
+    curl -LO https://github.com/sdelrio/fg-char-extract/releases/latest/download/fg-char-extract-darwin-arm64
+
+    # Make executable
+    chmod +x fg-char-extract-darwin-arm64
+
+    # Move to your PATH
+    sudo mv fg-char-extract-darwin-arm64 /usr/local/bin/fg-char-extract
+    ```
+  </TabItem>
+</Tabs>
+
+## Building from Source
+
+### With Task
 
 For advanced users, the project includes a `Taskfile.yml` for task automation:
 
@@ -224,7 +197,7 @@ For advanced users, the project includes a `Taskfile.yml` for task automation:
   </Step>
 </Steps>
 
-## Using Devbox (Development)
+### Using Devbox
 
 If you're contributing to the project or want a reproducible development environment:
 
