@@ -18,7 +18,6 @@ In the **Better Combat Effects (BCE) Gold** extension for Fantasy Grounds, you c
 
 ## Larger Than Life Feat
 
-
 To set up **Larger Than Life** (LTL), you will need to create two separate entries in your **Custom Effects** list (the star icon in the upper right of the desktop) and then apply the first one to the character.
 
 ### Step 1: Create the Custom Effects
@@ -75,3 +74,41 @@ sequenceDiagram
     Note over CT, LTLT: Result: LTL_Tracker re-applied
 ```
 </details>
+
+## Attack & Damage Differentiation
+
+* Spell Attack Bonus: `ATK: 10, spell` (Adds 10 only to spell attacks)
+
+* Weapon Attack Bonus: `ATK: 2, weapon, melee` (Adds 2 only to melee weapon attacks)
+
+* Spell Resistance: `RESIST: all, spell` (Resists all damage coming from spell-type attacks)
+
+## Ongoing Saves & Effects
+
+* Save at Start of Turn: `SAVEST: wisdom; SaveDamage: 1d6 poison; SaveAd: Poisoned` (Rolls a Wisdom save at the start of the turn; on failure, takes damage and adds the "Poisoned" condition)
+
+* Tick-Tock (Chained Effects): `Tick; ExpireAd: Talk` (When "Tick" expires, it automatically adds the "Talk" effect)
+
+## Macros (Automatic Scaling)
+
+* Spell Save DC (SDC): `SAVE: [SDC] wisdom` (Automatically replaces [SDC] with the actor's actual Spell Save DC)
+
+* Attribute Scaling: `STR: [19-STR]` (Used for items like Gauntlets of Ogre Power to set Strength to 19 regardless of the base score)
+
+* Proficiency: `ATK: [PRF]` (Adds the actor's proficiency bonus to the attack)
+
+## Conditional Operators (If/Then Logic)
+
+* Target Type: `IFT: TYPE(humanoid); ATK: 2` (Grants +2 to attack if the target is a humanoid)
+
+* Inverse Logic: `IF: !CUSTOM(Sneak Attack); ATK: 10` (Adds 10 to the attack if the actor does not have the "Sneak Attack" effect)
+
+* Pack Tactics Logic: `IF: RANGE(5); IFT: ADJ(enemy); ADVATK` (Grants advantage if within 5ft and an enemy is adjacent to the target)
+
+## Special Utility Tags
+
+* Destroy: `IFT: CR(<=.25); Destroy` (Instantly sets HP to 0 and burns death saves if the target's CR is 0.25 or lower; useful for "Destroy Undead")
+
+* Sneak Attack: `Sneak Attack` (Simply adding this tag automates the once-per-turn damage and removal based on weapon type)
+
+* Immune to Effect: `Immune: CUSTOM(Frightened)` (Makes the actor immune to a specific custom-labeled effect)
