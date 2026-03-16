@@ -40,9 +40,6 @@ A [digital garden](https://joelhooks.com/digital-garden) is usually a place wher
   <Card title="OS & Hardware" icon="mdi:desktop-tower-monitor" href="OS-and-Hardware/">
     Linux, Shell scripting, and low-level hardware configuration.
   </Card>
-  <Card title="Productivity" icon="mdi:chart-line-variant" href="Productivity/">
-    Methodologies and tools to optimize work and organize life.
-  </Card>
 </CardGroup>
 
 ## Contributing
