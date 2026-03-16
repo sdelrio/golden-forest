@@ -6,7 +6,7 @@ import { Icon } from '@iconify/react';
 
 [Better Combat Effects (BCE) Gold Readme (PDF) <Icon icon="material-symbols:download" width="1.25em" />](https://www.fantasygrounds.com/forums/attachment.php?attachmentid=63813&d=1742242097)
 
-In the **Better Combat Effects (BCE) Gold** extension for Fantasy Grounds, you can use the `EXPIREADD`, `RESTS` and `TREGENA` tags to create a *"looping"* effect that re-applies itself and triggers a *"pulse"* of temporary hit points every time a rest occurs.
+In the **Better Combat Effects (BCE) Gold** extension for Fantasy Grounds, you can use the `EXPIREADD`, `RESTS` and `TREGENA` conditional operators to create a *"looping"* effect that re-applies itself and triggers a *"pulse"* of temporary hit points every time a rest occurs. Conditional Operators are Not case-sensitive.
 
 ### Important Tips
 
@@ -30,7 +30,7 @@ Open your **Custom Effects** window and add these two exact lines:
 |**LTL_Heal**|`LTL_Heal; TREGENA: 5; EXPIREADD: LTL_Tracker`|
 
 :::note Effect Naming
-The "Effect Name" (how it appears in the Combat Tracker) is defined by the **first segment** of the string (the text before the first `;`). For example, in the first line above, the effect name is `LTL_Tracker`.
+The "Effect Name" (how it appears in the Combat Tracker) is defined by the **first segment** of the string (the text before the first `;`). For example, in the first line above, the effect name is `LTL_Tracker`. And is case-sensitive.
 :::
 
 ### Step 2: Application
@@ -87,11 +87,11 @@ sequenceDiagram
 
 * Save at Start of Turn: `SAVEST: wisdom; SaveDamage: 1d6 poison; SaveAd: Poisoned` (Rolls a Wisdom save at the start of the turn; on failure, takes damage and adds the "Poisoned" condition)
 
-* Tick-Tock (Chained Effects): `Tick; ExpireAd: Talk` (When "Tick" expires, it automatically adds the "Talk" effect)
+* Tick-Tock (Chained Effects): `Tick; ExpireAdd: Talk` (When "Tick" expires, it automatically adds the "Talk" effect)
 
 ## Macros (Automatic Scaling)
 
-* Spell Save DC (SDC): `SAVE: [SDC] wisdom` (Automatically replaces [SDC] with the actor's actual Spell Save DC)
+* Spell Save DC (SDC): `SAVE: [SAVEDC] wisdom` (Automatically replaces [SDC] with the actor's actual Spell Save DC). (Don't use `SDC`, is deprecated)
 
 * Attribute Scaling: `STR: [19-STR]` (Used for items like Gauntlets of Ogre Power to set Strength to 19 regardless of the base score)
 
@@ -109,6 +109,6 @@ sequenceDiagram
 
 * Destroy: `IFT: CR(<=.25); Destroy` (Instantly sets HP to 0 and burns death saves if the target's CR is 0.25 or lower; useful for "Destroy Undead")
 
-* Sneak Attack: `Sneak Attack` (Simply adding this tag automates the once-per-turn damage and removal based on weapon type)
+* Sneak Attack: `Sneak Attack` (Simply adding this tag automates the once-per-turn damage and removal based on weapon type). It's defined in the `BCE - Core` extension.
 
 * Immune to Effect: `Immune: CUSTOM(Frightened)` (Makes the actor immune to a specific custom-labeled effect)
