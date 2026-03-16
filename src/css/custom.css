@@ -51,6 +51,12 @@
 
   --bg-table-row-odd: #f8f9fa;
   --bg-table-row-even: #e9ecef;
+
+  /* Mermaid Diagram Variables */
+  --mermaid-lightbrown-fill: #f9f9fb;
+  --mermaid-lightbrown-stroke: #58180d;
+  --mermaid-lightblue-fill: #f0f4f8;
+  --mermaid-lightblue-stroke: #0366d6;
 }
 
 html[data-theme='light'] :root {
@@ -67,7 +73,37 @@ html[data-theme='dark'] :root {
   --docusaurus-highlighted-code-line-bg: #3a3a3a;
   --bg-table-row-odd: #242526;
   --bg-table-row-even: #2c2e30;
+
+  /* Mermaid Diagram Variables (Dark Mode) */
+  --mermaid-lightbrown-fill: #3a2a2a;
+  --mermaid-lightbrown-stroke: #ff9988;
+  --mermaid-lightblue-fill: #2a1a3a;
+  --mermaid-lightblue-stroke: #88aaff;
 }
+
+/* Mermaid Custom Node Styling */
+.lightbrown-node .label-container,
+.lightbrown-node>rect,
+.lightbrown-node>path,
+.lightbrown-node>circle,
+.lightbrown-node>ellipse,
+.lightbrown-node>polygon {
+  fill: var(--mermaid-lightbrown-fill) !important;
+  stroke: var(--mermaid-lightbrown-stroke) !important;
+  stroke-width: 4px !important;
+}
+
+.lightblue-node .label-container,
+.lightblue-node>rect,
+.lightblue-node>path,
+.lightblue-node>circle,
+.lightblue-node>ellipse,
+.lightblue-node>polygon {
+  fill: var(--mermaid-lightblue-fill) !important;
+  stroke: var(--mermaid-lightblue-stroke) !important;
+  stroke-width: 2px !important;
+}
+
 
 /*
  * https://developers.google.com/fonts/docs/css2

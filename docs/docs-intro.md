@@ -10,8 +10,6 @@ import CardGroup from '@site/src/components/Card/CardGroup';
 
 Welcome to my **Digital Garden** 🌿 — a space where I cultivate knowledge, share notes, and organize my thoughts on technology, gaming, and productivity. Unlike a traditional blog, this is a living resource where information is treated like plants: some are just seeds, while others are fully grown and regularly maintained.
 
-
-
 ![](/img/trees-02.svg)
 
 A [digital garden](https://joelhooks.com/digital-garden) is usually a place where things grow, and that's the idea of keeping here things treated as plants, better organized than it they were on a blog.

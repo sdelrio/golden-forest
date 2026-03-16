@@ -35,62 +35,44 @@ The following diagram illustrates how the Anthropic Cybersecurity Skills ecosyst
 
 ```mermaid
 graph LR
-    subgraph "Ecosystem"
-        agentskills[("agentskills.io<br/>Open Standard")]
-        GitHub[("GitHub Repo<br/>734+ Skills")]
-        Docs[("Documentation<br/>Guides & Examples")]
 
-        agentskills --> GitHub
-        agentskills --> Docs
-    end
+    agentskills --> AIA
 
-    subgraph "AI Agent Platforms"
+    subgraph AIA[AI Agent Platforms]
+        direction LR
         Claude["Claude Code<br/>(/plugin marketplace)"]
         Copilot["GitHub Copilot<br/>(.skills/ directory)"]
         Cursor["Cursor IDE<br/>(Project rules)"]
         Gemini["Gemini CLI<br/>(Context files)"]
         Others[("16+ Other Platforms")]
 
-        agentskills --> Claude
-        agentskills --> Copilot
-        agentskills --> Cursor
-        agentskills --> Gemini
-        agentskills --> Others
     end
 
-    subgraph "Security Domains (29 Categories)"
+    subgraph "Ecosystem"
+        direction TB
+        agentskills[("agentskills.io<br/>Open Standard")]
+        GitHub[("GitHub Repo<br/>734+ Skills")]
+        Docs[("Documentation<br/>Guides & Examples")]
+
+        agentskills --> GitHub
+        agentskills --> Docs
+
+    end
+
+    SEDOMAIN --> agentskills
+
+    subgraph SEDOMAIN["Security Domains (29 Categories)"]
+        direction LR
         cloud["Cloud Security (48)"]
         threat["Threat Intelligence (43)"]
         websec["Web App Security (41)"]
         hunting["Threat Hunting (35)"]
-        malware["Malware Analysis (34)"]
-        forensics["Digital Forensics (34)"]
-        soc["SOC Operations (33)"]
-        network["Network Security (33)"]
-        iam["IAM & Access (33)"]
-        ot["OT/ICS Security (28)"]
-        api["API Security (28)"]
-        container["Container Security (26)"]
-        vuln["Vulnerability (24)"]
-        redteam["Red Teaming (24)"]
-        ir["Incident Response (24)"]
-        pentest["Penetration Testing (23)"]
-        zerotrust["Zero Trust (17)"]
-        endpoint["Endpoint Security (16)"]
-        devsecops["DevSecOps (16)"]
-        phishing["Phishing Defense (16)"]
-        crypto["Cryptography (13)"]
-        mobile["Mobile Security (12)"]
-        ransomware["Ransomware (5)"]
-        compliance["Compliance (5)"]
+        Others2[("+ Other domains")]
 
-        cloud --> agentskills
-        threat --> agentskills
-        websec --> agentskills
     end
 
-    style agentskills fill:#f9f,stroke:#333,stroke-width:4px
-    style GitHub fill:#bbf,stroke:#333,stroke-width:2px
+    class agentskills lightbrown-node
+    class GitHub lightblue-node
 ```
 
 ## How It Works: Progressive Disclosure {#how-it-works}
