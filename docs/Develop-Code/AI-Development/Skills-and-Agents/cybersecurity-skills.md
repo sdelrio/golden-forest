@@ -39,25 +39,25 @@ graph LR
         agentskills[("agentskills.io<br/>Open Standard")]
         GitHub[("GitHub Repo<br/>734+ Skills")]
         Docs[("Documentation<br/>Guides & Examples")]
-        
+
         agentskills --> GitHub
         agentskills --> Docs
     end
-    
+
     subgraph "AI Agent Platforms"
         Claude["Claude Code<br/>(/plugin marketplace)"]
         Copilot["GitHub Copilot<br/>(.skills/ directory)"]
         Cursor["Cursor IDE<br/>(Project rules)"]
         Gemini["Gemini CLI<br/>(Context files)"]
         Others[("16+ Other Platforms")]
-        
+
         agentskills --> Claude
         agentskills --> Copilot
         agentskills --> Cursor
         agentskills --> Gemini
         agentskills --> Others
     end
-    
+
     subgraph "Security Domains (29 Categories)"
         cloud["Cloud Security (48)"]
         threat["Threat Intelligence (43)"]
@@ -83,17 +83,17 @@ graph LR
         mobile["Mobile Security (12)"]
         ransomware["Ransomware (5)"]
         compliance["Compliance (5)"]
-        
+
         cloud --> agentskills
         threat --> agentskills
         websec --> agentskills
     end
-    
+
     style agentskills fill:#f9f,stroke:#333,stroke-width:4px
     style GitHub fill:#bbf,stroke:#333,stroke-width:2px
 ```
 
-## How It Works: Progressive Disclosure
+## How It Works: Progressive Disclosure {#how-it-works}
 
 An AI agent follows a **progressive disclosure** pattern to efficiently discover and execute skills:
 
@@ -206,7 +206,7 @@ Ransomware Precursor Detection, Backup Strategy, Honeypot Detection, File Integr
 ### Compliance & Governance (5 skills)
 GDPR Data Protection, ISO 27001 ISMS, PCI DSS Controls, Policy Enforcement, Audit Readiness.
 
-## MITRE ATT&CK Integration
+## MITRE ATT&CK Integration {#mitre-attack-integration}
 
 All 734+ skills are mapped to the **MITRE ATT&CK framework** for:
 
