@@ -37,10 +37,10 @@ A [digital garden](https://joelhooks.com/digital-garden) is usually a place wher
   <Card title="HomeLab & Domotic" icon="mdi:home-automation" href="Homelab-Domotic/">
     Personal servers, tinkering, and smart home automation projects.
   </Card>
-  <Card title="OS & Hardware" icon="mdi:desktop-tower-monitor" href="./OS-and-Hardware/">
+  <Card title="OS & Hardware" icon="mdi:desktop-tower-monitor" href="OS-and-Hardware/">
     Linux, Shell scripting, and low-level hardware configuration.
   </Card>
-  <Card title="Productivity" icon="mdi:chart-line-variant" href="./Productivity/">
+  <Card title="Productivity" icon="mdi:chart-line-variant" href="Productivity/">
     Methodologies and tools to optimize work and organize life.
   </Card>
 </CardGroup>
