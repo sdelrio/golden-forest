@@ -113,7 +113,7 @@ jobs:
           fi
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4.8.0
         with:
           folder: build # The folder the action should deploy.
           clean: true
