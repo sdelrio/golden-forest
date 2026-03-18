@@ -1,4 +1,8 @@
-# /check-mdx
+---
+description: check mdx files
+agent: build
+model: opencode/big-pickle
+---
 Run the Docusaurus MDX validator.
 
 ## Instructions

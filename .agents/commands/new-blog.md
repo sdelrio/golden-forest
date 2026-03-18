@@ -1,3 +1,8 @@
+---
+description: new blog
+agent: build
+model: opencode/big-pickle
+---
 # /new-blog <title>
 Create a new blog post for the digital garden.
 
@@ -12,8 +17,8 @@ Create a new blog post for the digital garden.
    tags: [digital-garden]
    ---
    # <Title>
-   
+
    Summary here...
-   
+
    <!--truncate-->
    ```

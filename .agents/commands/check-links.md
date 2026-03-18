@@ -1,4 +1,8 @@
-# /check-links
+---
+description: check links
+agent: build
+model: opencode/big-pickle
+---
 Check for broken internal links via a production build.
 
 ## Instructions

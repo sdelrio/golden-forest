@@ -65,3 +65,16 @@ While the Google free plan is covered above, OpenCode can also be used with a nu
 ## Important notes:
 - The free plan has quota limits, but they are sufficient for personal use.
 - If you use Antigravity (an additional integration), you can access Claude Opus 4.5 and Gemini 3 Pro for free, although [some users warn that this may violate Google’s Terms of Service](https://www.reddit.com/r/GoogleAntigravityIDE/comments/1qgx07v/comment/o0fz6os/). It’s recommended to use a test or secondary account if you decide to use Antigravity (opencode-antigravity-auth) plugin, to avoid suspension risks.
+
+## Agent Skills
+
+### Symbolic Link (Symlink) Support
+Symlinks are the recommended mechanism for managing the `.agents/skills` directory. During installation, the setup wizard will prompt you to enable symbolic links. This creates a centralized "source of truth" in a universal directory, such as `.agents/skills`.
+
+This configuration allows multiple agents to share a single capability set. Agent-specific directories (e.g., `.opencode/skills`) will contain pointers to the actual files in `.agents`, ensuring consistency across all your AI tools and eliminating data redundancy.
+
+### Discovery and Flexibility
+OpenCode offers significant flexibility compared to other agentic interfaces. It automatically scans multiple paths (including `.agents` and `.opencode`) to discover and register new skills. Its adaptive directory sensing means you are not restricted to a single rigid folder structure.
+
+### Refreshing Capabilities
+To register a newly installed or manually created skill, you must restart the OpenCode session. Relaunching the CLI allows the system to index the new directory contents and list the updated capabilities within the assistant interface. You can use `/session` command to restore your last session after restart.

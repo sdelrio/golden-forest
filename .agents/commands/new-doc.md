@@ -1,3 +1,8 @@
+---
+description: new doc
+agent: build
+model: opencode/big-pickle
+---
 # /new-doc <category> <title>
 Create a new Docusaurus document in the `docs/` directory.
 

@@ -1,4 +1,8 @@
-# /list-chars
+---
+description: list chars
+agent: build
+model: opencode/big-pickle
+---
 List and summarize Fantasy Grounds character XML files.
 
 ## Instructions

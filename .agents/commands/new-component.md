@@ -1,3 +1,8 @@
+---
+description: new component
+agent: build
+model: opencode/big-pickle
+---
 # /new-component <ComponentName>
 Scaffold a new React component following the project's multi-file convention.
 

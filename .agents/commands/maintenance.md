@@ -1,4 +1,8 @@
-# /maintenance
+---
+description: maintenance
+agent: build
+model: opencode/big-pickle
+---
 Upgrade project dependencies and verify the build.
 
 ## Instructions
