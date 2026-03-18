@@ -1,0 +1,57 @@
+---
+id: spacetimedb
+title: SpacetimeDB
+description: Real-time relational database for multiplayer games and apps.
+tags: [Database, Real-time, Rust, WASM, SQL]
+---
+
+# SpacetimeDB
+
+[SpacetimeDB](https://spacetimedb.com) is a real-time relational database designed to unify your database, server, and networking into a single, cohesive engine.
+
+In some cases this DB can replace backend, sync in realtime + logic in WASM inside the DB can be up to 1000x faster than traditional backend for real time applications.
+
+## What is SpacetimeDB?
+
+Unlike traditional database stacks that require a separate API layer (REST, GraphQL), SpacetimeDB allows you to write your entire server-side application logic as a database module.
+
+- **Everything is Relational:** Data is stored in standard tables, and logic is defined as stored procedures (modules).
+- **WASM-Based Logic:** Modules are written in languages like **Rust** or **C#**, compiled to WebAssembly, and executed directly within the database engine.
+- **Real-time Sync:** Clients subscribe to SQL-like queries and receive automatic updates whenever the underlying data changes.
+
+## Core Concepts
+
+### 1. Database Modules
+Instead of a separate backend server, you write a **Module**. This module contains your table definitions and the logic (functions) that manipulate those tables. These functions are triggered by client calls or internal events.
+
+### 2. The Identity System
+SpacetimeDB handles authentication natively. Every client has a unique `Identity`, allowing you to easily manage permissions and state per user.
+
+### 3. Client-Side SDKs
+SpacetimeDB provides SDKs for popular environments (Unity, TypeScript, Rust, etc.). These SDKs handle the real-time synchronization of the "Client Cache," so your frontend always has a local, up-to-date copy of the data it needs.
+
+## Resources
+
+- **Official Website:** [spacetimedb.com](https://spacetimedb.com)
+- **GitHub Repository:** [ClockworkLabs/SpacetimeDB](https://github.com/ClockworkLabs/SpacetimeDB)
+- **Documentation:** [docs.spacetimedb.com](https://docs.spacetimedb.com)
+
+## Getting Started
+
+To get started with SpacetimeDB, install the CLI:
+
+```bash
+curl -sSL https://install.spacetimedb.com | sh
+```
+
+### Initialize a new project
+
+```bash
+spacetime init --lang rust my-app
+```
+
+### Deploy to SpacetimeDB Cloud
+
+```bash
+spacetime publish my-app
+```
