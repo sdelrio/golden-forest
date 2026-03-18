@@ -33,6 +33,8 @@
   --ifm-font-weight-bold: 700;
   --ifm-table-cell-padding: 0.25rem;
   --ifm-heading-margin-bottom: 0.25rem;
+  --ifm-link-color: var(--ifm-color-primary-darkest);
+  --ifm-link-hover-color: var(--ifm-color-primary-darker);
   --docusaurus-highlighted-code-line-bg: #efefef;
   /* Handbook variables */
   --HB_Color_Background: #EEE5CE;
