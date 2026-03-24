@@ -149,3 +149,4 @@ This dramatically reduce mistakes.
 - [OpenCode](./opencode.md): A structured AI coding CLI with plugin support.
 - [OpenSandbox](./OpenSandbox.md): Secure infrastructure for running AI agents.
 - [Model Context Protocol](https://modelcontextprotocol.io): Learn more about the protocol for sharing tools.
+- [Anatomy of the .claude/ folder](https://x.com/akshay_pachaar/status/2035341800739877091): A complete guide to CLAUDE.md, commands, skills, agents and permission.
