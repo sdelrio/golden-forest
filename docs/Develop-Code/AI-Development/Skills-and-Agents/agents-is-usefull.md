@@ -6,7 +6,7 @@ tags: [ai-agents, agents-md, claude-code, context-files, best-practices]
 
 # Is AGENTS.md Actually Useful?
 
-> **Source:** [Evaluating AGENTS.md (arxiv, Feb 2026)](https://arxiv.org/html/2602.11988v1) · [DAIR.AI Summary](https://academy.dair.ai/blog/agents-md-evaluation)  
+> **Source:** [Evaluating AGENTS.md (arxiv, Feb 2026)](https://arxiv.org/html/2602.11988v1) · [DAIR.AI Summary](https://academy.dair.ai/blog/agents-md-evaluation)
 > **By:** ETH Zurich SRI Lab · **Benchmark:** [AGENTbench](https://github.com/eth-sri/agentbench)
 
 ---
@@ -49,8 +49,8 @@ The studied files averaged **641 words across 9.7 sections** — substantial, no
 ### 3. Agents follow instructions — but following ≠ succeeding
 
 Context files are followed faithfully:
-- `uv` usage jumps from **<0.01×** to **1.6×** per task when mentioned
-- Repo-specific tools jump from **<0.05×** to **2.5×** per task
+- `uv` usage jumps from **&lt;0.01×** to **1.6×** per task when mentioned
+- Repo-specific tools jump from **&lt;0.05×** to **2.5×** per task
 
 But agents follow instructions by doing *more work*: more test runs, more file searches, more reasoning. This activity doesn't translate to better outcomes — it translates to higher bills.
 
