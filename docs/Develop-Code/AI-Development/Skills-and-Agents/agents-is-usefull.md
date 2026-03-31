@@ -9,9 +9,7 @@ tags: [ai-agents, agents-md, claude-code, context-files, best-practices]
 > **Source:** [Evaluating AGENTS.md (arxiv, Feb 2026)](https://arxiv.org/html/2602.11988v1) · [DAIR.AI Summary](https://academy.dair.ai/blog/agents-md-evaluation)
 > **By:** ETH Zurich SRI Lab · **Benchmark:** [AGENTbench](https://github.com/eth-sri/agentbench)
 
----
-
-## Executive Summary
+## Summary
 
 ETH Zurich ran the **first rigorous evaluation** of whether `AGENTS.md`, `CLAUDE.md`, and similar repository-level context files actually improve coding agent performance. The short answer: **it depends on who wrote it**.
 
@@ -23,8 +21,6 @@ ETH Zurich ran the **first rigorous evaluation** of whether `AGENTS.md`, `CLAUDE
 
 Agents tested: **Claude Code** (Sonnet-4.5), **Codex** (GPT-5.2 / GPT-5.1 mini), **Qwen Code** (Qwen3-30b-coder).  
 Benchmarks: **SWE-bench Lite** (300 tasks, popular repos) + **AGENTbench** (138 tasks, niche repos with real AGENTS.md files).
-
----
 
 ## Key Findings
 
@@ -62,8 +58,6 @@ A common recommendation is to include a full directory/architecture overview. Th
 
 Using GPT-5.2 to generate files (instead of the default model) improved SWE-bench Lite results (+2%) but **degraded AGENTbench** results (−3%). No prompt or model consistently wins.
 
----
-
 ## What This Means for Your AGENTS.md
 
 The study's core insight: **context files are useful to the extent they tell agents something the repo doesn't already say.**
@@ -81,8 +75,6 @@ The study's core insight: **context files are useful to the extent they tell age
 - Summaries of what the README already says
 - Descriptions of well-known tools (`pytest`, `git`, `docker`) used with default settings
 - General architecture overviews if there's already a `docs/` folder
-
----
 
 ## How to Fix a `/init`-Generated AGENTS.md
 
@@ -123,8 +115,6 @@ Before keeping a section in `AGENTS.md`, ask:
 - [ ] **Does this warn about a gotcha that isn't obvious from the code?** → Keep it
 - [ ] **Is this a command the agent must run in a specific way?** → Keep it
 
----
-
 ## The Cost Trade-off
 
 Every context file — good or bad — adds **~20% to inference cost**. This is the floor.
@@ -132,8 +122,6 @@ Every context file — good or bad — adds **~20% to inference cost**. This is 
 - For **high-volume agentic pipelines**: a poorly written `AGENTS.md` is a tax with no return. Audit it or remove it.
 - For **niche repos with sparse docs**: even an imperfect file can help, since the agent has less to work from.
 - For **repos with good existing documentation**: an `AGENTS.md` that restates that documentation actively harms performance.
-
----
 
 ## Summary Table
 
@@ -146,8 +134,6 @@ Every context file — good or bad — adds **~20% to inference cost**. This is 
 | Document non-obvious commands and constraints | ✅ Do — high signal |
 | Use a stronger model to generate the file | ➖ No consistent benefit |
 | Split into minimal AGENTS.md + existing docs | ✅ Best approach |
-
----
 
 ## Resources
 
