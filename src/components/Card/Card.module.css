@@ -5,7 +5,9 @@
 
 .cardContainer {
   display: flex;
-  padding: 2rem 0;
+  flex-direction: column;
+  height: 90%;
+  padding: 2rem 1.5rem;
   width: 100%;
 }
 

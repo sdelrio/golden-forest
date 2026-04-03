@@ -65,7 +65,7 @@ export default function Card({ children, title, icon, href, shadow, className })
     <CardContainer
       to={linkTo}
       className={clsx('card', 'padding--lg', shadow && `shadow--${shadow}`, className, styles.cardContainer)}
-      style={href ? { textDecoration: 'none', color: 'inherit', display: 'block' } : {}}
+      style={href ? { textDecoration: 'none', color: 'inherit', flex: '1 1 auto' } : {}}
     >
       {content}
     </CardContainer>
