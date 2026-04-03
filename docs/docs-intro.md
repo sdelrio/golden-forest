@@ -6,7 +6,7 @@ hide_table_of_contents: true
 import Card from '@site/src/components/Card/Card';
 import CardGroup from '@site/src/components/Card/CardGroup';
 
-# Introduction
+# Introduction 🌿
 
 Welcome to my **Digital Garden** 🌿 — a space where I cultivate knowledge, share notes, and organize my thoughts on technology, gaming, and productivity. Unlike a traditional blog, this is a living resource where information is treated like plants: some are just seeds, while others are fully grown and regularly maintained.
 
