@@ -33,7 +33,7 @@ By applying heuristic strategies per command type, RTK achieves compression thro
 
 ## Advantages & Token Cost Savings
 
-Every command execution dumps thousands of tokens into your context window. For example, a basic `ls -la` might cost 800 tokens, or a `cargo test` run with passing tests might spam 5,000 tokens of boilerplate. 
+Every command execution dumps thousands of tokens into your context window. For example, a basic `ls -la` might cost 800 tokens, or a `cargo test` run with passing tests might spam 5,000 tokens of boilerplate.
 
 **With RTK, the advantages are clear:**
 
