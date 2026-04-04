@@ -16,6 +16,7 @@ $ lspci -vnn | grep -i net
 
 ### 2. Install Broadcom drivers
 
+* Add `non-free` to your `/etc/apt/sources.list`
 * `apt-get install linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') broadcom-sta-dkms`. Sample on debian 13 installed system.
 
 ```bash title="Terminal"
@@ -41,7 +42,7 @@ echo "wl" | tee -a /etc/modules
 wpa_passphrase "Your_SSID" "Your_Password" | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-Check for country and ctrl_interface at the beginning.
+* Check for country and ctrl_interface at the beginning.
 
 ```bash title="/etc/wpa_supplicant/wpa_supplicant.conf"
 ctrl_interface=DIR=/run/wpa_supplicant GROUP=netdev
@@ -49,10 +50,20 @@ update_config=1
 country=ES  # Change to your 2-letter country code
 
 network={
-	ssid="Your_SSID"
-	#psk="Your_Password"
-	psk=c174a8f925b06ba03ad00bfa0d91210c7f28f9071bac05c8530146eb59c1e250
+  ssid="Your_SSID"
+  #psk="Your_Password"
+  psk=c174a8f925b06ba03ad00bfa0d91210c7f28f9071bac05c8530146eb59c1e250
 }
+```
+
+* Check `/etc/network/interfaces`.
+
+```bash title="/etc/network/interfaces"
+(...)
+# The wireless interface
+allow-hotplug wlp2s0
+iface wlp2s0 inet dhcp
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 ### 5. Enable the service
@@ -80,9 +91,37 @@ EOF
 
 ### 8. Update initramfs
 
-If you also want to setup wifii in initramfs step, make sure the content of `/etc/wpa_supplicant/wpa_supplicant.conf` is also on `/etc/initramfs-tools/wpa_supplicant.conf`. Also create initramfs script to enable wireless and to kill after intitramfs.
+If you also want to setup wifii in initramfs step, make sure the content of `/etc/wpa_supplicant/wpa_supplicant.conf` is also on `/etc/initramfs-tools/wpa_supplicant.conf` but changing `ctr_interface` to `/tmp/wpa_supplicant`.
 
-```shell title="/etc/initramfs-tools/scripts/init-premount/a_enable_wireless"
+Also create initramfs script to enable wireless and to kill after intitramfs.
+
+Make sure hooks and scripts have `chmod +x` set.
+
+#### /etc/initramfs-tools/modules
+
+```conf
+# Add the following line at the end of the file
+wl
+```
+
+#### initramfs-tools/wpa_supplicant.conf
+
+```conf
+ctrl_interface=/tmp/wpa_supplicant
+#ctrl_interface=DIR=/run/wpa_supplicant GROUP=netdev
+#update_config=1
+country=ES  # Change to your 2-letter country code
+
+network={
+	ssid="Your_SSID"
+	#psk="Your_Password"
+	psk=c174a8f925b06ba03ad00bfa0d91210c7f28f9071bac05c8530146eb59c1e250
+}
+```
+
+#### scripts/init-premount/a_enable_wireless
+
+```shell title="scripts/init-premount/a_enable_wireless"
 #!/bin/sh
 PREREQ=""
 prereqs()
@@ -130,6 +169,7 @@ fi
 configure_networking
 ```
 
+#### scripts/local-bottom/kill_wireless
 
 ```shell title="/etc/initramfs-tools/scripts/local-bottom/kill_wireless"
 #!/bin/sh
@@ -150,8 +190,37 @@ echo "Killing wpa_supplicant so the system takes over later."
 kill `cat /run/initram-wpa_supplicant.pid`
 ```
 
+#### hooks/enable-wireless
 
-```shell
+```bash title="hooks/enable-wireless"
+#!/bin/sh
+set -e
+
+PREREQ=""
+prereqs()
+{
+    echo "${PREREQ}"
+}
+case "${1}" in
+    prereqs)
+        prereqs
+        exit 0
+        ;;
+esac
+
+. /usr/share/initramfs-tools/hook-functions
+
+# CHANGE HERE for your correct modules
+manual_add_modules iwlwifi iwlmvm
+
+copy_exec /sbin/wpa_supplicant
+copy_exec /sbin/wpa_cli
+copy_file config /etc/initramfs-tools/wpa_supplicant.conf /etc/wpa_supplicant.conf
+```
+
+#### update initramfs
+
+```shell title="Terminal"
 update-initramfs -u
 ```
 
