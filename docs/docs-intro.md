@@ -17,17 +17,11 @@ A [digital garden](https://joelhooks.com/digital-garden) is usually a place wher
 ---
 
 <CardGroup cols={3}>
-  <Card title="Develop & Code" icon="mdi:code-braces" href="Develop-Code/">
-    Design, Implementation, and Validation. The core of my software development journey.
-  </Card>
-  <Card title="Infrastructure & Cloud" icon="mdi:cloud-cog" href="Infrastructure-and-Cloud/">
-    Cloud platforms, Kubernetes, Containers, and Networking. Scaling and automation.
-  </Card>
-  <Card title="Security" icon="mdi:shield-lock" href="Security/">
-    Notes on system protection, software quality, and ethical hacking.
-  </Card>
   <Card title="Apps & Utilities" icon="mdi:apps" href="Apps-and-utilities/">
     A collection of essential tools and software I use daily.
+  </Card>
+  <Card title="Develop & Code" icon="mdi:code-braces" href="Develop-Code/">
+    Design, Implementation, and Validation. The core of my software development journey.
   </Card>
   <Card title="Games" icon="mdi:controller" href="Games/">
     Tabletop RPGs (D&D), Meta Quest 3 fixes, and gaming mechanics.
@@ -35,8 +29,14 @@ A [digital garden](https://joelhooks.com/digital-garden) is usually a place wher
   <Card title="HomeLab & Domotic" icon="mdi:home-automation" href="Homelab-Domotic/">
     Personal servers, tinkering, and smart home automation projects.
   </Card>
+  <Card title="Infrastructure & Cloud" icon="mdi:cloud-cog" href="Infrastructure-and-Cloud/">
+    Cloud platforms, Kubernetes, Containers, and Networking. Scaling and automation.
+  </Card>
   <Card title="OS & Hardware" icon="mdi:desktop-tower-monitor" href="OS-and-Hardware/">
     Linux, Shell scripting, and low-level hardware configuration.
+  </Card>
+  <Card title="Security" icon="mdi:shield-lock" href="Security/">
+    Notes on system protection, software quality, and ethical hacking.
   </Card>
 </CardGroup>
 
