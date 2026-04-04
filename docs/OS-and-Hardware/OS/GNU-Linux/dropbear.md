@@ -10,17 +10,18 @@ apt install dropbear-initramfs
 
 ### Edit dropbear.conf
 
-```bash title="Terminal"
-vim /etc/dropbear/initramfs/dropbear.conf
+* `/etc/dropbear/initramfs/dropbear.conf`
+
+```bash title="dropbear.conf"
 
 DROPBEAR_OPTIONS="-I 180 -j -k -p 2222 -s -c cryptroot-unlock"
 ```
 
 ### Edit initramfs.conf
 
-```bash title="Terminal"
-vim /etc/initramfs-tools/initramfs.conf
+* `/etc/initramfs-tools/initramfs.conf`
 
+```bash title="initramfs.conf"
 # Add the following line at the end of the file, replacing the example IP address, gateway, netmask, and hostname with your own values. If your server is in a remote data center, you should use the server's public IP address
 
 IP=192.168.1.193::192.168.1.1:255.255.255.0:mm14
