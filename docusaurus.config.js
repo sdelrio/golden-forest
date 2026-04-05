@@ -67,6 +67,20 @@ const config = {
         ],
       },
     ],
+    // Webpack configuration to handle random-js's dependency on Node.js crypto
+    () => ({
+      name: 'webpack-config',
+      configureWebpack() {
+        return {
+          resolve: {
+            fallback: {
+              crypto: false,
+              url: false,
+            },
+          },
+        };
+      },
+    }),
   ],
 
   presets: [
