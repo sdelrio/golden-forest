@@ -4,6 +4,8 @@ description: A deep dive into Oh My OpenAgent, its multi-model orchestration, sp
 tags: [ai-agents, oh-my-openagent, orchestration, productivity, ultrawork, framework]
 ---
 
+import { Icon } from '@iconify/react';
+
 # Oh My OpenAgent — The Best Agent Harness
 
 ## Summary
@@ -30,23 +32,34 @@ A significant differentiator for Oh My OpenAgent is its strict structural divisi
 
 ### The Architect Layer
 The Architect layer focuses entirely on intelligence gathering, edge-case identification, and strategy:
-* **Prometheus:** Conducts intelligent interviews, researches the codebase context, and generates detailed YAML battle plans. It never types a single line of production code.
-* **Metis:** Analyzes the plan to catch ambiguities and potential failures before any code execution starts.
-* **Momus:** A ruthless validation node. It reviews and approves only bulletproof technical plans.
+
+#### <Icon icon="mdi:fire" /> Prometheus
+ Conducts intelligent interviews, researches the codebase context, and generates detailed YAML battle plans. It never types a single line of production code.
+#### <Icon icon="mdi:brain" /> Metis
+ Analyzes the plan to catch ambiguities and potential failures before any code execution starts.
+#### <Icon icon="mdi:shield-check" /> Momus
+ A ruthless validation node. It reviews and approves only bulletproof technical plans.
 
 ### The Builder Layer
 Once the Architect outputs a verified plan, it is handed off to the execution subagents:
-* **Atlas:** Serves as the executor. It reads the verified plans, delegates sub-tasks, manages agent waves, and independently tracks progress. It doesn't trust sub-agent claims inherently—everything is cross-verified.
+
+#### <Icon icon="mdi:earth" /> Atlas
+ Serves as the executor. It reads the verified plans, delegates sub-tasks, manages agent waves, and independently tracks progress. It doesn't trust sub-agent claims inherently—everything is cross-verified.
 
 ## 3. Specialized Agents
 
-Instead of forcing a single, generalized model (a "jack of all trades") to perform every function, OMO leverages Intent-Based Routing to deploy specific agents depending on the complexity of the task. 
+Instead of forcing a single, generalized model (a "jack of all trades") to perform every function, OMO leverages Intent-Based Routing to deploy specific agents depending on the complexity of the task.
 
-* **Sisyphus:** The orchestrator. It parses implicit requirements, decides on the toolset based on codebase maturity, and routes the work. It is named Sisyphus because it relentlessly drives the task to completion, no matter how many retries or corrections are needed.
-* **Hephaestus:** The deep architectural engine. For complex overhauls where "good enough" isn't acceptable, Hephaestus fires up 2-5 background **Explore** agents to meticulously map the codebase before writing code.
-* **Oracle:** Specialized for high-complexity debugging and making ambiguous architectural decisions.
-* **Explore:** Blazing fast, cheap search agents deployed in the background to navigate deep repository structures.
-* **Librarian:** Discovers and fetches real GitHub API usages and official evidence-based documentation to ground implementations.
+#### <Icon icon="mdi:rotate-right" /> Sisyphus
+ The orchestrator. It parses implicit requirements, decides on the toolset based on codebase maturity, and routes the work. It is named Sisyphus because it relentlessly drives the task to completion, no matter how many retries or corrections are needed.
+#### <Icon icon="mdi:anvil" /> Hephaestus
+ The deep architectural engine. For complex overhauls where "good enough" isn't acceptable, Hephaestus fires up 2-5 background **<Icon icon="mdi:compass" /> Explore** agents to meticulously map the codebase before writing code.
+#### <Icon icon="mdi:crystal-ball" /> Oracle
+ Specialized for high-complexity debugging and making ambiguous architectural decisions.
+#### <Icon icon="mdi:compass" /> Explore
+ Blazing fast, cheap search agents deployed in the background to navigate deep repository structures.
+#### <Icon icon="mdi:bookshelf" /> Librarian
+ Discovers and fetches real GitHub API usages and official evidence-based documentation to ground implementations.
 
 ## 4. Configuration & Extensibility
 
