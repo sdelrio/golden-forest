@@ -18,6 +18,17 @@ function StatDiceRollerInternal({ ReactDice }) {
     const [results, setResults] = useState({});
     const [rollingIndex, setRollingIndex] = useState(-1);
     const diceRefs = useRef([]);
+    const randomRef = useRef(null);
+
+    // Initialize random-js engine
+    if (!randomRef.current) {
+        const { Random, browserCrypto } = require('random-js');
+        randomRef.current = new Random(browserCrypto);
+    }
+
+    const getRandomRolls = () => {
+        return randomRef.current.dice(6, 4);
+    };
 
     const handleRollDone = (index, total, dice) => {
         const sorted = [...dice].sort((a, b) => b - a);
@@ -38,9 +49,9 @@ function StatDiceRollerInternal({ ReactDice }) {
             setRollingIndex(index + 1);
             setTimeout(() => {
                 if (diceRefs.current[index + 1]) {
-                    diceRefs.current[index + 1].rollAll();
+                    diceRefs.current[index + 1].rollAll(getRandomRolls());
                 }
-            }, 600); // Small delay between rolls for better visual feedback
+            }, 137); // Small delay between rolls for better visual feedback
         } else if (index === ABILITIES.length - 1) {
             setRollingIndex(-1); // Finished sequence
         }
@@ -50,13 +61,13 @@ function StatDiceRollerInternal({ ReactDice }) {
         setResults({});
         setRollingIndex(0);
         if (diceRefs.current[0]) {
-            diceRefs.current[0].rollAll();
+            diceRefs.current[0].rollAll(getRandomRolls());
         }
     };
 
     const rollIndividual = (index) => {
         if (diceRefs.current[index]) {
-            diceRefs.current[index].rollAll();
+            diceRefs.current[index].rollAll(getRandomRolls());
         }
     };
 
@@ -134,12 +145,13 @@ function StatDiceRollerInternal({ ReactDice }) {
                                 numDice={4}
                                 rollDone={(total, dice) => handleRollDone(index, total, dice)}
                                 ref={el => diceRefs.current[index] = el}
-                                faceColor="#fff"
-                                dotColor="#333"
-                                outlineColor="#666"
-                                outline={4}
+                                faceColor="#fff0ac"
+                                dotColor="#c02020"
+                                outlineColor="#226"
+                                outline={true}
                                 dieSize={60}
                                 dieCornerRadius={10}
+                                rollTime={1}
                                 margin={5}
                             />
                         </div>
