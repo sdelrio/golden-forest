@@ -247,11 +247,11 @@ npx skills add git@github.com:kepano/obsidian-skills.git
 
 | Skill | Description |
 |-------|-------------|
-| [obsidian-markdown](skills/obsidian-markdown) | Create and edit [Obsidian Flavored Markdown](https://help.obsidian.md/obsidian-flavored-markdown) (`.md`) with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax |
-| [obsidian-bases](skills/obsidian-bases) | Create and edit [Obsidian Bases](https://help.obsidian.md/bases/syntax) (`.base`) with views, filters, formulas, and summaries |
-| [json-canvas](skills/json-canvas) | Create and edit [JSON Canvas](https://jsoncanvas.org/) files (`.canvas`) with nodes, edges, groups, and connections |
-| [obsidian-cli](skills/obsidian-cli) | Interact with Obsidian vaults via the [Obsidian CLI](https://help.obsidian.md/cli) including plugin and theme development |
-| [defuddle](skills/defuddle) | Extract clean markdown from web pages using [Defuddle](https://github.com/kepano/defuddle-cli), removing clutter to save tokens |
+| `obsidian-markdown` | Create and edit [Obsidian Flavored Markdown](https://help.obsidian.md/obsidian-flavored-markdown) (`.md`) with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax |
+| `obsidian-bases` | Create and edit [Obsidian Bases](https://help.obsidian.md/bases/syntax) (`.base`) with views, filters, formulas, and summaries |
+| `json-canvas` | Create and edit [JSON Canvas](https://jsoncanvas.org/) files (`.canvas`) with nodes, edges, groups, and connections |
+| `obsidian-cli` | Interact with Obsidian vaults via the [Obsidian CLI](https://help.obsidian.md/cli) including plugin and theme development |
+| `defuddle` | Extract clean markdown from web pages using [Defuddle](https://github.com/kepano/defuddle-cli), removing clutter to save tokens |
 
 ---
 
@@ -276,3 +276,4 @@ Projects inspired by the LLM Wiki pattern:
 - [Video: Autonomous Claude Code Memory (Cole Medin)](https://www.youtube.com/watch?v=7huCP6RkcY4)
 - [Kepano obsidian-skills](https://github.com/kepano/obsidian-skills)
 - [qmd - Local Markdown Search Engine](https://github.com/tobi/qmd)
+- [Claude Memory Compiler](https://github.com/coleam00/claude-memory-compiler)
