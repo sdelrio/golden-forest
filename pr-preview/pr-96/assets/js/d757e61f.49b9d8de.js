@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([["56781"],{16288:function(e){e.exports=JSON.parse('{"tags":[{"label":"hola","permalink":"/pr-preview/pr-96/blog/tags/hola","count":1},{"label":"docusaurus","permalink":"/pr-preview/pr-96/blog/tags/docusaurus","count":1}]}')}}]);
