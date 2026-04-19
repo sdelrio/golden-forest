@@ -70,7 +70,7 @@ Dagger is a programmable CI/CD engine that allows you to define your pipelines a
 
 ## [Mise](https://mise.jdx.dev)
 
-Mise (formerly rtx) is a polyglot tool manager, environment manager, and task runner. It is designed to be a faster, more modern alternative to `asdf`, managing multiple versions of runtimes (Node.js, Python, Go, etc.) and project-specific environment variables in a single tool.
+Mise (formerly rtx) is a polyglot tool manager, environment manager, and task runner. It is designed to be a faster, more modern alternative to `asdf` (or nvm or pyenv but for any language), managing multiple versions of runtimes (Node.js, Python, Go, etc.) and project-specific environment variables in a single tool.
 
 ### Key Concepts
 - **Universal Tooling**: Supports all `asdf` plugins but with significantly better performance (written in Rust).
