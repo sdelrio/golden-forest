@@ -58,7 +58,7 @@ Gemini 2.5 flash
 While the Google free plan is covered above, OpenCode can also be used with a number of other no‑cost or trial resources:
 
 * **Self‑hosted models** – run local LLMs such as Llama‑2, Mistral, or GPT4All via `opencode` adapters; no external API fees apply beyond your own hardware.
-* **OpenAI trial credits** – sign up for a new account to get $5–$18 of free usage, then configure `opencode` with the `openai` provider.
+* **OpenAI trial credits** -- sign up for a new account to get \$5-\$18 of free usage, then configure `opencode` with the `openai` provider.
 * **Hugging Face Hub** – many community models are accessible via their inference API with a limited free tier, which can be plugged into OpenCode using `hf` credentials.
 * **Other providers** – Anthropic, Cohere, and others frequently offer free tiers or developer credits; OpenCode’s plugin system makes it easy to add support for these services.
 
