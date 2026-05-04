@@ -78,6 +78,12 @@ const config = {
               url: false,
             },
           },
+          ignoreWarnings: [
+            {
+              module: /vscode-languageserver-types/,
+              message: /Critical dependency: require function is used/,
+            },
+          ],
         };
       },
     }),
