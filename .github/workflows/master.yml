@@ -14,7 +14,9 @@ on:
 permissions: # required by action JamesIves/github-pages-deploy-action
   contents: write
 
-concurrency: ci-${{ github.ref }}
+concurrency:
+  group: gh-pages-release
+  cancel-in-progress: true
 
 jobs:
   gh-release:
