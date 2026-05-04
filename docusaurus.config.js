@@ -269,7 +269,7 @@ const config = {
       removeLegacyPostBuildHeadAttribute: true,
       useCssCascadeLayers: true,
     },
-    experimental_faster: true,
+    faster: true,
   },
   /*
   future: {
