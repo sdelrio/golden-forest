@@ -87,21 +87,22 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                 .catch(() => setFinalImage(`${avatarBaseUrl}/faceless.svg`));
         } else {
             const withoutSuffix = filename.replace('.xml', '');
-            const url = `${avatarBaseUrl}/${withoutSuffix}.jpg`;
 
-            fetch(url, { method: 'HEAD' })
-                .then(response => {
-                    if (!response.ok) {
-                        setFinalImage(`${avatarBaseUrl}/faceless.svg`);
-                        return;
-                    }
-                    const contentType = response.headers.get('content-type') || '';
-                    if (!contentType.includes('image')) {
-                        setFinalImage(`${avatarBaseUrl}/faceless.svg`);
-                        return;
-                    }
-                    setFinalImage(url);
-                })
+            const jpgUrl = `${avatarBaseUrl}/${withoutSuffix}.jpg`;
+            const pngUrl = `${avatarBaseUrl}/${withoutSuffix}.png`;
+
+            const checkAvatar = (url) => {
+                return fetch(url, { method: 'HEAD' })
+                    .then(response => {
+                        if (!response.ok || !response.headers.get('content-type')?.includes('image')) {
+                            throw new Error(`Not found: ${url}`);
+                        }
+                        setFinalImage(url);
+                    });
+            };
+
+            checkAvatar(jpgUrl)
+                .catch(() => checkAvatar(pngUrl))
                 .catch(() => setFinalImage(`${avatarBaseUrl}/faceless.svg`));
         }
     }, [filename, image, avatarBaseUrl, isLarge]);
