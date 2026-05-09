@@ -28,6 +28,10 @@ The penalty to the attack roll is changed from `-1d4` to a flat `-1`.
 
 The number of vials created per casting equals your spellcasting modifier. The material component cost is 25 gp of powdered silver per vial.
 
+### Hypnotic Pattern
+
+It allows for a ongoing save at the end of each turn.
+
 ### Ray of enfeeblement
 
 This spell no longer requires concentration.
