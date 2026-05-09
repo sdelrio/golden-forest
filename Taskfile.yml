@@ -111,7 +111,7 @@ tasks:
 
   ## --- Characters ---
 
-  list:chars:
+  chars:list:
     desc: List and summarize Fantasy Grounds character XML files
     silent: true
     cmds:
@@ -133,8 +133,11 @@ tasks:
           printf "%-15s | %-30s | %-20s | %-3s | %-20s\n" "$filename" "$name" "$race" "$level" "$classes"
         done
 
-  ## --- Verification and Testing ---
+  chars:buildindex:
+    cmds:
+      - python3 scripts/build-char-index.py
 
+  ## --- Verification and Testing ---
   check:
     desc: Run Docusaurus MDX checker
     cmds:
