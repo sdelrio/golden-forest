@@ -272,6 +272,16 @@
     content: ", ";
 }
 
+.featureItem {
+    display: block;
+    margin-left: 1rem;
+}
+
+.featureSubItem {
+    display: block;
+    margin-left: 2.5rem;
+}
+
 /* Display Modes */
 .small .abilities,
 .small .infoSection,
