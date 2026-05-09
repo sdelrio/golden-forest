@@ -5,6 +5,10 @@ import XmlChar from '../XmlChar/XmlChar';
 import styles from './CharSearch.module.css';
 import clsx from 'clsx';
 
+function stripAccents(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 const DEFAULT_CLASSES = [
     'All',
     'Anti Paladin',
@@ -46,7 +50,7 @@ function CharSearchInternal() {
     }, []);
 
     const filtered = (index || []).filter(ch => {
-        const matchName = !searchText || ch.name.toLowerCase().includes(searchText.toLowerCase());
+        const matchName = !searchText || stripAccents(ch.name.toLowerCase()).includes(stripAccents(searchText.toLowerCase()));
         const matchClass = selectedClass === 'All' || ch.classes.includes(selectedClass);
         return matchName && matchClass;
     });
