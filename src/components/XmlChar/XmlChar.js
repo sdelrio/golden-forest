@@ -110,7 +110,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     if (error) return <div className={styles.error}>Error: {error}</div>;
     if (!charData) return <div className={styles.loading}>Loading {filename}...</div>;
 
-    const { name, race, alignment, background, deity, classes, abilities, ac, hp, speed, initiative, profBonus, skills, languages, feats } = charData;
+    const { name, race, alignment, background, deity, classes, abilities, ac, hp, speed, initiative, profBonus, skills, languages, feats, features } = charData;
 
     const renderPortrait = () => {
         if (!isLarge) return null;
@@ -242,6 +242,29 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                                 <li key={f}>{f}</li>
                             ))}
                         </ul>
+                    </div>
+                )}
+
+                {isLarge && features.length > 0 && (
+                    <div className={styles.infoSection}>
+                        <span className={styles.infoLabel}>Features:</span>
+                        {(() => {
+                            const sorted = [...features].sort((a, b) => a.level - b.level);
+                            const grouped = {};
+                            sorted.forEach(f => {
+                                const key = `L${f.level}: (${f.source})`;
+                                if (!grouped[key]) grouped[key] = [];
+                                grouped[key].push(f.name);
+                            });
+                            return Object.entries(grouped).map(([header, names]) => (
+                                <div key={header}>
+                                    <div className={styles.featureItem}>{header}</div>
+                                    {names.map(n => (
+                                        <div key={`${header}-${n}`} className={styles.featureSubItem}>{n}</div>
+                                    ))}
+                                </div>
+                            ));
+                        })()}
                     </div>
                 )}
             </div>

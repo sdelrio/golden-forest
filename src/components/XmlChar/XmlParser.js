@@ -37,7 +37,8 @@ export const parseCharacterXml = (xmlString) => {
         profBonus: 0,
         skills: [],
         languages: [],
-        feats: []
+        feats: [],
+        features: []
     };
 
     // Parse Classes
@@ -114,6 +115,18 @@ export const parseCharacterXml = (xmlString) => {
     if (featList) {
         Array.from(featList.children).forEach(feat => {
             charData.feats.push(getText(feat, "name"));
+        });
+    }
+
+    // Parse Features (from featurelist)
+    const featureList = charNode.getElementsByTagName("featurelist")[0];
+    if (featureList) {
+        Array.from(featureList.children).forEach(feature => {
+            charData.features.push({
+                level: getNumber(feature, "level"),
+                name: getText(feature, "name"),
+                source: getText(feature, "source")
+            });
         });
     }
 
