@@ -110,7 +110,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     if (error) return <div className={styles.error}>Error: {error}</div>;
     if (!charData) return <div className={styles.loading}>Loading {filename}...</div>;
 
-    const { name, race, alignment, background, deity, classes, abilities, ac, hp, speed, initiative, profBonus, skills, languages, feats, features } = charData;
+    const { name, race, alignment, background, deity, classes, abilities, ac, hp, speed, initiative, profBonus, skills, languages, feats, features, powers } = charData;
 
     const renderPortrait = () => {
         if (!isLarge) return null;
@@ -246,6 +246,8 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                 )}
 
                 {isLarge && features.length > 0 && (
+                    <>
+                    <hr className={styles.horizontalRule} />
                     <div className={styles.infoSection}>
                         <span className={styles.infoLabel}>Features:</span>
                         {(() => {
@@ -266,6 +268,39 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                             ));
                         })()}
                     </div>
+                    </>
+                )}
+
+                {isLarge && powers.length > 0 && (
+                    <>
+                    <hr className={styles.horizontalRule} />
+                    <div className={styles.infoSection}>
+                        <span className={styles.infoLabel}>Powers:</span>
+                        {(() => {
+                            const sorted = [...powers].sort((a, b) => a.level - b.level);
+                            const levelGroups = {};
+                            sorted.forEach(p => {
+                                if (!levelGroups[p.level]) levelGroups[p.level] = {};
+                                const key = p.group || "Uncategorized";
+                                if (!levelGroups[p.level][key]) levelGroups[p.level][key] = [];
+                                levelGroups[p.level][key].push(p.name);
+                            });
+                            return Object.entries(levelGroups).map(([level, groups]) => (
+                                <div key={`L${level}`}>
+                                    <div className={styles.featureItem}>{`L${level}:`}</div>
+                                    {Object.entries(groups).map(([group, names]) => (
+                                        <div key={`${level}-${group}`} className={styles.featureGroup}>
+                                            <span className={styles.featureGroupName}>{group}:</span>
+                                            {names.map(n => (
+                                                <div key={`${level}-${group}-${n}`} className={styles.featureSubItem}>{n}</div>
+                                            ))}
+                                        </div>
+                                    ))}
+                                </div>
+                            ));
+                        })()}
+                    </div>
+                    </>
                 )}
             </div>
             <div className={styles.clearfix}></div>
