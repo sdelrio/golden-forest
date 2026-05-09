@@ -38,7 +38,8 @@ export const parseCharacterXml = (xmlString) => {
         skills: [],
         languages: [],
         feats: [],
-        features: []
+        features: [],
+        powers: []
     };
 
     // Parse Classes
@@ -126,6 +127,23 @@ export const parseCharacterXml = (xmlString) => {
                 level: getNumber(feature, "level"),
                 name: getText(feature, "name"),
                 source: getText(feature, "source")
+            });
+        });
+    }
+
+    // Parse Powers (from <powers>) - only match direct children of character to avoid
+    // matching nested empty <powers /> elements inside inventorylist items in older XML exports
+    let powersNode = null;
+    Array.from(charNode.children).forEach(child => {
+        if (child.nodeName === 'powers') powersNode = child;
+    });
+    if (powersNode) {
+        Array.from(powersNode.children).forEach(power => {
+            const group = getText(power, "group");
+            charData.powers.push({
+                level: getNumber(power, "level"),
+                name: getText(power, "name"),
+                group: group || ""
             });
         });
     }
