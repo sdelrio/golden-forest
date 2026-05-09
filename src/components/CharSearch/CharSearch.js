@@ -3,6 +3,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import XmlChar from '../XmlChar/XmlChar';
 import styles from './CharSearch.module.css';
+import clsx from 'clsx';
 
 const DEFAULT_CLASSES = [
     'All',
@@ -64,7 +65,9 @@ function CharSearchInternal() {
     }
 
     return (
+        <>
         <div className={styles.container}>
+
             {/* Search and filter toolbar */}
             <div className={styles.toolbar}>
                 <input
@@ -72,12 +75,12 @@ function CharSearchInternal() {
                     placeholder="Search by name..."
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
-                    className={styles.searchInput}
+                    className={clsx(styles.searchInput, selectedChar && styles.hiddenWhenSelected)}
                 />
                 <select
                     value={selectedClass}
                     onChange={(e) => setSelectedClass(e.target.value)}
-                    className={styles.classSelect}
+                    className={clsx(styles.classSelect, selectedChar && styles.hiddenWhenSelected)}
                 >
                     {DEFAULT_CLASSES.map((cls) => (
                         <option key={cls} value={cls}>
@@ -85,20 +88,16 @@ function CharSearchInternal() {
                         </option>
                     ))}
                 </select>
-            </div>
-
-            {/* Results count */}
-            <p className={styles.count}>{filtered.length} character{filtered.length !== 1 ? 's' : ''}</p>
-
-            {/* Character cards grid */}
-            {selectedChar && (
-                <div className={styles.detail}>
+                {selectedChar && (
                     <button onClick={() => setSelectedChar(null)} className={styles.backBtn}>
                         &larr; Back to list
                     </button>
-                    <XmlChar filename={selectedChar.filename} display="large" />
-                </div>
-            )}
+                )}
+            </div>
+
+            {/* Results count */}
+            {!selectedChar && <p className={styles.count}>{filtered.length} character{filtered.length !== 1 ? 's' : ''}</p>}
+
 
             {!selectedChar && filtered.map((ch) => (
                 <button
@@ -119,6 +118,13 @@ function CharSearchInternal() {
                 <p className={styles.empty}>No characters match your filters.</p>
             )}
         </div>
+
+        {selectedChar && (
+            <div className={styles.detail}>
+                <XmlChar filename={selectedChar.filename} display="large" />
+            </div>
+        )}
+        </>
     );
 }
 
