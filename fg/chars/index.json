@@ -5,7 +5,8 @@
     "race": "Half-Elf",
     "classes": [
       "Warlock"
-    ]
+    ],
+    "level": 1
   },
   {
     "filename": "adolin",
@@ -13,7 +14,8 @@
     "race": "Human-Variant",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "aislish",
@@ -21,7 +23,8 @@
     "race": "Human",
     "classes": [
       "Wizard"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "akinori",
@@ -29,7 +32,8 @@
     "race": "Human-Variant",
     "classes": [
       "Monk"
-    ]
+    ],
+    "level": 7
   },
   {
     "filename": "alastor",
@@ -37,7 +41,8 @@
     "race": "Human",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "alberich",
@@ -45,7 +50,8 @@
     "race": "Shifter (Wildhunt)",
     "classes": [
       "Blood Hunter"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "alioth",
@@ -53,7 +59,8 @@
     "race": "Half-Elf",
     "classes": [
       "Sorcerer"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "alistair",
@@ -61,7 +68,8 @@
     "race": "Half-Elf-Variant (Half-Drow)",
     "classes": [
       "Bard"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "andre",
@@ -69,7 +77,8 @@
     "race": "Human-Variant",
     "classes": [
       "Bard"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "antonidas",
@@ -77,7 +86,8 @@
     "race": "Human-Variant",
     "classes": [
       "Wizard"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "aristiel",
@@ -85,7 +95,8 @@
     "race": "High Elf",
     "classes": [
       "Wizard"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "aymeric",
@@ -93,7 +104,8 @@
     "race": "Halfling (Strongheart)",
     "classes": [
       "Ranger"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "azaline",
@@ -101,7 +113,8 @@
     "race": "Human-Variant",
     "classes": [
       "Wizard"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "azarius",
@@ -109,7 +122,8 @@
     "race": "Wood Elf",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "berkil",
@@ -117,7 +131,8 @@
     "race": "Dwarf",
     "classes": [
       "Ranger"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "bogner",
@@ -125,7 +140,8 @@
     "race": "Rock Gnome",
     "classes": [
       "Druid"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "brokk",
@@ -133,7 +149,8 @@
     "race": "Hill Dwarf",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 2
   },
   {
     "filename": "burzum",
@@ -141,7 +158,8 @@
     "race": "Mountain Dwarf",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "caecil",
@@ -149,7 +167,8 @@
     "race": "Human",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 2
   },
   {
     "filename": "candise",
@@ -157,7 +176,8 @@
     "race": "Wood Elf",
     "classes": [
       "Ranger"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "crukh",
@@ -165,7 +185,8 @@
     "race": "Aarakocra",
     "classes": [
       "Rogue"
-    ]
+    ],
+    "level": 6
   },
   {
     "filename": "darlo",
@@ -173,7 +194,8 @@
     "race": "Human",
     "classes": [
       "Paladin"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "delizan",
@@ -181,7 +203,8 @@
     "race": "High Elf",
     "classes": [
       "Wizard"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "dorian",
@@ -189,7 +212,8 @@
     "race": "Human-Variant",
     "classes": [
       "Paladin"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "dougal",
@@ -197,7 +221,8 @@
     "race": "Hill Dwarf",
     "classes": [
       "Barbarian"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "dracarys",
@@ -205,7 +230,8 @@
     "race": "Dragonborn (Draconian)",
     "classes": [
       "Paladin"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "draevan",
@@ -213,7 +239,8 @@
     "race": "Human",
     "classes": [
       "Rogue"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "drahomir",
@@ -221,7 +248,8 @@
     "race": "Hill Dwarf",
     "classes": [
       "Ranger"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "draknor",
@@ -229,7 +257,8 @@
     "race": "Copper Dragonborn",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 8
   },
   {
     "filename": "dyatlov",
@@ -237,7 +266,8 @@
     "race": "Half-Elf",
     "classes": [
       "Paladin"
-    ]
+    ],
+    "level": 6
   },
   {
     "filename": "elarion",
@@ -245,7 +275,8 @@
     "race": "Wood Elf",
     "classes": [
       "Warlock"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "enanidas",
@@ -253,7 +284,8 @@
     "race": "Dwarf",
     "classes": [
       "Paladin"
-    ]
+    ],
+    "level": 6
   },
   {
     "filename": "enriol",
@@ -261,7 +293,8 @@
     "race": "Human",
     "classes": [
       "Wizard"
-    ]
+    ],
+    "level": 1
   },
   {
     "filename": "erevan",
@@ -269,7 +302,8 @@
     "race": "Half-Elf",
     "classes": [
       "Druid"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "ethir",
@@ -277,7 +311,8 @@
     "race": "High Elf",
     "classes": [
       "Rogue"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "flint",
@@ -285,7 +320,8 @@
     "race": "Mountain Dwarf",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 1
   },
   {
     "filename": "garaele",
@@ -293,7 +329,8 @@
     "race": "Wood Elf",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "gilean",
@@ -301,7 +338,8 @@
     "race": "Human-Variant",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "gralamin",
@@ -309,7 +347,8 @@
     "race": "Human-Variant",
     "classes": [
       "Rogue"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "gromash",
@@ -317,7 +356,8 @@
     "race": "Human-Variant",
     "classes": [
       "Blood Hunter"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "guldan",
@@ -325,7 +365,8 @@
     "race": "Human-Variant",
     "classes": [
       "Wizard"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "haggen",
@@ -333,7 +374,8 @@
     "race": "Elf (Shadar-kai)",
     "classes": [
       "Rogue"
-    ]
+    ],
+    "level": 6
   },
   {
     "filename": "halder",
@@ -341,7 +383,8 @@
     "race": "Mountain Dwarf",
     "classes": [
       "Bard"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "hiro",
@@ -349,7 +392,8 @@
     "race": "Wood Elf",
     "classes": [
       "Monk"
-    ]
+    ],
+    "level": 2
   },
   {
     "filename": "hjalmar",
@@ -357,7 +401,8 @@
     "race": "Human-Variant",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 6
   },
   {
     "filename": "horgh",
@@ -365,7 +410,8 @@
     "race": "Wood Elf",
     "classes": [
       "Rogue"
-    ]
+    ],
+    "level": 2
   },
   {
     "filename": "ilmaris",
@@ -373,7 +419,8 @@
     "race": "High Elf",
     "classes": [
       "Wizard"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "ivy",
@@ -381,7 +428,8 @@
     "race": "Halfling (Lightfoot)",
     "classes": [
       "Paladin"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "kallash",
@@ -389,7 +437,8 @@
     "race": "Human-Variant",
     "classes": [
       "Rogue"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "karas",
@@ -397,7 +446,8 @@
     "race": "Human-Variant",
     "classes": [
       "Monk"
-    ]
+    ],
+    "level": 7
   },
   {
     "filename": "karel",
@@ -405,7 +455,8 @@
     "race": "Human",
     "classes": [
       "Paladin"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "karmo",
@@ -413,7 +464,8 @@
     "race": "Infernal Tiefling",
     "classes": [
       "Sorcerer"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "keleseth",
@@ -421,7 +473,8 @@
     "race": "Water Genasi",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "kendell",
@@ -429,7 +482,8 @@
     "race": "Wood Elf",
     "classes": [
       "Bard"
-    ]
+    ],
+    "level": 6
   },
   {
     "filename": "khalid",
@@ -437,7 +491,8 @@
     "race": "Human-Variant",
     "classes": [
       "Rogue"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "kordal",
@@ -445,7 +500,8 @@
     "race": "Halfling (Stout)",
     "classes": [
       "Barbarian"
-    ]
+    ],
+    "level": 6
   },
   {
     "filename": "kristof",
@@ -453,7 +509,8 @@
     "race": "Goliath",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "kromdar",
@@ -461,7 +518,8 @@
     "race": "Mountain Dwarf",
     "classes": [
       "Barbarian"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "lance",
@@ -469,7 +527,8 @@
     "race": "Human-Variant",
     "classes": [
       "Anti Paladin"
-    ]
+    ],
+    "level": 7
   },
   {
     "filename": "lothiriel",
@@ -477,7 +536,8 @@
     "race": "High Elf",
     "classes": [
       "Sorcerer"
-    ]
+    ],
+    "level": 6
   },
   {
     "filename": "lyvie",
@@ -485,7 +545,8 @@
     "race": "Wood Elf",
     "classes": [
       "Blood Hunter"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "maeth",
@@ -493,7 +554,8 @@
     "race": "High Elf",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "malagolvir",
@@ -501,7 +563,8 @@
     "race": "Dark Elf (Drow)",
     "classes": [
       "Warlock"
-    ]
+    ],
+    "level": 6
   },
   {
     "filename": "malfunction",
@@ -509,7 +572,8 @@
     "race": "Half-Elf",
     "classes": [
       "Bard"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "melbick",
@@ -517,7 +581,8 @@
     "race": "Forest Gnome",
     "classes": [
       "Wizard"
-    ]
+    ],
+    "level": 6
   },
   {
     "filename": "meldon",
@@ -525,7 +590,8 @@
     "race": "Wood Elf",
     "classes": [
       "Rogue"
-    ]
+    ],
+    "level": 2
   },
   {
     "filename": "miku",
@@ -533,7 +599,8 @@
     "race": "Human",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "milo",
@@ -541,7 +608,8 @@
     "race": "Halfling (Stout)",
     "classes": [
       "Ranger"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "mim",
@@ -549,7 +617,8 @@
     "race": "Hill Dwarf",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "morgan",
@@ -557,7 +626,8 @@
     "race": "Half-Elf",
     "classes": [
       "Wizard"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "murky",
@@ -565,7 +635,8 @@
     "race": "Rock Gnome",
     "classes": [
       "Wizard"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "naharis",
@@ -573,7 +644,8 @@
     "race": "High Elf",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 1
   },
   {
     "filename": "nefazoui",
@@ -581,7 +653,8 @@
     "race": "Mountain Dwarf",
     "classes": [
       "Bard"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "nergal",
@@ -589,7 +662,8 @@
     "race": "High Elf",
     "classes": [
       "Blood Hunter"
-    ]
+    ],
+    "level": 7
   },
   {
     "filename": "neypay",
@@ -597,7 +671,8 @@
     "race": "Human-Variant",
     "classes": [
       "Monk"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "nezznar",
@@ -605,7 +680,8 @@
     "race": "Dark Elf (Drow)",
     "classes": [
       "Warlock"
-    ]
+    ],
+    "level": 8
   },
   {
     "filename": "nosdrul",
@@ -613,7 +689,8 @@
     "race": "Mountain Dwarf",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "nyander",
@@ -621,7 +698,8 @@
     "race": "Human",
     "classes": [
       "Rogue"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "olaf",
@@ -629,7 +707,8 @@
     "race": "Human-Variant",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "onis",
@@ -637,7 +716,8 @@
     "race": "High Elf",
     "classes": [
       "Barbarian"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "orfeo",
@@ -645,7 +725,8 @@
     "race": "High Elf",
     "classes": [
       "Wizard"
-    ]
+    ],
+    "level": 7
   },
   {
     "filename": "osric",
@@ -653,7 +734,8 @@
     "race": "Hill Dwarf",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "paladoin",
@@ -661,7 +743,8 @@
     "race": "Half-Elf",
     "classes": [
       "Paladin"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "panoramix",
@@ -669,7 +752,8 @@
     "race": "Half-Elf",
     "classes": [
       "Druid"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "perkins",
@@ -677,7 +761,8 @@
     "race": "Human",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 1
   },
   {
     "filename": "radamantis",
@@ -685,7 +770,8 @@
     "race": "Wood Elf",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "rolen",
@@ -693,7 +779,8 @@
     "race": "Wood Elf",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 1
   },
   {
     "filename": "samoth",
@@ -701,7 +788,8 @@
     "race": "Goliath",
     "classes": [
       "Barbarian"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "samu",
@@ -709,7 +797,8 @@
     "race": "Human-Variant",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 2
   },
   {
     "filename": "sarnoth",
@@ -717,7 +806,8 @@
     "race": "Goliath",
     "classes": [
       "Barbarian"
-    ]
+    ],
+    "level": 1
   },
   {
     "filename": "seamorn",
@@ -725,7 +815,8 @@
     "race": "Human-Variant",
     "classes": [
       "Rogue"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "sendalor",
@@ -733,7 +824,8 @@
     "race": "Human",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "shalahs",
@@ -741,7 +833,8 @@
     "race": "Dragonborn",
     "classes": [
       "Sorcerer"
-    ]
+    ],
+    "level": 2
   },
   {
     "filename": "shiba",
@@ -749,7 +842,8 @@
     "race": "Human-Variant",
     "classes": [
       "Monk"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "silenius",
@@ -757,7 +851,8 @@
     "race": "Halfling (Stout)",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "sorey",
@@ -765,7 +860,8 @@
     "race": "Human-Variant",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "talasha",
@@ -773,7 +869,8 @@
     "race": "Human",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "taldarin",
@@ -781,7 +878,8 @@
     "race": "Wood Elf",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "tanadirian",
@@ -789,7 +887,8 @@
     "race": "Human",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 9
   },
   {
     "filename": "tanatar",
@@ -797,7 +896,8 @@
     "race": "Half-Elf",
     "classes": [
       "Sorcerer"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "tarrulon",
@@ -805,7 +905,8 @@
     "race": "Human-Variant",
     "classes": [
       "Barbarian"
-    ]
+    ],
+    "level": 8
   },
   {
     "filename": "teghen",
@@ -813,7 +914,8 @@
     "race": "Half-Elf",
     "classes": [
       "Bard"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "teoride",
@@ -821,7 +923,8 @@
     "race": "High Elf",
     "classes": [
       "Wizard"
-    ]
+    ],
+    "level": 7
   },
   {
     "filename": "tygra",
@@ -829,7 +932,8 @@
     "race": "Human-Variant",
     "classes": [
       "Druid"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "valkian",
@@ -837,7 +941,8 @@
     "race": "Wood Elf",
     "classes": [
       "Monk"
-    ]
+    ],
+    "level": 6
   },
   {
     "filename": "viktor",
@@ -845,7 +950,8 @@
     "race": "Human-Variant",
     "classes": [
       "Warlock"
-    ]
+    ],
+    "level": 4
   },
   {
     "filename": "vogun",
@@ -853,7 +959,8 @@
     "race": "Stone Goliath",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 6
   },
   {
     "filename": "yargul",
@@ -861,7 +968,8 @@
     "race": "Hill Dwarf",
     "classes": [
       "Fighter"
-    ]
+    ],
+    "level": 5
   },
   {
     "filename": "zatoichi",
@@ -869,7 +977,8 @@
     "race": "Human",
     "classes": [
       "Cleric"
-    ]
+    ],
+    "level": 3
   },
   {
     "filename": "zigro",
@@ -877,6 +986,7 @@
     "race": "Wood Elf",
     "classes": [
       "Ranger"
-    ]
+    ],
+    "level": 2
   }
 ]
