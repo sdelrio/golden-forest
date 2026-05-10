@@ -72,8 +72,7 @@
 
 .card {
     display: block;
-    width: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.6rem 1rem;
     margin-bottom: 0.5rem;
     background: rgba(253, 241, 220, 0.3);
     border: 1px solid transparent;
@@ -95,17 +94,27 @@
     font-size: 1rem;
 }
 
-.cardClass {
-    font-style: italic;
+.cardMeta {
     color: #7a6442;
     font-size: 0.9rem;
-    margin-top: 0.15rem;
+}
+
+/* Responsive grid layout */
+@media (min-width: 480px) {
+    .card {
+        display: inline-block;
+        width: calc(50% - 0.375rem);
+        margin-right: 0.5rem;
+    }
+}
+
+.cardClass {
+    font-style: italic;
 }
 
 .cardRace {
     color: #8b7355;
     font-size: 0.85rem;
-    margin-top: 0.1rem;
 }
 
 .detail {
@@ -199,6 +208,10 @@
 }
 
 [data-theme='dark'] .cardClass {
+    color: #c9ad6a;
+}
+
+[data-theme='dark'] .cardMeta {
     color: #c9ad6a;
 }
 

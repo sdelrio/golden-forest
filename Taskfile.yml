@@ -134,6 +134,16 @@ tasks:
         done
 
   chars:buildindex:
+    desc: Generate character index.json from XML files (requires python3)
+    preconditions:
+      - sh: command -v python3 >/dev/null 2>&1; echo $?
+        msg: "python3 is required but not installed"
+    vars:
+      xml_files:
+        sh: find static/fg/chars -name '*.xml' | sort | tr '\n' ' '
+    status:
+      - test "$xml_files" == "$(find static/fg/chars -name '*.xml' | sort | tr '\n' ' ')"
+      - test -f static/fg/chars/index.json
     cmds:
       - python3 scripts/build-char-index.py
 

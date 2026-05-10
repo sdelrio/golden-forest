@@ -76,6 +76,12 @@ export default function CharacterCard({ name, level = 1 }) {
 - **Static Assets**: `static/fg/chars/` contains XML character data for the D&D tools.
 - **Git**: Use **Conventional Commits** (`feat(scope): desc`, `fix: desc`, `docs: desc`).
 
+## Character Index (`static/fg/chars/index.json`)
+- Generated from `scripts/build-char-index.py` (scans all .xml in `static/fg/chars/`).
+- Rebuild with: `task chars:buildindex`.
+- Schema per entry: `{ filename, name, race, classes: string[], level: int|null }`.
+- Consumed by `src/components/CharSearch/CharSearch.js`: responsive card grid (2 columns ≥520px, 1 column on mobile). Each card shows name + inline class+level+race via `.cardMeta` layout.
+
 ## AI Rules Integration
 - **Copilot**: `.github/copilot-instructions.md` designates this file as the source of truth.
 - **Cursor**: Adhere to this file's formatting and style patterns when generating code.

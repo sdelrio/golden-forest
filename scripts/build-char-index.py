@@ -46,11 +46,16 @@ def parse_character_xml(filepath):
                 if name_el_inner is not None and name_el_inner.text:
                     classes.append(name_el_inner.text.strip())
         
+        # Extract overall character level (direct child of <character>)
+        level_el = char_elem.find('level')
+        level = int(level_el.text) if (level_el is not None and level_el.text) else None
+
         return {
             'filename': os.path.splitext(os.path.basename(filepath))[0],
             'name': name,
             'race': race,
             'classes': classes,
+            'level': level,
         }
     except Exception as e:
         print(f"Warning: Could not parse {filepath}: {e}")

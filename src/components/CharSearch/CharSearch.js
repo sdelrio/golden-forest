@@ -110,10 +110,13 @@ function CharSearchInternal() {
                     className={styles.card}
                 >
                     <div className={styles.cardName}>{ch.name}</div>
-                    <div className={styles.cardClass}>
-                        {ch.classes.length > 0 ? ch.classes.join(' / ') : 'No class'}
+                    <div className={styles.cardMeta}>
+                        {ch.classes.length > 0
+                            ? ch.classes.join(' / ') + (ch.level != null ? ' ' + ch.level : '')
+                            : 'No class'}
+                        {' · '}
+                        <span className={styles.cardRace}>{ch.race || 'Unknown race'}</span>
                     </div>
-                    {ch.race && <div className={styles.cardRace}>{ch.race}</div>}
                 </button>
             ))}
 
