@@ -981,6 +981,15 @@
     "level": 3
   },
   {
+    "filename": "zephyrion",
+    "name": "Zephyrion",
+    "race": "Aasimar",
+    "classes": [
+      "Ranger"
+    ],
+    "level": 8
+  },
+  {
     "filename": "zigro",
     "name": "Zigro the Ugly",
     "race": "Wood Elf",
