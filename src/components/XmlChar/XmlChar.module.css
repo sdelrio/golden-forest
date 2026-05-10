@@ -282,12 +282,17 @@
 }
 
 .featureGroupName {
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .featureSubItem {
     display: block;
     margin-left: 2rem;
+}
+
+.featurePowerName {
+    display: block;
+    margin-left: 1rem;
 }
 
 /* Display Modes */

@@ -249,23 +249,30 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                     <>
                     <hr className={styles.horizontalRule} />
                     <div className={styles.infoSection}>
-                        <span className={styles.infoLabel}>Features:</span>
                         {(() => {
                             const sorted = [...features].sort((a, b) => a.level - b.level);
                             const grouped = {};
+                            const sourcesMap = {};
                             sorted.forEach(f => {
-                                const key = `L${f.level}: (${f.source})`;
-                                if (!grouped[key]) grouped[key] = [];
-                                grouped[key].push(f.name);
+                                if (!grouped[f.level]) {
+                                    grouped[f.level] = [];
+                                    sourcesMap[f.level] = new Set();
+                                }
+                                grouped[f.level].push(f.name);
+                                if (f.source) sourcesMap[f.level].add(f.source);
                             });
-                            return Object.entries(grouped).map(([header, names]) => (
-                                <div key={header}>
-                                    <div className={styles.featureItem}>{header}</div>
-                                    {names.map(n => (
-                                        <div key={`${header}-${n}`} className={styles.featureSubItem}>{n}</div>
-                                    ))}
-                                </div>
-                            ));
+                            return Object.entries(grouped).map(([level, names]) => {
+                                const sources = [...(sourcesMap[level] || [])].join(', ');
+                                const header = `Feature L${level}: (${sources})`;
+                                return (
+                                    <div key={level}>
+                                        <div className={styles.infoLabel}>{header}</div>
+                                        {names.map((n, i) => (
+                                            <div key={`${level}-${i}`} className={styles.featureItem}>{n}</div>
+                                        ))}
+                                    </div>
+                                );
+                            });
                         })()}
                     </div>
                     </>
@@ -275,29 +282,31 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                     <>
                     <hr className={styles.horizontalRule} />
                     <div className={styles.infoSection}>
-                        <span className={styles.infoLabel}>Powers:</span>
                         {(() => {
                             const sorted = [...powers].sort((a, b) => a.level - b.level);
-                            const levelGroups = {};
+                            const grouped = {};
+                            const groupsMap = {};
                             sorted.forEach(p => {
-                                if (!levelGroups[p.level]) levelGroups[p.level] = {};
-                                const key = p.group || "Uncategorized";
-                                if (!levelGroups[p.level][key]) levelGroups[p.level][key] = [];
-                                levelGroups[p.level][key].push(p.name);
+                                if (!grouped[p.level]) {
+                                    grouped[p.level] = [];
+                                    groupsMap[p.level] = new Set();
+                                }
+                                grouped[p.level].push(p.name);
+                                const g = p.group || "Uncategorized";
+                                groupsMap[p.level].add(g);
                             });
-                            return Object.entries(levelGroups).map(([level, groups]) => (
-                                <div key={`L${level}`}>
-                                    <div className={styles.featureItem}>{`L${level}:`}</div>
-                                    {Object.entries(groups).map(([group, names]) => (
-                                        <div key={`${level}-${group}`} className={styles.featureGroup}>
-                                            <span className={styles.featureGroupName}>{group}:</span>
-                                            {names.map(n => (
-                                                <div key={`${level}-${group}-${n}`} className={styles.featureSubItem}>{n}</div>
-                                            ))}
-                                        </div>
-                                    ))}
-                                </div>
-                            ));
+                            return Object.entries(grouped).map(([level, names]) => {
+                                const groupNames = [...(groupsMap[level] || [])];
+                                const header = `Power L${level}: (${groupNames.join(', ')})`;
+                                return (
+                                    <div key={level}>
+                                        <div className={styles.infoLabel}>{header}</div>
+                                        {names.map((n, i) => (
+                                            <div key={`${level}-${i}`} className={styles.featureItem}>{n}</div>
+                                        ))}
+                                    </div>
+                                );
+                            });
                         })()}
                     </div>
                     </>
