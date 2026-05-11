@@ -11,8 +11,8 @@ import Exploding from './_markdown-impactful.mdx';
 | Weapon | Damage | Property |
 |:------:|:------:|:------:|
 | Greatclub | 1d8 | Exploding |
-| Light Hammer | 1d4 | Exploding |
-| Mace | 1d6 | Exploding |
+| Light Hammer | 1d4 | ^ |
+| Mace | 1d6 | ^ |
 | Sickle | 1d4 | Reroll 1 on the damage dice|
 
 <Exploding />
@@ -25,7 +25,7 @@ import Exploding from './_markdown-impactful.mdx';
 | Battleaxe | 1d8 | ^ |
 | Greataxe | 1d12 | ^ |
 | Morningstar | 1d8 | Exploding |
-| Flail | 1d8 | Exploding |
+| Flail | 1d8 | ^ |
 
 <Exploding />
 
