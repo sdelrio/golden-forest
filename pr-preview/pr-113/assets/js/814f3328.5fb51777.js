@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([["61833"],{55513(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"First Post","permalink":"/pr-preview/pr-113/blog/first-post","unlisted":false,"date":"2021-11-09T00:00:00.000Z"}]}')}}]);
