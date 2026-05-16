@@ -37,17 +37,11 @@ import styles from './Component.module.css';
 ```
 
 ### 2. React Components
-- Use **function components** with hooks (React 19).
-- Destructure props in the function signature with defaults.
-- Wrap browser-dependent logic (e.g., `DOMParser`, `window`) in `BrowserOnly`.
-- Use `export default` for the primary component.
+See [src/components/AGENTS.md](file:///Users/sdelrio/github/sdelrio/golden-forest/src/components/AGENTS.md) for detailed architecture, folder structure, and component-specific guidelines.
 
-```javascript
-export default function CharacterCard({ name, level = 1 }) {
-  const [active, setActive] = useState(false);
-  return <div className={styles.card}>{name} ({level})</div>;
-}
-```
+- Use **function components** with React 19 hooks.
+- Destructure props in the signature with defaults.
+- Wrap browser-dependent logic in `BrowserOnly`.
 
 ### 3. Naming Conventions
 - **Components**: PascalCase (e.g., `XmlChar.js`).
@@ -72,7 +66,7 @@ export default function CharacterCard({ name, level = 1 }) {
 
 ## Data & Project Structure
 - **Content**: `docs/`, `blog/`, and `tutorial/` contain MDX files.
-- **Components**: `src/components/` (Shared) and `src/theme/` (Overrides).
+- **Components**: `src/components/` (See [AGENTS.md](file:///Users/sdelrio/github/sdelrio/golden-forest/src/components/AGENTS.md)) and `src/theme/`.
 - **Static Assets**: `static/fg/chars/` contains XML character data for the D&D tools.
 - **Git**: Use **Conventional Commits** (`feat(scope): desc`, `fix: desc`, `docs: desc`).
 
