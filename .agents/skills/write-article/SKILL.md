@@ -40,6 +40,7 @@ import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';
     - `:::danger`: For critical warnings.
 - **Visuals**: If images are available, use standard markdown syntax.
 - **Diagrams**: Use Mermaid.js for flowcharts, sequences, or other diagrams if it helps clarity (optional). Use `mermaid` code blocks.
+- **Anchor Links**: Docusaurus auto-generates heading IDs: lowercase, spaces → hyphens, `&` → removed (producing `--`). Example: `## Setup & Configuration` → `#setup--configuration`. **Important for `<Card href>` anchors**: because `trailingSlash: true` causes the `Card` component to prepend `../` to bare fragment links (turning `#section` into `../#section`, navigating to the parent folder), use the **relative sibling format** instead: `href="my-page#section-id"`. The Card component converts this to `../my-page#section-id`, which correctly resolves to the target page's anchor. Never use bare `#fragment` or the placeholder `#link`.
 - **References**: Always include a `## References` section at the end with links to source materials.
 
 ### 5. Template Variations

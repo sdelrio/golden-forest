@@ -5,8 +5,13 @@ tags: [homelab, automation, self-hosted]
 sidebar_position: 10
 ---
 
-import Steps from '@site/src/components/Steps/Steps';
-import Accordion from '@site/src/components/Accordion/Accordion';
+{/*
+  IMPORTANT: Only include imports for components actually used in this article.
+  Remove all unused imports before finalizing.
+*/}
+{/* import Steps from '@site/src/components/Steps/Steps'; */}
+{/* import Accordion from '@site/src/components/Accordion/Accordion'; */}
+{/* import CodeGroup from '@site/src/components/CodeGroup/CodeGroup'; */}
 
 # [System Name] Setup
 

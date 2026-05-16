@@ -5,15 +5,19 @@ tags: [ai, tools, productivity, tokens, optimization]
 sidebar_position: 10
 ---
 
-{/* Optional Imports - Only include if used in the article */}
-{/* import Tabs from '@theme/Tabs'; */}
-{/* import TabItem from '@theme/TabItem'; */}
-{/* import Card from '@site/src/components/Card/Card'; */}
-{/* import CardGroup from '@site/src/components/Card/CardGroup'; */}
-{/* import Accordion from '@site/src/components/Accordion/Accordion'; */}
-{/* import AccordionGroup from '@site/src/components/Accordion/AccordionGroup'; */}
-{/* import Steps from '@site/src/components/Steps/Steps'; */}
-{/* import CodeGroup from '@site/src/components/CodeGroup/CodeGroup'; */}
+{/*
+  IMPORT CHECKLIST — uncomment ONLY the imports for components actually used in the article body.
+  Leaving unused imports active will cause MDX compilation errors.
+  Each section below is annotated with which import it requires.
+*/}
+{/* import Tabs from '@theme/Tabs'; */}          {/* Required by: <Tabs>, <TabItem> */}
+{/* import TabItem from '@theme/TabItem'; */}      {/* Required by: <TabItem> inside <Tabs> */}
+{/* import Card from '@site/src/components/Card/Card'; */}              {/* Required by: <Card> */}
+{/* import CardGroup from '@site/src/components/Card/CardGroup'; */}    {/* Required by: <CardGroup> */}
+{/* import Accordion from '@site/src/components/Accordion/Accordion'; */}          {/* Required by: <Accordion> */}
+{/* import AccordionGroup from '@site/src/components/Accordion/AccordionGroup'; */}{/* Required by: <AccordionGroup> */}
+{/* import Steps from '@site/src/components/Steps/Steps'; */}           {/* Required by: <Steps>, <Step> */}
+{/* import CodeGroup from '@site/src/components/CodeGroup/CodeGroup'; */}{/* Required by: <CodeGroup> */}
 
 # [AI Tool Name]: [Subtitle]
 
@@ -32,11 +36,12 @@ sidebar_position: 10
 
 ## Advanced Capabilities (Optional)
 
+{/* Requires: Card, CardGroup imports */}
 <CardGroup cols={2}>
-  <Card title="Feature X" icon="mdi:rocket" href="#link">
+  <Card title="Feature X" icon="mdi:rocket" href="#existing-section-id">
     [Short description of a powerful feature]
   </Card>
-  <Card title="Feature Y" icon="mdi:connection" href="#link">
+  <Card title="Feature Y" icon="mdi:connection" href="#another-existing-section-id">
     [Short description of another feature]
   </Card>
 </CardGroup>
@@ -54,6 +59,7 @@ flowchart LR
 
 [Describe how to use this tool with Claude Code, Cursor, or other agents.]
 
+{/* Requires: Tabs, TabItem imports */}
 <Tabs groupId="agent-integration">
   <TabItem value="claude" label="Claude Code" default>
     ```bash
@@ -69,6 +75,7 @@ flowchart LR
 
 [Show how it compares to standard alternatives.]
 
+{/* Requires: Tabs, TabItem imports */}
 <Tabs groupId="comparison">
   <TabItem value="standard" label="Standard (JSON/YAML)">
     ```json
@@ -86,6 +93,7 @@ flowchart LR
 
 ## Setup & Configuration (Optional)
 
+{/* Requires: Accordion, AccordionGroup imports */}
 <AccordionGroup>
   <Accordion title="Install" icon="download">
     ```bash
@@ -99,6 +107,7 @@ flowchart LR
 
 ## Step-by-Step Usage (Optional)
 
+{/* Requires: Steps import */}
 <Steps>
   <Step title="Initialize">
     [Description]

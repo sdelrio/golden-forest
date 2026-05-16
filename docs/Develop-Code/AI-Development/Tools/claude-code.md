@@ -1,23 +1,42 @@
 ---
 title: "Claude Code"
-description: "Introduction and project structure for Anthropic's Claude Code CLI tool."
+description: "Integration guide and project architecture for Anthropic's Claude Code CLI tool."
 tags:
   - AI
   - tools
   - Claude
   - Anthropic
   - CLI
+sidebar_position: 10
 ---
 
-# Claude Code
+import Accordion from '@site/src/components/Accordion/Accordion';
+import AccordionGroup from '@site/src/components/Accordion/AccordionGroup';
+import Steps from '@site/src/components/Steps/Steps';
+
+# Claude Code: Anthropic's Agentic CLI
 
 Claude Code is a command-line interface (CLI) and terminal agent developed by Anthropic. It allows you to interact with Claude directly from your terminal, enabling agentic coding workflows, system-level interactions, and seamless integration with your development environment.
 
 Unlike traditional chat interfaces, Claude Code has direct access to your local files, terminal, and git state, allowing it to perform complex tasks like refactoring, debugging, and running tests autonomously.
 
-## Project Overview
+## Core Advantages & Efficiency
 
-When working with Claude Code, it is recommended to follow a structured approach to organize your documentation, reusable skills, automated development workflowsand tools. Below is a typical project structure for a Claude Code-enabled repository:
+Claude Code transforms the terminal into a collaborative environment where the AI isn't just a chatbot, but an active participant in the development lifecycle.
+
+:::info
+By accessing the local filesystem and terminal directly, Claude Code eliminates the need for manual copy-pasting, reducing "context drift" and significantly accelerating the dev-test-debug loop.
+:::
+
+- **Terminal Integration**: Run commands, interpret output, and fix errors directly in your shell.
+- **File System Access**: Read from and write to your codebase with full context of the project structure.
+- **Git Awareness**: Understand branch state, commit history, and staged changes.
+- **Skill Discovery**: Automatically detects and utilizes skills defined in the `.claude/skills` directory.
+- **MCP Compatibility**: Supports Model Context Protocol for easy integration of third-party tools.
+
+## Project Architecture
+
+When working with Claude Code, it is recommended to follow a structured approach to organize your documentation, reusable skills, automated development workflows, and tools.
 
 ```mermaid
 graph TD
@@ -41,7 +60,8 @@ graph TD
     Src --> Persistence
 ```
 
-* Sample:
+### Folder Structure Example
+
 ```bash
 claude_code_project/
 ├── CLAUDE.md
@@ -49,13 +69,13 @@ claude_code_project/
 ├── docs/
 │   ├── architecture.md
 │   ├── decisions/
-│   └── runboooks/
+│   └── runbooks/
 ├── .claude/
 │   ├── settings.json
 │   ├── hooks/
 │   │   ├── pre-commit.md
 │   │   └── ...
-│   └─── skills/
+│   └── skills/
 │       ├── code-review/
 │       │   └── SKILL.md
 │       ├── refactor/
@@ -73,81 +93,81 @@ claude_code_project/
         └── CLAUDE.md
 ```
 
-### Core Key Components
-- **`CLAUDE.md`**: Project memory and instructions for Claude.
-  Repo Memory (Keep it Short). This file is the north start for Claude. Not amassive docuemnt. Just three things:
-  - **Purpose**: why the system exists.
-  - **Repo map**: how the project is structured
-  - **Rules + command**: how Claude should operatate
+## Key Components
 
-  If `CLAUDE.md` becomes too long, he model starts missing critical signals.
+<AccordionGroup>
+  <Accordion title="CLAUDE.md: Project Memory" icon="mdi:brain">
+    Project memory and instructions for Claude. This file is the "north star" for Claude. Keep it short and focused on:
+    - **Purpose**: Why the system exists.
+    - **Repo map**: How the project is structured.
+    - **Rules + commands**: How Claude should operate.
 
-- **`.claude/`**: The root configuration directory for Claude Code.
-  - **`.claude/skills`**: Directory for defining reusable skills (AI Workflow) for coding tasks and capabilities.
-  Stop repeatint instruction in prompts.
-  Turn common workflow into reusable skills.
+    :::warning
+    If `CLAUDE.md` becomes too long, the model starts missing critical signals.
+    :::
+  </Accordion>
 
-  Examples:
-    - Code reiew checklist
+  <Accordion title=".claude/skills: AI Workflows" icon="mdi:auto-fix">
+    Directory for defining reusable skills. Turn common workflows into reusable skills to stop repeating instructions in prompts.
+
+    Examples:
+    - Code review checklist
     - Refactoring playbook
-    - Debugging worklfow
+    - Debugging workflow
     - Release procedures
+  </Accordion>
 
-  Now Claude can switch into specialized modes instantly.
-  Result: more consistent outputs across sessions and teammates.
+  <Accordion title=".claude/hooks: Guardrails" icon="mdi:hook">
+    Lifecycle hooks that Claude can trigger at specific points (e.g., before or after a command) to automate repetitive tasks or enforce project rules.
 
-  - **`.claude/hooks`**: Guardrails and automatic checks. Contains lifecycle hooks. These are scripts that Claude can trigger at specific points (e.g., before or after a command) to automate repetitive tasks or enforce project rules.
-  Models forget, Hooks don't.
-  Use hooks for things that must always happen automatically.
-  Examples
-    - Run formatters after edits
-    - Trigger tests after ore changes
-    - Block sensitive diretories (auth, billing, migraitons).
+    Examples:
+    - Run formatters after edits.
+    - Trigger tests after core changes.
+    - Block sensitive directories (auth, billing, migrations).
+  </Accordion>
 
-  Hooks turn AI workflow into reliable engineering systems.
+  <Accordion title="docs/: External Context" icon="mdi:book-open-page-variant">
+    Contains project documentation, architectural decisions, and runbooks. Instead of overloading prompts, let Claude navigate your documentation to find the "truth."
+  </Accordion>
 
-- **`docs/`**: Contains project documentation, architectural decisions, runbooks, and guides. This is a primary source of context for Claude.
-  Don't overload prompts with information.
-  Instead, let Claude navigate your documentation.
+  <Accordion title="tools/: Custom MCP Tools" icon="mdi:tools">
+    A dedicated space for custom tools, often implemented using the **Model Context Protocol (MCP)**, allowing Claude to interact with external APIs or local services.
+  </Accordion>
+</AccordionGroup>
 
-  Examples:
-    - Architecture overview
-    - ADRs (engineering decisions)
-    - Operational runbooks
-    - API documentation
+## Source Code Organization
 
-  Claude doesn't need everything in memory.
+Some areas of your system have hidden complexity. Adding local `CLAUDE.md` files in specific directories helps Claude understand "danger zones" exactly when it works in them, dramatically reducing mistakes.
 
-  It just needs to know where truth lives.
+- **`src/api/CLAUDE.md`**: Logic for interacting with external services and API clients.
+- **`src/auth/CLAUDE.md`**: Logic for authentication and authorization.
+- **`src/persistence/CLAUDE.md`**: Data storage, database interactions, and state management.
 
-- **`tools/`**: A dedicated space for custom tools, often implemented using the **Model Context Protocol (MCP)**. These tools allow Claude to interact with external APIs, databases, or local services that are not part of its default toolset.
+## Setup & Configuration
 
-### Source Code Organization
-Core application modules.
-Some arreas of your system have hidden complexity.
-Add local context files there.
+<Steps>
+  <Step title="Install Claude Code">
+    Install the CLI globally via npm:
+    ```bash
+    npm install -g @anthropic-ai/claude-code
+    ```
+  </Step>
+  <Step title="Authenticate">
+    Run the tool for the first time to authenticate with your Anthropic account:
+    ```bash
+    claude
+    ```
+  </Step>
+  <Step title="Initialize Project">
+    Create a `CLAUDE.md` file in your root directory to give Claude the necessary context.
+  </Step>
+</Steps>
 
-With that Claude undestand the danger zones exactly when it works in them.
+## References
 
-This dramatically reduce mistakes.
-
-- **`src/api/CLAUDE.md`**: Houses the logic for interacting with external services, defining API clients, and managing network requests.
-- **`src/auth/CLAUDE.md`**: Houses the logic for authentication and authorization.
-- **`src/persistence/CLAUDE.md`**: Responsible for data storage, database interactions, and state management. Segregating persistence logic helps Claude understand how data flows and is stored within the application.
-
-## Key Features
-
-- **Terminal Integration**: Run commands, interpret output, and fix errors directly in your shell.
-- **File System Access**: Read from and write to your codebase with full context of the project structure.
-- **Git Awareness**: Understand branch state, commit history, and staged changes.
-- **Skill Discovery**: Automatically detects and utilizes skills defined in the `.claude/skills` directory.
-- **MCP Compatibility**: Supports Model Context Protocol for easy integration of third-party tools.
-
-## See Also
-
-- [ClaudeKit Workflow](../Workflows/ClaudeKit-Workflow.md): Spec-driven AI development methodology.
-- [OpenCode](./opencode.md): A structured AI coding CLI with plugin support.
-- [OpenSandbox](./OpenSandbox.md): Secure infrastructure for running AI agents.
-- [Model Context Protocol](https://modelcontextprotocol.io): Learn more about the protocol for sharing tools.
-- [Anatomy of the .claude/ folder](https://x.com/akshay_pachaar/status/2035341800739877091): A complete guide to CLAUDE.md, commands, skills, agents and permission.
-- [Claude Code Best Practices](https://github.com/shanraisshan/claude-code-best-practice): A collection of best practices for using Claude Code.
+- [ClaudeKit Workflow](../Workflows/ClaudeKit-Workflow.md) - Spec-driven AI development methodology.
+- [OpenCode](./opencode.md) - A structured AI coding CLI with plugin support.
+- [OpenSandbox](./OpenSandbox.md) - Secure infrastructure for running AI agents.
+- [Model Context Protocol](https://modelcontextprotocol.io) - Official MCP site.
+- [Anatomy of the .claude/ folder](https://x.com/akshay_pachaar/status/2035341800739877091) - Guide to commands and skills.
+- [Claude Code Best Practices](https://github.com/shanraisshan/claude-code-best-practice) - Community collection of tips.
