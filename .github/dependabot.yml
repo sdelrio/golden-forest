@@ -13,3 +13,10 @@ updates:
         patterns:
           - "react"
           - "react-dom"
+    # split constraints by SemVer granularity to be more aggressive with patches
+    # but cautious with breaking changes.
+    cooldown:
+      default-days: 7
+      semver-major-days: 14 # Wait 2 weeks for major versions
+      semver-minor-days: 7  # Wait 1 week for features
+      semver-patch-days: 2  # Wait 2 days for patches
