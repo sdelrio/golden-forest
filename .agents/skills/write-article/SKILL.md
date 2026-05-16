@@ -67,15 +67,14 @@ Brief explanation of what the tool is.
 Highlight a specific performance gain or unique value proposition.
 :::
 
-## Examples
-<CodeGroup>
-```bash title="Command"
-tool run
-```
-```json title="Output"
-{"status": "ok"}
-```
-</CodeGroup>
+## Installation & Setup
+<Steps>
+ <Step title="Install">
+  ```bash
+  tool install
+  ```
+ </Step>
+</Steps>
 
 ## References
 - [Official Site](url)
@@ -91,9 +90,15 @@ Focus on step-by-step guides.
 
 ## Step-by-Step Guide
 <Steps>
-1. **Initialize**: Do X.
-2. **Configure**: Edit Y.
-3. **Deploy**: Run Z.
+ <Step title="Initialize">
+  Do X.
+ </Step>
+ <Step title="Configure">
+  Edit Y.
+ </Step>
+ <Step title="Deploy">
+  Run Z.
+ </Step>
 </Steps>
 
 ## Frequently Asked Questions

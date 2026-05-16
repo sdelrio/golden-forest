@@ -1,77 +1,148 @@
 ---
 title: "Graphify"
-description: "Transform any folder into a navigable knowledge graph with 71.5x token efficiency."
-tags: [ai, tools, knowledge-graph, obsidian, claude-code]
+description: "Transform any folder or repository into a navigable knowledge graph with 71.5x token efficiency and MCP support."
+tags: [ai, tools, knowledge-graph, obsidian, claude-code, mcp, cursor]
 sidebar_position: 50
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';
-import Steps from '@site/src/components/Steps/Steps';
+import Card from '@site/src/components/Card/Card';
+import CardGroup from '@site/src/components/Card/CardGroup';
 import Accordion from '@site/src/components/Accordion/Accordion';
+import Steps from '@site/src/components/Steps/Steps';
+import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';
 
-# Graphify: Folder-to-Knowledge-Graph
+# Graphify: The Project Knowledge Graph
 
-One command. Any folder. Full knowledge graph.
+Graphify transforms any directory—codebases, research folders, or SQL schemas—into a high-density knowledge graph. It is designed to solve the "context window overflow" problem by mapping concept clusters and relationships, allowing AI agents to reason over massive data without reading every file.
 
 ## Summary
 
-Graphify is a powerful tool designed to turn any directory—be it a codebase, a research folder, or a collection of PDFs—into a fully navigable knowledge graph. By mapping concept clusters and relationships, it provides a structured way for both humans and AI agents to reason over large amounts of data without the overhead of vector databases or complex configurations.
+Graphify acts as an architectural index for your project. By mapping the "brain" of your codebase into a structured graph, it provides a navigation layer for both humans and AI. It generates a navigable knowledge graph, an Obsidian vault with backlinked articles, and supports real-time querying via MCP.
 
 ## Core Advantages & Efficiency
 
-The most significant breakthrough of Graphify is its **token efficiency**. It offers a completely different paradigm for how AI agents reason over large codebases.
+The primary benefit of Graphify is its **extreme token efficiency**, offering a structural alternative to the "brute force" method of feeding entire files into an LLM.
 
 :::info
-**71.5x fewer tokens** per query compared to reading raw files.
+**71.5x fewer tokens** per query compared to reading raw files, with near-zero loss in architectural understanding.
 :::
 
-- **Zero Config**: No vector database, no setup, and no complex configuration files required.
-- **Multi-Format Support**: Handles code in 13 programming languages, PDFs, Markdown files, and even images via Claude Vision.
-- **Automated Outputs**: Generates a navigable knowledge graph, an Obsidian vault with backlinked articles, and a wiki starting at `index.md`.
+- **Zero Config**: No vector database or complex setup required. Just point and graph.
+- **Noise Reduction (v0.8+)**: Advanced filtering suppresses "surprising connections" (e.g., cross-language symbol matches) and excludes generic "god nodes" (like `id` or `name`) to keep the graph clean.
+- **Multi-Format Support**: Handles 13+ programming languages, PDFs, Markdown, and images via Claude Vision.
+- **Incremental Growth**: Built-in data-loss protection and `build_merge()` functionality allow for safe, incremental graph expansion.
 
-## Key Capabilities
+## Advanced Capabilities
 
-You can query your folder in plain English to uncover deep connections:
+Graphify has evolved from a simple folder scanner into a complete repository management tool.
 
-- **Structural Analysis**: "What calls this function?"
-- **Concept Mapping**: "What connects these two concepts?"
-- **Impact Assessment**: "What are the most important nodes in this project?"
+<CardGroup cols={2}>
+  <Card title="Direct Repo Ingestion" icon="mdi:github" href="https://github.com/safishamsi/graphify/releases/tag/v0.5.0#user-content-clone-any-github-repo-directly">
+    Clone any GitHub repository directly into a local graph structure in one step.
+  </Card>
+  <Card title="Cross-Repo Merging" icon="mdi:merge" href="https://github.com/safishamsi/graphify/releases/tag/v0.5.0#user-content-cross-repo-knowledge-graphs">
+    Merge multiple repositories into a single global map while maintaining origin tags.
+  </Card>
+</CardGroup>
+
+## Integration with AI Agents
+
+Graphify is a "first-class citizen" in modern AI coding environments.
+
+<Tabs groupId="agent-integration">
+  <TabItem value="claude" label="Claude Code" default>
+    Used as a built-in slash command for rapid project mapping.
+    ```bash
+    /graphify [folder_path]
+    ```
+  </TabItem>
+  <TabItem value="cursor" label="Cursor / VS Code">
+    Integrate Graphify via the **MCP (Model Context Protocol)** server for real-time hot-reloading.
+    ```bash
+    graphify mcp --port 8080
+    ```
+    *Add the URL to your Cursor/VS Code MCP settings.*
+  </TabItem>
+  <TabItem value="opencode" label="OpenCode">
+    Register Graphify as a global capability for OpenCode sessions.
+    ```bash
+    graphify install --opencode
+    ```
+  </TabItem>
+  <TabItem value="gemini" label="Gemini CLI">
+    Automatic hooks for Gemini-based workflows.
+    ```bash
+    graphify install --gemini
+    ```
+  </TabItem>
+</Tabs>
 
 ## Setup & Installation
 
-Install Graphify in a single line and integrate it with your workflow.
-
-<CodeGroup>
-
-```bash title="Install"
-pip install graphify && graphify install
-```
-
-```bash title="Usage"
-# Inside Claude Code
-/graphify [folder_path]
-```
-
-</CodeGroup>
+<Steps>
+  <Step title="Install">
+    Download the core package and initialize environment hooks.
+    ```bash
+    pip install graphify && graphify install
+    ```
+  </Step>
+  <Step title="Verify">
+    Check the installation and ensure the CLI is in your path.
+    ```bash
+    graphify --version
+    ```
+  </Step>
+  <Step title="Cloud Clone (Optional)">
+    Directly ingest any public GitHub repository.
+    ```bash
+    graphify clone https://github.com/user/repo
+    ```
+  </Step>
+</Steps>
 
 ## Step-by-Step Usage Guide
 
 <Steps>
-
-1.  **Install the tool**: Run `pip install graphify && graphify install` in your terminal.
-2.  **Open Claude Code**: Launch your Claude Code terminal interface.
-3.  **Run the command**: Type `/graphify` followed by the path to the folder you want to analyze.
-4.  **Wait for processing**: Graphify will scan the directory, identify concept clusters, and build the graph.
-5.  **Explore the output**:
-    *   Open the generated **Obsidian vault** to see backlinked articles.
-    *   Navigate the **Knowledge Graph** to visualize dependencies.
-    *   Ask **Plain English Q&A** questions to Claude about the project structure.
-
+  <Step title="Initialize">
+    Install the tool using `pip install graphify`. Run `graphify install` to set up environment hooks.
+  </Step>
+  <Step title="Build the Graph">
+    Point it at your project: `graphify build ./my-project`. Use `--merge` if adding to an existing graph.
+  </Step>
+  <Step title="Start MCP Server">
+    For live interaction in Cursor, run `graphify mcp`. The server will hot-reload whenever the graph is rebuilt.
+  </Step>
+  <Step title="Explore in Obsidian">
+    Open the generated `.graphify/obsidian` folder to browse your project as a linked wiki.
+  </Step>
 </Steps>
+
+## Team Collaboration & Git Integration
+
+Graphify is designed for multi-developer workflows where the project graph needs to stay synchronized across parallel branches.
+
+### Storage Location
+By default, Graphify stores its persistent data in the `graphify-out/` directory at the root of your project:
+- **`graph.json`**: The core structural data (should be committed to Git).
+- **`GRAPH_REPORT.md`**: Human-readable summary of architectural insights.
+- **`obsidian/`**: The linked wiki vault.
+
+### Handling Merge Conflicts
+When multiple developers update the graph in separate PRs, Git normally triggers a conflict on `graph.json`. Graphify solves this with an automated **Git Merge Driver**.
+
+:::tip
+Run `graphify hook install` to register the custom merge driver.
+:::
+
+The driver ensures that when a merge occurs:
+1.  **Union Merging**: It performs a semantic union of the two graph states instead of a line-by-line comparison.
+2.  **No Conflict Markers**: It prevents the insertion of `<<<< HEAD` markers that would break the JSON schema.
+3.  **Deduplication**: A post-merge pass automatically deduplicates any nodes or edges created by both branches.
 
 ## References
 
 - [Official GitHub Repository](https://github.com/safishamsi/graphify)
-- [Claude Code Integration](https://anthropic.com/claude/code)
+- [Anthropic Claude Code](https://anthropic.com/claude/code)
+- [Model Context Protocol (MCP)](https://modelcontextprotocol.io)

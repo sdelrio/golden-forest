@@ -23,16 +23,21 @@ import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';
 :::
 
 ## Installation & Setup
-[Step by step instructions]
 
-<CodeGroup>
-```bash title="Install"
-npm install [tool]
-```
-```bash title="Usage"
-[tool] start
-```
-</CodeGroup>
+<Steps>
+  <Step title="Install">
+    [Description of the installation process]
+    ```bash
+    npm install [tool]
+    ```
+  </Step>
+  <Step title="Initialize">
+    [Description of the initialization process]
+    ```bash
+    [tool] init
+    ```
+  </Step>
+</Steps>
 
 ## Configuration
 [Explain configuration options]
