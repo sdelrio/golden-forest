@@ -3,6 +3,7 @@ title: "[AI Tool Name]"
 description: "Optimization and integration guide for [AI Tool Name] in AI-assisted development."
 tags: [ai, tools, productivity, tokens, optimization]
 sidebar_position: 10
+sidebar_label: "[Short Name]" # Optional: Use if title is too long for the sidebar
 ---
 
 {/*

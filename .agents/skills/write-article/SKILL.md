@@ -9,13 +9,14 @@ This skill helps you create high-quality Docusaurus MDX articles for the **The G
 - Always determine the appropriate subfolder based on the content (e.g., `docs/Develop-Code/`, `docs/Games/`, etc.).
 
 ### 2. Frontmatter Configuration
-Every article must start with a YAML frontmatter block:
+Every article must start with a YAML frontmatter block. **Note**: If an existing article has a `sidebar_label` that is shorter than the `title`, it must be preserved (it is used to prevent menu overflow).
 ```yaml
 ---
 title: "Clear and Concise Title"
 description: "A brief summary for SEO and social sharing (1-2 sentences)."
 tags: [tag1, tag2, tag3]
 sidebar_position: 10 # Adjust based on existing files in the directory
+sidebar_label: "Shorter Title" # Optional: preserve if already present and shorter than title
 ---
 ```
 

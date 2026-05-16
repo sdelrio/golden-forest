@@ -1,8 +1,9 @@
 ---
-title: "[Tool/Tech Name]"
-description: "Brief overview of [Tool/Tech Name] and its impact on development."
-tags: [dev, tools, technical]
+title: "[Tool Name]"
+description: "Technical guide and documentation for [Tool Name]."
+tags: [development, tools, productivity]
 sidebar_position: 10
+sidebar_label: "[Short Name]" # Optional: Use if title is too long for the sidebar
 ---
 
 {/*
