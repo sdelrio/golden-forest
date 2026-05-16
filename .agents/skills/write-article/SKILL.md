@@ -39,6 +39,7 @@ import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';
     - `:::warning`: For potential issues.
     - `:::danger`: For critical warnings.
 - **Visuals**: If images are available, use standard markdown syntax.
+- **Diagrams**: Use Mermaid.js for flowcharts, sequences, or other diagrams if it helps clarity (optional). Use `mermaid` code blocks.
 - **References**: Always include a `## References` section at the end with links to source materials.
 
 ### 5. Template Variations
