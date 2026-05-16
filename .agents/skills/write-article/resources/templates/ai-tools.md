@@ -57,16 +57,21 @@ import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';
 </Tabs>
 
 ## Setup & Configuration
-[Basic installation and config steps.]
 
-<CodeGroup>
-```bash title="Installation"
-npm install -g [tool-name]
-```
-```bash title="Status Check"
-[tool-name] --version
-```
-</CodeGroup>
+<Steps>
+  <Step title="Install">
+    [Description]
+    ```bash
+    npm install -g [tool-name]
+    ```
+  </Step>
+  <Step title="Verify">
+    [Description]
+    ```bash
+    [tool-name] --version
+    ```
+  </Step>
+</Steps>
 
 ## References
 - [Official Documentation](https://example.com)
