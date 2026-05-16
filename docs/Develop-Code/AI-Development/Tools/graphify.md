@@ -10,6 +10,7 @@ import TabItem from '@theme/TabItem';
 import Card from '@site/src/components/Card/Card';
 import CardGroup from '@site/src/components/Card/CardGroup';
 import Accordion from '@site/src/components/Accordion/Accordion';
+import AccordionGroup from '@site/src/components/Accordion/AccordionGroup';
 import Steps from '@site/src/components/Steps/Steps';
 import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';
 
@@ -81,26 +82,26 @@ Graphify is a "first-class citizen" in modern AI coding environments.
 
 ## Setup & Installation
 
-<Steps>
-  <Step title="Install">
+<AccordionGroup>
+  <Accordion title="Install" icon="download">
     Download the core package and initialize environment hooks.
     ```bash
     pip install graphify && graphify install
     ```
-  </Step>
-  <Step title="Verify">
+  </Accordion>
+  <Accordion title="Verify" icon="check">
     Check the installation and ensure the CLI is in your path.
     ```bash
     graphify --version
     ```
-  </Step>
-  <Step title="Cloud Clone (Optional)">
+  </Accordion>
+  <Accordion title="Cloud Clone (Optional)" icon="github">
     Directly ingest any public GitHub repository.
     ```bash
     graphify clone https://github.com/user/repo
     ```
-  </Step>
-</Steps>
+  </Accordion>
+</AccordionGroup>
 
 ## Step-by-Step Usage Guide
 
