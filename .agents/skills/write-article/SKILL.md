@@ -69,7 +69,6 @@ Always include a `## References` section at the end. Use a bulleted list with de
 - **Headings**: Use `##` for major sections and `###` for sub-sections.
 - **Visuals**: Use standard markdown for images.
 - **Diagrams**: Use Mermaid.js (`mermaid` code blocks) for workflows or architecture.
-- **Anchor Links**: Use relative sibling format for `<Card href>` (e.g., `href="my-page#section-id"`).
 
 ### 7. Template Variations
 
