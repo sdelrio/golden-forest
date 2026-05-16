@@ -6,8 +6,7 @@ sidebar_position: 10
 ---
 # [Game Name]
 
-## Introduction
-[Overview of the game world or mechanic.]
+[Provide a 1-2 paragraph summary following the SKILL.md guidelines.]
 
 ## Core Mechanics
 [Explain how to play or how the specific rule works.]

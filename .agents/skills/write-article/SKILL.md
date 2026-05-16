@@ -42,19 +42,36 @@ import ParamField from '@site/src/components/ParamField/ParamField';    {/* Requ
 import XmlChar from '@site/src/components/XmlChar/XmlChar';             {/* Required by: <XmlChar> */}
 ```
 
-### 4. Structure & Formatting
-- **Headings**: Use `#` for the main title and `##` for major sections.
-- **Admonitions**: Use Docusaurus admonitions for highlights:
-    - `:::info`: For general information.
-    - `:::tip`: For best practices or tips.
-    - `:::warning`: For potential issues.
-    - `:::danger`: For critical warnings.
-- **Visuals**: If images are available, use standard markdown syntax.
-- **Diagrams**: Use Mermaid.js for flowcharts, sequences, or other diagrams if it helps clarity (optional). Use `mermaid` code blocks.
-- **Anchor Links**: Docusaurus auto-generates heading IDs: lowercase, spaces → hyphens, `&` → removed (producing `--`). Example: `## Setup & Configuration` → `#setup--configuration`. **Important for `<Card href>` anchors**: The `href` prop is optional. However, if a relevant section exists within the article, you SHOULD include the `href` to provide quick navigation (e.g., `href="my-page#section-id"`). If no such section exists, omit the `href` to avoid broken links or placeholder fragments. Because `trailingSlash: true` causes the `Card` component to prepend `../` to bare fragment links (turning `#section` into `../#section`, navigating to the parent folder), use the **relative sibling format** instead: `href="my-page#section-id"`. The Card component converts this to `../my-page#section-id`, which correctly resolves to the target page's anchor. Never use bare `#fragment` or the placeholder `#link`.
-- **References**: Always include a `## References` section at the end with links to source materials.
+### 4. Standard Document Structure
 
-### 5. Template Variations
+Every article should follow this general anatomy to ensure consistency:
+
+1.  **Main Title**: Use a single `#` heading.
+2.  **Summary/Introduction**: A 1-2 paragraph overview immediately following the title. It should explain what the tool/mechanic is and its primary value proposition.
+3.  **Core Content**: Domain-specific sections (Advantages, Setup, Rules, etc.) using `##` headings.
+4.  **References**: A mandatory final section (see below).
+
+### 5. Standard Sections
+
+#### A. Admonitions
+Use Docusaurus admonitions to highlight key points. Common patterns:
+- `:::info`: For performance metrics, token savings, or key value propositions.
+- `:::tip`: For best practices, DM tips, or implementation shortcuts.
+- `:::warning`: For common pitfalls or breaking changes.
+
+#### B. References Section
+Always include a `## References` section at the end. Use a bulleted list with descriptive labels:
+- `[Official Documentation](url)`
+- `[GitHub Repository](url)`
+- `[Related Article](url)`
+
+### 6. Formatting & Visuals
+- **Headings**: Use `##` for major sections and `###` for sub-sections.
+- **Visuals**: Use standard markdown for images.
+- **Diagrams**: Use Mermaid.js (`mermaid` code blocks) for workflows or architecture.
+- **Anchor Links**: Use relative sibling format for `<Card href>` (e.g., `href="my-page#section-id"`).
+
+### 7. Template Variations
 
 For detailed structures, refer to the following templates in `.agents/skills/write-article/resources/templates/`:
 

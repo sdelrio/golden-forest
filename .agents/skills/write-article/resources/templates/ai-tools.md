@@ -7,7 +7,7 @@ sidebar_label: "[Short Name]" # Optional: Use if title is too long for the sideb
 ---
 # [AI Tool Name]: [Subtitle]
 
-[Provide a 1-2 paragraph summary of the AI tool and how it enhances the AI development workflow.]
+[Provide a 1-2 paragraph summary following the SKILL.md guidelines.]
 
 ## Core Advantages & Efficiency
 
@@ -22,7 +22,6 @@ sidebar_label: "[Short Name]" # Optional: Use if title is too long for the sideb
 
 ## Advanced Capabilities (Optional)
 
-{/* Requires: Card, CardGroup imports */}
 <CardGroup cols={2}>
   <Card title="Feature X" icon="mdi:rocket" href="[page-id]#existing-section-id">
     [Short description of a powerful feature]
@@ -45,7 +44,6 @@ flowchart LR
 
 [Describe how to use this tool with Claude Code, Cursor, or other agents.]
 
-{/* Requires: Tabs, TabItem imports */}
 <Tabs groupId="agent-integration">
   <TabItem value="claude" label="Claude Code" default>
     ```bash
@@ -61,7 +59,6 @@ flowchart LR
 
 [Show how it compares to standard alternatives.]
 
-{/* Requires: Tabs, TabItem imports */}
 <Tabs groupId="comparison">
   <TabItem value="standard" label="Standard (JSON/YAML)">
     ```json
@@ -79,7 +76,6 @@ flowchart LR
 
 ## Setup & Configuration (Optional)
 
-{/* Requires: Accordion, AccordionGroup imports */}
 <AccordionGroup>
   <Accordion title="Install" icon="download">
     ```bash
@@ -93,7 +89,6 @@ flowchart LR
 
 ## Step-by-Step Usage (Optional)
 
-{/* Requires: Steps import */}
 <Steps>
   <Step title="Initialize">
     [Description]

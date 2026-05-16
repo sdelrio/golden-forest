@@ -6,8 +6,7 @@ sidebar_position: 10
 ---
 # [System Name] Setup
 
-## Infrastructure Overview
-[Explain the hardware/software stack.]
+[Provide a 1-2 paragraph summary following the SKILL.md guidelines.]
 
 ## Deployment Guide
 <Steps>

@@ -8,8 +8,7 @@ sidebar_label: "[Short Name]" # Optional: Use if title is too long for the sideb
 
 # [Tool Name]
 
-## Summary
-[Provide a 1-2 paragraph summary of the tool, what problem it solves, and its core functionality.]
+[Provide a 1-2 paragraph summary following the SKILL.md guidelines.]
 
 ## Key Features & Advantages
 - **Feature 1**: Description.
