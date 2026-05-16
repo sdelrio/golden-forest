@@ -108,7 +108,7 @@ jobs:
         run: |
           if [ -e yarn.lock ]; then
             # use network only if dependencies are not available in local cache with --prefer-offline
-            yarn install --frozen-lockfile --prefer-offline
+            yarn install --frozen-lockfile --prefer-offline --immutable --inline-builds
           else
             exit 1
           fi

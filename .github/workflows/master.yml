@@ -94,7 +94,7 @@ jobs:
         if: ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
         run: |
           if [ -e yarn.lock ]; then
-            yarn install --frozen-lockfile --prefer-offline
+            yarn install --frozen-lockfile --prefer-offline --immutable --inline-builds
           else
             exit 1
           fi

@@ -24,7 +24,7 @@ tasks:
     status:
       - test -d node_modules
     cmds:
-      - "{{.YARN}} install"
+      - "{{.YARN}} install --immutable --inline-builds"
 
   upgrade:
     desc: Upgrade Docusaurus core and preset-classic to latest
