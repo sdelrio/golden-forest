@@ -5,16 +5,22 @@ tags: [ai, tools, productivity, tokens, optimization]
 sidebar_position: 10
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';
+{/* Optional Imports - Only include if used in the article */}
+{/* import Tabs from '@theme/Tabs'; */}
+{/* import TabItem from '@theme/TabItem'; */}
+{/* import Card from '@site/src/components/Card/Card'; */}
+{/* import CardGroup from '@site/src/components/Card/CardGroup'; */}
+{/* import Accordion from '@site/src/components/Accordion/Accordion'; */}
+{/* import AccordionGroup from '@site/src/components/Accordion/AccordionGroup'; */}
+{/* import Steps from '@site/src/components/Steps/Steps'; */}
+{/* import CodeGroup from '@site/src/components/CodeGroup/CodeGroup'; */}
 
 # [AI Tool Name]: [Subtitle]
 
-## Summary
 [Provide a 1-2 paragraph summary of the AI tool and how it enhances the AI development workflow.]
 
 ## Core Advantages & Efficiency
+
 [Explain the primary benefit, e.g., context window reduction, improved reasoning, or cost savings.]
 
 :::info
@@ -24,7 +30,28 @@ import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';
 - **Feature A**: [Description]
 - **Feature B**: [Description]
 
-## Integration with AI Agents
+## Advanced Capabilities (Optional)
+
+<CardGroup cols={2}>
+  <Card title="Feature X" icon="mdi:rocket" href="#link">
+    [Short description of a powerful feature]
+  </Card>
+  <Card title="Feature Y" icon="mdi:connection" href="#link">
+    [Short description of another feature]
+  </Card>
+</CardGroup>
+
+## Architecture & Workflow (Optional)
+
+```mermaid
+flowchart LR
+    A[Input] --> B[Tool Process]
+    B --> C[AI Agent]
+    C --> D[Result]
+```
+
+## Integration with AI Agents (Optional)
+
 [Describe how to use this tool with Claude Code, Cursor, or other agents.]
 
 <Tabs groupId="agent-integration">
@@ -38,7 +65,8 @@ import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';
   </TabItem>
 </Tabs>
 
-## Comparison & Benchmarks
+## Comparison & Benchmarks (Optional)
+
 [Show how it compares to standard alternatives.]
 
 <Tabs groupId="comparison">
@@ -56,19 +84,32 @@ import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';
   </TabItem>
 </Tabs>
 
-## Setup & Configuration
+## Setup & Configuration (Optional)
 
-<Steps>
-  <Step title="Install">
-    [Description]
+<AccordionGroup>
+  <Accordion title="Install" icon="download">
     ```bash
     npm install -g [tool-name]
     ```
-  </Step>
-  <Step title="Verify">
+  </Accordion>
+  <Accordion title="Configure" icon="settings">
+    [Instructions]
+  </Accordion>
+</AccordionGroup>
+
+## Step-by-Step Usage (Optional)
+
+<Steps>
+  <Step title="Initialize">
     [Description]
     ```bash
-    [tool-name] --version
+    [tool-name] init
+    ```
+  </Step>
+  <Step title="Execute">
+    [Description]
+    ```bash
+    [tool-name] run
     ```
   </Step>
 </Steps>
