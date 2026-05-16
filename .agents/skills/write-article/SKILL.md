@@ -40,7 +40,7 @@ import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';
     - `:::danger`: For critical warnings.
 - **Visuals**: If images are available, use standard markdown syntax.
 - **Diagrams**: Use Mermaid.js for flowcharts, sequences, or other diagrams if it helps clarity (optional). Use `mermaid` code blocks.
-- **Anchor Links**: Docusaurus auto-generates heading IDs: lowercase, spaces → hyphens, `&` → removed (producing `--`). Example: `## Setup & Configuration` → `#setup--configuration`. **Important for `<Card href>` anchors**: because `trailingSlash: true` causes the `Card` component to prepend `../` to bare fragment links (turning `#section` into `../#section`, navigating to the parent folder), use the **relative sibling format** instead: `href="my-page#section-id"`. The Card component converts this to `../my-page#section-id`, which correctly resolves to the target page's anchor. Never use bare `#fragment` or the placeholder `#link`.
+- **Anchor Links**: Docusaurus auto-generates heading IDs: lowercase, spaces → hyphens, `&` → removed (producing `--`). Example: `## Setup & Configuration` → `#setup--configuration`. **Important for `<Card href>` anchors**: The `href` prop is optional. However, if a relevant section exists within the article, you SHOULD include the `href` to provide quick navigation (e.g., `href="my-page#section-id"`). If no such section exists, omit the `href` to avoid broken links or placeholder fragments. Because `trailingSlash: true` causes the `Card` component to prepend `../` to bare fragment links (turning `#section` into `../#section`, navigating to the parent folder), use the **relative sibling format** instead: `href="my-page#section-id"`. The Card component converts this to `../my-page#section-id`, which correctly resolves to the target page's anchor. Never use bare `#fragment` or the placeholder `#link`.
 - **References**: Always include a `## References` section at the end with links to source materials.
 
 ### 5. Template Variations
@@ -131,7 +131,7 @@ Use these components to enhance the visual appeal and interactivity of your arti
 
 | Component | Usage | Props | Where to use |
 | :--- | :--- | :--- | :--- |
-| `Card` | `<Card title="Title" icon="mdi:icon" href="url">Content</Card>` | `title`, `icon`, `href` | Highlighting specific external links, related articles, or key features. |
+| `Card` | `<Card title="Title" icon="mdi:icon" href="url">Content</Card>` | `title`, `icon`, `href` (optional) | Highlighting specific external links, related articles, or key features. |
 | `CardGroup` | `<CardGroup cols={2}><Card ... /></CardGroup>` | `cols` (1-4) | Wrapping multiple `Card` components into a responsive grid. |
 | `Accordion` | `<Accordion title="Title" defaultOpen={false}>Content</Accordion>` | `title`, `defaultOpen` | Progressive disclosure of information, FAQs, or technical deep-dives. |
 | `Steps` | `<Steps>1. Step 1...</Steps>` | `children` | Styled numbered lists for multi-step processes or installation guides. |

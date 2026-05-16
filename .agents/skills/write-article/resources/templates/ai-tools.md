@@ -38,10 +38,10 @@ sidebar_position: 10
 
 {/* Requires: Card, CardGroup imports */}
 <CardGroup cols={2}>
-  <Card title="Feature X" icon="mdi:rocket" href="#existing-section-id">
+  <Card title="Feature X" icon="mdi:rocket" href="[page-id]#existing-section-id">
     [Short description of a powerful feature]
   </Card>
-  <Card title="Feature Y" icon="mdi:connection" href="#another-existing-section-id">
+  <Card title="Feature Y" icon="mdi:connection">
     [Short description of another feature]
   </Card>
 </CardGroup>
