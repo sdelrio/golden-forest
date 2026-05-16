@@ -135,6 +135,12 @@ Every context file — good or bad — adds **~20% to inference cost**. This is 
 | Use a stronger model to generate the file | ➖ No consistent benefit |
 | Split into minimal AGENTS.md + existing docs | ✅ Best approach |
 
+## Sample prompt
+
+```
+Create an AGENTS.md file for this project. Use the /init command to generate the file. Make sure to include all the information that an agent would need to know to understand the project and how to work with it, the folder structure, what I'm currently working on, what I want to achieve, and any other information that would be useful for an agent to know. Keep the file concise and easy to read, if possible under 50 lines.
+```
+
 ## Resources
 
 - 📄 [Full paper (arxiv)](https://arxiv.org/abs/2602.11988)
