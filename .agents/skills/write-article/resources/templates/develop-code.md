@@ -6,15 +6,6 @@ sidebar_position: 10
 sidebar_label: "[Short Name]" # Optional: Use if title is too long for the sidebar
 ---
 
-{/*
-  IMPORTANT: Only include imports for components actually used in this article.
-  Remove all unused imports before finalizing.
-*/}
-{/* import Tabs from '@theme/Tabs'; */}
-{/* import TabItem from '@theme/TabItem'; */}
-{/* import CodeGroup from '@site/src/components/CodeGroup/CodeGroup'; */}
-{/* import Steps from '@site/src/components/Steps/Steps'; */}
-
 # [Tool Name]
 
 ## Summary

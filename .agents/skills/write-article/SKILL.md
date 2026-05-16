@@ -21,15 +21,25 @@ sidebar_label: "Shorter Title" # Optional: preserve if already present and short
 ```
 
 ### 3. Component Imports
-Include necessary imports at the top of the file, after the frontmatter:
+
+Include necessary imports at the top of the file, after the frontmatter. 
+
+:::warning
+**IMPORT CHECKLIST**: Only include imports for components actually used in the article. Leaving unused imports active will cause MDX compilation errors.
+:::
+
 ```javascript
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import Card from '@site/src/components/Card/Card';
-import CardGroup from '@site/src/components/Card/CardGroup';
-import Accordion from '@site/src/components/Accordion/Accordion';
-import Steps from '@site/src/components/Steps/Steps';
-import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';
+import Tabs from '@theme/Tabs';                                        {/* Required by: <Tabs>, <TabItem> */}
+import TabItem from '@theme/TabItem';                                  {/* Required by: <TabItem> inside <Tabs> */}
+import Card from '@site/src/components/Card/Card';                      {/* Required by: <Card> */}
+import CardGroup from '@site/src/components/Card/CardGroup';            {/* Required by: <CardGroup> */}
+import Accordion from '@site/src/components/Accordion/Accordion';      {/* Required by: <Accordion> */}
+import AccordionGroup from '@site/src/components/Accordion/AccordionGroup'; {/* Required by: <AccordionGroup> */}
+import Steps from '@site/src/components/Steps/Steps';                   {/* Required by: <Steps>, <Step> */}
+import Step from '@site/src/components/Steps/Step';                     {/* Required by: <Step> inside <Steps> */}
+import CodeGroup from '@site/src/components/CodeGroup/CodeGroup';       {/* Required by: <CodeGroup> */}
+import ParamField from '@site/src/components/ParamField/ParamField';    {/* Required by: <ParamField> */}
+import XmlChar from '@site/src/components/XmlChar/XmlChar';             {/* Required by: <XmlChar> */}
 ```
 
 ### 4. Structure & Formatting

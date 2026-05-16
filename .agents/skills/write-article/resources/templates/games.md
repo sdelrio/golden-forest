@@ -4,15 +4,6 @@ description: "Rules, mechanics, and notes for [Game Name]."
 tags: [games, rpg, tabletop]
 sidebar_position: 10
 ---
-
-{/*
-  IMPORTANT: Only include imports for components actually used in this article.
-  Remove all unused imports before finalizing.
-*/}
-{/* import Card from '@site/src/components/Card/Card'; */}
-{/* import CardGroup from '@site/src/components/Card/CardGroup'; */}
-{/* import XmlChar from '@site/src/components/XmlChar/XmlChar'; */}
-
 # [Game Name]
 
 ## Introduction

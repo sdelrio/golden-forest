@@ -5,21 +5,6 @@ tags: [ai, tools, productivity, tokens, optimization]
 sidebar_position: 10
 sidebar_label: "[Short Name]" # Optional: Use if title is too long for the sidebar
 ---
-
-{/*
-  IMPORT CHECKLIST — uncomment ONLY the imports for components actually used in the article body.
-  Leaving unused imports active will cause MDX compilation errors.
-  Each section below is annotated with which import it requires.
-*/}
-{/* import Tabs from '@theme/Tabs'; */}          {/* Required by: <Tabs>, <TabItem> */}
-{/* import TabItem from '@theme/TabItem'; */}      {/* Required by: <TabItem> inside <Tabs> */}
-{/* import Card from '@site/src/components/Card/Card'; */}              {/* Required by: <Card> */}
-{/* import CardGroup from '@site/src/components/Card/CardGroup'; */}    {/* Required by: <CardGroup> */}
-{/* import Accordion from '@site/src/components/Accordion/Accordion'; */}          {/* Required by: <Accordion> */}
-{/* import AccordionGroup from '@site/src/components/Accordion/AccordionGroup'; */}{/* Required by: <AccordionGroup> */}
-{/* import Steps from '@site/src/components/Steps/Steps'; */}           {/* Required by: <Steps>, <Step> */}
-{/* import CodeGroup from '@site/src/components/CodeGroup/CodeGroup'; */}{/* Required by: <CodeGroup> */}
-
 # [AI Tool Name]: [Subtitle]
 
 [Provide a 1-2 paragraph summary of the AI tool and how it enhances the AI development workflow.]
