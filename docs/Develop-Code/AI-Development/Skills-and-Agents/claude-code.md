@@ -170,3 +170,4 @@ Some areas of your system have hidden complexity. Adding local `CLAUDE.md` files
 - [Model Context Protocol](https://modelcontextprotocol.io) - Official MCP site.
 - [Anatomy of the .claude/ folder](https://x.com/akshay_pachaar/status/2035341800739877091) - Guide to commands and skills.
 - [Claude Code Best Practices](https://github.com/shanraisshan/claude-code-best-practice) - Community collection of tips.
+- [Claude Code Tutorial Video](https://x.com/marcusyul/status/2054897177034367055?s=20)
