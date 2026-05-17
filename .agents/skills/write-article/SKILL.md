@@ -61,6 +61,7 @@ Use Docusaurus admonitions to highlight key points. Common patterns:
 
 #### B. References Section
 Always include a `## References` section at the end. Use a bulleted list with descriptive labels:
+- **⚠️ Do NOT use raw `<url>` syntax**; always use markdown links `[text](url)`.
 - `[Official Documentation](url)`
 - `[GitHub Repository](url)`
 - `[Related Article](url)`
