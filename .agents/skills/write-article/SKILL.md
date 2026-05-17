@@ -155,8 +155,10 @@ Use `XmlChar` or `Feat` components if documenting D&D 5e content.
 ```
 
 ### 8. Card Link Best Practices
-- **Relative Sibling Format**: For Docusaurus `<Card>` components, relative anchor links **MUST** include the page filename before the hash (e.g., `<Card href="my-page#section-id">` instead of `<Card href="#section-id">`). Standard relative hashes (like `#section-id`) trigger link-prefixing bugs in the custom relative-url resolver, causing broken links.
-- **Contextual Relevance**: Ensure that all `<Card>` links point to headings that are **perfectly related** to the Card title and content. If necessary, create specific sub-headings (e.g., `### Feature Detail`) to ensure precise, context-accurate navigation.
+- **External Project Links (Preferred for tool/skill references)**: When a `<Card>` describes a feature, skill, or component of an external tool or project, the `href` **MUST** point to the external project page (e.g., GitHub repo README with anchor), NOT a local section on the same page. Example: `<Card title="Web Prototypes" href="https://github.com/nexu-io/html-anything/tree/main#web-prototypes--marketing-pages-prototype-mode">`.
+- **Internal Cross-Page Links**: When linking to another article in the docs, use relative sibling format with the filename before the hash (e.g., `<Card href="other-page#section-id">`). Standard relative hashes (like `#section-id`) trigger link-prefixing bugs in the custom relative-url resolver, causing broken links.
+- **Same-Page Links**: Avoid linking a `<Card>` to a section on the **same page** (e.g., `href="this-page#some-section"`). This creates circular, pointless navigation. If there is no meaningful external or cross-page destination, **omit the `href` entirely** so the card renders as non-clickable.
+- **Contextual Relevance**: Ensure that all `<Card>` links point to headings or pages that are **perfectly related** to the Card title and content. If necessary, create specific sub-headings to ensure precise, context-accurate navigation.
 
 ### 8b. Step Component Title Rule
 - **No Numbers in Titles**: When using `<Step>` inside `<Steps>`, do NOT include numbers in the `title` prop (e.g., `<Step title="1. Install">`). The `<Step>` component automatically renders a sequential number via CSS counters. Use `<Step title="Install">` instead.
