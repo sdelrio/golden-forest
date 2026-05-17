@@ -366,7 +366,7 @@ openfang migrate --from openclaw --dry-run
   <Card title="OpenCode" icon="mdi:code-braces" href="opencode">
     High-performance AI coding CLI tool for terminal-based development.
   </Card>
-  <Card title="OpenSandbox" icon="mdi:box-cutter" href="OpenSandbox">
+  <Card title="OpenSandbox" icon="mdi:box-cutter" href="opensandbox">
     Production-grade agent sandbox for secure tool execution.
   </Card>
 </CardGroup>

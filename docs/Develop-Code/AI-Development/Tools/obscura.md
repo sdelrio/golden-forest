@@ -193,5 +193,5 @@ For a detailed, head-to-head architectural comparison between **Obscura** (Rust)
 - [Official Site: Lightpanda](https://lightpanda.io/) — Performance-focused headless browser in Zig.
 - [GitHub Repository: Lightpanda](https://github.com/lightpanda-io/lightpanda) — Main Zig codebase and native MCP features.
 - [RTK (Rust Token Killer)](./rtk.md) — Middleware for reducing LLM token footprint from CLI tools.
-- [Claude Code](./claude-code.md) — Anthropic's agentic CLI terminal tool.
-- [OpenSandbox](./OpenSandbox.md) — Secure execution sandboxes for AI agents.
+- [Claude Code](../Skills-and-Agents/claude-code.md) — Anthropic's agentic CLI terminal tool.
+- [OpenSandbox](../Skills-and-Agents/opensandbox.md) — Secure execution sandboxes for AI agents.

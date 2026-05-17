@@ -262,5 +262,5 @@ Using the `opencode-antigravity-auth` plugin to access Claude Opus and Gemini Pr
 - [OpenCode Official Site](https://opencode.ai) — Documentation and install guides.
 - [OpenCode GitHub](https://github.com/sst/opencode) — Source code and issue tracker.
 - [Claude Code](./claude-code.md) — Anthropic's agentic CLI; shares `.agents/skills` conventions.
-- [Graphify](./graphify.md) — Knowledge graph tool with native OpenCode MCP interoperability.
+- [Graphify](../Tools/graphify.md) — Knowledge graph tool with native OpenCode MCP interoperability.
 - [Model Context Protocol](https://modelcontextprotocol.io) — MCP specification and server registry.

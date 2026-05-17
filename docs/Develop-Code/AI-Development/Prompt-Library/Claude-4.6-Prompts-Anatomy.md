@@ -564,5 +564,5 @@ flowchart LR
 ## References
 
 - [ClaudeKit](../Workflows/ClaudeKit-Workflow.md): Spec-driven AI development workflow
-- [OpenCode](../Tools/opencode.md): Structured AI coding CLI
+- [OpenCode](../Skills-and-Agents/opencode.md): Structured AI coding CLI
 - [Qwen3.5 Small](../Models-LLMs/Qwen3.5-Small-Series.md): Alternative models

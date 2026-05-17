@@ -217,4 +217,4 @@ For a detailed, head-to-head architectural comparison between **Lightpanda** (Zi
 - [GitHub Repository: Lightpanda Agent Skill](https://github.com/lightpanda-io/agent-skill) — Integration packages for AI systems.
 - [Obscura Headless Browser](./obscura.md) — Rust-based lightweight browser with advanced stealth.
 - [RTK (Rust Token Killer)](./rtk.md) — Token optimization proxy for terminal commands.
-- [Claude Code](./claude-code.md) — Anthropic's agentic CLI tool.
+- [Claude Code](../Skills-and-Agents/claude-code.md) — Anthropic's agentic CLI tool.
