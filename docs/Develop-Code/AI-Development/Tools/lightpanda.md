@@ -16,24 +16,26 @@ import Step from '@site/src/components/Steps/Step';
 
 # Lightpanda: High-Concurrency Zig Headless Browser
 
-When scale and raw concurrency are the primary requirements for web automation or AI web-browsing tasks, traditional browsers like Chrome fall short due to their massive resource footprints. Even custom lightweight frameworks often retain standard parsing structures that create unnecessary memory abstractions.
+Historically, web automation and AI agents have run full, desktop-grade Chrome under the hood. To extract text or interact with a webpage, developers spin up a massive desktop application, strip out the UI, and run hundreds of parallel instances on server hardware—an architectural pattern akin to **renting a semi-truck to deliver a letter**. 
 
-**Lightpanda** is an open-source, ultra-fast headless browser engine written from scratch in **Zig**. Designed specifically for machine-driven processes like web scraping and AI agent automation, Lightpanda operates with a "surgical omission" architecture. By stripping away visual layouts, CSS rendering trees, and image decoders, it leaves a streamlined engine optimized purely for parsing HTML, constructing the DOM, and executing JavaScript via the **V8 JavaScript engine**.
+Unlike forks of Chromium, Blink, or WebKit, **Lightpanda** is built differently. It is written completely from scratch in **Zig** with one singular goal: headless performance, nothing else.
+
+By omitting visual layout trees, CSS painting pipelines, and image decoders, Lightpanda strips away standard browser bloat, launching in under **50ms** and using only **~24MB of RAM** per instance. It runs up to **11x faster** and consumes up to **9x–15x less memory** than Headless Chrome.
+
+:::tip
+Lightpanda is **100% open-source** under the **AGPL-3.0** license. While it is currently in **Beta** (with rapidly expanding Web API coverage), it has struck a massive nerve in the web engineering community, amassing over **11.8K GitHub stars**.
+:::
 
 ## Core Advantages & Efficiency
 
-Lightpanda is engineered specifically to run multiple parallel browser instances with minimal system resources. By managing memory manually through Zig and omitting the entire visual painting pipeline, it redefines the efficiency limits of headless browsing.
+Lightpanda is engineered specifically to scale parallel web-browsing tasks across standard server setups without the high compute costs.
 
-:::info
-Lightpanda launches in under **50ms** and consumes only **~24MB of RAM** per page instance, enabling developers to run up to 15x more concurrent browsing sessions on standard server hardware compared to Headless Chrome.
-:::
-
-- **Surgical Omission Architecture**: Omits image decoding, CSS visual rendering, layout painting, and accessibility trees, leaving only the network fetch, HTML parser (`html5ever`), DOM model, and V8 engine.
-- **Ultra-Low Memory Profile**: Requires only ~24MB of RAM per instance, outperforming all other headless engines on the market.
-- **Lightning Cold Startup**: Prepares a fresh browser context and executes modern JS in under 50ms.
-- **Agent-Optimized DOM Extraction**: Natively extracts a highly pruned "Semantic Tree" and clean markdown to save agent context tokens.
-- **CDP drop-in compatibility**: Acts as a drop-in replacement for headless Chrome in standard Puppeteer, Playwright, or Go `chromedp` scripts.
-- **Native MCP Command & SSE Cloud**: Provides native stdio MCP tools for local developer setups and supports managed Cloud integration over Server-Sent Events (SSE).
+- **From-Scratch Zig Engine**: Not a Chromium fork; manually manages memory via Zig for ultra-low latency.
+- **Full JS Evaluation**: Uses the high-performance **V8 engine** to handle complex single-page apps (SPAs), Ajax, XHR, Fetch requests, and infinite scrolling.
+- **Surgical Omission Architecture**: Strips away rendering, layouts, decoders, and accessibility structures, keeping only what is required to execute code and build the DOM.
+- **CDP Drop-In Compatibility**: Acts as a drop-in replacement on port `9222` for headless Chrome, compatible with standard Puppeteer, Playwright, and Go `chromedp` scripts.
+- **Agent-Optimized DOM Extraction**: Natively extracts clean Markdown and pruned "Semantic Trees" to minimize LLM token usage.
+- **Native MCP & Cloud SSE**: Features stdio MCP tools for local developers and managed Server-Sent Events (SSE) for serverless orchestration.
 
 ### Concurrency & Performance
 
