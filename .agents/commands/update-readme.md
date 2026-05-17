@@ -1,7 +1,6 @@
 ---
 description: update README.md
 agent: build
-model: opencode/big-pickle
 ---
 # /update-readme
 Refactor or generate a professional, first-grade README.md for the project.
