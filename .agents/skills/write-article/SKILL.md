@@ -104,6 +104,9 @@ Highlight a specific performance gain or unique value proposition.
   tool install
   ```
  </Step>
+ <Step title="Configure">
+  Edit the config file.
+ </Step>
 </Steps>
 
 ## References
@@ -154,6 +157,9 @@ Use `XmlChar` or `Feat` components if documenting D&D 5e content.
 ### 8. Card Link Best Practices
 - **Relative Sibling Format**: For Docusaurus `<Card>` components, relative anchor links **MUST** include the page filename before the hash (e.g., `<Card href="my-page#section-id">` instead of `<Card href="#section-id">`). Standard relative hashes (like `#section-id`) trigger link-prefixing bugs in the custom relative-url resolver, causing broken links.
 - **Contextual Relevance**: Ensure that all `<Card>` links point to headings that are **perfectly related** to the Card title and content. If necessary, create specific sub-headings (e.g., `### Feature Detail`) to ensure precise, context-accurate navigation.
+
+### 8b. Step Component Title Rule
+- **No Numbers in Titles**: When using `<Step>` inside `<Steps>`, do NOT include numbers in the `title` prop (e.g., `<Step title="1. Install">`). The `<Step>` component automatically renders a sequential number via CSS counters. Use `<Step title="Install">` instead.
 
 ### 9. Avoid Horizontal Rules (---)
 - **Visual Design Rules**: Do not include horizontal rules (`---`) to separate sections or headers when generating articles, as Docusaurus already handles section separation cleanly. Only use them if a specific presentation target or layout is explicitly requested by the user.
