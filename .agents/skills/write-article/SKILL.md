@@ -150,6 +150,13 @@ Use `XmlChar` or `Feat` components if documenting D&D 5e content.
 :::
 ```
 
+### 8. Card Link Best Practices
+- **Relative Sibling Format**: For Docusaurus `<Card>` components, relative anchor links **MUST** include the page filename before the hash (e.g., `<Card href="my-page#section-id">` instead of `<Card href="#section-id">`). Standard relative hashes (like `#section-id`) trigger link-prefixing bugs in the custom relative-url resolver, causing broken links.
+- **Contextual Relevance**: Ensure that all `<Card>` links point to headings that are **perfectly related** to the Card title and content. If necessary, create specific sub-headings (e.g., `### Feature Detail`) to ensure precise, context-accurate navigation.
+
+### 9. Avoid Horizontal Rules (---)
+- **Visual Design Rules**: Do not include horizontal rules (`---`) to separate sections or headers when generating articles, as Docusaurus already handles section separation cleanly. Only use them if a specific presentation target or layout is explicitly requested by the user.
+
 ## Component Reference
 
 Use these components to enhance the visual appeal and interactivity of your articles.
@@ -174,8 +181,6 @@ Use these components to enhance the visual appeal and interactivity of your arti
 | `DnDPointBuy` | `<DnDPointBuy />` | None | Interactive tool for calculating ability scores in D&D articles. |
 | `FeatBrowser` | `<FeatBrowser />` | None | Searchable directory for D&D feats. |
 | `FeatTable` | `<FeatTable />` | None | Summary table for D&D feats. |
-
----
 
 ## Execution Steps
 
