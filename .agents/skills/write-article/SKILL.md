@@ -1,3 +1,13 @@
+---
+name: write-article
+description: Create, update, or refactor Docusaurus MDX articles for The Golden Forest. This skill must be used when writing, updating, or refactoring any article under /docs or /tutorial.
+applyTo:
+  - /docs/**/*.md
+  - /docs/**/*.mdx
+  - /tutorial/**/*.md
+  - /tutorial/**/*.mdx
+---
+
 # write-article
 
 This skill helps you create high-quality Docusaurus MDX articles for the **The Golden Forest** digital garden. It transforms raw text or content from a URL into a structured, well-formatted article that adheres to the project's design system and component usage.
