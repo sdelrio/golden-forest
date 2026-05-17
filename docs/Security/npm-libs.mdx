@@ -1,0 +1,206 @@
+---
+title: npm Supply Chain Attacks - Protecting Your Projects
+description: How the May 2026 TanStack npm compromise happened and how to protect your projects from lifecycle script injection attacks.
+---
+
+# npm Supply Chain Attacks: Protecting Your Projects
+
+:::warning[May 2026 Incident]
+
+On May 11, 2026, 42 `@tanstack/*` packages were compromised via a GitHub Actions cache poisoning attack. Malicious versions were published to npm and executed credential-harvesting malware during `npm install`, `pnpm install`, or `yarn install`. The attack spread to affect ecosystems beyond JavaScript, including Mistral, OpenSearch, UiPath, and PyPI.
+
+:::
+
+## The Problem
+
+If you're using `npm install` with default configuration, **you are at risk**.
+
+The attack doesn't require you to import anything from a compromised package. Simply installing it is enough to get infected. Attackers embed malicious scripts in `preinstall`, `postinstall`, or `prepare` lifecycle hooks that execute automatically during installation.
+
+import Accordion from '@site/src/components/Accordion/Accordion';
+import Steps from '@site/src/components/Steps/Steps';
+import Step from '@site/src/components/Steps/Step';
+
+## How the TanStack Attack Worked
+
+The attack chain combined three vulnerabilities, each necessary but none sufficient alone:
+
+<Steps>
+
+<Step title="pull_request_target &quot;Pwn Request&quot; Pattern">
+
+A malicious PR from a forked repository triggered a GitHub Actions workflow that checked out untrusted code with write access to the shared CI cache.
+
+</Step>
+
+<Step title="GitHub Actions Cache Poisoning">
+
+The attacker's code poisoned the pnpm store cache with a key that the release workflow would later restore, injecting malicious binaries into the build process.
+
+</Step>
+
+<Step title="OIDC Token Extraction from Runner Memory">
+
+The poisoned binaries extracted the GitHub OIDC token from the runner's memory and used it to publish malicious packages directly to npm — bypassing the workflow's intended publish step entirely.
+
+</Step>
+
+</Steps>
+
+### What the Malware Did
+
+When a developer ran `npm install` against an affected version, the malware:
+
+- Harvested credentials from AWS IMDS, GCP metadata, Kubernetes service-account tokens, Vault tokens, `~/.npmrc`, GitHub tokens, and SSH private keys
+- Exfiltrated data over the Session/Oxen messenger network (end-to-end encrypted)
+- Self-propagated by enumerating other packages the victim maintains and republishing them with the same injection
+
+## Detection
+
+The compromise was detected by external researcher `ashishkurzi` from StepSecurity approximately **26 minutes** after the first malicious publish. All 84 malicious versions (42 packages × 2 versions each) were deprecated within ~1 hour 43 minutes.
+
+## Solutions
+
+<Steps>
+
+<Step title="Use pnpm 11 (Recommended)">
+
+pnpm 11 ships with built-in defenses against this type of attack, including install cooldown behavior that prevents same-day version installs from untrusted sources.
+
+```bash
+corepack enable
+corepack prepare pnpm@latest --activate
+```
+
+</Step>
+
+<Step title="Set minimumReleaseAge (All Package Managers)">
+
+Configure your package manager to reject packages published on the same day. This gives the security community time to detect and flag malicious releases.
+
+**Recommended value: `1440` minutes (24 hours)**
+
+</Step>
+
+<Step title="Block Installation Scripts">
+
+Prevent dependencies from executing arbitrary code on your machine during installation. This is the primary vector for these attacks.
+
+</Step>
+
+</Steps>
+
+## Configuration Files
+
+<Accordion title="npm: .npmrc" icon="file-code">
+
+```ini title=".npmrc"
+# Block lifecycle scripts from running during install
+# This prevents preinstall, postinstall, install, and prepare scripts from executing
+ignore-scripts=true
+
+# Reject packages published less than 24 hours ago (1440 minutes)
+# Gives security researchers time to detect malicious releases
+minimum-release-age=1440
+
+# Additional hardening
+audit=true
+fund=false
+```
+
+</Accordion>
+
+<Accordion title="yarn: .yarnrc.yml" icon="file-code">
+
+```yaml title=".yarnrc.yml"
+# Block lifecycle scripts from running during install
+# This prevents preinstall, postinstall, install, and prepare scripts from executing
+enableScripts: false
+
+# Reject packages published less than 24 hours ago (1440 minutes)
+# Gives security researchers time to detect malicious releases
+minimumReleaseAge: 1440
+
+# Additional hardening
+enableImmutableInstalls: true
+```
+
+</Accordion>
+
+<Accordion title="pnpm: .npmrc" icon="file-code">
+
+```ini title=".npmrc"
+# pnpm 11+ has built-in defenses, but these settings add extra protection
+
+# Block lifecycle scripts from running during install
+# pnpm blocks scripts by default for non-root dependencies,
+# but this ensures even direct dependencies can't run scripts
+ignore-scripts=true
+
+# Reject packages published less than 24 hours ago (1440 minutes)
+minimum-release-age=1440
+
+# Use strict peer dependencies to catch supply chain issues early
+strict-peer-dependencies=true
+
+# Additional hardening
+audit=true
+```
+
+</Accordion>
+
+## Quick Reference: Security Settings
+
+| Setting | npm | yarn | pnpm |
+|---------|-----|------|------|
+| Block scripts | `ignore-scripts=true` | `enableScripts: false` | `ignore-scripts=true` |
+| Min release age | `minimum-release-age=1440` | `minimumReleaseAge: 1440` | `minimum-release-age=1440` |
+| Audit on install | `audit=true` | built-in | `audit=true` |
+| Immutable installs | `package-lock-only=true` | `enableImmutableInstalls: true` | `frozen-lockfile=true` |
+
+## If You Were Affected
+
+If you installed any `@tanstack/*` package on **May 11, 2026**, treat the install host as potentially compromised and follow these steps:
+
+<Steps>
+
+<Step title="Rotate all credentials">
+
+Rotate every credential reachable from the affected machine:
+- AWS, GCP, Azure credentials
+- Kubernetes service-account tokens
+- Vault tokens
+- npm tokens (`~/.npmrc`)
+- GitHub tokens (env, `gh` CLI, `.git-credentials`)
+- SSH private keys
+
+</Step>
+
+<Step title="Scan for IOCs">
+
+Check for indicators of compromise:
+- Look in `package.json` for `"optionalDependencies"` pointing to `github:tanstack/router#79ac49eedf774dd4b0cfa308722bc463cfe5885c`
+- Search for `router_init.js` (~2.3 MB) in package directories
+- Check for network connections to `filev2.getsession.org` or `seed{1,2,3}.getsession.org`
+
+</Step>
+
+<Step title="Reinstall from clean state">
+
+Remove all dependencies and lock files, then reinstall:
+
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+</Step>
+
+</Steps>
+
+## References
+
+- [TanStack Postmortem: npm supply-chain compromise](https://tanstack.com/blog/npm-supply-chain-compromise-postmortem)
+- [TanStack: Hardening After the npm Compromise](https://tanstack.com/blog/incident-followup)
+- [GitHub Security Advisory: GHSA-g7cv-rxg3-hmpx](https://github.com/TanStack/router/security/advisories/GHSA-g7cv-rxg3-hmpx)
+- [Tracking Issue: TanStack/router#7383](https://github.com/TanStack/router/issues/7383)
