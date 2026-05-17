@@ -15,7 +15,7 @@ Every article must start with a YAML frontmatter block. **Note**: If an existing
 title: "Clear and Concise Title"
 description: "A brief summary for SEO and social sharing (1-2 sentences)."
 tags: [tag1, tag2, tag3]
-sidebar_position: 10 # Adjust based on existing files in the directory
+sidebar_position: 10 # Optional: only needed if you want to control sidebar ordering
 sidebar_label: "Shorter Title" # Optional: preserve if already present and shorter than title
 ---
 ```
