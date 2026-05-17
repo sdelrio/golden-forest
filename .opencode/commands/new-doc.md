@@ -1,0 +1,1 @@
+../../.agents/commands/new-doc.md
