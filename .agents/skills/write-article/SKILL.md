@@ -158,6 +158,17 @@ Use `XmlChar` or `Feat` components if documenting D&D 5e content.
 ### 9. Avoid Horizontal Rules (---)
 - **Visual Design Rules**: Do not include horizontal rules (`---`) to separate sections or headers when generating articles, as Docusaurus already handles section separation cleanly. Only use them if a specific presentation target or layout is explicitly requested by the user.
 
+### 10. MDX Character Escaping (Critical)
+- **Angle Brackets**: The `<` and `>` characters are reserved for JSX/MDX tags. When writing regular text that contains these characters (e.g., `<200ms`, `Array<string>`, `<div>`), you **MUST** escape them as HTML entities:
+  - `<` → `&lt;`
+  - `>` → `&gt;`
+- **Failure to escape will cause MDX compilation errors** like `Unexpected character '<' before name`.
+- **Examples**:
+  - ❌ `Performance: <200ms cold start`
+  - ✅ `Performance: &lt;200ms cold start`
+  - ❌ `Returns Array<string>`
+  - ✅ `Returns Array&lt;string&gt;`
+
 ## Component Reference
 
 Use these components to enhance the visual appeal and interactivity of your articles.
