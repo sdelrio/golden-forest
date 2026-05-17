@@ -2,7 +2,6 @@
 title: "OpenUI – Generative UI"
 description: "OpenUI is a compact streaming‑first UI language that lets AI agents generate interactive React UIs up to 67 % more token‑efficient than JSON."
 tags: ["openui", "generative-ui", "ai-agent", "token-efficiency"]
-sidebar_position: 10
 ---
 
 import Card from '@site/src/components/Card/Card';

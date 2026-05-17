@@ -8,7 +8,6 @@ tags:
   - cli
   - mcp
   - gemini
-sidebar_position: 10
 ---
 
 import Card from '@site/src/components/Card/Card';

@@ -2,7 +2,6 @@
 title: "Obscura Headless Browser"
 description: "Optimization and integration guide for Obscura, a lightweight Rust-based headless browser built for AI agent automation and stealth web scraping."
 tags: [ai, tools, web-scraping, headless-browser, rust, mcp, lightpanda]
-sidebar_position: 15
 ---
 
 import Tabs from '@theme/Tabs';

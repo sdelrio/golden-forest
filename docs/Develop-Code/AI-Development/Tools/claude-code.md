@@ -7,7 +7,6 @@ tags:
   - Claude
   - Anthropic
   - CLI
-sidebar_position: 10
 ---
 
 import Accordion from '@site/src/components/Accordion/Accordion';
