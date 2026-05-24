@@ -182,5 +182,5 @@ The two tools are not mutually exclusive. Because both integrate via MCP, you ca
 
 - [GitHub Repository — colbymchenry/codegraph](https://github.com/colbymchenry/codegraph)
 - [Model Context Protocol (MCP)](https://modelcontextprotocol.io)
-- [Graphify — Multi-modal Knowledge Graph](graphify)
+- [Graphify — Multi-modal Knowledge Graph](../graphify)
 - [Tree-sitter — Incremental Code Parser](https://tree-sitter.github.io/tree-sitter/)
