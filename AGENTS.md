@@ -81,3 +81,6 @@ See [src/components/AGENTS.md](file:///Users/sdelrio/github/sdelrio/golden-fores
 - **Cursor**: Adhere to this file's formatting and style patterns when generating code.
 - **Broken Links**: `onBrokenLinks: 'throw'` is enabled; always verify internal links.
 - **Anchor Links**: Use relative sibling format for component links (e.g., `<Card href="my-page#section-id" />` or `href="my-page/sub-item/path/to/page"`). Example: `<Card href="DnD/XmlTest" />`. When linking from an index file (e.g., `index.mdx`), always include the folder name in the path.
+- **MDX Character Escaping (Critical)**: The `<` and `>` characters are reserved for JSX/MDX tags. When writing regular text that contains these characters (e.g., `<200ms`, `Array<string>`, `<div>`), you **MUST** escape them as HTML entities only if they are **outside** markdown code blocks (` ` or ` ``` `):
+  - `<` → `&lt;`
+  - `>` → `&gt;`

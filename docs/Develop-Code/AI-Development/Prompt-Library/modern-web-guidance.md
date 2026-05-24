@@ -49,7 +49,7 @@ Modern Web Guidance provides comprehensive templates, gotchas, and references fo
     Guides agents in setting up speculative preloading/prerendering, diagnosing Interaction to Next Paint (INP), and scheduling long tasks via `scheduler.yield`.
   </Card>
   <Card title="Forms & Native UI" icon="mdi:form-select">
-    Replaces custom heavy libraries with the native Popover API, CSS Anchor Positioning for tooltips, native `&lt;dialog&gt;` controls, and browser-native `:user-invalid` validations.
+    Replaces custom heavy libraries with the native Popover API, CSS Anchor Positioning for tooltips, native `<dialog>` controls, and browser-native `:user-invalid` validations.
   </Card>
   <Card title="Accessible Interactions (a11y)" icon="mdi:accessibility">
     Hardens generated code with semantic elements, accessible live region Announcements, and keyboard focus management.
@@ -74,7 +74,7 @@ flowchart TD
 
 ## Agent Integration
 
-Modern Web Guidance is fully compatible with Claude Code, Cursor, Copilot CLI, Antigravity, and other leading agents.
+Modern Web Guidance is fully compatible with Claude Code, Cursor, Copilot CLI, Antigravity, OpenCode, and other leading agents.
 
 <Tabs groupId="agent-integration">
   <TabItem value="claude" label="Claude Code" default>
@@ -90,6 +90,19 @@ Modern Web Guidance is fully compatible with Claude Code, Cursor, Copilot CLI, A
     # 3. Reload plugins to activate
     /reload-plugins
     ```
+  </TabItem>
+  <TabItem value="opencode" label="OpenCode">
+    Place the `SKILL.md` file in OpenCode's local or global search path:
+
+    ```bash
+    # Project-specific installation:
+    .opencode/skills/modern-web-guidance/SKILL.md
+    
+    # Global installation:
+    ~/.config/opencode/skills/modern-web-guidance/SKILL.md
+    ```
+
+    You can also register it as a plugin within your project-level or global `opencode.json` configuration file.
   </TabItem>
   <TabItem value="copilot" label="Copilot CLI">
     Install as a plugin for the GitHub Copilot CLI:
