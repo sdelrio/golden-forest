@@ -1,5 +1,5 @@
 ---
-title: "Anthropic Cybersecurity Skills"
+title: "Cybersecurity Skills"
 description: "734+ structured cybersecurity skills for AI agents, following the agentskills.io standard"
 category: "AI Infrastructure / Security Operations"
 labels: ["AI Agents", "Cybersecurity", "Security Operations", "MITRE ATT&CK", "Cloud Security", "Incident Response", "Penetration Testing"]

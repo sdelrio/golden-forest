@@ -10,7 +10,6 @@ tags:
   - LLM-wiki
   - skills
   - agents
-sidebar_position: 20
 ---
 
 import { Icon } from '@iconify/react';

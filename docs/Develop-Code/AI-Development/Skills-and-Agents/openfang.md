@@ -1,5 +1,5 @@
 ---
-title: "OpenFang - Production-Grade Agent OS in Pure Rust"
+title: "OpenFang - Agent OS in Rust"
 description: "Complete guide to OpenFang, the production-grade Agent Operating System built in Rust for 24/7 autonomous operations."
 tags: [ai, agents, rust, automation, openfang]
 sidebar_label: "OpenFang"

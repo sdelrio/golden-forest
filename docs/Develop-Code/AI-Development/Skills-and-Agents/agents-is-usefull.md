@@ -1,5 +1,5 @@
 ---
-title: Is AGENTS.md Actually Useful?
+title: AGENTS.md Is Useful?
 description: Executive summary of ETH Zurich's study evaluating whether AGENTS.md and CLAUDE.md context files improve coding agent performance — and how to write better ones.
 tags: [ai-agents, agents-md, claude-code, context-files, best-practices]
 ---
