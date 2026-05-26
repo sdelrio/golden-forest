@@ -2,7 +2,6 @@
 title: "Modern Web Guidance: Aligning AI Agents with Modern Web Standards"
 description: "How to use the Modern Web Guidance skill with Claude Code, Cursor, and other AI agents to generate clean, high-performance, accessible, and secure code."
 tags: [ai, prompt-engineering, web-development, chrome, claudecode, antigravity]
-sidebar_position: 20
 sidebar_label: "Modern Web Guidance"
 ---
 
