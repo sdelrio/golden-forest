@@ -66,6 +66,7 @@ See [src/components/AGENTS.md](file:///Users/sdelrio/github/sdelrio/golden-fores
 
 ## Data & Project Structure
 - **Content**: `docs/`, `blog/`, and `tutorial/` contain MDX files.
+- **MCP Servers**: `docs/Develop-Code/AI-Development/MCPs/` contains articles about MCP server tools (e.g., `cve-mcp-server.md`).
 - **Components**: `src/components/` (See [AGENTS.md](file:///Users/sdelrio/github/sdelrio/golden-forest/src/components/AGENTS.md)) and `src/theme/`.
 - **Static Assets**: `static/fg/chars/` contains XML character data for the D&D tools.
 - **Git**: Use **Conventional Commits** (`feat(scope): desc`, `fix: desc`, `docs: desc`).
