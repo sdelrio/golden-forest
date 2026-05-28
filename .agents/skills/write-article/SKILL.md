@@ -81,6 +81,45 @@ Always include a `## References` section at the end. Use a bulleted list with de
 - **Visuals**: Use standard markdown for images.
 - **Diagrams**: Use Mermaid.js (`mermaid` code blocks) for workflows or architecture.
 
+#### Architecture Diagram Design
+
+Use `flowchart TB` with subgraphs to group system layers. Follow this pattern for tool/architecture articles:
+
+```mermaid
+flowchart TB
+    Client["Client Layer<br/>(subtitle)"]
+
+    subgraph Server["Server Name"]
+        Sub1["Component 1"]
+        Sub2["Component 2"]
+        Sub3["Component 3"]
+        Sub1 & Sub2 & Sub3 --> HTTP["HTTP Client"]
+    end
+
+    Client <-->|"Protocol (transport)"| Server
+
+    subgraph Group1["External Group 1"]
+        A["Service A"]
+        B["Service B"]
+    end
+
+    subgraph Group2["External Group 2"]
+        C["Service C"]
+        D["Service D"]
+    end
+
+    HTTP -->|"HTTPS (outbound)"| Group1
+    HTTP -->|"HTTPS (outbound)"| Group2
+```
+
+**Design rules:**
+- `flowchart TB` (top-to-bottom) for layered architectures; `LR` for horizontal side-by-side flows
+- `subgraph` blocks to visually group related components (server internals, external API categories, etc.)
+- `&` operator for parallel edges: `A & B & C --> D` draws edges from A, B, C all to D
+- `"Labeled arrows"` with `-->|"label"|` for protocol/transport annotations
+- `<br/>` inside node text for multi-line labels (e.g., `"Node Name<br/>Subtitle"`)
+- Each subgraph gets a descriptive title string (rendered as the box header)
+
 ### 7. Template Variations
 
 For detailed structures, refer to the following templates in `.agents/skills/write-article/resources/templates/`:
