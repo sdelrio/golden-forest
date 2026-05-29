@@ -1,0 +1,2547 @@
+{
+  "/Users/sdelrio/github/sdelrio/golden-forest/skills-lock.json": {
+    "mtime": 1773873957.8126676,
+    "ast_hash": "f2e06c2b2ea004ddaf874d364f924b11",
+    "semantic_hash": "f2e06c2b2ea004ddaf874d364f924b11"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tree.py": {
+    "mtime": 1769870803.2795131,
+    "ast_hash": "b9e0a8af2a6cdc45aa5c59ce1fbbf30c",
+    "semantic_hash": "b9e0a8af2a6cdc45aa5c59ce1fbbf30c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.typesense.docsearch.json": {
+    "mtime": 1748160417.3709457,
+    "ast_hash": "e99c601a19d322f59b144c365e1d88d1",
+    "semantic_hash": "e99c601a19d322f59b144c365e1d88d1"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/package.json": {
+    "mtime": 1778968881.5618658,
+    "ast_hash": "6ff73eeaaca1623ed0cbac486f6c0cfd",
+    "semantic_hash": "6ff73eeaaca1623ed0cbac486f6c0cfd"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docusaurus.config.js": {
+    "mtime": 1778951970.5066304,
+    "ast_hash": "0a206b59a7013d8c66d070253638c045",
+    "semantic_hash": "0a206b59a7013d8c66d070253638c045"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.algolia.docsearch.json": {
+    "mtime": 1752831175.6256695,
+    "ast_hash": "5ce3dbb3cc9e847724f3fc76dd3cba77",
+    "semantic_hash": "5ce3dbb3cc9e847724f3fc76dd3cba77"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/sidebars.js": {
+    "mtime": 1746304290.1405652,
+    "ast_hash": "c512f6853dd74620da26396b9b1f0e34",
+    "semantic_hash": "c512f6853dd74620da26396b9b1f0e34"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/devbox.json": {
+    "mtime": 1746304290.0301108,
+    "ast_hash": "8378819559e61d4df0cc8882c7969afb",
+    "semantic_hash": "8378819559e61d4df0cc8882c7969afb"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-basics/_category_.json": {
+    "mtime": 1746304290.1644862,
+    "ast_hash": "08848dfe701cb34bf5ebbfac6829cf72",
+    "semantic_hash": "08848dfe701cb34bf5ebbfac6829cf72"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-extras/_category_.json": {
+    "mtime": 1746304290.1676292,
+    "ast_hash": "5dd67c73762bbdc0402f028920eb0aa9",
+    "semantic_hash": "5dd67c73762bbdc0402f028920eb0aa9"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-external/_category_.json": {
+    "mtime": 1746304290.166129,
+    "ast_hash": "db01409e3f6ed065fc56f0a955edadcb",
+    "semantic_hash": "db01409e3f6ed065fc56f0a955edadcb"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.opencode/package.json": {
+    "mtime": 1779026058.0699756,
+    "ast_hash": "ac29eca972f9638b12df179b33813fe5",
+    "semantic_hash": "ac29eca972f9638b12df179b33813fe5"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.opencode/opencode.json": {
+    "mtime": 1780045384.299163,
+    "ast_hash": "e5f74d14a81702b55bdf53b33ec991d7",
+    "semantic_hash": "e5f74d14a81702b55bdf53b33ec991d7"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.opencode/plugins/graphify.js": {
+    "mtime": 1780045427.5682993,
+    "ast_hash": "64ccd3c03dbfe0980b6095766f5c4e52",
+    "semantic_hash": "64ccd3c03dbfe0980b6095766f5c4e52"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/NixOS/wipe.sh": {
+    "mtime": 1763749624.8806624,
+    "ast_hash": "bd5ae91fdb12f49895f671658de4a81b",
+    "semantic_hash": "bd5ae91fdb12f49895f671658de4a81b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/NixOS/install.sh": {
+    "mtime": 1763749624.8790848,
+    "ast_hash": "75766846b970dec75b811c6dd850710c",
+    "semantic_hash": "75766846b970dec75b811c6dd850710c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/chars/index.json": {
+    "mtime": 1778951970.5214097,
+    "ast_hash": "06c9c66b9692e9e5346aed59a6dc40e8",
+    "semantic_hash": "06c9c66b9692e9e5346aed59a6dc40e8"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/scripts/build-char-index.py": {
+    "mtime": 1778951970.5073638,
+    "ast_hash": "a57958b721b94c778d9f5787e16c2871",
+    "semantic_hash": "a57958b721b94c778d9f5787e16c2871"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/scripts/build-char-index.mjs": {
+    "mtime": 1778951970.5071692,
+    "ast_hash": "960120a5fd31df60475c6f231dc7fb5f",
+    "semantic_hash": "960120a5fd31df60475c6f231dc7fb5f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.devbox/state.json": {
+    "mtime": 1778951777.8199735,
+    "ast_hash": "f806a0d23dd9be42453617ff127ca371",
+    "semantic_hash": "f806a0d23dd9be42453617ff127ca371"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.devbox/gen/scripts/.hooks.sh": {
+    "mtime": 1778951774.4060564,
+    "ast_hash": "b412f2d57b66e7fac164b4c6c581ba3c",
+    "semantic_hash": "b412f2d57b66e7fac164b4c6c581ba3c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.devbox/gen/scripts/test.sh": {
+    "mtime": 1778951774.406239,
+    "ast_hash": "40f119c83fb832968fd0ee30dc468d6d",
+    "semantic_hash": "40f119c83fb832968fd0ee30dc468d6d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/HomepageFeatures.js": {
+    "mtime": 1769897005.6149518,
+    "ast_hash": "8647a7b5aa6510e60a9e6f35687050fd",
+    "semantic_hash": "8647a7b5aa6510e60a9e6f35687050fd"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/IndexList.js": {
+    "mtime": 1771271389.3829288,
+    "ast_hash": "a817969a0f1fb680faae5130e5a0a2ba",
+    "semantic_hash": "a817969a0f1fb680faae5130e5a0a2ba"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/Feat.js": {
+    "mtime": 1769101352.7845826,
+    "ast_hash": "f56ad08e7648d35ae0e530fc4b55c24b",
+    "semantic_hash": "f56ad08e7648d35ae0e530fc4b55c24b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/FeatTable.js": {
+    "mtime": 1769184899.8688126,
+    "ast_hash": "84c42ddbda908604ecf6e62896675b9a",
+    "semantic_hash": "84c42ddbda908604ecf6e62896675b9a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/FeatBrowser.js": {
+    "mtime": 1769184899.8680146,
+    "ast_hash": "36672066d2de7d944a47e43085f921e7",
+    "semantic_hash": "36672066d2de7d944a47e43085f921e7"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/StatDiceRoller.js": {
+    "mtime": 1775467063.1348836,
+    "ast_hash": "f0002e655139281ba4c5c5a99d477918",
+    "semantic_hash": "f0002e655139281ba4c5c5a99d477918"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/DnDPointBuy.js": {
+    "mtime": 1768147388.2656791,
+    "ast_hash": "f31cd4a7d572e1807dde39fc6aec09ca",
+    "semantic_hash": "f31cd4a7d572e1807dde39fc6aec09ca"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/Card/CardBody.js": {
+    "mtime": 1772996433.7395475,
+    "ast_hash": "6dd640d793cc707bfa71e187b7cc58e8",
+    "semantic_hash": "6dd640d793cc707bfa71e187b7cc58e8"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/Card/CardHeader.js": {
+    "mtime": 1772996433.7414505,
+    "ast_hash": "16e7a439327ea6b398597a6ff921804f",
+    "semantic_hash": "16e7a439327ea6b398597a6ff921804f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/Card/CardImage.js": {
+    "mtime": 1772996433.742132,
+    "ast_hash": "c65972fdc08dc5174f1855d0d9097c73",
+    "semantic_hash": "c65972fdc08dc5174f1855d0d9097c73"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/Card/CardFooter.js": {
+    "mtime": 1772996433.7405472,
+    "ast_hash": "96f293fc672c365b0c08f2ba418d3519",
+    "semantic_hash": "96f293fc672c365b0c08f2ba418d3519"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/Card/Card.js": {
+    "mtime": 1775225062.2234402,
+    "ast_hash": "b8c16b48f3f217119e089270a98a9053",
+    "semantic_hash": "b8c16b48f3f217119e089270a98a9053"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/Card/CardGroup.js": {
+    "mtime": 1772996433.7410212,
+    "ast_hash": "7088c63cb7887e15efa230f467aa8543",
+    "semantic_hash": "7088c63cb7887e15efa230f467aa8543"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/CodeGroup/CodeGroup.js": {
+    "mtime": 1772996433.7429814,
+    "ast_hash": "80aeee4cff643bef0d85aa6e41e6683a",
+    "semantic_hash": "80aeee4cff643bef0d85aa6e41e6683a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/XmlChar/XmlParser.js": {
+    "mtime": 1778951970.509537,
+    "ast_hash": "2cc7562676962e357ea6f0cd9ed62980",
+    "semantic_hash": "2cc7562676962e357ea6f0cd9ed62980"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/XmlChar/utils.js": {
+    "mtime": 1771795152.5162184,
+    "ast_hash": "50369374aa2abeed73b1e08ff508a9d4",
+    "semantic_hash": "50369374aa2abeed73b1e08ff508a9d4"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/XmlChar/XmlChar.js": {
+    "mtime": 1778951970.5087636,
+    "ast_hash": "f7268a7a2cfbcf6f0df6cc1f78680a91",
+    "semantic_hash": "f7268a7a2cfbcf6f0df6cc1f78680a91"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/CharSearch/CharSearch.js": {
+    "mtime": 1778951970.5079427,
+    "ast_hash": "a68db3a105a035bb7593e95a5f4c215e",
+    "semantic_hash": "a68db3a105a035bb7593e95a5f4c215e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/ParamField/ParamField.js": {
+    "mtime": 1772996433.7440994,
+    "ast_hash": "716b391be70e5831d44f02c23acbee20",
+    "semantic_hash": "716b391be70e5831d44f02c23acbee20"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/Accordion/AccordionGroup.js": {
+    "mtime": 1778956263.0146964,
+    "ast_hash": "9881d75cbaaefd481c04bfbe5e649aa9",
+    "semantic_hash": "9881d75cbaaefd481c04bfbe5e649aa9"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/Accordion/Accordion.js": {
+    "mtime": 1778956263.014135,
+    "ast_hash": "5d7e6d5e7ef990c0a2f2b2b4721c4ce7",
+    "semantic_hash": "5d7e6d5e7ef990c0a2f2b2b4721c4ce7"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/Steps/Steps.js": {
+    "mtime": 1772996433.7462366,
+    "ast_hash": "9914ac0140a4ac80f4b24305e6b19a0b",
+    "semantic_hash": "9914ac0140a4ac80f4b24305e6b19a0b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/Steps/Step.js": {
+    "mtime": 1772996433.745456,
+    "ast_hash": "95d130f23b11c1bc87368b6889cfaebd",
+    "semantic_hash": "95d130f23b11c1bc87368b6889cfaebd"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/theme/Root.js": {
+    "mtime": 1770641487.841546,
+    "ast_hash": "0c0776cf4d3012758b0766e88f32b84f",
+    "semantic_hash": "0c0776cf4d3012758b0766e88f32b84f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/theme/MDXComponents/index.js": {
+    "mtime": 1772996433.7490253,
+    "ast_hash": "3c61632b8523ea2dfc2e36e7a6ded765",
+    "semantic_hash": "3c61632b8523ea2dfc2e36e7a6ded765"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/pages/index.js": {
+    "mtime": 1767632238.3245301,
+    "ast_hash": "8628fc6e3c66aa22f080a3621323e25d",
+    "semantic_hash": "8628fc6e3c66aa22f080a3621323e25d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.yarnrc.yml": {
+    "mtime": 1778954461.84093,
+    "ast_hash": "6c95f62cb90f1dcee5ae929b9088cbea",
+    "semantic_hash": "6c95f62cb90f1dcee5ae929b9088cbea"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/README.md": {
+    "mtime": 1778968881.8184588,
+    "ast_hash": "20b0e205a863d32650ff6b1b4f406164",
+    "semantic_hash": "20b0e205a863d32650ff6b1b4f406164"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/AGENTS.md": {
+    "mtime": 1779954531.6267967,
+    "ast_hash": "fe83f0a6253ae522f750d0bc308c6c45",
+    "semantic_hash": "fe83f0a6253ae522f750d0bc308c6c45"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/Taskfile.yml": {
+    "mtime": 1778954481.2459126,
+    "ast_hash": "4b2471becaa0eb5bbbf0e106a3d16a2c",
+    "semantic_hash": "4b2471becaa0eb5bbbf0e106a3d16a2c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-intro.md": {
+    "mtime": 1746312597.0892413,
+    "ast_hash": "b709567557fcd477ab80fe506612a329",
+    "semantic_hash": "b709567557fcd477ab80fe506612a329"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-basics/create-a-document.md": {
+    "mtime": 1746304290.165374,
+    "ast_hash": "a392938adb2ae4051609e50e4f87ff3a",
+    "semantic_hash": "a392938adb2ae4051609e50e4f87ff3a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-basics/create-a-page.md": {
+    "mtime": 1746304290.1655304,
+    "ast_hash": "c68fa5145049e217ed2c39741dda99d2",
+    "semantic_hash": "c68fa5145049e217ed2c39741dda99d2"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-basics/deploy-your-site.md": {
+    "mtime": 1746304290.1656916,
+    "ast_hash": "06448435f9464db2764ec232eec7865b",
+    "semantic_hash": "06448435f9464db2764ec232eec7865b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-basics/markdown-features.mdx": {
+    "mtime": 1767882390.9076633,
+    "ast_hash": "dcce617d301d18b119c902aecab4bc9e",
+    "semantic_hash": "dcce617d301d18b119c902aecab4bc9e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-basics/congratulations.md": {
+    "mtime": 1746914325.0259395,
+    "ast_hash": "61bcc0b6eb380456b89e4aba53b505a1",
+    "semantic_hash": "61bcc0b6eb380456b89e4aba53b505a1"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-basics/create-a-blog-post.md": {
+    "mtime": 1746304290.1651502,
+    "ast_hash": "3f0b77d639d532136ed153cf817731d7",
+    "semantic_hash": "3f0b77d639d532136ed153cf817731d7"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/DnD/dnd-themes.md": {
+    "mtime": 1771795152.7986047,
+    "ast_hash": "170d96c7f9c114d94b03a1f7d335dfb6",
+    "semantic_hash": "170d96c7f9c114d94b03a1f7d335dfb6"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/DnD/XmlTest.mdx": {
+    "mtime": 1773188251.1741533,
+    "ast_hash": "fa05140e939590dd3acae878847a53f5",
+    "semantic_hash": "fa05140e939590dd3acae878847a53f5"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/DnD/index.mdx": {
+    "mtime": 1778970575.1324756,
+    "ast_hash": "53cf3272751bdcb5b42bcb58a9500f06",
+    "semantic_hash": "53cf3272751bdcb5b42bcb58a9500f06"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/DnD/tutorial-XmlChar.md": {
+    "mtime": 1771795152.7998612,
+    "ast_hash": "b7acb7fa24b5de8af74fcbfe58f07ade",
+    "semantic_hash": "b7acb7fa24b5de8af74fcbfe58f07ade"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-extras/translate-your-site.md": {
+    "mtime": 1746304290.168323,
+    "ast_hash": "76a216c86fd523ec8c1ebc0d76efb773",
+    "semantic_hash": "76a216c86fd523ec8c1ebc0d76efb773"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-extras/manage-docs-versions.md": {
+    "mtime": 1746304290.1677983,
+    "ast_hash": "a9842d7e353e1b796c5eaceb8633b906",
+    "semantic_hash": "a9842d7e353e1b796c5eaceb8633b906"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-extras/react-components.md": {
+    "mtime": 1746304290.1681452,
+    "ast_hash": "53d6f3c41c4721d9f65e93f9f2e7ef86",
+    "semantic_hash": "53d6f3c41c4721d9f65e93f9f2e7ef86"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-external/algolia.md": {
+    "mtime": 1746304290.1667712,
+    "ast_hash": "3816c828dbe87bedb080c8afd3568ffd",
+    "semantic_hash": "3816c828dbe87bedb080c8afd3568ffd"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-external/install-rehype-extended-table.md": {
+    "mtime": 1768058979.2446837,
+    "ast_hash": "7143f1e97758afd082783b9289bcf6af",
+    "semantic_hash": "7143f1e97758afd082783b9289bcf6af"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/tutorial/tutorial-external/install-mermaidjs.md": {
+    "mtime": 1746304290.1673453,
+    "ast_hash": "a83aa2a95149418ca67cd71767aa4a60",
+    "semantic_hash": "a83aa2a95149418ca67cd71767aa4a60"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.opencode/commands/update-readme.md": {
+    "mtime": 1779015316.8679376,
+    "ast_hash": "0391642d6c3b6292fac74d0fef816a68",
+    "semantic_hash": "0391642d6c3b6292fac74d0fef816a68"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.opencode/commands/commit-stagged.md": {
+    "mtime": 1773869786.9460497,
+    "ast_hash": "e603c67e565a9a4f3f821af73e3fea7e",
+    "semantic_hash": "e603c67e565a9a4f3f821af73e3fea7e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.opencode/commands/check-links.md": {
+    "mtime": 1773869823.2254887,
+    "ast_hash": "73aca6ec1b5fdf7f15b1422dcac90d17",
+    "semantic_hash": "73aca6ec1b5fdf7f15b1422dcac90d17"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.opencode/commands/list-chars.md": {
+    "mtime": 1773869829.9969218,
+    "ast_hash": "ed6197b106c409f9efe79577d39f0fae",
+    "semantic_hash": "ed6197b106c409f9efe79577d39f0fae"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.opencode/commands/prompt.md": {
+    "mtime": 1773871260.913012,
+    "ast_hash": "f46df5c6aa9aac8cf9ce630d9ec6c6ef",
+    "semantic_hash": "f46df5c6aa9aac8cf9ce630d9ec6c6ef"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.opencode/commands/new-blog.md": {
+    "mtime": 1773869859.7635248,
+    "ast_hash": "561f106437c149012ece78411364f832",
+    "semantic_hash": "561f106437c149012ece78411364f832"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.opencode/commands/new-component.md": {
+    "mtime": 1773869867.4816544,
+    "ast_hash": "31d0d6478a7afdee09354a2a97305da2",
+    "semantic_hash": "31d0d6478a7afdee09354a2a97305da2"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.opencode/commands/check-mdx.md": {
+    "mtime": 1773869809.471998,
+    "ast_hash": "51426ddd1c6d84fd767e0142b96d4778",
+    "semantic_hash": "51426ddd1c6d84fd767e0142b96d4778"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.opencode/commands/new-doc.md": {
+    "mtime": 1773869876.0945132,
+    "ast_hash": "7536a382460ef7f2649f4b7bb08d6c0c",
+    "semantic_hash": "7536a382460ef7f2649f4b7bb08d6c0c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.opencode/commands/maintenance.md": {
+    "mtime": 1773869844.4391327,
+    "ast_hash": "268140d0023f37a789872a5b03853a2d",
+    "semantic_hash": "268140d0023f37a789872a5b03853a2d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/commands/update-readme.md": {
+    "mtime": 1779015316.8679376,
+    "ast_hash": "0391642d6c3b6292fac74d0fef816a68",
+    "semantic_hash": "0391642d6c3b6292fac74d0fef816a68"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/commands/commit-stagged.md": {
+    "mtime": 1773869786.9460497,
+    "ast_hash": "e603c67e565a9a4f3f821af73e3fea7e",
+    "semantic_hash": "e603c67e565a9a4f3f821af73e3fea7e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/commands/check-links.md": {
+    "mtime": 1773869823.2254887,
+    "ast_hash": "73aca6ec1b5fdf7f15b1422dcac90d17",
+    "semantic_hash": "73aca6ec1b5fdf7f15b1422dcac90d17"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/commands/list-chars.md": {
+    "mtime": 1773869829.9969218,
+    "ast_hash": "ed6197b106c409f9efe79577d39f0fae",
+    "semantic_hash": "ed6197b106c409f9efe79577d39f0fae"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/commands/prompt.md": {
+    "mtime": 1773871260.913012,
+    "ast_hash": "f46df5c6aa9aac8cf9ce630d9ec6c6ef",
+    "semantic_hash": "f46df5c6aa9aac8cf9ce630d9ec6c6ef"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/commands/new-blog.md": {
+    "mtime": 1773869859.7635248,
+    "ast_hash": "561f106437c149012ece78411364f832",
+    "semantic_hash": "561f106437c149012ece78411364f832"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/commands/new-component.md": {
+    "mtime": 1773869867.4816544,
+    "ast_hash": "31d0d6478a7afdee09354a2a97305da2",
+    "semantic_hash": "31d0d6478a7afdee09354a2a97305da2"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/commands/check-mdx.md": {
+    "mtime": 1773869809.471998,
+    "ast_hash": "51426ddd1c6d84fd767e0142b96d4778",
+    "semantic_hash": "51426ddd1c6d84fd767e0142b96d4778"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/commands/new-doc.md": {
+    "mtime": 1773869876.0945132,
+    "ast_hash": "7536a382460ef7f2649f4b7bb08d6c0c",
+    "semantic_hash": "7536a382460ef7f2649f4b7bb08d6c0c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/commands/maintenance.md": {
+    "mtime": 1773869844.4391327,
+    "ast_hash": "268140d0023f37a789872a5b03853a2d",
+    "semantic_hash": "268140d0023f37a789872a5b03853a2d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/skills/find-skills/SKILL.md": {
+    "mtime": 1773873957.4974732,
+    "ast_hash": "efcaee1dd97ebac4f2f4071585cff6b5",
+    "semantic_hash": "efcaee1dd97ebac4f2f4071585cff6b5"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/skills/write-article/SKILL.md": {
+    "mtime": 1779964028.665621,
+    "ast_hash": "10fc680ee94e79ab2374fd061a46bbef",
+    "semantic_hash": "10fc680ee94e79ab2374fd061a46bbef"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/skills/write-article/resources/templates/develop-code.md": {
+    "mtime": 1779033484.0797167,
+    "ast_hash": "83b2c54260434e88e6acb5d793b14377",
+    "semantic_hash": "83b2c54260434e88e6acb5d793b14377"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/skills/write-article/resources/templates/homelab-domotic.md": {
+    "mtime": 1779033484.0801082,
+    "ast_hash": "054dce8a715cf585293973981766679f",
+    "semantic_hash": "054dce8a715cf585293973981766679f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/skills/write-article/resources/templates/ai-tools.md": {
+    "mtime": 1779033484.0795085,
+    "ast_hash": "9b83c1a6d2a96ec45564c26e92d9de8e",
+    "semantic_hash": "9b83c1a6d2a96ec45564c26e92d9de8e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.agents/skills/write-article/resources/templates/games.md": {
+    "mtime": 1779033484.07991,
+    "ast_hash": "1650c6af0288581e38595806a3716600",
+    "semantic_hash": "1650c6af0288581e38595806a3716600"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/docs-intro.md": {
+    "mtime": 1775304819.1125922,
+    "ast_hash": "fdc57ffc744d3fd572028b49ef680220",
+    "semantic_hash": "fdc57ffc744d3fd572028b49ef680220"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/finances.md": {
+    "mtime": 1773188259.5944867,
+    "ast_hash": "b1d17f5b8051582b5b3984537ab98a41",
+    "semantic_hash": "b1d17f5b8051582b5b3984537ab98a41"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/index.mdx": {
+    "mtime": 1773690316.1295905,
+    "ast_hash": "57138138231d5b6a22f45191e3c30e43",
+    "semantic_hash": "57138138231d5b6a22f45191e3c30e43"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/gws-cli-tool.md": {
+    "mtime": 1773188259.5948577,
+    "ast_hash": "cc891e41f5ea1461223937a6f087e0c4",
+    "semantic_hash": "cc891e41f5ea1461223937a6f087e0c4"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/chrome.md": {
+    "mtime": 1778951970.5039842,
+    "ast_hash": "93a146320d76f59510f1670410a97f86",
+    "semantic_hash": "93a146320d76f59510f1670410a97f86"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Kindle-Moding.md": {
+    "mtime": 1773188259.592988,
+    "ast_hash": "122e7553e0090b1be590d85beed33cf7",
+    "semantic_hash": "122e7553e0090b1be590d85beed33cf7"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/office.md": {
+    "mtime": 1773188259.5951204,
+    "ast_hash": "2a161fddd7c4981412269d58bf13ad50",
+    "semantic_hash": "2a161fddd7c4981412269d58bf13ad50"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Certificates/lets-encrypt.md": {
+    "mtime": 1773188259.5923374,
+    "ast_hash": "c26e99ea514bd89bbbec474fe9f2227d",
+    "semantic_hash": "c26e99ea514bd89bbbec474fe9f2227d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Backup/file-naming.md": {
+    "mtime": 1773188259.5917752,
+    "ast_hash": "6e0f468fdec1a825484420b390406283",
+    "semantic_hash": "6e0f468fdec1a825484420b390406283"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Backup/restic.md": {
+    "mtime": 1773188259.5920124,
+    "ast_hash": "9a2a9031dff7e20340281fb234736d37",
+    "semantic_hash": "9a2a9031dff7e20340281fb234736d37"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Backup/borg.md": {
+    "mtime": 1773188259.591237,
+    "ast_hash": "18341cafc5428874bb79a2841ac914bb",
+    "semantic_hash": "18341cafc5428874bb79a2841ac914bb"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Backup/Databasement.mdx": {
+    "mtime": 1773188259.5906842,
+    "ast_hash": "4231cbfa5bafac1d6b10ab3ce40c0479",
+    "semantic_hash": "4231cbfa5bafac1d6b10ab3ce40c0479"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Backup/duplicati.md": {
+    "mtime": 1773188259.5915182,
+    "ast_hash": "ce287810eee9890fd889b5f1fc624198",
+    "semantic_hash": "ce287810eee9890fd889b5f1fc624198"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Backup/Databasus.mdx": {
+    "mtime": 1773188259.5910397,
+    "ast_hash": "5b60504c0d0f38a5fe7bf563b074ec1c",
+    "semantic_hash": "5b60504c0d0f38a5fe7bf563b074ec1c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/FileSync/syncthing.md": {
+    "mtime": 1773188259.592768,
+    "ast_hash": "231642ee2249b4561a3e27213f3f884f",
+    "semantic_hash": "231642ee2249b4561a3e27213f3f884f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/FileSync/_category_.yml": {
+    "mtime": 1773188259.592578,
+    "ast_hash": "2e2e35dd6e49a00d0d268334c2e517dd",
+    "semantic_hash": "2e2e35dd6e49a00d0d268334c2e517dd"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Multimedia/vobsub2srt.md": {
+    "mtime": 1773188259.5942223,
+    "ast_hash": "fcb74965e69f8ed689446d78e3850115",
+    "semantic_hash": "fcb74965e69f8ed689446d78e3850115"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Multimedia/adobe-alternatives.md": {
+    "mtime": 1773188259.5934117,
+    "ast_hash": "872251018fdb26562165f1878b9a039b",
+    "semantic_hash": "872251018fdb26562165f1878b9a039b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Multimedia/makemkv.md": {
+    "mtime": 1773188259.5939035,
+    "ast_hash": "18d5e942d1acf1672979106aa8f927ff",
+    "semantic_hash": "18d5e942d1acf1672979106aa8f927ff"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Multimedia/photoprism.md": {
+    "mtime": 1773188259.594056,
+    "ast_hash": "1c4bd78f1499d3e6b32ca20a3fd67297",
+    "semantic_hash": "1c4bd78f1499d3e6b32ca20a3fd67297"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Multimedia/darktable.md": {
+    "mtime": 1773188259.59359,
+    "ast_hash": "0df6db8c709db0aeac21a19c9a477f2a",
+    "semantic_hash": "0df6db8c709db0aeac21a19c9a477f2a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Multimedia/ffmpeg.md": {
+    "mtime": 1773188259.5937521,
+    "ast_hash": "ae910a19cf91166d9e1b11c7567192ec",
+    "semantic_hash": "ae910a19cf91166d9e1b11c7567192ec"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Apps-and-utilities/Multimedia/BDSup2Sub.md": {
+    "mtime": 1773188259.5932403,
+    "ast_hash": "08b75d1953c1855f635be783d9212634",
+    "semantic_hash": "08b75d1953c1855f635be783d9212634"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/index.mdx": {
+    "mtime": 1763749624.7840252,
+    "ast_hash": "85fbc80b6f40365cab4fd18eb9063e9d",
+    "semantic_hash": "85fbc80b6f40365cab4fd18eb9063e9d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/api.md": {
+    "mtime": 1763749624.7793605,
+    "ast_hash": "996f018ed116859bec86e5d90e6cbac3",
+    "semantic_hash": "996f018ed116859bec86e5d90e6cbac3"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/rust.md": {
+    "mtime": 1771443884.530835,
+    "ast_hash": "3718f45e3c232eb11fc4280d7a8a6c3b",
+    "semantic_hash": "3718f45e3c232eb11fc4280d7a8a6c3b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/dev-in-k8s.md": {
+    "mtime": 1763749624.7795854,
+    "ast_hash": "00e11a800fb143f337db8a7d2318460f",
+    "semantic_hash": "00e11a800fb143f337db8a7d2318460f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/_category_.yml": {
+    "mtime": 1763749624.7789905,
+    "ast_hash": "65546f4aa94b3200cc23ebff43116001",
+    "semantic_hash": "65546f4aa94b3200cc23ebff43116001"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/Go/go.md": {
+    "mtime": 1770840627.1979592,
+    "ast_hash": "c9cb81583927eb01e74ee839220268c1",
+    "semantic_hash": "c9cb81583927eb01e74ee839220268c1"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/Tools/visual-studio-code.md": {
+    "mtime": 1763749624.7787476,
+    "ast_hash": "f67db1b89484e7b850106a9bd55d01f2",
+    "semantic_hash": "f67db1b89484e7b850106a9bd55d01f2"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/Tools/buck-build.md": {
+    "mtime": 1763749624.7779174,
+    "ast_hash": "7be7a55cf715bbc70a81666081525459",
+    "semantic_hash": "7be7a55cf715bbc70a81666081525459"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/Tools/tilt.dev.md": {
+    "mtime": 1763749624.7781308,
+    "ast_hash": "839d9191ad9f651d7a1a11a1fbab01f5",
+    "semantic_hash": "839d9191ad9f651d7a1a11a1fbab01f5"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/CVS/gerrit.md": {
+    "mtime": 1763749624.7734184,
+    "ast_hash": "89121186132feb431a5ef3cb0858056a",
+    "semantic_hash": "89121186132feb431a5ef3cb0858056a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/CVS/github.md": {
+    "mtime": 1771449499.6484823,
+    "ast_hash": "b592c0efc8c0287032508ff82cc71d95",
+    "semantic_hash": "b592c0efc8c0287032508ff82cc71d95"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/CVS/git.md": {
+    "mtime": 1771445817.60117,
+    "ast_hash": "ef0e5342f488817108de766d6000367f",
+    "semantic_hash": "ef0e5342f488817108de766d6000367f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/CVS/_category_.yml": {
+    "mtime": 1771445274.8734658,
+    "ast_hash": "3f87447c5c114324b506eeeb77312681",
+    "semantic_hash": "3f87447c5c114324b506eeeb77312681"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/Testing/testing-frameworks.md": {
+    "mtime": 1763749624.7776017,
+    "ast_hash": "1bfca2ee2de58b0b29bffdf6df2593e1",
+    "semantic_hash": "1bfca2ee2de58b0b29bffdf6df2593e1"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/Javascript/js-lock-scroll.md": {
+    "mtime": 1763749624.7759287,
+    "ast_hash": "d9cba23887ad0c2b2249dabfb976d37a",
+    "semantic_hash": "d9cba23887ad0c2b2249dabfb976d37a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/Javascript/js-frameworks.md": {
+    "mtime": 1772376015.687288,
+    "ast_hash": "8c299ce64c927c5a843632e7ec07cf59",
+    "semantic_hash": "8c299ce64c927c5a843632e7ec07cf59"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/Debug/k8s-localizer.md": {
+    "mtime": 1763749624.7749882,
+    "ast_hash": "cfd3a4b3cd5fc531314fd07296c369f7",
+    "semantic_hash": "cfd3a4b3cd5fc531314fd07296c369f7"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/Python/python.md": {
+    "mtime": 1772884084.1141999,
+    "ast_hash": "e38ff78dc9da5bcf5147c6e2380df2ac",
+    "semantic_hash": "e38ff78dc9da5bcf5147c6e2380df2ac"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/Python/python-libraries.md": {
+    "mtime": 1763749624.7766218,
+    "ast_hash": "a9f13766141e9fd526ffd6e66e828c65",
+    "semantic_hash": "a9f13766141e9fd526ffd6e66e828c65"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/Python/python-code-formarter.md": {
+    "mtime": 1763749624.776235,
+    "ast_hash": "cfa77c5d0f7e0fa7c2407ec44d0ae653",
+    "semantic_hash": "cfa77c5d0f7e0fa7c2407ec44d0ae653"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/Python/python-unit-test.md": {
+    "mtime": 1763749624.776838,
+    "ast_hash": "4a50fe19a3c00f6a9d1b0c11bc02e737",
+    "semantic_hash": "4a50fe19a3c00f6a9d1b0c11bc02e737"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Coding/Python/python-compile.md": {
+    "mtime": 1763749624.7764325,
+    "ast_hash": "de90b44027769be8c83c2ea1a31c015e",
+    "semantic_hash": "de90b44027769be8c83c2ea1a31c015e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/index.mdx": {
+    "mtime": 1779980491.4294186,
+    "ast_hash": "94fc1de8e1ddd0c33c0e22b6d8ff5325",
+    "semantic_hash": "94fc1de8e1ddd0c33c0e22b6d8ff5325"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/autonomous-agents.md": {
+    "mtime": 1779027777.4770577,
+    "ast_hash": "2f8f23334bf335205cdf80cf0024c972",
+    "semantic_hash": "2f8f23334bf335205cdf80cf0024c972"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/interactive-agents.md": {
+    "mtime": 1779027617.2970068,
+    "ast_hash": "85c39c7f82dfd751e0f8d18dfe598e6c",
+    "semantic_hash": "85c39c7f82dfd751e0f8d18dfe598e6c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/headless-browser.md": {
+    "mtime": 1779029738.625868,
+    "ast_hash": "1a73bcb48c9cf26a7a71d64bec03465e",
+    "semantic_hash": "1a73bcb48c9cf26a7a71d64bec03465e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/_category_.yml": {
+    "mtime": 1775222635.0312517,
+    "ast_hash": "77c5a14a6e18766e5a48cc8b1b900aee",
+    "semantic_hash": "77c5a14a6e18766e5a48cc8b1b900aee"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/claude-code.md": {
+    "mtime": 1779035962.8927772,
+    "ast_hash": "750bed91f08de2aa7bc784bb7b22bc37",
+    "semantic_hash": "750bed91f08de2aa7bc784bb7b22bc37"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/ai-agency.md": {
+    "mtime": 1779828971.9313614,
+    "ast_hash": "f2c5c295e20ef61067003dc25d1f6c8e",
+    "semantic_hash": "f2c5c295e20ef61067003dc25d1f6c8e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/agent-security.md": {
+    "mtime": 1779745273.9228237,
+    "ast_hash": "18b57a967bb866edb1f502d1afdff597",
+    "semantic_hash": "18b57a967bb866edb1f502d1afdff597"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/html-anything.md": {
+    "mtime": 1779035095.5304098,
+    "ast_hash": "b9f81efb913a257af0139320292db264",
+    "semantic_hash": "b9f81efb913a257af0139320292db264"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/cybersecurity-skills.md": {
+    "mtime": 1779829114.0543768,
+    "ast_hash": "ceb670051ea6939e4d729d98b313c13f",
+    "semantic_hash": "ceb670051ea6939e4d729d98b313c13f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/opensandbox.md": {
+    "mtime": 1772874985.472637,
+    "ast_hash": "8864967bfe966d0cea684ad36278147f",
+    "semantic_hash": "8864967bfe966d0cea684ad36278147f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/openfang.md": {
+    "mtime": 1779829017.4564111,
+    "ast_hash": "1f6936693f1d153348ed3434bd3c0bdc",
+    "semantic_hash": "1f6936693f1d153348ed3434bd3c0bdc"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/opensre-agents.md": {
+    "mtime": 1779829203.1743631,
+    "ast_hash": "61cff1e8f57e15b44e6281c8fb7f611f",
+    "semantic_hash": "61cff1e8f57e15b44e6281c8fb7f611f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/everything-claude-code.md": {
+    "mtime": 1774390287.7377255,
+    "ast_hash": "bf790242d580c61fb861784484813a95",
+    "semantic_hash": "bf790242d580c61fb861784484813a95"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/karpathy-skills.md": {
+    "mtime": 1779654125.1175516,
+    "ast_hash": "90217618eeba3eef293f96329fa940b1",
+    "semantic_hash": "90217618eeba3eef293f96329fa940b1"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/_category_.yml": {
+    "mtime": 1772874985.4715796,
+    "ast_hash": "a432ff135b761083e09d0a623a9c5f9c",
+    "semantic_hash": "a432ff135b761083e09d0a623a9c5f9c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/agents-is-usefull.md": {
+    "mtime": 1779829088.2285156,
+    "ast_hash": "80ab59945e2f9ff336c1d39f9e7aab84",
+    "semantic_hash": "80ab59945e2f9ff336c1d39f9e7aab84"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/oh-my-openagent.md": {
+    "mtime": 1775510185.5006833,
+    "ast_hash": "bccb707e55e419426d4c446b2f00583b",
+    "semantic_hash": "bccb707e55e419426d4c446b2f00583b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/obsidian-skills-setup.md": {
+    "mtime": 1779828993.975817,
+    "ast_hash": "3805354df013628ba16af0df5f38a01b",
+    "semantic_hash": "3805354df013628ba16af0df5f38a01b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/opencode.md": {
+    "mtime": 1779029738.6246202,
+    "ast_hash": "c654e46b364df126baf2eb42a31698ae",
+    "semantic_hash": "c654e46b364df126baf2eb42a31698ae"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Skills-and-Agents/skills-sh.md": {
+    "mtime": 1773871598.5317237,
+    "ast_hash": "a4b6a4c589588a9404aa48dd5afa514c",
+    "semantic_hash": "a4b6a4c589588a9404aa48dd5afa514c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Tools/claude-code-proxy.md": {
+    "mtime": 1779654391.8173165,
+    "ast_hash": "b6154e35845da46df93db410f5266aea",
+    "semantic_hash": "b6154e35845da46df93db410f5266aea"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Tools/openui.md": {
+    "mtime": 1779026277.430824,
+    "ast_hash": "94766d603944ca4bece6928afbeb7476",
+    "semantic_hash": "94766d603944ca4bece6928afbeb7476"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Tools/lightpanda.md": {
+    "mtime": 1779029738.6251547,
+    "ast_hash": "e0381929a8353581a0d202a8d2dc0f13",
+    "semantic_hash": "e0381929a8353581a0d202a8d2dc0f13"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Tools/agentmemory.md": {
+    "mtime": 1779661885.5687492,
+    "ast_hash": "b586a82edb2592effb1e51444e1b7cdb",
+    "semantic_hash": "b586a82edb2592effb1e51444e1b7cdb"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Tools/obscura.md": {
+    "mtime": 1779029738.6268938,
+    "ast_hash": "c1ec0b976a2322297a03552d874868ac",
+    "semantic_hash": "c1ec0b976a2322297a03552d874868ac"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Tools/presenton.md": {
+    "mtime": 1779658855.4734645,
+    "ast_hash": "bab25fd69e99e7389f5f36b8de559262",
+    "semantic_hash": "bab25fd69e99e7389f5f36b8de559262"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Tools/codegraph.md": {
+    "mtime": 1779663625.1934237,
+    "ast_hash": "7aee27b72c4f0268e064e0291db11cf2",
+    "semantic_hash": "7aee27b72c4f0268e064e0291db11cf2"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Tools/rtk.md": {
+    "mtime": 1779029738.6255226,
+    "ast_hash": "edc255ecfe5d6c7627ce24308651c3d4",
+    "semantic_hash": "edc255ecfe5d6c7627ce24308651c3d4"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Tools/toon.md": {
+    "mtime": 1779026277.4357808,
+    "ast_hash": "144259411904ee8a214e285173c8257b",
+    "semantic_hash": "144259411904ee8a214e285173c8257b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Tools/notebooklm.md": {
+    "mtime": 1779026277.4327428,
+    "ast_hash": "0d3f2f3380e14662a5df4b47b55a67d9",
+    "semantic_hash": "0d3f2f3380e14662a5df4b47b55a67d9"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Tools/_category_.yml": {
+    "mtime": 1772874985.4728365,
+    "ast_hash": "b9866be9b2a2fda8b4ed1172ad52ca52",
+    "semantic_hash": "b9866be9b2a2fda8b4ed1172ad52ca52"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Tools/graphify.md": {
+    "mtime": 1780046964.5590005,
+    "ast_hash": "6aca46e364a24d2111662ad1d8c7048e",
+    "semantic_hash": "6aca46e364a24d2111662ad1d8c7048e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Tools/mark-it-down.md": {
+    "mtime": 1779026277.4368653,
+    "ast_hash": "8d7e7e72eb9153dd8d0fc7005e59931a",
+    "semantic_hash": "8d7e7e72eb9153dd8d0fc7005e59931a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Workflows/GLM-Kimi-Video-Analysis.md": {
+    "mtime": 1772885671.5138426,
+    "ast_hash": "1ff324e53cdbef254eafce1d46584fc2",
+    "semantic_hash": "1ff324e53cdbef254eafce1d46584fc2"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Workflows/ClaudeKit-Workflow.md": {
+    "mtime": 1772875445.7509677,
+    "ast_hash": "cfef6c18e21d179b6d5cfed17159d181",
+    "semantic_hash": "cfef6c18e21d179b6d5cfed17159d181"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Workflows/_category_.yml": {
+    "mtime": 1772874985.4758544,
+    "ast_hash": "837c771133c39d11950243f0f60c8413",
+    "semantic_hash": "837c771133c39d11950243f0f60c8413"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Prompt-Library/modern-web-guidance.md": {
+    "mtime": 1779829373.0569534,
+    "ast_hash": "dd9d378b382e9a653ee82a10981004ea",
+    "semantic_hash": "dd9d378b382e9a653ee82a10981004ea"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Prompt-Library/Claude-4.6-Prompts-Anatomy.md": {
+    "mtime": 1779029738.6275609,
+    "ast_hash": "a6d03c33f7438b155b03f3613041ce4e",
+    "semantic_hash": "a6d03c33f7438b155b03f3613041ce4e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Prompt-Library/gemini-prompts.md": {
+    "mtime": 1772874985.4707875,
+    "ast_hash": "50de3a68483224df796a7010bbaec278",
+    "semantic_hash": "50de3a68483224df796a7010bbaec278"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Prompt-Library/excel-15-prompts.md": {
+    "mtime": 1772885620.5680492,
+    "ast_hash": "de0ff28b813f61e887e8632399561cc1",
+    "semantic_hash": "de0ff28b813f61e887e8632399561cc1"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Prompt-Library/_category_.yml": {
+    "mtime": 1772874985.4695668,
+    "ast_hash": "636c41423becc67e4db9252697cb61ab",
+    "semantic_hash": "636c41423becc67e4db9252697cb61ab"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Prompt-Library/System-Prompts-and-Personas.mdx": {
+    "mtime": 1772874985.466829,
+    "ast_hash": "142c082ebbc8426b591c91d40a521418",
+    "semantic_hash": "142c082ebbc8426b591c91d40a521418"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Models-LLMs/Qwen3.5-Small-Series.md": {
+    "mtime": 1772874985.465629,
+    "ast_hash": "5a548d29bec11ba922203bbac95f10f2",
+    "semantic_hash": "5a548d29bec11ba922203bbac95f10f2"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Models-LLMs/_category_.yml": {
+    "mtime": 1772874985.4659,
+    "ast_hash": "243e06419852f806ddf73393d3868e2b",
+    "semantic_hash": "243e06419852f806ddf73393d3868e2b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Models-LLMs/mac-code.md": {
+    "mtime": 1779015949.7402835,
+    "ast_hash": "5b1e5c938f3b48cb0121020baae570d0",
+    "semantic_hash": "5b1e5c938f3b48cb0121020baae570d0"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/Models-LLMs/public-models.md": {
+    "mtime": 1779016525.685551,
+    "ast_hash": "04ca56ebffd20629788cc6bc927a82ed",
+    "semantic_hash": "04ca56ebffd20629788cc6bc927a82ed"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/MCPs/cve-mcp-server.md": {
+    "mtime": 1779964235.148125,
+    "ast_hash": "a5e50c156a8433fd202cb3efdd168aae",
+    "semantic_hash": "a5e50c156a8433fd202cb3efdd168aae"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/AI-Development/MCPs/_category_.yml": {
+    "mtime": 1779954426.9182324,
+    "ast_hash": "18315ff64139fc33abf1010f538bac39",
+    "semantic_hash": "18315ff64139fc33abf1010f538bac39"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Software-Architecture/streaming.md": {
+    "mtime": 1763749624.7832005,
+    "ast_hash": "df4639ffed955adaedc6e33d99829865",
+    "semantic_hash": "df4639ffed955adaedc6e33d99829865"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Software-Architecture/data-stack.md": {
+    "mtime": 1769865197.2570727,
+    "ast_hash": "379b00ddfeb00c98f94a6a9b63b577b2",
+    "semantic_hash": "379b00ddfeb00c98f94a6a9b63b577b2"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Software-Architecture/microservices.md": {
+    "mtime": 1763749624.7827866,
+    "ast_hash": "ec3ad9e5cde10eb2e9cfbd9a5fee87d3",
+    "semantic_hash": "ec3ad9e5cde10eb2e9cfbd9a5fee87d3"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Automation/task-runners.md": {
+    "mtime": 1772377102.386937,
+    "ast_hash": "56fc2e435876595d901f33cf4f93cac3",
+    "semantic_hash": "56fc2e435876595d901f33cf4f93cac3"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Workflows/n8n-AI-Agents.md": {
+    "mtime": 1770929268.172347,
+    "ast_hash": "15990f20ef4f99b42ea16d1b7fd7fc93",
+    "semantic_hash": "15990f20ef4f99b42ea16d1b7fd7fc93"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Databases/_category_.yml": {
+    "mtime": 1773839757.5196075,
+    "ast_hash": "71743759dd7d6839bb8bccd109738078",
+    "semantic_hash": "71743759dd7d6839bb8bccd109738078"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Databases/spacetimedb.mdx": {
+    "mtime": 1773840092.154304,
+    "ast_hash": "57f2393661534569f545a6db2df7b5b4",
+    "semantic_hash": "57f2393661534569f545a6db2df7b5b4"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/QA/unit-testting.md": {
+    "mtime": 1763749624.7814188,
+    "ast_hash": "5a5958d75981497f6bf71f9701700e93",
+    "semantic_hash": "5a5958d75981497f6bf71f9701700e93"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/QA/selenium-grid.md": {
+    "mtime": 1763749624.7811947,
+    "ast_hash": "46033d607bed8e849d4579a27e525c5f",
+    "semantic_hash": "46033d607bed8e849d4579a27e525c5f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/QA/inspec.md": {
+    "mtime": 1763749624.7808301,
+    "ast_hash": "a417560f4394bb4d9419d731aebf1ce7",
+    "semantic_hash": "a417560f4394bb4d9419d731aebf1ce7"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/QA/web-performance.md": {
+    "mtime": 1763749624.7816465,
+    "ast_hash": "a43ce8f4e4d86a65076440504b12b268",
+    "semantic_hash": "a43ce8f4e4d86a65076440504b12b268"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/QA/web-testing.md": {
+    "mtime": 1763749624.7818556,
+    "ast_hash": "69efbe6f4cf724702d5f72ffed59bd3b",
+    "semantic_hash": "69efbe6f4cf724702d5f72ffed59bd3b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/QA/_category_.yml": {
+    "mtime": 1763749624.7801466,
+    "ast_hash": "51eacb4091e52cf6c4230474b33075d4",
+    "semantic_hash": "51eacb4091e52cf6c4230474b33075d4"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/index.mdx": {
+    "mtime": 1763755158.3096387,
+    "ast_hash": "c1be4acae7f5e542f904ce373cc28f4c",
+    "semantic_hash": "c1be4acae7f5e542f904ce373cc28f4c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/intel-nuc.md": {
+    "mtime": 1763749624.7976103,
+    "ast_hash": "1cb3b15cac886a593e6efefcf86c236b",
+    "semantic_hash": "1cb3b15cac886a593e6efefcf86c236b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/openstack-homelab.md": {
+    "mtime": 1763749624.7987044,
+    "ast_hash": "42aaa43f5a5fd3eb50e08639f8ef751d",
+    "semantic_hash": "42aaa43f5a5fd3eb50e08639f8ef751d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/common-apps.md": {
+    "mtime": 1763749624.7965028,
+    "ast_hash": "03b3ab3d1b7a1837ad418d5a142d99a4",
+    "semantic_hash": "03b3ab3d1b7a1837ad418d5a142d99a4"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/serverbuilds.md": {
+    "mtime": 1763749624.7994025,
+    "ast_hash": "1ec9289a6e6ab1a76adaa56768e5650c",
+    "semantic_hash": "1ec9289a6e6ab1a76adaa56768e5650c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/router-boards.md": {
+    "mtime": 1763749624.7990456,
+    "ast_hash": "73d6be728b8159d54dda9821c9fc3fb8",
+    "semantic_hash": "73d6be728b8159d54dda9821c9fc3fb8"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/k8s-homelab.md": {
+    "mtime": 1763749624.7979872,
+    "ast_hash": "71b57b6a98956e16c985190a5a28432d",
+    "semantic_hash": "71b57b6a98956e16c985190a5a28432d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/Raspberry-Pi/netboot-pi.md": {
+    "mtime": 1763749624.7925675,
+    "ast_hash": "6b4c44c33bacbcfe8a73c64ca734022a",
+    "semantic_hash": "6b4c44c33bacbcfe8a73c64ca734022a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/Raspberry-Pi/projects-pi.md": {
+    "mtime": 1763749624.7933443,
+    "ast_hash": "ea31d8105fd42ec89eda1b7625ec9502",
+    "semantic_hash": "ea31d8105fd42ec89eda1b7625ec9502"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/Raspberry-Pi/usb-pi.md": {
+    "mtime": 1763749624.7956123,
+    "ast_hash": "a3171696062cab6d2d2521ca223fd6ec",
+    "semantic_hash": "a3171696062cab6d2d2521ca223fd6ec"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/Raspberry-Pi/sd-cards-pi.md": {
+    "mtime": 1763749624.7949398,
+    "ast_hash": "ce79d6bc787b601007fa25ca7760580a",
+    "semantic_hash": "ce79d6bc787b601007fa25ca7760580a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/Raspberry-Pi/raspberry-pi.md": {
+    "mtime": 1763749624.7942154,
+    "ast_hash": "fbea1648edd46f80f2fb53f076fef039",
+    "semantic_hash": "fbea1648edd46f80f2fb53f076fef039"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/Raspberry-Pi/racks-pi.md": {
+    "mtime": 1763749624.793808,
+    "ast_hash": "824415b55f7d8ca175dde64de3463d6b",
+    "semantic_hash": "824415b55f7d8ca175dde64de3463d6b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/Raspberry-Pi/kubernetes-pi.md": {
+    "mtime": 1763749624.791884,
+    "ast_hash": "b313f2c5f5116642289f585bc05b346c",
+    "semantic_hash": "b313f2c5f5116642289f585bc05b346c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/HomeLab/Raspberry-Pi/_category_.yml": {
+    "mtime": 1763749624.7912235,
+    "ast_hash": "8aeee2e747d1a284290b64e8b07e2131",
+    "semantic_hash": "8aeee2e747d1a284290b64e8b07e2131"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/Domotic/domotic.md": {
+    "mtime": 1763749624.7905335,
+    "ast_hash": "f761d61ac1dec841d07c73b90122234d",
+    "semantic_hash": "f761d61ac1dec841d07c73b90122234d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/Domotic/Zigbee/zigbee-air-quality.md": {
+    "mtime": 1763749624.7891312,
+    "ast_hash": "93a800effb387bcf1cb12f3336ccfa3c",
+    "semantic_hash": "93a800effb387bcf1cb12f3336ccfa3c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/Domotic/Zigbee/cc2531.md": {
+    "mtime": 1763749624.7885027,
+    "ast_hash": "8160e5c0e527456cae19690ff8e10594",
+    "semantic_hash": "8160e5c0e527456cae19690ff8e10594"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/Domotic/Zigbee/zigbee2mqtt.md": {
+    "mtime": 1763749624.7900743,
+    "ast_hash": "62e76dd9943d008bc42954cdbf9c5ecf",
+    "semantic_hash": "62e76dd9943d008bc42954cdbf9c5ecf"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/Domotic/HomeAssistant/home-assistant.md": {
+    "mtime": 1763749624.7876813,
+    "ast_hash": "6bbc36b9b273c47c1ddd7751e65cb12e",
+    "semantic_hash": "6bbc36b9b273c47c1ddd7751e65cb12e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Homelab-Domotic/Domotic/HomeAssistant/_category_.yml": {
+    "mtime": 1763749624.7869742,
+    "ast_hash": "929712e21411a2ed9ed65f67ce4714cd",
+    "semantic_hash": "929712e21411a2ed9ed65f67ce4714cd"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Security/index.mdx": {
+    "mtime": 1763755158.321508,
+    "ast_hash": "6deaaea29e339236c9c6c2ece8ba35ce",
+    "semantic_hash": "6deaaea29e339236c9c6c2ece8ba35ce"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Security/debian-ubuntu-hardening.md": {
+    "mtime": 1779030910.007221,
+    "ast_hash": "4cc59f9bd619a6ef42d7cb4aa023562c",
+    "semantic_hash": "4cc59f9bd619a6ef42d7cb4aa023562c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Security/npm-libs.mdx": {
+    "mtime": 1779029280.0338082,
+    "ast_hash": "c071d2658794b90eff4784beac2b0efc",
+    "semantic_hash": "c071d2658794b90eff4784beac2b0efc"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Security/nmap-unleashed.md": {
+    "mtime": 1773618818.7110724,
+    "ast_hash": "d9165e061c38f1d7b301871d0551e1ad",
+    "semantic_hash": "d9165e061c38f1d7b301871d0551e1ad"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Security/owasp.md": {
+    "mtime": 1746304290.132821,
+    "ast_hash": "22f0b69e3cf43b3885f39265902e412c",
+    "semantic_hash": "22f0b69e3cf43b3885f39265902e412c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Security/examples/.yarnrc.yml": {
+    "mtime": 1779028323.9251957,
+    "ast_hash": "8fafbce82a9c8df79a1f7a0aaaf1120f",
+    "semantic_hash": "8fafbce82a9c8df79a1f7a0aaaf1120f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/index.mdx": {
+    "mtime": 1767971212.4020953,
+    "ast_hash": "afabdef3e553be588ab55c35c37072c3",
+    "semantic_hash": "afabdef3e553be588ab55c35c37072c3"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Networking/networking.md": {
+    "mtime": 1763749624.8511238,
+    "ast_hash": "ce99f7883677c21bfd98b4720e6476a1",
+    "semantic_hash": "ce99f7883677c21bfd98b4720e6476a1"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Networking/LAN/lan-tools.md": {
+    "mtime": 1763749624.8488684,
+    "ast_hash": "b134b0cae78c4ddce030b95aec621d61",
+    "semantic_hash": "b134b0cae78c4ddce030b95aec621d61"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Networking/CDN/cdn.md": {
+    "mtime": 1763749624.846744,
+    "ast_hash": "6a0bbade941ccd4864ee4c5107a273dc",
+    "semantic_hash": "6a0bbade941ccd4864ee4c5107a273dc"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Networking/CDN/wordpress.md": {
+    "mtime": 1763749624.8477874,
+    "ast_hash": "2f45f5b38a59ff3261a1dc9f335e0402",
+    "semantic_hash": "2f45f5b38a59ff3261a1dc9f335e0402"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Networking/CDN/mozilla.md": {
+    "mtime": 1763749624.8474095,
+    "ast_hash": "ebcb3156c366c581ab19ab62c7226e3a",
+    "semantic_hash": "ebcb3156c366c581ab19ab62c7226e3a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Networking/VPN/tunnels-to-lan.md": {
+    "mtime": 1763749624.8498385,
+    "ast_hash": "c85ecc4cc3a15fcb7cc76e2abbeb0dda",
+    "semantic_hash": "c85ecc4cc3a15fcb7cc76e2abbeb0dda"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Networking/VPN/wireguard-vpn.md": {
+    "mtime": 1763749624.850599,
+    "ast_hash": "c9a447ec1333b672c7576908dce1c316",
+    "semantic_hash": "c9a447ec1333b672c7576908dce1c316"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Networking/10Gb/10-Gb-Network.md": {
+    "mtime": 1763749624.846214,
+    "ast_hash": "aab46d3bc30c5b5669fa2b696497f5b0",
+    "semantic_hash": "aab46d3bc30c5b5669fa2b696497f5b0"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Infrastructure/ganeti.md": {
+    "mtime": 1763749624.8037405,
+    "ast_hash": "224aac080e252fa3eb02526997868801",
+    "semantic_hash": "224aac080e252fa3eb02526997868801"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Infrastructure/tinkerbell.md": {
+    "mtime": 1763749624.8043952,
+    "ast_hash": "d80ee7115af32adb4c26cf2d9ad890d5",
+    "semantic_hash": "d80ee7115af32adb4c26cf2d9ad890d5"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Infrastructure/_category_.yml": {
+    "mtime": 1763749624.803423,
+    "ast_hash": "76be4d5176cd8086d061795bb7287fed",
+    "semantic_hash": "76be4d5176cd8086d061795bb7287fed"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Infrastructure/openstack.md": {
+    "mtime": 1763749624.8040564,
+    "ast_hash": "76067bf3c5b45ecd25144803c5f07dc5",
+    "semantic_hash": "76067bf3c5b45ecd25144803c5f07dc5"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Infrastructure/Storage/Data-Lakes.md": {
+    "mtime": 1766586833.4664888,
+    "ast_hash": "d4531bfcaa09b8b05db2106a6fa54146",
+    "semantic_hash": "d4531bfcaa09b8b05db2106a6fa54146"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Infrastructure/Storage/ceph.md": {
+    "mtime": 1763749624.8019176,
+    "ast_hash": "279f4e7d85728887e00671454327265e",
+    "semantic_hash": "279f4e7d85728887e00671454327265e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Infrastructure/Storage/minio.md": {
+    "mtime": 1763749624.8022547,
+    "ast_hash": "a61b086b8cf6f066ba82e9959a20b940",
+    "semantic_hash": "a61b086b8cf6f066ba82e9959a20b940"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Infrastructure/Storage/s3-tools.md": {
+    "mtime": 1763749624.8030772,
+    "ast_hash": "7fbf777085d03c16c4cb30b7085b4a4a",
+    "semantic_hash": "7fbf777085d03c16c4cb30b7085b4a4a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Infrastructure/Storage/GDAL.md": {
+    "mtime": 1763749624.8010821,
+    "ast_hash": "c268b06cce292091b651c577f6438d29",
+    "semantic_hash": "c268b06cce292091b651c577f6438d29"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/container-registry.md": {
+    "mtime": 1763749624.8261938,
+    "ast_hash": "1a192529d6a40a6374bb3e9933978dbe",
+    "semantic_hash": "1a192529d6a40a6374bb3e9933978dbe"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/containers.md": {
+    "mtime": 1763749624.8265274,
+    "ast_hash": "bbdd9cef3387292b40cccb5a3b454724",
+    "semantic_hash": "bbdd9cef3387292b40cccb5a3b454724"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/CRI/crictl.md": {
+    "mtime": 1763749624.8198318,
+    "ast_hash": "e297f9e582b139c1b7a98a65fa8d0657",
+    "semantic_hash": "e297f9e582b139c1b7a98a65fa8d0657"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/CRI/containerd.md": {
+    "mtime": 1763749624.819131,
+    "ast_hash": "91fc40f8263be0ac45b63ec38e5ba47c",
+    "semantic_hash": "91fc40f8263be0ac45b63ec38e5ba47c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/Docker/docker-tag.md": {
+    "mtime": 1763749624.823794,
+    "ast_hash": "6be1452da8f38b4968cd99741092bc4b",
+    "semantic_hash": "6be1452da8f38b4968cd99741092bc4b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/Docker/docker-mac.md": {
+    "mtime": 1763749624.821528,
+    "ast_hash": "3c9945241cef086b2e7bf94f57cd9b93",
+    "semantic_hash": "3c9945241cef086b2e7bf94f57cd9b93"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/Docker/dockerfile-java.md": {
+    "mtime": 1763749624.8246243,
+    "ast_hash": "ecb48c712d99d50c5bb5bd14ea30d2ef",
+    "semantic_hash": "ecb48c712d99d50c5bb5bd14ea30d2ef"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/Docker/docker-windows.md": {
+    "mtime": 1763749624.824156,
+    "ast_hash": "82eb55b7766c19f1f08ba60efe5fc370",
+    "semantic_hash": "82eb55b7766c19f1f08ba60efe5fc370"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/Docker/docker-desktop-goodbye.md": {
+    "mtime": 1763749624.8210914,
+    "ast_hash": "f322cfacb6ffc0c5d22a00eb5f75ef68",
+    "semantic_hash": "f322cfacb6ffc0c5d22a00eb5f75ef68"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/Docker/docker-build.md": {
+    "mtime": 1763749624.8207455,
+    "ast_hash": "beab288587cd87e4a7dd90d190466a48",
+    "semantic_hash": "beab288587cd87e4a7dd90d190466a48"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/Docker/docker-registry.md": {
+    "mtime": 1763749624.8230767,
+    "ast_hash": "ba60970525fe0aa8fc52fa19c1f6e384",
+    "semantic_hash": "ba60970525fe0aa8fc52fa19c1f6e384"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/Docker/dockerfile-node.md": {
+    "mtime": 1768056118.9101841,
+    "ast_hash": "337afc51a96aac180e4293b839dd103a",
+    "semantic_hash": "337afc51a96aac180e4293b839dd103a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/Docker/dockerfile-python.md": {
+    "mtime": 1767539027.7832627,
+    "ast_hash": "800fbb4de29866447ba9b951c93cbfdc",
+    "semantic_hash": "800fbb4de29866447ba9b951c93cbfdc"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/Docker/docker-multi-platform-build.md": {
+    "mtime": 1763749624.8219275,
+    "ast_hash": "23ccb86c39d12de31e58c695db52a391",
+    "semantic_hash": "23ccb86c39d12de31e58c695db52a391"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Containers/Docker/docker-rate-limit.md": {
+    "mtime": 1763749624.822665,
+    "ast_hash": "3c039a464a93b8e1682e583e91fff60b",
+    "semantic_hash": "3c039a464a93b8e1682e583e91fff60b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/PaaS.md": {
+    "mtime": 1763749624.8447223,
+    "ast_hash": "8f73f7197b506431cb34a6b8acc09056",
+    "semantic_hash": "8f73f7197b506431cb34a6b8acc09056"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/devops.md": {
+    "mtime": 1763749624.8451355,
+    "ast_hash": "080dd7655358def61fe44840344b57dc",
+    "semantic_hash": "080dd7655358def61fe44840344b57dc"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/Infra-as-Code/terraform.md": {
+    "mtime": 1763755158.316615,
+    "ast_hash": "2ddd30a675b14929732c58e64e31690d",
+    "semantic_hash": "2ddd30a675b14929732c58e64e31690d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/Infra-as-Code/ansible.md": {
+    "mtime": 1763755158.3160472,
+    "ast_hash": "8bc11d87433d9bda1f421c166844b52a",
+    "semantic_hash": "8bc11d87433d9bda1f421c166844b52a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/Infra-as-Code/mgmt-config-management.md": {
+    "mtime": 1771334874.4996321,
+    "ast_hash": "faa5c60ab260a20e8000267dd3366f13",
+    "semantic_hash": "faa5c60ab260a20e8000267dd3366f13"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CD/argo-rollouts.md": {
+    "mtime": 1763755158.311997,
+    "ast_hash": "4a9902d7fd8b12c9a5d4973c20997a9e",
+    "semantic_hash": "4a9902d7fd8b12c9a5d4973c20997a9e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CD/cd.md": {
+    "mtime": 1763749624.8294458,
+    "ast_hash": "41ee3660db7888257714013806b7299a",
+    "semantic_hash": "41ee3660db7888257714013806b7299a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CD/deliverybot.md": {
+    "mtime": 1763755158.3122735,
+    "ast_hash": "575239f408155c40a6c4a5180a26feec",
+    "semantic_hash": "575239f408155c40a6c4a5180a26feec"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CD/argo-cd.md": {
+    "mtime": 1763755158.3117437,
+    "ast_hash": "6ba22446cfca8079f10b049f9e4e1ed6",
+    "semantic_hash": "6ba22446cfca8079f10b049f9e4e1ed6"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CD/_category_.yml": {
+    "mtime": 1763749624.8291414,
+    "ast_hash": "10a230e677b55d040966686695fac693",
+    "semantic_hash": "10a230e677b55d040966686695fac693"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CD/spinnaker.md": {
+    "mtime": 1763755158.3128726,
+    "ast_hash": "55263fcb79019a5406dd7eb88cd02cc3",
+    "semantic_hash": "55263fcb79019a5406dd7eb88cd02cc3"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/DevEnv/_category_.yml": {
+    "mtime": 1763749624.8418102,
+    "ast_hash": "c2b068e7e36366e77d29ad52ff8817e6",
+    "semantic_hash": "c2b068e7e36366e77d29ad52ff8817e6"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/DevEnv/dev-env.md": {
+    "mtime": 1763749624.8425033,
+    "ast_hash": "af14f914cbd0afa4b2b4d9284bedd006",
+    "semantic_hash": "af14f914cbd0afa4b2b4d9284bedd006"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/db-migrations.md": {
+    "mtime": 1763749624.8409986,
+    "ast_hash": "cde691e082c844f74c3e6017db12fd6e",
+    "semantic_hash": "cde691e082c844f74c3e6017db12fd6e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/build-tools.md": {
+    "mtime": 1776615642.911483,
+    "ast_hash": "365318c151676276facc73272213c0cd",
+    "semantic_hash": "365318c151676276facc73272213c0cd"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/vm-images.md": {
+    "mtime": 1763749624.8413072,
+    "ast_hash": "901528e93ded631c71910dfceada6a38",
+    "semantic_hash": "901528e93ded631c71910dfceada6a38"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/_category_.yml": {
+    "mtime": 1763749624.8403928,
+    "ast_hash": "5c4e4ef27ad4eda73b73ac393a04ca90",
+    "semantic_hash": "5c4e4ef27ad4eda73b73ac393a04ca90"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/SecurityChecks/guardrails.md": {
+    "mtime": 1763749624.8389523,
+    "ast_hash": "3009e286a5ed16eee1ea59221226eb96",
+    "semantic_hash": "3009e286a5ed16eee1ea59221226eb96"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/SecurityChecks/securing-tools.md": {
+    "mtime": 1770635067.5359037,
+    "ast_hash": "baf640e153cffc604b820ccb06fc0636",
+    "semantic_hash": "baf640e153cffc604b820ccb06fc0636"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/SecurityChecks/sonarqube.md": {
+    "mtime": 1763749624.8400934,
+    "ast_hash": "1a4c81d527972414bb257702b8c2d69d",
+    "semantic_hash": "1a4c81d527972414bb257702b8c2d69d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Chatbots/hubot.md": {
+    "mtime": 1763749624.8304284,
+    "ast_hash": "4f1c29c7487a8e68916b1a8f5cce1f9e",
+    "semantic_hash": "4f1c29c7487a8e68916b1a8f5cce1f9e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Chatbots/slack.md": {
+    "mtime": 1763749624.831217,
+    "ast_hash": "7a79b9101ecd8ceb5f0aef30851e01a6",
+    "semantic_hash": "7a79b9101ecd8ceb5f0aef30851e01a6"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Chatbots/flotbot.md": {
+    "mtime": 1763749624.8301072,
+    "ast_hash": "a8eb751d327fd11ef889f742d2727e1b",
+    "semantic_hash": "a8eb751d327fd11ef889f742d2727e1b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Platforms/jenkins.md": {
+    "mtime": 1763755158.3155003,
+    "ast_hash": "772662662ff7d4f69b74978ec96e4275",
+    "semantic_hash": "772662662ff7d4f69b74978ec96e4275"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Platforms/Jenkinsfile-react.md": {
+    "mtime": 1763755158.3143902,
+    "ast_hash": "6c2c702c8e16cdbdca5c19b946e4bdcf",
+    "semantic_hash": "6c2c702c8e16cdbdca5c19b946e4bdcf"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Platforms/tekton.md": {
+    "mtime": 1763749624.8384397,
+    "ast_hash": "f75b645fb3a698d049b871ebbcf34237",
+    "semantic_hash": "f75b645fb3a698d049b871ebbcf34237"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Platforms/gh-actions.md": {
+    "mtime": 1763749624.836398,
+    "ast_hash": "3fb10fa16bd0eb9ae11b9c7cced71b35",
+    "semantic_hash": "3fb10fa16bd0eb9ae11b9c7cced71b35"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Platforms/jenkins-plugins.md": {
+    "mtime": 1763755158.3151119,
+    "ast_hash": "a811dd1426a5b7be828f4e71f88fe21b",
+    "semantic_hash": "a811dd1426a5b7be828f4e71f88fe21b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Platforms/circle-ci.md": {
+    "mtime": 1763749624.8356102,
+    "ast_hash": "68727a7b43368b463dbd254f9aec49f3",
+    "semantic_hash": "68727a7b43368b463dbd254f9aec49f3"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Platforms/Jenkinsfile-node.md": {
+    "mtime": 1763755158.314068,
+    "ast_hash": "59bc23b8ab4680ec6649d0ef6950aa85",
+    "semantic_hash": "59bc23b8ab4680ec6649d0ef6950aa85"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Platforms/otto.md": {
+    "mtime": 1763749624.8381197,
+    "ast_hash": "a17fda85ade17e25318009cb10240b65",
+    "semantic_hash": "a17fda85ade17e25318009cb10240b65"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Platforms/drone-ci.md": {
+    "mtime": 1772882603.5480685,
+    "ast_hash": "207c10c9b2b4e3e5343a7e7acd8b2770",
+    "semantic_hash": "207c10c9b2b4e3e5343a7e7acd8b2770"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Platforms/jenkins-x.md": {
+    "mtime": 1763749624.8377786,
+    "ast_hash": "315ef19e05bab8a405c71230e15cef0b",
+    "semantic_hash": "315ef19e05bab8a405c71230e15cef0b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Platforms/jenkins-chaos-engineering.md": {
+    "mtime": 1763755158.3146489,
+    "ast_hash": "4cc6e7d38e7f56f92e35db1d185fa601",
+    "semantic_hash": "4cc6e7d38e7f56f92e35db1d185fa601"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Platforms/Groovy-start-scripts.md": {
+    "mtime": 1763755158.3135345,
+    "ast_hash": "0242f14d00e6ecbdac7bfcb21761765d",
+    "semantic_hash": "0242f14d00e6ecbdac7bfcb21761765d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/DevOps/CI/Platforms/gitlab.md": {
+    "mtime": 1763749624.837088,
+    "ast_hash": "dee37ee42c0aba94d9d4af47d7d842cf",
+    "semantic_hash": "dee37ee42c0aba94d9d4af47d7d842cf"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/AWS.md": {
+    "mtime": 1763749624.8053434,
+    "ast_hash": "fbc1edeba2dde2de42c02ffc3696f68b",
+    "semantic_hash": "fbc1edeba2dde2de42c02ffc3696f68b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/deploying-your-website-cheap.md": {
+    "mtime": 1773618818.7101185,
+    "ast_hash": "a3fb45c102a7af32e041cc91c378cdd7",
+    "semantic_hash": "a3fb45c102a7af32e041cc91c378cdd7"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/_category_.yml": {
+    "mtime": 1763749624.8181052,
+    "ast_hash": "4304cf5894d7890f6c699fb1d553f75d",
+    "semantic_hash": "4304cf5894d7890f6c699fb1d553f75d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-cli-quick-guide.md": {
+    "mtime": 1763749624.811312,
+    "ast_hash": "8ad186c64561bd287e262bc790487653",
+    "semantic_hash": "8ad186c64561bd287e262bc790487653"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/kubernetes.md": {
+    "mtime": 1763749624.817788,
+    "ast_hash": "154cc5f71f3c67ac8df82c4969c8d663",
+    "semantic_hash": "154cc5f71f3c67ac8df82c4969c8d663"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-platforms.md": {
+    "mtime": 1763749624.8153508,
+    "ast_hash": "9027e87861862a15c29dbf220935a2d5",
+    "semantic_hash": "9027e87861862a15c29dbf220935a2d5"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-nginx.md": {
+    "mtime": 1763749624.8146985,
+    "ast_hash": "4c9e896a73cd344c8af5e7c2d1aeeb8b",
+    "semantic_hash": "4c9e896a73cd344c8af5e7c2d1aeeb8b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-tunnels.md": {
+    "mtime": 1763749624.8174257,
+    "ast_hash": "491866eb23d2ca72d516a29c3d9f919b",
+    "semantic_hash": "491866eb23d2ca72d516a29c3d9f919b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-kubectl-plugins.md": {
+    "mtime": 1763749624.8133438,
+    "ast_hash": "780edfe603f84730fed60673bc26aa61",
+    "semantic_hash": "780edfe603f84730fed60673bc26aa61"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-linter.md": {
+    "mtime": 1763749624.8136916,
+    "ast_hash": "63308d0e1274e1dab59875213287d8bc",
+    "semantic_hash": "63308d0e1274e1dab59875213287d8bc"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-autoscalers.md": {
+    "mtime": 1763749624.8100383,
+    "ast_hash": "cc4b5fb22e5b3a24d7b0b0932ea528c9",
+    "semantic_hash": "cc4b5fb22e5b3a24d7b0b0932ea528c9"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-jupyter-notebook.md": {
+    "mtime": 1763749624.8130062,
+    "ast_hash": "445eebb547a56a597af8916b564c93ca",
+    "semantic_hash": "445eebb547a56a597af8916b564c93ca"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-ml.md": {
+    "mtime": 1763749624.8139904,
+    "ast_hash": "f97cc91715b64ee0e4e7f629c3e17c4e",
+    "semantic_hash": "f97cc91715b64ee0e4e7f629c3e17c4e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-distributions.md": {
+    "mtime": 1763749624.8123598,
+    "ast_hash": "07f372b75394be1e20f26e6be81bae42",
+    "semantic_hash": "07f372b75394be1e20f26e6be81bae42"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-patterns.md": {
+    "mtime": 1763749624.8150544,
+    "ast_hash": "7918b1a36086be13fb038272ddcf94b8",
+    "semantic_hash": "7918b1a36086be13fb038272ddcf94b8"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k3s-tips.md": {
+    "mtime": 1775298583.7989342,
+    "ast_hash": "3dc4db3ad0b8154f1985995e51177636",
+    "semantic_hash": "3dc4db3ad0b8154f1985995e51177636"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-backup.md": {
+    "mtime": 1763749624.81068,
+    "ast_hash": "5b641733ebbdd439091f8ca8025528c0",
+    "semantic_hash": "5b641733ebbdd439091f8ca8025528c0"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-tools.md": {
+    "mtime": 1763749624.8170428,
+    "ast_hash": "1e4c4ebb2692d030e8b4b0f29e94b1fe",
+    "semantic_hash": "1e4c4ebb2692d030e8b4b0f29e94b1fe"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-hardening.md": {
+    "mtime": 1763749624.81267,
+    "ast_hash": "2b43de51418b24f284debd36834ba9bc",
+    "semantic_hash": "2b43de51418b24f284debd36834ba9bc"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/k8s-streaming.md": {
+    "mtime": 1763749624.8160746,
+    "ast_hash": "73d448292c6f7b53d9d6e220331c8b25",
+    "semantic_hash": "73d448292c6f7b53d9d6e220331c8b25"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/Concepts/k8s-network-policies.md": {
+    "mtime": 1763755158.3108692,
+    "ast_hash": "98a10019a9b1757f6c9caf01cca3550d",
+    "semantic_hash": "98a10019a9b1757f6c9caf01cca3550d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/Concepts/hpa-autoscalers.md": {
+    "mtime": 1763755158.3104506,
+    "ast_hash": "37c297f4fccfd88590df37553730938e",
+    "semantic_hash": "37c297f4fccfd88590df37553730938e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/Concepts/HPA.md": {
+    "mtime": 1763755158.310012,
+    "ast_hash": "b0442e73d4d4c81c8bc2573a0d01cca6",
+    "semantic_hash": "b0442e73d4d4c81c8bc2573a0d01cca6"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/Concepts/resource-managment-pods.md": {
+    "mtime": 1763755158.3112698,
+    "ast_hash": "dc4147fbf6e537bb96cf47796b92aad5",
+    "semantic_hash": "dc4147fbf6e537bb96cf47796b92aad5"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Infrastructure-and-Cloud/Cloud-Platform/Kubernetes/Helm/helm-tools.md": {
+    "mtime": 1765233159.7970622,
+    "ast_hash": "15bddadf41c156faf528bc791081d601",
+    "semantic_hash": "15bddadf41c156faf528bc791081d601"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Productivity/index.mdx": {
+    "mtime": 1763745423.3087995,
+    "ast_hash": "e63a5b19ab20a7f6c1ad251327780534",
+    "semantic_hash": "e63a5b19ab20a7f6c1ad251327780534"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/index.mdx": {
+    "mtime": 1775304818.6268017,
+    "ast_hash": "a9db6721c178bb85a142a18c03a1aa74",
+    "semantic_hash": "a9db6721c178bb85a142a18c03a1aa74"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/Quest3/quest3-handlers-fix.md": {
+    "mtime": 1763749624.785143,
+    "ast_hash": "2b2176bc38557ceb4883df6df943ac27",
+    "semantic_hash": "2b2176bc38557ceb4883df6df943ac27"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/weapon-properties.md": {
+    "mtime": 1778951970.5061262,
+    "ast_hash": "c084fad5b3204cd4ae1c1376acf51f4f",
+    "semantic_hash": "c084fad5b3204cd4ae1c1376acf51f4f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/magic-fixes.md": {
+    "mtime": 1778951970.5058239,
+    "ast_hash": "2cfa18dc618c2fec41cef2bf56006bea",
+    "semantic_hash": "2cfa18dc618c2fec41cef2bf56006bea"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/_markdown-impactful.mdx": {
+    "mtime": 1778951970.5055137,
+    "ast_hash": "a33379e24c7a0dfeecae1a677b7df9b0",
+    "semantic_hash": "a33379e24c7a0dfeecae1a677b7df9b0"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/feats.md": {
+    "mtime": 1771267217.8623657,
+    "ast_hash": "0b77de40fdc83693ee15f068e61085e5",
+    "semantic_hash": "0b77de40fdc83693ee15f068e61085e5"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/index.mdx": {
+    "mtime": 1779018432.1497848,
+    "ast_hash": "831be5a60530f8fd881197b7f8dc21e6",
+    "semantic_hash": "831be5a60530f8fd881197b7f8dc21e6"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/classes.md": {
+    "mtime": 1772996433.7318137,
+    "ast_hash": "971c95e5a2668e4294b13a1bf12024d4",
+    "semantic_hash": "971c95e5a2668e4294b13a1bf12024d4"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/weapon-mastery-fixes.md": {
+    "mtime": 1773007582.2079022,
+    "ast_hash": "84bba44fb107f0b0e669d8a188e65ebf",
+    "semantic_hash": "84bba44fb107f0b0e669d8a188e65ebf"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/skills.md": {
+    "mtime": 1771267056.2683456,
+    "ast_hash": "05ab420608a5fbbebcd616522280b7e5",
+    "semantic_hash": "05ab420608a5fbbebcd616522280b7e5"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/armor_table.md": {
+    "mtime": 1771267031.6975415,
+    "ast_hash": "2a5e47703d42abb9ad6bd5c646a444f2",
+    "semantic_hash": "2a5e47703d42abb9ad6bd5c646a444f2"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/Injuries.md": {
+    "mtime": 1771267240.3179703,
+    "ast_hash": "9e95183259219ca8d49eb1e0ebc59ecc",
+    "semantic_hash": "9e95183259219ca8d49eb1e0ebc59ecc"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/character-creation.md": {
+    "mtime": 1771267168.196163,
+    "ast_hash": "0955838fd779d492ecbbdf5377b4018f",
+    "semantic_hash": "0955838fd779d492ecbbdf5377b4018f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/tools.md": {
+    "mtime": 1779018709.7212956,
+    "ast_hash": "7287ad9e513716692e236bf071f7bbe2",
+    "semantic_hash": "7287ad9e513716692e236bf071f7bbe2"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/index.mdx": {
+    "mtime": 1778958282.8926735,
+    "ast_hash": "3467ef0c73b43a5ce049b3b6dcecb7a5",
+    "semantic_hash": "3467ef0c73b43a5ce049b3b6dcecb7a5"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-effects.md": {
+    "mtime": 1773875069.0235968,
+    "ast_hash": "f427f2c8fbeac4a32136279c7d4f9111",
+    "semantic_hash": "f427f2c8fbeac4a32136279c7d4f9111"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/current-party.md": {
+    "mtime": 1779018938.5878522,
+    "ast_hash": "2c2443f2c8c1378e6b8bc285ab50d1ca",
+    "semantic_hash": "2c2443f2c8c1378e6b8bc285ab50d1ca"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/char-view/index.mdx": {
+    "mtime": 1778951970.5050604,
+    "ast_hash": "b6bba4c5d8bd893a566f8ba6b5502330",
+    "semantic_hash": "b6bba4c5d8bd893a566f8ba6b5502330"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-char-extract/_category_.yml": {
+    "mtime": 1772996433.722056,
+    "ast_hash": "68d8d34d77bde902ef20b79ba5f9765f",
+    "semantic_hash": "68d8d34d77bde902ef20b79ba5f9765f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-char-extract/development/contributing-guide.md": {
+    "mtime": 1772996433.724131,
+    "ast_hash": "f2f55fbfd4a2ce9b0500719960e9824d",
+    "semantic_hash": "f2f55fbfd4a2ce9b0500719960e9824d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-char-extract/development/building-the-project.md": {
+    "mtime": 1772996433.7235677,
+    "ast_hash": "f76b641ea534b6b70c76f99200310242",
+    "semantic_hash": "f76b641ea534b6b70c76f99200310242"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-char-extract/development/_category_.yml": {
+    "mtime": 1772996433.7226882,
+    "ast_hash": "6ccce2f7b52dba83e94e1a2b0df27942",
+    "semantic_hash": "6ccce2f7b52dba83e94e1a2b0df27942"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-char-extract/development/testing-guide.md": {
+    "mtime": 1772996433.7247179,
+    "ast_hash": "30181485d38bdb2795003fd3396727c1",
+    "semantic_hash": "30181485d38bdb2795003fd3396727c1"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-char-extract/usage/output-format.md": {
+    "mtime": 1772996433.7293437,
+    "ast_hash": "b085131fd7bb0822694c256710f35200",
+    "semantic_hash": "b085131fd7bb0822694c256710f35200"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-char-extract/usage/command-reference.md": {
+    "mtime": 1773080959.638793,
+    "ast_hash": "dbe1f937d99d8a1c2e12f802a94e4489",
+    "semantic_hash": "dbe1f937d99d8a1c2e12f802a94e4489"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-char-extract/usage/usage-examples.md": {
+    "mtime": 1772996433.7299743,
+    "ast_hash": "e8167234862ee263a8aad1e5bcbefb2c",
+    "semantic_hash": "e8167234862ee263a8aad1e5bcbefb2c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-char-extract/usage/_category_.yml": {
+    "mtime": 1772996433.728408,
+    "ast_hash": "7167434646b83047ad8cfced02eeab49",
+    "semantic_hash": "7167434646b83047ad8cfced02eeab49"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-char-extract/get-started/quickstart.md": {
+    "mtime": 1772996433.7273872,
+    "ast_hash": "6ae4785d17075fca7a391b99a6a3ee3c",
+    "semantic_hash": "6ae4785d17075fca7a391b99a6a3ee3c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-char-extract/get-started/introduction.md": {
+    "mtime": 1773082015.6717088,
+    "ast_hash": "e46cf358c2e9ca4decc9bff9137e0302",
+    "semantic_hash": "e46cf358c2e9ca4decc9bff9137e0302"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-char-extract/get-started/_category_.yml": {
+    "mtime": 1772996433.7252524,
+    "ast_hash": "ff4604e6d89e86165ed666d44b6d1ee1",
+    "semantic_hash": "ff4604e6d89e86165ed666d44b6d1ee1"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/Games/DnD/FantasyGrounds/fg-char-extract/get-started/installation.md": {
+    "mtime": 1773081509.6369863,
+    "ast_hash": "20e6e0d83b757b69de2defac1f83329e",
+    "semantic_hash": "20e6e0d83b757b69de2defac1f83329e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/index.mdx": {
+    "mtime": 1763749624.9060364,
+    "ast_hash": "cafed29cb6c4f95c9fd6f129e2c28f67",
+    "semantic_hash": "cafed29cb6c4f95c9fd6f129e2c28f67"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Shell-Script/bash-unit-testing.md": {
+    "mtime": 1763749624.9027832,
+    "ast_hash": "287f75d34a058b30559474034e6060fa",
+    "semantic_hash": "287f75d34a058b30559474034e6060fa"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Shell-Script/_category_.yml": {
+    "mtime": 1763749624.9024587,
+    "ast_hash": "3dff553db78d1d9e1907c71c3e1275cf",
+    "semantic_hash": "3dff553db78d1d9e1907c71c3e1275cf"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Shell-Script/tmux.md": {
+    "mtime": 1763749624.9046476,
+    "ast_hash": "e0c3dc2a5f6cb6badcb3e386faea81cb",
+    "semantic_hash": "e0c3dc2a5f6cb6badcb3e386faea81cb"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Shell-Script/charm.md": {
+    "mtime": 1763749624.9035876,
+    "ast_hash": "57d64bcb8575914ca874453db1f93aa9",
+    "semantic_hash": "57d64bcb8575914ca874453db1f93aa9"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Shell-Script/zsh/oh-my-zsh.md": {
+    "mtime": 1763749624.9051943,
+    "ast_hash": "9eab58bc78215167b105c808226b44cd",
+    "semantic_hash": "9eab58bc78215167b105c808226b44cd"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/imaging-tools.md": {
+    "mtime": 1763749624.9020479,
+    "ast_hash": "f0e567e2396929c2f0211def8ed8786b",
+    "semantic_hash": "f0e567e2396929c2f0211def8ed8786b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/_category_.yml": {
+    "mtime": 1763749624.9014354,
+    "ast_hash": "a7668973eab74d906dbfe94ae0acb15d",
+    "semantic_hash": "a7668973eab74d906dbfe94ae0acb15d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/Nix/nix.md": {
+    "mtime": 1763749624.895224,
+    "ast_hash": "8a8929b6ca1e73aa6deadf4b13e6fb16",
+    "semantic_hash": "8a8929b6ca1e73aa6deadf4b13e6fb16"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/syslog.md": {
+    "mtime": 1763749624.8913116,
+    "ast_hash": "d3e3c8898b3159c40c91cc7fc4612cba",
+    "semantic_hash": "d3e3c8898b3159c40c91cc7fc4612cba"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/dropbear.md": {
+    "mtime": 1775335708.8250341,
+    "ast_hash": "a8886cb45aec582aa082dfe4c7b2703b",
+    "semantic_hash": "a8886cb45aec582aa082dfe4c7b2703b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/resolved.md": {
+    "mtime": 1763749624.8899136,
+    "ast_hash": "012c7c031f422d80db2d0f1721a42093",
+    "semantic_hash": "012c7c031f422d80db2d0f1721a42093"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/ssh.md": {
+    "mtime": 1763749624.8909118,
+    "ast_hash": "e2603ae82c98a04769170b65a217e621",
+    "semantic_hash": "e2603ae82c98a04769170b65a217e621"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/mac-mini-a1347.md": {
+    "mtime": 1775333400.848635,
+    "ast_hash": "3d1542553ea4411237d7a94c3e5c1705",
+    "semantic_hash": "3d1542553ea4411237d7a94c3e5c1705"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/PXE.md": {
+    "mtime": 1763749624.8814037,
+    "ast_hash": "d1cd55c40740b1bd9147ad79f307128d",
+    "semantic_hash": "d1cd55c40740b1bd9147ad79f307128d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/disk-caching-and-performance.md": {
+    "mtime": 1763749624.8869762,
+    "ast_hash": "670052512f884fb56e8df48dae6b525c",
+    "semantic_hash": "670052512f884fb56e8df48dae6b525c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/netplan.md": {
+    "mtime": 1763749624.887929,
+    "ast_hash": "08b81804be344321152685cdc3c8e8ca",
+    "semantic_hash": "08b81804be344321152685cdc3c8e8ca"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/clean-system.md": {
+    "mtime": 1763749624.886625,
+    "ast_hash": "a62021ec14978691321f6a2b45b08dc6",
+    "semantic_hash": "a62021ec14978691321f6a2b45b08dc6"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Makefile.md": {
+    "mtime": 1763749624.8753307,
+    "ast_hash": "34b0cc809561126f681ba705a4044500",
+    "semantic_hash": "34b0cc809561126f681ba705a4044500"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/automatic-upgrades.md": {
+    "mtime": 1763749624.886113,
+    "ast_hash": "4752af0a71b926681df56f11cc311193",
+    "semantic_hash": "4752af0a71b926681df56f11cc311193"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/wm.md": {
+    "mtime": 1763749624.8919823,
+    "ast_hash": "05bd4881b9e14515b8da75a38d7d2570",
+    "semantic_hash": "05bd4881b9e14515b8da75a38d7d2570"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Networking/traceroute.md": {
+    "mtime": 1763749624.8759348,
+    "ast_hash": "1a3a0995965820ac00a9239cb4103b6f",
+    "semantic_hash": "1a3a0995965820ac00a9239cb4103b6f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/NixOS/nix-configs.md": {
+    "mtime": 1763749624.8802574,
+    "ast_hash": "07c86910a602f0aa84bfd98aad8b12ba",
+    "semantic_hash": "07c86910a602f0aa84bfd98aad8b12ba"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/NixOS/install-system.md": {
+    "mtime": 1763749624.8773026,
+    "ast_hash": "cd78a19cf32e15f6ee7c76ec1615b3ed",
+    "semantic_hash": "cd78a19cf32e15f6ee7c76ec1615b3ed"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/NixOS/flakes.md": {
+    "mtime": 1763749624.8765297,
+    "ast_hash": "b403bea525da4348ce70ef65b9764cb4",
+    "semantic_hash": "b403bea525da4348ce70ef65b9764cb4"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/NixOS/install-zfs.md": {
+    "mtime": 1763749624.8784382,
+    "ast_hash": "087c7b9b04eef185cc69b9a5fc87455a",
+    "semantic_hash": "087c7b9b04eef185cc69b9a5fc87455a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/HDs/ssd-cache.md": {
+    "mtime": 1763749624.863405,
+    "ast_hash": "971f2c4f997068d0903f0a11ee182e92",
+    "semantic_hash": "971f2c4f997068d0903f0a11ee182e92"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/HDs/spin-down.md": {
+    "mtime": 1763749624.8627596,
+    "ast_hash": "045b0a38fef5e759207adbde5d8f03db",
+    "semantic_hash": "045b0a38fef5e759207adbde5d8f03db"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/HDs/smart.md": {
+    "mtime": 1763749624.862092,
+    "ast_hash": "800357d33b4f37e838bcdb3c4226f752",
+    "semantic_hash": "800357d33b4f37e838bcdb3c4226f752"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Kernel/linux-io.md": {
+    "mtime": 1763749624.8739235,
+    "ast_hash": "a154804c3fe0450ab3aabaf95603cd77",
+    "semantic_hash": "a154804c3fe0450ab3aabaf95603cd77"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Kernel/linux-5.15.md": {
+    "mtime": 1763749624.8735113,
+    "ast_hash": "a15f85ab0c54362f22dd9f3d116c40e4",
+    "semantic_hash": "a15f85ab0c54362f22dd9f3d116c40e4"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Kernel/linux-secureboot.md": {
+    "mtime": 1763749624.8749158,
+    "ast_hash": "b28a5c15e75a65bac139dfa79a39e60a",
+    "semantic_hash": "b28a5c15e75a65bac139dfa79a39e60a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Kernel/linux-performance.md": {
+    "mtime": 1763749624.8745873,
+    "ast_hash": "742fcb2d11d146f06dde0fb9a8445b0e",
+    "semantic_hash": "742fcb2d11d146f06dde0fb9a8445b0e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Drivers/rocm.md": {
+    "mtime": 1763755158.3181844,
+    "ast_hash": "ab5b8243f36869c936ecf73d2a6bbad0",
+    "semantic_hash": "ab5b8243f36869c936ecf73d2a6bbad0"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Drivers/radeon.md": {
+    "mtime": 1763755158.3176172,
+    "ast_hash": "99a7b13f0543b9b3ab179faa68acc595",
+    "semantic_hash": "99a7b13f0543b9b3ab179faa68acc595"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/ZFS/zfs.md": {
+    "mtime": 1763749624.884402,
+    "ast_hash": "fd6e37f5278bd8585c036dbbf0537367",
+    "semantic_hash": "fd6e37f5278bd8585c036dbbf0537367"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/ZFS/zsys.md": {
+    "mtime": 1763749624.8855925,
+    "ast_hash": "7c9b7884c20dce08747395f74f1002d4",
+    "semantic_hash": "7c9b7884c20dce08747395f74f1002d4"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Hardware/notebook.md": {
+    "mtime": 1770929727.8334236,
+    "ast_hash": "cf557dfa348a63a4001c37402b8cbbcc",
+    "semantic_hash": "cf557dfa348a63a4001c37402b8cbbcc"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Hardware/Overclock/oc-corsair.md": {
+    "mtime": 1763755158.3206105,
+    "ast_hash": "0c97548c70b791afc516ad7c818fea71",
+    "semantic_hash": "0c97548c70b791afc516ad7c818fea71"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Hardware/Tuning/disable-cpu-mitigations.md": {
+    "mtime": 1763755158.3210068,
+    "ast_hash": "5f0c63f607a8193fcbba8b38253ad0ec",
+    "semantic_hash": "5f0c63f607a8193fcbba8b38253ad0ec"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Hardware/Monitoring/cpu-temperature.md": {
+    "mtime": 1763755158.3201761,
+    "ast_hash": "97661704c807ea1cd4b6b69538e71589",
+    "semantic_hash": "97661704c807ea1cd4b6b69538e71589"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Hardware/Checks/linux-ram-speed.md": {
+    "mtime": 1763755158.319723,
+    "ast_hash": "299c5da840df4fb67c72dfa52789d6b0",
+    "semantic_hash": "299c5da840df4fb67c72dfa52789d6b0"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Hardware/Benchmarks/7zip.md": {
+    "mtime": 1763755158.318794,
+    "ast_hash": "e379c5198eaef42112a60c2e353339b8",
+    "semantic_hash": "e379c5198eaef42112a60c2e353339b8"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/Hardware/Benchmarks/linux-cpu-bench.md": {
+    "mtime": 1770635069.5500538,
+    "ast_hash": "f86d7e078d9bb628e942a35e9de2c54b",
+    "semantic_hash": "f86d7e078d9bb628e942a35e9de2c54b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/KVM/kvm-quickemu.md": {
+    "mtime": 1763749624.872221,
+    "ast_hash": "f0ffd96deccfc8754eea9f1a68fd9a25",
+    "semantic_hash": "f0ffd96deccfc8754eea9f1a68fd9a25"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/KVM/kvm-qemu.md": {
+    "mtime": 1763749624.8707895,
+    "ast_hash": "22c7db645b168ec25e13fa9c6a086136",
+    "semantic_hash": "22c7db645b168ec25e13fa9c6a086136"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/TrueNAS/truenas.md": {
+    "mtime": 1763749624.8832974,
+    "ast_hash": "0d7ee02269c1a2188e328a902776d3e6",
+    "semantic_hash": "0d7ee02269c1a2188e328a902776d3e6"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/TrueNAS/truenas-scripts.md": {
+    "mtime": 1763749624.8829954,
+    "ast_hash": "6cd81b9ee78c33abebeb6b6748b4a3a4",
+    "semantic_hash": "6cd81b9ee78c33abebeb6b6748b4a3a4"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/GNU-Linux/TrueNAS/truenas-install.md": {
+    "mtime": 1763749624.8823292,
+    "ast_hash": "09d143ca5ad562f5f12a535dbbde2589",
+    "semantic_hash": "09d143ca5ad562f5f12a535dbbde2589"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/Windows/robocopy.md": {
+    "mtime": 1763749624.8993094,
+    "ast_hash": "e903e3fca468a730b79caf86a1276d99",
+    "semantic_hash": "e903e3fca468a730b79caf86a1276d99"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/Windows/generic-keys.md": {
+    "mtime": 1763749624.8987095,
+    "ast_hash": "0ccc9fb1474b94bb314b748fbecce6c5",
+    "semantic_hash": "0ccc9fb1474b94bb314b748fbecce6c5"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/Windows/windows-tools.md": {
+    "mtime": 1763749624.9011004,
+    "ast_hash": "72176d0b213612890b3fec34ecc21618",
+    "semantic_hash": "72176d0b213612890b3fec34ecc21618"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/Windows/windows-ssd.md": {
+    "mtime": 1763749624.9004867,
+    "ast_hash": "4a734285c72a449a7c9c4cc365ca41f3",
+    "semantic_hash": "4a734285c72a449a7c9c4cc365ca41f3"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/Windows/windows-mbr.md": {
+    "mtime": 1763749624.8996978,
+    "ast_hash": "aae88c3483e3a36f4a2958263937d75e",
+    "semantic_hash": "aae88c3483e3a36f4a2958263937d75e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/Windows/windows-nfs.md": {
+    "mtime": 1763749624.9000053,
+    "ast_hash": "8002e8a87093c05355579b23351bab3c",
+    "semantic_hash": "8002e8a87093c05355579b23351bab3c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/Windows/Power-Management.md": {
+    "mtime": 1766579625.4021008,
+    "ast_hash": "1e230268ce8fc64239c4fe30bf1cb80a",
+    "semantic_hash": "1e230268ce8fc64239c4fe30bf1cb80a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/Windows/WSL/nix-configs.md": {
+    "mtime": 1763749624.8961983,
+    "ast_hash": "0c8acfddf624da2dfc75eb81eaf33982",
+    "semantic_hash": "0c8acfddf624da2dfc75eb81eaf33982"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/Windows/WSL/wsl-visualstudio.md": {
+    "mtime": 1763749624.8980794,
+    "ast_hash": "473113bf715d3cf24ed850d3e6441bc7",
+    "semantic_hash": "473113bf715d3cf24ed850d3e6441bc7"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/Windows/WSL/wsl-ansible-molecule-vagrant.md": {
+    "mtime": 1763749624.8968077,
+    "ast_hash": "b77bd3ce429bc0d50da14fc5a98a2f09",
+    "semantic_hash": "b77bd3ce429bc0d50da14fc5a98a2f09"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/Windows/WSL/wsl-install-powershell.md": {
+    "mtime": 1763749624.897435,
+    "ast_hash": "ad94b9870acb8fd2ffda317a79dd89da",
+    "semantic_hash": "ad94b9870acb8fd2ffda317a79dd89da"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/MacOS/nix-configs.md": {
+    "mtime": 1763749624.894219,
+    "ast_hash": "2dd77b5fcfd5e1fa9b9a2a1d32655301",
+    "semantic_hash": "2dd77b5fcfd5e1fa9b9a2a1d32655301"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/MacOS/vram-config-macos.md": {
+    "mtime": 1773618818.7107673,
+    "ast_hash": "4ca79818193e4d13d7753922ed783f3e",
+    "semantic_hash": "4ca79818193e4d13d7753922ed783f3e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/OS/MacOS/i3-tiling-macos.md": {
+    "mtime": 1763749624.8926008,
+    "ast_hash": "c9608bfb2e762e44516341249774cf37",
+    "semantic_hash": "c9608bfb2e762e44516341249774cf37"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Hardware/ups.md": {
+    "mtime": 1772876222.7775698,
+    "ast_hash": "edd695bbe0d4e8d2fcad80e5b2471f7e",
+    "semantic_hash": "edd695bbe0d4e8d2fcad80e5b2471f7e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Hardware/Power-Supply/calculate-power.md": {
+    "mtime": 1763749624.8569512,
+    "ast_hash": "4e9fce08f736eb621882450f11b55798",
+    "semantic_hash": "4e9fce08f736eb621882450f11b55798"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Hardware/Power-Supply/notebook-power.md": {
+    "mtime": 1763749624.8577213,
+    "ast_hash": "532271750a3e404ef70ad6b07af1867a",
+    "semantic_hash": "532271750a3e404ef70ad6b07af1867a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Hardware/KVM/remote-screen.md": {
+    "mtime": 1763749624.8546896,
+    "ast_hash": "bdaa4ff560841a5d12216642247042f4",
+    "semantic_hash": "bdaa4ff560841a5d12216642247042f4"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Hardware/Memory/xmp.md": {
+    "mtime": 1763749624.8559487,
+    "ast_hash": "64e9a4329fb3214ebc625e3a5e222ca7",
+    "semantic_hash": "64e9a4329fb3214ebc625e3a5e222ca7"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Hardware/Memory/ram-problems.md": {
+    "mtime": 1763749624.8552475,
+    "ast_hash": "bbdf3a7c74ffd7fa9d4c59bfd3b68871",
+    "semantic_hash": "bbdf3a7c74ffd7fa9d4c59bfd3b68871"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Hardware/CPU/coolers.md": {
+    "mtime": 1763749624.8531663,
+    "ast_hash": "20860fb00c520dc5a598c6eaae95a3fc",
+    "semantic_hash": "20860fb00c520dc5a598c6eaae95a3fc"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Hardware/CPU/delid.md": {
+    "mtime": 1763749624.8538299,
+    "ast_hash": "44042589be5570ed229976d54ec29b91",
+    "semantic_hash": "44042589be5570ed229976d54ec29b91"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/blog/authors.yml": {
+    "mtime": 1746304290.0299902,
+    "ast_hash": "62c66edbc6617b404e58acccaa241666",
+    "semantic_hash": "62c66edbc6617b404e58acccaa241666"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/blog/2021-11-09-first-blog-post/index.md": {
+    "mtime": 1746304290.0290666,
+    "ast_hash": "8f8b423d5168b64d84225b7124741503",
+    "semantic_hash": "8f8b423d5168b64d84225b7124741503"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/robots.txt": {
+    "mtime": 1748160417.3740916,
+    "ast_hash": "7667f4136e2a470fd586413cde32ce86",
+    "semantic_hash": "7667f4136e2a470fd586413cde32ce86"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.github/dependabot.yml": {
+    "mtime": 1778955511.2193184,
+    "ast_hash": "8c9eed897fa22c1017459c1abfa00d9b",
+    "semantic_hash": "8c9eed897fa22c1017459c1abfa00d9b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.github/workflows/pr.yml": {
+    "mtime": 1778954476.0466673,
+    "ast_hash": "86362ee5c30a89067e0e1bc36916e815",
+    "semantic_hash": "86362ee5c30a89067e0e1bc36916e815"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.github/workflows/indexing.yml": {
+    "mtime": 1770661934.6495364,
+    "ast_hash": "82e941f15179147283d009807a99af4b",
+    "semantic_hash": "82e941f15179147283d009807a99af4b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/.github/workflows/master.yml": {
+    "mtime": 1778954500.7695808,
+    "ast_hash": "84204ffb51a3883488a1632860c411cf",
+    "semantic_hash": "84204ffb51a3883488a1632860c411cf"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/AGENTS.md": {
+    "mtime": 1778957323.8926775,
+    "ast_hash": "1d177f2e487326d31c65c6d4aaed3d45",
+    "semantic_hash": "1d177f2e487326d31c65c6d4aaed3d45"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/XmlChar/README.md": {
+    "mtime": 1771795152.5107636,
+    "ast_hash": "6c08f1c1c34b9527a367663d3c4c9bbf",
+    "semantic_hash": "6c08f1c1c34b9527a367663d3c4c9bbf"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/XmlChar/AGENTS.md": {
+    "mtime": 1778951970.5084178,
+    "ast_hash": "9cadc9a9271a384e60f22862295a52e0",
+    "semantic_hash": "9cadc9a9271a384e60f22862295a52e0"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/CharSearch/AGENTS.md": {
+    "mtime": 1778951970.5076828,
+    "ast_hash": "6d08f73ac93484afb38b5dd84414b970",
+    "semantic_hash": "6d08f73ac93484afb38b5dd84414b970"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/pages/markdown-page.md": {
+    "mtime": 1746304290.1422615,
+    "ast_hash": "9a308d3366f2b1fb40267a141b50d4d5",
+    "semantic_hash": "9a308d3366f2b1fb40267a141b50d4d5"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/blog/2021-11-09-first-blog-post/docusaurus-plushie-banner.jpeg": {
+    "mtime": 1746304290.028881,
+    "ast_hash": "192a6a160f31b1689a4c6233bdbbb803",
+    "semantic_hash": "192a6a160f31b1689a4c6233bdbbb803"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/windows-mbr.png": {
+    "mtime": 1771795152.797249,
+    "ast_hash": "c57343ca219d5429690b6dfb4c9a2a86",
+    "semantic_hash": "c57343ca219d5429690b6dfb4c9a2a86"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/lstopo-pin-cpu-ryzen3900.png": {
+    "mtime": 1771795152.7874453,
+    "ast_hash": "a3db47c1f503852a51d41b4015aa6063",
+    "semantic_hash": "a3db47c1f503852a51d41b4015aa6063"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/undraw_docusaurus_mountain.svg": {
+    "mtime": 1746304290.1615942,
+    "ast_hash": "8d04d316f4d1777793ee773fcbf16cea",
+    "semantic_hash": "8d04d316f4d1777793ee773fcbf16cea"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/paper-colored-dark.svg": {
+    "mtime": 1769184899.870955,
+    "ast_hash": "fa4b02361a19070397a372addf2ca7c0",
+    "semantic_hash": "fa4b02361a19070397a372addf2ca7c0"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/leaves-02.svg": {
+    "mtime": 1748196086.2361226,
+    "ast_hash": "11e6a8383507ed24562adad0615e03b0",
+    "semantic_hash": "11e6a8383507ed24562adad0615e03b0"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/divider-01.svg": {
+    "mtime": 1748174936.9721458,
+    "ast_hash": "d8e5282728693328c998a746f8310069",
+    "semantic_hash": "d8e5282728693328c998a746f8310069"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/colorchecker.jpg": {
+    "mtime": 1771795152.7737632,
+    "ast_hash": "673cc363eff81ad30f34eab086053377",
+    "semantic_hash": "673cc363eff81ad30f34eab086053377"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/divider-02.svg": {
+    "mtime": 1748174783.5455713,
+    "ast_hash": "9610d58d1933396c975403fca27c9e69",
+    "semantic_hash": "9610d58d1933396c975403fca27c9e69"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/wavy.svg": {
+    "mtime": 1767801104.4061794,
+    "ast_hash": "03c6f43d0abf0ada9bbc437b0c0c8e37",
+    "semantic_hash": "03c6f43d0abf0ada9bbc437b0c0c8e37"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/undraw_docusaurus_react.svg": {
+    "mtime": 1746304290.1619825,
+    "ast_hash": "3d3d63efa464a74e2befd1569465ed21",
+    "semantic_hash": "3d3d63efa464a74e2befd1569465ed21"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/virtiofs-start-svc.png": {
+    "mtime": 1771795152.7959378,
+    "ast_hash": "b1c8e4ab4e920f69ce3e4b570c8b1b4b",
+    "semantic_hash": "b1c8e4ab4e920f69ce3e4b570c8b1b4b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/paper-no-color.svg": {
+    "mtime": 1770659836.675472,
+    "ast_hash": "650f6034ed637262be6e7855e572909e",
+    "semantic_hash": "650f6034ed637262be6e7855e572909e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/sdr-forest-01.jpg": {
+    "mtime": 1771795152.7916696,
+    "ast_hash": "2048847d194ace6bc61fc3dcf8b5293e",
+    "semantic_hash": "2048847d194ace6bc61fc3dcf8b5293e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/paper-colored.svg": {
+    "mtime": 1767906163.397053,
+    "ast_hash": "800a3b3e6043d5036c799e88d923ff10",
+    "semantic_hash": "800a3b3e6043d5036c799e88d923ff10"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/displaycall-1.png": {
+    "mtime": 1771795152.7779,
+    "ast_hash": "9ace52bf927d00d20fc95d3007aa952c",
+    "semantic_hash": "9ace52bf927d00d20fc95d3007aa952c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/lstopo-cpu-ryzen3900.png": {
+    "mtime": 1771795152.785897,
+    "ast_hash": "474d82f937c5d8e33be2c36d408d46a2",
+    "semantic_hash": "474d82f937c5d8e33be2c36d408d46a2"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/displaycall-2.png": {
+    "mtime": 1771795152.7800648,
+    "ast_hash": "e03a6677926929460a7408ff354f7e10",
+    "semantic_hash": "e03a6677926929460a7408ff354f7e10"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/displaycall-3.png": {
+    "mtime": 1771795152.782842,
+    "ast_hash": "fe6a4447d4234ad311bca12f5225ef40",
+    "semantic_hash": "fe6a4447d4234ad311bca12f5225ef40"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/docusaurus.png": {
+    "mtime": 1771795152.7841544,
+    "ast_hash": "7fa1a026116afe175cae818030d4ffc4",
+    "semantic_hash": "7fa1a026116afe175cae818030d4ffc4"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/logo-docusaurus.svg": {
+    "mtime": 1746304290.1555753,
+    "ast_hash": "aa4fa2cdc39d33f2ee3b8f245b6d30d9",
+    "semantic_hash": "aa4fa2cdc39d33f2ee3b8f245b6d30d9"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/tree.png": {
+    "mtime": 1772997579.844814,
+    "ast_hash": "1dfd03c8193987b4514015823ba3fc8a",
+    "semantic_hash": "1dfd03c8193987b4514015823ba3fc8a"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/trees-02.svg": {
+    "mtime": 1748168293.5869691,
+    "ast_hash": "def567156f9e05f01f92a38a60d22bcb",
+    "semantic_hash": "def567156f9e05f01f92a38a60d22bcb"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/undraw_docusaurus_tree.svg": {
+    "mtime": 1748196275.4174933,
+    "ast_hash": "223181c982bad9566b205e7c6e336208",
+    "semantic_hash": "223181c982bad9566b205e7c6e336208"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/tree.svg": {
+    "mtime": 1769895582.7259803,
+    "ast_hash": "f991efc046cabd7d9473a3857030bec8",
+    "semantic_hash": "f991efc046cabd7d9473a3857030bec8"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/logo.svg": {
+    "mtime": 1746304290.1559606,
+    "ast_hash": "64aa331c93f86ef1034141c05f84f47b",
+    "semantic_hash": "64aa331c93f86ef1034141c05f84f47b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/tutorial/docsVersionDropdown.png": {
+    "mtime": 1771795152.7931213,
+    "ast_hash": "b9d9189ed8f8dd58e70d9f8b3f693b3e",
+    "semantic_hash": "b9d9189ed8f8dd58e70d9f8b3f693b3e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/img/tutorial/localeDropdown.png": {
+    "mtime": 1771795152.7943666,
+    "ast_hash": "c14bff79aafafca0957ccc34ee026e2c",
+    "semantic_hash": "c14bff79aafafca0957ccc34ee026e2c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/dracarys.jpg": {
+    "mtime": 1771877027.1478784,
+    "ast_hash": "5d30351a893e5917afc21bc159292b32",
+    "semantic_hash": "5d30351a893e5917afc21bc159292b32"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/samu.png": {
+    "mtime": 1771880503.364287,
+    "ast_hash": "85a569f9e341e867de4489f78c56f356",
+    "semantic_hash": "85a569f9e341e867de4489f78c56f356"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/gralamin.jpg": {
+    "mtime": 1771877027.1488204,
+    "ast_hash": "6ff37614c5458eedca61b5fe1c378a9f",
+    "semantic_hash": "6ff37614c5458eedca61b5fe1c378a9f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/mim.jpg": {
+    "mtime": 1771882711.8349648,
+    "ast_hash": "aa5115661a905cc83adb53f5f963cbcb",
+    "semantic_hash": "aa5115661a905cc83adb53f5f963cbcb"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/draevan.jpg": {
+    "mtime": 1772981957.9627173,
+    "ast_hash": "ddfa83473a500d059ba4fbe3913db587",
+    "semantic_hash": "ddfa83473a500d059ba4fbe3913db587"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/akinori.jpg": {
+    "mtime": 1772981755.3064833,
+    "ast_hash": "2f8673346c400e15d50c3663f06e2920",
+    "semantic_hash": "2f8673346c400e15d50c3663f06e2920"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/lyvie.png": {
+    "mtime": 1771882711.8342242,
+    "ast_hash": "ebb9f50616f7a9f1313263095610f843",
+    "semantic_hash": "ebb9f50616f7a9f1313263095610f843"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/khalid.jpg": {
+    "mtime": 1771875571.9183166,
+    "ast_hash": "ea96c8372cc2cc67fa08ca583c853e42",
+    "semantic_hash": "ea96c8372cc2cc67fa08ca583c853e42"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/berkil.jpg": {
+    "mtime": 1772981883.0155144,
+    "ast_hash": "ce1fa04c45b52673c2bdd0f3690a64f0",
+    "semantic_hash": "ce1fa04c45b52673c2bdd0f3690a64f0"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/faceless.svg": {
+    "mtime": 1771795152.7089489,
+    "ast_hash": "b79ede89bb65660f06d767bf944dec54",
+    "semantic_hash": "b79ede89bb65660f06d767bf944dec54"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/gilean.png": {
+    "mtime": 1771882711.8278494,
+    "ast_hash": "3b0144a79c19005980a8dc1289f48b5e",
+    "semantic_hash": "3b0144a79c19005980a8dc1289f48b5e"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/zatoichi.jpg": {
+    "mtime": 1771880503.3658447,
+    "ast_hash": "d50c25ebf1addb44fdf77549652d15dc",
+    "semantic_hash": "d50c25ebf1addb44fdf77549652d15dc"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/tanadirian.jpg": {
+    "mtime": 1771795152.7153287,
+    "ast_hash": "281b6d762c566ac844f62cce40806c9f",
+    "semantic_hash": "281b6d762c566ac844f62cce40806c9f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/osric.jpg": {
+    "mtime": 1771880503.3632412,
+    "ast_hash": "aaca9243bb86b2bf4e959bd6df44ebbc",
+    "semantic_hash": "aaca9243bb86b2bf4e959bd6df44ebbc"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/erevan.jpg": {
+    "mtime": 1771875571.9177732,
+    "ast_hash": "6c6deb6ff38f9152c7ca1098597dfb0b",
+    "semantic_hash": "6c6deb6ff38f9152c7ca1098597dfb0b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/murky.png": {
+    "mtime": 1771878332.5730062,
+    "ast_hash": "0a3860c657167d61b32ad6d711935ea1",
+    "semantic_hash": "0a3860c657167d61b32ad6d711935ea1"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/taldarin.png": {
+    "mtime": 1771880503.3650439,
+    "ast_hash": "988ecc63b1e394c244ca0a92a93876f9",
+    "semantic_hash": "988ecc63b1e394c244ca0a92a93876f9"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/kallash.jpg": {
+    "mtime": 1771882711.8305316,
+    "ast_hash": "709d9bbb1d9d0860ced557135c510380",
+    "semantic_hash": "709d9bbb1d9d0860ced557135c510380"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/brokk.jpg": {
+    "mtime": 1771880503.3567584,
+    "ast_hash": "376016de333ad87e608aac20f489a82c",
+    "semantic_hash": "376016de333ad87e608aac20f489a82c"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/samoth.jpg": {
+    "mtime": 1771877027.1550305,
+    "ast_hash": "8fec203c7625788363cf1c08c06dbe40",
+    "semantic_hash": "8fec203c7625788363cf1c08c06dbe40"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/milo.jpg": {
+    "mtime": 1771795152.710748,
+    "ast_hash": "45a6a543927c223884184cf746381f19",
+    "semantic_hash": "45a6a543927c223884184cf746381f19"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/teghen.png": {
+    "mtime": 1771880907.8790429,
+    "ast_hash": "7467dcacdd5c626937a3b609e2d285d9",
+    "semantic_hash": "7467dcacdd5c626937a3b609e2d285d9"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/malagolvir.jpg": {
+    "mtime": 1771877027.15426,
+    "ast_hash": "f5316907b507920cf0e9840f7a657a76",
+    "semantic_hash": "f5316907b507920cf0e9840f7a657a76"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/guldan.jpg": {
+    "mtime": 1771880828.2952287,
+    "ast_hash": "8c52951cca130fbc7edffd564e391129",
+    "semantic_hash": "8c52951cca130fbc7edffd564e391129"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/gromash.jpg": {
+    "mtime": 1771877027.1495476,
+    "ast_hash": "1dc85925e3aeb2d53f61ef36c0c57fa9",
+    "semantic_hash": "1dc85925e3aeb2d53f61ef36c0c57fa9"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/candise.jpg": {
+    "mtime": 1771877027.146467,
+    "ast_hash": "7950a8f806fa2ae0fff80dd8fdf40f6b",
+    "semantic_hash": "7950a8f806fa2ae0fff80dd8fdf40f6b"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/kristof.png": {
+    "mtime": 1771880503.3594608,
+    "ast_hash": "159c796918becbf00d030b71c511b3ea",
+    "semantic_hash": "159c796918becbf00d030b71c511b3ea"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/maeth.png": {
+    "mtime": 1771880503.3602278,
+    "ast_hash": "0396307013fd674d18fdea1233a71bf6",
+    "semantic_hash": "0396307013fd674d18fdea1233a71bf6"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/alioth.jpg": {
+    "mtime": 1771795152.7058,
+    "ast_hash": "3bf4c9d06e9e193bd76ba3983cb4ece6",
+    "semantic_hash": "3bf4c9d06e9e193bd76ba3983cb4ece6"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/sorey.jpg": {
+    "mtime": 1771875571.9202178,
+    "ast_hash": "98daf7b2d0da160588fca7f7885a843d",
+    "semantic_hash": "98daf7b2d0da160588fca7f7885a843d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/dougal.jpg": {
+    "mtime": 1771875571.916956,
+    "ast_hash": "13aaa44dba60566ca4b0eceb2d173b35",
+    "semantic_hash": "13aaa44dba60566ca4b0eceb2d173b35"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/burzum.png": {
+    "mtime": 1771880503.3577163,
+    "ast_hash": "c368b6ca2f76dfc2002b1dcbecdd2c85",
+    "semantic_hash": "c368b6ca2f76dfc2002b1dcbecdd2c85"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/karmo.jpg": {
+    "mtime": 1771882711.8318393,
+    "ast_hash": "fef248077db8eb2b520c5949fdc5e3d2",
+    "semantic_hash": "fef248077db8eb2b520c5949fdc5e3d2"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/ethir.png": {
+    "mtime": 1771880503.358661,
+    "ast_hash": "9db9f3a98a918f5be082c166e7231d60",
+    "semantic_hash": "9db9f3a98a918f5be082c166e7231d60"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/tygra.jpg": {
+    "mtime": 1771877027.1563547,
+    "ast_hash": "0bf2338ea041da71ec14c2efe08b4221",
+    "semantic_hash": "0bf2338ea041da71ec14c2efe08b4221"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/horgh.jpg": {
+    "mtime": 1771877027.153065,
+    "ast_hash": "b4f99a182b7564a7537170ef5e4af1c7",
+    "semantic_hash": "b4f99a182b7564a7537170ef5e4af1c7"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/hiro.png": {
+    "mtime": 1771877027.1522622,
+    "ast_hash": "921e19ef91307d337f0328a3d96a399f",
+    "semantic_hash": "921e19ef91307d337f0328a3d96a399f"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/ilmaris.png": {
+    "mtime": 1771882711.8292089,
+    "ast_hash": "274628a3456919a8ad50effa41e51ec3",
+    "semantic_hash": "274628a3456919a8ad50effa41e51ec3"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/olaf.jpg": {
+    "mtime": 1771880503.362463,
+    "ast_hash": "cc66da1d82d21f9695a08747f13baae7",
+    "semantic_hash": "cc66da1d82d21f9695a08747f13baae7"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/rolen.png": {
+    "mtime": 1771880503.3637435,
+    "ast_hash": "e502202f694d4a00d0b404b3d643b144",
+    "semantic_hash": "e502202f694d4a00d0b404b3d643b144"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/static/fg/avatar/antonidas.png": {
+    "mtime": 1771795152.7080855,
+    "ast_hash": "ca1829e25b14e9258fd934639d2e0787",
+    "semantic_hash": "ca1829e25b14e9258fd934639d2e0787"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/XmlChar/assets/divider-triangle.svg": {
+    "mtime": 1771795152.5151353,
+    "ast_hash": "8320db58835ff34b15fd2b8626edd61d",
+    "semantic_hash": "8320db58835ff34b15fd2b8626edd61d"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/src/components/XmlChar/assets/divider-triangle-dark.svg": {
+    "mtime": 1771795152.5144038,
+    "ast_hash": "95b9953b0faf1febb0db1b1a31e170fa",
+    "semantic_hash": "95b9953b0faf1febb0db1b1a31e170fa"
+  }
+}
