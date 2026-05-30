@@ -945,9 +945,9 @@
     "semantic_hash": "18315ff64139fc33abf1010f538bac39"
   },
   "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Software-Architecture/streaming.md": {
-    "mtime": 1763749624.7832005,
-    "ast_hash": "df4639ffed955adaedc6e33d99829865",
-    "semantic_hash": "df4639ffed955adaedc6e33d99829865"
+    "mtime": 1780141220.8049872,
+    "ast_hash": "a8ed66877e3e449c3095cab025d2c326",
+    "semantic_hash": ""
   },
   "/Users/sdelrio/github/sdelrio/golden-forest/docs/Develop-Code/Software-Architecture/data-stack.md": {
     "mtime": 1769865197.2570727,
@@ -2543,5 +2543,10 @@
     "mtime": 1771795152.5144038,
     "ast_hash": "95b9953b0faf1febb0db1b1a31e170fa",
     "semantic_hash": "95b9953b0faf1febb0db1b1a31e170fa"
+  },
+  "/Users/sdelrio/github/sdelrio/golden-forest/docs/OS-and-Hardware/Hardware/LLM/dual-gpu-llm-setup.md": {
+    "mtime": 1780144370.0684066,
+    "ast_hash": "d2b8412f518cdfe8ecccb59e538839ca",
+    "semantic_hash": ""
   }
 }
