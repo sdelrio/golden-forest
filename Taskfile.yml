@@ -151,7 +151,10 @@ tasks:
   check:
     desc: Run Docusaurus MDX checker
     cmds:
-      - "{{.NPX}} docusaurus-mdx-checker"
+      - "{{.NPX}} docusaurus-mdx-checker -c docs/"
+      - "{{.NPX}} docusaurus-mdx-checker -c tutorial/"
+      - "{{.NPX}} docusaurus-mdx-checker -c src/"
+      - "{{.NPX}} docusaurus-mdx-checker -c blog/"
 
   test:links:
     desc: Check for broken links in the build directory (most reliable)
