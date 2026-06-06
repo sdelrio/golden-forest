@@ -74,9 +74,16 @@ For maximum privacy and zero cost (if you have the hardware).
   <Card title="LM Studio" icon="mdi:desktop-classic" href="https://lmstudio.ai">
     Discover, download, and run local LLMs.
   </Card>
+  <Card title="llama.cpp" icon="mdi:chip" href="https://ai.manz.dev/setup/">
+    High-performance GGUF inference engine supporting CUDA, ROCm, Metal, and Vulkan.
+    Compile with GPU acceleration for maximum token throughput on local hardware.
+    <br/><br/>
+    **Setup Guide:** [ai.manz.dev/setup](https://ai.manz.dev/setup/) — full walkthrough from install to optimized serving.
+  </Card>
 </CardGroup>
 
 ## References
 
 - [OpenRouter Models](https://openrouter.ai/docs/models)
 - [NVIDIA Build Console](https://build.nvidia.com)
+- [Local AI Setup Guide (ai.manz.dev)](https://ai.manz.dev/setup/)
