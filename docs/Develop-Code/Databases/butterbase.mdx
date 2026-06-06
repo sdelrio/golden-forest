@@ -1,0 +1,162 @@
+---
+id: butterbase
+title: Butterbase
+description: "AI-native open-source backend-as-a-service with Postgres, auth, storage, serverless functions, AI gateway, and a built-in MCP server for agentic workflows."
+tags: [Database, Backend, AI, Open-Source, BaaS, MCP, Postgres]
+---
+
+import Card from '@site/src/components/Card/Card';
+import CardGroup from '@site/src/components/Card/CardGroup';
+import Steps from '@site/src/components/Steps/Steps';
+import Step from '@site/src/components/Steps/Step';
+
+# Butterbase
+
+[Butterbase](https://butterbase.ai) is an **open-source, AI-native backend-as-a-service** that combines Postgres with row-level security, auth, storage, serverless functions, an AI gateway, and a built-in **Model Context Protocol (MCP) server** — so your AI agents can interact with your backend as real tools, not glue code.
+
+Self-host it with Docker or use the managed offering at [butterbase.ai](https://butterbase.ai).
+
+## Features
+
+<CardGroup cols={2}>
+  <Card title="Postgres + RLS" icon="mdi:database" href="https://github.com/butterbase-ai/butterbase#features">
+    Per-app databases with declarative schema, auto REST endpoints, row-level security, and migrations.
+  </Card>
+  <Card title="Key-Value Store" icon="mdi:key-variant" href="https://github.com/butterbase-ai/butterbase#features">
+    Regional KV with TTL, audit trail, and dashboard expose rules.
+  </Card>
+  <Card title="File Storage" icon="mdi:file-cloud" href="https://github.com/butterbase-ai/butterbase#features">
+    S3/R2-backed object storage with presigned URLs, ACLs, and async indexing.
+  </Card>
+  <Card title="Serverless Functions" icon="mdi:code-tags" href="https://github.com/butterbase-ai/butterbase#features">
+    TypeScript functions on the Deno runtime with Durable Objects for stateful actors.
+  </Card>
+  <Card title="Realtime & Edge" icon="mdi:flash" href="https://github.com/butterbase-ai/butterbase#features">
+    WebSocket subscriptions, Edge SSR (Next.js, Remix, Astro), and frontend hosting with custom domains.
+  </Card>
+  <Card title="AI Gateway" icon="mdi:robot" href="https://github.com/butterbase-ai/butterbase#features">
+    Single endpoint for chat and embeddings, pluggable router adapters, and managed RAG with semantic search.
+  </Card>
+  <Card title="Auth & Ops" icon="mdi:shield-account" href="https://github.com/butterbase-ai/butterbase#features">
+    Email + OAuth (Google, GitHub, Apple), JWT, service keys, audit logs, and outbound webhooks.
+  </Card>
+  <Card title="MCP Server" icon="mdi:connection" href="https://github.com/butterbase-ai/butterbase?tab=readme-ov-file#agent-surface">
+    Every capability exposed as MCP tools at /mcp — agents use your backend without manual integration code.
+  </Card>
+</CardGroup>
+
+## Architecture
+
+```mermaid
+flowchart TB
+    Client["Client Layer<br/>Apps · Agents · MCP Clients · CLI"]
+
+    subgraph ControlAPI["Control API (Fastify)"]
+        API["Apps · Auth · Schema · Auto-API<br/>RLS · Storage · Functions · KV<br/>Realtime · AI Gateway · RAG<br/>Durable Objects · MCP at /mcp"]
+    end
+
+    Client <-->|"REST · WebSocket · MCP"| ControlAPI
+
+    subgraph DataPlane["Data Plane"]
+        PG[("Postgres<br/>3 Planes")]
+        S3[("S3 / R2<br/>Object Storage")]
+        Redis[("Redis<br/>KV Store")]
+    end
+
+    subgraph ComputePlane["Compute Plane"]
+        Deno["Deno Runtime<br/>Serverless Functions"]
+        Python["Python Agent Runtime<br/>Long-running Agents"]
+        CF["Cloudflare Workers<br/>Build Runner · Dispatch"]
+    end
+
+    ControlAPI --> DataPlane
+    ControlAPI --> ComputePlane
+```
+
+### Three Postgres Planes
+
+- **Control Plane** — platform metadata: users, apps, billing, audit logs.
+- **Runtime Plane** — hot-path runtime tables: KV expose rules, realtime channels, sessions.
+- **Data Plane** — per-app user data with isolated schemas and RLS.
+
+## Quickstart (Self-Host)
+
+Requirements: **Docker**, **Node 22+**, **npm**.
+
+<Steps>
+ <Step title="Clone with submodules">
+  ```bash
+  git clone --recurse-submodules https://github.com/butterbase-ai/butterbase.git
+  cd butterbase
+  ```
+ </Step>
+ <Step title="Install and configure">
+  ```bash
+  npm ci
+  cp .env.example .env
+  ```
+ </Step>
+ <Step title="Start the stack">
+  ```bash
+  docker compose -f docker-compose.local.yml up -d
+  curl -sf http://localhost:4000/health/ready
+  ```
+ </Step>
+ <Step title="Run migrations">
+  ```bash
+  export NEON_PLATFORM_PRIMARY_URL=postgresql://butterbase:butterbase_dev@localhost:5433/butterbase_control
+  export NEON_RUNTIME_PROJECT_ID_US_EAST_1=postgresql://butterbase:butterbase_dev@localhost:5437/butterbase_runtime_us
+  export BUTTERBASE_REGIONS=us-east-1
+  npm run migrate:all
+  ```
+ </Step>
+ <Step title="Seed dev user">
+  ```bash
+  export NEON_PLATFORM_PRIMARY_URL=postgresql://butterbase:butterbase_dev@localhost:5433/butterbase_control
+  npm run seed:dev
+  ```
+ </Step>
+ <Step title="Smoke test">
+  ```bash
+  curl -X POST http://localhost:4000/init \
+    -H "Content-Type: application/json" \
+    -d '{"name": "my-app"}'
+  curl http://localhost:4000/apps
+  ```
+ </Step>
+</Steps>
+
+:::info
+Auth is disabled in local mode (`AUTH_ENABLED=false`). For production setup, see the [`SETUP.md`](https://github.com/butterbase-ai/butterbase/blob/main/SETUP.md) guide.
+:::
+
+## MCP Server & AI Integration
+
+Butterbase's **MCP server** at `/mcp` (HTTP) or via `npx @butterbase/mcp` (stdio) exposes every backend capability — database queries, auth, storage, functions, AI gateway, KV — as MCP tools. This means Claude, Cursor, or any MCP-compatible agent can interact with your backend directly.
+
+It also ships a [Claude Code plugin](https://github.com/butterbase-ai/butterbase-skills) with 30+ guided skills for agentic app building: idea → plan → schema → auth → functions → deploy → submit.
+
+:::tip
+No more manual glue code between your AI agents and your database. Butterbase exposes everything as tools your agents already understand.
+:::
+
+## Open-Source vs. Managed
+
+This repository ships the full **runtime data plane** — everything to self-host. The managed offering adds multi-region orchestration, billing, upstream AI router adapters, and ops dashboards.
+
+| Capability | Self-Host | Managed |
+| :--- | :---: | :---: |
+| Postgres + RLS | ✅ | ✅ |
+| Auth, Storage, Functions | ✅ | ✅ |
+| AI Gateway | ✅ (no upstream adapters) | ✅ (full routers) |
+| MCP Server | ✅ | ✅ |
+| Multi-Region | ❌ | ✅ |
+| Billing & Quotas | Unlimited | Leased |
+
+## References
+
+- [GitHub Repository](https://github.com/butterbase-ai/butterbase)
+- [Official Website](https://butterbase.ai)
+- [Self-Host Setup Guide](https://github.com/butterbase-ai/butterbase/blob/main/SETUP.md)
+- [Discord Community](https://discord.gg/eZ7PT68uP)
+- [Examples](https://github.com/butterbase-ai/butterbase/tree/main/Examples)
