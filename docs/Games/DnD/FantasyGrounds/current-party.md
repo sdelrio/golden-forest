@@ -4,8 +4,11 @@ hide_table_of_contents: true
 ---
 
 import XmlChar from '@site/src/components/XmlChar/XmlChar';
+import PartySummary from '@site/src/components/PartySummary/PartySummary';
 
 # Current Party
+
+<PartySummary />
 
 ## Active Characters
 
