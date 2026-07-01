@@ -131,7 +131,7 @@ Traditional headless browsers pass the entire, bloated HTML DOM structure to LLM
 
 ## Lightpanda vs. Obscura
 
-For a detailed, head-to-head architectural comparison between **Lightpanda** (Zig) and **Obscura** (Rust), including memory footprints, cold startup speeds, anti-bot capabilities, and native MCP features, see the central [Headless Browsers for AI](../headless-browser.md#head-to-head-obscura-vs-lightpanda) overview.
+For a detailed, head-to-head architectural comparison between **Lightpanda** (Zig) and **Obscura** (Rust), including memory footprints, cold startup speeds, anti-bot capabilities, and native MCP features, see the central [Headless Browsers for AI](../comparatives/headless-browser.md#head-to-head-obscura-vs-lightpanda) overview.
 
 ## Setup & Configuration
 

@@ -147,6 +147,13 @@ tasks:
     cmds:
       - python3 scripts/build-char-index.py
 
+  ## --- AI Dashboard ---
+
+  ai-dashboard:enrich:
+    desc: Enrich AI dashboard data from npm/GitHub APIs
+    cmds:
+      - node scripts/enrich-ai-dashboard.mjs
+
   ## --- Verification and Testing ---
   check:
     desc: Run Docusaurus MDX checker

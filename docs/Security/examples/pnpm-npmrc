@@ -1,0 +1,23 @@
+# pnpm Security Configuration
+# Protects against lifecycle script injection attacks (e.g., TanStack May 2026 compromise)
+#
+# Usage: Place in project root as .npmrc (pnpm reads from .npmrc) or in ~/.npmrc
+# Note: pnpm 11+ includes built-in install cooldown defenses
+
+# Block lifecycle scripts from running during install
+# pnpm already blocks scripts for non-root dependencies by default,
+# but this ensures even direct dependencies cannot run scripts
+ignore-scripts=true
+
+# Reject packages published less than 24 hours ago (1440 minutes)
+# Gives security researchers time to detect and flag malicious releases
+minimum-release-age=1440
+
+# Enforce strict peer dependency resolution to catch supply chain issues early
+strict-peer-dependencies=true
+
+# Enable automatic security auditing on install
+audit=true
+
+# Use frozen lockfile to prevent unauthorized dependency changes
+frozen-lockfile=true

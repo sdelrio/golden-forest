@@ -110,10 +110,10 @@ ln -s "$(pwd)/.agents/skills" .opencode/skills
 ## Related Tools
 
 <CardGroup cols={2}>
-  <Card title="Claude Code" icon="mdi:console" href="Skills-and-Agents/claude-code">
+  <Card title="Claude Code" icon="mdi:console" href="../../Skills-and-Agents/claude-code">
     Anthropic's terminal-first AI coding assistant with git awareness.
   </Card>
-  <Card title="OpenCode" icon="mdi:code-braces" href="Skills-and-Agents/opencode">
+  <Card title="OpenCode" icon="mdi:code-braces" href="../../Skills-and-Agents/opencode">
     Provider-agnostic AI coding CLI with 75+ models and LSP integration.
   </Card>
 </CardGroup>
@@ -123,6 +123,6 @@ ln -s "$(pwd)/.agents/skills" .opencode/skills
 - [Claude Code Official](https://claude.ai/code) — Anthropic's CLI documentation.
 - [OpenCode Official Site](https://opencode.ai) — Documentation and install guides.
 - [OpenCode GitHub](https://github.com/sst/opencode) — Source code and issue tracker.
-- [ClaudeKit Workflow](./Workflows/ClaudeKit-Workflow.md): Spec-driven AI development methodology.
+- [ClaudeKit Workflow](../Workflows/ClaudeKit-Workflow.md): Spec-driven AI development methodology.
 - [Autonomous Agents](./autonomous-agents.md): OpenFang and OpenSandbox for background operations.
 - [Model Context Protocol](https://modelcontextprotocol.io) — MCP specification and server registry.
