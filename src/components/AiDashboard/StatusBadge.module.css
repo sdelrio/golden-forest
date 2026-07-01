@@ -1,0 +1,25 @@
+.badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score {
+  position: absolute;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+  line-height: 1;
+}
+
+.sm .score {
+  font-size: 10px;
+}
+
+.lg .score {
+  font-size: 18px;
+}
+
+.progress {
+  transition: stroke-dashoffset 0.6s ease;
+}

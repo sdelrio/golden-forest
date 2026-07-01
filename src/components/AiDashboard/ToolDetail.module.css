@@ -1,0 +1,273 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.panel {
+  width: 100%;
+  max-width: 520px;
+  height: 100%;
+  background: var(--ifm-card-background-color, var(--ifm-background-surface-color));
+  overflow-y: auto;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.2s ease;
+  position: relative;
+}
+
+[data-theme='dark'] .panel {
+  background: #1a1612;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-700);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  z-index: 1;
+  transition: all 0.15s ease;
+}
+
+.closeBtn:hover {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-900);
+}
+
+.header {
+  padding: 1.5rem;
+  border-left: 4px solid;
+}
+
+.categoryBadge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  margin: 0 0 0.375rem;
+  font-size: 1.375rem;
+  color: var(--ifm-heading-color);
+  line-height: 1.3;
+}
+
+.description {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+}
+
+.body {
+  padding: 0 1.5rem 2rem;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  margin: 0 0 0.625rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ifm-color-emphasis-500);
+  font-weight: 700;
+}
+
+/* Health */
+.healthRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.healthDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1.5rem;
+  flex: 1;
+}
+
+.healthMetric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricLabel {
+  font-size: 0.6875rem;
+  color: var(--ifm-color-emphasis-500);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metricValue {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+}
+
+/* Code Block */
+.codeBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem 0.875rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.8125rem;
+  overflow-x: auto;
+}
+
+[data-theme='dark'] .codeBlock {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.codeBlock code {
+  white-space: nowrap;
+}
+
+.copyBtn {
+  border: none;
+  background: none;
+  color: var(--ifm-color-emphasis-500);
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.15s ease;
+}
+
+.copyBtn:hover {
+  color: var(--ifm-color-primary);
+}
+
+.copiedHint {
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.625rem;
+  color: #22c55e;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+/* Links */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.link:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+/* Agent badges */
+.agentList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.agentBadge {
+  display: inline-block;
+  padding: 0.1875rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme='dark'] .agentBadge {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* Tags */
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.6875rem;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-600);
+  font-weight: 500;
+}
+
+[data-theme='dark'] .tag {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* License */
+.license {
+  font-size: 0.875rem;
+  color: var(--ifm-font-color-base);
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .panel {
+    max-width: 100%;
+  }
+
+  .healthRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

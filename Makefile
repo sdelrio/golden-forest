@@ -112,5 +112,8 @@ list-chars: ## List and summarize Fantasy Grounds character XML files
 		printf "%-15s | %-30s | %-20s | %-3s | %-20s\n" "$$filename" "$$name" "$$race" "$$level" "$$classes"; \
 	done
 
+enrich-dashboard: ## Enrich AI dashboard data from npm/GitHub APIs
+	@node scripts/enrich-ai-dashboard.mjs
+
 test: ## Test web performance with unlighthouse
 	npx unlighthouse --site https://www.lorien.cloud

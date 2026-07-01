@@ -14,6 +14,7 @@ import Accordion from '../../components/Accordion/Accordion';
 import AccordionGroup from '../../components/Accordion/AccordionGroup';
 import ParamField from '../../components/ParamField/ParamField';
 import CodeGroup from '../../components/CodeGroup/CodeGroup';
+import AiDashboard from '../../components/AiDashboard/AiDashboard';
 
 export default {
   ...MDXComponents,
@@ -29,6 +30,7 @@ export default {
   AccordionGroup,
   ParamField,
   CodeGroup,
+  AiDashboard,
   // Map some common aliases that might be in the markdown
   Tab: TabItem,
   Note: (props) => <Admonition type="note" {...props} />,

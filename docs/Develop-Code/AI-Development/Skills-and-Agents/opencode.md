@@ -240,7 +240,7 @@ Using the `opencode-antigravity-auth` plugin to access Claude Opus and Gemini Pr
     ```
   </TabItem>
   <TabItem value="openai" label="OpenAI Trial">
-    New accounts receive $5–$18 in free credits. Configure in `opencode.json`:
+    New accounts receive \$5–\$18 in free credits. Configure in `opencode.json`:
     ```json
     {
       "providers": {

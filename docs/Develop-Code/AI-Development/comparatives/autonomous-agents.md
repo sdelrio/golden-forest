@@ -98,10 +98,10 @@ flowchart LR
 ## Related Tools
 
 <CardGroup cols={2}>
-  <Card title="OpenFang" icon="mdi:robot" href="Skills-and-Agents/openfang">
+  <Card title="OpenFang" icon="mdi:robot" href="../../Skills-and-Agents/openfang">
     Production-grade Agent OS in Rust with autonomous "Hands" for 24/7 operation.
   </Card>
-  <Card title="OpenSandbox" icon="mdi:shield-check" href="Skills-and-Agents/opensandbox">
+  <Card title="OpenSandbox" icon="mdi:shield-check" href="../../Skills-and-Agents/opensandbox">
     Secure execution environment by Alibaba for running untrusted agent code.
   </Card>
 </CardGroup>
@@ -111,5 +111,5 @@ flowchart LR
 - [OpenFang Website](https://openfang.sh)
 - [OpenFang GitHub](https://github.com/RightNow-AI/openfang)
 - [OpenSandbox GitHub](https://github.com/alibaba/OpenSandbox)
-- [ClaudeKit Workflow](./Workflows/ClaudeKit-Workflow.md): Spec-driven AI development methodology.
+- [ClaudeKit Workflow](../Workflows/ClaudeKit-Workflow.md): Spec-driven AI development methodology.
 - [Interactive Agents](./interactive-agents.md): Claude Code and OpenCode for real-time coding.

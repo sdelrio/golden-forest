@@ -111,7 +111,7 @@ Obscura contains a built-in MCP server, enabling AI agents to browse, read, and 
 
 ## Head-to-Head: Obscura vs. Lightpanda
 
-For a detailed, head-to-head architectural comparison between **Obscura** (Rust) and **Lightpanda** (Zig), including memory footprints, cold startup speeds, anti-bot capabilities, and native MCP features, see the central [Headless Browsers for AI](../headless-browser.md#head-to-head-obscura-vs-lightpanda) overview.
+For a detailed, head-to-head architectural comparison between **Obscura** (Rust) and **Lightpanda** (Zig), including memory footprints, cold startup speeds, anti-bot capabilities, and native MCP features, see the central [Headless Browsers for AI](../comparatives/headless-browser.md#head-to-head-obscura-vs-lightpanda) overview.
 
 ## Setup & Configuration
 
