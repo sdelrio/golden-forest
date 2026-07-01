@@ -1,0 +1,118 @@
+.container {
+    font-family: 'ScalySans', sans-serif;
+    margin: 0 auto 1.5rem;
+    padding: 0.75rem 1rem;
+    background: #fcf5e5;
+    border-top: 1px solid #58180d;
+    border-bottom: 1px solid #58180d;
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        inset 0 3px 0 0 #e69a28,
+        inset 0 4px 0 0 #58180d,
+        inset 0 -3px 0 0 #e69a28,
+        inset 0 -4px 0 0 #58180d;
+    text-align: center;
+}
+
+.header {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.partyName {
+    font-weight: bold;
+    color: #58180d;
+}
+
+.separator {
+    margin: 0 0.4rem;
+    color: #8b6d52;
+}
+
+.statsRow {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+}
+
+.statValue {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #58180d;
+}
+
+.statLabel {
+    font-size: 0.75rem;
+    color: #8b6d52;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.roles {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.roleBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.15rem 0.45rem;
+    border: 1.5px solid;
+    font-size: 0.8rem;
+}
+
+.roleIcon {
+    font-size: 0.85rem;
+}
+
+.roleCount {
+    font-weight: bold;
+    color: #58180d;
+}
+
+.roleLabel {
+    color: #6b4f3a;
+}
+
+/* Dark Mode */
+[data-theme='dark'] .container {
+    background: #1a1612;
+    border-top-color: #c68000;
+    border-bottom-color: #c68000;
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.5),
+        inset 0 3px 0 0 #a36a00,
+        inset 0 4px 0 0 #c68000,
+        inset 0 -3px 0 0 #a36a00,
+        inset 0 -4px 0 0 #c68000;
+}
+
+[data-theme='dark'] .partyName {
+    color: #ffb630;
+}
+
+[data-theme='dark'] .statValue {
+    color: #ffb630;
+}
+
+[data-theme='dark'] .statLabel {
+    color: #c9ad6a;
+}
+
+[data-theme='dark'] .roleCount {
+    color: #ffb630;
+}
+
+[data-theme='dark'] .roleLabel {
+    color: #c9ad6a;
+}
