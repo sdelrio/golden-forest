@@ -154,6 +154,11 @@ tasks:
     cmds:
       - node scripts/enrich-ai-dashboard.mjs
 
+  ai-dashboard:force:
+    desc: Ignore cache and Enrich AI dashboard data from npm/GitHub APIs
+    cmds:
+      - node scripts/enrich-ai-dashboard.mjs --force
+
   ## --- Verification and Testing ---
   check:
     desc: Run Docusaurus MDX checker
