@@ -12,6 +12,10 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { execFile } from 'child_process';
+import { promisify } from 'util';
+
+const execFileAsync = promisify(execFile);
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -21,23 +25,7 @@ const CACHE_MAX_AGE_MS = 24 * 60 * 60 * 1000;
 
 const FORCE = process.argv.includes('--force');
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
-const GITHUB_HEADERS = {
-  Accept: 'application/vnd.github+json',
-  ...(GITHUB_TOKEN && { Authorization: `Bearer ${GITHUB_TOKEN}` }),
-};
-
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-async function fetchJSON(url, headers = {}) {
-  try {
-    const res = await fetch(url, { headers });
-    if (!res.ok) return null;
-    return await res.json();
-  } catch {
-    return null;
-  }
-}
 
 async function fetchNpmJSON(url) {
   try {
@@ -49,24 +37,50 @@ async function fetchNpmJSON(url) {
   }
 }
 
+// ─── GitHub via gh CLI ───────────────────────────────────────────────────────
+
+async function ghApi(args) {
+  try {
+    const { stdout } = await execFileAsync('gh', ['api', ...args], {
+      maxBuffer: 1024 * 1024,
+    });
+    return JSON.parse(stdout);
+  } catch {
+    return null;
+  }
+}
+
+async function ghGraphQL(query) {
+  try {
+    const { stdout } = await execFileAsync('gh', ['api', 'graphql', '-f', `query=${query}`], {
+      maxBuffer: 1024 * 1024,
+    });
+    return JSON.parse(stdout);
+  } catch (err) {
+    // gh exits non-zero on GraphQL errors, but stdout still has partial data
+    if (err.stdout) {
+      try { return JSON.parse(err.stdout); } catch { /* fall through */ }
+    }
+    console.warn(`  gh api graphql error: ${err.message}`);
+    return null;
+  }
+}
+
 // ─── GitHub GraphQL batching ─────────────────────────────────────────────────
 
 function buildGitHubGraphQuery(repos) {
-  const fragments = repos.map((r, i) => `
-    repo${i}: repository(owner: "${r.owner}", name: "${r.repo}") {
-      stargazerCount
-      pushedAt
-      isArchived
-      issues(states: OPEN) { totalCount }
-      primaryLanguage { name }
-    }
-  `);
-  return `{ ${fragments.join('')} }`;
+  const fragments = repos.map((r, i) =>
+    `repo${i}: repository(owner: "${r.owner}", name: "${r.repo}") { stargazerCount pushedAt isArchived issues(states: OPEN) { totalCount } primaryLanguage { name } }`
+  );
+  return `{ ${fragments.join(' ')} }`;
 }
 
 async function fetchGitHubBatch(repos) {
-  if (!GITHUB_TOKEN) {
-    console.log('  No GITHUB_TOKEN set, skipping GraphQL (requires auth)');
+  // Check if gh is authenticated
+  try {
+    await execFileAsync('gh', ['auth', 'status']);
+  } catch {
+    console.log('  gh CLI not authenticated, skipping GraphQL');
     return null;
   }
 
@@ -77,26 +91,14 @@ async function fetchGitHubBatch(repos) {
     const batch = repos.slice(i, i + BATCH_SIZE);
     const query = buildGitHubGraphQuery(batch);
 
-    const res = await fetch('https://api.github.com/graphql', {
-      method: 'POST',
-      headers: {
-        ...GITHUB_HEADERS,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ query }),
-    });
-
-    if (!res.ok) {
-      console.warn(`  GraphQL batch failed (${res.status}), falling back to REST`);
+    const json = await ghGraphQL(query);
+    if (!json) {
+      console.warn(`  GraphQL batch failed, falling back to REST`);
       return null;
     }
 
-    const json = await res.json();
-    if (json.errors) {
-      console.warn(`  GraphQL errors:`, json.errors.map((e) => e.message).join(', '));
-      return null;
-    }
-
+    // GraphQL returns partial data even with errors (e.g. repo not found)
+    // Extract whatever data we got
     batch.forEach((r, idx) => {
       const key = `repo${idx}`;
       const data = json.data?.[key];
@@ -122,42 +124,15 @@ async function fetchGitHubBatch(repos) {
 // ─── GitHub REST fallback ────────────────────────────────────────────────────
 
 async function fetchGitHubREST(owner, repo) {
-  try {
-    const res = await fetch(
-      `https://api.github.com/repos/${owner}/${repo}`,
-      { headers: GITHUB_HEADERS }
-    );
-
-    // Check rate limit headers
-    const remaining = res.headers.get('x-ratelimit-remaining');
-    if (remaining !== null && parseInt(remaining) < 5) {
-      const resetAt = parseInt(res.headers.get('x-ratelimit-reset') || '0') * 1000;
-      const waitMs = Math.max(0, resetAt - Date.now()) + 1000;
-      if (waitMs > 0 && waitMs < 300000) {
-        console.log(`  Rate limit low (${remaining} left). Waiting ${Math.round(waitMs / 1000)}s...`);
-        await sleep(waitMs);
-      }
-    }
-
-    if (!res.ok) {
-      if (res.status === 403 || res.status === 429) {
-        console.warn(`  Rate limited on ${owner}/${repo}. Skipping remaining GitHub calls.`);
-        return '__RATE_LIMITED__';
-      }
-      return null;
-    }
-
-    const repoData = await res.json();
-    return {
-      githubStars: repoData.stargazers_count ?? null,
-      githubOpenIssues: repoData.open_issues_count ?? null,
-      githubArchived: repoData.archived ?? false,
-      githubLastPush: repoData.pushed_at ?? null,
-      githubLanguage: repoData.language ?? null,
-    };
-  } catch {
-    return null;
-  }
+  const repoData = await ghApi(['repos', `${owner}/${repo}`]);
+  if (!repoData) return null;
+  return {
+    githubStars: repoData.stargazers_count ?? null,
+    githubOpenIssues: repoData.open_issues_count ?? null,
+    githubArchived: repoData.archived ?? false,
+    githubLastPush: repoData.pushed_at ?? null,
+    githubLanguage: repoData.language ?? null,
+  };
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
