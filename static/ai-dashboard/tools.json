@@ -583,5 +583,20 @@
     "tags": ["headless", "comparison", "chrome", "obscura", "lightpanda"],
     "supportedBy": ["obscura", "lightpanda"],
     "docPath": "/docs/Develop-Code/AI-Development/comparatives/headless-browser"
+  },
+  {
+    "id": "ponytail",
+    "name": "Ponytail",
+    "description": "Agent plugin that teaches your AI coding agent to write the least code that works — cutting 54% of code, 22% of tokens, and 20% of cost while keeping safety intact.",
+    "category": "tools",
+    "github": "https://github.com/DietrichGebert/ponytail",
+    "npm": "@dietrichgebert/ponytail",
+    "pip": null,
+    "install": "/plugin install ponytail@ponytail",
+    "site": "https://ponytail.dev",
+    "license": "MIT",
+    "tags": ["yagni", "token-efficiency", "code-reduction", "agent-plugin"],
+    "supportedBy": ["claude-code", "opencode", "codex", "gemini-cli"],
+    "docPath": "/docs/Develop-Code/AI-Development/Tools/ponytail"
   }
 ]
