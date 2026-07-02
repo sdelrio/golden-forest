@@ -34,6 +34,16 @@ async function fetchJSON(url) {
   }
 }
 
+async function fetchNpmJSON(url) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
 function parseGitHubUrl(url) {
   if (!url) return null;
   const match = url.match(/github\.com\/([^/]+)\/([^/]+)/);
@@ -80,11 +90,11 @@ async function enrichTools(tools) {
     // Fetch npm data
     if (tool.npm) {
       console.log(`  npm: ${tool.npm}`);
-      const npmData = await fetchJSON(`https://registry.npmjs.org/${tool.npm}/latest`);
+      const npmData = await fetchNpmJSON(`https://registry.npmjs.org/${tool.npm}/latest`);
       if (npmData) {
         entry.npmVersion = npmData.version || null;
         // Get last publish time from time map
-        const timeData = await fetchJSON(`https://registry.npmjs.org/${tool.npm}`);
+        const timeData = await fetchNpmJSON(`https://registry.npmjs.org/${tool.npm}`);
         if (timeData?.time?.[npmData.version]) {
           entry.npmLastPublished = timeData.time[npmData.version];
         }

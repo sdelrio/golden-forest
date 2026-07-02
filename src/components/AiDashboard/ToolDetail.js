@@ -108,7 +108,7 @@ export default function ToolDetail({ tool, onClose }) {
                       <span className={styles.metricValue}>{timeAgo(tool.githubLastPush)}</span>
                     </div>
                   )}
-                  {tool.npm && (
+                  {tool.npm && tool.npmVersion && (
                     <div className={styles.healthMetric}>
                       <span className={styles.metricLabel}>npm Version</span>
                       <span className={styles.metricValue}>{tool.npmVersion}</span>
