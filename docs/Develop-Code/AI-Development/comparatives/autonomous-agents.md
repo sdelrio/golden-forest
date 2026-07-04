@@ -111,5 +111,5 @@ flowchart LR
 - [OpenFang Website](https://openfang.sh)
 - [OpenFang GitHub](https://github.com/RightNow-AI/openfang)
 - [OpenSandbox GitHub](https://github.com/alibaba/OpenSandbox)
-- [ClaudeKit Workflow](../Workflows/ClaudeKit-WorkflowZZZZ.md): Spec-driven AI development methodology.
+- [ClaudeKit Workflow](../Workflows/ClaudeKit-Workflow.md): Spec-driven AI development methodology. test.
 - [Interactive Agents](./interactive-agents.md): Claude Code and OpenCode for real-time coding.
