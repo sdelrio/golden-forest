@@ -4,6 +4,11 @@
     "https://www.lorien.cloud/sitemap.xml"
   ],
   "sitemap_alternate_links": true,
+  "start_urls": [
+    { 
+      "url": "https://www.lorien.cloud/docs"
+    }
+  ],
   "stop_urls": [
     "/$",
     "/PR-.+/.*",
@@ -13,14 +18,9 @@
     "/images",
     "/markdown-page",
     "/search",
-    "/tutorial"
+    "/tutorial",
+    "/tools/mermaid-playground"
   ],
-  "start_urls": [
-    { 
-      "url": "https://www.lorien.cloud/docs"
-    }
-  ],
-  "stop_urls": [],
   "selectors": {
     "default": {
       "lvl0": {
