@@ -1,0 +1,194 @@
+[
+  {
+    "id": "flowchart-basic",
+    "name": "Basic Flowchart",
+    "category": "flowchart",
+    "description": "Simple top-to-bottom flowchart with decision branching",
+    "tags": ["basic", "flow", "decision"],
+    "code": "graph TB\n  A[Start] --> B{Decision}\n  B -->|Yes| C[Process A]\n  B -->|No| D[Process B]\n  C --> E[End]\n  D --> E"
+  },
+  {
+    "id": "flowchart-left-right",
+    "name": "Left-to-Right Flow",
+    "category": "flowchart",
+    "description": "Horizontal flowchart showing a CI/CD pipeline",
+    "tags": ["horizontal", "pipeline", "devops"],
+    "code": "graph LR\n  A[Code Push] --> B[Build]\n  B --> C{Tests Pass?}\n  C -->|Yes| D[Deploy Staging]\n  D --> E[Integration Tests]\n  E --> F[Deploy Production]\n  C -->|No| G[Notify Team]"
+  },
+  {
+    "id": "flowchart-subgraph",
+    "name": "Subgraph Clusters",
+    "category": "flowchart",
+    "description": "Flowchart with grouped subgraphs for architecture diagrams",
+    "tags": ["architecture", "clusters", "subgraph"],
+    "code": "graph TB\n  subgraph Frontend[Client Layer]\n    A[Web App]\n    B[Mobile App]\n  end\n  subgraph Backend[API Layer]\n    C[Auth Service]\n    D[Data Service]\n  end\n  subgraph Data[Data Layer]\n    E[(PostgreSQL)]\n    F[(Redis)]\n  end\n  A --> C\n  B --> C\n  A --> D\n  B --> D\n  C --> E\n  D --> E\n  D --> F"
+  },
+  {
+    "id": "sequence-basic",
+    "name": "Basic Sequence",
+    "category": "sequence",
+    "description": "Simple request-response sequence diagram",
+    "tags": ["basic", "api", "request"],
+    "code": "sequenceDiagram\n  participant Client\n  participant Server\n  participant DB\n  Client->>Server: GET /api/users\n  Server->>DB: SELECT * FROM users\n  DB-->>Server: User rows\n  Server-->>Client: 200 OK + JSON"
+  },
+  {
+    "id": "sequence-auth",
+    "name": "OAuth Flow",
+    "category": "sequence",
+    "description": "OAuth 2.0 authorization code flow",
+    "tags": ["auth", "oauth", "security"],
+    "code": "sequenceDiagram\n  actor User\n  participant Browser\n  participant Client\n  participant AuthServer\n  participant ResourceServer\n  User->>Browser: Login\n  Browser->>AuthServer: /authorize\n  AuthServer-->>Browser: Login page\n  User->>AuthServer: Credentials\n  AuthServer-->>Browser: Auth code\n  Browser->>Client: Auth code\n  Client->>AuthServer: Exchange code for token\n  AuthServer-->>Client: Access token\n  Client->>ResourceServer: API call + token\n  ResourceServer-->>Client: Protected data\n  Client-->>Browser: Display data"
+  },
+  {
+    "id": "sequence-error",
+    "name": "Error Handling",
+    "category": "sequence",
+    "description": "Sequence diagram with error/retry logic",
+    "tags": ["error", "retry", "resilience"],
+    "code": "sequenceDiagram\n  participant C as Client\n  participant S as Server\n  participant D as Database\n  C->>S: Request\n  S->>D: Query\n  D-->>S: Timeout!\n  S->>D: Retry query\n  D-->>S: Success\n  S-->>C: 200 OK\n  Note over S: Max 3 retries"
+  },
+  {
+    "id": "class-basic",
+    "name": "Class Diagram",
+    "category": "class",
+    "description": "UML class diagram with inheritance and composition",
+    "tags": ["oop", "inheritance", "uml"],
+    "code": "classDiagram\n  class Animal {\n    +String name\n    +int age\n    +makeSound()\n  }\n  class Dog {\n    +String breed\n    +fetch()\n  }\n  class Cat {\n    +boolean isIndoor\n    +purr()\n  }\n  class Owner {\n    +String name\n    +pet()\n  }\n  Animal <|-- Dog\n  Animal <|-- Cat\n  Owner o-- Animal : owns"
+  },
+  {
+    "id": "state-basic",
+    "name": "Order State Machine",
+    "category": "state",
+    "description": "State diagram for an order lifecycle",
+    "tags": ["state", "lifecycle", "order"],
+    "code": "stateDiagram-v2\n  [*] --> Pending\n  Pending --> Processing : Submit\n  Processing --> Shipped : Ship\n  Shipped --> Delivered : Deliver\n  Delivered --> [*]\n  Processing --> Cancelled : Cancel\n  Pending --> Cancelled : Cancel\n  Cancelled --> [*]"
+  },
+  {
+    "id": "er-basic",
+    "name": "Database ER Diagram",
+    "category": "er",
+    "description": "Entity-relationship diagram for a blog database",
+    "tags": ["database", "sql", "schema"],
+    "code": "erDiagram\n  USERS {\n    int id PK\n    string email\n    string name\n    datetime created_at\n  }\n  POSTS {\n    int id PK\n    int author_id FK\n    string title\n    text body\n    datetime published_at\n  }\n  COMMENTS {\n    int id PK\n    int post_id FK\n    int author_id FK\n    text body\n  }\n  TAGS {\n    int id PK\n    string name\n  }\n  POST_TAGS {\n    int post_id FK\n    int tag_id FK\n  }\n  USERS ||--o{ POSTS : writes\n  USERS ||--o{ COMMENTS : writes\n  POSTS ||--o{ COMMENTS : has\n  POSTS ||--o{ POST_TAGS : tagged\n  TAGS ||--o{ POST_TAGS : tagged"
+  },
+  {
+    "id": "gantt-basic",
+    "name": "Project Gantt Chart",
+    "category": "gantt",
+    "description": "Gantt chart for a project sprint timeline",
+    "tags": ["project", "sprint", "timeline"],
+    "code": "gantt\n  title Sprint 12\n  dateFormat  YYYY-MM-DD\n  section Planning\n    Backlog grooming   :a1, 2026-07-01, 2d\n    Sprint planning    :a2, after a1, 1d\n  section Development\n    Feature A          :b1, after a2, 5d\n    Feature B          :b2, after a2, 4d\n    Bug fixes          :b3, after b1, 2d\n  section Review\n    Code review        :c1, after b3, 2d\n    QA testing         :c2, after b3, 3d\n    Deploy to prod     :c3, after c2, 1d"
+  },
+  {
+    "id": "pie-basic",
+    "name": "Pie Chart",
+    "category": "pie",
+    "description": "Simple pie chart for time allocation breakdown",
+    "tags": ["chart", "data", "breakdown"],
+    "code": "pie title Time Spent in Sprint\n  \"Coding\" : 45\n  \"Meetings\" : 15\n  \"Code Review\" : 20\n  \"Testing\" : 12\n  \"Documentation\" : 8"
+  },
+  {
+    "id": "mindmap-basic",
+    "name": "Mind Map",
+    "category": "mindmap",
+    "description": "Mind map for brainstorming a tech stack",
+    "tags": ["brainstorm", "tree", "ideas"],
+    "code": "mindmap\n  root((Tech Stack))\n    Frontend\n      React\n      TypeScript\n      Tailwind CSS\n    Backend\n      Node.js\n      Python\n      Go\n    Database\n      PostgreSQL\n      Redis\n      MongoDB\n    Infra\n      Docker\n      Kubernetes\n      AWS"
+  },
+  {
+    "id": "architecture-basic",
+    "name": "Architecture Diagram",
+    "category": "architecture",
+    "description": "Mermaid architecture-beta diagram for cloud infrastructure",
+    "tags": ["cloud", "infrastructure", "services"],
+    "code": "architecture-beta\n    group api(cloud)[API Gateway]\n\n    service db(database)[Database] in api\n    service cache(disk)[Redis Cache] in api\n    service server(server)[App Server] in api\n    service queue(server)[Message Queue] in api\n\n    db:L -- R:server\n    cache:T -- B:server\n    queue:R -- L:server"
+  },
+  {
+    "id": "gitgraph-basic",
+    "name": "Git Branching",
+    "category": "gitgraph",
+    "description": "Git graph showing a feature branch workflow",
+    "tags": ["git", "branch", "merge"],
+    "code": "gitGraph\n  commit id: \"init\"\n  commit id: \"setup\"\n  branch develop\n  checkout develop\n  commit id: \"feat-1\"\n  commit id: \"feat-2\"\n  checkout main\n  commit id: \"hotfix\"\n  checkout develop\n  merge main id: \"merge-hotfix\"\n  checkout main\n  merge develop id: \"release\" tag: \"v1.0\""
+  },
+  {
+    "id": "flowchart-data",
+    "name": "Data Pipeline",
+    "category": "flowchart",
+    "description": "Data processing pipeline with parallel branches",
+    "tags": ["data", "pipeline", "etl"],
+    "code": "graph TB\n  A[Raw Data] --> B[Validate]\n  B --> C[Transform]\n  C --> D[Enrich]\n  C --> E[Aggregate]\n  D --> F[Merge]\n  E --> F\n  F --> G[Load to DW]\n  G --> H[Dashboard]"
+  },
+  {
+    "id": "sequence-websocket",
+    "name": "WebSocket Chat",
+    "category": "sequence",
+    "description": "WebSocket connection lifecycle for a real-time chat app",
+    "tags": ["websocket", "realtime", "chat"],
+    "code": "sequenceDiagram\n  participant U as User\n  participant C as Client\n  participant S as Server\n  participant O as Other Users\n  U->>C: Send message\n  C->>S: WS: {type:'chat', text}\n  S->>S: Store message\n  S-->>C: WS: {type:'ack', id}\n  S-->>O: WS: {type:'chat', from, text}\n  O-->>C: WS: {type:'chat', from, text}\n  Note over C: Real-time sync"
+  },
+  {
+    "id": "state-traffic",
+    "name": "Traffic Light",
+    "category": "state",
+    "description": "Traffic light state machine with timed transitions",
+    "tags": ["state", "timed", "control"],
+    "code": "stateDiagram-v2\n  [*] --> Red\n  Red --> Green : timer (30s)\n  Green --> Yellow : timer (10s)\n  Yellow --> Red : timer (5s)\n  note right of Red : Stop\n  note right of Green : Go\n  note right of Yellow : Caution"
+  },
+  {
+    "id": "er-ecommerce",
+    "name": "E-Commerce Schema",
+    "category": "er",
+    "description": "Entity-relationship diagram for an e-commerce platform",
+    "tags": ["ecommerce", "database", "schema"],
+    "code": "erDiagram\n  CUSTOMERS {\n    int id PK\n    string name\n    string email\n  }\n  PRODUCTS {\n    int id PK\n    string name\n    decimal price\n    int stock\n  }\n  ORDERS {\n    int id PK\n    int customer_id FK\n    datetime order_date\n    string status\n  }\n  ORDER_ITEMS {\n    int id PK\n    int order_id FK\n    int product_id FK\n    int quantity\n  }\n  CUSTOMERS ||--o{ ORDERS : places\n  ORDERS ||--o{ ORDER_ITEMS : contains\n  PRODUCTS ||--o{ ORDER_ITEMS : included"
+  },
+  {
+    "id": "xychart-histogram",
+    "name": "Histogram",
+    "category": "xychart",
+    "description": "Bar histogram showing incident frequency by type",
+    "tags": ["chart", "bar", "data", "statistics"],
+    "code": "xychart-beta\n  title \"Incident Frequency by Type\"\n  x-axis [Phishing, Ransomware, DDoS, Insider, Malware]\n  y-axis \"Number of Incidents\" 0 --> 50\n  bar [35, 12, 28, 8, 42]"
+  },
+  {
+    "id": "xychart-line",
+    "name": "Line Chart",
+    "category": "xychart",
+    "description": "Line chart tracking request latency over time",
+    "tags": ["chart", "line", "performance", "monitoring"],
+    "code": "xychart-beta\n  title \"Request Latency (ms)\"\n  x-axis [Mon, Tue, Wed, Thu, Fri, Sat, Sun]\n  y-axis \"Latency (ms)\" 0 --> 500\n  line [120, 135, 148, 130, 155, 98, 90]"
+  },
+  {
+    "id": "tree-filesystem",
+    "name": "Filesystem Tree",
+    "category": "treeview",
+    "description": "Directory structure with file/folder icons",
+    "tags": ["tree", "hierarchy", "directory", "filesystem"],
+    "code": "treeView-beta\n    my-project/\n        src/\n            components/\n                Button.js\n                Card.js\n                Modal.js\n            pages/\n                index.js\n                about.js\n            styles/\n                global.css\n        docs/\n            README.md\n            CHANGELOG.md\n        static/\n            images/\n            fonts/\n        package.json\n        tsconfig.json\n        .eslintrc"
+  },
+  {
+    "id": "tree-org",
+    "name": "Org Chart",
+    "category": "treeview",
+    "description": "Organizational hierarchy with annotations",
+    "tags": ["org", "hierarchy", "team", "management"],
+    "code": "treeView-beta\n    CEO ## Chief Executive Officer\n        CTO ## Chief Technology Officer\n            Engineering ## 12 engineers\n                Frontend Team\n                Backend Team\n                DevOps\n            QA ## 4 testers\n                Manual QA\n                Automation\n        CFO ## Chief Financial Officer\n            Finance\n            HR\n        COO ## Chief Operating Officer\n            Operations\n            Sales"
+  },
+  {
+    "id": "radar-skills",
+    "name": "Developer Skills",
+    "category": "radar",
+    "description": "Radar chart comparing skill levels across technologies",
+    "tags": ["skills", "comparison", "evaluation", "spider"],
+    "code": "radar-beta\n  axis React, TypeScript, Node.js, Python, Go, Rust\n  curve \"Current\" {8, 7, 9, 6, 4, 3}\n  curve \"Target\" {9, 9, 9, 8, 7, 5}\n  showLegend true"
+  },
+  {
+    "id": "radar-project",
+    "name": "Project Health",
+    "category": "radar",
+    "description": "Radar chart measuring project dimensions",
+    "tags": ["health", "metrics", "quality", "assessment"],
+    "code": "radar-beta\n  title Project Health Score\n  axis Performance, Security, Maintainability, Test Coverage, Documentation, DX\n  curve \"Q1\" {65, 80, 70, 55, 40, 75}\n  curve \"Q2\" {80, 85, 78, 72, 60, 82}\n  showLegend true\n  max 100\n  ticks 5"
+  }
+]

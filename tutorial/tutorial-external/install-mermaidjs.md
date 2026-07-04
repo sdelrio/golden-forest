@@ -117,6 +117,10 @@ architecture-beta
 * [https://jojozhuang.github.io/tutorial/mermaid-cheat-sheet/](https://jojozhuang.github.io/tutorial/mermaid-cheat-sheet/)
 * [https://mermaid-js.github.io/mermaid/#/flowchart?id=styling-and-classes](https://mermaid-js.github.io/mermaid/#/flowchart?id=styling-and-classes)
 
+## Playground
+
+Try Mermaid diagrams live in the [Mermaid Playground](/tools/mermaid-playground/) — browse templates, edit code, and see real-time previews.
+
 ## Issues
 
 * [Arrow color not using styles](https://github.com/mermaid-js/mermaid/pull/2382)
