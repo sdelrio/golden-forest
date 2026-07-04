@@ -29,10 +29,11 @@ yarn-error.log*
 devbox.lock
 
 # Graphify generated outputs (regeneratable)
-graphify-out/graph.html
-graphify-out/graph.json
-graphify-out/cost.json
-graphify-out/.graphify_*
-graphify-out/cache/
-graphify-out/obsidian/
+graphify-out/**
+#graphify-out/graph.html
+#graphify-out/graph.json
+#graphify-out/cost.json
+#graphify-out/.graphify_*
+#graphify-out/cache/
+#graphify-out/obsidian/
 
