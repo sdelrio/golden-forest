@@ -60,7 +60,10 @@ See [src/components/AGENTS.md](file:///Users/sdelrio/github/sdelrio/golden-fores
 - Documentation is written in **MDX** (Markdown + JSX).
 - Mermaid diagrams are supported via `mermaid` code blocks.
 
-### 6. Error Handling
+### 6. Mermaid TreeView Dark Mode (Temporary Override)
+TreeView-beta hardcodes `labelColor: 'black'` and `lineColor: 'black'` in `styles.ts`, ignoring Mermaid's `themeVariables`. CSS overrides with `!important` in `custom.css` adapt it to Docusaurus dark mode (needed because mermaid injects `<style>` inside SVG `<defs>`). **Pending review** when Mermaid upgrades or treeView leaves beta and inherits theme properly.
+
+### 7. Error Handling
 - Use React state to manage loading and error states for asynchronous data (like fetching XML).
 - Provide meaningful fallbacks for missing assets or failed fetches.
 

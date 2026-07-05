@@ -133,6 +133,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      mermaid: {
+        theme: {
+          light: 'default',
+          dark: 'dark',
+        },
+      },
       algolia: {
         // The application ID provided by Algolia
         appId: '5VR022LUD5',

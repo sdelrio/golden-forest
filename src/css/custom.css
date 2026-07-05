@@ -106,6 +106,83 @@ html[data-theme='dark'] :root {
   stroke-width: 2px !important;
 }
 
+/* ============================================
+   Terminal Window Styling — Nature Theme
+   Scoped to .terminal-window class
+   ============================================ */
+.terminal-window {
+  border-radius: 28px 12px 35px 15px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  position: relative;
+  padding: calc(32px + 0.25rem) 1rem 1rem 1rem;
+  background-color: #2b2b2b;
+  border: 2px solid var(--ifm-color-primary-darkest);
+}
+
+/* Header/Wood Plaque Bar */
+.terminal-window::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: linear-gradient(to bottom, var(--ifm-color-primary-darker), var(--ifm-color-primary-darkest));
+  display: block;
+  z-index: 1;
+  border-bottom: 2px solid var(--ifm-color-primary-darker);
+}
+
+/* Leaf Controls (Trio of Wide Leaf SVGs) */
+.terminal-window::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 14px;
+  width: 85px;
+  height: 20px;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23d32f2f' d='M21,11C21,11 15,7 12,2C9,7 3,11 3,11C3,11 5,16 12,22C19,16 21,11 21,11Z'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e99700' d='M21,11C21,11 15,7 12,2C9,7 3,11 3,11C3,11 5,16 12,22C19,16 21,11 21,11Z'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23388e3c' d='M21,11C21,11 15,7 12,2C9,7 3,11 3,11C3,11 5,16 12,22C19,16 21,11 21,11Z'/%3E%3C/svg%3E");
+  background-size: 18px 18px, 18px 18px, 18px 18px;
+  background-position: 0px 0px, 20px 0px, 40px 0px;
+}
+
+/* Light Mode Overrides */
+html[data-theme='light'] .terminal-window {
+  background-color: var(--ifm-card-background-color);
+}
+
+html[data-theme='light'] .terminal-window::before {
+  background: linear-gradient(to bottom, var(--HB_Color_HeaderUnderline), var(--HB_Color_HeaderText));
+  border-bottom-color: var(--HB_Color_HorizontalRule);
+}
+
+/* SVG Responsive */
+.terminal-window .docusaurus-mermaid-container > svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* TreeView dark mode fix — hardcoded in mermaid treeView-beta styles.ts.
+   Uses !important because mermaid injects <style> inside SVG <defs>,
+   which can override external selectors despite lower specificity. */
+html[data-theme='dark'] .treeView-node-label {
+  fill: var(--ifm-font-color-base) !important;
+}
+html[data-theme='dark'] .treeView-node-line {
+  stroke: var(--ifm-color-emphasis-400) !important;
+}
+html[data-theme='light'] .treeView-node-label {
+  fill: var(--ifm-font-color-base) !important;
+}
+html[data-theme='light'] .treeView-node-line {
+  stroke: var(--ifm-color-emphasis-400) !important;
+}
 
 /*
  * https://developers.google.com/fonts/docs/css2
