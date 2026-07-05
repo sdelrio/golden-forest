@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([["81344"],{76751(e){e.exports=JSON.parse('{"authors":[{"name":"sdelrio","title":"Maintainer of this web","url":"https://github.com/sdelrio","imageURL":"https://github.com/sdelrio.png","key":"sdelrio","page":null,"count":1}]}')}}]);
