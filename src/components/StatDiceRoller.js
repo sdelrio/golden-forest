@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useMemo } from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
 export default function StatDiceRoller() {
@@ -19,8 +19,10 @@ function StatDiceRollerInternal({ ReactDice }) {
     const [rollingIndex, setRollingIndex] = useState(-1);
     const diceRefs = useRef([]);
     const randomRef = useRef(null);
+    const stateRef = useRef({ rollingIndex: -1 });
 
-    // Initialize random-js engine
+    stateRef.current.rollingIndex = rollingIndex;
+
     if (!randomRef.current) {
         const { Random, browserCrypto } = require('random-js');
         randomRef.current = new Random(browserCrypto);
@@ -30,32 +32,34 @@ function StatDiceRollerInternal({ ReactDice }) {
         return randomRef.current.dice(6, 4);
     };
 
-    const handleRollDone = (index, total, dice) => {
-        const sorted = [...dice].sort((a, b) => b - a);
-        const topThree = sorted.slice(0, 3);
-        const sum = topThree.reduce((a, b) => a + b, 0);
+    const rollDoneHandlers = useMemo(() => {
+        return ABILITIES.map((_, index) => (total, dice) => {
+            const sorted = [...dice].sort((a, b) => b - a);
+            const topThree = sorted.slice(0, 3);
+            const sum = topThree.reduce((a, b) => a + b, 0);
 
-        setResults(prev => ({
-            ...prev,
-            [index]: {
-                all: dice,
-                topThree,
-                sum
-            }
-        }));
-
-        // If we are in the middle of a "Roll All" sequence, trigger the next one
-        if (rollingIndex !== -1 && index === rollingIndex && index < ABILITIES.length - 1) {
-            setRollingIndex(index + 1);
-            setTimeout(() => {
-                if (diceRefs.current[index + 1]) {
-                    diceRefs.current[index + 1].rollAll(getRandomRolls());
+            setResults(prev => ({
+                ...prev,
+                [index]: {
+                    all: dice,
+                    topThree,
+                    sum
                 }
-            }, 137); // Small delay between rolls for better visual feedback
-        } else if (index === ABILITIES.length - 1) {
-            setRollingIndex(-1); // Finished sequence
-        }
-    };
+            }));
+
+            const currentRollingIndex = stateRef.current.rollingIndex;
+            if (currentRollingIndex !== -1 && index === currentRollingIndex && index < ABILITIES.length - 1) {
+                setRollingIndex(index + 1);
+                setTimeout(() => {
+                    if (diceRefs.current[index + 1]) {
+                        diceRefs.current[index + 1].rollAll(getRandomRolls());
+                    }
+                }, 137);
+            } else if (index === ABILITIES.length - 1) {
+                setRollingIndex(-1);
+            }
+        });
+    }, []);
 
     const rollAll = () => {
         setResults({});
@@ -143,7 +147,7 @@ function StatDiceRollerInternal({ ReactDice }) {
                         <div style={{ transform: 'scale(0.8)', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: '280px', flexShrink: 0 }}>
                             <ReactDice
                                 numDice={4}
-                                rollDone={(total, dice) => handleRollDone(index, total, dice)}
+                                rollDone={rollDoneHandlers[index]}
                                 ref={el => diceRefs.current[index] = el}
                                 faceColor="#fff0ac"
                                 dotColor="#c02020"
