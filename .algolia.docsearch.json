@@ -10,7 +10,6 @@
     }
   ],
   "stop_urls": [
-    "/$",
     "/PR-.+/.*",
     "/index.html$",
     "/assets",
@@ -34,7 +33,8 @@
       "lvl3": "article h3",
       "lvl4": "article h4",
       "lvl5": "article h5",
-      "lvl6": "article h6"
+      "lvl6": "article h6",
+      "text": "article li"
     }
   },
   "strip_chars": " .,;:#",
