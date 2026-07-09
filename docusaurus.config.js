@@ -130,6 +130,10 @@ const config = {
 
   stylesheets: [],
 
+  clientModules: [
+    require.resolve('./src/client/theme-transition.js'),
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
