@@ -26,8 +26,9 @@ Welcome to **The Golden Forest**, a modern Digital Garden and Knowledge Base bui
 - **Automation**: [Go-Task](https://taskfile.dev/) (Taskfile)
 - **Environment**: [Devbox](https://www.jetify.com/devbox) & [Direnv](https://direnv.net/)
 - **Custom Components**: Built-in library of interactive [MDX components](file:///Users/sdelrio/github/sdelrio/golden-forest/src/components/):
-  - **Docs**: `Accordion`, `Steps`, `CardGroup`, `CodeGroup`, `ParamField`.
-  - **Tools**: `XmlChar`, `CharSearch`, `DnDPointBuy`, `StatDiceRoller`.
+  - **Docs**: `Accordion`, `Card`, `CodeGroup`, `Steps`, `ParamField`, `IndexList`.
+  - **D&D Tools**: `XmlChar`, `CharSearch`, `DnDPointBuy`, `StatDiceRoller`, `FeatBrowser`, `PartySummary`.
+  - **Tools**: `MermaidPlayground`, `AiDashboard`.
 
 ---
 
