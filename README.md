@@ -73,14 +73,52 @@ This starts the development server at `http://localhost:3000`.
 
 ## ⚡ Essential Commands
 
+### Development
+
 | Task | Description |
 | :--- | :--- |
 | `task start` | Start the local development server |
+| `task start:host` | Start dev server on host network (0.0.0.0) |
 | `task build` | Build the static production website |
+| `task deploy` | Deploy the website to GitHub Pages |
+| `task clean` | Remove build artifacts and node_modules |
+
+### Dependency Management
+
+| Task | Description |
+| :--- | :--- |
+| `task upgrade` | Upgrade Docusaurus core and preset-classic to latest |
+| `task upgrade:all` | Upgrade all yarn.lock dependencies |
+| `task upgrade:browserlist` | Update browserslist database |
+
+### Verification & Testing
+
+| Task | Description |
+| :--- | :--- |
 | `task check` | Run MDX syntax checker (crucial for builds) |
 | `task test:perf` | Run `unlighthouse` web performance tests |
+| `task test:links` | Check for broken links in the build directory |
+
+### Characters
+
+| Task | Description |
+| :--- | :--- |
+| `task chars:list` | List and summarize Fantasy Grounds character XML files |
 | `task chars:buildindex` | Rebuild the character search index from XML files |
-| `task clean` | Remove build artifacts and node_modules |
+
+### AI Dashboard
+
+| Task | Description |
+| :--- | :--- |
+| `task ai-dashboard:enrich` | Enrich AI dashboard data from npm/GitHub APIs |
+| `task ai-dashboard:force` | Force refresh AI dashboard data (ignore cache) |
+
+### Search Indexing
+
+| Task | Description |
+| :--- | :--- |
+| `task index:algolia` | Generate Algolia index using docsearch-scraper |
+| `task index:typesense` | Generate Typesense index using docsearch-scraper |
 
 > [!TIP]
 > If you add new character XML files to `static/fg/chars`, run `task chars:buildindex` to update the searchable gallery.

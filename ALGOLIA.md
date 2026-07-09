@@ -4,6 +4,68 @@
 
 `/.algolia.docsearch.json`
 
+```json
+{
+  "index_name": "loriencloud",
+  "sitemap_urls": ["https://www.lorien.cloud/sitemap.xml"],
+  "sitemap_alternate_links": true,
+  "start_urls": [{ "url": "https://www.lorien.cloud/docs" }],
+  "stop_urls": [
+    "/PR-.+/.*",
+    "/index.html$",
+    "/assets",
+    "/blog",
+    "/images",
+    "/markdown-page",
+    "/search",
+    "/tags/",
+    "/tutorial",
+    "/tools/mermaid-playground"
+  ],
+  "selectors": {
+    "default": {
+      "lvl0": {
+        "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
+        "type": "xpath",
+        "global": true,
+        "default_value": "Documentation"
+      },
+      "lvl1": "header h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "text": "article p"
+    }
+  },
+  "strip_chars": " .,;:#",
+  "custom_settings": {
+    "separatorsToIndex": "_",
+    "attributesForFaceting": ["language", "version", "type", "docusaurus_tag"],
+    "attributesToRetrieve": ["hierarchy", "anchor", "url", "url_without_anchor", "type"]
+  },
+  "conversation_id": ["833762294"],
+  "nb_hits": 46250
+}
+```
+
+### Field Reference
+
+| Field | Purpose |
+|-------|---------|
+| `index_name` | Algolia index name (`loriencloud`) |
+| `sitemap_urls` | Sitemap to crawl for page discovery |
+| `start_urls` | Entry points for the crawler |
+| `stop_urls` | URL patterns to exclude from indexing |
+| `selectors.default.lvl0` | XPath for sidebar category (hierarchy level 0) |
+| `selectors.default.lvl1` | CSS selector for page title (h1) |
+| `selectors.default.lvl2` | CSS selector for section headings (h2) |
+| `selectors.default.lvl3` | CSS selector for sub-section headings (h3) |
+| `selectors.default.text` | CSS selector for content text (paragraphs) |
+| `strip_chars` | Characters stripped from indexed text |
+| `custom_settings.separatorsToIndex` | Word separators for tokenization |
+| `custom_settings.attributesForFaceting` | Fields available for faceted search |
+| `custom_settings.attributesToRetrieve` | Fields returned in search results |
+| `nb_hits` | Total records in index (update after reindex) |
+
 ## Change Applied (2026-07-08)
 
 ### Selectors Modified
