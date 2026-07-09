@@ -67,11 +67,22 @@ TreeView-beta hardcodes `labelColor: 'black'` and `lineColor: 'black'` in `style
 - Use React state to manage loading and error states for asynchronous data (like fetching XML).
 - Provide meaningful fallbacks for missing assets or failed fetches.
 
+### 8. Theme Transition Animation
+The dark/light mode toggle uses the **View Transitions API** for a circular-mask reveal animation, implemented via a Docusaurus `clientModules` plugin (no component swizzle required).
+
+- **JS**: `src/client/theme-transition.js` — intercepts clicks on the toggle button in the capturing phase, wraps the theme change in `document.startViewTransition()`. Falls back to instant toggle on unsupported browsers.
+- **CSS**: `src/css/custom.css` — defines `::view-transition-old/new(root)` pseudo-elements with a `clip-path: circle()` reveal that expands from center to `150%`, plus the `--expo-out` timing function.
+- **Config**: `clientModules` array in `docusaurus.config.js` registers the client module.
+- **Why clientModules, not swizzle?** Avoids copying the full `ColorModeToggle` component from `@docusaurus/theme-classic`, so the project stays current with Docusaurus updates automatically.
+- **Reference**: [rudrodip/theme-toggle-effect](https://github.com/rudrodip/theme-toggle-effect)
+
 ## Data & Project Structure
 - **Content**: `docs/`, `blog/`, and `tutorial/` contain MDX files.
 - **MCP Servers**: `docs/Develop-Code/AI-Development/MCPs/` contains articles about MCP server tools (e.g., `cve-mcp-server.md`).
 - **Components**: `src/components/` (See [AGENTS.md](file:///Users/sdelrio/github/sdelrio/golden-forest/src/components/AGENTS.md)) and `src/theme/`.
+- **Client Modules**: `src/client/` contains Docusaurus client modules that run on every page load (e.g., `theme-transition.js` for View Transitions API animation). **Important**: `clientModules` only dispatch lifecycle hooks (`onRouteDidUpdate`, etc.) — they do **not** auto-call a default export. Code that must run at page load (event listeners, global patches) must be written at **top level** of the module, not inside an exported function. Guard with `typeof document !== 'undefined'` for SSR safety.
 - **Static Assets**: `static/fg/chars/` contains XML character data for the D&D tools.
+- **Algolia Search**: See [ALGOLIA.md](file:///Users/sdelrio/github/sdelrio/golden-forest/ALGOLIA.md) for indexing configuration, record count analysis, and reduction strategies. Config: `.algolia.docsearch.json`.
 - **Git**: Use **Conventional Commits** (`feat(scope): desc`, `fix: desc`, `docs: desc`).
 
 ## Character Index (`static/fg/chars/index.json`)
