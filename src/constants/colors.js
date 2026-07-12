@@ -1,0 +1,26 @@
+export const CATEGORY_COLORS = {
+  // AiDashboard categories
+  mcp: '#8b5cf6',
+  tools: '#3b82f6',
+  agents: '#f97316',
+  models: '#22c55e',
+  workflows: '#ec4899',
+  prompts: '#eab308',
+  browsers: '#06b6d4',
+  security: '#ef4444',
+  comparatives: '#a78bfa',
+  // MermaidPlayground categories
+  flowchart: '#3b82f6',
+  sequence: '#8b5cf6',
+  class: '#22c55e',
+  state: '#f97316',
+  er: '#06b6d4',
+  gantt: '#ec4899',
+  pie: '#eab308',
+  mindmap: '#a78bfa',
+  architecture: '#14b8a6',
+  gitgraph: '#ef4444',
+  xychart: '#0ea5e9',
+  treeview: '#84cc16',
+  radar: '#f43f5e',
+};

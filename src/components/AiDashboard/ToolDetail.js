@@ -2,19 +2,8 @@ import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import clsx from 'clsx';
 import StatusBadge from './StatusBadge';
+import { CATEGORY_COLORS } from '../../constants/colors';
 import styles from './ToolDetail.module.css';
-
-const CATEGORY_COLORS = {
-  mcp: '#8b5cf6',
-  tools: '#3b82f6',
-  agents: '#f97316',
-  models: '#22c55e',
-  workflows: '#ec4899',
-  prompts: '#eab308',
-  browsers: '#06b6d4',
-  security: '#ef4444',
-  'comparatives': '#a78bfa',
-};
 
 function formatNumber(n) {
   if (n == null) return '—';

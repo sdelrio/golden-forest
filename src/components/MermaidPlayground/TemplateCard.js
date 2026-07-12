@@ -1,21 +1,6 @@
 import React from 'react';
+import { CATEGORY_COLORS } from '../../constants/colors';
 import styles from './TemplateCard.module.css';
-
-const CATEGORY_COLORS = {
-  flowchart: '#3b82f6',
-  sequence: '#8b5cf6',
-  class: '#22c55e',
-  state: '#f97316',
-  er: '#06b6d4',
-  gantt: '#ec4899',
-  pie: '#eab308',
-  mindmap: '#a78bfa',
-  architecture: '#14b8a6',
-  gitgraph: '#ef4444',
-  xychart: '#0ea5e9',
-  treeview: '#84cc16',
-  radar: '#f43f5e',
-};
 
 export default function TemplateCard({ template, onSelect }) {
   const color = CATEGORY_COLORS[template.category] || '#6b7280';
