@@ -7,11 +7,11 @@ import { signed } from '../../utils/format';
 import styles from './PartySummary.module.css';
 
 const ROLE_CONFIG = {
-    tank: { icon: 'game-icons:shield', label: 'Tank', color: '#4a90d9' },
-    healer: { icon: 'game-icons:heart-plus', label: 'Healer', color: '#5cb85c' },
-    damage: { icon: 'game-icons:shining-sword', label: 'Damage Dealer', color: '#d9534f' },
-    support: { icon: 'game-icons:aura', label: 'Support', color: '#f0ad4e' },
-    utility: { icon: 'game-icons:gear-hammer', label: 'Utility', color: '#9b59b6' },
+    tank: { icon: 'mdi:shield', label: 'Tank', color: '#4a90d9' },
+    healer: { icon: 'mdi:heart-plus', label: 'Healer', color: '#5cb85c' },
+    damage: { icon: 'mdi:sword-cross', label: 'Damage Dealer', color: '#d9534f' },
+    support: { icon: 'mdi:creation', label: 'Support', color: '#f0ad4e' },
+    utility: { icon: 'mdi:hammer-wrench', label: 'Utility', color: '#9b59b6' },
 };
 
 function PartySummaryInternal() {
