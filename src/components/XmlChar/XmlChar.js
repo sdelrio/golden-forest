@@ -24,6 +24,33 @@ export default function XmlChar(props) {
  * @param {'small'|'medium'|'large'} [props.display='medium'] - Display mode
  * @param {string} [props.image] - Avatar image filename (large mode only)
  */
+function renderGroupedList(items, labelPrefix, getTag) {
+    const sorted = [...items].sort((a, b) => a.level - b.level);
+    const grouped = {};
+    const tagMap = {};
+    sorted.forEach(item => {
+        if (!grouped[item.level]) {
+            grouped[item.level] = [];
+            tagMap[item.level] = new Set();
+        }
+        grouped[item.level].push(item.name);
+        const tag = getTag(item);
+        if (tag) tagMap[item.level].add(tag);
+    });
+    return Object.entries(grouped).map(([level, names]) => {
+        const tags = [...(tagMap[level] || [])].join(', ');
+        const header = `${labelPrefix} L${level}: (${tags})`;
+        return (
+            <div key={level}>
+                <div className={styles.infoLabel}>{header}</div>
+                {names.map((n, i) => (
+                    <div key={`${level}-${i}`} className={styles.featureItem}>{n}</div>
+                ))}
+            </div>
+        );
+    });
+}
+
 function XmlCharInternal({ filename, display = 'medium', image }) {
     const [charData, setCharData] = useState(null);
     const [error, setError] = useState(null);
@@ -249,31 +276,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                     <>
                     <hr className={styles.horizontalRule} />
                     <div className={styles.infoSection}>
-                        {(() => {
-                            const sorted = [...features].sort((a, b) => a.level - b.level);
-                            const grouped = {};
-                            const sourcesMap = {};
-                            sorted.forEach(f => {
-                                if (!grouped[f.level]) {
-                                    grouped[f.level] = [];
-                                    sourcesMap[f.level] = new Set();
-                                }
-                                grouped[f.level].push(f.name);
-                                if (f.source) sourcesMap[f.level].add(f.source);
-                            });
-                            return Object.entries(grouped).map(([level, names]) => {
-                                const sources = [...(sourcesMap[level] || [])].join(', ');
-                                const header = `Feature L${level}: (${sources})`;
-                                return (
-                                    <div key={level}>
-                                        <div className={styles.infoLabel}>{header}</div>
-                                        {names.map((n, i) => (
-                                            <div key={`${level}-${i}`} className={styles.featureItem}>{n}</div>
-                                        ))}
-                                    </div>
-                                );
-                            });
-                        })()}
+                        {renderGroupedList(features, 'Feature', f => f.source)}
                     </div>
                     </>
                 )}
@@ -282,32 +285,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                     <>
                     <hr className={styles.horizontalRule} />
                     <div className={styles.infoSection}>
-                        {(() => {
-                            const sorted = [...powers].sort((a, b) => a.level - b.level);
-                            const grouped = {};
-                            const groupsMap = {};
-                            sorted.forEach(p => {
-                                if (!grouped[p.level]) {
-                                    grouped[p.level] = [];
-                                    groupsMap[p.level] = new Set();
-                                }
-                                grouped[p.level].push(p.name);
-                                const g = p.group || "Uncategorized";
-                                groupsMap[p.level].add(g);
-                            });
-                            return Object.entries(grouped).map(([level, names]) => {
-                                const groupNames = [...(groupsMap[level] || [])];
-                                const header = `Power L${level}: (${groupNames.join(', ')})`;
-                                return (
-                                    <div key={level}>
-                                        <div className={styles.infoLabel}>{header}</div>
-                                        {names.map((n, i) => (
-                                            <div key={`${level}-${i}`} className={styles.featureItem}>{n}</div>
-                                        ))}
-                                    </div>
-                                );
-                            });
-                        })()}
+                        {renderGroupedList(powers, 'Power', p => p.group || 'Uncategorized')}
                     </div>
                     </>
                 )}
