@@ -3,7 +3,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from './XmlChar.module.css';
 import { parseCharacterXml } from './XmlParser';
-import { signed } from './utils';
+import { signed } from '../../utils/format';
 import clsx from 'clsx';
 
 export default function XmlChar(props) {
@@ -24,6 +24,33 @@ export default function XmlChar(props) {
  * @param {'small'|'medium'|'large'} [props.display='medium'] - Display mode
  * @param {string} [props.image] - Avatar image filename (large mode only)
  */
+function renderGroupedList(items, labelPrefix, getTag) {
+    const sorted = [...items].sort((a, b) => a.level - b.level);
+    const grouped = {};
+    const tagMap = {};
+    sorted.forEach(item => {
+        if (!grouped[item.level]) {
+            grouped[item.level] = [];
+            tagMap[item.level] = new Set();
+        }
+        grouped[item.level].push(item.name);
+        const tag = getTag(item);
+        if (tag) tagMap[item.level].add(tag);
+    });
+    return Object.entries(grouped).map(([level, names]) => {
+        const tags = [...(tagMap[level] || [])].join(', ');
+        const header = `${labelPrefix} L${level}: (${tags})`;
+        return (
+            <div key={level}>
+                <div className={styles.infoLabel}>{header}</div>
+                {names.map((n, i) => (
+                    <div key={`${level}-${i}`} className={styles.featureItem}>{n}</div>
+                ))}
+            </div>
+        );
+    });
+}
+
 function XmlCharInternal({ filename, display = 'medium', image }) {
     const [charData, setCharData] = useState(null);
     const [error, setError] = useState(null);
@@ -33,7 +60,6 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     const avatarBaseUrl = useBaseUrl('/fg/avatar');
 
     const isSmall = display === 'small';
-    const isMedium = display === 'medium';
     const isLarge = display === 'large';
 
     useEffect(() => {
@@ -69,41 +95,24 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     useEffect(() => {
         if (!isLarge || !filename) return;
 
-        if (image) {
-            const url = `${avatarBaseUrl}/${image}`;
+        const fallback = `${avatarBaseUrl}/faceless.svg`;
+
+        const probeAvatar = (url) =>
             fetch(url, { method: 'HEAD' })
-                .then(response => {
-                    if (!response.ok) {
-                        setFinalImage(`${avatarBaseUrl}/faceless.svg`);
-                        return;
-                    }
-                    const contentType = response.headers.get('content-type') || '';
-                    if (!contentType.includes('image')) {
-                        setFinalImage(`${avatarBaseUrl}/faceless.svg`);
-                        return;
-                    }
-                    setFinalImage(url);
+                .then(r => {
+                    if (!r.ok || !r.headers.get('content-type')?.includes('image')) return null;
+                    return url;
                 })
-                .catch(() => setFinalImage(`${avatarBaseUrl}/faceless.svg`));
+                .catch(() => null);
+
+        const resolve = (url) => probeAvatar(url).then(result => setFinalImage(result || fallback));
+
+        if (image) {
+            resolve(`${avatarBaseUrl}/${image}`);
         } else {
-            const withoutSuffix = filename.replace('.xml', '');
-
-            const jpgUrl = `${avatarBaseUrl}/${withoutSuffix}.jpg`;
-            const pngUrl = `${avatarBaseUrl}/${withoutSuffix}.png`;
-
-            const checkAvatar = (url) => {
-                return fetch(url, { method: 'HEAD' })
-                    .then(response => {
-                        if (!response.ok || !response.headers.get('content-type')?.includes('image')) {
-                            throw new Error(`Not found: ${url}`);
-                        }
-                        setFinalImage(url);
-                    });
-            };
-
-            checkAvatar(jpgUrl)
-                .catch(() => checkAvatar(pngUrl))
-                .catch(() => setFinalImage(`${avatarBaseUrl}/faceless.svg`));
+            const base = `${avatarBaseUrl}/${filename.replace('.xml', '')}`;
+            probeAvatar(`${base}.jpg`)
+                .then(result => result ? setFinalImage(result) : resolve(`${base}.png`));
         }
     }, [filename, image, avatarBaseUrl, isLarge]);
 
@@ -133,7 +142,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     };
 
     return (
-        <div className={clsx(styles.container, isMedium && styles.containerMedium, isSmall && styles.containerSmall, styles[display])}>
+        <div className={clsx(styles.container, !isSmall && !isLarge && styles.containerMedium, isSmall && styles.containerSmall, styles[display])}>
             {renderPortrait()}
 
             <div className={styles.content}>
@@ -249,31 +258,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                     <>
                     <hr className={styles.horizontalRule} />
                     <div className={styles.infoSection}>
-                        {(() => {
-                            const sorted = [...features].sort((a, b) => a.level - b.level);
-                            const grouped = {};
-                            const sourcesMap = {};
-                            sorted.forEach(f => {
-                                if (!grouped[f.level]) {
-                                    grouped[f.level] = [];
-                                    sourcesMap[f.level] = new Set();
-                                }
-                                grouped[f.level].push(f.name);
-                                if (f.source) sourcesMap[f.level].add(f.source);
-                            });
-                            return Object.entries(grouped).map(([level, names]) => {
-                                const sources = [...(sourcesMap[level] || [])].join(', ');
-                                const header = `Feature L${level}: (${sources})`;
-                                return (
-                                    <div key={level}>
-                                        <div className={styles.infoLabel}>{header}</div>
-                                        {names.map((n, i) => (
-                                            <div key={`${level}-${i}`} className={styles.featureItem}>{n}</div>
-                                        ))}
-                                    </div>
-                                );
-                            });
-                        })()}
+                        {renderGroupedList(features, 'Feature', f => f.source)}
                     </div>
                     </>
                 )}
@@ -282,32 +267,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
                     <>
                     <hr className={styles.horizontalRule} />
                     <div className={styles.infoSection}>
-                        {(() => {
-                            const sorted = [...powers].sort((a, b) => a.level - b.level);
-                            const grouped = {};
-                            const groupsMap = {};
-                            sorted.forEach(p => {
-                                if (!grouped[p.level]) {
-                                    grouped[p.level] = [];
-                                    groupsMap[p.level] = new Set();
-                                }
-                                grouped[p.level].push(p.name);
-                                const g = p.group || "Uncategorized";
-                                groupsMap[p.level].add(g);
-                            });
-                            return Object.entries(grouped).map(([level, names]) => {
-                                const groupNames = [...(groupsMap[level] || [])];
-                                const header = `Power L${level}: (${groupNames.join(', ')})`;
-                                return (
-                                    <div key={level}>
-                                        <div className={styles.infoLabel}>{header}</div>
-                                        {names.map((n, i) => (
-                                            <div key={`${level}-${i}`} className={styles.featureItem}>{n}</div>
-                                        ))}
-                                    </div>
-                                );
-                            });
-                        })()}
+                        {renderGroupedList(powers, 'Power', p => p.group || 'Uncategorized')}
                     </div>
                     </>
                 )}

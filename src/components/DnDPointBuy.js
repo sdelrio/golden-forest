@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { signed } from '../utils/format';
 import styles from './DnDPointBuy.module.css';
 
 const ABILITIES = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
@@ -32,9 +33,7 @@ const DnDPointBuy = ({ showInfoBox = false }) => {
         return Math.floor((score - 10) / 2);
     };
 
-    const formatModifier = (modifier) => {
-        return modifier >= 0 ? `+${modifier}` : `${modifier}`;
-    };
+    const formatModifier = signed;
 
     const getPointsSpent = () => {
         return Object.values(scores).reduce((total, score) => total + POINT_COSTS[score], 0);

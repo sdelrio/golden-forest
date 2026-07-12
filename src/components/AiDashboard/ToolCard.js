@@ -1,52 +1,14 @@
 import React from 'react';
 import clsx from 'clsx';
 import StatusBadge from './StatusBadge';
+import { CATEGORY_COLORS } from '../../constants/colors';
+import { formatNumber, timeAgo } from '../../utils/format';
 import styles from './ToolCard.module.css';
-
-const CATEGORY_COLORS = {
-  mcp: '#8b5cf6',
-  tools: '#3b82f6',
-  agents: '#f97316',
-  models: '#22c55e',
-  workflows: '#ec4899',
-  prompts: '#eab308',
-  browsers: '#06b6d4',
-  security: '#ef4444',
-  'comparatives': '#a78bfa',
-};
-
-const CATEGORY_ICONS = {
-  mcp: 'mdi:puzzle',
-  tools: 'mdi:hammer-wrench',
-  agents: 'mdi:robot',
-  models: 'mdi:brain',
-  workflows: 'mdi:git-branch',
-  prompts: 'mdi:message-text',
-  browsers: 'mdi:web',
-  security: 'mdi:shield-lock',
-  'comparatives': 'mdi:book-open-variant',
-};
-
-function formatNumber(n) {
-  if (n == null) return null;
-  if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
-  return String(n);
-}
-
-function timeAgo(dateStr) {
-  if (!dateStr) return null;
-  const days = Math.floor((Date.now() - new Date(dateStr).getTime()) / (1000 * 60 * 60 * 24));
-  if (days < 1) return 'today';
-  if (days === 1) return 'yesterday';
-  if (days < 30) return `${days}d ago`;
-  if (days < 365) return `${Math.floor(days / 30)}mo ago`;
-  return `${Math.floor(days / 365)}y ago`;
-}
 
 export default function ToolCard({ tool, onSelect }) {
   const color = CATEGORY_COLORS[tool.category] || '#6b7280';
-  const stars = formatNumber(tool.githubStars);
-  const lastPush = timeAgo(tool.githubLastPush);
+  const stars = formatNumber(tool.githubStars, { compact: true });
+  const lastPush = timeAgo(tool.githubLastPush, { compact: true });
 
   return (
     <button

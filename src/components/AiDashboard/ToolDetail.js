@@ -2,54 +2,18 @@ import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import clsx from 'clsx';
 import StatusBadge from './StatusBadge';
+import { CATEGORY_COLORS } from '../../constants/colors';
+import { formatNumber, timeAgo } from '../../utils/format';
+import { copyToClipboard } from '../../utils/clipboard';
 import styles from './ToolDetail.module.css';
-
-const CATEGORY_COLORS = {
-  mcp: '#8b5cf6',
-  tools: '#3b82f6',
-  agents: '#f97316',
-  models: '#22c55e',
-  workflows: '#ec4899',
-  prompts: '#eab308',
-  browsers: '#06b6d4',
-  security: '#ef4444',
-  'comparatives': '#a78bfa',
-};
-
-function formatNumber(n) {
-  if (n == null) return '—';
-  return n.toLocaleString();
-}
-
-function timeAgo(dateStr) {
-  if (!dateStr) return '—';
-  const days = Math.floor((Date.now() - new Date(dateStr).getTime()) / (1000 * 60 * 60 * 24));
-  if (days < 1) return 'today';
-  if (days === 1) return 'yesterday';
-  if (days < 30) return `${days} days ago`;
-  if (days < 365) return `${Math.floor(days / 30)} months ago`;
-  return `${Math.floor(days / 365)} years ago`;
-}
 
 function CopyButton({ text }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // fallback
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    }
+    await copyToClipboard(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -99,13 +63,13 @@ export default function ToolDetail({ tool, onClose }) {
                   {tool.github && (
                     <div className={styles.healthMetric}>
                       <span className={styles.metricLabel}>GitHub Stars</span>
-                      <span className={styles.metricValue}>{formatNumber(tool.githubStars)}</span>
+                      <span className={styles.metricValue}>{formatNumber(tool.githubStars, { fallback: '—' })}</span>
                     </div>
                   )}
                   {tool.github && (
                     <div className={styles.healthMetric}>
                       <span className={styles.metricLabel}>Last Push</span>
-                      <span className={styles.metricValue}>{timeAgo(tool.githubLastPush)}</span>
+                      <span className={styles.metricValue}>{timeAgo(tool.githubLastPush, { fallback: '—' })}</span>
                     </div>
                   )}
                   {tool.npm && tool.npmVersion && (

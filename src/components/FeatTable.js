@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { FeatFilterContext } from './FeatBrowser';
+import { BOOK_ALIASES } from './Feat';
 import styles from './Feat.module.css';
 
 export default function FeatTable({ category }) {
@@ -38,18 +39,11 @@ export default function FeatTable({ category }) {
         // 4. Book Filter
         if (filterState.selectedBook !== 'All') {
             const bookName = feat.book ? feat.book.toLowerCase() : '';
-            if (filterState.selectedBook === "Player's Handbook") {
-                if (bookName !== 'phb' && bookName !== 'phb2024') return false;
-            } else if (filterState.selectedBook === "Heroes of Faerûn") {
-                if (bookName !== 'hof' && bookName !== 'hof2024') return false;
-            } else if (filterState.selectedBook === "Fifth Edition Feats") {
-                if (bookName !== 'fef') return false;
-            } else if (filterState.selectedBook === "Unknown") {
-                if (bookName !== 'unknown') return false;
-            } else if (filterState.selectedBook === "Epic Characters & Heroes Handbook") {
-                if (bookName !== 'echh') return false;
-            } else {
-                if (feat.book !== filterState.selectedBook) return false;
+            const allowedCodes = BOOK_ALIASES[filterState.selectedBook];
+            if (allowedCodes) {
+                if (!allowedCodes.includes(bookName)) return false;
+            } else if (feat.book !== filterState.selectedBook) {
+                return false;
             }
         }
 

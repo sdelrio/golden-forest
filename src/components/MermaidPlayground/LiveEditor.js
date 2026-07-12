@@ -1,21 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { CATEGORY_COLORS } from '../../constants/colors';
+import { copyToClipboard } from '../../utils/clipboard';
 import styles from './LiveEditor.module.css';
-
-const CATEGORY_COLORS = {
-  flowchart: '#3b82f6',
-  sequence: '#8b5cf6',
-  class: '#22c55e',
-  state: '#f97316',
-  er: '#06b6d4',
-  gantt: '#ec4899',
-  pie: '#eab308',
-  mindmap: '#a78bfa',
-  architecture: '#14b8a6',
-  gitgraph: '#ef4444',
-  xychart: '#0ea5e9',
-  treeview: '#84cc16',
-  radar: '#f43f5e',
-};
 
 export default function LiveEditor({ template, onBack }) {
   const [code, setCode] = useState(template.code);
@@ -75,32 +61,14 @@ export default function LiveEditor({ template, onBack }) {
   }, [code, renderMermaid]);
 
   const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(code);
-    } catch {
-      const ta = document.createElement('textarea');
-      ta.value = code;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-    }
+    await copyToClipboard(code);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   const handleCopySvg = async () => {
     if (!svg) return;
-    try {
-      await navigator.clipboard.writeText(svg);
-    } catch {
-      const ta = document.createElement('textarea');
-      ta.value = svg;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-    }
+    await copyToClipboard(svg);
     setCopiedSvg(true);
     setTimeout(() => setCopiedSvg(false), 2000);
   };
