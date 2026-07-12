@@ -4,27 +4,16 @@ import clsx from 'clsx';
 import StatusBadge from './StatusBadge';
 import { CATEGORY_COLORS } from '../../constants/colors';
 import { formatNumber, timeAgo } from '../../utils/format';
+import { copyToClipboard } from '../../utils/clipboard';
 import styles from './ToolDetail.module.css';
 
 function CopyButton({ text }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // fallback
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    }
+    await copyToClipboard(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (

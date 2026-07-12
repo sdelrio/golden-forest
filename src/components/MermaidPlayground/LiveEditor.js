@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { CATEGORY_COLORS } from '../../constants/colors';
+import { copyToClipboard } from '../../utils/clipboard';
 import styles from './LiveEditor.module.css';
 
 export default function LiveEditor({ template, onBack }) {
@@ -60,32 +61,14 @@ export default function LiveEditor({ template, onBack }) {
   }, [code, renderMermaid]);
 
   const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(code);
-    } catch {
-      const ta = document.createElement('textarea');
-      ta.value = code;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-    }
+    await copyToClipboard(code);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   const handleCopySvg = async () => {
     if (!svg) return;
-    try {
-      await navigator.clipboard.writeText(svg);
-    } catch {
-      const ta = document.createElement('textarea');
-      ta.value = svg;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-    }
+    await copyToClipboard(svg);
     setCopiedSvg(true);
     setTimeout(() => setCopiedSvg(false), 2000);
   };
