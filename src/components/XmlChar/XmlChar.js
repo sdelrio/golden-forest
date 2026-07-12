@@ -60,7 +60,6 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     const avatarBaseUrl = useBaseUrl('/fg/avatar');
 
     const isSmall = display === 'small';
-    const isMedium = display === 'medium';
     const isLarge = display === 'large';
 
     useEffect(() => {
@@ -143,7 +142,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     };
 
     return (
-        <div className={clsx(styles.container, isMedium && styles.containerMedium, isSmall && styles.containerSmall, styles[display])}>
+        <div className={clsx(styles.container, !isSmall && !isLarge && styles.containerMedium, isSmall && styles.containerSmall, styles[display])}>
             {renderPortrait()}
 
             <div className={styles.content}>
