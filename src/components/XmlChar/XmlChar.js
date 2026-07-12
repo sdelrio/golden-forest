@@ -3,7 +3,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from './XmlChar.module.css';
 import { parseCharacterXml } from './XmlParser';
-import { signed } from './utils';
+import { signed } from '../../utils/format';
 import clsx from 'clsx';
 
 export default function XmlChar(props) {

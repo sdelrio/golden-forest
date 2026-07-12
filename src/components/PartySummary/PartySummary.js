@@ -3,7 +3,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { Icon } from '@iconify/react';
 import { parseCharacterXml } from '../XmlChar/XmlParser';
-import { signed } from '../XmlChar/utils';
+import { signed } from '../../utils/format';
 import styles from './PartySummary.module.css';
 
 const ROLE_CONFIG = {

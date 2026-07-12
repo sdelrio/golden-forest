@@ -1,3 +1,8 @@
+export function signed(number) {
+  if (typeof number !== 'number') return number;
+  return number >= 0 ? `+${number}` : `${number}`;
+}
+
 export function formatNumber(n, { fallback = null, compact = false } = {}) {
   if (n == null) return fallback;
   if (compact && n >= 1000) return `${(n / 1000).toFixed(1)}k`;
