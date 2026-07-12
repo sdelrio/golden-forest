@@ -2,6 +2,14 @@ import React, { useContext } from 'react';
 import styles from './Feat.module.css';
 import { FeatFilterContext } from './FeatBrowser';
 
+export const BOOK_ALIASES = {
+    "Player's Handbook": ['phb', 'phb2024'],
+    "Heroes of Faerûn": ['hof', 'hof2024'],
+    "Fifth Edition Feats": ['fef'],
+    "Unknown": ['unknown'],
+    "Epic Characters & Heroes Handbook": ['echh'],
+};
+
 export default function Feat({
     name,
     book,
@@ -59,19 +67,11 @@ export default function Feat({
 
     if (filterState.selectedBook !== 'All') {
         const bookName = book ? book.toLowerCase() : '';
-        if (filterState.selectedBook === "Player's Handbook") {
-            if (bookName !== 'phb' && bookName !== 'phb2024') return null;
-        } else if (filterState.selectedBook === "Heroes of Faerûn") {
-            if (bookName !== 'hof' && bookName !== 'hof2024') return null;
-        } else if (filterState.selectedBook === "Fifth Edition Feats") {
-            if (bookName !== 'fef') return null;
-        } else if (filterState.selectedBook === "Unknown") {
-            if (bookName !== 'unknown') return null;
-        } else if (filterState.selectedBook === "Epic Characters & Heroes Handbook") {
-            if (bookName !== 'echh') return null;
-        } else {
-            // Fallback for custom book strings if they happen to match exactly
-            if (book !== filterState.selectedBook) return null;
+        const allowedCodes = BOOK_ALIASES[filterState.selectedBook];
+        if (allowedCodes) {
+            if (!allowedCodes.includes(bookName)) return null;
+        } else if (book !== filterState.selectedBook) {
+            return null;
         }
     }
 
@@ -93,13 +93,9 @@ export default function Feat({
     };
 
     const getBook = () => {
-        if (book === "phb2024" || book === "phb") return "Player's Handbook";
-        if (book === "hof2024" || book === "hof") return "Heroes of Faerûn";
-        if (book === "fef") return "Fifth Edition Feats";
-        if (book === "echh") return "Epic Characters & Heroes Handbook";
-        if (book === "unknown") return "Unknown";
-        if (book) return `${book}`;
-        return null;
+        if (!book) return null;
+        const label = Object.entries(BOOK_ALIASES).find(([, codes]) => codes.includes(book));
+        return label ? label[0] : book;
     };
 
     const getAbilityIncrease = () => {
