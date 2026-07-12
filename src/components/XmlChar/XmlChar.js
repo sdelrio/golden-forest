@@ -96,41 +96,24 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     useEffect(() => {
         if (!isLarge || !filename) return;
 
-        if (image) {
-            const url = `${avatarBaseUrl}/${image}`;
+        const fallback = `${avatarBaseUrl}/faceless.svg`;
+
+        const probeAvatar = (url) =>
             fetch(url, { method: 'HEAD' })
-                .then(response => {
-                    if (!response.ok) {
-                        setFinalImage(`${avatarBaseUrl}/faceless.svg`);
-                        return;
-                    }
-                    const contentType = response.headers.get('content-type') || '';
-                    if (!contentType.includes('image')) {
-                        setFinalImage(`${avatarBaseUrl}/faceless.svg`);
-                        return;
-                    }
-                    setFinalImage(url);
+                .then(r => {
+                    if (!r.ok || !r.headers.get('content-type')?.includes('image')) return null;
+                    return url;
                 })
-                .catch(() => setFinalImage(`${avatarBaseUrl}/faceless.svg`));
+                .catch(() => null);
+
+        const resolve = (url) => probeAvatar(url).then(result => setFinalImage(result || fallback));
+
+        if (image) {
+            resolve(`${avatarBaseUrl}/${image}`);
         } else {
-            const withoutSuffix = filename.replace('.xml', '');
-
-            const jpgUrl = `${avatarBaseUrl}/${withoutSuffix}.jpg`;
-            const pngUrl = `${avatarBaseUrl}/${withoutSuffix}.png`;
-
-            const checkAvatar = (url) => {
-                return fetch(url, { method: 'HEAD' })
-                    .then(response => {
-                        if (!response.ok || !response.headers.get('content-type')?.includes('image')) {
-                            throw new Error(`Not found: ${url}`);
-                        }
-                        setFinalImage(url);
-                    });
-            };
-
-            checkAvatar(jpgUrl)
-                .catch(() => checkAvatar(pngUrl))
-                .catch(() => setFinalImage(`${avatarBaseUrl}/faceless.svg`));
+            const base = `${avatarBaseUrl}/${filename.replace('.xml', '')}`;
+            probeAvatar(`${base}.jpg`)
+                .then(result => result ? setFinalImage(result) : resolve(`${base}.png`));
         }
     }, [filename, image, avatarBaseUrl, isLarge]);
 
