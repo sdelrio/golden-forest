@@ -27,7 +27,7 @@ Creator **Watabou** (consolidated under the **[Procgen Arcana](https://watabou.g
   <Card title="One Page Dungeon" icon="game-icons:dungeon-gate" href="https://watabou.itch.io/one-page-dungeon">
     Generate complete dungeon maps in a classic hand-hatched blueprint aesthetic, complete with pre-filled room descriptions and encounter suggestions.
   </Card>
-  <Card title="Fantasy Region Generator (Realm)" icon="game-icons:hexes" href="https://watabou.itch.io/fantasy-region-generator">
+  <Card title="Fantasy Region Generator (Realm)" icon="game-icons:hexes" href="https://watabou.itch.io/perilous-shores">
     Produce regional hex-like maps depicting geographic points of interest, political boundaries, roads, rivers, and local kingdoms.
   </Card>
   <Card title="Village & Toy Town" icon="game-icons:village" href="https://watabou.itch.io/village-generator">
