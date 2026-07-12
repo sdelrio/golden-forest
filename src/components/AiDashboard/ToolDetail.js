@@ -3,22 +3,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import clsx from 'clsx';
 import StatusBadge from './StatusBadge';
 import { CATEGORY_COLORS } from '../../constants/colors';
+import { formatNumber, timeAgo } from '../../utils/format';
 import styles from './ToolDetail.module.css';
-
-function formatNumber(n) {
-  if (n == null) return '—';
-  return n.toLocaleString();
-}
-
-function timeAgo(dateStr) {
-  if (!dateStr) return '—';
-  const days = Math.floor((Date.now() - new Date(dateStr).getTime()) / (1000 * 60 * 60 * 24));
-  if (days < 1) return 'today';
-  if (days === 1) return 'yesterday';
-  if (days < 30) return `${days} days ago`;
-  if (days < 365) return `${Math.floor(days / 30)} months ago`;
-  return `${Math.floor(days / 365)} years ago`;
-}
 
 function CopyButton({ text }) {
   const [copied, setCopied] = useState(false);
@@ -88,13 +74,13 @@ export default function ToolDetail({ tool, onClose }) {
                   {tool.github && (
                     <div className={styles.healthMetric}>
                       <span className={styles.metricLabel}>GitHub Stars</span>
-                      <span className={styles.metricValue}>{formatNumber(tool.githubStars)}</span>
+                      <span className={styles.metricValue}>{formatNumber(tool.githubStars, { fallback: '—' })}</span>
                     </div>
                   )}
                   {tool.github && (
                     <div className={styles.healthMetric}>
                       <span className={styles.metricLabel}>Last Push</span>
-                      <span className={styles.metricValue}>{timeAgo(tool.githubLastPush)}</span>
+                      <span className={styles.metricValue}>{timeAgo(tool.githubLastPush, { fallback: '—' })}</span>
                     </div>
                   )}
                   {tool.npm && tool.npmVersion && (
