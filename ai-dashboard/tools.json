@@ -598,5 +598,20 @@
     "tags": ["yagni", "token-efficiency", "code-reduction", "agent-plugin"],
     "supportedBy": ["claude-code", "opencode", "codex", "gemini-cli"],
     "docPath": "/docs/Develop-Code/AI-Development/Tools/ponytail"
+  },
+  {
+    "id": "skillopt",
+    "name": "SkillOpt",
+    "description": "Microsoft's text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts.",
+    "category": "agents",
+    "github": "https://github.com/microsoft/SkillOpt",
+    "npm": null,
+    "pip": "skillopt",
+    "install": "pip install skillopt",
+    "site": "https://microsoft.github.io/SkillOpt/",
+    "license": "MIT",
+    "tags": ["skills", "optimization", "self-evolving", "agent-skills"],
+    "supportedBy": ["claude-code", "codex", "copilot"],
+    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/skillopt"
   }
 ]
