@@ -1,6 +1,11 @@
 ---
 name: write-article
-description: Create, update, or refactor Docusaurus MDX articles for The Golden Forest. This skill must be used when writing, updating, or refactoring any article under /docs or /tutorial.
+description: >
+  Create, update, or refactor Docusaurus MDX articles for The Golden Forest.
+  INVOCATION: Do NOT use skill() injection. Use task(subagent_type="general") instead —
+  pass this skill's path in the prompt so the agent reads it independently, keeping
+  main context clean. Trigger: user asks to write/update/refactor an article under
+  /docs or /tutorial.
 applyTo:
   - /docs/**/*.md
   - /docs/**/*.mdx

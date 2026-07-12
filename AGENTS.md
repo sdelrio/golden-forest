@@ -91,6 +91,34 @@ The dark/light mode toggle uses the **View Transitions API** for a circular-mask
 - Schema per entry: `{ filename, name, race, classes: string[], level: int|null }`.
 - Consumed by `src/components/CharSearch/CharSearch.js`: responsive card grid (2 columns ≥520px, 1 column on mobile). Each card shows name + inline class+level+race via `.cardMeta` layout.
 
+## Skill Invocation via Subagents
+
+Skills that produce substantial output (articles, large code blocks) should be invoked via `task()` subagent, not `skill()` injection, to keep the main conversation context clean.
+
+### write-article
+
+When the user asks to write, update, or refactor an article under `/docs` or `/tutorial`:
+
+1. **Invoke `task`** with `subagent_type="general"` and this prompt:
+
+```
+You are writing a Docusaurus MDX article for The Golden Forest digital garden.
+
+STEPS:
+1. Read the skill file at .agents/skills/write-article/SKILL.md — follow ALL its guidelines.
+2. Read the 4 templates at .agents/skills/write-article/resources/templates/ for structure reference.
+3. Determine the target folder under /docs/ based on content domain.
+4. Draft and write the article to the appropriate location.
+5. Run `make check` to validate MDX syntax. Fix any errors.
+
+USER REQUEST: {user_request}
+
+Return: file path written, number of sections, components imported, and any warnings.
+```
+
+2. **Do NOT use `skill(name="write-article")` directly** — it injects ~12KB into context.
+3. For follow-up edits, invoke a new task with the file path and corrections.
+
 ## AI Rules Integration
 - **Copilot**: `.github/copilot-instructions.md` designates this file as the source of truth.
 - **Cursor**: Adhere to this file's formatting and style patterns when generating code.
