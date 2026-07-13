@@ -19,7 +19,7 @@
     "@docusaurus/plugin-content-docs": "^3.10.1",
     "@docusaurus/preset-classic": "^3.10.1",
     "@docusaurus/theme-mermaid": "^3.10.1",
-    "@docusaurus/theme-search-algolia": "^3.10.1",
+    "@docusaurus/theme-search-algolia": "^3.10.2",
     "@iconify/react": "^6.0.2",
     "@mdx-js/react": "^3.1.0",
     "@mermaid-js/layout-elk": "^0.2.2",
