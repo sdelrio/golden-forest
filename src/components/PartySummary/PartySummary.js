@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import { Skeleton } from 'boneyard-js/react';
 import { Icon } from '@iconify/react';
 import { parseCharacterXml } from '../XmlChar/XmlParser';
 import { signed } from '../../utils/format';
+import partySummaryBones from '../../bones/party-summary.bones.json';
 import styles from './PartySummary.module.css';
 
 const ROLE_CONFIG = {
@@ -60,7 +62,18 @@ function PartySummaryInternal() {
         return () => { cancelled = true; };
     }, [partyBaseUrl, charsBaseUrl]);
 
-    if (loading || !characters.length) return null;
+    if (!characters.length) {
+        return (
+            <Skeleton
+                name="party-summary"
+                loading={loading}
+                initialBones={partySummaryBones}
+                animate="shimmer"
+            >
+                <div style={{ height: partySummaryBones.height }} />
+            </Skeleton>
+        );
+    }
 
     const totalHp = characters.reduce((sum, c) => sum + (c.hp || 0), 0);
     const avgAc = characters.length ? Math.round(characters.reduce((sum, c) => sum + (c.ac || 0), 0) / characters.length) : 0;

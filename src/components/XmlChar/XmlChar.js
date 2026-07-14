@@ -1,18 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import { Skeleton } from 'boneyard-js/react';
+import xmlCharBones from '../../bones/xml-char.bones.json';
+import xmlCharSmallBones from '../../bones/xml-char-small.bones.json';
 import styles from './XmlChar.module.css';
 import { parseCharacterXml } from './XmlParser';
 import { signed } from '../../utils/format';
 import clsx from 'clsx';
 
 export default function XmlChar(props) {
+    const isSmall = props.display === 'small';
+    const bones = isSmall ? xmlCharSmallBones : xmlCharBones;
+    const color = 'rgba(88,24,13,0.08)';
+    const darkColor = 'rgba(255,182,48,0.08)';
+
     return (
-        <BrowserOnly fallback={<div className={clsx(styles.container, styles.containerSmall)}>
-                                    <div className={styles.content}>
-                                        <h1 className={styles.name}>Loading character...</h1>
-                                    </div>
-                                </div>}>
+        <BrowserOnly fallback={
+            <Skeleton
+                name="xml-char"
+                loading={true}
+                initialBones={bones}
+                color={color}
+                darkColor={darkColor}
+                animate="shimmer"
+            >
+                <div style={{ height: bones.height }} />
+            </Skeleton>
+        }>
             {() => <XmlCharInternal {...props} />}
         </BrowserOnly>
     );
@@ -60,6 +75,7 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     const avatarBaseUrl = useBaseUrl('/fg/avatar');
 
     const isSmall = display === 'small';
+    const isMedium = display === 'medium';
     const isLarge = display === 'large';
 
     useEffect(() => {
@@ -117,7 +133,23 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     }, [filename, image, avatarBaseUrl, isLarge]);
 
     if (error) return <div className={styles.error}>Error: {error}</div>;
-    if (!charData) return <div className={styles.loading}>Loading {filename}...</div>;
+    if (!charData) {
+        const bones = isSmall ? xmlCharSmallBones : xmlCharBones;
+        const color = 'rgba(88,24,13,0.08)';
+        const darkColor = 'rgba(255,182,48,0.08)';
+        return (
+            <Skeleton
+                name="xml-char"
+                loading={true}
+                initialBones={bones}
+                color={color}
+                darkColor={darkColor}
+                animate="shimmer"
+            >
+                <div style={{ height: bones.height }} />
+            </Skeleton>
+        );
+    }
 
     const { name, race, alignment, background, deity, classes, abilities, ac, hp, speed, initiative, profBonus, skills, languages, feats, features, powers } = charData;
 

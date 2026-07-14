@@ -1,0 +1,10 @@
+{
+  "name": "char-search-card",
+  "viewportWidth": 1280,
+  "width": 325,
+  "height": 44,
+  "bones": [
+    [0, 5, 50, 16, 4],
+    [0, 26, 65, 12, 4]
+  ]
+}

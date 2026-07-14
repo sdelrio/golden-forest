@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import { Skeleton } from 'boneyard-js/react';
 import CategoryFilter from './CategoryFilter';
 import ToolCard from './ToolCard';
 import ToolDetail from './ToolDetail';
+import aiDashboardCardBones from '../../bones/ai-dashboard-card.bones.json';
 import styles from './AiDashboard.module.css';
 
 function AiDashboardInternal() {
@@ -14,6 +16,7 @@ function AiDashboardInternal() {
   const [selectedTool, setSelectedTool] = useState(null);
 
   const toolsUrl = useBaseUrl('/ai-dashboard');
+  const isLoading = tools.length === 0 && !error;
 
   useEffect(() => {
     fetch(`${toolsUrl}/tools-enriched.json`)
@@ -89,10 +92,23 @@ function AiDashboardInternal() {
       </div>
 
       <div className={styles.grid}>
-        {filtered.map((tool) => (
-          <ToolCard key={tool.id} tool={tool} onSelect={setSelectedTool} />
-        ))}
-        {filtered.length === 0 && (
+        {isLoading
+          ? Array.from({ length: 8 }).map((_, i) => (
+              <Skeleton
+                key={`skeleton-${i}`}
+                name="ai-dashboard-card"
+                loading={true}
+                initialBones={aiDashboardCardBones}
+                animate="shimmer"
+              >
+                <div style={{ height: aiDashboardCardBones.height }} />
+              </Skeleton>
+            ))
+          : filtered.map((tool) => (
+              <ToolCard key={tool.id} tool={tool} onSelect={setSelectedTool} />
+            ))
+        }
+        {!isLoading && filtered.length === 0 && (
           <div className={styles.empty}>No tools match your search.</div>
         )}
       </div>
