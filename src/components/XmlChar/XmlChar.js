@@ -12,8 +12,8 @@ import clsx from 'clsx';
 export default function XmlChar(props) {
     const isSmall = props.display === 'small';
     const bones = isSmall ? xmlCharSmallBones : xmlCharBones;
-    const color = isSmall ? 'rgba(88,24,13,0.08)' : undefined;
-    const darkColor = isSmall ? 'rgba(255,182,48,0.08)' : undefined;
+    const color = 'rgba(88,24,13,0.08)';
+    const darkColor = 'rgba(255,182,48,0.08)';
 
     return (
         <BrowserOnly fallback={
@@ -135,8 +135,8 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
     if (error) return <div className={styles.error}>Error: {error}</div>;
     if (!charData) {
         const bones = isSmall ? xmlCharSmallBones : xmlCharBones;
-        const color = isSmall ? 'rgba(88,24,13,0.08)' : undefined;
-        const darkColor = isSmall ? 'rgba(255,182,48,0.08)' : undefined;
+        const color = 'rgba(88,24,13,0.08)';
+        const darkColor = 'rgba(255,182,48,0.08)';
         return (
             <Skeleton
                 name="xml-char"
