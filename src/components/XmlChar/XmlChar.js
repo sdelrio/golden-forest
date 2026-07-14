@@ -3,21 +3,29 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { Skeleton } from 'boneyard-js/react';
 import xmlCharBones from '../../bones/xml-char.bones.json';
+import xmlCharSmallBones from '../../bones/xml-char-small.bones.json';
 import styles from './XmlChar.module.css';
 import { parseCharacterXml } from './XmlParser';
 import { signed } from '../../utils/format';
 import clsx from 'clsx';
 
 export default function XmlChar(props) {
+    const isSmall = props.display === 'small';
+    const bones = isSmall ? xmlCharSmallBones : xmlCharBones;
+    const color = isSmall ? 'rgba(88,24,13,0.08)' : undefined;
+    const darkColor = isSmall ? 'rgba(255,182,48,0.08)' : undefined;
+
     return (
         <BrowserOnly fallback={
             <Skeleton
                 name="xml-char"
                 loading={true}
-                initialBones={xmlCharBones}
+                initialBones={bones}
+                color={color}
+                darkColor={darkColor}
                 animate="shimmer"
             >
-                <div style={{ height: xmlCharBones.height }} />
+                <div style={{ height: bones.height }} />
             </Skeleton>
         }>
             {() => <XmlCharInternal {...props} />}
@@ -126,14 +134,19 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
 
     if (error) return <div className={styles.error}>Error: {error}</div>;
     if (!charData) {
+        const bones = isSmall ? xmlCharSmallBones : xmlCharBones;
+        const color = isSmall ? 'rgba(88,24,13,0.08)' : undefined;
+        const darkColor = isSmall ? 'rgba(255,182,48,0.08)' : undefined;
         return (
             <Skeleton
                 name="xml-char"
                 loading={true}
-                initialBones={xmlCharBones}
+                initialBones={bones}
+                color={color}
+                darkColor={darkColor}
                 animate="shimmer"
             >
-                <div style={{ height: xmlCharBones.height }} />
+                <div style={{ height: bones.height }} />
             </Skeleton>
         );
     }
