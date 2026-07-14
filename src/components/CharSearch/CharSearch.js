@@ -169,7 +169,23 @@ export default function CharSearch() {
                     <div style={{ flex: 1, height: 38 }} />
                     <div style={{ width: 160, height: 38 }} />
                 </div>
-                <p className={styles.loading}>Loading character browser...</p>
+                <div style={{ margin: '0 0 1rem 0', height: 20 }} />
+                {Array.from({ length: 8 }).map((_, i) => (
+                    <div key={i} className={styles.card} style={{ padding: 0, border: 'none', background: 'none' }}>
+                        <div style={{ padding: '0.6rem 1rem' }}>
+                            <Skeleton
+                                name="char-search-card"
+                                loading={true}
+                                initialBones={charSearchCardBones}
+                                color="rgba(88,24,13,0.08)"
+                                darkColor="rgba(255,182,48,0.08)"
+                                animate="shimmer"
+                            >
+                                <div style={{ height: charSearchCardBones.height }} />
+                            </Skeleton>
+                        </div>
+                    </div>
+                ))}
             </div>
         }>
             {() => <CharSearchInternal />}
