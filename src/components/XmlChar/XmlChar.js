@@ -11,22 +11,25 @@ import clsx from 'clsx';
 
 export default function XmlChar(props) {
     const isSmall = props.display === 'small';
+    const isLarge = props.display === 'large';
     const bones = isSmall ? xmlCharSmallBones : xmlCharBones;
     const color = 'rgba(88,24,13,0.08)';
     const darkColor = 'rgba(255,182,48,0.08)';
 
     return (
         <BrowserOnly fallback={
-            <Skeleton
-                name="xml-char"
-                loading={true}
-                initialBones={bones}
-                color={color}
-                darkColor={darkColor}
-                animate="shimmer"
-            >
-                <div style={{ height: bones.height }} />
-            </Skeleton>
+            <div className={clsx(styles.container, !isSmall && !isLarge && styles.containerMedium, isSmall && styles.containerSmall, styles[props.display || 'medium'])} style={isSmall ? { width: 360 } : undefined}>
+                <Skeleton
+                    name="xml-char"
+                    loading={true}
+                    initialBones={bones}
+                    color={color}
+                    darkColor={darkColor}
+                    animate="shimmer"
+                >
+                    <div style={{ height: bones.height, width: '100%' }} />
+                </Skeleton>
+            </div>
         }>
             {() => <XmlCharInternal {...props} />}
         </BrowserOnly>
@@ -138,16 +141,18 @@ function XmlCharInternal({ filename, display = 'medium', image }) {
         const color = 'rgba(88,24,13,0.08)';
         const darkColor = 'rgba(255,182,48,0.08)';
         return (
-            <Skeleton
-                name="xml-char"
-                loading={true}
-                initialBones={bones}
-                color={color}
-                darkColor={darkColor}
-                animate="shimmer"
-            >
-                <div style={{ height: bones.height }} />
-            </Skeleton>
+            <div className={clsx(styles.container, !isSmall && !isLarge && styles.containerMedium, isSmall && styles.containerSmall, styles[display])} style={isSmall ? { width: 360 } : undefined}>
+                <Skeleton
+                    name="xml-char"
+                    loading={true}
+                    initialBones={bones}
+                    color={color}
+                    darkColor={darkColor}
+                    animate="shimmer"
+                >
+                    <div style={{ height: bones.height, width: '100%' }} />
+                </Skeleton>
+            </div>
         );
     }
 

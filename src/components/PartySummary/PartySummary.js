@@ -68,6 +68,8 @@ function PartySummaryInternal() {
                 name="party-summary"
                 loading={loading}
                 initialBones={partySummaryBones}
+                color="rgba(88,24,13,0.08)"
+                darkColor="rgba(255,182,48,0.08)"
                 animate="shimmer"
             >
                 <div style={{ height: partySummaryBones.height }} />
