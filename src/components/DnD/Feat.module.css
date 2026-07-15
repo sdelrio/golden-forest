@@ -3,13 +3,13 @@
 /* --- Container for the Feat Card --- */
 .featContainer {
     /* Similar parchment feel to DnDPointBuy */
-    border-top: 1px solid #8b6f47;
-    border-bottom: 1px solid #8b6f47;
+    border-top: 1px solid var(--dnd-border-brown);
+    border-bottom: 1px solid var(--dnd-border-brown);
     scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem);
 }
 
 [data-theme='dark'] .featContainer {
-    border-color: #5a4a2a;
+    border-color: var(--dnd-border-brown);
 }
 
 /* --- Header Section --- */
@@ -56,7 +56,7 @@
 }
 
 [data-theme='dark'] .featName {
-    color: #c9a961;
+    color: var(--dnd-text-secondary);
 }
 
 .hashLink {
@@ -84,7 +84,7 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     background-color: rgba(139, 111, 71, 0.1);
-    color: #5a4a2a;
+    color: var(--dnd-text-secondary);
     border-radius: 4px;
     border: 1px solid rgba(139, 111, 71, 0.2);
     white-space: nowrap;
@@ -94,7 +94,7 @@
 
 [data-theme='dark'] .badge {
     background-color: rgba(201, 169, 97, 0.1);
-    color: #c9a961;
+    color: var(--dnd-text-secondary);
     border-color: rgba(201, 169, 97, 0.3);
 }
 
@@ -105,11 +105,11 @@
     gap: 1rem;
     /* margin-bottom: 0.75rem; */
     font-size: 0.9rem;
-    color: #3a2a1a;
+    color: var(--dnd-text-primary);
 }
 
 [data-theme='dark'] .infoGrid {
-    color: #d4c4a8;
+    color: var(--dnd-text-primary);
 }
 
 
@@ -126,7 +126,7 @@
 }
 
 [data-theme='dark'] .content {
-    color: #d4c4a8;
+    color: var(--dnd-text-primary);
 }
 
 /* Adjust markdown elements inside content */
@@ -218,7 +218,7 @@
 }
 
 [data-theme='dark'] .summaryGrid a:hover {
-    color: #c9a961;
+    color: var(--dnd-text-secondary);
 }
 
 /* Tablet / Small Laptop */

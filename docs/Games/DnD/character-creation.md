@@ -3,8 +3,8 @@ description: Character creation selection guide.
 tags: [character, character-creation, dnd]
 ---
 
-import DnDPointBuy from '@site/src/components/DnDPointBuy';
-import StatDiceRoller from '@site/src/components/StatDiceRoller';
+import DnDPointBuy from '@site/src/components/DnD/DnDPointBuy';
+import StatDiceRoller from '@site/src/components/DnD/StatDiceRoller';
 
 # Character Creation
 

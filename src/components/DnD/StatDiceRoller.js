@@ -1,5 +1,6 @@
 import React, { useState, useRef, useMemo } from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import { ABILITIES, calculateModifier } from '../../constants/dnd';
 
 export default function StatDiceRoller() {
     return (
@@ -11,8 +12,6 @@ export default function StatDiceRoller() {
         </BrowserOnly>
     );
 }
-
-const ABILITIES = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
 
 function StatDiceRollerInternal({ ReactDice }) {
     const [results, setResults] = useState({});
@@ -130,7 +129,7 @@ function StatDiceRollerInternal({ ReactDice }) {
                                     color: 'var(--ifm-color-emphasis-700)',
                                     fontWeight: 'normal'
                                 }}>
-                                    ({Math.floor((results[index].sum - 10) / 2) > 0 ? '+' : ''}{Math.floor((results[index].sum - 10) / 2)})
+                                    ({calculateModifier(results[index].sum) > 0 ? '+' : ''}{calculateModifier(results[index].sum)})
                                 </span>
                             )}
 

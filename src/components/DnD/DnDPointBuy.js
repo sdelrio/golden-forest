@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { signed } from '../utils/format';
+import { ABILITIES, calculateModifier } from '../../constants/dnd';
+import { signed } from '../../utils/format';
 import styles from './DnDPointBuy.module.css';
-
-const ABILITIES = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA'];
 const MIN_SCORE = 8;
 const MAX_SCORE = 15;
 const TOTAL_POINTS = 27;
@@ -29,11 +28,9 @@ const DnDPointBuy = ({ showInfoBox = false }) => {
         CHA: 8
     });
 
-    const calculateModifier = (score) => {
-        return Math.floor((score - 10) / 2);
-    };
+    const formatModifierValue = (score) => signed(calculateModifier(score));
 
-    const formatModifier = signed;
+
 
     const getPointsSpent = () => {
         return Object.values(scores).reduce((total, score) => total + POINT_COSTS[score], 0);
@@ -93,7 +90,6 @@ const DnDPointBuy = ({ showInfoBox = false }) => {
             <div className={styles.abilitiesGrid}>
                 {ABILITIES.map((ability) => {
                     const score = scores[ability];
-                    const modifier = calculateModifier(score);
 
                     return (
                         <div key={ability} className={styles.abilityCard}>
@@ -108,7 +104,7 @@ const DnDPointBuy = ({ showInfoBox = false }) => {
                                     −
                                 </button>
                                 <div className={styles.scoreDisplay}>
-                                    <div className={styles.scoreValue}>{score} ({formatModifier(modifier)})</div>
+                                    <div className={styles.scoreValue}>{score} ({signed(calculateModifier(score))})</div>
                                 </div>
                                 <button
                                     className={styles.controlButton}

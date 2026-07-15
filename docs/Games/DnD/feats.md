@@ -3,9 +3,9 @@ description: Special talents and expertise providing unique capabilities
 tags: [feat, feats, origin feats, character, dnd]
 ---
 import TOCInline from '@theme/TOCInline';
-import Feat from '@site/src/components/Feat';
-import FeatBrowser from '@site/src/components/FeatBrowser';
-import FeatTable from '@site/src/components/FeatTable';
+import Feat from '@site/src/components/DnD/Feat';
+import FeatBrowser from '@site/src/components/DnD/FeatBrowser';
+import FeatTable from '@site/src/components/DnD/FeatTable';
 
 
 # Feats
