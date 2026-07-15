@@ -1,16 +1,8 @@
 .container {
+    composes: dnd-container from '../../css/shared-components.css';
     font-family: 'ScalySans', sans-serif;
     margin: 0 auto 1.5rem;
     padding: 0.75rem 1rem;
-    background: var(--dnd-parchment-bg);
-    border-top: 1px solid var(--dnd-text-heading);
-    border-bottom: 1px solid var(--dnd-text-heading);
-    box-shadow:
-        0 4px 8px rgba(0, 0, 0, 0.2),
-        inset 0 3px 0 0 var(--dnd-parchment-accent),
-        inset 0 4px 0 0 var(--dnd-text-heading),
-        inset 0 -3px 0 0 var(--dnd-parchment-accent),
-        inset 0 -4px 0 0 var(--dnd-text-heading);
     text-align: center;
 }
 
@@ -85,18 +77,6 @@
 }
 
 /* Dark Mode */
-[data-theme='dark'] .container {
-    background: var(--dnd-parchment-bg);
-    border-top-color: var(--dnd-parchment-border-gold);
-    border-bottom-color: var(--dnd-parchment-border-gold);
-    box-shadow:
-        0 4px 8px rgba(0, 0, 0, 0.5),
-        inset 0 3px 0 0 var(--dnd-parchment-accent),
-        inset 0 4px 0 0 var(--dnd-parchment-border-gold),
-        inset 0 -3px 0 0 var(--dnd-parchment-accent),
-        inset 0 -4px 0 0 var(--dnd-parchment-border-gold);
-}
-
 [data-theme='dark'] .partyName {
     color: var(--dnd-text-heading);
 }

@@ -14,21 +14,12 @@
 }
 
 .container {
+    composes: dnd-container from '../../css/shared-components.css';
     font-family: 'ScalySans', sans-serif;
     margin: 1.5rem auto;
     padding: 1.5rem;
-    background: var(--dnd-parchment-bg);
     max-width: 710px;
     animation: fadeIn 0.4s ease-out;
-    border-top: 1px solid var(--dnd-text-heading);
-    border-bottom: 1px solid var(--dnd-text-heading);
-    /* Create a thin double-border look on top/bottom with larger orange fill and outer shadow */
-    box-shadow:
-        0 6px 12px rgba(0, 0, 0, 0.3),
-        inset 0 4px 0 0 var(--dnd-parchment-accent),
-        inset 0 5px 0 0 var(--dnd-text-heading),
-        inset 0 -4px 0 0 var(--dnd-parchment-accent),
-        inset 0 -5px 0 0 var(--dnd-text-heading);
     position: relative;
 }
 
@@ -151,7 +142,7 @@
     text-align: center;
     padding: 0.25rem;
     border: 0px solid rgba(88, 24, 13, 0.1);
-    background: rgba(253, 241, 220, 0.3);
+    background: var(--dnd-ability-bg);
 }
 
 .abilityLabel {
@@ -197,7 +188,7 @@
 .abilitiesCompactHeader span:nth-child(6) { grid-column: 12; }
 
 [data-theme='dark'] .abilitiesCompactHeader span {
-    color: #c9ad6a;
+    color: var(--dnd-text-secondary);
 }
 
 .abilityCompactLabel {
@@ -219,7 +210,7 @@
 
 [data-theme='dark'] .abilityCompactBonus,
 [data-theme='dark'] .abilityCompactSave {
-    color: #c9ad6a;
+    color: var(--dnd-text-secondary);
 }
 
 @media (max-width: 700px) {
@@ -312,18 +303,6 @@
 }
 
 /* Dark Mode */
-[data-theme='dark'] .container {
-    background: var(--dnd-parchment-bg);
-    border-top-color: var(--dnd-parchment-border-gold);
-    border-bottom-color: var(--dnd-parchment-border-gold);
-    box-shadow:
-        0 6px 12px rgba(0, 0, 0, 0.5),
-        inset 0 4px 0 0 var(--dnd-parchment-accent),
-        inset 0 5px 0 0 var(--dnd-parchment-border-gold),
-        inset 0 -4px 0 0 var(--dnd-parchment-accent),
-        inset 0 -5px 0 0 var(--dnd-parchment-border-gold);
-}
-
 [data-theme='dark'] .name {
     color: var(--dnd-text-heading);
 }
@@ -347,7 +326,7 @@
 }
 
 [data-theme='dark'] .ability {
-    background: rgba(42, 32, 16, 0.5);
+    background: var(--dnd-ability-bg);
     border-color: rgba(198, 128, 0, 0.2);
 }
 

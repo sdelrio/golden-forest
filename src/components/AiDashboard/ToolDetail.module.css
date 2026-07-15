@@ -240,18 +240,9 @@
 }
 
 .tag {
-  display: inline-block;
+  composes: shared-tag from '../../css/shared-components.css';
   padding: 0.125rem 0.5rem;
-  border-radius: 4px;
   font-size: 0.6875rem;
-  background: var(--ifm-color-emphasis-100);
-  color: var(--ifm-color-emphasis-600);
-  font-weight: 500;
-}
-
-[data-theme='dark'] .tag {
-  background: var(--ifm-color-emphasis-200);
-  color: var(--ifm-color-emphasis-700);
 }
 
 /* License */

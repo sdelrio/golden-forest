@@ -67,25 +67,7 @@
 }
 
 .searchInput {
-  width: 100%;
-  padding: 0.625rem 1rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 8px;
-  background: var(--ifm-card-background-color, var(--ifm-background-surface-color));
-  color: var(--ifm-font-color-base);
-  font-size: 0.9375rem;
-  font-family: var(--ifm-font-family-base);
-  outline: none;
-  transition: border-color 0.15s ease;
-  box-sizing: border-box;
-}
-
-.searchInput:focus {
-  border-color: var(--ifm-color-primary);
-}
-
-.searchInput::placeholder {
-  color: var(--ifm-color-emphasis-500);
+  composes: shared-search-input from '../../css/shared-components.css';
 }
 
 /* Grid */
@@ -115,15 +97,14 @@
 }
 
 /* States */
-.loading,
-.error,
-.empty {
-  text-align: center;
-  padding: 4rem 2rem;
-  color: var(--ifm-color-emphasis-600);
-  font-size: 0.9375rem;
+.loading {
+  composes: ai-state-loading from '../../css/shared-components.css';
 }
 
 .error {
-  color: var(--ifm-color-danger);
+  composes: ai-state-error from '../../css/shared-components.css';
+}
+
+.empty {
+  composes: ai-state-empty from '../../css/shared-components.css';
 }

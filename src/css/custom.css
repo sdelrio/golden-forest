@@ -58,6 +58,12 @@
   --dnd-text-secondary: #5a4a2a;
   --dnd-text-muted: #8b6d52;
   --dnd-border-brown: #8b6f47;
+  --dnd-ability-bg: rgba(253, 241, 220, 0.3);
+  --dnd-card-bg: rgba(253, 241, 220, 0.3);
+  --dnd-card-bg-hover: rgba(253, 241, 220, 0.6);
+  --dnd-error-bg: rgba(180, 60, 40, 0.1);
+  --dnd-error-border: #b43c28;
+  --dnd-error-text: #8b2520;
 
   --ifm-heading-color-light: #58180D;
   --ifm-heading-color-dark: #c68000;
@@ -97,6 +103,11 @@ html[data-theme='dark'] :root {
   --dnd-text-secondary: #c9ad6a;
   --dnd-text-muted: #a89968;
   --dnd-border-brown: #5a4a2a;
+  --dnd-ability-bg: rgba(42, 32, 16, 0.5);
+  --dnd-card-bg: rgba(42, 32, 16, 0.5);
+  --dnd-card-bg-hover: rgba(42, 32, 16, 0.8);
+  --dnd-error-bg: rgba(120, 40, 30, 0.3);
+  --dnd-error-text: #e0a090;
 
   /* Mermaid Diagram Variables (Dark Mode) */
   --mermaid-lightbrown-fill: #3a2a2a;
@@ -529,6 +540,7 @@ html h2 {
 @import './table.css';
 @import './admonition.css';
 @import './custom-dnd.css';
+@import './shared-components.css';
 
 
 .markdown h2 {
