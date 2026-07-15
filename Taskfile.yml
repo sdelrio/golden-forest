@@ -23,6 +23,8 @@ tasks:
     desc: Install dependencies
     status:
       - test -d node_modules
+      - test node_modules -nt package.json
+      - test node_modules -nt yarn.lock
     cmds:
       - "{{.YARN}} install --immutable --inline-builds"
 
