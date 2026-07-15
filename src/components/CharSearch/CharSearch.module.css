@@ -1,16 +1,8 @@
 .container {
+    composes: dnd-container from '../../css/shared-components.css';
     margin: 1rem auto;
     padding: 1.5rem;
-    background: var(--dnd-parchment-bg);
     max-width: 710px;
-    border-top: 1px solid var(--dnd-text-heading);
-    border-bottom: 1px solid var(--dnd-text-heading);
-    box-shadow:
-        0 6px 12px rgba(0, 0, 0, 0.3),
-        inset 0 4px 0 0 var(--dnd-parchment-accent),
-        inset 0 5px 0 0 var(--dnd-text-heading),
-        inset 0 -4px 0 0 var(--dnd-parchment-accent),
-        inset 0 -5px 0 0 var(--dnd-text-heading);
 }
 
 .toolbar {
@@ -74,7 +66,7 @@
     display: block;
     padding: 0.6rem 1rem;
     margin-bottom: 0.5rem;
-    background: rgba(253, 241, 220, 0.3);
+    background: var(--dnd-card-bg);
     border: 1px solid transparent;
     border-radius: 3px;
     cursor: pointer;
@@ -83,7 +75,7 @@
 }
 
 .card:hover {
-    background: rgba(253, 241, 220, 0.6);
+    background: var(--dnd-card-bg-hover);
     border-color: var(--dnd-parchment-accent);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
@@ -141,36 +133,15 @@
 }
 
 .loading {
-    text-align: center;
-    padding: 2rem;
-    color: var(--dnd-text-heading);
-    font-style: italic;
+    composes: dnd-state-loading from '../../css/shared-components.css';
 }
 
 .error {
-    background: rgba(180, 60, 40, 0.1);
-    border-left: 3px solid #b43c28;
-    padding: 1rem;
-    color: #8b2520;
+    composes: dnd-state-error from '../../css/shared-components.css';
 }
 
 .empty {
-    text-align: center;
-    color: var(--dnd-text-muted);
-    font-style: italic;
-    margin-top: 1.5rem;
-}
-
-[data-theme='dark'] .container {
-    background: var(--dnd-parchment-bg);
-    border-top-color: var(--dnd-parchment-border-gold);
-    border-bottom-color: var(--dnd-parchment-border-gold);
-    box-shadow:
-        0 6px 12px rgba(0, 0, 0, 0.5),
-        inset 0 4px 0 0 var(--dnd-parchment-accent),
-        inset 0 5px 0 0 var(--dnd-parchment-border-gold),
-        inset 0 -4px 0 0 var(--dnd-parchment-accent),
-        inset 0 -5px 0 0 var(--dnd-parchment-border-gold);
+    composes: dnd-state-empty from '../../css/shared-components.css';
 }
 
 [data-theme='dark'] .searchInput {
@@ -194,12 +165,12 @@
 }
 
 [data-theme='dark'] .card {
-    background: rgba(42, 32, 16, 0.5);
+    background: var(--dnd-card-bg);
     border-color: transparent;
 }
 
 [data-theme='dark'] .card:hover {
-    background: rgba(42, 32, 16, 0.8);
+    background: var(--dnd-card-bg-hover);
     border-color: var(--dnd-parchment-border-gold);
 }
 
@@ -228,18 +199,4 @@
     background: var(--dnd-parchment-input-bg);
     border-color: var(--dnd-parchment-border-gold);
     color: var(--dnd-text-heading);
-}
-
-[data-theme='dark'] .loading {
-    color: var(--dnd-text-secondary);
-}
-
-[data-theme='dark'] .error {
-    background: rgba(120, 40, 30, 0.3);
-    border-color: #b43c28;
-    color: #e0a090;
-}
-
-[data-theme='dark'] .empty {
-    color: var(--dnd-text-secondary);
 }

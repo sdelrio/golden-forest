@@ -4,6 +4,16 @@ Potential features for The Golden Forest (lorien.cloud), focusing on security, c
 
 ---
 
+## Verification Checklist
+
+Before merging any PR from this plan, **all** of these must pass:
+
+1. **`make check`** — Docusaurus MDX syntax checker passes (no errors outside `graphify-out/`).
+2. **`yarn start`** — Dev server compiles with 0 errors (`compiled successfully`).
+3. **Visual check** — Navigate to affected pages in both **light** and **dark** mode. No broken layouts, missing styles, or console errors.
+4. **Import paths** — All new/moved files resolve correctly (no `Module not found` errors).
+5. **TODO file updated** — Completed items marked with ✅ DONE in this file.
+
 ## 1. Security
 
 ### 1.1 SECURITY.md
@@ -117,35 +127,35 @@ ToolDetail already has one. Export it and use in LiveEditor.
 - **Files:** XmlChar.module.css, CharSearch.module.css, PartySummary.module.css, ToolCard.module.css, ToolDetail.module.css, TemplateCard.module.css, custom.css
 - **Complexity:** Medium
 
-### 4.2 Shared `.dnd-container` Class
+### 4.2 Shared `.dnd-container` Class ✅ DONE
 
 Parchment container with inset box-shadow is copy-pasted 3 times with near-identical values.
 
 - **Files:** XmlChar.module.css (lines 16-33), CharSearch.module.css (lines 1-14), PartySummary.module.css (lines 1-15)
 - **Complexity:** Low-Medium
 
-### 4.3 Shared Pill/Filter CSS
+### 4.3 Shared Pill/Filter CSS ✅ DONE
 
 CategoryFilter and MermaidPlayground have identical `.pill`, `.active`, `.filterBar` classes.
 
 - **Files:** `AiDashboard/CategoryFilter.module.css`, `MermaidPlayground/MermaidPlayground.module.css`
 - **Complexity:** Low
 
-### 4.4 Shared Search Input CSS
+### 4.4 Shared Search Input CSS ✅ DONE
 
 Identical `.searchInput` class in AiDashboard and MermaidPlayground.
 
 - **Files:** `AiDashboard/AiDashboard.module.css`, `MermaidPlayground/MermaidPlayground.module.css`
 - **Complexity:** Low
 
-### 4.5 Shared Loading/Error/Empty CSS
+### 4.5 Shared Loading/Error/Empty CSS ✅ DONE
 
 Identical `.loading`, `.error`, `.empty` classes in AiDashboard and MermaidPlayground.
 
 - **Files:** `AiDashboard/AiDashboard.module.css`, `MermaidPlayground/MermaidPlayground.module.css`
 - **Complexity:** Low
 
-### 4.6 Shared Tag CSS
+### 4.6 Shared Tag CSS ✅ DONE
 
 `.tag` class duplicated in 3 files.
 
