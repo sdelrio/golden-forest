@@ -1,16 +1,16 @@
 .container {
     margin: 1rem auto;
     padding: 1.5rem;
-    background: #fcf5e5;
+    background: var(--dnd-parchment-bg);
     max-width: 710px;
-    border-top: 1px solid #58180d;
-    border-bottom: 1px solid #58180d;
+    border-top: 1px solid var(--dnd-text-heading);
+    border-bottom: 1px solid var(--dnd-text-heading);
     box-shadow:
         0 6px 12px rgba(0, 0, 0, 0.3),
-        inset 0 4px 0 0 #e69a28,
-        inset 0 5px 0 0 #58180d,
-        inset 0 -4px 0 0 #e69a28,
-        inset 0 -5px 0 0 #58180d;
+        inset 0 4px 0 0 var(--dnd-parchment-accent),
+        inset 0 5px 0 0 var(--dnd-text-heading),
+        inset 0 -4px 0 0 var(--dnd-parchment-accent),
+        inset 0 -5px 0 0 var(--dnd-text-heading);
 }
 
 .toolbar {
@@ -29,30 +29,30 @@
     flex: 1 1 200px;
     padding: 0.5rem 0.75rem;
     font-size: 1rem;
-    background: #fdf1dc;
-    border: 2px solid #c9a84c;
+    background: var(--dnd-parchment-input-bg);
+    border: 2px solid var(--dnd-parchment-border-gold);
     border-radius: 3px;
-    color: #58180d;
+    color: var(--dnd-text-heading);
     outline: none;
     transition: border-color 0.2s ease;
 }
 
 .searchInput::placeholder {
-    color: #a08860;
+    color: var(--dnd-text-muted);
 }
 
 .searchInput:focus {
-    border-color: #e69a28;
+    border-color: var(--dnd-parchment-accent);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .classSelect {
     padding: 0.5rem 0.75rem;
     font-size: 1rem;
-    background: #fdf1dc;
-    border: 2px solid #c9a84c;
+    background: var(--dnd-parchment-input-bg);
+    border: 2px solid var(--dnd-parchment-border-gold);
     border-radius: 3px;
-    color: #58180d;
+    color: var(--dnd-text-heading);
     cursor: pointer;
     outline: none;
     min-width: 160px;
@@ -60,12 +60,12 @@
 }
 
 .classSelect:focus {
-    border-color: #e69a28;
+    border-color: var(--dnd-parchment-accent);
 }
 
 .count {
     margin: 0 0 1rem 0;
-    color: #58180d;
+    color: var(--dnd-text-heading);
     font-size: 0.9rem;
     opacity: 0.7;
 }
@@ -84,18 +84,18 @@
 
 .card:hover {
     background: rgba(253, 241, 220, 0.6);
-    border-color: #e69a28;
+    border-color: var(--dnd-parchment-accent);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .cardName {
     font-weight: bold;
-    color: #58180d;
+    color: var(--dnd-text-heading);
     font-size: 1rem;
 }
 
 .cardMeta {
-    color: #7a6442;
+    color: var(--dnd-text-muted);
     font-size: 0.9rem;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .cardRace {
-    color: #8b7355;
+    color: var(--dnd-text-muted);
     font-size: 0.85rem;
 }
 
@@ -125,8 +125,8 @@
     display: inline-block;
     padding: 0.4rem 0.75rem;
     background: transparent;
-    border: 1px solid #c9a84c;
-    color: #58180d;
+    border: 1px solid var(--dnd-parchment-border-gold);
+    color: var(--dnd-text-heading);
     font-size: 0.9rem;
     cursor: pointer;
     border-radius: 3px;
@@ -135,15 +135,15 @@
 }
 
 .backBtn:hover {
-    background: #fdf1dc;
-    border-color: #e69a28;
-    color: #7a5c30;
+    background: var(--dnd-parchment-input-bg);
+    border-color: var(--dnd-parchment-accent);
+    color: var(--dnd-text-secondary);
 }
 
 .loading {
     text-align: center;
     padding: 2rem;
-    color: #58180d;
+    color: var(--dnd-text-heading);
     font-style: italic;
 }
 
@@ -156,41 +156,41 @@
 
 .empty {
     text-align: center;
-    color: #7a6442;
+    color: var(--dnd-text-muted);
     font-style: italic;
     margin-top: 1.5rem;
 }
 
 [data-theme='dark'] .container {
-    background: #1a1612;
-    border-top-color: #c68000;
-    border-bottom-color: #c68000;
+    background: var(--dnd-parchment-bg);
+    border-top-color: var(--dnd-parchment-border-gold);
+    border-bottom-color: var(--dnd-parchment-border-gold);
     box-shadow:
         0 6px 12px rgba(0, 0, 0, 0.5),
-        inset 0 4px 0 0 #a36a00,
-        inset 0 5px 0 0 #c68000,
-        inset 0 -4px 0 0 #a36a00,
-        inset 0 -5px 0 0 #c68000;
+        inset 0 4px 0 0 var(--dnd-parchment-accent),
+        inset 0 5px 0 0 var(--dnd-parchment-border-gold),
+        inset 0 -4px 0 0 var(--dnd-parchment-accent),
+        inset 0 -5px 0 0 var(--dnd-parchment-border-gold);
 }
 
 [data-theme='dark'] .searchInput {
-    background: #2a2010;
-    border-color: #7a5c30;
-    color: #e0d5c1;
+    background: var(--dnd-parchment-input-bg);
+    border-color: var(--dnd-parchment-border-gold);
+    color: var(--dnd-text-primary);
 }
 
 [data-theme='dark'] .searchInput::placeholder {
-    color: #8b7355;
+    color: var(--dnd-text-muted);
 }
 
 [data-theme='dark'] .classSelect {
-    background: #2a2010;
-    border-color: #7a5c30;
-    color: #e0d5c1;
+    background: var(--dnd-parchment-input-bg);
+    border-color: var(--dnd-parchment-border-gold);
+    color: var(--dnd-text-primary);
 }
 
 [data-theme='dark'] .count {
-    color: #c9ad6a;
+    color: var(--dnd-text-secondary);
 }
 
 [data-theme='dark'] .card {
@@ -200,38 +200,38 @@
 
 [data-theme='dark'] .card:hover {
     background: rgba(42, 32, 16, 0.8);
-    border-color: #c68000;
+    border-color: var(--dnd-parchment-border-gold);
 }
 
 [data-theme='dark'] .cardName {
-    color: #ffb630;
+    color: var(--dnd-text-heading);
 }
 
 [data-theme='dark'] .cardClass {
-    color: #c9ad6a;
+    color: var(--dnd-text-secondary);
 }
 
 [data-theme='dark'] .cardMeta {
-    color: #c9ad6a;
+    color: var(--dnd-text-secondary);
 }
 
 [data-theme='dark'] .cardRace {
-    color: #8b7355;
+    color: var(--dnd-text-muted);
 }
 
 [data-theme='dark'] .backBtn {
-    border-color: #7a5c30;
-    color: #e0d5c1;
+    border-color: var(--dnd-parchment-border-gold);
+    color: var(--dnd-text-primary);
 }
 
 [data-theme='dark'] .backBtn:hover {
-    background: #2a2010;
-    border-color: #c68000;
-    color: #ffb630;
+    background: var(--dnd-parchment-input-bg);
+    border-color: var(--dnd-parchment-border-gold);
+    color: var(--dnd-text-heading);
 }
 
 [data-theme='dark'] .loading {
-    color: #c9ad6a;
+    color: var(--dnd-text-secondary);
 }
 
 [data-theme='dark'] .error {
@@ -241,5 +241,5 @@
 }
 
 [data-theme='dark'] .empty {
-    color: #c9ad6a;
+    color: var(--dnd-text-secondary);
 }

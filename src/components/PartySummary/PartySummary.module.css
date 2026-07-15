@@ -2,15 +2,15 @@
     font-family: 'ScalySans', sans-serif;
     margin: 0 auto 1.5rem;
     padding: 0.75rem 1rem;
-    background: #fcf5e5;
-    border-top: 1px solid #58180d;
-    border-bottom: 1px solid #58180d;
+    background: var(--dnd-parchment-bg);
+    border-top: 1px solid var(--dnd-text-heading);
+    border-bottom: 1px solid var(--dnd-text-heading);
     box-shadow:
         0 4px 8px rgba(0, 0, 0, 0.2),
-        inset 0 3px 0 0 #e69a28,
-        inset 0 4px 0 0 #58180d,
-        inset 0 -3px 0 0 #e69a28,
-        inset 0 -4px 0 0 #58180d;
+        inset 0 3px 0 0 var(--dnd-parchment-accent),
+        inset 0 4px 0 0 var(--dnd-text-heading),
+        inset 0 -3px 0 0 var(--dnd-parchment-accent),
+        inset 0 -4px 0 0 var(--dnd-text-heading);
     text-align: center;
 }
 
@@ -21,12 +21,12 @@
 
 .partyName {
     font-weight: bold;
-    color: #58180d;
+    color: var(--dnd-text-heading);
 }
 
 .separator {
     margin: 0 0.4rem;
-    color: #8b6d52;
+    color: var(--dnd-text-muted);
 }
 
 .statsRow {
@@ -45,12 +45,12 @@
 .statValue {
     font-weight: bold;
     font-size: 1.1rem;
-    color: #58180d;
+    color: var(--dnd-text-heading);
 }
 
 .statLabel {
     font-size: 0.75rem;
-    color: #8b6d52;
+    color: var(--dnd-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -77,42 +77,42 @@
 
 .roleCount {
     font-weight: bold;
-    color: #58180d;
+    color: var(--dnd-text-heading);
 }
 
 .roleLabel {
-    color: #6b4f3a;
+    color: var(--dnd-text-secondary);
 }
 
 /* Dark Mode */
 [data-theme='dark'] .container {
-    background: #1a1612;
-    border-top-color: #c68000;
-    border-bottom-color: #c68000;
+    background: var(--dnd-parchment-bg);
+    border-top-color: var(--dnd-parchment-border-gold);
+    border-bottom-color: var(--dnd-parchment-border-gold);
     box-shadow:
         0 4px 8px rgba(0, 0, 0, 0.5),
-        inset 0 3px 0 0 #a36a00,
-        inset 0 4px 0 0 #c68000,
-        inset 0 -3px 0 0 #a36a00,
-        inset 0 -4px 0 0 #c68000;
+        inset 0 3px 0 0 var(--dnd-parchment-accent),
+        inset 0 4px 0 0 var(--dnd-parchment-border-gold),
+        inset 0 -3px 0 0 var(--dnd-parchment-accent),
+        inset 0 -4px 0 0 var(--dnd-parchment-border-gold);
 }
 
 [data-theme='dark'] .partyName {
-    color: #ffb630;
+    color: var(--dnd-text-heading);
 }
 
 [data-theme='dark'] .statValue {
-    color: #ffb630;
+    color: var(--dnd-text-heading);
 }
 
 [data-theme='dark'] .statLabel {
-    color: #c9ad6a;
+    color: var(--dnd-text-secondary);
 }
 
 [data-theme='dark'] .roleCount {
-    color: #ffb630;
+    color: var(--dnd-text-heading);
 }
 
 [data-theme='dark'] .roleLabel {
-    color: #c9ad6a;
+    color: var(--dnd-text-secondary);
 }

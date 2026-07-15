@@ -2,7 +2,7 @@
 
 ## Directory Overview
 - **Documentation**: `Accordion`, `Card`, `CodeGroup`, `Steps`, `ParamField` (registered in `src/theme/MDXComponents`).
-- **D&D Tools**: `CharSearch`, `XmlChar`, `DnDPointBuy`, `FeatBrowser`, `StatDiceRoller`, `PartySummary`.
+- **D&D Tools**: `DnD/` subdirectory contains `DnDPointBuy`, `Feat`, `FeatBrowser`, `FeatTable`, `StatDiceRoller`. Top-level: `CharSearch`, `XmlChar`, `PartySummary`.
 - **Structure**: Directory-per-component (PascalCase) containing `Component.js` and `Component.module.css`.
 
 ## Current Focus

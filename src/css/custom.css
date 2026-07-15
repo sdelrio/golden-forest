@@ -48,6 +48,17 @@
   --HB_Color_Footnotes: #C9AD6A;
   --TOC: 'include';
 
+  /* D&D Parchment Theme Tokens */
+  --dnd-parchment-bg: #fcf5e5;
+  --dnd-parchment-input-bg: #fdf1dc;
+  --dnd-parchment-accent: #e69a28;
+  --dnd-parchment-border-gold: #c9a84c;
+  --dnd-text-heading: #58180d;
+  --dnd-text-primary: #3a2a1a;
+  --dnd-text-secondary: #5a4a2a;
+  --dnd-text-muted: #8b6d52;
+  --dnd-border-brown: #8b6f47;
+
   --ifm-heading-color-light: #58180D;
   --ifm-heading-color-dark: #c68000;
 
@@ -75,6 +86,17 @@ html[data-theme='dark'] :root {
   --docusaurus-highlighted-code-line-bg: #3a3a3a;
   --bg-table-row-odd: #242526;
   --bg-table-row-even: #2c2e30;
+
+  /* D&D Parchment Theme Tokens (Dark Mode) */
+  --dnd-parchment-bg: #1a1612;
+  --dnd-parchment-input-bg: #2a2010;
+  --dnd-parchment-accent: #a36a00;
+  --dnd-parchment-border-gold: #7a5c30;
+  --dnd-text-heading: #ffb630;
+  --dnd-text-primary: #d4c4a8;
+  --dnd-text-secondary: #c9ad6a;
+  --dnd-text-muted: #a89968;
+  --dnd-border-brown: #5a4a2a;
 
   /* Mermaid Diagram Variables (Dark Mode) */
   --mermaid-lightbrown-fill: #3a2a2a;
