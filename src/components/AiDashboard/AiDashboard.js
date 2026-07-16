@@ -1,22 +1,33 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { Skeleton } from 'boneyard-js/react';
 import CategoryFilter from './CategoryFilter';
 import ToolCard from './ToolCard';
 import ToolDetail from './ToolDetail';
+import useSearchFilter from '../../hooks/useSearchFilter';
 import aiDashboardCardBones from '../../bones/ai-dashboard-card.bones.json';
 import styles from './AiDashboard.module.css';
 
+function filterTools(tool, searchText, selectedCategory) {
+  if (selectedCategory !== 'all' && tool.category !== selectedCategory) return false;
+  if (searchText.trim()) {
+    const q = searchText.toLowerCase();
+    return (
+      tool.name.toLowerCase().includes(q) ||
+      tool.description.toLowerCase().includes(q) ||
+      (tool.tags && tool.tags.some((tag) => tag.toLowerCase().includes(q)))
+    );
+  }
+  return true;
+}
+
 function AiDashboardInternal() {
-  const [tools, setTools] = useState([]);
-  const [error, setError] = useState(null);
-  const [searchText, setSearchText] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [tools, setTools] = useState(null);
+  const [fetchError, setFetchError] = useState(null);
   const [selectedTool, setSelectedTool] = useState(null);
 
   const toolsUrl = useBaseUrl('/ai-dashboard');
-  const isLoading = tools.length === 0 && !error;
 
   useEffect(() => {
     fetch(`${toolsUrl}/tools-enriched.json`)
@@ -29,37 +40,28 @@ function AiDashboardInternal() {
         fetch(`${toolsUrl}/tools.json`)
           .then((res) => res.json())
           .then((data) => setTools(data))
-          .catch((err) => setError(err.message));
+          .catch((err) => setFetchError(err.message));
       });
   }, [toolsUrl]);
 
-  const counts = useMemo(() => {
-    const c = { total: tools.length };
-    tools.forEach((t) => {
-      c[t.category] = (c[t.category] || 0) + 1;
-    });
-    return c;
-  }, [tools]);
+  const {
+    filtered,
+    counts,
+    error,
+    searchText,
+    setSearchText,
+    selectedCategory,
+    setSelectedCategory,
+    isLoading,
+  } = useSearchFilter({
+    items: tools,
+    filterFn: filterTools,
+  });
 
-  const filtered = useMemo(() => {
-    let result = tools;
-    if (selectedCategory !== 'all') {
-      result = result.filter((t) => t.category === selectedCategory);
-    }
-    if (searchText.trim()) {
-      const q = searchText.toLowerCase();
-      result = result.filter(
-        (t) =>
-          t.name.toLowerCase().includes(q) ||
-          t.description.toLowerCase().includes(q) ||
-          (t.tags && t.tags.some((tag) => tag.toLowerCase().includes(q)))
-      );
-    }
-    return result;
-  }, [tools, selectedCategory, searchText]);
-
-  if (error) {
-    return <div className={styles.error}>Error loading dashboard: {error}</div>;
+  if (fetchError || error) {
+    return (
+      <div className={styles.error}>Error loading dashboard: {fetchError || error}</div>
+    );
   }
 
   return (
@@ -69,7 +71,7 @@ function AiDashboardInternal() {
           <div>
             <h1 className={styles.title}>AI Agent Dashboard</h1>
             <p className={styles.subtitle}>
-              {tools.length} tools, agents, and resources for AI-powered development
+              {tools ? tools.length : '—'} tools, agents, and resources for AI-powered development
             </p>
           </div>
         </div>

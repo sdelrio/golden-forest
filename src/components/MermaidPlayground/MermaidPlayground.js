@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import clsx from 'clsx';
 import TemplateCard from './TemplateCard';
 import LiveEditor from './LiveEditor';
+import useSearchFilter from '../../hooks/useSearchFilter';
 import styles from './MermaidPlayground.module.css';
 
 const CATEGORIES = [
@@ -23,49 +24,36 @@ const CATEGORIES = [
   { id: 'radar', label: 'Radar' },
 ];
 
+function filterTemplates(tpl, searchText, selectedCategory) {
+  if (selectedCategory !== 'all' && tpl.category !== selectedCategory) return false;
+  if (searchText.trim()) {
+    const q = searchText.toLowerCase();
+    return (
+      tpl.name.toLowerCase().includes(q) ||
+      tpl.description.toLowerCase().includes(q) ||
+      (tpl.tags && tpl.tags.some((tag) => tag.toLowerCase().includes(q)))
+    );
+  }
+  return true;
+}
+
 function MermaidPlaygroundInternal() {
-  const [templates, setTemplates] = useState([]);
-  const [error, setError] = useState(null);
-  const [searchText, setSearchText] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedTemplate, setSelectedTemplate] = useState(null);
 
   const templatesUrl = useBaseUrl('/mermaid-templates');
 
-  useEffect(() => {
-    fetch(`${templatesUrl}/templates.json`)
-      .then((res) => {
-        if (!res.ok) throw new Error('Failed to load templates');
-        return res.json();
-      })
-      .then((data) => setTemplates(data))
-      .catch((err) => setError(err.message));
-  }, [templatesUrl]);
-
-  const counts = useMemo(() => {
-    const c = { total: templates.length };
-    templates.forEach((t) => {
-      c[t.category] = (c[t.category] || 0) + 1;
-    });
-    return c;
-  }, [templates]);
-
-  const filtered = useMemo(() => {
-    let result = templates;
-    if (selectedCategory !== 'all') {
-      result = result.filter((t) => t.category === selectedCategory);
-    }
-    if (searchText.trim()) {
-      const q = searchText.toLowerCase();
-      result = result.filter(
-        (t) =>
-          t.name.toLowerCase().includes(q) ||
-          t.description.toLowerCase().includes(q) ||
-          (t.tags && t.tags.some((tag) => tag.toLowerCase().includes(q)))
-      );
-    }
-    return result;
-  }, [templates, selectedCategory, searchText]);
+  const {
+    filtered,
+    counts,
+    error,
+    searchText,
+    setSearchText,
+    selectedCategory,
+    setSelectedCategory,
+  } = useSearchFilter({
+    url: `${templatesUrl}/templates.json`,
+    filterFn: filterTemplates,
+  });
 
   if (error) {
     return <div className={styles.error}>Error loading playground: {error}</div>;
