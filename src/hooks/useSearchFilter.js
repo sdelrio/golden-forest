@@ -26,7 +26,7 @@ export default function useSearchFilter({
   const [searchText, setSearchText] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
 
-  const items = external ? externalItems : (externalItems != null ? externalItems : internalItems);
+  const items = (external ? externalItems : (externalItems != null ? externalItems : internalItems)) || [];
 
   useEffect(() => {
     if (external || externalItems != null) return;
