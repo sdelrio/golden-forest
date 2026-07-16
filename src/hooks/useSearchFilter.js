@@ -19,16 +19,17 @@ export default function useSearchFilter({
   filterFn,
   categoryKey = 'category',
   defaultCategory = 'all',
+  external = false,
 }) {
   const [internalItems, setInternalItems] = useState([]);
   const [error, setError] = useState(null);
   const [searchText, setSearchText] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
 
-  const items = externalItems != null ? externalItems : internalItems;
+  const items = external ? externalItems : (externalItems != null ? externalItems : internalItems);
 
   useEffect(() => {
-    if (externalItems != null) return;
+    if (external || externalItems != null) return;
     fetch(url)
       .then((res) => {
         if (!res.ok) throw new Error(`Failed to load data: ${res.status}`);
@@ -36,7 +37,7 @@ export default function useSearchFilter({
       })
       .then((data) => setInternalItems(transform ? transform(data) : data))
       .catch((err) => setError(err.message));
-  }, [url, transform, externalItems]);
+  }, [url, transform, externalItems, external]);
 
   const counts = useMemo(() => {
     const c = { total: items.length };
@@ -54,7 +55,9 @@ export default function useSearchFilter({
     [items, searchText, selectedCategory, filterFn],
   );
 
-  const isLoading = externalItems == null && items.length === 0 && !error;
+  const isLoading = external
+    ? externalItems == null
+    : externalItems == null && items.length === 0 && !error;
 
   return {
     items,

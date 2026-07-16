@@ -69,6 +69,7 @@ function CharSearchInternal() {
         items: index,
         filterFn: filterChars,
         defaultCategory: 'All',
+        external: true,
     });
 
     const handleSelectChar = (char) => {

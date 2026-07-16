@@ -56,6 +56,7 @@ function AiDashboardInternal() {
   } = useSearchFilter({
     items: tools,
     filterFn: filterTools,
+    external: true,
   });
 
   if (fetchError || error) {
