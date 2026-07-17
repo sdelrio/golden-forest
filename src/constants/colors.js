@@ -23,4 +23,13 @@ export const CATEGORY_COLORS = {
   xychart: '#0ea5e9',
   treeview: '#84cc16',
   radar: '#f43f5e',
+  // CmdRef categories
+  git: '#f97316',
+  'package-managers': '#3b82f6',
+  make: '#22c55e',
+  docker: '#06b6d4',
+  docusaurus: '#8b5cf6',
+  opencode: '#ec4899',
+  'claude-code': '#eab308',
+  misc: '#6b7280',
 };
