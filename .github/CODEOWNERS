@@ -1,0 +1,14 @@
+# CODEOWNERS — Auto-assign reviewers for The Golden Forest
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything
+* @sdelrio
+
+# Source code
+/src/ @sdelrio
+
+# Documentation
+/docs/ @sdelrio
+
+# CI/CD and GitHub config
+/.github/ @sdelrio
