@@ -13,7 +13,7 @@ const CATEGORIES = [
   { id: 'git', label: 'Git' },
   { id: 'package-managers', label: 'Package Managers' },
   { id: 'make', label: 'Make' },
-  { id: 'docker', label: 'Docker' },
+  { id: 'taskfile', label: 'Taskfile' },
   { id: 'docusaurus', label: 'Docusaurus' },
   { id: 'opencode', label: 'OpenCode' },
   { id: 'claude-code', label: 'Claude Code' },

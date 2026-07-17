@@ -11,19 +11,20 @@
 | Non-DnD Features | 🟡 Planning | 4 of 5 NOT STARTED | Build `CmdRef` component (reuses AiDashboard pattern) | [features/non-dnd-features.md](features/non-dnd-features.md) |
 | DnD Features | 🔴 Not Started | Design phase | Define campaign data schema (`sessions.json`) | [features/dnd-features.md](features/dnd-features.md) |
 
-**Overall: 17/36 features implemented (47%)**
+**Overall: 18/36 features implemented (50%)**
 
 ## Pending Jobs Queue
 
 - [x] **High**: Extract `withBrowserOnly` HOC — done 2026-07-17, PR #162
 - [x] **High**: Extract shared `CopyButton` — done 2026-07-17, PR #163
-- [ ] **Medium**: Build `CmdRef` component for CLI command reference
+- [x] **Medium**: Build `CmdRef` component for CLI command reference — done 2026-07-17, PR #164
 - [ ] **Medium**: Build `FreshnessBadge` for stale content detection
 - [ ] **Medium**: Convert StatDiceRoller inline styles to CSS module
 - [ ] **Low**: Create `.cursorrules` for Cursor users
 - [ ] **Low**: Document Ponytail system (`.opencode/` README)
 - [ ] **Low**: Add `SECURITY.md` vulnerability reporting policy
 - [ ] **Medium**: Copy button icon on AiDashboard doesn't indicate success (no color change or "Copied" message) after clicking
+- [ ] **Medium**: CmdRef uses a card, it looks like duplicated form Card component, Can make the card compoment more generic so I don't have duplicated definitions of card
 
 ## Completed Jobs
 

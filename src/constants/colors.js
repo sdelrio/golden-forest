@@ -27,7 +27,7 @@ export const CATEGORY_COLORS = {
   git: '#f97316',
   'package-managers': '#3b82f6',
   make: '#22c55e',
-  docker: '#06b6d4',
+  taskfile: '#06b6d4',
   docusaurus: '#8b5cf6',
   opencode: '#ec4899',
   'claude-code': '#eab308',

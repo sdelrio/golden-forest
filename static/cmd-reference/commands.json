@@ -32,6 +32,14 @@
     "tags": ["install", "dependencies"]
   },
   {
+    "id": "npm-ci",
+    "tool": "npm",
+    "category": "package-managers",
+    "syntax": "npm ci",
+    "description": "Clean install from lockfile (faster, reproducible builds)",
+    "tags": ["install", "ci", "lockfile"]
+  },
+  {
     "id": "make-start",
     "tool": "make",
     "category": "make",
@@ -88,6 +96,102 @@
     "tags": ["data", "ai-dashboard"]
   },
   {
+    "id": "make-list-chars",
+    "tool": "make",
+    "category": "make",
+    "syntax": "make list-chars",
+    "description": "List and summarize Fantasy Grounds character XML files",
+    "tags": ["dnd", "characters", "xml"]
+  },
+  {
+    "id": "task-start",
+    "tool": "task",
+    "category": "taskfile",
+    "syntax": "task start",
+    "description": "Start Docusaurus dev server (Taskfile equivalent of make start)",
+    "tags": ["dev", "server"]
+  },
+  {
+    "id": "task-build",
+    "tool": "task",
+    "category": "taskfile",
+    "syntax": "task build",
+    "description": "Build static website for production with dependency tracking",
+    "tags": ["build", "production"]
+  },
+  {
+    "id": "task-clean",
+    "tool": "task",
+    "category": "taskfile",
+    "syntax": "task clean",
+    "description": "Clean build artifacts and node_modules",
+    "tags": ["cleanup", "reset"]
+  },
+  {
+    "id": "task-check",
+    "tool": "task",
+    "category": "taskfile",
+    "syntax": "task check",
+    "description": "Run MDX checker across docs, tutorial, src, and blog",
+    "tags": ["lint", "mdx", "validation"]
+  },
+  {
+    "id": "task-install",
+    "tool": "task",
+    "category": "taskfile",
+    "syntax": "task install",
+    "description": "Install dependencies with immutable lockfile",
+    "tags": ["install", "dependencies"]
+  },
+  {
+    "id": "task-upgrade",
+    "tool": "task",
+    "category": "taskfile",
+    "syntax": "task upgrade",
+    "description": "Upgrade Docusaurus core and preset-classic to latest",
+    "tags": ["upgrade", "docusaurus"]
+  },
+  {
+    "id": "task-deploy",
+    "tool": "task",
+    "category": "taskfile",
+    "syntax": "task deploy",
+    "description": "Deploy website to GitHub Pages",
+    "tags": ["deploy", "production"]
+  },
+  {
+    "id": "task-chars-list",
+    "tool": "task",
+    "category": "taskfile",
+    "syntax": "task chars:list",
+    "description": "List and summarize Fantasy Grounds character XML files",
+    "tags": ["dnd", "characters", "xml"]
+  },
+  {
+    "id": "task-chars-buildindex",
+    "tool": "task",
+    "category": "taskfile",
+    "syntax": "task chars:buildindex",
+    "description": "Generate character index.json from XML files",
+    "tags": ["dnd", "characters", "index"]
+  },
+  {
+    "id": "task-ai-dashboard-enrich",
+    "tool": "task",
+    "category": "taskfile",
+    "syntax": "task ai-dashboard:enrich",
+    "description": "Enrich AI dashboard data from npm/GitHub APIs",
+    "tags": ["data", "ai-dashboard"]
+  },
+  {
+    "id": "task-test-perf",
+    "tool": "task",
+    "category": "taskfile",
+    "syntax": "task test:perf",
+    "description": "Test web performance with unlighthouse",
+    "tags": ["test", "performance"]
+  },
+  {
     "id": "git-clone",
     "tool": "git",
     "category": "git",
@@ -118,22 +222,6 @@
     "syntax": "git push origin <branch>",
     "description": "Push local branch to remote origin",
     "tags": ["push", "remote"]
-  },
-  {
-    "id": "docker-compose",
-    "tool": "docker",
-    "category": "docker",
-    "syntax": "docker compose -f <file> up -d",
-    "description": "Start Docker services in detached mode from compose file",
-    "tags": ["containers", "services"]
-  },
-  {
-    "id": "docker-build",
-    "tool": "docker",
-    "category": "docker",
-    "syntax": "docker build -t <tag> .",
-    "description": "Build Docker image from Dockerfile in current directory",
-    "tags": ["build", "image"]
   },
   {
     "id": "npx-docusaurus",
@@ -176,27 +264,11 @@
     "tags": ["cli", "agent", "anthropic"]
   },
   {
-    "id": "make-list-chars",
-    "tool": "make",
-    "category": "make",
-    "syntax": "make list-chars",
-    "description": "List and summarize Fantasy Grounds character XML files",
-    "tags": ["dnd", "characters", "xml"]
-  },
-  {
     "id": "curl-health",
     "tool": "curl",
     "category": "misc",
     "syntax": "curl -sf http://localhost:4000/health/ready",
     "description": "Check service health endpoint availability",
     "tags": ["health", "api", "debug"]
-  },
-  {
-    "id": "npm-ci",
-    "tool": "npm",
-    "category": "package-managers",
-    "syntax": "npm ci",
-    "description": "Clean install from lockfile (faster, reproducible builds)",
-    "tags": ["install", "ci", "lockfile"]
   }
 ]
