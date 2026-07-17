@@ -1,0 +1,1 @@
+../../.agents/commands/memory-sync.md
