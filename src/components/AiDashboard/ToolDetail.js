@@ -1,28 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import clsx from 'clsx';
+import { Icon } from '@iconify/react';
 import StatusBadge from './StatusBadge';
+import CopyButton from '../CopyButton/CopyButton';
 import { CATEGORY_COLORS } from '../../constants/colors';
 import { formatNumber, timeAgo } from '../../utils/format';
-import { copyToClipboard } from '../../utils/clipboard';
 import styles from './ToolDetail.module.css';
-
-function CopyButton({ text }) {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = async () => {
-    await copyToClipboard(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  return (
-    <button className={styles.copyBtn} onClick={handleCopy} type="button" title="Copy to clipboard">
-      <span className="mdi mdi-content-copy" />
-      {copied && <span className={styles.copiedHint}>Copied!</span>}
-    </button>
-  );
-}
 
 export default function ToolDetail({ tool, onClose }) {
   const docsUrl = useBaseUrl(tool.docPath);
@@ -41,7 +24,7 @@ export default function ToolDetail({ tool, onClose }) {
     <div className={styles.overlay} onClick={onClose} role="presentation">
       <div className={styles.panel} onClick={(e) => e.stopPropagation()} role="dialog">
         <button className={styles.closeBtn} onClick={onClose} type="button" title="Close">
-          <span className="mdi mdi-close" />
+          <Icon icon="mdi:close" width={18} />
         </button>
 
         <div className={styles.header} style={{ borderLeftColor: color }}>
@@ -106,12 +89,12 @@ export default function ToolDetail({ tool, onClose }) {
             <div className={styles.links}>
               {tool.github && (
                 <a className={styles.link} href={tool.github} target="_blank" rel="noopener noreferrer">
-                  <span className="mdi mdi-github" /> GitHub
+                  <Icon icon="mdi:github" width={16} /> GitHub
                 </a>
               )}
               {tool.site && (
                 <a className={styles.link} href={tool.site} target="_blank" rel="noopener noreferrer">
-                  <span className="mdi mdi-web" /> Website
+                  <Icon icon="mdi:web" width={16} /> Website
                 </a>
               )}
               {tool.npm && (
@@ -121,7 +104,7 @@ export default function ToolDetail({ tool, onClose }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="mdi mdi-npm" /> npm
+                  <Icon icon="mdi:npm" width={16} /> npm
                 </a>
               )}
               {tool.pip && (
@@ -131,12 +114,12 @@ export default function ToolDetail({ tool, onClose }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="mdi mdi-language-python" /> PyPI
+                  <Icon icon="mdi:language-python" width={16} /> PyPI
                 </a>
               )}
               {tool.docPath && (
                 <a className={styles.link} href={docsUrl}>
-                  <span className="mdi mdi-file-document" /> Docs
+                  <Icon icon="mdi:file-document" width={16} /> Docs
                 </a>
               )}
             </div>

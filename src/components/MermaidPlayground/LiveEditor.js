@@ -1,14 +1,12 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { CATEGORY_COLORS } from '../../constants/colors';
-import { copyToClipboard } from '../../utils/clipboard';
+import CopyButton from '../CopyButton/CopyButton';
 import styles from './LiveEditor.module.css';
 
 export default function LiveEditor({ template, onBack }) {
   const [code, setCode] = useState(template.code);
   const [svg, setSvg] = useState('');
   const [error, setError] = useState(null);
-  const [copied, setCopied] = useState(false);
-  const [copiedSvg, setCopiedSvg] = useState(false);
   const debounceRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -59,19 +57,6 @@ export default function LiveEditor({ template, onBack }) {
     });
     return () => observer.disconnect();
   }, [code, renderMermaid]);
-
-  const handleCopy = async () => {
-    await copyToClipboard(code);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  const handleCopySvg = async () => {
-    if (!svg) return;
-    await copyToClipboard(svg);
-    setCopiedSvg(true);
-    setTimeout(() => setCopiedSvg(false), 2000);
-  };
 
   const handleKeyDown = (e) => {
     if (e.key === 'Tab') {
@@ -130,21 +115,12 @@ export default function LiveEditor({ template, onBack }) {
       </div>
 
       <div className={styles.actions}>
-        <button
-          className={`${styles.copyBtn} ${copied ? styles.copiedBtn : ''}`}
-          onClick={handleCopy}
-          type="button"
-        >
-          {copied ? 'Copied!' : 'Copy Code'}
-        </button>
-        <button
-          className={`${styles.copyBtn} ${copiedSvg ? styles.copiedBtn : ''}`}
-          onClick={handleCopySvg}
-          type="button"
-          disabled={!svg}
-        >
-          {copiedSvg ? 'Copied!' : 'Copy SVG'}
-        </button>
+        <CopyButton text={code} variant="button">
+          Copy Code
+        </CopyButton>
+        <CopyButton text={svg} variant="button" disabled={!svg}>
+          Copy SVG
+        </CopyButton>
       </div>
     </div>
   );

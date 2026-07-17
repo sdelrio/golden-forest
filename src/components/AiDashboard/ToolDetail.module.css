@@ -158,31 +158,7 @@
   white-space: nowrap;
 }
 
-.copyBtn {
-  border: none;
-  background: none;
-  color: var(--ifm-color-emphasis-500);
-  cursor: pointer;
-  padding: 0.25rem;
-  font-size: 1rem;
-  position: relative;
-  transition: color 0.15s ease;
-}
 
-.copyBtn:hover {
-  color: var(--ifm-color-primary);
-}
-
-.copiedHint {
-  position: absolute;
-  top: -1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.625rem;
-  color: #22c55e;
-  white-space: nowrap;
-  font-weight: 600;
-}
 
 /* Links */
 .links {
