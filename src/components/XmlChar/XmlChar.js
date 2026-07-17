@@ -9,32 +9,34 @@ import { parseCharacterXml } from './XmlParser';
 import { signed } from '../../utils/format';
 import clsx from 'clsx';
 
-export default function XmlChar(props) {
-    const isSmall = props.display === 'small';
-    const isLarge = props.display === 'large';
+function XmlCharFallback({ display }) {
+    const isSmall = display === 'small';
     const bones = isSmall ? xmlCharSmallBones : xmlCharBones;
-    const color = 'rgba(88,24,13,0.08)';
-    const darkColor = 'rgba(255,182,48,0.08)';
-
     return (
-        <BrowserOnly fallback={
-            <div className={clsx(styles.container, !isSmall && !isLarge && styles.containerMedium, isSmall && styles.containerSmall, styles[props.display || 'medium'])} style={isSmall ? { width: 360 } : undefined}>
-                <Skeleton
-                    name="xml-char"
-                    loading={true}
-                    initialBones={bones}
-                    color={color}
-                    darkColor={darkColor}
-                    animate="shimmer"
-                >
-                    <div style={{ height: bones.height, width: '100%' }} />
-                </Skeleton>
-            </div>
-        }>
+        <div className={clsx(styles.container, !isSmall && display !== 'large' && styles.containerMedium, isSmall && styles.containerSmall, styles[display || 'medium'])} style={isSmall ? { width: 360 } : undefined}>
+            <Skeleton
+                name="xml-char"
+                loading={true}
+                initialBones={bones}
+                color="rgba(88,24,13,0.08)"
+                darkColor="rgba(255,182,48,0.08)"
+                animate="shimmer"
+            >
+                <div style={{ height: bones.height, width: '100%' }} />
+            </Skeleton>
+        </div>
+    );
+}
+
+function XmlCharWrapper(props) {
+    return (
+        <BrowserOnly fallback={<XmlCharFallback display={props.display} />}>
             {() => <XmlCharInternal {...props} />}
         </BrowserOnly>
     );
 }
+
+export default XmlCharWrapper;
 
 /**
  * @param {Object} props

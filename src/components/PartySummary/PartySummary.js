@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 import { Skeleton } from 'boneyard-js/react';
 import { Icon } from '@iconify/react';
 import { parseCharacterXml } from '../XmlChar/XmlParser';
 import { signed } from '../../utils/format';
 import partySummaryBones from '../../bones/party-summary.bones.json';
+import withBrowserOnly from '../../utils/withBrowserOnly';
 import styles from './PartySummary.module.css';
 
 const ROLE_CONFIG = {
@@ -129,10 +129,4 @@ function PartySummaryInternal() {
     );
 }
 
-export default function PartySummary() {
-    return (
-        <BrowserOnly fallback={null}>
-            {() => <PartySummaryInternal />}
-        </BrowserOnly>
-    );
-}
+export default withBrowserOnly(PartySummaryInternal);

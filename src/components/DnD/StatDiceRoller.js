@@ -1,19 +1,13 @@
 import React, { useState, useRef, useMemo } from 'react';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 import { ABILITIES, calculateModifier } from '../../constants/dnd';
+import withBrowserOnly from '../../utils/withBrowserOnly';
 
-export default function StatDiceRoller() {
-    return (
-        <BrowserOnly fallback={<div>Loading dice roller...</div>}>
-            {() => {
-                const ReactDice = require('react-dice-complete').default;
-                return <StatDiceRollerInternal ReactDice={ReactDice} />;
-            }}
-        </BrowserOnly>
-    );
-}
+export default withBrowserOnly(StatDiceRollerInternal, {
+  fallback: <div>Loading dice roller...</div>,
+});
 
-function StatDiceRollerInternal({ ReactDice }) {
+function StatDiceRollerInternal() {
+    const ReactDice = require('react-dice-complete').default;
     const [results, setResults] = useState({});
     const [rollingIndex, setRollingIndex] = useState(-1);
     const diceRefs = useRef([]);

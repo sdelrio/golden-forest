@@ -27,11 +27,10 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-17.
 | 2.1 | Group DnD Components into `DnD/` | DONE | Medium |
 | 2.2 | Extract `useSearchFilter` hook | DONE | Medium |
 | 2.3 | Extract DnD/skeleton constants | DONE | Low |
-| 2.4 | `withBrowserOnly` HOC | NOT STARTED | Low |
+| 2.4 | `withBrowserOnly` HOC | DONE | Low |
 
 ### Notes
-- **2.4:** 6 components wrap identical `BrowserOnly` boilerplate. Create `src/utils/withBrowserOnly.js`.
-  Files: XmlChar, CharSearch, AiDashboard, MermaidPlayground, PartySummary, StatDiceRoller.
+- **2.4:** DONE — HOC created at `src/utils/withBrowserOnly.js`, all 6 components refactored. PR #162.
 
 ---
 

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 import { Skeleton } from 'boneyard-js/react';
 import XmlChar from '../XmlChar/XmlChar';
 import useSearchFilter from '../../hooks/useSearchFilter';
 import charSearchCardBones from '../../bones/char-search-card.bones.json';
+import withBrowserOnly from '../../utils/withBrowserOnly';
 import styles from './CharSearch.module.css';
 import clsx from 'clsx';
 
@@ -176,34 +176,30 @@ function CharSearchInternal() {
     );
 }
 
-export default function CharSearch() {
-    return (
-        <BrowserOnly fallback={
-            <div className={styles.container}>
-                <div className={styles.toolbar}>
-                    <div style={{ flex: 1, height: 38 }} />
-                    <div style={{ width: 160, height: 38 }} />
-                </div>
-                <div style={{ margin: '0 0 1rem 0', height: 20 }} />
-                {Array.from({ length: 8 }).map((_, i) => (
-                    <div key={i} className={styles.card} style={{ padding: 0, border: 'none', background: 'none' }}>
-                        <div style={{ padding: '0.6rem 1rem' }}>
-                            <Skeleton
-                                name="char-search-card"
-                                loading={true}
-                                initialBones={charSearchCardBones}
-                                color="rgba(88,24,13,0.08)"
-                                darkColor="rgba(255,182,48,0.08)"
-                                animate="shimmer"
-                            >
-                                <div style={{ height: charSearchCardBones.height }} />
-                            </Skeleton>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        }>
-            {() => <CharSearchInternal />}
-        </BrowserOnly>
-    );
-}
+export default withBrowserOnly(CharSearchInternal, {
+  fallback: (
+    <div className={styles.container}>
+      <div className={styles.toolbar}>
+        <div style={{ flex: 1, height: 38 }} />
+        <div style={{ width: 160, height: 38 }} />
+      </div>
+      <div style={{ margin: '0 0 1rem 0', height: 20 }} />
+      {Array.from({ length: 8 }).map((_, i) => (
+        <div key={i} className={styles.card} style={{ padding: 0, border: 'none', background: 'none' }}>
+          <div style={{ padding: '0.6rem 1rem' }}>
+            <Skeleton
+              name="char-search-card"
+              loading={true}
+              initialBones={charSearchCardBones}
+              color="rgba(88,24,13,0.08)"
+              darkColor="rgba(255,182,48,0.08)"
+              animate="shimmer"
+            >
+              <div style={{ height: charSearchCardBones.height }} />
+            </Skeleton>
+          </div>
+        </div>
+      ))}
+    </div>
+  ),
+});

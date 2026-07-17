@@ -7,15 +7,15 @@
 
 | Project | Status | Current Phase | Next Action | File |
 |---------|--------|---------------|-------------|------|
-| Infra Refactoring | 🟡 In Progress | CSS + Component dedup | Extract `withBrowserOnly` HOC, `CopyButton`, `BaseCard` | [features/non-content-features.md](features/non-content-features.md) |
+| Infra Refactoring | 🟡 In Progress | CSS + Component dedup | Extract shared `CopyButton`, `BaseCard` | [features/non-content-features.md](features/non-content-features.md) |
 | Non-DnD Features | 🟡 Planning | 4 of 5 NOT STARTED | Build `CmdRef` component (reuses AiDashboard pattern) | [features/non-dnd-features.md](features/non-dnd-features.md) |
 | DnD Features | 🔴 Not Started | Design phase | Define campaign data schema (`sessions.json`) | [features/dnd-features.md](features/dnd-features.md) |
 
-**Overall: 15/36 features implemented (42%)**
+**Overall: 16/36 features implemented (44%)**
 
 ## Pending Jobs Queue
 
-- [ ] **High**: Extract `withBrowserOnly` HOC — 6 components have identical boilerplate
+- [x] **High**: Extract `withBrowserOnly` HOC — done 2026-07-17, PR #162
 - [ ] **High**: Extract shared `CopyButton` — ToolDetail has it, LiveEditor needs it
 - [ ] **Medium**: Build `CmdRef` component for CLI command reference
 - [ ] **Medium**: Build `FreshnessBadge` for stale content detection
@@ -28,6 +28,7 @@
 
 - [x] **High**: Migrate TODO files to `memory/` system — done 2026-07-17
 - [x] **High**: Create 6 memory management commands — done 2026-07-17
+- [x] **High**: Extract `withBrowserOnly` HOC — done 2026-07-17, PR #162
 
 ## Recent Decisions
 
@@ -57,6 +58,6 @@
 ## Session Notes
 
 *Last updated: 2026-07-17*
-- Current focus: Migrated TODO files to structured `memory/` system
-- Quick wins identified: 7 low-effort NOT STARTED items (HOC, CopyButton, .cursorrules, etc.)
+- Current focus: Extracted `withBrowserOnly` HOC (PR #162 merged)
+- Next quick wins: `CopyButton`, `BaseCard`, `.cursorrules`
 - Blockers: None
