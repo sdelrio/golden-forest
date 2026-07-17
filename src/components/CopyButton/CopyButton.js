@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
+import { Icon } from '@iconify/react';
 import { copyToClipboard } from '../../utils/clipboard';
 import styles from './CopyButton.module.css';
 
@@ -27,7 +28,7 @@ export default function CopyButton({
         type="button"
         title="Copy to clipboard"
       >
-        <span className="mdi mdi-content-copy" />
+        <Icon icon="mdi:content-copy" width={16} />
         {copied && <span className={styles.copiedHint}>Copied!</span>}
       </button>
     );
