@@ -4,7 +4,7 @@ General features for The Golden Forest, excluding DnD-specific items.
 
 ---
 
-## 1. Interactive Command Reference — NOT STARTED
+## 1. Interactive Command Reference — DONE
 
 Searchable, filterable cheat-sheet for CLI commands referenced across docs.
 
@@ -14,6 +14,7 @@ Searchable, filterable cheat-sheet for CLI commands referenced across docs.
 - **Component:** `src/components/CmdRef/`
 - **Pattern:** Reuses AiDashboard search/filter pattern
 - **Complexity:** Medium
+- **PR:** #164
 
 ## 2. Article Freshness Tracker — NOT STARTED
 

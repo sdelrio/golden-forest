@@ -4,6 +4,7 @@ import partySummary from './party-summary.bones.json';
 import xmlChar from './xml-char.bones.json';
 import xmlCharSmall from './xml-char-small.bones.json';
 import charSearchCard from './char-search-card.bones.json';
+import cmdRefCard from './cmd-ref-card.bones.json';
 
 registerBones({
   'ai-dashboard-card': aiDashboardCard,
@@ -11,6 +12,7 @@ registerBones({
   'xml-char': xmlChar,
   'xml-char-small': xmlCharSmall,
   'char-search-card': charSearchCard,
+  'cmd-ref-card': cmdRefCard,
 });
 
 if (typeof document !== 'undefined') {

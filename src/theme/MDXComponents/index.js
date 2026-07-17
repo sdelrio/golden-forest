@@ -16,6 +16,7 @@ import ParamField from '../../components/ParamField/ParamField';
 import CodeGroup from '../../components/CodeGroup/CodeGroup';
 import AiDashboard from '../../components/AiDashboard/AiDashboard';
 import MermaidPlayground from '../../components/MermaidPlayground/MermaidPlayground';
+import CmdRef from '../../components/CmdRef/CmdRef';
 
 export default {
   ...MDXComponents,
@@ -33,6 +34,7 @@ export default {
   CodeGroup,
   AiDashboard,
   MermaidPlayground,
+  CmdRef,
   // Map some common aliases that might be in the markdown
   Tab: TabItem,
   Note: (props) => <Admonition type="note" {...props} />,
