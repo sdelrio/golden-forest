@@ -23,6 +23,7 @@
 - [ ] **Low**: Create `.cursorrules` for Cursor users
 - [ ] **Low**: Document Ponytail system (`.opencode/` README)
 - [ ] **Low**: Add `SECURITY.md` vulnerability reporting policy
+- [ ] **Medium**: Copy button icon on AiDashboard doesn't indicate success (no color change or "Copied" message) after clicking
 
 ## Completed Jobs
 
