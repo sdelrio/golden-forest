@@ -1,28 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import clsx from 'clsx';
 import StatusBadge from './StatusBadge';
+import CopyButton from '../CopyButton/CopyButton';
 import { CATEGORY_COLORS } from '../../constants/colors';
 import { formatNumber, timeAgo } from '../../utils/format';
-import { copyToClipboard } from '../../utils/clipboard';
 import styles from './ToolDetail.module.css';
-
-function CopyButton({ text }) {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = async () => {
-    await copyToClipboard(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  return (
-    <button className={styles.copyBtn} onClick={handleCopy} type="button" title="Copy to clipboard">
-      <span className="mdi mdi-content-copy" />
-      {copied && <span className={styles.copiedHint}>Copied!</span>}
-    </button>
-  );
-}
 
 export default function ToolDetail({ tool, onClose }) {
   const docsUrl = useBaseUrl(tool.docPath);
