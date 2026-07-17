@@ -40,14 +40,14 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-17.
 |---|---------|--------|------------|
 | 3.1 | Shared `CategoryFilter` component | NOT STARTED | Low-Med |
 | 3.2 | Shared `BaseCard` component | NOT STARTED | Medium |
-| 3.3 | Shared `CopyButton` component | NOT STARTED | Low |
+| 3.3 | Shared `CopyButton` component | DONE | Low |
 | 3.4 | Shared `DndSkeleton` wrapper | NOT STARTED | Low |
 | 3.5 | D&D Ability Constants | DONE | Low |
 
 ### Notes
 - **3.1:** AiDashboard and MermaidPlayground have identical pill-bar JS+CSS.
 - **3.2:** `ToolCard` and `TemplateCard` are 80%+ identical.
-- **3.3:** `ToolDetail` already has one. Export and reuse in LiveEditor.
+- **3.3:** DONE — Shared component at `src/components/CopyButton/` with icon/button variants. PR #163.
 - **3.4:** 3 components use identical skeleton JSX + color values.
 
 ---
@@ -91,15 +91,14 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-17.
 
 | Status | Count |
 |--------|-------|
-| DONE | 14 |
-| NOT STARTED | 12 |
+| DONE | 15 |
+| NOT STARTED | 11 |
 | **Total** | **26** |
 
 ### Priority Quick Wins (NOT STARTED, Low effort)
 - 1.1 SECURITY.md
 - 1.3 Dependabot GH Actions
 - 2.4 withBrowserOnly HOC
-- 3.3 CopyButton component
 - 5.4 .cursorrules
 - 5.5 Ponytail README
 - 5.6 Archive stale plans
