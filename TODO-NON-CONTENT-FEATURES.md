@@ -35,14 +35,14 @@ Currently groups `@docusaurus/*` and `react`/`react-dom` for npm. Could group `a
 - **File:** `.github/dependabot.yml`
 - **Complexity:** Low
 
-### 1.4 CODEOWNERS
+### 1.4 CODEOWNERS ✅ DONE
 
 No file found. Auto-assign reviews for `src/`, `docs/`, `.github/`.
 
 - **File:** `.github/CODEOWNERS`
 - **Complexity:** Low
 
-### 1.5 Issue/PR Templates
+### 1.5 Issue/PR Templates ✅ DONE
 
 No `.github/ISSUE_TEMPLATE/` or `PULL_REQUEST_TEMPLATE.md`.
 
