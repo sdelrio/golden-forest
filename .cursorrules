@@ -1,0 +1,23 @@
+# Cursor Rules — The Golden Forest (lorien.cloud)
+
+## Source of Truth
+AGENTS.md — read it before making any code changes.
+
+## Project Stack
+- Docusaurus 3.x, React 19, MDX, CSS Modules (no TypeScript)
+- No test framework — verify with `yarn start` + manual check
+- `make check` validates MDX syntax
+
+## Key Conventions
+- Function components only (React 19 hooks)
+- CSS Modules with camelCase classes; use `clsx()` for conditionals
+- Imports order: React → external → @docusaurus/@theme → local → CSS module
+- Components: PascalCase directories, registered in src/theme/MDXComponents/index.js
+- Wrap browser-dependent logic in `<BrowserOnly>`
+- Conventional Commits: feat(scope): desc
+
+## Critical Rules
+- onBrokenLinks: 'throw' — always verify internal links
+- MDX: escape < > as &lt; &gt; outside code blocks
+- Card hrefs resolve from page URL (trailingSlash: true), not file system
+- clientModules run at page load — guard with `typeof document !== 'undefined'`
