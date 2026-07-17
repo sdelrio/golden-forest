@@ -82,6 +82,7 @@ The dark/light mode toggle uses the **View Transitions API** for a circular-mask
 - **Components**: `src/components/` (See [AGENTS.md](file:///Users/sdelrio/github/sdelrio/golden-forest/src/components/AGENTS.md)) and `src/theme/`.
 - **Client Modules**: `src/client/` contains Docusaurus client modules that run on every page load (e.g., `theme-transition.js` for View Transitions API animation). **Important**: `clientModules` only dispatch lifecycle hooks (`onRouteDidUpdate`, etc.) — they do **not** auto-call a default export. Code that must run at page load (event listeners, global patches) must be written at **top level** of the module, not inside an exported function. Guard with `typeof document !== 'undefined'` for SSR safety.
 - **Static Assets**: `static/fg/chars/` contains XML character data for the D&D tools.
+- **Agent Memory**: `memory/` — Persistent memory for agents. Load `memory/MEMORY.md` every session for the index. Feature tracking, decisions, and project context live here. See [memory/MEMORY.md](memory/MEMORY.md).
 - **Algolia Search**: See [ALGOLIA.md](file:///Users/sdelrio/github/sdelrio/golden-forest/ALGOLIA.md) for indexing configuration, record count analysis, and reduction strategies. Config: `.algolia.docsearch.json`.
 - **Git**: Use **Conventional Commits** (`feat(scope): desc`, `fix: desc`, `docs: desc`).
 
