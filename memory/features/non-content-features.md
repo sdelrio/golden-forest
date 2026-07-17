@@ -77,12 +77,12 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-17.
 | 5.2 | Sync `.agents/commands/` and `.opencode/commands/` | DONE | Low-Med |
 | 5.3 | Create `.github/copilot-instructions.md` | DONE | Low |
 | 5.4 | Create `.cursorrules` | NOT STARTED | Low |
-| 5.5 | Document Ponytail System | NOT STARTED | Low |
+| 5.5 | Document Ponytail System | DONE | Low |
 | 5.6 | Archive stale plan files | NOT STARTED | Low |
 
 ### Notes
 - **5.1:** 4 AGENTS.md files exist. Consider merging component-specific ones into `src/components/AGENTS.md`.
-- **5.5:** 7 `.opencode/ponytail*.md` + 6 plugin files. Needs top-level README in `.opencode/`.
+- **5.5:** Done — PR #167. Removed 6 duplicate top-level ponytail-*.md files, added `.opencode/README.md`.
 - **5.6:** `PLAN-01-mermaid-diagram-playground.md` — playground is built.
 
 ---
@@ -91,8 +91,8 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-17.
 
 | Status | Count |
 |--------|-------|
-| DONE | 15 |
-| NOT STARTED | 11 |
+| DONE | 16 |
+| NOT STARTED | 10 |
 | **Total** | **26** |
 
 ### Priority Quick Wins (NOT STARTED, Low effort)
@@ -100,5 +100,4 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-17.
 - 1.3 Dependabot GH Actions
 - 2.4 withBrowserOnly HOC
 - 5.4 .cursorrules
-- 5.5 Ponytail README
 - 5.6 Archive stale plans
