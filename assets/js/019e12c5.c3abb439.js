@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([["38714"],{36994(e){e.exports=JSON.parse('{"tags":[{"label":"CLI","permalink":"/tutorial/tags/cli","count":1},{"label":"Reference","permalink":"/tutorial/tags/reference","count":1},{"label":"Commands","permalink":"/tutorial/tags/commands","count":1}]}')}}]);
