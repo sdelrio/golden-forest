@@ -1,6 +1,8 @@
 import React, { useState, useRef, useMemo } from 'react';
+import clsx from 'clsx';
 import { ABILITIES, calculateModifier } from '../../constants/dnd';
 import withBrowserOnly from '../../utils/withBrowserOnly';
+import styles from './StatDiceRoller.module.css';
 
 export default withBrowserOnly(StatDiceRollerInternal, {
   fallback: <div>Loading dice roller...</div>,
@@ -69,15 +71,8 @@ function StatDiceRollerInternal() {
     };
 
     return (
-        <div style={{
-            padding: '0.25em',
-            borderRadius: '8px',
-            margin: '1.25rem 0',
-            backgroundColor: 'rgba(0,0,0,0.02)',
-            boxShadow: 'inset 0 0 10px rgba(0,0,0,0.05)',
-            border: '1px solid var(--ifm-color-emphasis-200)'
-        }}>
-            <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+        <div className={styles.container}>
+            <div className={styles.rollButtonContainer}>
                 <button
                     className="button button--primary button--lg"
                     onClick={rollAll}
@@ -87,49 +82,21 @@ function StatDiceRollerInternal() {
                 </button>
             </div>
 
-            <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-                gap: '1rem'
-            }}>
+            <div className={styles.grid}>
                 {ABILITIES.map((ability, index) => (
-                    <div key={ability} style={{
-                        padding: '1rem',
-                        backgroundColor: 'var(--ifm-background-surface-color)',
-                        borderRadius: '6px',
-                        border: '1px solid var(--ifm-color-emphasis-300)',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        position: 'relative',
-                        opacity: rollingIndex !== -1 && rollingIndex !== index ? 0.6 : 1,
-                        transition: 'opacity 0.2s'
-                    }}>
-
-
-                        <div style={{
-                            fontWeight: 'bold',
-                            fontSize: '1.2rem',
-                            marginBottom: '0.5rem',
-                            color: 'var(--ifm-heading-color)',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.5rem'
-                        }}>
+                    <div key={ability} className={clsx(styles.abilityCard, {
+                        [styles.abilityCardDimmed]: rollingIndex !== -1 && rollingIndex !== index
+                    })}>
+                        <div className={styles.abilityHeader}>
                             <span>{ability}: {results[index]?.sum || 'Rolling...'}</span>
                             {results[index]?.sum !== undefined && (
-                                <span style={{
-                                    fontSize: '0.9rem',
-                                    color: 'var(--ifm-color-emphasis-700)',
-                                    fontWeight: 'normal'
-                                }}>
+                                <span className={styles.modifier}>
                                     ({calculateModifier(results[index].sum) > 0 ? '+' : ''}{calculateModifier(results[index].sum)})
                                 </span>
                             )}
 
                             <button
-                                className="button button--secondary button--sm"
-                                style={{ marginLeft: 'auto' }}
+                                className={clsx('button button--secondary button--sm', styles.retryButton)}
                                 onClick={() => rollIndividual(index)}
                                 disabled={rollingIndex !== -1}
                             >
@@ -137,7 +104,7 @@ function StatDiceRollerInternal() {
                             </button>
                         </div>
 
-                        <div style={{ transform: 'scale(0.8)', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: '280px', flexShrink: 0 }}>
+                        <div className={styles.diceWrapper}>
                             <ReactDice
                                 numDice={4}
                                 rollDone={rollDoneHandlers[index]}
@@ -154,13 +121,13 @@ function StatDiceRollerInternal() {
                         </div>
 
                         {results[index] ? (
-                            <div style={{ textAlign: 'center', marginTop: '0' }}>
-                                <div style={{ fontSize: '0.8rem', color: 'var(--ifm-color-emphasis-700)' }}>
+                            <div className={styles.results}>
+                                <div className={styles.resultsDetail}>
                                     {results[index].all.join(', ')} → {results[index].topThree.join('+')}
                                 </div>
                             </div>
                         ) : (
-                            <div style={{ height: '52.8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--ifm-color-emphasis-500)', fontSize: '0.9rem' }}>
+                            <div className={styles.waitingPlaceholder}>
                                 Waiting to roll...
                             </div>
                         )}

@@ -1,0 +1,86 @@
+.container {
+  padding: 0.25em;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  background-color: rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.rollButtonContainer {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.abilityCard {
+  padding: 1rem;
+  background-color: var(--ifm-background-surface-color);
+  border-radius: 6px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.abilityCardDimmed {
+  opacity: 0.6;
+}
+
+.abilityHeader {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-heading-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modifier {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  font-weight: normal;
+}
+
+.retryButton {
+  margin-left: auto;
+}
+
+.diceWrapper {
+  transform: scale(0.8);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  flex-shrink: 0;
+}
+
+.results {
+  text-align: center;
+  margin-top: 0;
+}
+
+.resultsDetail {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.waitingPlaceholder {
+  height: 52.8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifm-color-emphasis-500);
+  font-size: 0.9rem;
+}
