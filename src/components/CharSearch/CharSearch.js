@@ -3,6 +3,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { Skeleton } from 'boneyard-js/react';
 import XmlChar from '../XmlChar/XmlChar';
+import useSearchFilter from '../../hooks/useSearchFilter';
 import charSearchCardBones from '../../bones/char-search-card.bones.json';
 import styles from './CharSearch.module.css';
 import clsx from 'clsx';
@@ -29,11 +30,17 @@ const DEFAULT_CLASSES = [
     'Wizard',
 ];
 
+function filterChars(ch, searchText, selectedClass) {
+    const matchName =
+        !searchText ||
+        stripAccents(ch.name.toLowerCase()).includes(stripAccents(searchText.toLowerCase()));
+    const matchClass = selectedClass === 'All' || ch.classes.includes(selectedClass);
+    return matchName && matchClass;
+}
+
 function CharSearchInternal() {
     const [index, setIndex] = useState(null);
-    const [error, setError] = useState(null);
-    const [searchText, setSearchText] = useState('');
-    const [selectedClass, setSelectedClass] = useState('All');
+    const [fetchError, setFetchError] = useState(null);
     const [selectedChar, setSelectedChar] = useState(null);
 
     const charsUrl = useBaseUrl('/fg/chars');
@@ -47,14 +54,22 @@ function CharSearchInternal() {
             .then(data => setIndex(data))
             .catch(err => {
                 console.error('Error loading character index:', err);
-                setError(err.message);
+                setFetchError(err.message);
             });
     }, []);
 
-    const filtered = (index || []).filter(ch => {
-        const matchName = !searchText || stripAccents(ch.name.toLowerCase()).includes(stripAccents(searchText.toLowerCase()));
-        const matchClass = selectedClass === 'All' || ch.classes.includes(selectedClass);
-        return matchName && matchClass;
+    const {
+        filtered,
+        error,
+        searchText,
+        setSearchText,
+        selectedCategory: selectedClass,
+        setSelectedCategory: setSelectedClass,
+    } = useSearchFilter({
+        items: index,
+        filterFn: filterChars,
+        defaultCategory: 'All',
+        external: true,
     });
 
     const handleSelectChar = (char) => {
@@ -62,8 +77,8 @@ function CharSearchInternal() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    if (error) {
-        return <div className={styles.error}>Error loading characters: {error}</div>;
+    if (fetchError || error) {
+        return <div className={styles.error}>Error loading characters: {fetchError || error}</div>;
     }
 
     if (!index) {

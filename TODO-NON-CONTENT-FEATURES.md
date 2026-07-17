@@ -58,7 +58,7 @@ No `.github/ISSUE_TEMPLATE/` or `PULL_REQUEST_TEMPLATE.md`.
 
 - **Complexity:** Medium (requires updating all MDX imports)
 
-### 2.2 Extract Shared `useSearchFilter` Hook
+### 2.2 Extract Shared `useSearchFilter` Hook ✅ DONE
 
 Fetch + filter + search logic is duplicated in AiDashboard, MermaidPlayground, and CharSearch. Create `src/hooks/useSearchFilter.js`.
 
@@ -179,7 +179,7 @@ Identical `.loading`, `.error`, `.empty` classes in AiDashboard and MermaidPlayg
 
 - **Complexity:** Low
 
-### 5.2 Sync `.agents/commands/` and `.opencode/commands/`
+### 5.2 Sync `.agents/commands/` and `.opencode/commands/` ✅ DONE
 
 10 of 16 OpenCode commands duplicate `.agents/commands/` files. Could symlink or use a single source of truth.
 
