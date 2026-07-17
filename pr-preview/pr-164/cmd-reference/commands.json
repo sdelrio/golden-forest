@@ -1,0 +1,202 @@
+[
+  {
+    "id": "yarn-start",
+    "tool": "yarn",
+    "category": "package-managers",
+    "syntax": "yarn start",
+    "description": "Start Docusaurus development server with hot reload",
+    "tags": ["dev", "server", "docusaurus"]
+  },
+  {
+    "id": "yarn-build",
+    "tool": "yarn",
+    "category": "package-managers",
+    "syntax": "yarn build",
+    "description": "Bundle website into static files for production",
+    "tags": ["build", "production", "docusaurus"]
+  },
+  {
+    "id": "yarn-clear",
+    "tool": "yarn",
+    "category": "package-managers",
+    "syntax": "yarn clear",
+    "description": "Clear Docusaurus cache to resolve build issues",
+    "tags": ["cache", "docusaurus"]
+  },
+  {
+    "id": "yarn-install",
+    "tool": "yarn",
+    "category": "package-managers",
+    "syntax": "yarn install",
+    "description": "Install project dependencies from package.json",
+    "tags": ["install", "dependencies"]
+  },
+  {
+    "id": "make-start",
+    "tool": "make",
+    "category": "make",
+    "syntax": "make start",
+    "description": "Start Docusaurus dev server (installs deps if needed)",
+    "tags": ["dev", "server"]
+  },
+  {
+    "id": "make-build",
+    "tool": "make",
+    "category": "make",
+    "syntax": "make build",
+    "description": "Production build with SSG warning suppression",
+    "tags": ["build", "production"]
+  },
+  {
+    "id": "make-check",
+    "tool": "make",
+    "category": "make",
+    "syntax": "make check",
+    "description": "Run Docusaurus MDX syntax checker (crucial for migrations)",
+    "tags": ["lint", "mdx", "validation"]
+  },
+  {
+    "id": "make-test",
+    "tool": "make",
+    "category": "make",
+    "syntax": "make test",
+    "description": "Run unlighthouse web performance test against lorien.cloud",
+    "tags": ["test", "performance"]
+  },
+  {
+    "id": "make-clean",
+    "tool": "make",
+    "category": "make",
+    "syntax": "make clean",
+    "description": "Remove node_modules, .docusaurus, and build directories",
+    "tags": ["cleanup", "reset"]
+  },
+  {
+    "id": "make-upgrade",
+    "tool": "make",
+    "category": "make",
+    "syntax": "make upgrade",
+    "description": "Upgrade Docusaurus core and preset-classic to latest",
+    "tags": ["upgrade", "docusaurus"]
+  },
+  {
+    "id": "make-enrich-dashboard",
+    "tool": "make",
+    "category": "make",
+    "syntax": "make enrich-dashboard",
+    "description": "Enrich AI dashboard data from npm/GitHub APIs",
+    "tags": ["data", "ai-dashboard"]
+  },
+  {
+    "id": "git-clone",
+    "tool": "git",
+    "category": "git",
+    "syntax": "git clone <url>",
+    "description": "Clone a remote repository to local machine",
+    "tags": ["clone", "download"]
+  },
+  {
+    "id": "git-branch",
+    "tool": "git",
+    "category": "git",
+    "syntax": "git checkout -b <branch>",
+    "description": "Create and switch to a new feature branch",
+    "tags": ["branch", "feature"]
+  },
+  {
+    "id": "git-commit",
+    "tool": "git",
+    "category": "git",
+    "syntax": "git commit -m \"<message>\"",
+    "description": "Commit staged changes with a message (use conventional commits)",
+    "tags": ["commit", "save"]
+  },
+  {
+    "id": "git-push",
+    "tool": "git",
+    "category": "git",
+    "syntax": "git push origin <branch>",
+    "description": "Push local branch to remote origin",
+    "tags": ["push", "remote"]
+  },
+  {
+    "id": "docker-compose",
+    "tool": "docker",
+    "category": "docker",
+    "syntax": "docker compose -f <file> up -d",
+    "description": "Start Docker services in detached mode from compose file",
+    "tags": ["containers", "services"]
+  },
+  {
+    "id": "docker-build",
+    "tool": "docker",
+    "category": "docker",
+    "syntax": "docker build -t <tag> .",
+    "description": "Build Docker image from Dockerfile in current directory",
+    "tags": ["build", "image"]
+  },
+  {
+    "id": "npx-docusaurus",
+    "tool": "docusaurus",
+    "category": "docusaurus",
+    "syntax": "npx docusaurus start",
+    "description": "Start Docusaurus dev server directly via npx",
+    "tags": ["dev", "server"]
+  },
+  {
+    "id": "npx-unlighthouse",
+    "tool": "docusaurus",
+    "category": "docusaurus",
+    "syntax": "npx unlighthouse --site <url>",
+    "description": "Run Lighthouse performance audit against a site",
+    "tags": ["test", "performance", "audit"]
+  },
+  {
+    "id": "opencode-task",
+    "tool": "opencode",
+    "category": "opencode",
+    "syntax": "task(subagent_type=\"general\", prompt=\"...\")",
+    "description": "Launch a subagent for complex multi-step tasks in OpenCode",
+    "tags": ["agent", "subagent", "automation"]
+  },
+  {
+    "id": "opencode-skill",
+    "tool": "opencode",
+    "category": "opencode",
+    "syntax": "skill(name=\"<skill-name>\")",
+    "description": "Load a specialized skill for task-specific workflows",
+    "tags": ["skill", "workflow"]
+  },
+  {
+    "id": "claude-code-cli",
+    "tool": "claude-code",
+    "category": "claude-code",
+    "syntax": "claude-code",
+    "description": "Launch Anthropic's agentic CLI terminal for AI-powered coding",
+    "tags": ["cli", "agent", "anthropic"]
+  },
+  {
+    "id": "make-list-chars",
+    "tool": "make",
+    "category": "make",
+    "syntax": "make list-chars",
+    "description": "List and summarize Fantasy Grounds character XML files",
+    "tags": ["dnd", "characters", "xml"]
+  },
+  {
+    "id": "curl-health",
+    "tool": "curl",
+    "category": "misc",
+    "syntax": "curl -sf http://localhost:4000/health/ready",
+    "description": "Check service health endpoint availability",
+    "tags": ["health", "api", "debug"]
+  },
+  {
+    "id": "npm-ci",
+    "tool": "npm",
+    "category": "package-managers",
+    "syntax": "npm ci",
+    "description": "Clean install from lockfile (faster, reproducible builds)",
+    "tags": ["install", "ci", "lockfile"]
+  }
+]
