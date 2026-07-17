@@ -19,7 +19,7 @@
 - [x] **High**: Extract shared `CopyButton` — done 2026-07-17, PR #163
 - [x] **Medium**: Build `CmdRef` component for CLI command reference — done 2026-07-17, PR #164
 - [ ] **Medium**: Build `FreshnessBadge` for stale content detection
-- [ ] **Medium**: Convert StatDiceRoller inline styles to CSS module
+- [x] **Medium**: Convert StatDiceRoller inline styles to CSS module — done 2026-07-18, PR #165
 - [ ] **Low**: Create `.cursorrules` for Cursor users
 - [ ] **Low**: Document Ponytail system (`.opencode/` README)
 - [ ] **Low**: Add `SECURITY.md` vulnerability reporting policy
@@ -55,12 +55,13 @@
 | `/jobs-add <priority> <desc>` | Add a new job to the queue |
 | `/jobs-done <text>` | Mark a job as completed |
 | `/jobs-archive` | Archive completed jobs > 30 days old |
+| `/job-prepare <#>` | Plan, branch, implement, test, and PR a pending job |
 | `/feature-status` | Scan all feature files, show consolidated table |
 | `/memory-sync` | Sync MEMORY.md counts with actual feature file status |
 
 ## Session Notes
 
-*Last updated: 2026-07-17*
-- Current focus: Extracted shared `CopyButton` (PR #163), fixed ToolDetail icon rendering
-- Next quick wins: `BaseCard`, `.cursorrules`, `FreshnessBadge`
+*Last updated: 2026-07-18*
+- Completed: StatDiceRoller CSS module refactor (PR #165)
+- Next quick wins: `FreshnessBadge`, `.cursorrules`, `SECURITY.md`
 - Blockers: None
