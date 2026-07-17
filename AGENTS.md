@@ -85,7 +85,7 @@ The dark/light mode toggle uses the **View Transitions API** for a circular-mask
 - **Agent Memory**: `memory/` — Persistent memory for agents. Load `memory/MEMORY.md` every session for the index. Feature tracking, decisions, and project context live here. See [memory/MEMORY.md](memory/MEMORY.md).
 - **Algolia Search**: See [ALGOLIA.md](file:///Users/sdelrio/github/sdelrio/golden-forest/ALGOLIA.md) for indexing configuration, record count analysis, and reduction strategies. Config: `.algolia.docsearch.json`.
 - **Git**: Use **Conventional Commits** (`feat(scope): desc`, `fix: desc`, `docs: desc`).
-- **PR Descriptions**: Do not wrap filenames or code in backticks inside bold markers — GitHub strips backticks inside `**`, leaving empty `****`. Use plain text filenames instead.
+- **PR Descriptions**: Do not wrap filenames or code in backticks inside bold markers — GitHub strips backticks inside `**`, leaving empty `****`. Use bold plain text filenames instead (e.g., `**.cursorrules**`, not `**`.cursorrules`**`).
 
 ## Character Index (`static/fg/chars/index.json`)
 - Generated from `scripts/build-char-index.py` (scans all .xml in `static/fg/chars/`).
