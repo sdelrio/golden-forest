@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 import clsx from 'clsx';
 import TemplateCard from './TemplateCard';
 import LiveEditor from './LiveEditor';
 import useSearchFilter from '../../hooks/useSearchFilter';
+import withBrowserOnly from '../../utils/withBrowserOnly';
 import styles from './MermaidPlayground.module.css';
 
 const CATEGORIES = [
@@ -116,10 +116,6 @@ function MermaidPlaygroundInternal() {
   );
 }
 
-export default function MermaidPlayground() {
-  return (
-    <BrowserOnly fallback={<div className={styles.loading}>Loading playground...</div>}>
-      {() => <MermaidPlaygroundInternal />}
-    </BrowserOnly>
-  );
-}
+export default withBrowserOnly(MermaidPlaygroundInternal, {
+  fallback: <div className={styles.loading}>Loading playground...</div>,
+});

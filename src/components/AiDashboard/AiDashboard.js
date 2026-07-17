@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import BrowserOnly from '@docusaurus/BrowserOnly';
 import { Skeleton } from 'boneyard-js/react';
 import CategoryFilter from './CategoryFilter';
 import ToolCard from './ToolCard';
 import ToolDetail from './ToolDetail';
 import useSearchFilter from '../../hooks/useSearchFilter';
 import aiDashboardCardBones from '../../bones/ai-dashboard-card.bones.json';
+import withBrowserOnly from '../../utils/withBrowserOnly';
 import styles from './AiDashboard.module.css';
 
 function filterTools(tool, searchText, selectedCategory) {
@@ -123,10 +123,6 @@ function AiDashboardInternal() {
   );
 }
 
-export default function AiDashboard() {
-  return (
-    <BrowserOnly fallback={<div className={styles.loading}>Loading dashboard...</div>}>
-      {() => <AiDashboardInternal />}
-    </BrowserOnly>
-  );
-}
+export default withBrowserOnly(AiDashboardInternal, {
+  fallback: <div className={styles.loading}>Loading dashboard...</div>,
+});
