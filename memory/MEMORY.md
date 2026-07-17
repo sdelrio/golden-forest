@@ -20,7 +20,7 @@
 - [x] **Medium**: Build `CmdRef` component for CLI command reference — done 2026-07-17, PR #164
 - [ ] **Medium**: Build `FreshnessBadge` for stale content detection
 - [x] **Medium**: Convert StatDiceRoller inline styles to CSS module — done 2026-07-18, PR #165
-- [ ] **Low**: Create `.cursorrules` for Cursor users
+- [x] **Low**: Create `.cursorrules` for Cursor users — done 2026-07-18
 - [ ] **Low**: Document Ponytail system (`.opencode/` README)
 - [ ] **Low**: Add `SECURITY.md` vulnerability reporting policy
 - [ ] **Medium**: Copy button icon on AiDashboard doesn't indicate success (no color change or "Copied" message) after clicking
@@ -55,7 +55,7 @@
 | `/jobs-add <priority> <desc>` | Add a new job to the queue |
 | `/jobs-done <text>` | Mark a job as completed |
 | `/jobs-archive` | Archive completed jobs > 30 days old |
-| `/job-prepare <#>` | Plan, branch, implement, test, and PR a pending job |
+| `/job-prepare <#>` | **Must execute ALL steps in order**: 1) Plan 2) `git checkout -b feat/<scope>` 3) Implement 4) `make check` 5) Commit 6) `git push -u origin <branch>` 7) `gh pr create` |
 | `/feature-status` | Scan all feature files, show consolidated table |
 | `/memory-sync` | Sync MEMORY.md counts with actual feature file status |
 
@@ -63,5 +63,5 @@
 
 *Last updated: 2026-07-18*
 - Completed: StatDiceRoller CSS module refactor (PR #165)
-- Next quick wins: `FreshnessBadge`, `.cursorrules`, `SECURITY.md`
+- Next quick wins: `FreshnessBadge`, `SECURITY.md`
 - Blockers: None
