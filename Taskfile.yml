@@ -22,11 +22,12 @@ tasks:
   install:
     desc: Install dependencies
     status:
-      - test -d node_modules
-      - test node_modules -nt package.json
-      - test node_modules -nt yarn.lock
+      - test -f .yarn-installed
+      - test .yarn-installed -nt yarn.lock
+      - test .yarn-installed -nt package.json
     cmds:
       - "{{.YARN}} install --immutable --inline-builds"
+      - touch .yarn-installed
 
   upgrade:
     desc: Upgrade Docusaurus core and preset-classic to latest
