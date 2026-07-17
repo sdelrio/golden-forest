@@ -55,7 +55,7 @@
 | `/jobs-add <priority> <desc>` | Add a new job to the queue |
 | `/jobs-done <text>` | Mark a job as completed |
 | `/jobs-archive` | Archive completed jobs > 30 days old |
-| `/job-prepare <#>` | Plan, branch, implement, test, and PR a pending job |
+| `/job-prepare <#>` | **Must execute ALL steps in order**: 1) Plan 2) `git checkout -b feat/<scope>` 3) Implement 4) `make check` 5) Commit 6) `git push -u origin <branch>` 7) `gh pr create` |
 | `/feature-status` | Scan all feature files, show consolidated table |
 | `/memory-sync` | Sync MEMORY.md counts with actual feature file status |
 

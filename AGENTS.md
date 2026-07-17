@@ -120,9 +120,21 @@ Return: file path written, number of sections, components imported, and any warn
 2. **Do NOT use `skill(name="write-article")` directly** — it injects ~12KB into context.
 3. For follow-up edits, invoke a new task with the file path and corrections.
 
+## /job-prepare Workflow (Required Steps)
+When executing `/job-prepare <#>`, complete ALL steps in order — do not skip any:
+1. **Plan** — Research and present the implementation plan
+2. **Branch** — `git checkout -b feat/<scope>` from master
+3. **Implement** — Make the changes
+4. **Test** — `make check` (MDX validation) and verify no regressions
+5. **Commit** — `git commit -m "feat(scope): desc"`
+6. **Push** — `git push -u origin <branch>`
+7. **PR** — `gh pr create` with title and body
+
+Skipping steps (especially branch, test, commit, push, PR) violates the workflow.
+
 ## AI Rules Integration
 - **Copilot**: `.github/copilot-instructions.md` designates this file as the source of truth.
-- **Cursor**: Adhere to this file's formatting and style patterns when generating code.
+- **Cursor**: `.cursorrules` — hybrid file with redirect to `AGENTS.md` + inline summary of key conventions.
 - **Broken Links**: `onBrokenLinks: 'throw'` is enabled; always verify internal links.
 - **Anchor Links**: Use relative sibling format for component links (e.g., `<Card href="my-page#section-id" />` or `href="my-page/sub-item/path/to/page"`). Example: `<Card href="DnD/XmlTest" />`. When linking from an index file (e.g., `index.mdx`), always include the folder name in the path.
 - **Card href vs Markdown Links (Critical)**: With `trailingSlash: true`, `<Card href>` resolves relative to the **page URL**, not the file system. The Card component also auto-prepends `../` to relative hrefs (unless they already start with `../`). Markdown links with `.md`/`.mdx` extension resolve from the **file system** instead.
