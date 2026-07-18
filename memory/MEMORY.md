@@ -27,7 +27,7 @@
 - [x] **Medium**: Configure docusaurus-mdx-checker to ignore paths via config instead of output via make check. Paths to ignore: graphify-out/, memory/, node_modules/, local_prompts/ — done 2026-07-18, PR #173
 - [x] **Medium**: Build `FreshnessBadge` for stale content detection — done 2026-07-18
 - [x] **Low**: Archive stale plan files (5.6) — done 2026-07-18
-- [ ] **Medium**: Disable (by commenting if possible) the blog top menu option.
+- [x] **Medium**: Disable (by commenting if possible) the blog top menu option — done 2026-07-18, PR #175
 
 ## Completed Jobs
 
