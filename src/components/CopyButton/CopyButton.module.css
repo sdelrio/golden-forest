@@ -24,14 +24,14 @@
 }
 
 .copiedHint {
-  position: absolute;
-  top: -1.5rem;
-  left: 50%;
+  position: fixed;
   transform: translateX(-50%);
   font-size: 0.625rem;
   color: #22c55e;
   white-space: nowrap;
   font-weight: 600;
+  pointer-events: none;
+  z-index: 9999;
 }
 
 /* Button variant (LiveEditor) */
