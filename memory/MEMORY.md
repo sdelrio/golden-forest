@@ -25,6 +25,7 @@
 - [ ] **Low**: Add `SECURITY.md` vulnerability reporting policy
 - [ ] **Medium**: Copy button icon on AiDashboard doesn't indicate success (no color change or "Copied" message) after clicking
 - [ ] **Medium**: CmdRef uses a card, it looks like duplicated form Card component, Can make the card compoment more generic so I don't have duplicated definitions of card
+- [ ] **Medium**: Configure docusaurus-mdx-checker to ignore paths via config instead of output via make check. Paths to ignore: graphify-out/, memory/, node_modules/, local_prompts/
 - [x] **Low**: Archive stale plan files (5.6) — done 2026-07-18
 
 ## Completed Jobs
