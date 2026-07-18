@@ -1,6 +1,6 @@
 # Non-Content Infrastructure Features
 
-Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-17.
+Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-18.
 
 ---
 
@@ -62,10 +62,10 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-17.
 | 4.4 | Shared Search Input CSS | DONE | Low |
 | 4.5 | Shared Loading/Error/Empty CSS | DONE | Low |
 | 4.6 | Shared Tag CSS | DONE | Low |
-| 4.7 | StatDiceRoller inline → CSS module | NOT STARTED | Medium |
+| 4.7 | StatDiceRoller inline → CSS module | DONE | Medium |
 
 ### Notes
-- **4.7:** 15+ inline `style={{}}` objects. Only component not using CSS modules. File: `src/components/StatDiceRoller.js`.
+- **4.7:** DONE — Migrated 15+ inline `style={{}}` to CSS module. PR #165.
 
 ---
 
@@ -76,14 +76,14 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-17.
 | 5.1 | Consolidate AGENTS.md hierarchy | NOT STARTED | Low |
 | 5.2 | Sync `.agents/commands/` and `.opencode/commands/` | DONE | Low-Med |
 | 5.3 | Create `.github/copilot-instructions.md` | DONE | Low |
-| 5.4 | Create `.cursorrules` | NOT STARTED | Low |
+| 5.4 | Create `.cursorrules` | DONE | Low |
 | 5.5 | Document Ponytail System | DONE | Low |
-| 5.6 | Archive stale plan files | NOT STARTED | Low |
+| 5.6 | Archive stale plan files | DONE | Low |
 
 ### Notes
 - **5.1:** 4 AGENTS.md files exist. Consider merging component-specific ones into `src/components/AGENTS.md`.
 - **5.5:** Done — PR #167. Removed 6 duplicate top-level ponytail-*.md files, added `.opencode/README.md`.
-- **5.6:** `PLAN-01-mermaid-diagram-playground.md` — playground is built.
+- **5.6:** Done — created `memory/archive/` convention. Plan file was already deleted during migration (2026-07-17).
 
 ---
 
@@ -91,13 +91,10 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-17.
 
 | Status | Count |
 |--------|-------|
-| DONE | 16 |
-| NOT STARTED | 10 |
+| DONE | 19 |
+| NOT STARTED | 7 |
 | **Total** | **26** |
 
 ### Priority Quick Wins (NOT STARTED, Low effort)
 - 1.1 SECURITY.md
 - 1.3 Dependabot GH Actions
-- 2.4 withBrowserOnly HOC
-- 5.4 .cursorrules
-- 5.6 Archive stale plans

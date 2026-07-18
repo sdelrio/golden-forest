@@ -7,11 +7,11 @@
 
 | Project | Status | Current Phase | Next Action | File |
 |---------|--------|---------------|-------------|------|
-| Infra Refactoring | 🟡 In Progress | CSS + Component dedup | Extract shared `BaseCard` | [features/non-content-features.md](features/non-content-features.md) |
-| Non-DnD Features | 🟡 Planning | 4 of 5 NOT STARTED | Build `CmdRef` component (reuses AiDashboard pattern) | [features/non-dnd-features.md](features/non-dnd-features.md) |
-| DnD Features | 🔴 Not Started | Design phase | Define campaign data schema (`sessions.json`) | [features/dnd-features.md](features/dnd-features.md) |
+| Infra Refactoring | 🟡 In Progress | In Progress (73%) | Extract shared `BaseCard` | [features/non-content-features.md](features/non-content-features.md) |
+| Non-DnD Features | 🟡 In Progress | In Progress (40%) | Build `FreshnessBadge` for stale content | [features/non-dnd-features.md](features/non-dnd-features.md) |
+| DnD Features | 🔴 Not Started | Not Started (0%) | Define campaign data schema (`sessions.json`) | [features/dnd-features.md](features/dnd-features.md) |
 
-**Overall: 19/36 features implemented (53%)**
+**Overall: 20/36 features implemented (56%)**
 
 ## Pending Jobs Queue
 
@@ -25,6 +25,7 @@
 - [ ] **Low**: Add `SECURITY.md` vulnerability reporting policy
 - [ ] **Medium**: Copy button icon on AiDashboard doesn't indicate success (no color change or "Copied" message) after clicking
 - [ ] **Medium**: CmdRef uses a card, it looks like duplicated form Card component, Can make the card compoment more generic so I don't have duplicated definitions of card
+- [x] **Low**: Archive stale plan files (5.6) — done 2026-07-18
 
 ## Completed Jobs
 
@@ -62,6 +63,12 @@
 ## Session Notes
 
 *Last updated: 2026-07-18*
-- Completed: StatDiceRoller CSS module refactor (PR #165), Ponytail README (PR #167)
+- Fixed 5 discrepancies uncovered by `/memory-sync`:
+  1. non-dnd-features summary: had 1 DONE → corrected to 2 DONE (CmdRef + Mermaid Playground)
+  2. non-content-features 4.7 (StatDiceRoller CSS): NOT STARTED → DONE (PR #165)
+  3. non-content-features 5.4 (.cursorrules): NOT STARTED → DONE
+  4. non-content-features summary: 16/10 → 18/8 (after fixes)
+  5. MEMORY.md overall: 19/36 (53%) → 20/36 (56%); status emoji/phases synced
 - Next quick wins: `FreshnessBadge`, `SECURITY.md`
+- Done: Archived stale plan files (5.6) — created `memory/archive/` convention
 - Blockers: None

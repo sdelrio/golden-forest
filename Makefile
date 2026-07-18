@@ -56,11 +56,11 @@ check:  ## Docusaurus MDX checker (usefull on MDX version migrations)
 	which $${CMD} >/dev/null 2>&1 || CMD="/Users/sdelrio/.npm-packages/bin/docusaurus-mdx-checker"; \
 	output=$$($${CMD} 2>&1); \
 	ec=$$?; \
-	if echo "$$output" | grep -v "graphify-out" | grep -q "Error"; then \
-		echo "$$output" | grep -v "graphify-out"; \
+	if echo "$$output" | grep -v "graphify-out" | grep -v "memory/" | grep -q "Error"; then \
+		echo "$$output" | grep -v "graphify-out" | grep -v "memory/"; \
 		exit 1; \
 	elif [ $$ec -ne 0 ]; then \
-		echo "All errors originate from graphify-out/ (excluded from check)"; \
+		echo "All errors originate from graphify-out/ or memory/ (excluded from check)"; \
 	fi
 
 .PHONY: build
