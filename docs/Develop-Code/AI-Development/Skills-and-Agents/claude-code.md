@@ -1,6 +1,7 @@
 ---
 title: "Claude Code"
 description: "Integration guide and project architecture for Anthropic's Claude Code CLI tool."
+last_updated: 2026-07-05
 tags:
   - AI
   - tools
@@ -12,8 +13,11 @@ tags:
 import Accordion from '@site/src/components/Accordion/Accordion';
 import AccordionGroup from '@site/src/components/Accordion/AccordionGroup';
 import Steps from '@site/src/components/Steps/Steps';
+import FreshnessBadge from '@site/src/components/FreshnessBadge/FreshnessBadge';
 
 # Claude Code: Anthropic's Agentic CLI
+
+<FreshnessBadge lastUpdated={frontMatter.last_updated} />
 
 Claude Code is a command-line interface (CLI) and terminal agent developed by Anthropic. It allows you to interact with Claude directly from your terminal, enabling agentic coding workflows, system-level interactions, and seamless integration with your development environment.
 

@@ -16,7 +16,7 @@ Searchable, filterable cheat-sheet for CLI commands referenced across docs.
 - **Complexity:** Medium
 - **PR:** #164
 
-## 2. Article Freshness Tracker — NOT STARTED
+## 2. Article Freshness Tracker — IN PROGRESS
 
 Build-time + runtime system flagging stale content.
 
@@ -26,6 +26,8 @@ Build-time + runtime system flagging stale content.
 - **Components:** `src/components/FreshnessBadge/` + `src/pages/stale-content.js`
 - **Pattern:** Docusaurus plugin pattern
 - **Complexity:** Low-Medium
+- **Completed:** FreshnessBadge component (`src/components/FreshnessBadge/`) — thresholds: 60/180 days, explicit import, "Suggest Update" link included
+- **Remaining:** `/stale-content` dashboard page, docs adoption (add `last_updated` to frontmatter)
 
 ## 3. Personal Reading List — NOT STARTED
 
@@ -64,5 +66,6 @@ Interactive Mermaid editor with live preview.
 | Status | Count |
 |--------|-------|
 | DONE | 2 |
-| NOT STARTED | 3 |
+| IN PROGRESS | 1 |
+| NOT STARTED | 2 |
 | **Total** | **5** |

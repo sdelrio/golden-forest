@@ -19,6 +19,7 @@ Optimizing documentation-focused components (`Accordion`, `Steps`) for MDX artic
 3. **Global CSS**: Using global selectors in modules instead of scoped classes.
 4. **Kebab-case Classes**: Use camelCase for CSS classes to allow `styles.className` access.
 5. **Prop Drilling**: Destructure props in the function signature with sensible defaults.
+6. **Missing `useBaseUrl` for static assets**: When fetching JSON or other files from `static/` in components or `src/pages/`, always wrap the path with `useBaseUrl()` from `@docusaurus/useBaseUrl`. Hardcoded paths like `'/ai-dashboard/data.json'` break in PR previews and subpath deployments where the site is served under a base path (e.g., `/golden-forest/`). Use `const dataUrl = useBaseUrl('/ai-dashboard/data.json');` instead.
 
 ## Boneyard Skeleton Integration
 
