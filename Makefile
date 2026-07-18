@@ -52,7 +52,12 @@ clean:  ## Clean node cache, build directoryo and .docusuarus
 	@rm -rf node_modules .docusaurus build
 
 check:  ## Docusaurus MDX checker (usefull on MDX version migrations)
-	@node scripts/mdx-check.mjs
+	@CMD=docusaurus-mdx-checker; \
+	which $${CMD} >/dev/null 2>&1 || CMD="$(HOME)/.npm-packages/bin/docusaurus-mdx-checker"; \
+	$${CMD} -c docs/ && \
+	$${CMD} -c tutorial/ && \
+	$${CMD} -c src/ && \
+	$${CMD} -c blog/
 
 .PHONY: build
 build: ## Build page
