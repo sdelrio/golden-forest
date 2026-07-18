@@ -52,16 +52,12 @@ clean:  ## Clean node cache, build directoryo and .docusuarus
 	@rm -rf node_modules .docusaurus build
 
 check:  ## Docusaurus MDX checker (usefull on MDX version migrations)
-	CMD=docusaurus-mdx-checker; \
-	which $${CMD} >/dev/null 2>&1 || CMD="/Users/sdelrio/.npm-packages/bin/docusaurus-mdx-checker"; \
-	output=$$($${CMD} 2>&1); \
-	ec=$$?; \
-	if echo "$$output" | grep -v "graphify-out" | grep -v "memory/" | grep -q "Error"; then \
-		echo "$$output" | grep -v "graphify-out" | grep -v "memory/"; \
-		exit 1; \
-	elif [ $$ec -ne 0 ]; then \
-		echo "All errors originate from graphify-out/ or memory/ (excluded from check)"; \
-	fi
+	@CMD=docusaurus-mdx-checker; \
+	which $${CMD} >/dev/null 2>&1 || CMD="$(HOME)/.npm-packages/bin/docusaurus-mdx-checker"; \
+	$${CMD} -c docs/ && \
+	$${CMD} -c tutorial/ && \
+	$${CMD} -c src/ && \
+	$${CMD} -c blog/
 
 .PHONY: build
 build: ## Build page
