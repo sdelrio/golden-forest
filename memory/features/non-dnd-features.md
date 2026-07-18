@@ -63,6 +63,6 @@ Interactive Mermaid editor with live preview.
 
 | Status | Count |
 |--------|-------|
-| DONE | 1 |
-| NOT STARTED | 4 |
+| DONE | 2 |
+| NOT STARTED | 3 |
 | **Total** | **5** |
