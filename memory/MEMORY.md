@@ -7,18 +7,17 @@
 
 | Project | Status | Current Phase | Next Action | File |
 |---------|--------|---------------|-------------|------|
-| Infra Refactoring | 🟡 In Progress | In Progress (73%) | Extract shared `BaseCard` | [features/non-content-features.md](features/non-content-features.md) |
-| Non-DnD Features | 🟡 In Progress | In Progress (40%) | Build `FreshnessBadge` for stale content | [features/non-dnd-features.md](features/non-dnd-features.md) |
+| Infra Refactoring | 🟢 On Track | Nearing Completion (81%) | Extract shared `BaseCard` | [features/non-content-features.md](features/non-content-features.md) |
+| Non-DnD Features | 🟢 On Track | Nearing Completion (60%) | Add `last_updated` frontmatter to docs | [features/non-dnd-features.md](features/non-dnd-features.md) |
 | DnD Features | 🔴 Not Started | Not Started (0%) | Define campaign data schema (`sessions.json`) | [features/dnd-features.md](features/dnd-features.md) |
 
-**Overall: 20/36 features implemented (56%)**
+**Overall: 24/36 features implemented (67%)**
 
 ## Pending Jobs Queue
 
 - [x] **High**: Extract `withBrowserOnly` HOC — done 2026-07-17, PR #162
 - [x] **High**: Extract shared `CopyButton` — done 2026-07-17, PR #163
 - [x] **Medium**: Build `CmdRef` component for CLI command reference — done 2026-07-17, PR #164
-- [ ] **Medium**: Build `FreshnessBadge` for stale content detection
 - [x] **Medium**: Convert StatDiceRoller inline styles to CSS module — done 2026-07-18, PR #165
 - [x] **Low**: Create `.cursorrules` for Cursor users — done 2026-07-18
 - [x] **Low**: Document Ponytail system (`.opencode/` README) — done 2026-07-18, PR #167
@@ -26,6 +25,7 @@
 - [ ] **Medium**: Copy button icon on AiDashboard doesn't indicate success (no color change or "Copied" message) after clicking
 - [ ] **Medium**: CmdRef uses a card, it looks like duplicated form Card component, Can make the card compoment more generic so I don't have duplicated definitions of card
 - [ ] **Medium**: Configure docusaurus-mdx-checker to ignore paths via config instead of output via make check. Paths to ignore: graphify-out/, memory/, node_modules/, local_prompts/
+- [x] **Medium**: Build `FreshnessBadge` for stale content detection — done 2026-07-18
 - [x] **Low**: Archive stale plan files (5.6) — done 2026-07-18
 
 ## Completed Jobs
@@ -70,6 +70,7 @@
   3. non-content-features 5.4 (.cursorrules): NOT STARTED → DONE
   4. non-content-features summary: 16/10 → 18/8 (after fixes)
   5. MEMORY.md overall: 19/36 (53%) → 20/36 (56%); status emoji/phases synced
-- Next quick wins: `FreshnessBadge`, `SECURITY.md`
+- Marked FreshnessBadge feature as DONE (component + dashboard + build script all exist)
+- Next quick wins: `SECURITY.md`
 - Done: Archived stale plan files (5.6) — created `memory/archive/` convention
 - Blockers: None
