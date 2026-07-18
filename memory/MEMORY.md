@@ -11,7 +11,7 @@
 | Non-DnD Features | 🟢 On Track | Nearing Completion (60%) | Add `last_updated` frontmatter to docs | [features/non-dnd-features.md](features/non-dnd-features.md) |
 | DnD Features | 🔴 Not Started | Not Started (0%) | Define campaign data schema (`sessions.json`) | [features/dnd-features.md](features/dnd-features.md) |
 
-**Overall: 24/36 features implemented (67%)**
+**Overall: 25/36 features implemented (69%)**
 
 ## Pending Jobs Queue
 
@@ -21,7 +21,7 @@
 - [x] **Medium**: Convert StatDiceRoller inline styles to CSS module — done 2026-07-18, PR #165
 - [x] **Low**: Create `.cursorrules` for Cursor users — done 2026-07-18
 - [x] **Low**: Document Ponytail system (`.opencode/` README) — done 2026-07-18, PR #167
-- [ ] **Low**: Add `SECURITY.md` vulnerability reporting policy
+- [x] **Low**: Add `SECURITY.md` vulnerability reporting policy — done 2026-07-18
 - [ ] **Medium**: Copy button icon on AiDashboard doesn't indicate success (no color change or "Copied" message) after clicking
 - [ ] **Medium**: CmdRef uses a card, it looks like duplicated form Card component, Can make the card compoment more generic so I don't have duplicated definitions of card
 - [ ] **Medium**: Configure docusaurus-mdx-checker to ignore paths via config instead of output via make check. Paths to ignore: graphify-out/, memory/, node_modules/, local_prompts/
@@ -71,6 +71,6 @@
   4. non-content-features summary: 16/10 → 18/8 (after fixes)
   5. MEMORY.md overall: 19/36 (53%) → 20/36 (56%); status emoji/phases synced
 - Marked FreshnessBadge feature as DONE (component + dashboard + build script all exist)
-- Next quick wins: `SECURITY.md`
+- Next quick wins: Dependabot GH Actions grouping
 - Done: Archived stale plan files (5.6) — created `memory/archive/` convention
 - Blockers: None
