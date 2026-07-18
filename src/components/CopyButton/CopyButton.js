@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import clsx from 'clsx';
 import { Icon } from '@iconify/react';
 import { copyToClipboard } from '../../utils/clipboard';
@@ -12,10 +12,16 @@ export default function CopyButton({
   children,
 }) {
   const [copied, setCopied] = useState(false);
+  const [hintPos, setHintPos] = useState(null);
+  const btnRef = useRef(null);
 
   const handleCopy = async () => {
     if (disabled) return;
     await copyToClipboard(text);
+    if (variant === 'icon' && btnRef.current) {
+      const rect = btnRef.current.getBoundingClientRect();
+      setHintPos({ left: rect.left + rect.width / 2, top: rect.top - 4 });
+    }
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -23,13 +29,21 @@ export default function CopyButton({
   if (variant === 'icon') {
     return (
       <button
-        className={clsx(styles.copyBtn, styles.icon, className)}
+        ref={btnRef}
+        className={clsx(styles.copyBtn, styles.icon, copied && styles.copiedIcon, className)}
         onClick={handleCopy}
         type="button"
         title="Copy to clipboard"
       >
-        <Icon icon="mdi:content-copy" width={16} />
-        {copied && <span className={styles.copiedHint}>Copied!</span>}
+        <Icon icon={copied ? 'mdi:check' : 'mdi:content-copy'} width={16} />
+        {copied && hintPos && (
+          <span
+            className={styles.copiedHint}
+            style={{ left: hintPos.left, top: hintPos.top }}
+          >
+            Copied!
+          </span>
+        )}
       </button>
     );
   }
