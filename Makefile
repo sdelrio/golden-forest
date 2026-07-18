@@ -115,5 +115,8 @@ list-chars: ## List and summarize Fantasy Grounds character XML files
 enrich-dashboard: ## Enrich AI dashboard data from npm/GitHub APIs
 	@node scripts/enrich-ai-dashboard.mjs
 
+freshness-index: ## Build freshness index JSON for stale-content dashboard
+	@node scripts/build-freshness-index.mjs
+
 test: ## Test web performance with unlighthouse
 	npx unlighthouse --site https://www.lorien.cloud

@@ -1,6 +1,7 @@
 ---
 title: "AgentMemory"
 description: "Persistent memory runtime for AI coding agents. 95.2% retrieval accuracy, 92% fewer tokens per session, zero external databases. Works with every MCP-compatible agent."
+last_updated: 2026-07-02
 tags: [ai, tools, memory, mcp, claude-code, cursor, codex, agent]
 ---
 
@@ -12,8 +13,11 @@ import Steps from '@site/src/components/Steps/Steps';
 import Step from '@site/src/components/Steps/Step';
 import Accordion from '@site/src/components/Accordion/Accordion';
 import AccordionGroup from '@site/src/components/Accordion/AccordionGroup';
+import FreshnessBadge from '@site/src/components/FreshnessBadge/FreshnessBadge';
 
 # agentmemory
+
+<FreshnessBadge lastUpdated={frontMatter.last_updated} />
 
 **agentmemory** is a complete memory runtime for AI coding agents. It automatically captures every tool call, prompt, and session event, compresses them into semantic memories, and surfaces the right context in milliseconds — without any external databases, without Redis, without Postgres, without Qdrant. Everything runs as a single Node.js process on your machine.
 
