@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import useSearchFilter from '../../hooks/useSearchFilter';
 import FreshnessBadge from '../FreshnessBadge/FreshnessBadge';
 import { timeAgo } from '../../utils/format';
@@ -27,6 +28,7 @@ function StatCard({ label, count, level }) {
 }
 
 export default function StaleContentDashboard() {
+  const freshnessUrl = useBaseUrl('/freshness-index/freshness-index.json');
   const [sortKey, setSortKey] = useState('lastUpdated');
   const [sortAsc, setSortAsc] = useState(true);
 
@@ -57,7 +59,7 @@ export default function StaleContentDashboard() {
     isLoading,
     error,
   } = useSearchFilter({
-    url: '/freshness-index/freshness-index.json',
+    url: freshnessUrl,
     filterFn,
     categoryKey: (item) => {
       const days = getDaysSince(item.lastUpdated);
