@@ -8,14 +8,14 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-18.
 
 | # | Feature | Status | Complexity |
 |---|---------|--------|------------|
-| 1.1 | SECURITY.md | NOT STARTED | Low |
+| 1.1 | SECURITY.md | DONE | Low |
 | 1.2 | `.github/copilot-instructions.md` | DONE | Low |
 | 1.3 | Dependabot GH Actions grouping | NOT STARTED | Low |
 | 1.4 | CODEOWNERS | DONE | Low |
 | 1.5 | Issue/PR templates | DONE | Low |
 
 ### Notes
-- **1.1:** Add vulnerability reporting instructions at repo root.
+- **1.1:** DONE — `SECURITY.md` created at repo root with GitHub Security Advisories as reporting channel.
 - **1.3:** Currently groups `@docusaurus/*` and `react`/`react-dom`. Could group `actions/*` and `github/*` for cleaner PRs. File: `.github/dependabot.yml`.
 
 ---
@@ -91,10 +91,9 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-18.
 
 | Status | Count |
 |--------|-------|
-| DONE | 19 |
-| NOT STARTED | 7 |
+| DONE | 20 |
+| NOT STARTED | 6 |
 | **Total** | **26** |
 
 ### Priority Quick Wins (NOT STARTED, Low effort)
-- 1.1 SECURITY.md
 - 1.3 Dependabot GH Actions
