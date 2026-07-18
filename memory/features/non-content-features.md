@@ -91,8 +91,8 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-18.
 
 | Status | Count |
 |--------|-------|
-| DONE | 20 |
-| NOT STARTED | 6 |
+| DONE | 21 |
+| NOT STARTED | 5 |
 | **Total** | **26** |
 
 ### Priority Quick Wins (NOT STARTED, Low effort)

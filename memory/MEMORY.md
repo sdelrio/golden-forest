@@ -7,11 +7,11 @@
 
 | Project | Status | Current Phase | Next Action | File |
 |---------|--------|---------------|-------------|------|
-| Infra Refactoring | 🟢 On Track | Nearing Completion (90%) | Review PR #173 feedback | [features/non-content-features.md](features/non-content-features.md) |
+| Infra Refactoring | 🟢 On Track | Nearing Completion (81%) | Review PR #173 feedback | [features/non-content-features.md](features/non-content-features.md) |
 | Non-DnD Features | 🟡 In Progress | In Progress (60%) | Build Personal Reading List or Tech Radar | [features/non-dnd-features.md](features/non-dnd-features.md) |
 | DnD Features | 🔴 Not Started | Not Started (0%) | Define campaign data schema (`sessions.json`) | [features/dnd-features.md](features/dnd-features.md) |
 
-**Overall: 26/36 features implemented (72%)**
+**Overall: 24/36 features implemented (67%)**
 
 ## Pending Jobs Queue
 
@@ -66,5 +66,6 @@
 ## Session Notes
 
 *Last updated: 2026-07-18*
+- /memory-sync: Recalibrated counts. non-content 21/26 (81%), overall 24/36 (67%).
 - CopyButton icon variant feedback fix (PR #172): icon swaps to checkmark + green color + tooltip on copy. Initially tooltip was clipped by parent overflow; fixed with `position: fixed` + `getBoundingClientRect()`.
 - Blockers: None
