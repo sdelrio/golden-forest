@@ -7,11 +7,11 @@
 
 | Project | Status | Current Phase | Next Action | File |
 |---------|--------|---------------|-------------|------|
-| Infra Refactoring | 🟢 On Track | Nearing Completion (85%) | Extract shared `BaseCard` | [features/non-content-features.md](features/non-content-features.md) |
+| Infra Refactoring | 🟢 On Track | Nearing Completion (90%) | Review PR #173 feedback | [features/non-content-features.md](features/non-content-features.md) |
 | Non-DnD Features | 🟡 In Progress | In Progress (60%) | Build Personal Reading List or Tech Radar | [features/non-dnd-features.md](features/non-dnd-features.md) |
 | DnD Features | 🔴 Not Started | Not Started (0%) | Define campaign data schema (`sessions.json`) | [features/dnd-features.md](features/dnd-features.md) |
 
-**Overall: 25/36 features implemented (69%)**
+**Overall: 26/36 features implemented (72%)**
 
 ## Pending Jobs Queue
 

@@ -1,8 +1,9 @@
 import React from 'react';
-import clsx from 'clsx';
 import StatusBadge from './StatusBadge';
 import { CATEGORY_COLORS } from '../../constants/colors';
 import { formatNumber, timeAgo } from '../../utils/format';
+import DashboardCard from '../DashboardCard/DashboardCard';
+import dashboardStyles from '../DashboardCard/DashboardCard.module.css';
 import styles from './ToolCard.module.css';
 
 export default function ToolCard({ tool, onSelect }) {
@@ -11,23 +12,23 @@ export default function ToolCard({ tool, onSelect }) {
   const lastPush = timeAgo(tool.githubLastPush, { compact: true });
 
   return (
-    <button
-      className={styles.card}
+    <DashboardCard
+      accentColor={color}
       onClick={() => onSelect(tool)}
-      type="button"
-      style={{ '--card-accent': color }}
+      header={
+        <>
+          <span className={dashboardStyles.categoryBadge} style={{ background: color }}>
+            {tool.category}
+          </span>
+          {tool.healthScore != null && (
+            <StatusBadge score={tool.healthScore} size="sm" />
+          )}
+        </>
+      }
+      tags={tool.tags}
     >
-      <div className={styles.header}>
-        <span className={styles.categoryBadge} style={{ background: color }}>
-          {tool.category}
-        </span>
-        {tool.healthScore != null && (
-          <StatusBadge score={tool.healthScore} size="sm" />
-        )}
-      </div>
-
       <h3 className={styles.name}>{tool.name}</h3>
-      <p className={styles.description}>{tool.description}</p>
+      <p className={dashboardStyles.description}>{tool.description}</p>
 
       <div className={styles.meta}>
         {stars && (
@@ -46,17 +47,6 @@ export default function ToolCard({ tool, onSelect }) {
           </span>
         )}
       </div>
-
-      {tool.tags && tool.tags.length > 0 && (
-        <div className={styles.tags}>
-          {tool.tags.slice(0, 3).map((tag) => (
-            <span key={tag} className={styles.tag}>{tag}</span>
-          ))}
-          {tool.tags.length > 3 && (
-            <span className={styles.tag}>+{tool.tags.length - 3}</span>
-          )}
-        </div>
-      )}
-    </button>
+    </DashboardCard>
   );
 }
