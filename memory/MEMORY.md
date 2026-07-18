@@ -23,10 +23,11 @@
 - [x] **Low**: Document Ponytail system (`.opencode/` README) — done 2026-07-18, PR #167
 - [x] **Low**: Add `SECURITY.md` vulnerability reporting policy — done 2026-07-18
 - [x] **Medium**: Copy button icon on AiDashboard doesn't indicate success (no color change or "Copied" message) after clicking — done 2026-07-18, PR #172
-- [x] **Medium**: CmdRef uses a card, it looks like duplicated form Card component, Can make the card compoment more generic so I don't have duplicated definitions of card — done 2026-07-18, PR #TBD
+- [x] **Medium**: CmdRef uses a card, it looks like duplicated form Card component, Can make the card compoment more generic so I don't have duplicated definitions of card — done 2026-07-18, PR #174
 - [x] **Medium**: Configure docusaurus-mdx-checker to ignore paths via config instead of output via make check. Paths to ignore: graphify-out/, memory/, node_modules/, local_prompts/ — done 2026-07-18, PR #173
 - [x] **Medium**: Build `FreshnessBadge` for stale content detection — done 2026-07-18
 - [x] **Low**: Archive stale plan files (5.6) — done 2026-07-18
+- [ ] **Medium**: Disable (by commenting if possible) the blog top menu option.
 
 ## Completed Jobs
 
