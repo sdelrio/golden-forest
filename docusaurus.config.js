@@ -57,7 +57,7 @@ const config = {
         path: 'tutorial',
         routeBasePath: 'tutorial',
         //sidebarPath: require.resolve('./sidebars.js'),
-        sidebarPath: './sidebars.js',
+        sidebarPath: './sidebars-tutorial.js',
         // ... other options
         breadcrumbs: true,
         remarkPlugins: [remarkMath],
