@@ -23,12 +23,12 @@ export default function CopyButton({
   if (variant === 'icon') {
     return (
       <button
-        className={clsx(styles.copyBtn, styles.icon, className)}
+        className={clsx(styles.copyBtn, styles.icon, copied && styles.copiedIcon, className)}
         onClick={handleCopy}
         type="button"
         title="Copy to clipboard"
       >
-        <Icon icon="mdi:content-copy" width={16} />
+        <Icon icon={copied ? 'mdi:check' : 'mdi:content-copy'} width={16} />
         {copied && <span className={styles.copiedHint}>Copied!</span>}
       </button>
     );
