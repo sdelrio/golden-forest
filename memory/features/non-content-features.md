@@ -39,14 +39,14 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-18.
 | # | Feature | Status | Complexity |
 |---|---------|--------|------------|
 | 3.1 | Shared `CategoryFilter` component | NOT STARTED | Low-Med |
-| 3.2 | Shared `BaseCard` component | NOT STARTED | Medium |
+| 3.2 | Shared `BaseCard` component | DONE | Medium |
 | 3.3 | Shared `CopyButton` component | DONE | Low |
 | 3.4 | Shared `DndSkeleton` wrapper | NOT STARTED | Low |
 | 3.5 | D&D Ability Constants | DONE | Low |
 
 ### Notes
 - **3.1:** AiDashboard and MermaidPlayground have identical pill-bar JS+CSS.
-- **3.2:** `ToolCard` and `TemplateCard` are 80%+ identical.
+- **3.2:** `CommandCard`, `ToolCard`, and `TemplateCard` were 80%+ identical. Extracted shared `DashboardCard` shell component.
 - **3.3:** DONE — Shared component at `src/components/CopyButton/` with icon/button variants. PR #163.
 - **3.4:** 3 components use identical skeleton JSX + color values.
 

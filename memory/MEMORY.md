@@ -7,11 +7,11 @@
 
 | Project | Status | Current Phase | Next Action | File |
 |---------|--------|---------------|-------------|------|
-| Infra Refactoring | 🟢 On Track | Nearing Completion (85%) | Extract shared `BaseCard` | [features/non-content-features.md](features/non-content-features.md) |
+| Infra Refactoring | 🟢 On Track | Nearing Completion (90%) | Review PR #173 feedback | [features/non-content-features.md](features/non-content-features.md) |
 | Non-DnD Features | 🟡 In Progress | In Progress (60%) | Build Personal Reading List or Tech Radar | [features/non-dnd-features.md](features/non-dnd-features.md) |
 | DnD Features | 🔴 Not Started | Not Started (0%) | Define campaign data schema (`sessions.json`) | [features/dnd-features.md](features/dnd-features.md) |
 
-**Overall: 25/36 features implemented (69%)**
+**Overall: 26/36 features implemented (72%)**
 
 ## Pending Jobs Queue
 
@@ -23,7 +23,7 @@
 - [x] **Low**: Document Ponytail system (`.opencode/` README) — done 2026-07-18, PR #167
 - [x] **Low**: Add `SECURITY.md` vulnerability reporting policy — done 2026-07-18
 - [x] **Medium**: Copy button icon on AiDashboard doesn't indicate success (no color change or "Copied" message) after clicking — done 2026-07-18, PR #172
-- [ ] **Medium**: CmdRef uses a card, it looks like duplicated form Card component, Can make the card compoment more generic so I don't have duplicated definitions of card
+- [x] **Medium**: CmdRef uses a card, it looks like duplicated form Card component, Can make the card compoment more generic so I don't have duplicated definitions of card — done 2026-07-18, PR #TBD
 - [x] **Medium**: Configure docusaurus-mdx-checker to ignore paths via config instead of output via make check. Paths to ignore: graphify-out/, memory/, node_modules/, local_prompts/ — done 2026-07-18, PR #173
 - [x] **Medium**: Build `FreshnessBadge` for stale content detection — done 2026-07-18
 - [x] **Low**: Archive stale plan files (5.6) — done 2026-07-18
