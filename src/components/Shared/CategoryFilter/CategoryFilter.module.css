@@ -1,0 +1,23 @@
+.filterBar {
+  composes: shared-filter-bar from '../../../css/shared-components.css';
+}
+
+.pill {
+  composes: shared-pill from '../../../css/shared-components.css';
+}
+
+.active {
+  composes: shared-pill-active from '../../../css/shared-components.css';
+}
+
+.count {
+  composes: shared-pill-count from '../../../css/shared-components.css';
+}
+
+.active .count {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.label {
+  composes: shared-pill-label from '../../../css/shared-components.css';
+}

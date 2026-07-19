@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import clsx from 'clsx';
+import CategoryFilter from '../Shared/CategoryFilter/CategoryFilter';
 import TemplateCard from './TemplateCard';
 import LiveEditor from './LiveEditor';
 import useSearchFilter from '../../hooks/useSearchFilter';
@@ -87,22 +87,12 @@ function MermaidPlaygroundInternal() {
         />
       </div>
 
-      <div className={styles.filterBar}>
-        {CATEGORIES.map((cat) => {
-          const count = cat.id === 'all' ? counts.total : (counts[cat.id] || 0);
-          return (
-            <button
-              key={cat.id}
-              className={clsx(styles.pill, selectedCategory === cat.id && styles.active)}
-              onClick={() => setSelectedCategory(cat.id)}
-              type="button"
-            >
-              <span className={styles.pillLabel}>{cat.label}</span>
-              {count > 0 && <span className={styles.pillCount}>{count}</span>}
-            </button>
-          );
-        })}
-      </div>
+      <CategoryFilter
+        categories={CATEGORIES}
+        selected={selectedCategory}
+        onChange={setSelectedCategory}
+        counts={counts}
+      />
 
       <div className={styles.grid}>
         {filtered.map((tpl) => (
