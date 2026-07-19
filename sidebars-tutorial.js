@@ -12,6 +12,11 @@ const sidebars = {
       label: 'Reading List',
       href: '/tutorial/reading-list/',
     },
+    {
+      type: 'link',
+      label: 'Tech Stack Radar',
+      href: '/tech-radar/',
+    },
   ],
 };
 
