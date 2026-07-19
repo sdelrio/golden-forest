@@ -4,6 +4,13 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      actions:
+        patterns:
+          - "actions/*"
+      github:
+        patterns:
+          - "github/*"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:

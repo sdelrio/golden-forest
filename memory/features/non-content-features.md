@@ -10,7 +10,7 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-18.
 |---|---------|--------|------------|
 | 1.1 | SECURITY.md | DONE | Low |
 | 1.2 | `.github/copilot-instructions.md` | DONE | Low |
-| 1.3 | Dependabot GH Actions grouping | NOT STARTED | Low |
+| 1.3 | Dependabot GH Actions grouping | DONE | Low |
 | 1.4 | CODEOWNERS | DONE | Low |
 | 1.5 | Issue/PR templates | DONE | Low |
 
@@ -91,8 +91,8 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-18.
 
 | Status | Count |
 |--------|-------|
-| DONE | 21 |
-| NOT STARTED | 5 |
+| DONE | 22 |
+| NOT STARTED | 4 |
 | **Total** | **26** |
 
 ### Priority Quick Wins (NOT STARTED, Low effort)
