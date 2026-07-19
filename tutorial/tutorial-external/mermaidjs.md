@@ -1,35 +1,50 @@
-# Install mermaid.js
+# MermaidJS
 
 - [Docusaurus theme mermaid](https://docusaurus.io/docs/api/themes/@docusaurus/theme-mermaid#configuration)
 
+import Steps from '@site/src/components/Steps/Steps';
+import Step from '@site/src/components/Steps/Step';
+
 ## Docusaurus v3+
 
-1. Install `yarn add @docusaurus/theme-mermaid`
-
-2. Update config:
-
-  ```js title="docusaurus.config.js"
-  export default {
-  themes: ['@docusaurus/theme-mermaid'],
-  // In order for Mermaid code blocks in Markdown to work,
-  // you also need to enable the Remark plugin with this option
-  markdown: {
-    mermaid: true,
-    },
-  };
-  ```
+<Steps>
+ <Step title="Install the theme package">
+   ```bash
+   yarn add @docusaurus/theme-mermaid
+   ```
+ </Step>
+ <Step title="Update docusaurus.config.js">
+   ```js title="docusaurus.config.js"
+   export default {
+   themes: ['@docusaurus/theme-mermaid'],
+   // In order for Mermaid code blocks in Markdown to work,
+   // you also need to enable the Remark plugin with this option
+   markdown: {
+     mermaid: true,
+     },
+   };
+   ```
+ </Step>
+</Steps>
 
 ## Docusaurus v2+
 
 With the current version it's pretty straightforward to integrate:
 
-1. Install `yarn add mdx-mermaid mermaid` or manually add following this steps:
+<Steps>
+ <Step title="Install dependencies">
+   ```bash
+   yarn add mdx-mermaid mermaid
+   ```
+ </Step>
+ <Step title="Add plugin to docusaurus.config.js">
+   Add the plugin at presets.remarkPlugins:
 
-2. Add  plugin to `docusaurus.config.js` at presets.remarkPlugins
-
-```
-docusaurus.config.js:          remarkPlugins: [math, require('mdx-mermaid')],
-```
+   ```
+   docusaurus.config.js:          remarkPlugins: [math, require('mdx-mermaid')],
+   ```
+ </Step>
+</Steps>
 
 
 ## Usage
@@ -124,4 +139,3 @@ Try Mermaid diagrams live in the [Mermaid Playground](/tools/mermaid-playground/
 ## Issues
 
 * [Arrow color not using styles](https://github.com/mermaid-js/mermaid/pull/2382)
-
