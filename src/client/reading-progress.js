@@ -7,16 +7,6 @@ if (typeof document !== 'undefined') {
   const STORAGE_KEY = 'readingList';
   const BAR_HEIGHT = 3;
 
-  const bar = document.createElement('div');
-  bar.style.cssText = `
-    position: fixed; top: 0; left: 0; z-index: 9999;
-    height: ${BAR_HEIGHT}px; width: 0%;
-    background: var(--ifm-color-primary, #4f46e5);
-    transition: width 0.1s ease-out;
-    pointer-events: none;
-  `;
-  document.body.appendChild(bar);
-
   function getSlug() {
     const path = window.location.pathname;
     if (!path.startsWith('/docs/')) return null;
@@ -39,10 +29,11 @@ if (typeof document !== 'undefined') {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
   }
 
+  let bar = null;
   let ticking = false;
 
   function onScroll() {
-    if (ticking) return;
+    if (ticking || !bar) return;
     ticking = true;
     requestAnimationFrame(() => {
       ticking = false;
@@ -67,8 +58,29 @@ if (typeof document !== 'undefined') {
     });
   }
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll, { passive: true });
+  function init() {
+    bar = document.createElement('div');
+    bar.style.cssText = `
+      position: fixed; top: 0; left: 0; z-index: 9999;
+      height: ${BAR_HEIGHT}px; width: 0%;
+      background: var(--ifm-color-primary, #4f46e5);
+      transition: width 0.1s ease-out;
+      pointer-events: none;
+    `;
+    document.body.appendChild(bar);
 
-  onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+
+    onScroll();
+    // Recalculate after hydration settles
+    setTimeout(onScroll, 500);
+    setTimeout(onScroll, 1000);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 }
