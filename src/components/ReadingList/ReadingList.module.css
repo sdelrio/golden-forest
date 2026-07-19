@@ -1,0 +1,178 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.searchRow {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.exportBtn {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ifm-font-color-base);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.exportBtn:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 520px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  padding: 1rem;
+  background: var(--ifm-background-surface-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardRead {
+  opacity: 0.7;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.cardTitle {
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+}
+
+.cardTitle:hover {
+  color: var(--ifm-color-primary);
+}
+
+.cardMeta {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.cardDesc {
+  font-size: 0.8125rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.progressTrack {
+  height: 4px;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--ifm-color-primary);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.cardActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.actionBtn {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.actionBtn:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.actionActive {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: #fff;
+}
+
+.actionActive:hover {
+  color: #fff;
+}
+
+.removeBtn:hover {
+  border-color: var(--ifm-color-danger);
+  color: var(--ifm-color-danger);
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+/* Dark mode */
+:global([data-theme='dark']) .card {
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+:global([data-theme='dark']) .actionBtn {
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-500);
+}

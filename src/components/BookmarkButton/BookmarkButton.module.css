@@ -1,0 +1,42 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: transparent;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.active {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: #fff;
+}
+
+.active:hover {
+  opacity: 0.9;
+  color: #fff;
+}
+
+.label {
+  font-weight: 500;
+}
+
+:global([data-theme='dark']) .btn {
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-600);
+}
+
+:global([data-theme='dark']) .btn:hover {
+  color: var(--ifm-color-primary-lighter);
+}

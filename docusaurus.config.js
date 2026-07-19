@@ -133,6 +133,7 @@ const config = {
   clientModules: [
     require.resolve('./src/client/theme-transition.js'),
     require.resolve('./src/bones/registry.js'),
+    require.resolve('./src/client/reading-progress.js'),
   ],
 
   themeConfig:
