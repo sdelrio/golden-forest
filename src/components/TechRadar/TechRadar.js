@@ -29,7 +29,7 @@ async function renderRadar(mermaidCode) {
       useMaxWidth: false,
       width: 900,
       height: 900,
-      marginTop: 40,
+      marginTop: 80,
       marginBottom: 40,
       marginLeft: 40,
       marginRight: 40,
