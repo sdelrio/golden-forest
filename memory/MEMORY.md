@@ -7,17 +7,14 @@
 
 | Project | Status | Current Phase | Next Action | File |
 |---------|--------|---------------|-------------|------|
-| Infra Refactoring | 🟢 On Track | Nearing Completion (81%) | Review PR #173 feedback | [features/non-content-features.md](features/non-content-features.md) |
+| Infra Refactoring | 🟢 On Track | Nearing Completion (85%) | Build CategoryFilter or DndSkeleton wrapper | [features/non-content-features.md](features/non-content-features.md) |
 | Non-DnD Features | 🟡 In Progress | In Progress (60%) | Build Personal Reading List or Tech Radar | [features/non-dnd-features.md](features/non-dnd-features.md) |
 | DnD Features | 🔴 Not Started | Not Started (0%) | Define campaign data schema (`sessions.json`) | [features/dnd-features.md](features/dnd-features.md) |
 
-**Overall: 24/36 features implemented (67%)**
+**Overall: 26/37 features implemented (70%)**
 
-## Pending Jobs Queue
+## Completed Jobs
 
-- [x] **High**: Extract `withBrowserOnly` HOC — done 2026-07-17, PR #162
-- [x] **High**: Extract shared `CopyButton` — done 2026-07-17, PR #163
-- [x] **Medium**: Build `CmdRef` component for CLI command reference — done 2026-07-17, PR #164
 - [x] **Medium**: Convert StatDiceRoller inline styles to CSS module — done 2026-07-18, PR #165
 - [x] **Low**: Create `.cursorrules` for Cursor users — done 2026-07-18
 - [x] **Low**: Document Ponytail system (`.opencode/` README) — done 2026-07-18, PR #167
@@ -29,14 +26,6 @@
 - [x] **Low**: Archive stale plan files (5.6) — done 2026-07-18
 - [x] **Medium**: Disable (by commenting if possible) the blog top menu option — done 2026-07-18, PR #175
 
-## Completed Jobs
-
-- [x] **High**: Migrate TODO files to `memory/` system — done 2026-07-17
-- [x] **High**: Create 6 memory management commands — done 2026-07-17
-- [x] **High**: Extract `withBrowserOnly` HOC — done 2026-07-17, PR #162
-- [x] **High**: Extract shared `CopyButton` — done 2026-07-17, PR #163
-- [x] **Medium**: Copy button icon on AiDashboard doesn't indicate success — done 2026-07-18, PR #172
-
 ## Recent Decisions
 
 - **2024-02**: Boneyard-js for skeleton loading + XML for char data — [details](decisions/2024-02-dnd-tooling.md)
@@ -46,7 +35,7 @@
 
 - `projects/golden-forest.md` — Stack, conventions, component catalog, build commands
 - `features/dnd-features.md` — 5 DnD features (Campaign Journal, Party Dashboard, Achievements, Battle Log, Death Certs)
-- `features/non-content-features.md` — 26 infra items (security, CSS, code dedup, AI tooling)
+- `features/non-content-features.md` — 27 infra items (security, CSS, code dedup, AI tooling)
 - `features/non-dnd-features.md` — 5 general features (CmdRef, Freshness, Reading List, Tech Radar, Mermaid Playground)
 - `decisions/` — Architectural and strategic choices
 - `logs/` — Daily session journals
@@ -58,14 +47,14 @@
 | `/jobs` | List all pending jobs |
 | `/jobs-add <priority> <desc>` | Add a new job to the queue |
 | `/jobs-done <text>` | Mark a job as completed |
-| `/jobs-archive` | Archive completed jobs > 30 days old |
+| `/jobs-archive` | Archive completed jobs > 14 days old |
 | `/job-prepare <#>` | **Must execute ALL steps in order**: 1) Plan 2) `git checkout -b feat/<scope>` 3) Implement 4) `make check` 5) Commit 6) confirm manual test 7) update memory/ 8) `git push -u origin <branch>` 9) `gh pr create` |
 | `/feature-status` | Scan all feature files, show consolidated table |
 | `/memory-sync` | Sync MEMORY.md counts with actual feature file status |
 
 ## Session Notes
 
-*Last updated: 2026-07-18*
-- /memory-sync: Recalibrated counts. non-content 21/26 (81%), overall 24/36 (67%).
+*Last updated: 2026-07-19*
+- /memory-sync: Recalibrated counts. non-content 23/27 (85%), overall 26/37 (70%).
 - CopyButton icon variant feedback fix (PR #172): icon swaps to checkmark + green color + tooltip on copy. Initially tooltip was clipped by parent overflow; fixed with `position: fixed` + `getBoundingClientRect()`.
 - Blockers: None
