@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.loading {
+  opacity: 0.5;
+  text-align: center;
+  padding: 2rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.error {
+  color: var(--ifm-color-danger);
+  background: var(--ifm-color-danger-soft);
+  border: 1px solid var(--ifm-color-danger);
+  border-radius: var(--ifm-border-radius);
+  padding: 1rem;
+  text-align: center;
+}
+
+.radarWrapper {
+  width: 100%;
+  composes: container;
+}
+
+.radarWrapper :global(.docusaurus-mermaid-container) {
+  width: 100%;
+}
+
+.radarWrapper :global(.docusaurus-mermaid-container) > svg {
+  width: 100% !important;
+  height: auto !important;
+}

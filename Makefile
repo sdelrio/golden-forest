@@ -111,6 +111,9 @@ list-chars: ## List and summarize Fantasy Grounds character XML files
 enrich-dashboard: ## Enrich AI dashboard data from npm/GitHub APIs
 	@node scripts/enrich-ai-dashboard.mjs
 
+tech-radar: ## Scan project and regenerate tech-radar stack.json
+	@node scripts/update-tech-radar.mjs
+
 freshness-index: ## Build freshness index JSON for stale-content dashboard
 	@node scripts/build-freshness-index.mjs
 

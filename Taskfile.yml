@@ -150,6 +150,13 @@ tasks:
     cmds:
       - python3 scripts/build-char-index.py
 
+  ## --- Tech Radar ---
+
+  tech-radar:update:
+    desc: Scan project and regenerate tech-radar stack.json
+    cmds:
+      - node scripts/update-tech-radar.mjs
+
   ## --- AI Dashboard ---
 
   ai-dashboard:enrich:
