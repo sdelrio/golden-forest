@@ -5,8 +5,8 @@
 
 ## Pending Jobs Queue
 
-1. [ ] **Low**: Extract shared `DndSkeleton` wrapper — dedup skeleton JSX across CharSearch/XmlChar
-2. [ ] **Low**: Consolidate AGENTS.md — merge CharSearch/XmlChar into `src/components/AGENTS.md`
+1. [x] **Low**: Extract shared `DndSkeleton` wrapper — dedup skeleton JSX across CharSearch/XmlChar (2026-07-19)
+2. [x] **Low**: Consolidate AGENTS.md — merge CharSearch/XmlChar into `src/components/AGENTS.md` (2026-07-19)
 3. [ ] **Medium**: Rename `tutorial-external/install-mermaidjs` to `tutorial-external/mermaidjs`, update title to MermaidJS, use Steps component for install section
 
 ## Decisions

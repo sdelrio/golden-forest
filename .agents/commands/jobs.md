@@ -1,7 +1,6 @@
 ---
 description: list pending jobs
 agent: build
-model: opencode/big-pickle
 ---
 # /jobs
 Display all pending jobs from the agent memory queue.
