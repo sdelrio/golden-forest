@@ -3,58 +3,41 @@
 > The Golden Forest (lorien.cloud) — Docusaurus 3.x digital garden + D&D toolkit.
 > Load every session. Follow links for detail. Keep under 50 lines.
 
-## Active Projects & Status
+## Active Projects
 
-| Project | Status | Current Phase | Next Action | File |
-|---------|--------|---------------|-------------|------|
-| Infra Refactoring | 🟢 On Track | Nearing Completion (85%) | Build CategoryFilter or DndSkeleton wrapper | [features/non-content-features.md](features/non-content-features.md) |
-| Non-DnD Features | 🟡 In Progress | In Progress (60%) | Build Personal Reading List or Tech Radar | [features/non-dnd-features.md](features/non-dnd-features.md) |
-| DnD Features | 🔴 Not Started | Not Started (0%) | Define campaign data schema (`sessions.json`) | [features/dnd-features.md](features/dnd-features.md) |
+| Project | Status | Progress | Next Action |
+|---------|--------|----------|-------------|
+| Infra Refactoring | 🟢 | 85% | CategoryFilter or DndSkeleton |
+| Non-DnD Features | 🟡 | 60% | Personal Reading List or Tech Radar |
+| DnD Features | 🔴 | 0% | Define `sessions.json` schema |
 
-**Overall: 26/37 features implemented (70%)**
+**Overall: 24/36 features implemented (67%)**
 
-## Completed Jobs
+## Pending Jobs Queue
 
-- [x] **Medium**: Convert StatDiceRoller inline styles to CSS module — done 2026-07-18, PR #165
-- [x] **Low**: Create `.cursorrules` for Cursor users — done 2026-07-18
-- [x] **Low**: Document Ponytail system (`.opencode/` README) — done 2026-07-18, PR #167
-- [x] **Low**: Add `SECURITY.md` vulnerability reporting policy — done 2026-07-18
-- [x] **Medium**: Copy button icon on AiDashboard doesn't indicate success (no color change or "Copied" message) after clicking — done 2026-07-18, PR #172
-- [x] **Medium**: CmdRef uses a card, it looks like duplicated form Card component, Can make the card compoment more generic so I don't have duplicated definitions of card — done 2026-07-18, PR #174
-- [x] **Medium**: Configure docusaurus-mdx-checker to ignore paths via config instead of output via make check. Paths to ignore: graphify-out/, memory/, node_modules/, local_prompts/ — done 2026-07-18, PR #173
-- [x] **Medium**: Build `FreshnessBadge` for stale content detection — done 2026-07-18
-- [x] **Low**: Archive stale plan files (5.6) — done 2026-07-18
-- [x] **Medium**: Disable (by commenting if possible) the blog top menu option — done 2026-07-18, PR #175
+1. [ ] **Low**: Dependabot GH Actions grouping — group `actions/*` + `github/*` in dependabot.yml
+2. [ ] **Medium**: Extract shared `CategoryFilter` — lift AiDashboard component, refactor MermaidPlayground
+3. [ ] **Low**: Extract shared `DndSkeleton` wrapper — dedup skeleton JSX across CharSearch/XmlChar
+4. [ ] **Low**: Consolidate AGENTS.md — merge CharSearch/XmlChar into `src/components/AGENTS.md`
 
-## Recent Decisions
+## Decisions
 
-- **2024-02**: Boneyard-js for skeleton loading + XML for char data — [details](decisions/2024-02-dnd-tooling.md)
+- **2024-02**: Boneyard-js for skeletons, XML for char data — [details](decisions/2024-02-dnd-tooling.md)
 - **2024-01**: Docusaurus 3.x over Next.js/Astro — [details](decisions/2024-01-architecture-choice.md)
 
-## Memory File Map
+## File Map
 
-- `projects/golden-forest.md` — Stack, conventions, component catalog, build commands
-- `features/dnd-features.md` — 5 DnD features (Campaign Journal, Party Dashboard, Achievements, Battle Log, Death Certs)
-- `features/non-content-features.md` — 27 infra items (security, CSS, code dedup, AI tooling)
-- `features/non-dnd-features.md` — 5 general features (CmdRef, Freshness, Reading List, Tech Radar, Mermaid Playground)
-- `decisions/` — Architectural and strategic choices
-- `logs/` — Daily session journals
+- `features/` — DnD (5), non-content (26), non-DnD (5) feature tracking
+- `projects/golden-forest.md` — Stack, components, build commands
+- `decisions/` — Architecture choices
+- `archive/` — Completed jobs >14 days
 
-## Available Commands
+## Commands
 
-| Command | Purpose |
-|---------|---------|
-| `/jobs` | List all pending jobs |
-| `/jobs-add <priority> <desc>` | Add a new job to the queue |
-| `/jobs-done <text>` | Mark a job as completed |
-| `/jobs-archive` | Archive completed jobs > 14 days old |
-| `/job-prepare <#>` | **Must execute ALL steps in order**: 1) Plan 2) `git checkout -b feat/<scope>` 3) Implement 4) `make check` 5) Commit 6) confirm manual test 7) update memory/ 8) `git push -u origin <branch>` 9) `gh pr create` |
-| `/feature-status` | Scan all feature files, show consolidated table |
-| `/memory-sync` | Sync MEMORY.md counts with actual feature file status |
+`/jobs` · `/jobs-add` · `/jobs-done` · `/jobs-archive` · `/job-prepare <#>` · `/feature-status` · `/memory-sync`
 
 ## Session Notes
 
 *Last updated: 2026-07-19*
-- /memory-sync: Recalibrated counts. non-content 23/27 (85%), overall 26/37 (70%).
-- CopyButton icon variant feedback fix (PR #172): icon swaps to checkmark + green color + tooltip on copy. Initially tooltip was clipped by parent overflow; fixed with `position: fixed` + `getBoundingClientRect()`.
+- Audited features vs codebase: 3.1 CategoryFilter partially done (JS dedup needed), 3.4 DndSkeleton CSS already shared
 - Blockers: None
