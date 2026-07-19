@@ -32,4 +32,4 @@
 
 ## Commands
 
-`/jobs` · `/jobs-add` · `/jobs-done` · `/jobs-archive` · `/job-prepare <#>` · `/feature-status` · `/memory-sync`
+`/jobs` · `/jobs-add` · `/jobs-done` · `/jobs-archive` · `/job-prepare <number>` · `/feature-status` · `/memory-sync`
