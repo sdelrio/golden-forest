@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { Skeleton } from 'boneyard-js/react';
+import SkeletonLoader from '../Shared/SkeletonLoader/SkeletonLoader';
 import CommandCard from './CommandCard';
 import CommandDetail from './CommandDetail';
 import useSearchFilter from '../../hooks/useSearchFilter';
@@ -118,15 +118,11 @@ function CmdRefInternal({ tool }) {
       <div className={styles.grid}>
         {isLoading
           ? Array.from({ length: 8 }).map((_, i) => (
-              <Skeleton
+              <SkeletonLoader
                 key={`skeleton-${i}`}
                 name="cmd-ref-card"
-                loading={true}
-                initialBones={cmdRefCardBones}
-                animate="shimmer"
-              >
-                <div style={{ height: cmdRefCardBones.height }} />
-              </Skeleton>
+                bones={cmdRefCardBones}
+              />
             ))
           : filtered.map((cmd) => (
               <CommandCard key={cmd.id} command={cmd} onSelect={setSelectedCommand} />

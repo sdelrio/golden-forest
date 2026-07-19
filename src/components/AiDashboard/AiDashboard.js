@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { Skeleton } from 'boneyard-js/react';
+import SkeletonLoader from '../Shared/SkeletonLoader/SkeletonLoader';
 import CategoryFilter from '../Shared/CategoryFilter/CategoryFilter';
 import ToolCard from './ToolCard';
 import ToolDetail from './ToolDetail';
@@ -111,15 +111,11 @@ function AiDashboardInternal() {
       <div className={styles.grid}>
         {isLoading
           ? Array.from({ length: 8 }).map((_, i) => (
-              <Skeleton
+              <SkeletonLoader
                 key={`skeleton-${i}`}
                 name="ai-dashboard-card"
-                loading={true}
-                initialBones={aiDashboardCardBones}
-                animate="shimmer"
-              >
-                <div style={{ height: aiDashboardCardBones.height }} />
-              </Skeleton>
+                bones={aiDashboardCardBones}
+              />
             ))
           : filtered.map((tool) => (
               <ToolCard key={tool.id} tool={tool} onSelect={setSelectedTool} />

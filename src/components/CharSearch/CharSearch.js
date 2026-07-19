@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { Skeleton } from 'boneyard-js/react';
+import SkeletonLoader from '../Shared/SkeletonLoader/SkeletonLoader';
 import XmlChar from '../XmlChar/XmlChar';
 import useSearchFilter from '../../hooks/useSearchFilter';
 import charSearchCardBones from '../../bones/char-search-card.bones.json';
@@ -92,16 +92,10 @@ function CharSearchInternal() {
                 {Array.from({ length: 8 }).map((_, i) => (
                     <div key={i} className={styles.card} style={{ padding: 0, border: 'none', background: 'none' }}>
                         <div style={{ padding: '0.6rem 1rem' }}>
-                            <Skeleton
+                            <SkeletonLoader
                                 name="char-search-card"
-                                loading={true}
-                                initialBones={charSearchCardBones}
-                                color="rgba(88,24,13,0.08)"
-                                darkColor="rgba(255,182,48,0.08)"
-                                animate="shimmer"
-                            >
-                                <div style={{ height: charSearchCardBones.height }} />
-                            </Skeleton>
+                                bones={charSearchCardBones}
+                            />
                         </div>
                     </div>
                 ))}
@@ -187,16 +181,10 @@ export default withBrowserOnly(CharSearchInternal, {
       {Array.from({ length: 8 }).map((_, i) => (
         <div key={i} className={styles.card} style={{ padding: 0, border: 'none', background: 'none' }}>
           <div style={{ padding: '0.6rem 1rem' }}>
-            <Skeleton
+            <SkeletonLoader
               name="char-search-card"
-              loading={true}
-              initialBones={charSearchCardBones}
-              color="rgba(88,24,13,0.08)"
-              darkColor="rgba(255,182,48,0.08)"
-              animate="shimmer"
-            >
-              <div style={{ height: charSearchCardBones.height }} />
-            </Skeleton>
+              bones={charSearchCardBones}
+            />
           </div>
         </div>
       ))}

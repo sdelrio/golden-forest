@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { Skeleton } from 'boneyard-js/react';
+import SkeletonLoader from '../Shared/SkeletonLoader/SkeletonLoader';
 import { Icon } from '@iconify/react';
 import { parseCharacterXml } from '../XmlChar/XmlParser';
 import { signed } from '../../utils/format';
@@ -64,16 +64,11 @@ function PartySummaryInternal() {
 
     if (!characters.length) {
         return (
-            <Skeleton
+            <SkeletonLoader
                 name="party-summary"
                 loading={loading}
-                initialBones={partySummaryBones}
-                color="rgba(88,24,13,0.08)"
-                darkColor="rgba(255,182,48,0.08)"
-                animate="shimmer"
-            >
-                <div style={{ height: partySummaryBones.height }} />
-            </Skeleton>
+                bones={partySummaryBones}
+            />
         );
     }
 
