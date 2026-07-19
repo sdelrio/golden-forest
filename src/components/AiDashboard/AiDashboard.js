@@ -1,13 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Skeleton } from 'boneyard-js/react';
-import CategoryFilter from './CategoryFilter';
+import CategoryFilter from '../Shared/CategoryFilter/CategoryFilter';
 import ToolCard from './ToolCard';
 import ToolDetail from './ToolDetail';
 import useSearchFilter from '../../hooks/useSearchFilter';
 import aiDashboardCardBones from '../../bones/ai-dashboard-card.bones.json';
 import withBrowserOnly from '../../utils/withBrowserOnly';
 import styles from './AiDashboard.module.css';
+
+const CATEGORIES = [
+  { id: 'all', label: 'All', icon: 'mdi:view-grid' },
+  { id: 'agents', label: 'Agents', icon: 'mdi:robot' },
+  { id: 'tools', label: 'Tools', icon: 'mdi:hammer-wrench' },
+  { id: 'mcp', label: 'MCP', icon: 'mdi:puzzle' },
+  { id: 'models', label: 'Models', icon: 'mdi:brain' },
+  { id: 'browsers', label: 'Browsers', icon: 'mdi:web' },
+  { id: 'workflows', label: 'Workflows', icon: 'mdi:git-branch' },
+  { id: 'prompts', label: 'Prompts', icon: 'mdi:message-text' },
+  { id: 'security', label: 'Security', icon: 'mdi:shield-lock' },
+  { id: 'comparatives', label: 'Comparatives', icon: 'mdi:book-open-variant' },
+];
 
 function filterTools(tool, searchText, selectedCategory) {
   if (selectedCategory !== 'all' && tool.category !== selectedCategory) return false;
@@ -88,6 +101,7 @@ function AiDashboardInternal() {
         </div>
 
         <CategoryFilter
+          categories={CATEGORIES}
           selected={selectedCategory}
           onChange={setSelectedCategory}
           counts={counts}

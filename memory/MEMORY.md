@@ -7,7 +7,7 @@
 
 | Project | Status | Progress | Next Action |
 |---------|--------|----------|-------------|
-| Infra Refactoring | 🟢 | 85% | CategoryFilter or DndSkeleton |
+| Infra Refactoring | 🟢 | 87% | DndSkeleton or AGENTS.md consolidation |
 | Non-DnD Features | 🟡 | 60% | Personal Reading List or Tech Radar |
 | DnD Features | 🔴 | 0% | Define `sessions.json` schema |
 
@@ -16,7 +16,7 @@
 ## Pending Jobs Queue
 
 1. [x] **Low**: Dependabot GH Actions grouping — group `actions/*` + `github/*` in dependabot.yml (2026-07-19)
-2. [ ] **Medium**: Extract shared `CategoryFilter` — lift AiDashboard component, refactor MermaidPlayground
+2. [x] **Medium**: Extract shared `CategoryFilter` — lift AiDashboard component, refactor MermaidPlayground (2026-07-19)
 3. [ ] **Low**: Extract shared `DndSkeleton` wrapper — dedup skeleton JSX across CharSearch/XmlChar
 4. [ ] **Low**: Consolidate AGENTS.md — merge CharSearch/XmlChar into `src/components/AGENTS.md`
 
@@ -39,5 +39,6 @@
 ## Session Notes
 
 *Last updated: 2026-07-19*
-- Audited features vs codebase: 3.1 CategoryFilter partially done (JS dedup needed), 3.4 DndSkeleton CSS already shared
+- Extracted shared CategoryFilter to `src/components/Shared/CategoryFilter/` — deduped JS between AiDashboard and MermaidPlayground
+- 3.1 CategoryFilter complete (CSS was already shared, JS now shared too)
 - Blockers: None
