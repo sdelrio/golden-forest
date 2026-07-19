@@ -9,8 +9,9 @@ if (typeof document !== 'undefined') {
 
   function getSlug() {
     const path = window.location.pathname;
-    if (!path.startsWith('/docs/')) return null;
-    return path.replace(/^\/|\/$/g, '');
+    const docsMatch = path.match(/\/docs\/(.+?)\/?$/);
+    if (!docsMatch) return null;
+    return docsMatch[1];
   }
 
   function getList() {

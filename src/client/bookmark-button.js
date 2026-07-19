@@ -21,7 +21,10 @@ if (typeof document !== 'undefined') {
   }
 
   function getSlug() {
-    return window.location.pathname.replace(/^\/|\/$/g, '');
+    const path = window.location.pathname;
+    const docsMatch = path.match(/\/docs\/(.+?)\/?$/);
+    if (!docsMatch) return null;
+    return docsMatch[1];
   }
 
   function isBookmarked(slug) {
