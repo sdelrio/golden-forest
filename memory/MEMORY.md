@@ -13,7 +13,7 @@
 6. [x] **Low**: Consolidate AGENTS.md hierarchy — merge component-specific files into `src/components/AGENTS.md` (5.1)
 7. [x] **Medium**: Personal Reading List — browser-local bookmarking, scroll progress bar, read marking, export/import JSON (non-dnd/3)
 8. [x] **Medium**: Tech Stack Radar Chart — interactive SVG radar/spider chart from JSON config, embeddable in homepage or /stack (non-dnd/4)
-9. [ ] **Low**: Mermaid Playground UX improvements — useMaxWidth: false for all diagram types, flex split-pane for responsive stacking, line numbers in code editor (2026-07-19)
+9. [x] **Low**: Mermaid Playground UX improvements — useMaxWidth: false for all diagram types, flex split-pane for responsive stacking, line numbers in code editor (2026-07-19)
 
 ## Active Projects & Status
 
