@@ -38,10 +38,10 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-18.
 
 | # | Feature | Status | Complexity |
 |---|---------|--------|------------|
-| 3.1 | Shared `CategoryFilter` component | NOT STARTED | Low-Med |
+| 3.1 | Shared `CategoryFilter` component | DONE | Low-Med |
 | 3.2 | Shared `BaseCard` component | DONE | Medium |
 | 3.3 | Shared `CopyButton` component | DONE | Low |
-| 3.4 | Shared `DndSkeleton` wrapper | NOT STARTED | Low |
+| 3.4 | Shared `DndSkeleton` wrapper | DONE | Low |
 | 3.5 | D&D Ability Constants | DONE | Low |
 
 ### Notes
@@ -73,7 +73,7 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-18.
 
 | # | Feature | Status | Complexity |
 |---|---------|--------|------------|
-| 5.1 | Consolidate AGENTS.md hierarchy | NOT STARTED | Low |
+| 5.1 | Consolidate AGENTS.md hierarchy | DONE | Low |
 | 5.2 | Sync `.agents/commands/` and `.opencode/commands/` | DONE | Low-Med |
 | 5.3 | Create `.github/copilot-instructions.md` | DONE | Low |
 | 5.4 | Create `.cursorrules` | DONE | Low |
@@ -81,7 +81,7 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-18.
 | 5.6 | Archive stale plan files | DONE | Low |
 
 ### Notes
-- **5.1:** 4 AGENTS.md files exist. Consider merging component-specific ones into `src/components/AGENTS.md`.
+- **5.1:** Done — CharSearch/XmlChar AGENTS.md merged into `src/components/AGENTS.md`.
 - **5.5:** Done — PR #167. Removed 6 duplicate top-level ponytail-*.md files, added `.opencode/README.md`.
 - **5.6:** Done — created `memory/archive/` convention. Plan file was already deleted during migration (2026-07-17).
 
@@ -91,9 +91,6 @@ Security, code quality, CSS simplification, AI tooling. Status as of 2026-07-18.
 
 | Status | Count |
 |--------|-------|
-| DONE | 22 |
-| NOT STARTED | 4 |
-| **Total** | **26** |
-
-### Priority Quick Wins (NOT STARTED, Low effort)
-- 1.3 Dependabot GH Actions
+| DONE | 27 |
+| NOT STARTED | 0 |
+| **Total** | **27** |
