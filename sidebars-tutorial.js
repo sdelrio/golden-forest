@@ -7,6 +7,11 @@ const sidebars = {
       label: 'Stale Content Dashboard',
       href: '/tutorial/stale-content/',
     },
+    {
+      type: 'link',
+      label: 'Reading List',
+      href: '/tutorial/reading-list/',
+    },
   ],
 };
 

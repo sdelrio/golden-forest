@@ -128,8 +128,9 @@ When executing `/job-prepare <#>`, complete ALL steps in order — do not skip a
 3. **Implement** — Make the changes
 4. **Test** — `make check` (MDX validation) and verify no regressions
 5. **Commit** — `git commit -m "feat(scope): desc"`
-6. **Push** — `git push -u origin <branch>`
-7. **PR** — `gh pr create` with title and body
+6. **Review Gate** — STOP here and ask the user to review the diff before pushing. Do NOT proceed to push or PR without explicit user approval.
+7. **Push** — `git push -u origin <branch>`
+8. **PR** — `gh pr create` with title and body
 
 Skipping steps (especially branch, test, commit, push, PR) violates the workflow.
 
