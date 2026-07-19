@@ -63,6 +63,12 @@ See [src/components/AGENTS.md](file:///Users/sdelrio/github/sdelrio/golden-fores
 ### 6. Mermaid TreeView Dark Mode (Temporary Override)
 TreeView-beta hardcodes `labelColor: 'black'` and `lineColor: 'black'` in `styles.ts`, ignoring Mermaid's `themeVariables`. CSS overrides with `!important` in `custom.css` adapt it to Docusaurus dark mode (needed because mermaid injects `<style>` inside SVG `<defs>`). **Pending review** when Mermaid upgrades or treeView leaves beta and inherits theme properly.
 
+### 7. Mermaid `useMaxWidth` and Sizing
+Mermaid diagrams default to `useMaxWidth: true` in their per-diagram config (e.g., `radar.useMaxWidth: true`). This caps the SVG at its internal resolution and prevents it from filling wider containers. To make a diagram scale to its container:
+- Set `useMaxWidth: false` in `mermaid.initialize({ radar: { useMaxWidth: false, width: N, height: N } })`
+- Apply CSS: `svg { width: 100% !important; height: auto !important; }` on the `.docusaurus-mermaid-container > svg` selector
+- This pattern applies to `radar`, `xychart`, and any diagram type where the default 600px width is too narrow.
+
 ### 7. Error Handling
 - Use React state to manage loading and error states for asynchronous data (like fetching XML).
 - Provide meaningful fallbacks for missing assets or failed fetches.
