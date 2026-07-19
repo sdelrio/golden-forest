@@ -11,7 +11,7 @@
 4. [x] **Low-Med**: Shared `CategoryFilter` component — dedup pill-bar JS+CSS between AiDashboard and MermaidPlayground (3.1)
 5. [x] **Low**: Shared `DndSkeleton` wrapper — dedup skeleton JSX across 3 components (3.4)
 6. [x] **Low**: Consolidate AGENTS.md hierarchy — merge component-specific files into `src/components/AGENTS.md` (5.1)
-7. [ ] **Medium**: Personal Reading List — browser-local bookmarking, scroll progress bar, read marking, export/import JSON (non-dnd/3)
+7. [x] **Medium**: Personal Reading List — browser-local bookmarking, scroll progress bar, read marking, export/import JSON (non-dnd/3)
 8. [ ] **Medium**: Tech Stack Radar Chart — interactive SVG radar/spider chart from JSON config, embeddable in homepage or /stack (non-dnd/4)
 
 ## Active Projects & Status
@@ -19,10 +19,10 @@
 | Project | Status | Phase | Done/Total |
 |---------|--------|-------|------------|
 | Non-Content Infrastructure | 🟢 On Track | Complete | 27/27 (100%) |
-| Non-DnD Features | 🟡 In Progress | In Progress | 3/5 (60%) |
+| Non-DnD Features | 🟡 In Progress | In Progress | 4/5 (80%) |
 | DnD Features | 🔴 Not Started | Not Started | 0/5 (0%) |
 
-**Overall: 30/32 features implemented (94%)**
+**Overall: 31/32 features implemented (97%)**
 
 ## Decisions
 

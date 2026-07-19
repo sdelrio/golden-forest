@@ -29,7 +29,7 @@ Build-time + runtime system flagging stale content.
 - **Completed:** FreshnessBadge component (`src/components/FreshnessBadge/`) — thresholds: 60/180 days, explicit import, "Suggest Update" link included
 - **Done:** Dashboard at `src/pages/tutorial/stale-content.js`, build script at `scripts/build-freshness-index.mjs`, `make freshness-index`
 
-## 3. Personal Reading List — NOT STARTED
+## 3. Personal Reading List — DONE
 
 Browser-local reading tracker. No backend needed.
 
@@ -45,10 +45,11 @@ Browser-local reading tracker. No backend needed.
   - `readingList` — `{ [slug]: { bookmarked: bool, read: bool, progress: 0-100, lastRead: timestamp } }`
 - **Components:**
   - `src/components/ReadingList/` — panel/page showing saved articles with filters
-  - `src/components/ReadingProgress/` — thin progress bar at top of doc pages
-  - `src/components/BookmarkButton/` — reusable toggle button for doc footer/sidebar
+  - `src/client/reading-progress.js` — thin progress bar at top of doc pages (clientModule)
+  - `src/client/bookmark-button.js` — star toggle in doc footer (clientModule)
 - **Pattern:** Reuses CharSearch client-side filtering pattern
 - **Complexity:** Medium
+- **PR:** #181
 
 ## 4. Tech Stack Radar Chart — NOT STARTED
 
@@ -75,7 +76,7 @@ Interactive Mermaid editor with live preview.
 
 | Status | Count |
 |--------|-------|
-| DONE | 3 |
+| DONE | 4 |
 | IN PROGRESS | 0 |
-| NOT STARTED | 2 |
+| NOT STARTED | 1 |
 | **Total** | **5** |
