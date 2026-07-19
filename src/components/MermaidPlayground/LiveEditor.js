@@ -9,6 +9,7 @@ export default function LiveEditor({ template, onBack }) {
   const [error, setError] = useState(null);
   const debounceRef = useRef(null);
   const containerRef = useRef(null);
+  const lineNumbersRef = useRef(null);
 
   const color = CATEGORY_COLORS[template.category] || '#6b7280';
 
@@ -20,6 +21,19 @@ export default function LiveEditor({ template, onBack }) {
         theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default',
         securityLevel: 'loose',
         fontFamily: 'var(--ifm-font-family-base)',
+        flowchart: { useMaxWidth: false },
+        sequence: { useMaxWidth: false },
+        class: { useMaxWidth: false },
+        state: { useMaxWidth: false },
+        er: { useMaxWidth: false },
+        gantt: { useMaxWidth: false },
+        pie: { useMaxWidth: false },
+        mindmap: { useMaxWidth: false },
+        architecture: { useMaxWidth: false },
+        gitGraph: { useMaxWidth: false },
+        xychart: { useMaxWidth: false },
+        radar: { useMaxWidth: false },
+        treeView: { useMaxWidth: false },
       });
       const id = `mermaid-preview-${Date.now()}`;
       const { svg: rendered } = await mermaid.render(id, codeToRender);
@@ -58,6 +72,14 @@ export default function LiveEditor({ template, onBack }) {
     return () => observer.disconnect();
   }, [code, renderMermaid]);
 
+  const lineCount = code.split('\n').length;
+
+  const handleEditorScroll = (e) => {
+    if (lineNumbersRef.current) {
+      lineNumbersRef.current.scrollTop = e.target.scrollTop;
+    }
+  };
+
   const handleKeyDown = (e) => {
     if (e.key === 'Tab') {
       e.preventDefault();
@@ -88,14 +110,22 @@ export default function LiveEditor({ template, onBack }) {
           <div className={styles.paneHeader}>
             <span>Code</span>
           </div>
-          <textarea
-            className={styles.editor}
-            value={code}
-            onChange={(e) => setCode(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Enter Mermaid syntax..."
-            spellCheck={false}
-          />
+          <div className={styles.editorBody}>
+            <div className={styles.lineNumbers} ref={lineNumbersRef}>
+              {Array.from({ length: lineCount }, (_, i) => (
+                <span key={i + 1}>{i + 1}</span>
+              ))}
+            </div>
+            <textarea
+              className={styles.editor}
+              value={code}
+              onChange={(e) => setCode(e.target.value)}
+              onScroll={handleEditorScroll}
+              onKeyDown={handleKeyDown}
+              placeholder="Enter Mermaid syntax..."
+              spellCheck={false}
+            />
+          </div>
         </div>
 
         <div className={styles.pane}>
