@@ -51,16 +51,18 @@ Browser-local reading tracker. No backend needed.
 - **Complexity:** Medium
 - **PR:** #181
 
-## 4. Tech Stack Radar Chart — NOT STARTED
+## 4. Tech Stack Radar Chart — DONE
 
 Interactive radar/spider chart visualizing technology stack.
 
-- **What:** SVG-based radar chart (no heavy charting library)
-- **Features:** Pulls from JSON config, embeddable in homepage or `/stack`, toggle technologies on/off
+- **What:** Mermaid radar-beta chart rendered from JSON config
+- **Features:** Pulls from JSON config, responsive sizing (90vw), dark mode support, auto-generated from project scan
 - **Data:** `static/tech-radar/stack.json`
 - **Component:** `src/components/TechRadar/`
-- **Pattern:** New — SVG charting
+- **Script:** `scripts/update-tech-radar.mjs` — regenerates JSON from package.json + project scan
+- **Pattern:** Mermaid dynamic rendering (like MermaidPlayground)
 - **Complexity:** Medium
+- **PR:** #182
 
 ## 5. Mermaid Diagram Playground — DONE
 
@@ -76,7 +78,7 @@ Interactive Mermaid editor with live preview.
 
 | Status | Count |
 |--------|-------|
-| DONE | 4 |
+| DONE | 5 |
 | IN PROGRESS | 0 |
-| NOT STARTED | 1 |
+| NOT STARTED | 0 |
 | **Total** | **5** |
