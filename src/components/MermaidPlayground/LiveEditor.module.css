@@ -54,21 +54,15 @@
 
 /* Split pane */
 .splitPane {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   min-height: 400px;
 }
 
-@media (max-width: 768px) {
-  .splitPane {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-}
-
 .pane {
   display: flex;
+  flex: 1 1 400px;
   flex-direction: column;
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 10px;
@@ -97,6 +91,37 @@
 [data-theme='dark'] .paneHeader {
   background: rgba(255, 255, 255, 0.04);
   border-color: var(--ifm-color-emphasis-300);
+}
+
+/* Editor body with line numbers */
+.editorBody {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.lineNumbers {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  background: var(--ifm-color-emphasis-100);
+  border-right: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-500);
+  font-family: 'Inconsolata', var(--ifm-font-family-monospace);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  text-align: right;
+  user-select: none;
+  overflow: hidden;
+  min-width: 2.5rem;
+}
+
+[data-theme='dark'] .lineNumbers {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.lineNumbers span {
+  padding: 0 0.625rem;
 }
 
 /* Textarea */
@@ -131,8 +156,8 @@
 }
 
 .preview svg {
-  max-width: 100%;
-  height: auto;
+  width: 100% !important;
+  height: auto !important;
   margin: -0.5rem;
 }
 

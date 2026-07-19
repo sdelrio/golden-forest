@@ -89,6 +89,7 @@ The dark/light mode toggle uses the **View Transitions API** for a circular-mask
 - **Client Modules**: `src/client/` contains Docusaurus client modules that run on every page load (e.g., `theme-transition.js` for View Transitions API animation). **Important**: `clientModules` only dispatch lifecycle hooks (`onRouteDidUpdate`, etc.) — they do **not** auto-call a default export. Code that must run at page load (event listeners, global patches) must be written at **top level** of the module, not inside an exported function. Guard with `typeof document !== 'undefined'` for SSR safety.
 - **Static Assets**: `static/fg/chars/` contains XML character data for the D&D tools.
 - **Agent Memory**: `memory/` — Persistent memory for agents. Load `memory/MEMORY.md` every session for the index. Feature tracking, decisions, and project context live here. See [memory/MEMORY.md](memory/MEMORY.md).
+- **Memory Job References**: When referencing jobs from `memory/MEMORY.md` in PR descriptions, commit messages, or comments, use the format `<number>.` (e.g., `9.`) — **never** `#<number>` (e.g., not `#9`). GitHub auto-links `#N` to issues/PRs, creating false references.
 - **Algolia Search**: See [ALGOLIA.md](file:///Users/sdelrio/github/sdelrio/golden-forest/ALGOLIA.md) for indexing configuration, record count analysis, and reduction strategies. Config: `.algolia.docsearch.json`.
 - **Git**: Use **Conventional Commits** (`feat(scope): desc`, `fix: desc`, `docs: desc`).
 - **PR Descriptions**: Do not wrap filenames or code in backticks inside bold markers — GitHub strips backticks inside `**`, leaving empty `****`. Use bold plain text filenames instead (e.g., `**.cursorrules**`, not `**`.cursorrules`**`).
@@ -128,7 +129,7 @@ Return: file path written, number of sections, components imported, and any warn
 3. For follow-up edits, invoke a new task with the file path and corrections.
 
 ## /job-prepare Workflow (Required Steps)
-When executing `/job-prepare <#>`, complete ALL steps in order — do not skip any:
+When executing `/job-prepare <number>`, complete ALL steps in order — do not skip any:
 1. **Plan** — Research and present the implementation plan
 2. **Branch** — `git checkout -b feat/<scope>` from master
 3. **Implement** — Make the changes
