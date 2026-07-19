@@ -11,11 +11,11 @@
 | Non-DnD Features | 🟡 | 60% | Personal Reading List or Tech Radar |
 | DnD Features | 🔴 | 0% | Define `sessions.json` schema |
 
-**Overall: 24/36 features implemented (67%)**
+**Overall: 25/36 features implemented (69%)**
 
 ## Pending Jobs Queue
 
-1. [ ] **Low**: Dependabot GH Actions grouping — group `actions/*` + `github/*` in dependabot.yml
+1. [x] **Low**: Dependabot GH Actions grouping — group `actions/*` + `github/*` in dependabot.yml (2026-07-19)
 2. [ ] **Medium**: Extract shared `CategoryFilter` — lift AiDashboard component, refactor MermaidPlayground
 3. [ ] **Low**: Extract shared `DndSkeleton` wrapper — dedup skeleton JSX across CharSearch/XmlChar
 4. [ ] **Low**: Consolidate AGENTS.md — merge CharSearch/XmlChar into `src/components/AGENTS.md`
