@@ -5,6 +5,44 @@
 - **D&D Tools**: `DnD/` subdirectory contains `DnDPointBuy`, `Feat`, `FeatBrowser`, `FeatTable`, `StatDiceRoller`. Top-level: `CharSearch`, `XmlChar`, `PartySummary`.
 - **Structure**: Directory-per-component (PascalCase) containing `Component.js` and `Component.module.css`.
 
+## D&D Tool Components
+
+### CharSearch
+
+Searchable, class-filtered character browser. Fetches `fg/chars/index.json` and renders a list of `<XmlChar>` cards with live name search and class dropdown filtering.
+
+**Folder Structure:**
+```
+src/components/CharSearch/
+  ├── CharSearch.js        # Main component + BrowserOnly wrapper
+  └── CharSearch.module.css # Scoped styles (light/dark theme)
+```
+
+**Gotchas:**
+1. All state and effects must live inside `CharSearchInternal` (inside `BrowserOnly`).
+2. The class dropdown is hardcoded in `DEFAULT_CLASSES` — new classes need both an array entry and a matching XML file in `static/fg/chars/`.
+3. `index.json` contract: each entry must have `name`, `filename`, `classes` (array), and optionally `race`.
+4. Never access `window`, `document`, or `DOMParser` at the top level — use `BrowserOnly`.
+
+### XmlChar
+
+D&D character sheet renderer that fetches Fantasy Grounds XML files and parses them into styled, responsive cards with three display modes (small/medium/large). Used by `CharSearch` for detail views.
+
+**Folder Structure:**
+```
+src/components/XmlChar/
+  ├── XmlChar.js           # Main component + BrowserOnly wrapper, render logic
+  ├── XmlParser.js         # DOMParser-based XML → JS object converter
+  ├── XmlChar.module.css   # Scoped styles + dark mode
+  └── assets/              # divider-triangle.svg icons
+```
+
+**Gotchas:**
+1. `DOMParser` and `window` access must stay inside `XmlCharInternal` (wrapped in `BrowserOnly`).
+2. Always ensure the XML file exists in `static/fg/chars/` — missing files throw "File not found".
+3. Abilities may lack `score`, `bonus`, or `save` fields — parser defaults to `0` but rendering assumes they exist once parsed.
+4. `display="large"` requires `filename` for portrait detection, even with a custom `image` prop.
+
 ## Current Focus
 Optimizing documentation-focused components (`Accordion`, `Steps`) for MDX articles. Ensuring consistent icon usage and mobile responsiveness across the "Digital Garden".
 
