@@ -613,5 +613,20 @@
     "tags": ["skills", "optimization", "self-evolving", "agent-skills"],
     "supportedBy": ["claude-code", "codex", "copilot"],
     "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/skillopt"
+  },
+  {
+    "id": "remotion-skills",
+    "name": "Remotion Skills",
+    "description": "React-based video framework with AI agent skills for creating programmatic videos from chat prompts. 10 specialized skills for animation, rendering, and project scaffolding.",
+    "category": "agents",
+    "github": "https://github.com/remotion-dev/remotion",
+    "npm": "remotion",
+    "pip": null,
+    "install": "npx skills add remotion-dev/skills",
+    "site": "https://www.remotion.dev",
+    "license": "Custom",
+    "tags": ["video", "react", "animation", "skills", "agent-agnostic"],
+    "supportedBy": ["claude-code", "codex", "cursor", "opencode", "kimi-code", "windsurf", "cline"],
+    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/remotion-skills"
   }
 ]
