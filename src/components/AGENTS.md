@@ -1,7 +1,7 @@
 # Components Guide (src/components)
 
 ## Directory Overview
-- **Documentation**: `Accordion`, `Card`, `CodeGroup`, `Steps`, `ParamField` (registered in `src/theme/MDXComponents`).
+- **Documentation**: `Accordion`, `BarChart`, `Card`, `CodeGroup`, `Steps`, `ParamField` (registered in `src/theme/MDXComponents`).
 - **D&D Tools**: `DnD/` subdirectory contains `DnDPointBuy`, `Feat`, `FeatBrowser`, `FeatTable`, `StatDiceRoller`. Top-level: `CharSearch`, `XmlChar`, `PartySummary`.
 - **Structure**: Directory-per-component (PascalCase) containing `Component.js` and `Component.module.css`.
 
@@ -45,6 +45,51 @@ src/components/XmlChar/
 
 ## Current Focus
 Optimizing documentation-focused components (`Accordion`, `Steps`) for MDX articles. Ensuring consistent icon usage and mobile responsiveness across the "Digital Garden".
+
+## Documentation Components
+
+### BarChart
+
+Reusable bar chart component built on Recharts. Renders a single-metric bar chart with per-bar coloring, dark mode support, and a built-in legend. Used in MDX articles for framework/tool comparisons.
+
+**Folder Structure:**
+```
+src/components/BarChart/
+  ├── BarChart.js           # Main component + BrowserOnly wrapper
+  └── BarChart.module.css   # Scoped styles + dark mode
+```
+
+**Props:**
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `title` | `string` | — | Heading above the chart |
+| `data` | `Array<{ name: string, value: number }>` | — | Chart data points |
+| `colorMap` | `Record<string, string>` | — | Framework name → hex color. Same keys across charts keep consistent colors |
+| `yAxisLabel` | `string` | — | Y-axis label text |
+| `maxValue` | `number` | `'auto'` | Y-axis max (0 → maxValue) |
+| `colors` | `string[]` | `DEFAULT_COLORS` | Fallback palette when `colorMap` key is missing |
+
+**Usage in MDX:**
+```jsx
+import BarChart from '@site/src/components/BarChart/BarChart';
+
+<BarChart
+  title="Bundle Size (KB)"
+  data={[
+    { name: 'Next.js', value: 85 },
+    { name: 'SvelteKit', value: 15 },
+  ]}
+  colorMap={{ 'Next.js': '#388e3c', 'SvelteKit': '#7b1fa2' }}
+  yAxisLabel="KB"
+  maxValue={100}
+/>
+```
+
+**Gotchas:**
+1. **Not registered globally** — Import directly in MDX with `@site/src/components/BarChart/BarChart`. Do not add to `src/theme/MDXComponents/index.js`.
+2. **Dark mode** — Uses `useColorMode` from `@docusaurus/theme-common` to detect theme. All Recharts internals (grid, axes, tooltip, cursor) switch palettes automatically.
+3. **Per-bar coloring** — Pass `colorMap` with the same keys to multiple `<BarChart />` instances so each framework always renders the same color.
+4. **SSR safe** — Wrapped in `BrowserOnly`. Recharts requires the DOM; the fallback shows "Loading chart...".
 
 ## Component Standards
 - **MDX Registration**: New components must be added to `src/theme/MDXComponents/index.js` to be used in Markdown.
