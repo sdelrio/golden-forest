@@ -14,9 +14,7 @@ import Step from '@site/src/components/Steps/Step';
 
 # Remotion Skills
 
-[Remotion](https://www.remotion.dev) is an independent, open-source framework (53.8k GitHub stars) for creating videos programmatically with React. Instead of using After Effects or keyframe-based tools, you write standard React components that render to video — making animations composable, testable, and version-controllable.
-
-**Remotion Skills** are AI agent integrations that let you describe a video in plain language and have a coding agent generate the full Remotion project for you. The skills encode best practices for animation, rendering, and project structure so the agent produces working code on the first try.
+[Remotion](https://www.remotion.dev) is an independent React framework for creating videos programmatically — write components, render to MP4/WebM/GIF. **Remotion Skills** are AI agent integrations that let you describe a video in natural language and have a coding agent generate the full project from best-practice skill files.
 
 :::info
 The skills are **agent-agnostic** — they work with Claude Code, Codex, Cursor, OpenCode, Kimi Code, and any tool that supports the [Agent Skills](https://agentskills.io/home) standard.
@@ -67,34 +65,34 @@ The agent reads the skill files, which contain domain-specific instructions for 
 ## Available Skills
 
 <CardGroup cols={2}>
-  <Card title="remotion-best-practices" icon="mdi:book-open-variant">
+  <Card title="remotion-best-practices" icon="mdi:book-open-variant" href="https://github.com/remotion-dev/remotion/tree/main/packages/skills/skills/remotion-best-practices">
     Meta-skill that encompasses all others. Use this when you're not sure which specific skill to load.
   </Card>
-  <Card title="remotion-create" icon="mdi:video-plus">
+  <Card title="remotion-create" icon="mdi:video-plus" href="https://github.com/remotion-dev/remotion/tree/main/packages/skills/skills/remotion-create">
     Scaffold a new Remotion project or add a composition to an existing one.
   </Card>
-  <Card title="remotion-markup" icon="mdi:animation">
+  <Card title="remotion-markup" icon="mdi:animation" href="https://github.com/remotion-dev/remotion/tree/main/packages/skills/skills/remotion-markup">
     Best practices for React markup — compositions, animations, layout, typography, media, effects, timing.
   </Card>
-  <Card title="remotion-render" icon="mdi:filmstrip">
+  <Card title="remotion-render" icon="mdi:filmstrip" href="https://github.com/remotion-dev/remotion/tree/main/packages/skills/skills/remotion-render">
     Invoke rendering into video files or still images with the correct CLI flags.
   </Card>
-  <Card title="remotion-captions" icon="mdi:subtitles">
+  <Card title="remotion-captions" icon="mdi:subtitles" href="https://github.com/remotion-dev/remotion/tree/main/packages/skills/skills/remotion-captions">
     Guidance for adding captions and subtitles to videos.
   </Card>
-  <Card title="remotion-saas" icon="mdi:cloud">
+  <Card title="remotion-saas" icon="mdi:cloud" href="https://github.com/remotion-dev/remotion/tree/main/packages/skills/skills/remotion-saas">
     Architecture guidance for building Remotion-powered SaaS apps and product integrations.
   </Card>
-  <Card title="remotion-interactivity" icon="mdi:pointer-default">
+  <Card title="remotion-interactivity" icon="mdi:cursor-default-click" href="https://github.com/remotion-dev/remotion/tree/main/packages/skills/skills/remotion-interactivity">
     Making Remotion elements editable and interactive inside Remotion Studio.
   </Card>
-  <Card title="remotion-docs" icon="mdi:magnify">
+  <Card title="remotion-docs" icon="mdi:magnify" href="https://github.com/remotion-dev/remotion/tree/main/packages/skills/skills/remotion-docs">
     Search the Remotion docs and fetch any page as Markdown for API lookups.
   </Card>
-  <Card title="remotion-upgrade" icon="mdi:arrow-up-bold">
+  <Card title="remotion-upgrade" icon="mdi:arrow-up-bold" href="https://github.com/remotion-dev/remotion/tree/main/packages/skills/skills/remotion-upgrade">
     Upgrade Remotion, related packages, and installed skills to compatible versions.
   </Card>
-  <Card title="mediabunny" icon="mdi:rabbit">
+  <Card title="mediabunny" icon="mdi:rabbit" href="https://github.com/remotion-dev/remotion/tree/main/packages/skills/skills/mediabunny">
     Browser-based multimedia handling — video and audio metadata extraction.
   </Card>
 </CardGroup>
