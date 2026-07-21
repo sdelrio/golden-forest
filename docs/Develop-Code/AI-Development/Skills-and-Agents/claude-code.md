@@ -182,7 +182,7 @@ Some areas of your system have hidden complexity. Adding local `CLAUDE.md` files
 Every message you send Claude Code ships a payload you never see — tool definitions, a skills catalogue, and system instructions for features you may never touch. This "bloat" goes out on every request and you're billed for it every turn. You can remove most of it.
 
 :::tip
-Mine dropped by tens of thousands of tokens per turn after cleanup. The six steps below show how to see what your requests actually contain, then trim it with settings Claude Code already has.
+Drops of tens of thousands of tokens per turn are common after cleanup. The six steps below show how to see what your requests actually contain, then trim it with settings Claude Code already has.
 :::
 
 <Steps>
@@ -215,6 +215,7 @@ Mine dropped by tens of thousands of tokens per turn after cleanup. The six step
 
     - `disableBundledSkills` — removes all of Anthropic's bundled skills at once (the `dataviz`, `review`, `init` catalogue), while leaving their slash commands typable.
     - `disableWorkflows` — removes the multi-agent `Workflow` tool, often the largest single line in the table.
+    - `disableRemoteControl`, `disableClaudeAiConnectors`, `disableArtifact` — turn off remote tunneling, external connectors, and the artifact rendering feature respectively.
 
     Use one whenever a whole feature isn't earning its place.
   </Step>
