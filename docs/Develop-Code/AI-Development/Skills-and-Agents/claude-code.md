@@ -1,7 +1,7 @@
 ---
 title: "Claude Code"
 description: "Integration guide and project architecture for Anthropic's Claude Code CLI tool."
-last_updated: 2026-07-05
+last_updated: 2026-07-21
 tags:
   - AI
   - tools
@@ -177,6 +177,105 @@ Some areas of your system have hidden complexity. Adding local `CLAUDE.md` files
   </Step>
 </Steps>
 
+## Optimizing Context Usage
+
+Every message you send Claude Code ships a payload you never see — tool definitions, a skills catalogue, and system instructions for features you may never touch. This "bloat" goes out on every request and you're billed for it every turn. You can remove most of it.
+
+:::tip
+Drops of tens of thousands of tokens per turn are common after cleanup. The six steps below show how to see what your requests actually contain, then trim it with settings Claude Code already has.
+:::
+
+<Steps>
+  <Step title="Measure your context with `/context`">
+    Type `/context` in any Claude Code session. It breaks your context window down by category — system prompt, system tools, MCP tools, memory files, messages — each with a token count and its share of the window. Note the numbers now, before changing anything. You'll compare against them in the last step.
+
+    `/context` shows the tools as a group. It won't tell you which individual tool is largest — it reports one "tools" number, not a ranking. The next step fixes that.
+  </Step>
+
+  <Step title="Find the biggest offenders with a logging proxy">
+    Claude Code talks to the Anthropic API over HTTP, so you can put a proxy in between that forwards each request untouched, streams the reply straight back, and records what went past. The CLI doesn't notice.
+
+    Grab [`proxy.mjs`](https://gist.github.com/mattpocock/5b3d76ea21f5f698aefded47a9cea3b1) — one file, no dependencies, Node built-ins only. Run it:
+
+    ```bash
+    node proxy.mjs
+    ```
+
+    Point Claude Code at it in another terminal and send a message:
+
+    ```bash
+    ANTHROPIC_BASE_URL=http://localhost:8787 claude
+    ```
+
+    Each request is written to `./logs/` as readable Markdown, and a ranked table prints to the terminal showing each tool's byte size and estimated token count. Open the Markdown file and read it: every tool's full schema, the system prompt, the message history — the whole request as the model receives it. The ranked table at the top is your list to work from.
+  </Step>
+
+  <Step title="Switch off whole features with `disable*` flags">
+    Some features bring a whole cluster of tools and instructions with them. A single flag turns the feature off along with everything it carries:
+
+    - `disableBundledSkills` — removes all of Anthropic's bundled skills at once (the `dataviz`, `review`, `init` catalogue), while leaving their slash commands typable.
+    - `disableWorkflows` — removes the multi-agent `Workflow` tool, often the largest single line in the table.
+    - `disableRemoteControl`, `disableClaudeAiConnectors`, `disableArtifact` — turn off remote tunneling, external connectors, and the artifact rendering feature respectively.
+
+    Use one whenever a whole feature isn't earning its place.
+  </Step>
+
+  <Step title="Remove individual tools with `deny` rules">
+    For individual tools, a `permissions.deny` rule with a bare tool name removes that tool's definition from the payload — Claude never sees it:
+
+    ```json
+    {
+      "permissions": {
+        "deny": ["NotebookEdit", "CronCreate"]
+      }
+    }
+    ```
+
+    A bare name (`"NotebookEdit"`) removes the tool entirely. A scoped rule (`"Bash(rm *)"`, `"Skill(dataviz)"`) blocks the matching call but leaves the definition in the payload. To shrink the request, use bare names.
+  </Step>
+
+  <Step title="Apply the full configuration">
+    Here's an example configuration — the flags and deny rules that trim the bloat, ready to drop into `~/.claude/settings.json` (global) or `.claude/settings.json` (project):
+
+    ```json
+    {
+      "permissions": {
+        "deny": [
+          "EnterPlanMode",
+          "ExitPlanMode",
+          "DesignSync",
+          "NotebookEdit",
+          "SendMessage",
+          "PushNotification",
+          "RemoteTrigger",
+          "ReportFindings",
+          "ScheduleWakeup",
+          "AskUserQuestion",
+          "CronCreate",
+          "CronDelete",
+          "CronList"
+        ]
+      },
+      "disableBundledSkills": true,
+      "disableWorkflows": true,
+      "disableRemoteControl": true,
+      "disableClaudeAiConnectors": true,
+      "disableArtifact": true
+    }
+    ```
+
+    Treat it as a menu, not a prescription. The reason to see your own payload first is so you cut what you don't use. If you work in plan mode, keep it. If you write notebooks, keep `NotebookEdit`.
+
+    :::warning
+    Some of what looks like bloat is machinery that background jobs and multi-agent runs rely on — the task tools, `Workflow`, worktree tools. If you use those, keep them.
+    :::
+  </Step>
+
+  <Step title="Re-measure with `/context`">
+    Restart Claude Code so it reloads the settings, and run `/context` again. The tools count and token total should be lower. That difference is the tokens you were sending every turn and now aren't — cheaper requests, and less for the model to read past before it reaches your problem.
+  </Step>
+</Steps>
+
 ## Tips & Tricks
 
 :::tip
@@ -338,3 +437,4 @@ Some areas of your system have hidden complexity. Adding local `CLAUDE.md` files
 - [Claude Code Tutorial Video](https://x.com/marcusyul/status/2054897177034367055?s=20)
 - [32 Tricks to Level Up Claude Code](https://www.youtube.com/watch?v=SkMuVhScLRQ) - Video covering all tips in this section.
 - [32 Claude Code Hacks - Full Writeup](https://www.mejba.me/es/blog/claude-code-32-power-user-hacks) - Detailed breakdown with examples.
+- [Kill The Bloat In Claude Code's System Prompt](https://www.aihero.dev/how-to-kill-the-bloat-in-claude-codes-system-prompt) - Guide to trimming token overhead from tool definitions and system instructions.
