@@ -277,3 +277,7 @@ TypeScript is a strongly typed superset of JavaScript that provides a robust dev
 | **htmx** | ~14KB | Server HTML fragments | Easy | Server-rendered partial updates | Community |
 | **Alpine.js** | ~15KB | Client-side directives | Easy | Lightweight interactivity | Community |
 | **HMPL** | ~7KB | Server fetch templates | Easy | Server-driven UI | Community |
+
+## References
+
+- [Next.js vs Remix vs Astro vs SvelteKit in 2026: The Definitive Framework Decision Guide](https://dev.to/pockit_tools/nextjs-vs-remix-vs-astro-vs-sveltekit-in-2026-the-definitive-framework-decision-guide-lp5)
