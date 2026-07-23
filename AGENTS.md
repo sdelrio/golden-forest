@@ -13,6 +13,51 @@ This document provides guidelines for AI coding agents working on **The Golden F
 - `make check`: Run Docusaurus MDX checker (crucial for verifying MDX syntax).
 - `make test`: Run `unlighthouse` web performance test.
 
+### PR Workflow
+- `task pr:workflow --title "feat(scope): description"`: Automate PR creation workflow.
+  - Steps: MDX check → Create branch → Commit → Push → Create PR → Watch checks
+  - Options:
+    - `ENRUG=true`: Include AI dashboard enrichment step
+    - `BRANCH=name`: Specify custom branch name
+    - `BODY="description"`: PR body text
+    - `NOCHECK=true`: Skip MDX validation
+    - `DRYRUN=true`: Preview commits without executing
+  - Example: `task pr:workflow --title "feat(prompt-library): add new article" --enrich`
+  - Auto-commit mode: Omit `--title` to auto-generate commits from changed files
+
+### Git Commit Messages
+Follow **Conventional Commits** format. Every commit has a **short subject** and optional **long body**.
+
+**Subject line (short)**: `type(scope): description`
+- Max 50 characters
+- Use imperative mood ("add" not "added")
+- No period at end
+
+**Body (long)**: Blank line after subject, then bullet points
+- Each bullet starts with `- ` and describes one change
+- Wrap at 72 characters
+- Explain **what** and **why**, not how
+
+**Examples**:
+```
+feat(prompt-library): add self-learn prompt article
+
+- Add Boris Cherny's self-learning prompt technique
+- Include YouTube video reference
+- Update AI dashboard tools cache
+```
+
+```
+docs(k8s): add dedicated k9s article
+
+- Add new article covering k9s terminal UI for Kubernetes
+- Include installation and configuration steps
+- Add screenshots for key features
+```
+
+**Types**: `feat`, `docs`, `chore`, `fix`, `refactor`, `style`, `test`
+**Scopes**: `prompt-library`, `tools`, `mcps`, `workflows`, `dnd`, `homelab`, `components`, `ai-dashboard`, `chars`, `scripts`, `blog`, `tutorial`
+
 ### Running a "Single Test"
 The project has no unit test framework (Jest/Vitest). To test components:
 1. Create an MDX file in `docs/` or `tutorial/` (e.g., `docs/_test-feature.mdx`).

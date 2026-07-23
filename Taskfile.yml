@@ -169,6 +169,26 @@ tasks:
     cmds:
       - node scripts/enrich-ai-dashboard.mjs --force
 
+  ## --- PR Workflow ---
+
+  pr:workflow:
+    desc: Automate PR workflow (enrich, check, branch, commit, PR, watch)
+    vars:
+      ENRICH:
+        sh: if [ "${ENRICH}" = "true" ]; then echo "--enrich"; fi
+      NOCHECK:
+        sh: if [ "${NOCHECK}" = "true" ]; then echo "--no-check"; fi
+      DRYRUN:
+        sh: if [ "${DRYRUN}" = "true" ]; then echo "--dry-run"; fi
+      BRANCH:
+        sh: if [ -n "${BRANCH}" ]; then echo "--branch ${BRANCH}"; fi
+      TITLE:
+        sh: if [ -n "${TITLE}" ]; then echo "--title \"${TITLE}\""; fi
+      BODY:
+        sh: if [ -n "${BODY}" ]; then echo "--body \"${BODY}\""; fi
+    cmds:
+      - ./scripts/pr-workflow.sh {{.ENRICH}} {{.NOCHECK}} {{.DRYRUN}} {{.BRANCH}} {{.TITLE}} {{.BODY}}
+
   ## --- Verification and Testing ---
   check:
     desc: Run Docusaurus MDX checker
