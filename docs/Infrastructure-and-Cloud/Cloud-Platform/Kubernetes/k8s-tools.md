@@ -2,7 +2,7 @@
 
 ## k9s
 
-A terminal-based UI for managing Kubernetes clusters in real-time with vim-style navigation, built-in metrics, and resource graph traversals. See the full article at [k9s](../../Apps-and-utilities/TUI/k9s).
+A terminal-based UI for managing Kubernetes clusters in real-time with vim-style navigation, built-in metrics, and resource graph traversals. See the full article at [k9s](../../../../Apps-and-utilities/TUI/k9s).
 
 ## Telepresence
 
