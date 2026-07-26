@@ -172,26 +172,6 @@
     "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/everything-claude-code"
   },
   {
-    "id": "opensre",
-    "name": "OpenSRE",
-    "description": "Open-source framework for building AI SRE agents for production incident investigation with 60+ integrations.",
-    "category": "agents",
-    "github": "https://github.com/Tracer-Cloud/opensre",
-    "npm": null,
-    "pip": "opensre",
-    "install": "curl -fsSL https://install.opensre.com | bash",
-    "site": "https://www.opensre.com",
-    "license": "Unknown",
-    "tags": [
-      "sre",
-      "incident-response",
-      "observability",
-      "integrations"
-    ],
-    "supportedBy": [],
-    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/opensre-agents"
-  },
-  {
     "id": "openfang",
     "name": "OpenFang",
     "description": "Production-grade Agent Operating System built in Rust for 24/7 autonomous operations with 7 hands, 16 security layers, 40 channel adapters.",

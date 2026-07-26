@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-26T11:17:44.961Z",
-  "toolCount": 42,
+  "generatedAt": "2026-07-26T11:20:02.086Z",
+  "toolCount": 41,
   "tools": [
     {
       "id": "cve-mcp-server",
@@ -204,31 +204,6 @@
       "githubLanguage": "JavaScript",
       "npmVersion": "2.0.0",
       "npmLastPublished": "2026-06-10T08:16:50.334Z"
-    },
-    {
-      "id": "opensre",
-      "name": "OpenSRE",
-      "description": "Open-source framework for building AI SRE agents for production incident investigation with 60+ integrations.",
-      "category": "agents",
-      "github": "https://github.com/Tracer-Cloud/opensre",
-      "npm": null,
-      "pip": "opensre",
-      "install": "curl -fsSL https://install.opensre.com | bash",
-      "site": "https://www.opensre.com",
-      "license": "Unknown",
-      "tags": [
-        "sre",
-        "incident-response",
-        "observability",
-        "integrations"
-      ],
-      "supportedBy": [],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/opensre-agents",
-      "githubStars": 9227,
-      "githubOpenIssues": 92,
-      "githubArchived": false,
-      "githubLastPush": "2026-07-26T01:12:34Z",
-      "githubLanguage": "Python"
     },
     {
       "id": "openfang",
