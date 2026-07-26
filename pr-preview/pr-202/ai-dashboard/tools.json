@@ -964,7 +964,8 @@
     ],
     "supportedBy": [
       "claude-code",
-      "codex"
+      "codex",
+      "opencode"
     ],
     "docPath": "/docs/Develop-Code/AI-Development/Skills/webwright"
   }

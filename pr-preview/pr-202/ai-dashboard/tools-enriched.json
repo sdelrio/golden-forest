@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T16:57:22.185Z",
+  "generatedAt": "2026-07-26T17:09:01.326Z",
   "toolCount": 42,
   "tools": [
     {
@@ -1112,7 +1112,8 @@
       ],
       "supportedBy": [
         "claude-code",
-        "codex"
+        "codex",
+        "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/webwright"
     }
