@@ -12,6 +12,7 @@ import styles from './AiDashboard.module.css';
 const CATEGORIES = [
   { id: 'all', label: 'All', icon: 'mdi:view-grid' },
   { id: 'agents', label: 'Agents', icon: 'mdi:robot' },
+  { id: 'skills', label: 'Skills', icon: 'mdi:school' },
   { id: 'tools', label: 'Tools', icon: 'mdi:hammer-wrench' },
   { id: 'mcp', label: 'MCP', icon: 'mdi:puzzle' },
   { id: 'models', label: 'Models', icon: 'mdi:brain' },
@@ -83,7 +84,7 @@ function AiDashboardInternal() {
       <div className={styles.header}>
         <div className={styles.headerTop}>
           <div>
-            <h1 className={styles.title}>AI Agent Dashboard</h1>
+            <h1 className={styles.title}>AI Dashboard</h1>
             <p className={styles.subtitle}>
               {tools ? tools.length : '—'} tools, agents, and resources for AI-powered development
             </p>

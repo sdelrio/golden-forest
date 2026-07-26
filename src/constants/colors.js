@@ -3,6 +3,7 @@ export const CATEGORY_COLORS = {
   mcp: '#8b5cf6',
   tools: '#3b82f6',
   agents: '#f97316',
+  skills: '#14b8a6',
   models: '#22c55e',
   workflows: '#ec4899',
   prompts: '#eab308',

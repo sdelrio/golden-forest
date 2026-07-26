@@ -249,7 +249,7 @@ flowchart LR
 ## References
 
 - [OpenSandbox GitHub](https://github.com/alibaba/OpenSandbox)
-- [ClaudeKit Workflow](../Workflows/ClaudeKit-Workflow.md): Spec-driven AI development
-- [Claude 4.6 Prompts](../Prompt-Library/Claude-4.6-Prompts-Anatomy.md): 8-step prompt structure
-- [OpenCode](./opencode.md): AI coding CLI tool
+- [ClaudeKit Workflow](../Develop-Code/AI-Development/Workflows/ClaudeKit-Workflow.md): Spec-driven AI development
+- [Claude 4.6 Prompts](../Develop-Code/AI-Development/Prompt-Library/Claude-4.6-Prompts-Anatomy.md): 8-step prompt structure
+- [OpenCode](../Develop-Code/AI-Development/Skills-and-Agents/Agents/opencode.md): AI coding CLI tool
 

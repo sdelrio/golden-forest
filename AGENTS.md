@@ -25,6 +25,19 @@ This document provides guidelines for AI coding agents working on **The Golden F
   - Example: `task pr:workflow --title "feat(prompt-library): add new article" --enrich`
   - Auto-commit mode: Omit `--title` to auto-generate commits from changed files
 
+### Manual PR Workflow (when `task pr:workflow` is not used)
+1. `git checkout -b feat/<scope>` from master
+2. Stage and commit: `git add -A && git commit -m "feat(scope): desc\n\n- bullet points"`
+3. Push: `git push -u origin feat/<scope>`
+4. Create PR: `gh pr create --title "..." --body "..."`
+5. Watch checks: `gh pr checks <number> --watch`
+6. If broken links fail (common with Card hrefs):
+   - Card `<Card href>` resolves from **page URL** (with trailing slash), not file system
+   - Use absolute path `/docs/...` for cross-section Card hrefs (e.g., linking from `comparatives/` to `Security/`)
+   - Markdown links `[text](path.md)` resolve from **file system** — use relative `../` paths
+   - Amend: `git add -A && git commit --amend --no-edit && git push --force-with-lease`
+7. Wait for user confirmation before `gh pr merge`
+
 ### Git Commit Messages
 Follow **Conventional Commits** format. Every commit has a **short subject** and optional **long body**.
 

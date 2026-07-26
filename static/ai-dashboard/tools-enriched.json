@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-07-23T17:54:19.821Z",
-  "toolCount": 42,
+  "toolCount": 40,
   "tools": [
     {
       "id": "cve-mcp-server",
@@ -56,7 +56,7 @@
         "skills-sh",
         "agency-agents"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/claude-code",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/claude-code",
       "npmVersion": "2.1.218",
       "npmLastPublished": "2026-07-22T19:55:32.144Z",
       "healthScore": 45
@@ -83,7 +83,7 @@
         "omo",
         "skills-sh"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/opencode",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/opencode",
       "githubStars": 188965,
       "githubOpenIssues": 3693,
       "githubArchived": false,
@@ -94,8 +94,8 @@
     {
       "id": "skills-sh",
       "name": "Skills.sh",
-      "description": "Open-source decentralized registry for AI agent capabilities — a package manager for AI intelligence.",
-      "category": "agents",
+      "description": "Open-source decentralized registry for AI agent capabilities \u2014 a package manager for AI intelligence.",
+      "category": "skills",
       "github": "https://github.com/sdelrio/skills",
       "npm": "skills.sh",
       "pip": null,
@@ -116,7 +116,7 @@
         "windsurf",
         "cline"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/skills-sh",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/skills-sh",
       "healthScore": 20
     },
     {
@@ -140,7 +140,7 @@
         "claude-code",
         "opencode"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/oh-my-openagent",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/oh-my-openagent",
       "npmVersion": "4.19.1",
       "npmLastPublished": "2026-07-22T13:07:46.361Z",
       "githubStars": 66459,
@@ -154,7 +154,7 @@
       "id": "obsidian-skills",
       "name": "Obsidian Skills & LLM Wiki",
       "description": "Guide for using Obsidian as an AI-maintained knowledge base with Karpathy's LLM Wiki pattern.",
-      "category": "agents",
+      "category": "skills",
       "github": "https://github.com/kepano/obsidian-skills",
       "npm": null,
       "pip": null,
@@ -170,7 +170,7 @@
       "supportedBy": [
         "claude-code"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/obsidian-skills-setup",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/obsidian-skills-setup",
       "githubStars": 43105,
       "githubOpenIssues": 23,
       "githubArchived": false,
@@ -202,7 +202,7 @@
         "copilot",
         "gemini"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/everything-claude-code",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/everything-claude-code",
       "npmVersion": "2.0.0",
       "npmLastPublished": "2026-06-10T08:16:50.334Z",
       "githubStars": 232497,
@@ -230,7 +230,7 @@
         "integrations"
       ],
       "supportedBy": [],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/opensre-agents",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/opensre-agents",
       "githubStars": 9036,
       "githubOpenIssues": 90,
       "githubArchived": false,
@@ -257,7 +257,7 @@
         "security"
       ],
       "supportedBy": [],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/openfang",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/openfang",
       "githubStars": 18045,
       "githubOpenIssues": 72,
       "githubArchived": false,
@@ -266,38 +266,10 @@
       "healthScore": 75
     },
     {
-      "id": "opensandbox",
-      "name": "OpenSandbox",
-      "description": "Secure execution environment by Alibaba for running untrusted AI agent code with Docker/K8s runtime and network isolation.",
-      "category": "security",
-      "github": "https://github.com/alibaba/OpenSandbox",
-      "npm": null,
-      "pip": null,
-      "install": "curl -fsSL https://get.opensandbox.io | bash",
-      "site": null,
-      "license": "Apache-2.0",
-      "tags": [
-        "sandbox",
-        "security",
-        "isolation",
-        "untrusted-code"
-      ],
-      "supportedBy": [
-        "openfang"
-      ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/opensandbox",
-      "githubStars": 12141,
-      "githubOpenIssues": 70,
-      "githubArchived": false,
-      "githubLastPush": "2026-07-23T04:20:43Z",
-      "githubLanguage": "Python",
-      "healthScore": 75
-    },
-    {
       "id": "cybersecurity-skills",
       "name": "Cybersecurity Skills",
       "description": "734+ structured cybersecurity skills across 29 domains following the agentskills.io standard, mapped to MITRE ATT&CK.",
-      "category": "agents",
+      "category": "skills",
       "github": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
       "npm": null,
       "pip": null,
@@ -313,66 +285,13 @@
       "supportedBy": [
         "claude-code"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/cybersecurity-skills",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/cybersecurity-skills",
       "githubStars": 26419,
       "githubOpenIssues": 15,
       "githubArchived": false,
       "githubLastPush": "2026-06-26T14:37:50Z",
       "githubLanguage": "Python",
       "healthScore": 75
-    },
-    {
-      "id": "html-anything",
-      "name": "HTML Anything",
-      "description": "Agentic HTML editor that converts data into ship-ready, design-grade HTML with 75 skills across 9 surface modes.",
-      "category": "tools",
-      "github": "https://github.com/nexu-io/html-anything",
-      "npm": null,
-      "pip": null,
-      "install": null,
-      "site": null,
-      "license": "Unknown",
-      "tags": [
-        "html",
-        "design",
-        "generative-ui",
-        "75-skills"
-      ],
-      "supportedBy": [
-        "claude-code",
-        "opencode",
-        "cursor",
-        "copilot",
-        "gemini"
-      ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/html-anything",
-      "githubStars": 7921,
-      "githubOpenIssues": 32,
-      "githubArchived": false,
-      "githubLastPush": "2026-07-14T03:20:01Z",
-      "githubLanguage": "HTML",
-      "healthScore": 74
-    },
-    {
-      "id": "agent-security",
-      "name": "Agent Security Guide",
-      "description": "Practical layered defense model (5 layers) for preventing AI agents from leaking secrets, with CVE analysis.",
-      "category": "security",
-      "github": null,
-      "npm": null,
-      "pip": null,
-      "install": null,
-      "site": null,
-      "license": "N/A",
-      "tags": [
-        "security",
-        "defense",
-        "secrets",
-        "cve"
-      ],
-      "supportedBy": [],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/agent-security",
-      "healthScore": 20
     },
     {
       "id": "agency-agents",
@@ -397,7 +316,7 @@
         "gemini",
         "cursor"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/ai-agency",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/ai-agency",
       "githubStars": 136133,
       "githubOpenIssues": 49,
       "githubArchived": false,
@@ -639,7 +558,7 @@
     {
       "id": "codegraph",
       "name": "CodeGraph",
-      "description": "Pre-indexed semantic code graph for AI agents — reduces tool calls by ~92%, speeds up exploration by ~71%.",
+      "description": "Pre-indexed semantic code graph for AI agents \u2014 reduces tool calls by ~92%, speeds up exploration by ~71%.",
       "category": "tools",
       "github": "https://github.com/colbymchenry/codegraph",
       "npm": "@colbymchenry/codegraph",
@@ -728,7 +647,7 @@
     {
       "id": "toon",
       "name": "TOON",
-      "description": "Token-Oriented Object Notation — compact data format with 70-75% less overhead than JSON for LLM consumption.",
+      "description": "Token-Oriented Object Notation \u2014 compact data format with 70-75% less overhead than JSON for LLM consumption.",
       "category": "tools",
       "github": null,
       "npm": null,
@@ -748,7 +667,7 @@
     {
       "id": "agentmemory",
       "name": "AgentMemory",
-      "description": "Persistent memory runtime for AI coding agents — 95.2% retrieval accuracy, 92% fewer tokens, 53 MCP tools, 121 REST endpoints.",
+      "description": "Persistent memory runtime for AI coding agents \u2014 95.2% retrieval accuracy, 92% fewer tokens, 53 MCP tools, 121 REST endpoints.",
       "category": "tools",
       "github": "https://github.com/rohitg00/agentmemory",
       "npm": "@agentmemory/agentmemory",
@@ -1006,7 +925,7 @@
     {
       "id": "autonomous-agents",
       "name": "Autonomous Agents",
-      "description": "AI agents operating in the background on schedules — deep dive into OpenFang and OpenSandbox.",
+      "description": "AI agents operating in the background on schedules \u2014 deep dive into OpenFang and OpenSandbox.",
       "category": "comparatives",
       "github": null,
       "npm": null,
@@ -1056,7 +975,7 @@
     {
       "id": "ponytail",
       "name": "Ponytail",
-      "description": "Agent plugin that teaches your AI coding agent to write the least code that works — cutting 54% of code, 22% of tokens, and 20% of cost while keeping safety intact.",
+      "description": "Agent plugin that teaches your AI coding agent to write the least code that works \u2014 cutting 54% of code, 22% of tokens, and 20% of cost while keeping safety intact.",
       "category": "tools",
       "github": "https://github.com/DietrichGebert/ponytail",
       "npm": "@dietrichgebert/ponytail",
@@ -1090,7 +1009,7 @@
       "id": "skillopt",
       "name": "SkillOpt",
       "description": "Microsoft's text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts.",
-      "category": "agents",
+      "category": "skills",
       "github": "https://github.com/microsoft/SkillOpt",
       "npm": null,
       "pip": "skillopt",
@@ -1108,7 +1027,7 @@
         "codex",
         "copilot"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/skillopt",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/skillopt",
       "githubStars": 14714,
       "githubOpenIssues": 16,
       "githubArchived": false,
@@ -1120,7 +1039,7 @@
       "id": "remotion-skills",
       "name": "Remotion Skills",
       "description": "React-based video framework with AI agent skills for creating programmatic videos from chat prompts. 10 specialized skills for animation, rendering, and project scaffolding.",
-      "category": "agents",
+      "category": "skills",
       "github": "https://github.com/remotion-dev/remotion",
       "npm": "remotion",
       "pip": null,
@@ -1143,7 +1062,7 @@
         "windsurf",
         "cline"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/remotion-skills",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/remotion-skills",
       "npmVersion": "4.0.498",
       "npmLastPublished": "2026-07-23T15:28:13.056Z",
       "githubStars": 54043,
@@ -1152,6 +1071,29 @@
       "githubLastPush": "2026-07-23T16:20:33Z",
       "githubLanguage": "TypeScript",
       "healthScore": 100
+    },
+    {
+      "id": "karpathy-skills",
+      "name": "Karpathy's LLM Coding Guidelines",
+      "description": "Comprehensive guide to the CLAUDE.md behavioral guidelines recommended by Andrej Karpathy to reduce common LLM coding mistakes.",
+      "category": "skills",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": null,
+      "license": "N/A",
+      "tags": [
+        "guidelines",
+        "claude-md",
+        "best-practices",
+        "karpathy"
+      ],
+      "supportedBy": [
+        "claude-code"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/karpathy-skills",
+      "healthScore": 20
     }
   ]
 }

@@ -75,5 +75,5 @@ For AI developers seeking to deploy lightweight headless browsers, **Obscura** (
 - [Obscura Headless Browser](../Tools/obscura.md) — Rust-based lightweight browser with advanced stealth, SSRF shielding, and CDP support.
 - [Lightpanda Headless Browser](../Tools/lightpanda.md) — Zig-based high-concurrency browser with semantic DOM tree extraction.
 - [RTK (Rust Token Killer)](../Tools/rtk.md) — Token optimization proxy for terminal commands.
-- [Claude Code](../Skills-and-Agents/claude-code.md) — Anthropic's agentic CLI terminal tool.
-- [OpenSandbox](../Skills-and-Agents/opensandbox.md) — Secure execution sandboxes for AI agents.
+- [Claude Code](../Skills-and-Agents/Agents/claude-code.md) — Anthropic's agentic CLI terminal tool.
+- [OpenSandbox](../../../Security/opensandbox.md) — Secure execution sandboxes for AI agents.
