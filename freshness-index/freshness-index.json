@@ -18,12 +18,12 @@
     "sourceFile": "docs/Develop-Code/AI-Development/Tools/agentmemory.md"
   },
   {
-    "id": "Develop-Code/AI-Development/Skills-and-Agents/claude-code",
+    "id": "Develop-Code/AI-Development/Agents/claude-code",
     "title": "Claude Code",
-    "permalink": "/docs/Develop-Code/AI-Development/Skills-and-Agents/claude-code",
+    "permalink": "/docs/Develop-Code/AI-Development/Agents/claude-code",
     "lastUpdated": "2026-07-05",
     "description": "Integration guide and project architecture for Anthropic's Claude Code CLI tool.",
     "tags": [],
-    "sourceFile": "docs/Develop-Code/AI-Development/Skills-and-Agents/claude-code.md"
+    "sourceFile": "docs/Develop-Code/AI-Development/Agents/claude-code.md"
   }
 ]
