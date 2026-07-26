@@ -251,6 +251,12 @@ function isCacheFresh(existing) {
   return false;
 }
 
+function isCacheStale(existing) {
+  if (FORCE || !existing) return true;
+  const age = Date.now() - new Date(existing.generatedAt).getTime();
+  return age >= CACHE_MAX_AGE_MS;
+}
+
 // Build a lookup from previously enriched data so we can merge stale values
 // back for tools where the new fetch failed or was skipped due to rate limits.
 function buildPreviousLookup(existing) {
@@ -281,18 +287,46 @@ function mergeWithPrevious(entry, prev) {
 
 async function main() {
   const existing = readExisting();
-
-  if (isCacheFresh(existing)) {
-    writeFileSync(OUTPUT, JSON.stringify(existing, null, 2));
-    console.log(`Wrote ${existing.toolCount} enriched tools from cache to ${OUTPUT}`);
-    return;
-  }
-
-  const prevLookup = buildPreviousLookup(existing);
+  const cacheFresh = isCacheFresh(existing);
 
   console.log('Reading tools catalog...');
   const tools = JSON.parse(readFileSync(INPUT, 'utf8'));
   console.log(`Found ${tools.length} tools to enrich.\n`);
+
+  if (cacheFresh) {
+    // Cache is fresh: skip API calls but still update with new entries from tools.json
+    const prevLookup = buildPreviousLookup(existing);
+    
+    // Check for new tools not in the cache
+    const newTools = tools.filter(tool => !prevLookup[tool.id]);
+    if (newTools.length > 0) {
+      console.log(`Found ${newTools.length} new tools to add from tools.json.`);
+    }
+    
+    // Merge: keep enriched data for existing tools, add new tools as-is
+    const merged = tools.map((tool) => {
+      const prev = prevLookup[tool.id];
+      if (prev) {
+        // Existing tool: merge with previous enriched data
+        return mergeWithPrevious({ ...tool }, prev);
+      }
+      // New tool: add with basic info
+      return { ...tool };
+    });
+
+    const output = {
+      generatedAt: new Date().toISOString(),
+      toolCount: merged.length,
+      tools: merged,
+    };
+
+    writeFileSync(OUTPUT, JSON.stringify(output, null, 2));
+    console.log(`Wrote ${merged.length} enriched tools from cache to ${OUTPUT}`);
+    return;
+  }
+
+  // Cache is stale: fetch fresh data from APIs
+  const prevLookup = buildPreviousLookup(existing);
 
   const enriched = await enrichTools(tools);
 
