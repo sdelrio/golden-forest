@@ -938,5 +938,30 @@
       "copilot"
     ],
     "docPath": "/docs/Develop-Code/AI-Development/Workflows/matpocock"
+  },
+  {
+    "id": "opensre",
+    "name": "OpenSRE",
+    "description": "Open-source framework for building AI SRE agents that investigate and resolve production incidents across your existing observability stack.",
+    "category": "agents",
+    "github": "https://github.com/Tracer-Cloud/opensre",
+    "npm": null,
+    "pip": "opensre",
+    "install": "pip install opensre",
+    "site": "https://www.opensre.com",
+    "license": "MIT",
+    "tags": [
+      "sre",
+      "incident-response",
+      "root-cause-analysis",
+      "observability",
+      "ai-agents"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "opencode",
+      "cursor"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Workflows/opensre"
   }
 ]
