@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T11:20:02.086Z",
+  "generatedAt": "2026-07-26T11:21:23.242Z",
   "toolCount": 41,
   "tools": [
     {
@@ -1066,7 +1066,7 @@
       "id": "opensre",
       "name": "OpenSRE",
       "description": "Open-source framework for building AI SRE agents that investigate and resolve production incidents across your existing observability stack.",
-      "category": "agents",
+      "category": "workflows",
       "github": "https://github.com/Tracer-Cloud/opensre",
       "npm": null,
       "pip": "opensre",
