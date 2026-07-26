@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-26T11:50:35.361Z",
-  "toolCount": 41,
+  "generatedAt": "2026-07-26T17:09:01.326Z",
+  "toolCount": 42,
   "tools": [
     {
       "id": "cve-mcp-server",
@@ -1091,6 +1091,31 @@
       "githubArchived": false,
       "githubLastPush": "2026-07-26T01:12:34Z",
       "githubLanguage": "Python"
+    },
+    {
+      "id": "webwright",
+      "name": "Webwright",
+      "description": "Microsoft open-source browser agent framework that turns coding models into state-of-the-art browser automation agents using Playwright.",
+      "category": "skills",
+      "github": "https://github.com/microsoft/Webwright",
+      "npm": null,
+      "pip": "webwright",
+      "install": "pip install -e .",
+      "site": "https://microsoft.github.io/Webwright/",
+      "license": "MIT",
+      "tags": [
+        "browser-automation",
+        "playwright",
+        "ai-agents",
+        "web-scraping",
+        "llm"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "codex",
+        "opencode"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/webwright"
     }
   ]
 }
