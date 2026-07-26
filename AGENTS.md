@@ -212,3 +212,20 @@ Skipping steps (especially branch, test, commit, push, PR) violates the workflow
 - **MDX Character Escaping (Critical)**: The `<` and `>` characters are reserved for JSX/MDX tags. When writing regular text that contains these characters (e.g., `<200ms`, `Array<string>`, `<div>`), you **MUST** escape them as HTML entities only if they are **outside** markdown code blocks (` ` or ` ``` `):
   - `<` → `&lt;`
   - `>` → `&gt;`
+
+## Lessons Learned
+
+### Always update AI Dashboard when adding articles under `docs/Develop-Code/AI-Development/`
+- **When**: 2026-07-26 — added `opensre.md` under `docs/Develop-Code/AI-Development/Workflows/` without updating the AI Dashboard.
+- **Why it matters**: `static/ai-dashboard/tools.json` is the source of truth for the AI Dashboard. Articles under `docs/Develop-Code/AI-Development/` **must** also be added there, then run `task ai-dashboard:enrich` to enrich the entry.
+- **Rule**: Every new article in `docs/Develop-Code/AI-Development/` → add entry to `tools.json` → run `task ai-dashboard:enrich`.
+
+### Verify final file location after write-article
+- **When**: 2026-07-26 — `write-article` task created `opensre-agents.md` in `Skills-and-Agents/Agents/` instead of the intended `Workflows/` folder.
+- **Why it matters**: The task may place files in the wrong subdirectory. Always verify the file ended up where the user requested, and remove any stray files.
+- **Rule**: After `write-article`, check `git status` or `rtk find` to confirm the file is in the correct path. Delete any incorrectly placed files.
+
+### Always run `task build` after write-article to catch missing imports
+- **When**: 2026-07-26 — `opensre.md` used `<Tabs>/<TabItem>` without importing them; `task check` passed but `task build` failed at SSG.
+- **Why it matters**: `task check` only validates MDX syntax — it does not verify that all components used in JSX are actually imported. `task build` (SSG) catches these at render time.
+- **Rule**: After writing any article, always run `task build` as a final validation step. If it fails, look for missing component imports (`Tabs`, `TabItem`, etc.).
