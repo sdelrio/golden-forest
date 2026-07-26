@@ -88,6 +88,10 @@ html[data-theme='dark'] :root {
   --ifm-heading-color: var(--ifm-heading-color-dark);
 }
 
+html[data-theme='dark'] img[alt="D&D Dragon with Dice"] {
+  content: url('/img/dnd-dragon-dice-dark.svg');
+}
+
 [data-theme='dark'] {
   --docusaurus-highlighted-code-line-bg: #3a3a3a;
   --bg-table-row-odd: #242526;
