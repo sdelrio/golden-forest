@@ -397,7 +397,7 @@ Symlink `.agents/skills` across tools to share security rules. Multiple agents i
 - [Claude Code Issue #44868](https://github.com/anthropics/claude-code/issues/44868) — Documented .env leak despite CLAUDE.md prohibitions.
 - [Strongly.AI: Stop Leaking Secrets to Claude Code](https://www.strongly.ai/blog/stop-leaking-secrets-claude-code.html) — Practical sandboxing guide with official Anthropic references.
 - [agent-zoo](https://pypi.org/project/agent-zoo/) — Docker-based security harness for AI coding agents with mitmproxy payload inspection.
-- [OpenCode](../Develop-Code/AI-Development/Skills-and-Agents/Agents/opencode.md) — Terminal-first AI coding agent with native security modes.
-- [Claude Code](../Develop-Code/AI-Development/Skills-and-Agents/Agents/claude-code.md) — Anthropic's agentic CLI with sandbox and hooks.
+- [OpenCode](../Develop-Code/AI-Development/Agents/opencode.md) — Terminal-first AI coding agent with native security modes.
+- [Claude Code](../Develop-Code/AI-Development/Agents/claude-code.md) — Anthropic's agentic CLI with sandbox and hooks.
 - [OpenSandbox](./opensandbox.md) — Secure infrastructure for running AI agents in isolated environments.
 - [The .env Setup That Keeps Claude Code From Leaking Your Secrets](https://x.com/zodchiii/status/2049779422291460576?s=52&t=pjk5HiBQ0P48URhTc0cBAA)

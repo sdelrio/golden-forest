@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T11:21:23.242Z",
+  "generatedAt": "2026-07-26T11:50:35.361Z",
   "toolCount": 41,
   "tools": [
     {
@@ -55,7 +55,7 @@
         "skills-sh",
         "agency-agents"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/claude-code",
+      "docPath": "/docs/Develop-Code/AI-Development/Agents/claude-code",
       "npmVersion": "2.1.220",
       "npmLastPublished": "2026-07-24T23:11:21.821Z"
     },
@@ -81,7 +81,7 @@
         "omo",
         "skills-sh"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/opencode",
+      "docPath": "/docs/Develop-Code/AI-Development/Agents/opencode",
       "githubStars": 189776,
       "githubOpenIssues": 3690,
       "githubArchived": false,
@@ -113,7 +113,7 @@
         "windsurf",
         "cline"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/skills-sh"
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/skills-sh"
     },
     {
       "id": "oh-my-openagent",
@@ -136,7 +136,7 @@
         "claude-code",
         "opencode"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/oh-my-openagent",
+      "docPath": "/docs/Develop-Code/AI-Development/Agents/oh-my-openagent",
       "githubStars": 66607,
       "githubOpenIssues": 425,
       "githubArchived": false,
@@ -165,7 +165,7 @@
       "supportedBy": [
         "claude-code"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/obsidian-skills-setup",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/obsidian-skills-setup",
       "githubStars": 43319,
       "githubOpenIssues": 25,
       "githubArchived": false,
@@ -196,7 +196,7 @@
         "copilot",
         "gemini"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/everything-claude-code",
+      "docPath": "/docs/Develop-Code/AI-Development/Agents/everything-claude-code",
       "githubStars": 233472,
       "githubOpenIssues": 22,
       "githubArchived": false,
@@ -224,7 +224,7 @@
         "security"
       ],
       "supportedBy": [],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/openfang",
+      "docPath": "/docs/Develop-Code/AI-Development/Agents/openfang",
       "githubStars": 18061,
       "githubOpenIssues": 72,
       "githubArchived": false,
@@ -251,7 +251,7 @@
       "supportedBy": [
         "claude-code"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/cybersecurity-skills",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/cybersecurity-skills",
       "githubStars": 26598,
       "githubOpenIssues": 15,
       "githubArchived": false,
@@ -281,7 +281,7 @@
         "gemini",
         "cursor"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/ai-agency",
+      "docPath": "/docs/Develop-Code/AI-Development/Agents/ai-agency",
       "githubStars": 136748,
       "githubOpenIssues": 49,
       "githubArchived": false,
@@ -965,7 +965,7 @@
         "codex",
         "copilot"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/skillopt",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/skillopt",
       "githubStars": 15069,
       "githubOpenIssues": 17,
       "githubArchived": false,
@@ -999,7 +999,7 @@
         "windsurf",
         "cline"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/remotion-skills",
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/remotion-skills",
       "githubStars": 54321,
       "githubOpenIssues": 189,
       "githubArchived": false,
@@ -1028,7 +1028,7 @@
       "supportedBy": [
         "claude-code"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/karpathy-skills"
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/karpathy-skills"
     },
     {
       "id": "mattpocock-skills",

@@ -375,5 +375,5 @@ openfang migrate --from openclaw --dry-run
 
 - [OpenFang Website](https://openfang.sh)
 - [GitHub Repository](https://github.com/RightNow-AI/openfang)
-- [ClaudeKit Workflow](../../Workflows/ClaudeKit-Workflow.md): Spec-driven AI development.
-- [Claude 4.6 Prompts](../../Prompt-Library/Claude-4.6-Prompts-Anatomy.md): 8-step prompt structure.
+- [ClaudeKit Workflow](../Workflows/ClaudeKit-Workflow.md): Spec-driven AI development.
+- [Claude 4.6 Prompts](../Prompt-Library/Claude-4.6-Prompts-Anatomy.md): 8-step prompt structure.

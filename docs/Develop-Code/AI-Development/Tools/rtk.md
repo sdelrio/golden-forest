@@ -117,6 +117,6 @@ RTK includes built-in analytics to prove the gains and visualize avoided context
 
 - [RTK Official Site](https://www.rtk-ai.app) — Documentation and showcase.
 - [GitHub Repository](https://github.com/rtk-ai/rtk) — Source code and issues.
-- [OpenCode CLI](../Skills-and-Agents/Agents/opencode.md) — Terminal-first AI agent with native RTK support.
-- [Claude Code](../Skills-and-Agents/Agents/claude-code.md) — Anthropic's agentic CLI tool.
+- [OpenCode CLI](../Agents/opencode.md) — Terminal-first AI agent with native RTK support.
+- [Claude Code](../Agents/claude-code.md) — Anthropic's agentic CLI tool.
 

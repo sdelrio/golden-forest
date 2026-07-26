@@ -110,10 +110,10 @@ ln -s "$(pwd)/.agents/skills" .opencode/skills
 ## Related Tools
 
 <CardGroup cols={2}>
-  <Card title="Claude Code" icon="mdi:console" href="../../Skills-and-Agents/Agents/claude-code">
+  <Card title="Claude Code" icon="mdi:console" href="../../Agents/claude-code">
     Anthropic's terminal-first AI coding assistant with git awareness.
   </Card>
-  <Card title="OpenCode" icon="mdi:code-braces" href="../../Skills-and-Agents/Agents/opencode">
+  <Card title="OpenCode" icon="mdi:code-braces" href="../../Agents/opencode">
     Provider-agnostic AI coding CLI with 75+ models and LSP integration.
   </Card>
 </CardGroup>
