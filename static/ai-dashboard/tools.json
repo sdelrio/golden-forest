@@ -47,7 +47,7 @@
       "skills-sh",
       "agency-agents"
     ],
-    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/claude-code"
+    "docPath": "/docs/Develop-Code/AI-Development/Agents/claude-code"
   },
   {
     "id": "opencode",
@@ -71,7 +71,7 @@
       "omo",
       "skills-sh"
     ],
-    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/opencode"
+    "docPath": "/docs/Develop-Code/AI-Development/Agents/opencode"
   },
   {
     "id": "skills-sh",
@@ -98,7 +98,7 @@
       "windsurf",
       "cline"
     ],
-    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/skills-sh"
+    "docPath": "/docs/Develop-Code/AI-Development/Skills/skills-sh"
   },
   {
     "id": "oh-my-openagent",
@@ -121,7 +121,7 @@
       "claude-code",
       "opencode"
     ],
-    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/oh-my-openagent"
+    "docPath": "/docs/Develop-Code/AI-Development/Agents/oh-my-openagent"
   },
   {
     "id": "obsidian-skills",
@@ -143,7 +143,7 @@
     "supportedBy": [
       "claude-code"
     ],
-    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/obsidian-skills-setup"
+    "docPath": "/docs/Develop-Code/AI-Development/Skills/obsidian-skills-setup"
   },
   {
     "id": "everything-claude-code",
@@ -169,7 +169,7 @@
       "copilot",
       "gemini"
     ],
-    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/everything-claude-code"
+    "docPath": "/docs/Develop-Code/AI-Development/Agents/everything-claude-code"
   },
   {
     "id": "opensre",
@@ -210,7 +210,7 @@
       "security"
     ],
     "supportedBy": [],
-    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/openfang"
+    "docPath": "/docs/Develop-Code/AI-Development/Agents/openfang"
   },
   {
     "id": "cybersecurity-skills",
@@ -232,7 +232,7 @@
     "supportedBy": [
       "claude-code"
     ],
-    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/cybersecurity-skills"
+    "docPath": "/docs/Develop-Code/AI-Development/Skills/cybersecurity-skills"
   },
   {
     "id": "agency-agents",
@@ -257,7 +257,7 @@
       "gemini",
       "cursor"
     ],
-    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Agents/ai-agency"
+    "docPath": "/docs/Develop-Code/AI-Development/Agents/ai-agency"
   },
   {
     "id": "mac-code",
@@ -859,7 +859,7 @@
       "codex",
       "copilot"
     ],
-    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/skillopt"
+    "docPath": "/docs/Develop-Code/AI-Development/Skills/skillopt"
   },
   {
     "id": "remotion-skills",
@@ -888,7 +888,7 @@
       "windsurf",
       "cline"
     ],
-    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/remotion-skills"
+    "docPath": "/docs/Develop-Code/AI-Development/Skills/remotion-skills"
   },
   {
     "id": "karpathy-skills",
@@ -910,7 +910,7 @@
     "supportedBy": [
       "claude-code"
     ],
-    "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/karpathy-skills"
+    "docPath": "/docs/Develop-Code/AI-Development/Skills/karpathy-skills"
   },
   {
     "id": "mattpocock-skills",

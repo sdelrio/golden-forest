@@ -98,7 +98,7 @@ flowchart LR
 ## Related Tools
 
 <CardGroup cols={2}>
-  <Card title="OpenFang" icon="mdi:robot" href="../../Skills-and-Agents/Agents/openfang">
+  <Card title="OpenFang" icon="mdi:robot" href="../../Agents/openfang">
     Production-grade Agent OS in Rust with autonomous "Hands" for 24/7 operation.
   </Card>
   <Card title="OpenSandbox" icon="mdi:shield-check" href="/docs/Security/opensandbox">

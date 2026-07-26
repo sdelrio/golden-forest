@@ -428,9 +428,9 @@ Drops of tens of thousands of tokens per turn are common after cleanup. The six 
 
 ## References
 
-- [ClaudeKit Workflow](../../Workflows/ClaudeKit-Workflow.md) - Spec-driven AI development methodology.
+- [ClaudeKit Workflow](../Workflows/ClaudeKit-Workflow.md) - Spec-driven AI development methodology.
 - [OpenCode](./opencode.md) - A structured AI coding CLI with plugin support.
-- [OpenSandbox](../../../../Security/opensandbox.md) - Secure infrastructure for running AI agents.
+- [OpenSandbox](../../../Security/opensandbox.md) - Secure infrastructure for running AI agents.
 - [Model Context Protocol](https://modelcontextprotocol.io) - Official MCP site.
 - [Anatomy of the .claude/ folder](https://x.com/akshay_pachaar/status/2035341800739877091) - Guide to commands and skills.
 - [Claude Code Best Practices](https://github.com/shanraisshan/claude-code-best-practice) - Community collection of tips.
