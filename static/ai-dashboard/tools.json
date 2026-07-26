@@ -943,5 +943,30 @@
       "cursor"
     ],
     "docPath": "/docs/Develop-Code/AI-Development/Workflows/opensre"
+  },
+  {
+    "id": "webwright",
+    "name": "Webwright",
+    "description": "Microsoft open-source browser agent framework that turns coding models into state-of-the-art browser automation agents using Playwright.",
+    "category": "skills",
+    "github": "https://github.com/microsoft/Webwright",
+    "npm": null,
+    "pip": "webwright",
+    "install": "pip install -e .",
+    "site": "https://microsoft.github.io/Webwright/",
+    "license": "MIT",
+    "tags": [
+      "browser-automation",
+      "playwright",
+      "ai-agents",
+      "web-scraping",
+      "llm"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "codex",
+      "opencode"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Skills/webwright"
   }
 ]
