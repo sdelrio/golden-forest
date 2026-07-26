@@ -95,7 +95,7 @@ Keep only what an agent **cannot infer from the code**:
 
 ## Constraints
 - Never modify `src/generated/` — these files are auto-generated
-- `make check` must pass before any commit
+- `task check` must pass before any commit
 
 ## Non-obvious Setup
 - Requires env var `FOO_API_KEY` (see `.env.example`)

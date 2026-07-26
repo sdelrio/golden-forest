@@ -911,5 +911,32 @@
       "claude-code"
     ],
     "docPath": "/docs/Develop-Code/AI-Development/Skills-and-Agents/Skills/karpathy-skills"
+  },
+  {
+    "id": "mattpocock-skills",
+    "name": "Matt Pocock Skills",
+    "description": "Composable AI coding workflow with grilling sessions, domain modeling, TDD, and architecture health checks. 189k+ GitHub stars.",
+    "category": "workflows",
+    "github": "https://github.com/mattpocock/skills",
+    "npm": null,
+    "pip": null,
+    "install": "npx skills@latest add mattpocock/skills",
+    "site": "https://skills.sh/mattpocock/skills",
+    "license": "MIT",
+    "tags": [
+      "workflow",
+      "skills",
+      "tdd",
+      "domain-driven-design",
+      "grilling",
+      "architecture"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "opencode",
+      "cursor",
+      "copilot"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Workflows/matpocock"
   }
 ]

@@ -6,7 +6,7 @@ AGENTS.md — read it before making any code changes.
 ## Project Stack
 - Docusaurus 3.x, React 19, MDX, CSS Modules (no TypeScript)
 - No test framework — verify with `yarn start` + manual check
-- `make check` validates MDX syntax
+- `task check` validates MDX syntax
 
 ## Key Conventions
 - Function components only (React 19 hooks)

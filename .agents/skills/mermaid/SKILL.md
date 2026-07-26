@@ -339,7 +339,7 @@ When this skill is invoked:
 2. **Check existing patterns** — look at neighboring files for diagram conventions already in use.
 3. **Write the diagram** — use the correct keyword (`flowchart TB`, `treeView-beta`, etc.) and follow the syntax patterns above.
 4. **Apply window styling** — verify `custom.css` contains the `.terminal-window` styles. If not, add them.
-5. **Verify** — run `make check` for MDX syntax. For visual verification, suggest `yarn start` and navigating to the page.
+5. **Verify** — run `task check` for MDX syntax. For visual verification, suggest `yarn start` and navigating to the page.
 
 ## References
 
