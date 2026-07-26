@@ -366,7 +366,7 @@ openfang migrate --from openclaw --dry-run
   <Card title="OpenCode" icon="mdi:code-braces" href="opencode">
     High-performance AI coding CLI tool for terminal-based development.
   </Card>
-  <Card title="OpenSandbox" icon="mdi:box-cutter" href="opensandbox">
+  <Card title="OpenSandbox" icon="mdi:box-cutter" href="/docs/Security/opensandbox">
     Production-grade agent sandbox for secure tool execution.
   </Card>
 </CardGroup>
@@ -375,5 +375,5 @@ openfang migrate --from openclaw --dry-run
 
 - [OpenFang Website](https://openfang.sh)
 - [GitHub Repository](https://github.com/RightNow-AI/openfang)
-- [ClaudeKit Workflow](../Workflows/ClaudeKit-Workflow.md): Spec-driven AI development.
-- [Claude 4.6 Prompts](../Prompt-Library/Claude-4.6-Prompts-Anatomy.md): 8-step prompt structure.
+- [ClaudeKit Workflow](../../Workflows/ClaudeKit-Workflow.md): Spec-driven AI development.
+- [Claude 4.6 Prompts](../../Prompt-Library/Claude-4.6-Prompts-Anatomy.md): 8-step prompt structure.
