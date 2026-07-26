@@ -49,6 +49,6 @@
 ## Build Commands
 - `yarn start` / `make start` — Dev server
 - `yarn build` / `make build` — Production build
-- `make check` — MDX syntax validation
+- `task check` — MDX syntax validation
 - `make test` — Unlighthouse performance test
 - `yarn clear` — Clear Docusaurus cache

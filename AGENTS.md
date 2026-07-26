@@ -10,8 +10,9 @@ This document provides guidelines for AI coding agents working on **The Golden F
 - `yarn clear`: Clear Docusaurus cache if experiencing build issues.
 
 ### Quality Checks
-- `make check`: Run Docusaurus MDX checker (crucial for verifying MDX syntax).
-- `make test`: Run `unlighthouse` web performance test.
+- `task check`: Run Docusaurus MDX checker (crucial for verifying MDX syntax).
+- `task test:perf`: Run `unlighthouse` web performance test.
+- `task test:links`: Check for broken links in the build directory.
 
 ### PR Workflow
 - `task pr:workflow --title "feat(scope): description"`: Automate PR creation workflow.
@@ -148,6 +149,7 @@ The dark/light mode toggle uses the **View Transitions API** for a circular-mask
 - **Static Assets**: `static/fg/chars/` contains XML character data for the D&D tools.
 - **Agent Memory**: `memory/` — Persistent memory for agents. Load `memory/MEMORY.md` every session for the index. Feature tracking, decisions, and project context live here. See [memory/MEMORY.md](memory/MEMORY.md).
 - **Memory Job References**: When referencing jobs from `memory/MEMORY.md` in PR descriptions, commit messages, or comments, use the format `<number>.` (e.g., `9.`) — **never** `#<number>` (e.g., not `#9`). GitHub auto-links `#N` to issues/PRs, creating false references.
+- **AI Dashboard**: Any new article under `docs/Develop-Code/AI-Development/` **must** also be added to `static/ai-dashboard/tools.json`. Run `task ai-dashboard:enrich` after adding the entry. See the schema in the existing entries for the required fields (`id`, `name`, `description`, `category`, `github`, `npm`, `pip`, `install`, `site`, `license`, `tags`, `supportedBy`, `docPath`).
 - **Algolia Search**: See [ALGOLIA.md](file:///Users/sdelrio/github/sdelrio/golden-forest/ALGOLIA.md) for indexing configuration, record count analysis, and reduction strategies. Config: `.algolia.docsearch.json`.
 - **Git**: Use **Conventional Commits** (`feat(scope): desc`, `fix: desc`, `docs: desc`).
 - **PR Descriptions**: Do not wrap filenames or code in backticks inside bold markers — GitHub strips backticks inside `**`, leaving empty `****`. Use bold plain text filenames instead (e.g., `**.cursorrules**`, not `**`.cursorrules`**`).
@@ -176,7 +178,7 @@ STEPS:
 2. Read the 4 templates at .agents/skills/write-article/resources/templates/ for structure reference.
 3. Determine the target folder under /docs/ based on content domain.
 4. Draft and write the article to the appropriate location.
-5. Run `make check` to validate MDX syntax. Fix any errors.
+5. Run `task check` to validate MDX syntax. Fix any errors.
 
 USER REQUEST: {user_request}
 
@@ -191,7 +193,7 @@ When executing `/job-prepare <number>`, complete ALL steps in order — do not s
 1. **Plan** — Research and present the implementation plan
 2. **Branch** — `git checkout -b feat/<scope>` from master
 3. **Implement** — Make the changes
-4. **Test** — `make check` (MDX validation) and verify no regressions
+4. **Test** — `task check` (MDX validation) and verify no regressions
 5. **Commit** — `git commit -m "feat(scope): desc"`
 6. **Review Gate** — STOP here and ask the user to review the diff before pushing. Do NOT proceed to push or PR without explicit user approval.
 7. **Push** — `git push -u origin <branch>`
