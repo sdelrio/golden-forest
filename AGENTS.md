@@ -36,7 +36,7 @@ This document provides guidelines for AI coding agents working on **The Golden F
    - Use absolute path `/docs/...` for cross-section Card hrefs (e.g., linking from `comparatives/` to `Security/`)
    - Markdown links `[text](path.md)` resolve from **file system** — use relative `../` paths
    - Amend: `git add -A && git commit --amend --no-edit && git push --force-with-lease`
-7. Wait for user confirmation before `gh pr merge`
+7. Wait for user confirmation before `gh pr merge --squash`
 
 ### Git Commit Messages
 Follow **Conventional Commits** format. Every commit has a **short subject** and optional **long body**.
