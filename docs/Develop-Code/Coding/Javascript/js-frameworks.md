@@ -148,6 +148,10 @@ HMPL is a server-oriented templating library that uses fetch-based `{{#request}}
 | **Bundle Size** | ~14KB | ~15KB | ~7KB |
 | **Best For** | Server-rendered apps with partial updates | Lightweight client interactivity | Server-driven UI with complex request flows |
 
+## Micro-Frameworks & Thin Fullstack
+
+When lightweight HTML-first libraries pair with a fast server framework, you get **"micro-JavaScript + thin fullstack"** — minimal client code, all rendering on the server. See [Micro-Frameworks & Thin Fullstack](../micro-frameworks) for the HTMX + Axum stack deep dive, performance benchmarks, and when to use (or avoid) this pattern.
+
 ## Compile-time Optimizations
 
 Tools and modes that shift work from runtime to build time, inspired by Svelte's approach.
