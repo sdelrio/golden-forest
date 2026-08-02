@@ -214,3 +214,8 @@ tasks:
     desc: Test web performance with unlighthouse
     cmds:
       - "{{.NPX}} unlighthouse --site https://www.lorien.cloud"
+
+  test:pages:
+    desc: Test changed pages load without errors via lightpanda CDP
+    cmds:
+      - ./scripts/test-pages.sh {{.CLI_ARGS}}
