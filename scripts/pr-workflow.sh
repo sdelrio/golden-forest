@@ -407,26 +407,38 @@ if [ -n "$PR_TITLE" ]; then
     echo -e "${YELLOW}Step 2: Skipping MDX validation${NC}"
   fi
 
-  # Step 3: Create branch
-  echo -e "${BLUE}Step 3: Creating branch...${NC}"
+  # Step 3: Test changed pages via lightpanda
+  CHANGED_FILES=$(git diff --name-only HEAD 2>/dev/null | grep -E '\.mdx?$' || true)
+  UNTRACKED_FILES=$(git ls-files --others --exclude-standard 2>/dev/null | grep -E '\.mdx?$' || true)
+  ALL_MDX_CHANGES=$(echo -e "${CHANGED_FILES}\n${UNTRACKED_FILES}" | grep -v '^$' || true)
+  if [ -n "$ALL_MDX_CHANGES" ]; then
+    echo -e "${BLUE}Step 3: Testing changed pages...${NC}"
+    echo "$ALL_MDX_CHANGES" | xargs task test:pages --
+    echo -e "${GREEN}✓ Page tests passed${NC}"
+  else
+    echo -e "${YELLOW}Step 3: No MDX changes to test${NC}"
+  fi
+
+  # Step 4: Create branch
+  echo -e "${BLUE}Step 4: Creating branch...${NC}"
   git checkout -b "$BRANCH_NAME"
   echo -e "${GREEN}✓ Branch created${NC}"
 
-  # Step 4: Stage and commit changes
-  echo -e "${BLUE}Step 4: Committing changes...${NC}"
+  # Step 5: Stage and commit changes
+  echo -e "${BLUE}Step 5: Committing changes...${NC}"
   git add -A
   git commit -m "$PR_TITLE
 
 $PR_BODY"
   echo -e "${GREEN}✓ Changes committed${NC}"
 
-  # Step 5: Push branch
-  echo -e "${BLUE}Step 5: Pushing branch...${NC}"
+  # Step 6: Push branch
+  echo -e "${BLUE}Step 6: Pushing branch...${NC}"
   git push -u origin "$BRANCH_NAME"
   echo -e "${GREEN}✓ Branch pushed${NC}"
 
-  # Step 6: Create PR
-  echo -e "${BLUE}Step 6: Creating PR...${NC}"
+  # Step 7: Create PR
+  echo -e "${BLUE}Step 7: Creating PR...${NC}"
   PR_URL=$(gh pr create --title "$PR_TITLE" --body "$PR_BODY")
   echo -e "${GREEN}✓ PR created: $PR_URL${NC}"
 
@@ -500,6 +512,18 @@ else
       echo ""
     fi
   done < "$TMPDIR/scopes.txt"
+
+  # Test changed pages via lightpanda (before creating PR)
+  if [ "$DRY_RUN" = false ] && [ "$COMMIT_COUNT" -gt 0 ]; then
+    CHANGED_FILES=$(git diff --name-only HEAD~"$COMMIT_COUNT" 2>/dev/null | grep -E '\.mdx?$' || true)
+    if [ -n "$CHANGED_FILES" ]; then
+      echo -e "${BLUE}Testing changed pages...${NC}"
+      echo "$CHANGED_FILES" | xargs task test:pages --
+      echo -e "${GREEN}✓ Page tests passed${NC}"
+    else
+      echo -e "${YELLOW}No MDX changes to test${NC}"
+    fi
+  fi
 
   if [ "$DRY_RUN" = false ] && [ "$COMMIT_COUNT" -gt 0 ]; then
     # Auto-generate branch name from first commit

@@ -97,6 +97,7 @@ This starts the development server at `http://localhost:3000`.
 | Task | Description |
 | :--- | :--- |
 | `task check` | Run MDX syntax checker (crucial for builds) |
+| `task test:pages -- <files>` | Test changed pages load via lightpanda CDP (HTTP 200, no JS errors) |
 | `task test:perf` | Run `unlighthouse` web performance tests |
 | `task test:links` | Check for broken links in the build directory |
 
