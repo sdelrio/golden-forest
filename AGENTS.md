@@ -32,6 +32,7 @@ When I correct you, or you catch yourself making a mistake: before continuing, a
 
 ### Quality Checks
 - `task check`: Run Docusaurus MDX checker (crucial for verifying MDX syntax).
+- `task test:pages -- <files>`: Test changed pages load via lightpanda CDP (HTTP 200, no JS errors).
 - `task test:perf`: Run `unlighthouse` web performance test.
 - `task test:links`: Check for broken links in the build directory.
 
