@@ -100,6 +100,35 @@ If the GraphQL endpoint changes, the introspection query returns a different - c
 * Is the fastest, most cost-effective way you can delight that consumer.
 * Much can be achieved by just going the OpenAPI route or rolling whatever you like while sticking to a RESTful standard of your own making. 
 
+## Free Public API Resources
+
+A curated directory of **1519+ free public APIs** for developers — browse by category, compare alternatives, and find code examples for your next project.
+
+[publicapis.io](https://publicapis.io) — Public APIs Directory
+
+### Top Categories
+
+* **Development** — Screenshots, diagrams, image optimization, data scraping
+* **Data Access** — Government open data, web scraping, LLM-ready data
+* **Finance** — Stock data, banking, crypto, currency exchange
+* **Geocoding** — IP geolocation, maps, coordinates
+* **Games & Comics** — Video game databases, Pokemon TCG, pinball maps
+* **Music & Media** — Video/audio processing, streaming data
+* **Social** — Engagement analytics, share data
+* **Sports & Fitness** — Live scores, match predictions, workout APIs
+* **Weather** — Forecasts, historical data
+* **Machine Learning** — Time series forecasting, NLP, analytics
+
+### Notable APIs
+
+| API | Category | Description |
+|-----|----------|-------------|
+| OpenWeatherMap | Weather | Global weather data and forecasts |
+| Stripe | Finance | Payment processing platform |
+| OpenAI | Machine Learning | AI capabilities and language models |
+| Twilio | Development | Communication APIs (SMS, voice, video) |
+| Google Maps | Geocoding | Location services and maps |
+
 ## References
 
 * [2021: The State of Introspection for REST and GraphQL APIs](https://thenewstack.io/the-state-of-introspection-for-rest-and-graphql-apis/)
