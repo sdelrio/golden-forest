@@ -101,6 +101,53 @@ Mise (formerly rtx) is a polyglot tool manager, environment manager, and task ru
    mise run test
    ```
 
+## [Devbox](https://www.jetify.com/devbox/)
+
+Devbox is a command-line tool that creates isolated, reproducible development environments using Nix under the hood, without requiring knowledge of the Nix language. You define packages and scripts in a `devbox.json` file committed to your repo, and every team member gets the exact same shell environment. See also: [Dev Environment with Nix, Devbox and Direnv](/docs/Infrastructure-and-Cloud/DevOps/DevEnv/dev-env).
+
+### Key Concepts
+- **`devbox.json` Config**: Declarative JSON file listing packages, env vars, init hooks, and scripts — committed to version control.
+- **Nix-Powered Isolation**: Environments are isolated from the host system using Nix, with access to 400,000+ package versions.
+- **Portable Shells**: The same config works locally, in CI, in devcontainers, or as a Dockerfile — no Docker required for local use.
+- **Scripts & Services**: Define reusable scripts (`devbox run test`) and orchestrate services via process-compose.
+
+### Basic Usage
+
+1. **Initialize a project**:
+   ```bash
+   devbox init
+   ```
+
+2. **Add packages**:
+   ```bash
+   devbox add go@1.22 golangci-lint@latest
+   ```
+
+3. **Start an isolated shell**:
+   ```bash
+   devbox shell
+   ```
+
+4. **Define a `devbox.json`**:
+   ```json
+   {
+     "packages": ["go@1.22", "golangci-lint@latest"],
+     "env": { "APP_ENV": "development" },
+     "shell": {
+       "init_hook": ["go mod download"],
+       "scripts": {
+         "build": "go build ./...",
+         "test": "go test ./..."
+       }
+     }
+   }
+   ```
+
+5. **Run a script**:
+   ```bash
+   devbox run test
+   ```
+
 ## Comparison
 
 | Tool | Advantages | Disadvantages | GitHub Integration |
@@ -108,3 +155,4 @@ Mise (formerly rtx) is a polyglot tool manager, environment manager, and task ru
 | **Earthly** | Simple Makefile-like syntax, container-native, extremely readable build steps, easy artifact export. | Still uses a DSL (not full code), requires Docker daemon, less flexible than programmable CI. | Strong. Runs as a simple CLI step in any CI/CD environment; official GitHub Action available. |
 | **Dagger** | Programmable (SDKs), powerful caching, visual traces, local=CI parity, language-agnostic logic. | Requires Docker/BuildKit, learning curve for SDK APIs, newer ecosystem. | Excellent. Official `dagger-for-github` action; native secret management. |
 | **Mise** | Extremely fast (Rust), manages runtimes + env + tasks, full `asdf` plugin compatibility. | CLI-focused, requires shell activation hooks for the best developer experience. | Great. `mise-action` allows synchronizing dev tools across local and CI environments. |
+| **Devbox** | Simple JSON config, Nix-powered isolation without Nix knowledge, portable across local/CI/containers. | Nix store can be large, fewer package options than Docker images, Nix-specific edge cases. | Great. Official `devbox-setup` action with Nix store caching for fast CI runs. |
