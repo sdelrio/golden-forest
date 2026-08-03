@@ -34,6 +34,34 @@ Remix took an unconventional path: what was planned as Remix v3 shipped as **Rea
 * [Remix Homepage](https://remix.run/)
 * [React Router v7 Docs](https://reactrouter.com/)
 
+## TanStack
+
+TanStack is an ecosystem of headless, type-safe, composable libraries for building modern web applications. Created by Tanner Linsley, it provides framework-agnostic tools that work across React, Vue, Solid, Angular, and Vanilla JS. With 15.8B+ total npm downloads and 126K+ GitHub stars, TanStack has become a major force in the JavaScript ecosystem.
+
+### TanStack Start
+
+TanStack Start is the full-stack React meta-framework. Built on **Vite** and **TanStack Router**, it provides SSR, streaming, server functions, API routes, and bundling — deployable to any hosting provider.
+
+**2026 Updates:** Won "Breakthrough of the Year" at the 2026 Open Source Awards. Adds first-class Rsbuild support alongside Vite. Solid 2.0 beta support across Router, Start, and Query. 5x SSR throughput improvement through hot path profiling. TanStack Start v1 RC shipped September 2025 and is now stable.
+
+### The Ecosystem
+
+| Library | Description | Bundle Size (min+gzip) |
+| :--- | :--- | :--- |
+| **Start** | Full-stack React meta-framework (SSR, streaming, server functions) | ~16KB |
+| **Router** | Type-safe routing with search params as state, signal graph reactive core | ~6KB |
+| **Query** | Data fetching and caching (formerly React Query) | ~16KB |
+| **Table** | Headless table library (V9 in Beta — 90% memory reduction) | ~21KB |
+| **Form** | Framework-agnostic form management | ~9KB |
+| **DB** | Client-side embedded database with offline support | ~15KB |
+| **Store** | State management | ~2KB |
+| **AI** | Framework-agnostic AI toolkit (Beta) — chat, voice, structured output, MCP | ~25KB |
+| **Virtual** | Virtualization for large lists | ~5KB |
+| **Charts** | Charting library | ~10KB |
+
+* [TanStack Homepage](https://tanstack.com/)
+* [TanStack Start Docs](https://tanstack.com/start/)
+
 ## Astro
 
 Astro's story in 2026 is defined by one headline: **Cloudflare acquired Astro in January 2026**. This isn't just a funding round — it's a fundamental shift. Astro now has a direct line to Cloudflare's edge infrastructure, and the integration is already shipping.
@@ -176,18 +204,18 @@ TypeScript is a strongly typed superset of JavaScript that provides a robust dev
 
 ## Comparisons
 
-### React Meta-Frameworks: Next.js vs Vinext vs Remix
+### React Meta-Frameworks: Next.js vs Vinext vs Remix vs TanStack Start
 
-| Feature | Next.js | Vinext | Remix (React Router v7) |
-| :--- | :--- | :--- | :--- |
-| **Toolchain** | Turbopack / Webpack | **Vite / Rolldown** | Any bundler |
-| **Build Speed** | Baseline | **Up to 4x Faster** | Baseline |
-| **Bundle Size** | Baseline | **~57% Smaller** | ~20% smaller than Next.js |
-| **Rendering** | SSG, SSR, ISR, PPR, CSR | SSG, SSR, RSC | SSR only (loader/action) |
-| **Ecosystem** | Vercel-centric | Vite Plugin Ecosystem | Web standards / HTTP |
-| **Deployment** | Vercel Optimized | **Native Serverless/Edge** | Any Node host |
-| **Maturity** | Battle-tested | Early stages / Bleeding edge | Stable (React Router v7) |
-| **Progressive Enhancement** | Optional | Optional | **Default** |
+| Feature | Next.js | Vinext | Remix (React Router v7) | TanStack Start |
+| :--- | :--- | :--- | :--- | :--- |
+| **Toolchain** | Turbopack / Webpack | **Vite / Rolldown** | Any bundler | **Vite / Rsbuild** |
+| **Build Speed** | Baseline | **Up to 4x Faster** | Baseline | Fast (Vite-based) |
+| **Bundle Size** | Baseline | **~57% Smaller** | ~20% smaller than Next.js | **~16KB** |
+| **Rendering** | SSG, SSR, ISR, PPR, CSR | SSG, SSR, RSC | SSR only (loader/action) | **SSR, Streaming** |
+| **Ecosystem** | Vercel-centric | Vite Plugin Ecosystem | Web standards / HTTP | **Library ecosystem** |
+| **Deployment** | Vercel Optimized | **Native Serverless/Edge** | Any Node host | **Any host** |
+| **Maturity** | Battle-tested | Early stages / Bleeding edge | Stable | **Stable (v1)** |
+| **Progressive Enhancement** | Optional | Optional | **Default** | Optional |
 
 ### Bundle Size Comparison (min+gzip)
 
@@ -199,6 +227,7 @@ TypeScript is a strongly typed superset of JavaScript that provides a robust dev
     { name: 'Remix', value: 65 },
     { name: 'Angular', value: 65 },
     { name: 'Vue', value: 45 },
+    { name: 'TanStack Start', value: 16 },
     { name: 'SvelteKit', value: 15 },
     { name: 'Alpine.js', value: 15 },
     { name: 'htmx', value: 14 },
@@ -211,6 +240,7 @@ TypeScript is a strongly typed superset of JavaScript that provides a robust dev
     'Remix': '#f57c00',
     'Angular': '#c62828',
     'Vue': '#00838f',
+    'TanStack Start': '#ef4444',
     'SvelteKit': '#7b1fa2',
     'Alpine.js': '#4e342e',
     'htmx': '#37474f',
@@ -230,6 +260,7 @@ TypeScript is a strongly typed superset of JavaScript that provides a robust dev
     { name: 'SvelteKit', value: 96 },
     { name: 'htmx', value: 95 },
     { name: 'Remix', value: 94 },
+    { name: 'TanStack Start', value: 94 },
     { name: 'HMPL', value: 94 },
     { name: 'Alpine.js', value: 93 },
     { name: 'Next.js', value: 90 },
@@ -240,6 +271,7 @@ TypeScript is a strongly typed superset of JavaScript that provides a robust dev
     'Remix': '#f57c00',
     'Angular': '#c62828',
     'Vue': '#00838f',
+    'TanStack Start': '#ef4444',
     'SvelteKit': '#7b1fa2',
     'Alpine.js': '#4e342e',
     'htmx': '#37474f',
@@ -262,6 +294,7 @@ TypeScript is a strongly typed superset of JavaScript that provides a robust dev
 | **Server-driven UI with complex request flows** | HMPL | htmx |
 | **Startup / small team** | SvelteKit | Remix |
 | **Enterprise / large team** | Next.js | Remix |
+| **Library ecosystem approach** | TanStack Start | Next.js |
 
 ## All Frameworks at a Glance
 
@@ -273,6 +306,9 @@ TypeScript is a strongly typed superset of JavaScript that provides a robust dev
 | **Next.js** | ~85KB | SSG/SSR/ISR/PPR/CSR | Steep | Full-stack apps | Vercel |
 | **Vinext** | ~35KB | SSG/SSR/RSC | Steep | Edge/serverless Next.js | Cloudflare |
 | **Remix** | ~65KB | SSR (loader/action) | Moderate | Form-heavy CRUD | Shopify |
+| **TanStack Start** | ~16KB | SSR/Streaming | Moderate | Full-stack apps | Community |
+| **TanStack Query** | ~16KB | Client-side | Easy | Data fetching | Community |
+| **TanStack Table** | ~21KB | Client-side | Moderate | Data tables/grids | Community |
 | **Astro** | ~0-15KB | SSG + Islands | Easy | Content sites | Cloudflare |
 | **Svelte** | ~4KB | Compiled | Easy | UI library (any use) | Vercel |
 | **SvelteKit** | ~15KB | SSG/SSR | Easy | Full-stack apps | Vercel |
