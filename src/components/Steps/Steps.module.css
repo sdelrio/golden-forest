@@ -1,6 +1,6 @@
 .stepsContainer {
   counter-reset: step;
-  border-left: 2px solid var(--ifm-color-emphasis-300);
+  border-left: 2px dashed var(--ifm-color-emphasis-300);
   margin-left: 1rem;
   padding-left: 2rem;
   margin-top: 1.5rem;
@@ -13,6 +13,7 @@
   position: relative;
   counter-increment: step;
   padding-bottom: 2rem;
+  transition: all 0.2s ease;
 }
 
 .stepItem:last-child {
@@ -37,10 +38,30 @@
   font-weight: bold;
   color: var(--ifm-color-primary);
   z-index: 1;
+  transition: all 0.2s ease;
+  animation: stepRingPulse 2s ease-in-out infinite;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes stepRingPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(233, 151, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(233, 151, 0, 0.15);
+  }
+}
+
+.stepItem:first-child .stepIndicator {
+  animation: stepRingPulse 2s ease-in-out infinite;
 }
 
 .stepIndicator::before {
   content: counter(step);
+}
+
+.stepIcon {
+  font-size: 1rem;
 }
 
 .stepTitle {
@@ -49,10 +70,62 @@
   font-weight: 700;
   color: var(--ifm-heading-color);
   line-height: 1.25;
+  transition: color 0.2s ease;
 }
 
 .stepContent {
   color: var(--ifm-font-color-base);
+  transition: opacity 0.2s ease;
+}
+
+.stepItem:hover .stepIndicator {
+  border-color: var(--ifm-color-primary);
+  transform: scale(1.05);
+}
+
+.stepItem:hover .stepTitle {
+  color: var(--ifm-color-primary);
+}
+
+/* Interactive step indicator */
+.stepInteractive .stepIndicator {
+  cursor: pointer;
+}
+
+.stepInteractive .stepIndicator:hover {
+  border-color: var(--ifm-color-primary);
+  transform: scale(1.1);
+}
+
+.stepInteractive .stepIndicator:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Step states */
+.stepCompleted .stepIndicator {
+  background-color: var(--ifm-color-success);
+  border-color: var(--ifm-color-success);
+  color: white;
+}
+
+.stepCompleted .stepIndicator::before {
+  display: none;
+}
+
+.stepError .stepIndicator {
+  background-color: var(--ifm-color-danger);
+  border-color: var(--ifm-color-danger);
+  color: white;
+}
+
+.stepError .stepIndicator::before {
+  display: none;
+}
+
+.stepCurrent .stepIndicator {
+  border-color: var(--ifm-color-primary);
+  animation: stepRingPulse 2s ease-in-out infinite;
 }
 
 /* Dark mode adjustments if needed */
@@ -63,4 +136,24 @@
 
 [data-theme='dark'] .stepsContainer {
   border-left-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .stepItem:hover .stepIndicator {
+  border-color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .stepCompleted .stepIndicator {
+  background-color: var(--ifm-color-success);
+  border-color: var(--ifm-color-success);
+}
+
+[data-theme='dark'] .stepError .stepIndicator {
+  background-color: var(--ifm-color-danger);
+  border-color: var(--ifm-color-danger);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stepIndicator {
+    animation: none;
+  }
 }
