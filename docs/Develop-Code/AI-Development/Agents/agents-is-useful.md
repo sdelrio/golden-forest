@@ -6,7 +6,7 @@ tags: [ai-agents, agents-md, claude-code, context-files, best-practices]
 
 # Is AGENTS.md Actually Useful?
 
-> **Source:** [Evaluating AGENTS.md (arxiv, Feb 2026)](https://arxiv.org/html/2602.11988v1) · [DAIR.AI Summary](https://academy.dair.ai/blog/agents-md-evaluation)
+> **Source:** [Evaluating AGENTS.md (arxiv, Feb 2026)](https://arxiv.org/html/2602.11988v1) · [DAIR.AI Summary](https://academy.dair.ai/blog/agents-md-evaluation) · [Why You Should Never Use claude /init (YouTube)](https://youtu.be/9tmsq-Gvx6g?si=WFULyW-2-2E7ipRP)
 > **By:** ETH Zurich SRI Lab · **Benchmark:** [AGENTbench](https://github.com/eth-sri/agentbench)
 
 ## Summary
@@ -57,6 +57,14 @@ A common recommendation is to include a full directory/architecture overview. Th
 ### 5. Stronger models don't generate better context files
 
 Using GPT-5.2 to generate files (instead of the default model) improved SWE-bench Lite results (+2%) but **degraded AGENTbench** results (−3%). No prompt or model consistently wins.
+
+## The Cost Trade-off
+
+Every context file — good or bad — adds **~20% to inference cost**. This is the floor.
+
+- For **high-volume agentic pipelines**: a poorly written `AGENTS.md` is a tax with no return. Audit it or remove it.
+- For **niche repos with sparse docs**: even an imperfect file can help, since the agent has less to work from.
+- For **repos with good existing documentation**: an `AGENTS.md` that restates that documentation actively harms performance.
 
 ## What This Means for Your AGENTS.md
 
@@ -115,14 +123,6 @@ Before keeping a section in `AGENTS.md`, ask:
 - [ ] **Does this warn about a gotcha that isn't obvious from the code?** → Keep it
 - [ ] **Is this a command the agent must run in a specific way?** → Keep it
 
-## The Cost Trade-off
-
-Every context file — good or bad — adds **~20% to inference cost**. This is the floor.
-
-- For **high-volume agentic pipelines**: a poorly written `AGENTS.md` is a tax with no return. Audit it or remove it.
-- For **niche repos with sparse docs**: even an imperfect file can help, since the agent has less to work from.
-- For **repos with good existing documentation**: an `AGENTS.md` that restates that documentation actively harms performance.
-
 ## Summary Table
 
 | Practice | Recommendation |
@@ -134,15 +134,50 @@ Every context file — good or bad — adds **~20% to inference cost**. This is 
 | Document non-obvious commands and constraints | ✅ Do — high signal |
 | Use a stronger model to generate the file | ➖ No consistent benefit |
 | Split into minimal AGENTS.md + existing docs | ✅ Best approach |
+| Bootstrap with `/init`, then strip redundancy | ✅ OK — only if you audit and prune aggressively |
 
-## Sample prompt
+## Sample prompts
+
+### Bootstrap and prune (from the study)
 
 ```
 Create an AGENTS.md file for this project. Use the /init command to generate the file. Make sure to include all the information that an agent would need to know to understand the project and how to work with it, the folder structure, what I'm currently working on, what I want to achieve, and any other information that would be useful for an agent to know. Keep the file concise and easy to read, if possible under 50 lines.
 ```
+
+### The video approach — what to strip from `/init` output
+
+As [practitioners report](https://youtu.be/9tmsq-Gvx6g?si=WFULyW-2-2E7ipRP), `claude /init` fails in practice because:
+
+- **Global context bloat**: It generates a massive `CLAUDE.md` that reloads the entire initial prompt on *every* query — burning tokens on obvious data like `package.json` scripts.
+- **Precision ceiling**: It saturates the ~300–500 instruction limit that an LLM can reliably process, pushing relevant guidance out of focus.
+- **Rapid obsolescence**: Auto-generated docs go stale fast and create conflicts with actual code.
+- **Redundant discovery**: The agent already auto-discovers architecture by navigating source code at runtime — a static map adds noise, not signal.
+
+Here's every section of a typical `/init`-generated `CLAUDE.md` and why each should go:
+
+| Section in generated file | Why it should go |
+|---|---|
+| "This file provides guidance to Claude Code…" | Filler — tells the agent nothing useful |
+| Commands (build, test, lint) | Agent scans `package.json` scripts itself |
+| "Architecture is full-stack React Router" | Agent sees `vite.config.json`, `tsconfig.json`, etc. |
+| "Effect service layer" with file references | Roots to active files, goes stale instantly |
+| "Key services" listing | Discoverable by reading the source |
+| RPC pattern description | Discoverable by reading the source |
+| Routing breakdown | Not needed on every single request |
+
+**Key idea:** If you're adding excessive instructions to `CLAUDE.md` or `AGENTS.md` that aren't even relevant to the task at hand, you're hamstringing your agent.
+
+The video author's `~/.claude/claude.md` (global, not per-repo) contains exactly one line:
+
+```
+You are on WSL on Windows.
+```
+
+That's the floor. Start from there and only add what the agent **cannot discover on its own**.
 
 ## Resources
 
 - 📄 [Full paper (arxiv)](https://arxiv.org/abs/2602.11988)
 - 🧪 [AGENTbench dataset](https://github.com/eth-sri/agentbench)
 - 📝 [DAIR.AI blog post](https://academy.dair.ai/blog/agents-md-evaluation)
+- 🎥 [Why You Should Never Use claude /init](https://youtu.be/9tmsq-Gvx6g?si=WFULyW-2-2E7ipRP)
