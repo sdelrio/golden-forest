@@ -23,6 +23,12 @@ When I correct you, or you catch yourself making a mistake: before continuing, a
 - **Why it matters**: `task check` only validates MDX syntax — it does not verify that all components used in JSX are actually imported. `task build` (SSG) catches these at render time.
 - **Rule**: After writing any article, always run `task build` as a final validation step. If it fails, look for missing component imports (`Tabs`, `TabItem`, etc.).
 
+### Never use em dash
+- **Rule**: Never use the em dash "—". Use plain dash "-" instead.
+
+### Never auto-add agent co-author to commits
+- **Rule**: When writing commit messages, NEVER auto-add your agent name as co-author.
+
 ## Build/Lint/Test Commands
 
 ### Core Operations
