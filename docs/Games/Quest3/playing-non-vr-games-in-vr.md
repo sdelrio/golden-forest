@@ -1,15 +1,16 @@
 ---
 title: "Playing Non-VR Games in VR with Quest 3 Mods"
-description: "A guide to community-made VR mods that let you play flat-screen games in full VR on Meta Quest 3, featuring Cyberpunk 2077 VR Port and Red Dead Redemption 2 RealVR."
+description: "A guide to community-made VR mods that let you play flat-screen games in full VR on Meta Quest 3, featuring Cyberpunk 2077 VR Port, Red Dead Redemption 2 RealVR, and The Witcher 3 VR."
 tags:
   - quest 3
   - vr mods
   - cyberpunk 2077
   - red dead redemption 2
+  - the witcher 3
   - pcvr
 sidebar_label: "Non-VR Game Mods"
 last_update:
-  date: 2026-08-07
+  date: 2026-08-09
 ---
 
 import Accordion from '@site/src/components/Accordion/Accordion';
@@ -19,9 +20,9 @@ import Step from '@site/src/components/Steps/Step';
 
 # Playing Non-VR Games in VR with Quest 3 Mods
 
-Community modders have found ways to inject full 6-DoF VR rendering into games that were never designed for it. These mods go far beyond simple "fake 3D" wrappers - they add real stereo rendering, motion controller support, and hand-to-holster interaction systems directly into flat-screen game engines.
+Community modders have found ways to inject full 6-DoF VR rendering into games that were never designed for it. These mods go far beyond simple "fake 3D" wrappers - they add real stereo rendering, motion controller support (where available), and hand-to-holster interaction systems directly into flat-screen game engines.
 
-With a PC and a Quest 3, you can play titles like Cyberpunk 2077 and Red Dead Redemption 2 as if they were native VR games. This article covers how it works, how to connect, and two of the most polished mods available.
+With a PC and a Quest 3, you can play titles like Cyberpunk 2077, Red Dead Redemption 2, and The Witcher 3 as if they were native VR games. This article covers how it works, how to connect, and three of the most polished mods available.
 
 ## How to Connect: Streaming PCVR to Quest 3
 
@@ -63,16 +64,16 @@ The [CyberpunkVR Port](https://github.com/dariulone/cyberpunk-vr-port) by dariul
 ### Requirements
 
 - Cyberpunk 2077 (PC, version 2.31)
-- [RED4ext](https://www.nexusmods.com/cyberpunk2077/mods/2271)
+- [RED4ext](https://www.nexusmods.com/cyberpunk2077/mods/2380)
 - [Cyber Engine Tweaks](https://www.nexusmods.com/cyberpunk2077/mods/107)
-- [redscript](https://www.nexusmods.com/cyberpunk2077/mods/2081)
-- [ArchiveXL](https://www.nexusmods.com/cyberpunk2077/mods/7910)
-- [TweakXL](https://www.nexusmods.com/cyberpunk2077/mods/9531)
-- [Codeware 1.20 or newer](https://www.nexusmods.com/cyberpunk2077/mods/2081)
-- [Visual Holsters (Automatic Clothes Swap)](https://www.nexusmods.com/cyberpunk2077/mods/10935)
-- [Visible Bullets (Projectile Restoration)](https://www.nexusmods.com/cyberpunk2077/mods/10935)
-- [Equipment-EX](https://www.nexusmods.com/cyberpunk2077/mods/10935)
-- [Nova Optics](https://www.nexusmods.com/cyberpunk2077/mods/10935)
+- [redscript](https://www.nexusmods.com/cyberpunk2077/mods/1511)
+- [ArchiveXL](https://www.nexusmods.com/cyberpunk2077/mods/4198)
+- [TweakXL](https://www.nexusmods.com/cyberpunk2077/mods/4197)
+- [Codeware 1.20 or newer](https://www.nexusmods.com/cyberpunk2077/mods/7780)
+- [Visual Holsters (Automatic Clothes Swap)](https://www.nexusmods.com/cyberpunk2077/mods/21936)
+- [Visible Bullets (Projectile Restoration)](https://www.nexusmods.com/cyberpunk2077/mods/22251)
+- [Equipment-EX](https://www.nexusmods.com/cyberpunk2077/mods/6945)
+- [Nova Optics](https://www.nexusmods.com/cyberpunk2077/mods/29190)
 
 :::warning
 Install RED4ext, CET, and redscript first. Learn how Visual Holsters and Equipment-EX work before installing - the hand-to-holster system reads them.
@@ -137,7 +138,7 @@ Start your OpenXR runtime first, then run `Cyberpunk2077.exe`. Pick the render r
 <Accordion title="Gameplay Limitations" icon="mdi:gamepad-variant" defaultOpen={false}>
 
 - Not all weapons are projectile-based - some fire from camera instead of barrel (e.g., explosive bullets)
-- Can not shoot while driving
+- Cannot shoot while driving
 - Cutscenes not tested
 - Ironsights not recalculated for zoom
 - Stereo can fall back to mono in some situations
@@ -219,13 +220,97 @@ Press the Windows key - there will be another tab for RDR2 with a small box that
 </Step>
 </Steps>
 
-### Reference
+### Video Walkthrough
 
 A video walkthrough by **Eddy'zGamingRoom** covers the full installation process: [RDR2 VR Setup Guide](https://www.youtube.com/watch?v=wcKnjkHIKZM).
 
 :::tip DLSS Update
 The video recommends using **DLSS Swapper** to update the game's DLSS DLL from v2.2.10 to the latest version with an M profile. This is a separate step from the RealVR install and helps with VR rendering quality.
 :::
+
+## The Witcher 3 VR
+
+The [witcher3-vr](https://github.com/tig3rmast3r/witcher3-vr) mod by tig3rmast3r is an independent, open-source VR implementation built specifically for The Witcher 3. Unlike vorpX or Luke Ross's framework-based mods, this one hooks directly into the DX12 renderer and uses OpenXR natively. It delivers real same-tick geometry stereo, 6-DoF head tracking, and an experimental first-person exploration view - all without relying on optical-flow reprojection.
+
+:::warning Motion Controllers Not Supported
+This mod currently requires a **mouse and keyboard or gamepad**. VR motion controllers are not supported and are not on the development roadmap. Combat and horse riding use standard gamepad/keyboard input.
+:::
+
+### Key Features
+
+- **Real stereo rendering** - same-tick geometry stereo with DLSS, DLAA, TAAU, or no AA. No reprojection artifacts.
+- **6-DoF head tracking** - synchronized with OpenXR. Free look in all views.
+- **Experimental first-person view** - toggle with `F11`. Adaptive placement for idle, walking, sprinting, and horse states. Intended for exploration; third-person is recommended for combat.
+- **Cinema mode** - `F10` toggles a world-locked virtual screen for cutscenes. Stereo or mono depending on the selected rendering mode.
+- **Snap turn** - optional 30/45/60-degree gamepad snap turn with continuous headset-directed movement (first-person only).
+- **Resizable HUD** - HUD editor with `Insert` key. Move, scale, and reset individual panels. Supports separate VR and Cinema3D banks.
+- **Crossbow HMD aiming** - crossbow aim follows head direction in first-person mode.
+- **Automatic combat handoff** - optionally switches from first-person to third-person when combat begins.
+
+### Requirements
+
+- [The Witcher 3: Wild Hunt - Next-Gen Update](https://www.gog.com/en/game/the_witcher_3_wild_hunt) (PC, Patch 4.04, DX12 version)
+- A working OpenXR runtime
+- Mouse and keyboard or gamepad
+- NVIDIA RTX GPU (required for DLSS/DLAA)
+
+### Installation
+
+<Steps>
+<Step title="Download the Release" interactive>
+
+Download the latest package from the [Releases](https://github.com/tig3rmast3r/witcher3-vr/releases) page on GitHub.
+
+</Step>
+<Step title="Extract to Game Root" interactive>
+
+Extract the package directly into your Witcher 3 game folder. The archive contains the correct `bin\x64_dx12`, `mods`, `dlc`, and `Witcher3VR` folders, including the OpenXR loader.
+
+</Step>
+<Step title="Run the Launcher" interactive>
+
+Run `bin\x64_dx12\Witcher3VRLauncher.exe`. Select your rendering mode (No AA/FXAA, TAAU, or DLSS) and resolution. The launcher includes three presets for Quest 3 with Virtual Desktop.
+
+</Step>
+<Step title="Configure Game Settings" interactive>
+
+Click **Configure Settings for VR** in the launcher to apply tested graphics settings automatically. If configuring manually, set Ray Tracing to **Off**, Screen Space Reflections to **Off or Low**, and Motion Blur to **Off**.
+
+</Step>
+<Step title="Launch" interactive>
+
+Launch the game through the launcher. Use `F9` to recenter, `F10` for Cinema Mode, and `F11` for first-person view.
+
+</Step>
+</Steps>
+
+### Known Issues
+
+<AccordionGroup>
+<Accordion title="Limitations" icon="mdi:information-outline" defaultOpen={false}>
+
+- Motion controllers are not supported
+- Ray tracing and Screen Space Reflections (High) are not supported
+- Motion blur, bloom, and lens flare are not supported
+- Third-party mod compatibility is not guaranteed during active development
+- Some rare shadows may flicker in stereo
+
+</Accordion>
+<Accordion title="Not Yet Implemented" icon="mdi:clock-outline" defaultOpen={false}>
+
+- Far/distant camera mode corrections for exploration, combat, and horse riding (only near cameras are currently corrected)
+- Full animation-driven body anchor for first-person view
+
+</Accordion>
+</AccordionGroup>
+
+### Tested On
+
+The mod has been tested on **Quest 3** (via Virtual Desktop) and **Pimax 5K** (via SteamVR with Parallel Projection disabled).
+
+### Video Walkthrough
+
+A video walkthrough by **NotAGameAddict** covers the full experience: [The Witcher 3 in VR is ILLEGALLY good](https://www.youtube.com/watch?v=QZcvEh7k6wE).
 
 ## General Tips for VR Mod Gaming
 
@@ -247,4 +332,7 @@ VR mods are community projects and can be fragile. Always back up your game save
 - [RDR2 VR Compatibility Patch - Nexus Mods](https://www.nexusmods.com/reddeadredemption2/mods/3446)
 - [RDR2 VR Setup Guide - YouTube (Eddy'zGamingRoom)](https://www.youtube.com/watch?v=wcKnjkHIKZM)
 - [RealVR - MediaFire Download](https://www.mediafire.com/file/tsyc7o5cjz1z7un/RDR2Vr.zip/file)
+- [Witcher 3 VR - GitHub Repository](https://github.com/tig3rmast3r/witcher3-vr)
+- [Witcher 3 VR - Releases](https://github.com/tig3rmast3r/witcher3-vr/releases)
+- [The Witcher 3 in VR is ILLEGALLY good - YouTube](https://www.youtube.com/watch?v=QZcvEh7k6wE)
 - [Virtual Desktop Link Cable Guide](/docs/Games/Quest3/virtual-desktop-link-cable)
