@@ -235,3 +235,4 @@ After installation, open the dashboard at [http://localhost:3001](http://localho
 - [API Reference](https://github.com/tashfeenahmed/freellmapi/blob/main/docs/api.md)
 - [Clients & Coding Agents Guide](https://github.com/tashfeenahmed/freellmapi/blob/main/docs/clients.md)
 - [YouTube Walkthrough](https://www.youtube.com/watch?v=sHOwbyMbun0)
+- [OmniRoute vs FreeLLMAPI - Comparative](../comparatives/ai-proxy.md)

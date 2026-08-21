@@ -651,6 +651,38 @@
     "docPath": "/docs/Develop-Code/AI-Development/Agents/oh-my-openagent"
   },
   {
+    "id": "omniroute",
+    "name": "OmniRoute",
+    "description": "Free MIT AI gateway: one endpoint, 340+ providers (90+ free), auto-fallback, RTK+Caveman token compression (78-95%), 19 routing strategies, MCP/A2A support.",
+    "category": "proxy",
+    "github": "https://github.com/diegosouzapw/OmniRoute",
+    "npm": "omniroute",
+    "pip": null,
+    "install": "npm install -g omniroute",
+    "site": "https://omniroute.online",
+    "license": "MIT",
+    "tags": [
+      "gateway",
+      "proxy",
+      "free",
+      "compression",
+      "routing",
+      "fallback",
+      "mcp"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "codex",
+      "cursor",
+      "cline",
+      "opencode",
+      "aider",
+      "goose",
+      "copilot"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Proxy/omniroute"
+  },
+  {
     "id": "opencode",
     "name": "OpenCode",
     "description": "Terminal-first, provider-agnostic AI coding agent supporting 75+ LLM providers with Ask, Edit, Safe, and Agent modes.",

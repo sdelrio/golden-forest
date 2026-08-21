@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-21T10:35:12.782Z",
-  "toolCount": 45,
+  "generatedAt": "2026-08-21T16:16:10.151Z",
+  "toolCount": 46,
   "tools": [
     {
       "id": "agency-agents",
@@ -751,6 +751,38 @@
       "githubLanguage": "TypeScript",
       "npmVersion": "4.19.4",
       "npmLastPublished": "2026-08-01T09:47:40.813Z"
+    },
+    {
+      "id": "omniroute",
+      "name": "OmniRoute",
+      "description": "Free MIT AI gateway: one endpoint, 340+ providers (90+ free), auto-fallback, RTK+Caveman token compression (78-95%), 19 routing strategies, MCP/A2A support.",
+      "category": "proxy",
+      "github": "https://github.com/diegosouzapw/OmniRoute",
+      "npm": "omniroute",
+      "pip": null,
+      "install": "npm install -g omniroute",
+      "site": "https://omniroute.online",
+      "license": "MIT",
+      "tags": [
+        "gateway",
+        "proxy",
+        "free",
+        "compression",
+        "routing",
+        "fallback",
+        "mcp"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "cline",
+        "opencode",
+        "aider",
+        "goose",
+        "copilot"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Proxy/omniroute"
     },
     {
       "id": "opencode",
