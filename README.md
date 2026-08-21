@@ -26,9 +26,9 @@ Welcome to **The Golden Forest**, a modern Digital Garden and Knowledge Base bui
 - **Automation**: [Go-Task](https://taskfile.dev/) (Taskfile)
 - **Environment**: [Devbox](https://www.jetify.com/devbox) & [Direnv](https://direnv.net/)
 - **Custom Components**: Built-in library of interactive [MDX components](file:///Users/sdelrio/github/sdelrio/golden-forest/src/components/):
-  - **Docs**: `Accordion`, `Card`, `CodeGroup`, `Steps`, `ParamField`, `IndexList`.
-  - **D&D Tools**: `XmlChar`, `CharSearch`, `DnDPointBuy`, `StatDiceRoller`, `FeatBrowser`, `PartySummary`.
-  - **Tools**: `MermaidPlayground`, `AiDashboard`.
+  - **Docs**: `Accordion`, `BarChart`, `Card`, `CodeGroup`, `Steps`, `ParamField`, `IndexList`, `CmdRef`.
+  - **D&D Tools**: `XmlChar`, `CharSearch`, `DnDPointBuy`, `FeatBrowser`, `StatDiceRoller`, `PartySummary`.
+  - **Tools**: `MermaidPlayground`, `AiDashboard`, `TechRadar`.
 
 ---
 
@@ -39,7 +39,7 @@ This project uses [Taskfile](https://taskfile.dev/) to manage development workfl
 ### 1. Prerequisites
 
 Ensure you have the following installed:
-- [Node.js](https://nodejs.org/) (check `.nvmrc` or `package.json`)
+- [Node.js](https://nodejs.org/) >= 18.0
 - [Yarn](https://yarnpkg.com/)
 - [Task](https://taskfile.dev/installation/)
 
@@ -68,7 +68,11 @@ This starts the development server at `http://localhost:3000`.
 - `/blog`: Long-form articles and updates.
 - `/tutorial`: Guides for adding and managing content.
 - `/src/components`: Custom React components used across the garden.
+- `/src/client`: Docusaurus client modules (theme transitions, bone registry).
 - `/static/fg/chars`: XML data files for Fantasy Grounds characters.
+- `/static/ai-dashboard`: AI dashboard data and enriched JSON cache.
+- `/memory`: Persistent memory and context for AI agents.
+- `/.agents`: Agent skills, ADRs, and domain context.
 
 ---
 
@@ -114,6 +118,21 @@ This starts the development server at `http://localhost:3000`.
 | :--- | :--- |
 | `task ai-dashboard:enrich` | Enrich AI dashboard data from npm/GitHub APIs |
 | `task ai-dashboard:force` | Force refresh AI dashboard data (ignore cache) |
+
+### Tech Radar
+
+| Task | Description |
+| :--- | :--- |
+| `task tech-radar:update` | Scan project and regenerate tech-radar stack.json |
+
+### PR Workflow
+
+| Task | Description |
+| :--- | :--- |
+| `task pr:workflow --title "feat(scope): desc"` | Automate PR creation (check, branch, commit, push, PR, watch) |
+
+> [!TIP]
+> Use `ENRICH=true` with `pr:workflow` to include AI dashboard enrichment. See `AGENTS.md` for full options.
 
 ### Search Indexing
 
