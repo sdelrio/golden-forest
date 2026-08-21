@@ -22,7 +22,7 @@ OmniRoute aggregates the documented free tiers of **340+ providers** (across 42 
 ## Core Advantages & Efficiency
 
 - **Zero-Config Start**: Install and run. The `auto` model combo works immediately with pre-wired free providers (OpenCode Free, Felo). No API keys needed to begin.
-- **340+ Providers, 90+ Free**: Every major lab (OpenAI, Anthropic, Gemini, DeepSeek, Mistral, Groq, xAI, Qwen, Meta Llama, and 220+ more) through one endpoint.
+- **340+ Providers, 90+ Free**: Every major lab (OpenAI, Anthropic, Google (Gemini), DeepSeek, Mistral, Groq, xAI, Qwen, Meta Llama, and 220+ more) through one endpoint.
 - **Automatic Fallback**: When a provider hits rate limits or goes down, OmniRoute silently slides to the next one in milliseconds. Four tiers cascade: Subscription-based (Anthropic, OpenAI, Google) → API Key (DeepSeek, Groq, xAI) → Cheap (GLM, MiniMax) → Free (Kiro, Qoder, Pollinations).
 - **Token Compression**: Stacked RTK + Caveman engines compress tokens 78-95% (average 89%) on repetitive tool output, shell logs, and test results.
 - **33+ Compatible CLIs**: Works with Claude Code, Codex, Cursor, Cline, Kilo Code, OpenCode, Aider, Goose, Continue, and many more.
