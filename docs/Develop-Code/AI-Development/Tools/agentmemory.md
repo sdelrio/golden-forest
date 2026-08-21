@@ -1,7 +1,6 @@
 ---
 title: "AgentMemory"
 description: "Persistent memory runtime for AI coding agents. 95.2% retrieval accuracy, 92% fewer tokens per session, zero external databases. Works with every MCP-compatible agent."
-sidebar_position: 10
 last_updated: 2026-07-02
 tags: [ai, tools, memory, mcp, claude-code, cursor, codex, agent]
 ---

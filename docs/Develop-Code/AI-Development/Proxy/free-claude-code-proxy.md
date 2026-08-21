@@ -1,7 +1,6 @@
 ---
 title: "Free Claude Code Proxy"
 description: "A high-performance drop-in proxy that routes Claude Code CLI traffic to 17+ alternative, free, or local LLM providers."
-sidebar_position: 20
 tags: [ai, tools, proxy, claude-code, free-claude-code, gemini, openrouter, local-llm, ollama, developer-tools]
 ---
 

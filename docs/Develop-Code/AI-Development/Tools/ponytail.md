@@ -1,7 +1,6 @@
 ---
 title: "Ponytail"
 description: "Ponytail is an agent plugin that teaches your AI coding agent to write the least code that works - cutting tokens, cost, and latency while keeping safety intact."
-sidebar_position: 120
 tags: ["ponytail", "ai-agent", "yagni", "token-efficiency", "claude-code", "opencode"]
 ---
 

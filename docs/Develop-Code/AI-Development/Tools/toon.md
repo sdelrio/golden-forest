@@ -1,7 +1,6 @@
 ---
 title: "TOON: Token-Oriented Object Notation"
 description: "Token-Oriented Object Notation (TOON) is a compact, human-readable data format specifically designed as an efficient encoding layer for Large Language Models (LLMs)."
-sidebar_position: 150
 tags: [toon, json, yaml, llm, tokens, optimization]
 sidebar_label: "TOON"
 ---

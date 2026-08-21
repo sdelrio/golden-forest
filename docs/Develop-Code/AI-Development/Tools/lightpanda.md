@@ -1,7 +1,6 @@
 ---
 title: "Lightpanda Headless Browser"
 description: "Optimization and integration guide for Lightpanda, a high-concurrency headless browser built in Zig for AI agents and web automation."
-sidebar_position: 60
 tags: [ai, tools, web-scraping, headless-browser, zig, mcp, obscura]
 ---
 

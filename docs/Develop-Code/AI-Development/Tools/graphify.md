@@ -1,7 +1,6 @@
 ---
 title: "Graphify"
 description: "Transform any folder or repository into a navigable knowledge graph with 71.5x token efficiency and MCP support."
-sidebar_position: 50
 tags: [ai, tools, knowledge-graph, obsidian, claude-code, mcp, cursor]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "OpenWiki"
 description: "An open-source CLI that generates and maintains wiki documentation for codebases, keeping coding agents in sync with your repo."
-sidebar_position: 110
 tags: [ai, tools, documentation, agents, openwiki, langchain, github-actions]
 ---
 

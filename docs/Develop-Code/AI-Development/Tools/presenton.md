@@ -1,7 +1,6 @@
 ---
 title: "Presenton: Open-Source AI Presentation Generator"
 description: "Turn prompts and documents into fully editable PPTX and PDF presentations. Self-hosted, Docker-supported, and bypasses costly SaaS subscriptions by using your own AI API keys."
-sidebar_position: 130
 tags: [ai, tools, presentation, pptx, pdf, self-hosted, ollama, docker, open-source]
 ---
 
@@ -169,5 +168,5 @@ Presenton supports both high-speed cloud providers and fully private local backe
 
 - [Presenton Official Site](https://presenton.ai/)
 - [Presenton GitHub Repository](https://github.com/presenton/presenton)
-- [Free Claude Code Proxy](./claude-code-proxy.md)
-- [MarkItDown](./mark-it-down.md)
+- [Free Claude Code Proxy](./free-claude-code-proxy.md)
+- [MarkItDown](./markitdown.md)

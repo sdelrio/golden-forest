@@ -1,7 +1,6 @@
 ---
 title: "FreeLLMAPI"
 description: "OpenAI-compatible proxy that stacks the free tiers of 29 LLM providers behind one endpoint, giving you ~4B tokens/month for free."
-sidebar_position: 40
 tags: [ai, tools, llm, proxy, openai, docker, free-tier, routing]
 sidebar_label: "FreeLLMAPI"
 ---
@@ -41,28 +40,20 @@ flowchart TB
     Client["Client Layer<br/>(OpenAI / Anthropic SDKs)"]
 
     subgraph FreeLLMAPI["FreeLLMAPI Server"]
+        direction LR
         Router["Smart Router<br/>(6 strategies)"]
         Tracker["Per-Key Rate Tracker"]
         Encrypt["AES-256-GCM<br/>Key Vault"]
-        Dashboard["Admin Dashboard<br/>(React UI)"]
-        Router --> Tracker
-        Tracker --> Encrypt
-        Dashboard --> Router
+        Router --> Tracker --> Encrypt
     end
 
     Client <-->|"OpenAI-compatible /v1"| FreeLLMAPI
 
-    subgraph Providers["Free Tier Providers"]
-        Google["Google<br/>(Gemini)"]
-        Groq["Groq<br/>(Llama)"]
-        Cerebras["Cerebras"]
-        Mistral["Mistral"]
-        OpenRouter["OpenRouter"]
-        Cloudflare["Cloudflare<br/>(Workers AI)"]
-        Cohere["Cohere"]
-        NVIDIA["NVIDIA<br/>(NIM)"]
-        HuggingFace["HuggingFace"]
-        Custom["Custom<br/>(Ollama, vLLM, ...)"]
+    subgraph Providers["Free Tier Providers (29)"]
+        direction LR
+        G["Google Gemini"]
+        GR["Groq + Cerebras"]
+        O["Others + Custom<br/>(Ollama, vLLM, ...)"]
     end
 
     Router -->|"HTTPS (outbound)"| Providers

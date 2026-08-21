@@ -15,6 +15,9 @@
 .env.test.local
 .env.production.local
 
+# Temp files (scripts use repo-local tmp/)
+tmp/
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
