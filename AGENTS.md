@@ -23,6 +23,11 @@ When I correct you, or you catch yourself making a mistake: before continuing, a
 - **Why it matters**: `task check` only validates MDX syntax — it does not verify that all components used in JSX are actually imported. `task build` (SSG) catches these at render time.
 - **Rule**: After writing any article, always run `task build` as a final validation step. If it fails, look for missing component imports (`Tabs`, `TabItem`, etc.).
 
+### Always add sidebar_position to new Tools articles
+- **When**: 2026-08-21 - New `freellmapi.md` appeared before `codegraph.md` in the sidebar despite alphabetical title ordering.
+- **Why it matters**: Docusaurus defaults to filename order when no `sidebar_position` is set. Since filenames don't match titles, the sidebar becomes unordered. Explicit `sidebar_position` (spaced by 10) enforces alphabetical-by-title order and allows future insertions.
+- **Rule**: When creating a new article under `docs/Develop-Code/AI-Development/Tools/`, always add `sidebar_position: N` to its frontmatter. Check existing articles' positions and pick the correct slot alphabetically by title. Use increments of 10 (10, 20, 30...) to leave room for future insertions.
+
 ### Never use em dash
 - **Rule**: Never use the em dash "—". Use plain dash "-" instead.
 
