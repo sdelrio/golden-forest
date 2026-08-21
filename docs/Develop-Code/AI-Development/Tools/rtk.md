@@ -1,6 +1,7 @@
 ---
 title: "RTK (Rust Token Killer)"
 description: "Token optimization middleware that reduces LLM consumption by up to 90% for AI coding agents like Claude Code and OpenCode."
+sidebar_position: 140
 tags: [ai, tools, rtk, tokens, optimization, rust, claude-code, opencode]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Presenton: Open-Source AI Presentation Generator"
 description: "Turn prompts and documents into fully editable PPTX and PDF presentations. Self-hosted, Docker-supported, and bypasses costly SaaS subscriptions by using your own AI API keys."
+sidebar_position: 130
 tags: [ai, tools, presentation, pptx, pdf, self-hosted, ollama, docker, open-source]
 ---
 

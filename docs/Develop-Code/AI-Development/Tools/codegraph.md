@@ -1,6 +1,7 @@
 ---
 title: "Codegraph"
-description: "Pre-indexed semantic code graph for AI agents. Reduce tool calls by up to 92% and speed up code exploration by 71% — 100% local and open source."
+description: "Pre-indexed semantic code graph for AI agents. Reduce tool calls by up to 92% and speed up code exploration by 71% - 100% local and open source."
+sidebar_position: 30
 tags: [ai, tools, code-graph, mcp, claude-code, cursor, codex, opencode]
 ---
 
