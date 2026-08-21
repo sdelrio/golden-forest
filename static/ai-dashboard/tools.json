@@ -968,5 +968,35 @@
       "opencode"
     ],
     "docPath": "/docs/Develop-Code/AI-Development/Skills/webwright"
+  },
+  {
+    "id": "freellmapi",
+    "name": "FreeLLMAPI",
+    "description": "OpenAI-compatible proxy that stacks free tiers of 29 LLM providers behind one endpoint, giving ~4B tokens/month with smart routing and automatic failover.",
+    "category": "proxy",
+    "github": "https://github.com/tashfeenahmed/freellmapi",
+    "npm": null,
+    "pip": null,
+    "install": "curl -fsSL https://freellmapi.co/install.sh | bash",
+    "site": "https://freellmapi.co",
+    "license": "MIT",
+    "tags": [
+      "llm",
+      "proxy",
+      "openai",
+      "free-tier",
+      "routing",
+      "docker",
+      "failover"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "codex",
+      "cursor",
+      "opencode",
+      "aider",
+      "cline"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Tools/freellmapi"
   }
 ]
