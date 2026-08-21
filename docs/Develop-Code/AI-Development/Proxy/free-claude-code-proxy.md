@@ -245,5 +245,5 @@ Append the proxy environment variables under the `acp.registry.claude-acp` confi
 
 - [Free Claude Code GitHub Repository](https://github.com/Alishahryar1/free-claude-code) — Source code, updates, and voice setup scripts.
 - [Anthropic Claude Code CLI Documentation](https://anthropic.com/claude/code) — Standard client controls and slash commands.
-- [RTK (Rust Token Killer)](./rtk.md) — Optimize context window size by filtering CLI output before sending it to the proxy.
-- [Graphify Knowledge Graph](./graphify.md) — Map out complex directory structures for token-efficient agent referencing.
+- [RTK (Rust Token Killer)](../Tools/rtk.md) — Optimize context window size by filtering CLI output before sending it to the proxy.
+- [Graphify Knowledge Graph](../Tools/graphify.md) — Map out complex directory structures for token-efficient agent referencing.

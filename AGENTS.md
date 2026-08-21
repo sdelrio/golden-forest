@@ -11,7 +11,7 @@ When I correct you, or you catch yourself making a mistake: before continuing, a
 ### Always update AI Dashboard when adding articles under `docs/Develop-Code/AI-Development/`
 - **When**: 2026-07-26 — added `opensre.md` under `docs/Develop-Code/AI-Development/Workflows/` without updating the AI Dashboard.
 - **Why it matters**: `static/ai-dashboard/tools.json` is the source of truth for the AI Dashboard. Articles under `docs/Develop-Code/AI-Development/` **must** also be added there, then run `task ai-dashboard:enrich` to enrich the entry.
-- **Rule**: Every new article in `docs/Develop-Code/AI-Development/` → add entry to `tools.json` → run `task ai-dashboard:enrich`.
+- **Rule**: Every new article in `docs/Develop-Code/AI-Development/` → use `./scripts/ai-dashboard-add.sh` to add entry to `tools.json` → run `task ai-dashboard:enrich`.
 
 ### Verify final file location after write-article
 - **When**: 2026-07-26 — `write-article` task created `opensre-agents.md` in `Skills-and-Agents/Agents/` instead of the intended `Workflows/` folder.
@@ -22,6 +22,11 @@ When I correct you, or you catch yourself making a mistake: before continuing, a
 - **When**: 2026-07-26 — `opensre.md` used `<Tabs>/<TabItem>` without importing them; `task check` passed but `task build` failed at SSG.
 - **Why it matters**: `task check` only validates MDX syntax — it does not verify that all components used in JSX are actually imported. `task build` (SSG) catches these at render time.
 - **Rule**: After writing any article, always run `task build` as a final validation step. If it fails, look for missing component imports (`Tabs`, `TabItem`, etc.).
+
+### Tools articles filenames must match titles for alphabetical sidebar ordering
+- **When**: 2026-08-21 - Docusaurus sidebar defaults to filename order when no `sidebar_position` is set. Filenames that don't match titles cause unordered sidebar.
+- **Why it matters**: Renaming files to match titles (e.g. `claude-code-proxy.md` -> `free-claude-code-proxy.md`) lets Docusaurus auto-sort alphabetically without any `sidebar_position` frontmatter.
+- **Rule**: When creating a new article under `docs/Develop-Code/AI-Development/Tools/`, name the file to match the title alphabetically (lowercase, hyphens for spaces). Do NOT add `sidebar_position` to frontmatter. If an existing file doesn't match its title, rename it and update any cross-references.
 
 ### Never use em dash
 - **Rule**: Never use the em dash "—". Use plain dash "-" instead.
@@ -177,7 +182,14 @@ The dark/light mode toggle uses the **View Transitions API** for a circular-mask
 - **Static Assets**: `static/fg/chars/` contains XML character data for the D&D tools.
 - **Agent Memory**: `memory/` — Persistent memory for agents. Load `memory/MEMORY.md` every session for the index. Feature tracking, decisions, and project context live here. See [memory/MEMORY.md](memory/MEMORY.md).
 - **Memory Job References**: When referencing jobs from `memory/MEMORY.md` in PR descriptions, commit messages, or comments, use the format `<number>.` (e.g., `9.`) — **never** `#<number>` (e.g., not `#9`). GitHub auto-links `#N` to issues/PRs, creating false references.
-- **AI Dashboard**: Any new article under `docs/Develop-Code/AI-Development/` **must** also be added to `static/ai-dashboard/tools.json`. Run `task ai-dashboard:enrich` after adding the entry. See the schema in the existing entries for the required fields (`id`, `name`, `description`, `category`, `github`, `npm`, `pip`, `install`, `site`, `license`, `tags`, `supportedBy`, `docPath`).
+- **AI Dashboard**: Any new article under `docs/Develop-Code/AI-Development/` **must** also be added to `static/ai-dashboard/tools.json`. Use `jq`-based scripts (not raw file editing):
+  - `./scripts/ai-dashboard-add.sh '<json>'` - Add a new entry (validates, deduplicates, sorts by id)
+  - `./scripts/ai-dashboard-update.sh <id> <field> <value>` - Update a field by tool id
+  - `./scripts/ai-dashboard-validate.sh` - Validate structure (required fields, unique ids, valid categories)
+  - `./scripts/ai-dashboard-list.sh [category|id]` - List tools or show one entry
+  - Schema: `static/ai-dashboard/tools-schema.json`
+  - After adding/updating, run `task ai-dashboard:enrich` to regenerate `tools-enriched.json`.
+- **Temp files**: All scripts must use `tmp/` at the repo root (not `/tmp`). Create with `mkdir -p "$REPO_ROOT/tmp"`. This directory is gitignored.
 - **Algolia Search**: See [ALGOLIA.md](file:///Users/sdelrio/github/sdelrio/golden-forest/ALGOLIA.md) for indexing configuration, record count analysis, and reduction strategies. Config: `.algolia.docsearch.json`.
 - **Git**: Use **Conventional Commits** (`feat(scope): desc`, `fix: desc`, `docs: desc`).
 - **PR Descriptions**: Do not wrap filenames or code in backticks inside bold markers — GitHub strips backticks inside `**`, leaving empty `****`. Use bold plain text filenames instead (e.g., `**.cursorrules**`, not `**`.cursorrules`**`).

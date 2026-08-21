@@ -1,6 +1,6 @@
 ---
 title: MarkItDown
-description: Microsoft's lightweight Python utility for converting Office documents, PDFs, images, audio, and more into Markdown — optimizing content for LLM consumption and reducing token input.
+description: Microsoft's lightweight Python utility for converting Office documents, PDFs, images, audio, and more into Markdown - optimizing content for LLM consumption and reducing token input.
 category: "AI Tools / Data Processing"
 labels: ["Markdown", "Python", "LLM", "Data Processing", "Microsoft"]
 tags:

@@ -149,7 +149,10 @@ if [ ${#URLS[@]} -eq 0 ]; then
 fi
 
 # --- Run Playwright tests via Node.js ---
-TEST_SCRIPT=$(mktemp /tmp/test-pages-XXXXX.cjs)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(dirname "$SCRIPT_DIR")"
+mkdir -p "$REPO_ROOT/tmp"
+TEST_SCRIPT=$(mktemp "$REPO_ROOT/tmp/test-pages-XXXXX.cjs")
 cat > "$TEST_SCRIPT" << 'NODESCRIPT'
 const { chromium } = require('playwright');
 
@@ -223,9 +226,7 @@ NODESCRIPT
 
 echo ""
 echo -e "${BLUE}Running Playwright tests against lightpanda...${NC}"
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
-NODE_PATH="${PROJECT_ROOT}/node_modules" DEV_PORT=$DEV_PORT LP_PORT=$LP_PORT node "$TEST_SCRIPT" "${URLS[@]}"
+NODE_PATH="${REPO_ROOT}/node_modules" DEV_PORT=$DEV_PORT LP_PORT=$LP_PORT node "$TEST_SCRIPT" "${URLS[@]}"
 TEST_EXIT=$?
 
 rm -f "$TEST_SCRIPT"

@@ -168,5 +168,5 @@ Presenton supports both high-speed cloud providers and fully private local backe
 
 - [Presenton Official Site](https://presenton.ai/)
 - [Presenton GitHub Repository](https://github.com/presenton/presenton)
-- [Free Claude Code Proxy](./claude-code-proxy.md)
-- [MarkItDown](./mark-it-down.md)
+- [Free Claude Code Proxy](../Proxy/free-claude-code-proxy.md)
+- [MarkItDown](./markitdown.md)

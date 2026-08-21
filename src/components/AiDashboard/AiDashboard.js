@@ -14,6 +14,7 @@ const CATEGORIES = [
   { id: 'agents', label: 'Agents', icon: 'mdi:robot' },
   { id: 'skills', label: 'Skills', icon: 'mdi:school' },
   { id: 'tools', label: 'Tools', icon: 'mdi:hammer-wrench' },
+  { id: 'proxy', label: 'Proxy', icon: 'mdi:swap-horizontal' },
   { id: 'mcp', label: 'MCP', icon: 'mdi:puzzle' },
   { id: 'models', label: 'Models', icon: 'mdi:brain' },
   { id: 'browsers', label: 'Browsers', icon: 'mdi:web' },
