@@ -7,161 +7,101 @@ sidebar_label: "Chris Titus AI Workflow"
 
 import Card from '@site/src/components/Card/Card';
 import CardGroup from '@site/src/components/Card/CardGroup';
-import Steps from '@site/src/components/Steps/Steps';
-import Step from '@site/src/components/Steps/Step';
 
 # Chris Titus AI Workflow: Slow Is Smooth, Smooth Is Fast
 
-Chris Titus Tech's workflow ([My AI Coding Workflow That Actually Works](https://christitus.com/my-ai-workflow/)) flips the usual AI coding approach: instead of one giant looping prompt that generates demos, it spends **more compute on review and validation than on generation**. The result is maintainable software, not a demo. His philosophy in one line: "Slow is smooth, and smooth is fast."
+Chris Titus Tech's workflow flips the usual approach: instead of one giant looping prompt that generates demos, it spends **more compute on review than on generation**. The result is maintainable software.
 
-## The Plain-Text Guardrails
-
-Everything lives in the [titus-ai repository](https://github.com/ChrisTitusTech/titus-ai) as plain text files the agent reads every session:
-
-| File | Purpose |
-|------|---------|
-| `AGENTS.md` | How the agent works: global rules of engagement |
-| `SPEC.md` | What the project must do |
-| `ROADMAP.md` | Phases with exit criteria |
-| `TASKS.md` | Small jobs in the current phase |
-| Skills | Reusable knowledge the agent loads on demand |
-
-### Global Instructions
-
-The agent instructions are short and strict:
-
-- Keep changes focused - no drive-by refactors
-- Skip filler words in responses
-- Preserve unrelated work untouched
-- Run required checks before declaring done
-- Stop before any destructive action
-
-## Define Success Before Writing Code
-
-The spec is where quality starts. A good spec includes:
-
-- **Problem and users** - who this is for and why
-- **Required behavior** - observable, testable outcomes
-- **Architecture** - how components fit together
-- **Security and privacy requirements** - non-negotiable constraints
-- **Pinned tool and dependency versions** - LLMs pick old versions from training data unless you pin them
-- **Non-goals** - explicitly out of scope
-- **Acceptance criteria** - observable conditions that define done
-
-:::warning
-Without pinned versions, models will happily install packages from years-old training data. Always specify exact versions in your spec.
-:::
-
-## Build the Test Harness First
-
-Before implementing any feature, scaffold the gates:
-
-1. Unit tests
-2. Linting
-3. Production build
-4. Smoke tests
-
-These gates belong in the repository instructions, not in your head or in chat prompts. The agent then runs them automatically on every change.
-
-## One Small Reviewable Change per PR
-
-Each pull request implements exactly one small change. Small PRs are faster to understand, cheaper to review, and easier to revert.
-
-:::info[Example]
-Adding an audio-percentage display next to the volume icon in his DWM desktop (via Quickshell) was its own tiny PR - one feature, one review, one merge.
-:::
+The whole workflow in one diagram:
 
 ```mermaid
 flowchart TD
-    GI["Global Instructions<br/>& Skills"] --> RS["Repo Spec<br/>/ Roadmap"]
-    RS --> TH["Test Scaffolding"]
-    TH --> IP["One Implementation<br/>Phase"]
-    IP --> LT["Local Tests<br/>& Review"]
-    LT --> PR["PR & CI"]
-    PR --> IR["Independent<br/>Review"]
-    IR --> FR["Fix / Retest"]
-    FR --> MV["Manual<br/>Verification"]
-    MV --> MG(("Merge"))
+    G["Guardrails<br/>plain-text rules"] --> S["Spec & Roadmap<br/>define done first"]
+    S --> T["Test Harness<br/>before any feature"]
+    T --> I["One Small Change<br/>one PR"]
+    I --> R["Review Harder<br/>than you generate"]
+    R --> C["CI Gates<br/>security + deps"]
+    C --> H(("Human<br/>Merge"))
 
-    style MG fill:#1b5e20,stroke:#4caf50,color:#fff
+    style H fill:#1b5e20,stroke:#4caf50,color:#fff
+    style G fill:#0d47a1,stroke:#42a5f5,color:#fff
 ```
 
-## Review More Than You Generate
+## 1. Plain-Text Guardrails
 
-This is the core inversion: spend more effort reviewing than writing code.
+Everything lives in the [titus-ai repository](https://github.com/ChrisTitusTech/titus-ai) as plain text files:
 
-<Steps>
-  <Step title="Local Review">
-    Run CodeRabbit locally before opening the PR. Catch obvious issues early.
-  </Step>
-  <Step title="Independent Reviewer">
-    Use a second tool (Codex, Claude) or a human reviewer with fresh context. The coding session should never grade its own work: an agent reviewing its own diff inherits the same blind spots and tends to confirm its own choices.
-  </Step>
-  <Step title="Feedback Loop">
-    For each finding: understand it, fix it or explain why not, update tests, rerun validation, push, wait for CI, resolve the thread.
+| File | Purpose |
+|------|---------|
+| `AGENTS.md` | How the agent works |
+| `SPEC.md` | What the project must do |
+| `ROADMAP.md` | Phases with exit criteria |
+| `TASKS.md` | Small jobs in current phase |
 
-    ```text
-    review feedback
-      -> understand the issue
-      -> fix or explain
-      -> update the test
-      -> rerun local validation
-      -> push
-      -> wait for fresh CI and review
-      -> resolve the thread
-    ```
+Rules are cheap: dislike one? Delete it. Agent repeats a mistake? Add a sharper rule. The files serve you, not the other way around.
 
-    Repeat until no actionable findings remain.
-  </Step>
-</Steps>
+## 2. Define Done Before Writing Code
 
-## Security and Dependency Gates in CI
+```mermaid
+mindmap
+  root((SPEC.md))
+    Problem and users
+    Required behavior
+    Architecture
+    Security requirements
+    Pinned versions
+    Non-goals
+    Acceptance criteria
+```
 
-Every PR update runs automated checks:
-
-- Dependabot for dependency updates
-- CodeQL for static security analysis
-- Dependency review for supply-chain risk
-- Required CI checks - nothing merges without green
-
-:::warning[Green checks go stale]
-CI must run on **every** PR update. A green check from an older commit proves nothing about the latest review fix - only the newest commit's results count.
+:::warning
+Pin dependency versions in the spec. LLMs install whatever appeared most often in their training data - usually years old.
 :::
 
-## Keep the Human Merge Gate
+## 3. Tests Before Features
 
-No auto-merge. Before merging, verify manually:
+Before any implementation, scaffold how the project will be tested: unit tests, linting, production build, smoke tests. If the agent cannot tell whether a change worked, writing more code only adds uncertainty.
 
-- The diff contains only the intended change
-- Tests pass on the latest commit
-- Review is complete and all threads are resolved
-- Docs match behavior
-- It actually works in the real environment
+## 4. One Small PR
 
-## Cost Is Real
+Each pull request implements exactly one small change. Small PRs are faster to understand, cheaper to review, easier to revert. If reviewing takes twenty minutes, split the work earlier.
 
-Expect to burn more compute on review and validation than on code generation. That is the point. Tools are replaceable - the gates are not. Swap Claude for Codex or Cursor; the workflow survives because the guardrails live in plain text and CI, not in any specific model. That portability is deliberate: any agent that reads `AGENTS.md` picks up the same rules, skills, and gates, so switching harnesses (or mixing cloud and local models) costs nothing in process.
+## 5. Review More Than You Generate
 
-## Key Takeaways
+```mermaid
+flowchart LR
+    A[Review feedback] --> B[Understand]
+    B --> C[Fix or explain]
+    C --> D[Update test]
+    D --> E[Rerun checks]
+    E --> F[Push]
+    F --> A
+```
 
-- **Spec first, pin versions**: LLMs default to stale dependencies from training data.
-- **Tests before features**: The harness is the safety net for everything after.
-- **Small PRs win**: Faster reviews, easier reverts, cleaner history.
-- **Review beats generation**: Independent context catches what the authoring session cannot see.
-- **Humans merge**: Automation gates, humans decide.
+Two rules make this work:
+
+- **Fresh context**: the reviewer (CodeRabbit, another agent, or a human) never grades its own work
+- **Human decides**: fix the root cause or explain why not - never blindly accept AI suggestions
+
+## 6. CI Gates + Human Merge
+
+CI runs Dependabot, CodeQL, and dependency review on **every** PR update - an old green check proves nothing. Before merging, verify by hand: diff contains only the intended change, tests pass on the latest commit, docs match behavior, and it works in the real environment.
+
+## Why It Works
+
+- **Spec first**: acceptance criteria tell the agent when to stop
+- **Small PRs win**: fast reviews, easy reverts
+- **Humans merge**: automation gates, humans decide
+- **Tools are replaceable, gates are not** - plain text files mean any agent can pick up the same process
 
 <CardGroup cols={3}>
   <Card title="Source Article" icon="mdi:newspaper" href="https://christitus.com/my-ai-workflow/">
-    My AI Coding Workflow That Actually Works - full write-up
+    Full write-up with all details
   </Card>
   <Card title="Video Walkthrough" icon="mdi:play-circle" href="https://www.youtube.com/watch?v=wcRR5P0S2">
-    Chris walks through the entire workflow on YouTube
+    Chris walks through the entire workflow
   </Card>
   <Card title="titus-ai Repository" icon="mdi:github" href="https://github.com/ChrisTitusTech/titus-ai">
-    AGENTS.md, SPEC.md, ROADMAP.md, TASKS.md templates and skills
+    Ready-to-copy guardrail files
   </Card>
 </CardGroup>
-
-## References
-
-All three sources are linked in the cards above: the original article, the YouTube walkthrough, and the titus-ai repository with the ready-to-copy guardrail files.
