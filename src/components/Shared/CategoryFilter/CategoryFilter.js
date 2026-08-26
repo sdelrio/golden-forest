@@ -2,11 +2,12 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './CategoryFilter.module.css';
 
-export default function CategoryFilter({ categories, selected, onChange, counts }) {
+export default function CategoryFilter({ categories, selected, onChange, counts, hideEmpty = false }) {
   return (
     <div className={styles.filterBar}>
       {categories.map((cat) => {
         const count = cat.id === 'all' ? counts.total : (counts[cat.id] || 0);
+        if (hideEmpty && cat.id !== 'all' && count === 0) return null;
         return (
           <button
             key={cat.id}
