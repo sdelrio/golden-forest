@@ -6,7 +6,7 @@ agent: build
 Create GitHub issues from a reviewed list of fixes/improvements/features (e.g. the output of `/review-project`).
 
 ## Instructions
-1. Read `.agents/issue-tracker.md` for conventions.
+1. Read `.agents/triage-labels.md` for the label vocabulary and `.agents/issue-tracker.md` for conventions.
 2. Collect the candidate items from `$ARGUMENTS`, or if empty, ask the user to paste the reviewed list (e.g. from `/review-project` output) or point to the file containing it.
 3. For each item, draft a GitHub issue:
    - **Title**: short imperative summary (`feat: ...`, `fix: ...`, `chore: ...` prefix matching the change type).

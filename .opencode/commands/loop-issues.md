@@ -10,12 +10,12 @@ Loop over open GitHub issues (optional `--label` filter and `--limit`), addressi
 2. Parse `$ARGUMENTS`:
    - `--label <label>`: only process issues with this label (e.g. `ready-for-agent`).
    - `--limit <n>`: max issues to process per run (default: 3).
-3. List matching open issues:
+3. List matching open issues (omit the `--label` flag entirely if not provided):
    ```
-   gh issue list --state open --label "<label>" --limit <n> \
-     --json number,title,labels --jq '[.[] | {number, title}]'
+   gh issue list --state open [--label "<label>"] --limit <n> \
+     --json number,title,labels,assignees --jq '[.[] | {number, title}]'
    ```
-   - Skip issues that are blocked by an open dependency or already have an assignee other than you.
+   - Skip issues that already have an assignee other than you.
    - If none match, report and stop.
 4. For each issue, one at a time and in order:
    a. Claim it: `gh issue edit <n> --add-assignee @me`.
