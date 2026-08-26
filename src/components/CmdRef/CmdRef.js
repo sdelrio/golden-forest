@@ -92,6 +92,7 @@ function CmdRefInternal({ tool }) {
         <input
           className={styles.searchInput}
           type="text"
+          aria-label="Search commands, tools, and tags"
           placeholder="Search commands, tools, tags..."
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}

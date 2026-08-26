@@ -111,12 +111,14 @@ function CharSearchInternal() {
             <div className={styles.toolbar}>
                 <input
                     type="text"
+                    aria-label="Search characters by name"
                     placeholder="Search by name..."
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
                     className={clsx(styles.searchInput, selectedChar && styles.hiddenWhenSelected)}
                 />
                 <select
+                    aria-label="Filter characters by class"
                     value={selectedClass}
                     onChange={(e) => setSelectedClass(e.target.value)}
                     className={clsx(styles.classSelect, selectedChar && styles.hiddenWhenSelected)}
@@ -143,6 +145,7 @@ function CharSearchInternal() {
                     key={ch.filename}
                     onClick={() => handleSelectChar(ch)}
                     className={styles.card}
+                    type="button"
                 >
                     <div className={styles.cardName}>{ch.name}</div>
                     <div className={styles.cardMeta}>

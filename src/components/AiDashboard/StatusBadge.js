@@ -25,7 +25,12 @@ export default function StatusBadge({ score, size = 'md' }) {
   const svgSize = radius * 2;
 
   return (
-    <div className={clsx(styles.badge, styles[size])} title={`Health: ${score}/100`}>
+    <div
+      className={clsx(styles.badge, styles[size])}
+      title={`Health: ${score}/100`}
+      role="img"
+      aria-label={`Health score: ${score} out of 100 (${level})`}
+    >
       <svg width={svgSize} height={svgSize} viewBox={`0 0 ${svgSize} ${svgSize}`}>
         <circle
           cx={radius}

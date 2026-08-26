@@ -81,6 +81,7 @@ function MermaidPlaygroundInternal() {
         <input
           className={styles.searchInput}
           type="text"
+          aria-label="Search diagram templates"
           placeholder="Search templates..."
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}

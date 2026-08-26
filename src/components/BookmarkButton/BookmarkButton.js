@@ -25,6 +25,7 @@ export default function BookmarkButton({ slug, className }) {
       onClick={toggle}
       title={bookmarked ? 'Remove from reading list' : 'Add to reading list'}
       aria-label={bookmarked ? 'Remove from reading list' : 'Add to reading list'}
+      aria-pressed={bookmarked}
     >
       <Icon icon={bookmarked ? 'mdi:star' : 'mdi:star-outline'} width={18} />
       <span className={styles.label}>

@@ -118,6 +118,7 @@ export default function LiveEditor({ template, onBack }) {
             </div>
             <textarea
               className={styles.editor}
+              aria-label="Mermaid diagram code editor"
               value={code}
               onChange={(e) => setCode(e.target.value)}
               onScroll={handleEditorScroll}
