@@ -35,6 +35,7 @@ function EntryCard({ entry, onToggleBookmark, onMarkRead, onRemove }) {
           type="button"
           className={clsx(styles.actionBtn, entry.bookmarked && styles.actionActive)}
           onClick={() => onToggleBookmark(entry.slug)}
+          aria-pressed={entry.bookmarked}
         >
           {entry.bookmarked ? '\u2605 Saved' : '\u2606 Save'}
         </button>
@@ -42,6 +43,7 @@ function EntryCard({ entry, onToggleBookmark, onMarkRead, onRemove }) {
           type="button"
           className={clsx(styles.actionBtn, entry.read && styles.actionActive)}
           onClick={() => onMarkRead(entry.slug, !entry.read)}
+          aria-pressed={entry.read}
         >
           {entry.read ? '\u2713 Read' : 'Mark Read'}
         </button>
@@ -49,6 +51,7 @@ function EntryCard({ entry, onToggleBookmark, onMarkRead, onRemove }) {
           type="button"
           className={clsx(styles.actionBtn, styles.removeBtn)}
           onClick={() => onRemove(entry.slug)}
+          aria-label={`Remove ${entry.title} from reading list`}
         >
           Remove
         </button>
@@ -121,6 +124,7 @@ export default function ReadingList() {
             <input
               type="text"
               className="shared-search-input"
+              aria-label="Search reading list"
               placeholder="Search title or description..."
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
@@ -140,6 +144,7 @@ export default function ReadingList() {
                 ref={fileInputRef}
                 type="file"
                 accept=".json"
+                aria-label="Import reading list from JSON file"
                 onChange={handleImport}
                 style={{ display: 'none' }}
               />

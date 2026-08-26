@@ -19,6 +19,11 @@
   transform: translateY(-2px);
 }
 
+.card:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
 [data-theme='dark'] .card {
   background: var(--ifm-card-background-color, #1a1612);
   border-color: var(--ifm-color-emphasis-300);

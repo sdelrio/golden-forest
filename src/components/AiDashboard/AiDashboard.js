@@ -96,6 +96,7 @@ function AiDashboardInternal() {
           <input
             className={styles.searchInput}
             type="text"
+            aria-label="Search tools, agents, and tags"
             placeholder="Search tools, agents, tags..."
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}

@@ -55,6 +55,7 @@ export default function FeatBrowser({ children }) {
                         <label className={styles.filterLabel}>Level:</label>
                         <select
                             className={styles.selectInput}
+                            aria-label="Filter feats by maximum level"
                             value={filterState.maxLevel}
                             onChange={handleLevelChange}
                         >
@@ -70,6 +71,7 @@ export default function FeatBrowser({ children }) {
                         <label className={styles.filterLabel}>Ability:</label>
                         <select
                             className={styles.selectInput}
+                            aria-label="Filter feats by ability"
                             value={filterState.selectedAbility}
                             onChange={handleAbilityChange}
                         >
@@ -87,6 +89,7 @@ export default function FeatBrowser({ children }) {
                         <label className={styles.filterLabel}>Book:</label>
                         <select
                             className={styles.selectInput}
+                            aria-label="Filter feats by source book"
                             value={filterState.selectedBook}
                             onChange={handleBookChange}
                         >

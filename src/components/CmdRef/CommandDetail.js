@@ -18,7 +18,7 @@ export default function CommandDetail({ command, onClose }) {
   return (
     <div className={styles.overlay} onClick={onClose} role="presentation">
       <div className={styles.panel} onClick={(e) => e.stopPropagation()} role="dialog">
-        <button className={styles.closeBtn} onClick={onClose} type="button" title="Close">
+        <button className={styles.closeBtn} onClick={onClose} type="button" aria-label="Close details">
           <Icon icon="mdi:close" width={18} />
         </button>
 

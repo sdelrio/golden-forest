@@ -108,3 +108,8 @@
 .empty {
   composes: ai-state-empty from '../../css/shared-components.css';
 }
+
+.searchInput:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}

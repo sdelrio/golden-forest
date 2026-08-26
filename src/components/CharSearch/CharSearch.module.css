@@ -200,3 +200,11 @@
     border-color: var(--dnd-parchment-border-gold);
     color: var(--dnd-text-heading);
 }
+
+.searchInput:focus-visible,
+.classSelect:focus-visible,
+.backBtn:focus-visible,
+.card:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
