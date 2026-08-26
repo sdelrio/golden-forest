@@ -51,21 +51,29 @@ export default function LiveEditor({ template, onBack }) {
     }
   }, []);
 
-  const renderThemeRef = useRef(isDark);
+  // Current theme as a ref so debounce/observer callbacks always use the
+  // latest value without re-subscribing or re-debouncing on theme change.
+  const themeRef = useRef(isDark);
+  themeRef.current = isDark;
+  const themeName = () => (themeRef.current ? 'dark' : 'default');
+
+  // Re-render immediately on theme toggle; code edits go through the
+  // debounced effect below, which reads the theme via ref.
+  const prevThemeRef = useRef(isDark);
   useEffect(() => {
-    if (renderThemeRef.current === isDark) return;
-    renderThemeRef.current = isDark;
+    if (prevThemeRef.current === isDark) return;
+    prevThemeRef.current = isDark;
     if (debounceRef.current) clearTimeout(debounceRef.current);
     if (code.trim()) {
       renderMermaid(code, isDark ? 'dark' : 'default');
     }
-  }, [isDark, code, renderMermaid]);
+  }, [isDark]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
       if (code.trim()) {
-        renderMermaid(code, isDark ? 'dark' : 'default');
+        renderMermaid(code, themeName());
       } else {
         setSvg('');
         setError(null);
@@ -74,19 +82,19 @@ export default function LiveEditor({ template, onBack }) {
     return () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
     };
-  }, [code, isDark, renderMermaid]);
+  }, [code, renderMermaid]);
 
   // Re-render on site theme change
   useEffect(() => {
     const observer = new MutationObserver(() => {
-      if (code.trim()) renderMermaid(code, isDark ? 'dark' : 'default');
+      if (code.trim()) renderMermaid(code, themeName());
     });
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ['data-theme'],
     });
     return () => observer.disconnect();
-  }, [code, isDark, renderMermaid]);
+  }, [renderMermaid]);
 
   const lineCount = code.split('\n').length;
 
