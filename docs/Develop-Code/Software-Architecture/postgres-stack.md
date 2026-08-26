@@ -9,10 +9,14 @@ sidebar_label: "Postgres Stack"
 
 There is a growing consolidation trend in software architecture: instead of wiring together Redis, Elasticsearch, Kafka, a vector database, a document store and a cron scheduler, many teams are discovering that a single PostgreSQL instance - plus its extension ecosystem - covers all of those use cases for the vast majority of applications.
 
-The reasoning is simple: most software never reaches enterprise scale. The "boring" relational database that has been battle-tested for over 30 years supports advanced indexing, full-text search, pub/sub, queues, JSON documents, vectors, geospatial queries and scheduled jobs out of the box. Fewer moving parts means fewer failure modes, less operational overhead, lower cost, transactions across all your data, and only one thing to back up, monitor and secure.
+This article is for small-to-mid teams running a single primary database who want fewer moving parts. The reasoning is simple: most software never reaches enterprise scale. The "boring" relational database that has been battle-tested for decades supports advanced indexing, full-text search, pub/sub, queues, JSON documents, vectors, geospatial queries and scheduled jobs out of the box. Fewer moving parts means fewer failure modes, less operational overhead, lower cost, transactions across all your data, and only one thing to back up, monitor and secure.
 
 :::info
 Every feature you consolidate into Postgres removes at least one network hop, one client library, one deployment target and one set of credentials from your system.
+:::
+
+:::info Terminology
+This article uses "PostgreSQL" for the database itself and "Postgres" as the informal shorthand. They refer to the same system.
 :::
 
 ## The Consolidation Map
@@ -23,6 +27,7 @@ Every feature you consolidate into Postgres removes at least one network hop, on
 | Elasticsearch | tsvector + GIN indexes, pg_trgm | Full-text search, fuzzy matching |
 | Kafka / RabbitMQ | SKIP LOCKED, SELECT FOR UPDATE | Durable job queues |
 | Pinecone / vector DBs | pgvector | Embeddings + similarity search |
+| Dedicated vector DBs (e.g. Pinecone) | pgvector | Embeddings + similarity search |
 | MongoDB | JSONB columns | Schemaless documents |
 | Crontab / scheduler | pg_cron | SQL-scheduled jobs |
 | PostGIS-free geo tools | PostGIS | Geospatial queries |
@@ -172,7 +177,7 @@ SELECT cron.schedule(
 );
 ```
 
-## Geospatial: PostGIS
+## Geospatial: Replacing Geo Tools
 
 PostGIS turns Postgres into a full spatial database supporting geometries, spatial indexes, and distance/containment queries.
 
@@ -207,9 +212,20 @@ flowchart TB
 
     subgraph After["Consolidated Stack"]
         APP2["App Server"]
-        APP2 --> PG2["PostgreSQL<br/>UNLOGGED + FTS + SKIP LOCKED<br/>pgvector + JSONB + pg_cron + PostGIS"]
+        APP2 --> PG2["PostgreSQL"]
     end
 ```
+
+The consolidated PostgreSQL instance replaces each external service with a built-in feature or extension:
+
+| Replaced Service | Postgres Feature |
+| :--- | :--- |
+| Redis | UNLOGGED tables, LISTEN/NOTIFY |
+| Elasticsearch | Full-text search (tsvector, GIN) |
+| Kafka / RabbitMQ | SKIP LOCKED job queues |
+| Vector DB | pgvector |
+| MongoDB | JSONB |
+| Cron scheduler | pg_cron |
 
 ## When NOT to Consolidate
 
@@ -227,6 +243,6 @@ The honest rule of thumb: start with just Postgres, and extract a specialized se
 
 ## References
 
-- [Video: Replacing your tech stack with Postgres](https://www.youtube.com/watch?v=TdondBmyNXc)
+- [Video: "I replaced my entire stack with Postgres..." - The Coding Gopher (YouTube)](https://www.youtube.com/watch?v=TdondBmyNXc)
 - [Replace Modern Tech Stack with PostgreSQL - whyboobo.com](https://whyboobo.com/abstract/replace-modern-tech-stack-with-postgresql/)
 - [I replaced most of my tech stack with PostgreSQL - Medium](https://medium.com/@sovannaro/i-replaced-most-of-my-tech-stack-with-postgresql-f275511b914d)
