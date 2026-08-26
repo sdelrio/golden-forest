@@ -25,17 +25,16 @@ This article uses "PostgreSQL" for the database itself and "Postgres" as the inf
 | :--- | :--- | :--- |
 | Redis / Memcached | UNLOGGED tables, LISTEN/NOTIFY | Fast ephemeral storage, pub/sub |
 | Elasticsearch | tsvector + GIN indexes, pg_trgm | Full-text search, fuzzy matching |
-| Kafka / RabbitMQ | SKIP LOCKED, SELECT FOR UPDATE | Durable job queues |
-| Pinecone / vector DBs | pgvector | Embeddings + similarity search |
+| RabbitMQ / SQS | SKIP LOCKED, SELECT FOR UPDATE | Durable job queues |
 | Dedicated vector DBs (e.g. Pinecone) | pgvector | Embeddings + similarity search |
 | MongoDB | JSONB columns | Schemaless documents |
 | Crontab / scheduler | pg_cron | SQL-scheduled jobs |
-| PostGIS-free geo tools | PostGIS | Geospatial queries |
+| Geo services | PostGIS | Geospatial queries |
 | ClickHouse (small scale) | Materialized views, window functions | Analytics and rollups |
 
 ## Caching: Replacing Redis
 
-For cache workloads that fit in memory and tolerate occasional loss, `UNLOGGED` tables skip write-ahead logging for much faster writes. Combined with `LISTEN/NOTIFY` you also get lightweight pub/sub without a message broker.
+For cache workloads that fit in memory and tolerate occasional loss, `UNLOGGED` tables skip write-ahead logging for much faster writes. Combined with `LISTEN/NOTIFY` you also get lightweight pub/sub without a message broker. Note the caveats: notification payloads are capped at roughly 8000 bytes, and they are transient - if no session is listening when you `NOTIFY`, the message is gone. Use it for invalidation pings and live updates, never as a durable broker.
 
 ```sql
 CREATE UNLOGGED TABLE cache (
@@ -87,9 +86,9 @@ FROM products WHERE name % 'ipod'
 ORDER BY score DESC LIMIT 10;
 ```
 
-## Job Queues: Replacing Kafka and RabbitMQ
+## Job Queues: Replacing RabbitMQ and SQS
 
-You do not need a distributed log to process background jobs reliably. The classic pattern uses row locking so multiple workers can safely pull jobs concurrently:
+You do not need a message broker to process background jobs reliably. The classic pattern uses row locking so multiple workers can safely pull jobs concurrently:
 
 ```sql
 CREATE TABLE jobs (
@@ -100,6 +99,9 @@ CREATE TABLE jobs (
     locked_by TEXT,
     locked_at TIMESTAMPTZ
 );
+
+-- Index matching the poll query, or every worker does a seq scan
+CREATE INDEX idx_jobs_poll ON jobs (status, run_at);
 
 -- Each worker atomically claims one job; SKIP LOCKED avoids contention
 WITH next_job AS (
@@ -115,11 +117,21 @@ FROM next_job WHERE j.id = next_job.id
 RETURNING j.*;
 ```
 
-`SKIP LOCKED` guarantees each job goes to exactly one worker, and because the queue lives in the same database as your data, enqueueing a job and writing related rows happen in one atomic transaction - something Kafka cannot give you.
+`SKIP LOCKED` guarantees each job goes to exactly one worker, and because the queue lives in the same database as your data, enqueueing a job and writing related rows happen in one atomic transaction - something a broker cannot give you.
+
+Be aware of what this pattern does **not** replace: Kafka is an event log, not a work queue. It provides fan-out to many consumer groups, replay and retention. If you need event streaming or multiple independent consumers per event, keep Kafka. Also, a queue is a high-churn UPDATE workload - completed jobs should be deleted or archived regularly (a perfect job for `pg_cron`) or autovacuum will fall behind and the table will bloat:
+
+```sql
+SELECT cron.schedule(
+    'purge-done-jobs',
+    '0 4 * * *',
+    $$DELETE FROM jobs WHERE status = 'done' AND locked_at < now() - interval '7 days'$$
+);
+```
 
 ## Vector Search: Replacing Dedicated Vector Databases
 
-With `pgvector`, embeddings live next to the data they describe, enabling hybrid search that combines semantic similarity with regular SQL filters.
+With `pgvector`, embeddings live next to the data they describe, enabling hybrid search that combines semantic similarity with regular SQL filters. One caveat: at scale, HNSW indexes with arbitrary `WHERE` filters can degrade recall or fall back to sequential scans - validate recall on realistic filter combinations before committing.
 
 ```sql
 CREATE EXTENSION IF NOT EXISTS vector;
@@ -222,8 +234,7 @@ The consolidated PostgreSQL instance replaces each external service with a built
 | :--- | :--- |
 | Redis | UNLOGGED tables, LISTEN/NOTIFY |
 | Elasticsearch | Full-text search (tsvector, GIN) |
-| Kafka / RabbitMQ | SKIP LOCKED job queues |
-| Vector DB | pgvector |
+| RabbitMQ / SQS | SKIP LOCKED job queues || Vector DB | pgvector |
 | MongoDB | JSONB |
 | Cron scheduler | pg_cron |
 
@@ -235,6 +246,7 @@ Postgres consolidation is not a religion. There are real trade-offs at genuine e
 - **Massive search corpora**: Elasticsearch's distributed sharding and relevance tuning win once indexes no longer fit comfortably on one beefy node.
 - **Cache-heavy hot paths**: Redis serves hundreds of thousands of ops/sec with sub-millisecond latency; Postgres round-trips are slower by design.
 - **Independent scaling and availability**: Separate services fail and scale independently. One database is a shared fate - a runaway analytical query can stall your queues.
+- **Connection budget**: consolidating cache lookups, search, queue polling and app traffic onto one Postgres makes connection exhaustion your first scaling wall. Every worker holding a persistent `LISTEN` connection and every poll loop adds up - plan for a pooler (pgbouncer) from day one.
 - **Operational maturity requirements**: Specialized tools often have richer ecosystem tooling for replication topologies, multi-region setups and compliance workflows.
 
 :::warning
