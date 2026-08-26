@@ -145,6 +145,7 @@ function CharSearchInternal() {
                     key={ch.filename}
                     onClick={() => handleSelectChar(ch)}
                     className={styles.card}
+                    type="button"
                 >
                     <div className={styles.cardName}>{ch.name}</div>
                     <div className={styles.cardMeta}>
