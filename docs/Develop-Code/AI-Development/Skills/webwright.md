@@ -2,7 +2,6 @@
 title: "Webwright"
 description: "Microsoft's open-source browser agent framework that turns coding models into state-of-the-art browser automation agents using Playwright."
 tags: [ai-development, skills, browser-automation, playwright, agents]
-sidebar_position: 10
 sidebar_label: "Webwright"
 ---
 
