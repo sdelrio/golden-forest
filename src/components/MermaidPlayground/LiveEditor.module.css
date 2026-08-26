@@ -93,6 +93,40 @@
   border-color: var(--ifm-color-emphasis-300);
 }
 
+/* Theme toggle */
+.themeToggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 9999px;
+  background: transparent;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: var(--ifm-font-family-base);
+}
+
+.themeToggle:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.themeToggle[aria-pressed='true'] {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: #fff;
+}
+
+.themeToggle:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
 /* Editor body with line numbers */
 .editorBody {
   display: flex;

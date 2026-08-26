@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useColorMode } from '@docusaurus/theme-common';
 import { CATEGORY_COLORS } from '../../constants/colors';
 import CopyButton from '../CopyButton/CopyButton';
 import styles from './LiveEditor.module.css';
@@ -13,12 +14,17 @@ export default function LiveEditor({ template, onBack }) {
 
   const color = CATEGORY_COLORS[template.category] || '#6b7280';
 
-  const renderMermaid = useCallback(async (codeToRender) => {
+  // null = follow site color mode; true/false = explicit override
+  const [darkOverride, setDarkOverride] = useState(null);
+  const { colorMode } = useColorMode();
+  const isDark = darkOverride ?? colorMode === 'dark';
+
+  const renderMermaid = useCallback(async (codeToRender, theme) => {
     try {
       const mermaid = (await import('mermaid')).default;
       mermaid.initialize({
         startOnLoad: false,
-        theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default',
+        theme: theme,
         securityLevel: 'loose',
         fontFamily: 'var(--ifm-font-family-base)',
         flowchart: { useMaxWidth: false },
@@ -45,11 +51,21 @@ export default function LiveEditor({ template, onBack }) {
     }
   }, []);
 
+  const renderThemeRef = useRef(isDark);
+  useEffect(() => {
+    if (renderThemeRef.current === isDark) return;
+    renderThemeRef.current = isDark;
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    if (code.trim()) {
+      renderMermaid(code, isDark ? 'dark' : 'default');
+    }
+  }, [isDark, code, renderMermaid]);
+
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
       if (code.trim()) {
-        renderMermaid(code);
+        renderMermaid(code, isDark ? 'dark' : 'default');
       } else {
         setSvg('');
         setError(null);
@@ -58,19 +74,19 @@ export default function LiveEditor({ template, onBack }) {
     return () => {
       if (debounceRef.current) clearTimeout(debounceRef.current);
     };
-  }, [code, renderMermaid]);
+  }, [code, isDark, renderMermaid]);
 
-  // Re-render on theme change
+  // Re-render on site theme change
   useEffect(() => {
     const observer = new MutationObserver(() => {
-      if (code.trim()) renderMermaid(code);
+      if (code.trim()) renderMermaid(code, isDark ? 'dark' : 'default');
     });
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ['data-theme'],
     });
     return () => observer.disconnect();
-  }, [code, renderMermaid]);
+  }, [code, isDark, renderMermaid]);
 
   const lineCount = code.split('\n').length;
 
@@ -132,6 +148,15 @@ export default function LiveEditor({ template, onBack }) {
         <div className={styles.pane}>
           <div className={styles.paneHeader}>
             <span>Preview</span>
+            <button
+              className={styles.themeToggle}
+              type="button"
+              aria-label={isDark ? 'Switch diagram to light theme' : 'Switch diagram to dark theme'}
+              aria-pressed={isDark}
+              onClick={() => setDarkOverride(!isDark)}
+            >
+              {isDark ? 'Dark' : 'Light'}
+            </button>
           </div>
           <div className={styles.preview}>
             {error ? (
