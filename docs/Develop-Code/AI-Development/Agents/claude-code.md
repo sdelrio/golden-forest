@@ -1,7 +1,7 @@
 ---
 title: "Claude Code"
 description: "Integration guide and project architecture for Anthropic's Claude Code CLI tool."
-last_updated: 2026-07-21
+last_updated: 2026-08-26
 tags:
   - AI
   - tools
@@ -426,6 +426,22 @@ Drops of tens of thousands of tokens per turn are common after cleanup. The six 
   </Accordion>
 </AccordionGroup>
 
+### Companion Feature: Claude Design (`/design`)
+
+<AccordionGroup>
+  <Accordion title="Claude Design: prototype-first UI generation" icon="mdi:palette">
+    Claude Design is a companion capability (not part of the CLI) that generates **three UI prototypes** for you to pick from, then implements the chosen design. It pairs well with the tips above:
+
+    - Use `/design` to explore visual directions before asking Claude Code to build the real thing.
+    - Once implemented, apply tip #20 (screenshot-based self-verification) to confirm Claude Code matches the chosen prototype.
+    - Combine with tip #22 (cloning inspiration sites) when the prototypes need external references.
+
+    :::info
+    Availability: **beta** for Pro, Max, Team, and Enterprise plans (default off for Enterprise). Access it at [claude.ai/design](https://claude.ai/design) or via the sidebar in Claude Desktop.
+    :::
+  </Accordion>
+</AccordionGroup>
+
 ## References
 
 - [ClaudeKit Workflow](../Workflows/ClaudeKit-Workflow.md) - Spec-driven AI development methodology.
@@ -438,3 +454,5 @@ Drops of tens of thousands of tokens per turn are common after cleanup. The six 
 - [32 Tricks to Level Up Claude Code](https://www.youtube.com/watch?v=SkMuVhScLRQ) - Video covering all tips in this section.
 - [32 Claude Code Hacks - Full Writeup](https://www.mejba.me/es/blog/claude-code-32-power-user-hacks) - Detailed breakdown with examples.
 - [Kill The Bloat In Claude Code's System Prompt](https://www.aihero.dev/how-to-kill-the-bloat-in-claude-codes-system-prompt) - Guide to trimming token overhead from tool definitions and system instructions.
+
+- [Get Started with Claude Design](https://support.claude.com/en/articles/14604416-get-started-with-claude-design) - Official guide to the `/design` command.
