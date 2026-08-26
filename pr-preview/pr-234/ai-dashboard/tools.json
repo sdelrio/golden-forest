@@ -61,7 +61,7 @@
     "pip": null,
     "install": "npx skills add tt-a1i/archify -g",
     "site": "https://tt-a1i.github.io/archify/",
-    "license": "Unknown",
+    "license": "MIT",
     "tags": [
       "skills",
       "diagrams",
