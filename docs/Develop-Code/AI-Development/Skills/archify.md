@@ -118,6 +118,18 @@ Depending on your agent, the exact invocation differs. Pick yours below:
   </TabItem>
 </Tabs>
 
+To make the skill available **only in the current repository** instead of globally, drop the global flag and run the command from the repo root:
+
+```bash
+# Claude Code / OpenCode: installs to .claude/skills/ or .opencode/skills/
+npx skills add tt-a1i/archify
+
+# Cursor: project scope
+npx -y skills add tt-a1i/archify --skill archify --agent cursor --copy --yes
+```
+
+Project-scoped installs are versioned with the repository, so every collaborator (and their agent) gets the same skill.
+
 Then ask your agent for one bounded view:
 
 ```text
