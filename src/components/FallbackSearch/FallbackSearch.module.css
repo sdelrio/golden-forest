@@ -1,0 +1,84 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 12vh;
+}
+
+.modal {
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+  width: min(640px, 92vw);
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  font-size: 1.05rem;
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-surface-color);
+  color: inherit;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--ifm-color-primary);
+}
+
+.results {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.resultLink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.resultLink:hover {
+  background: var(--ifm-color-emphasis-100);
+  text-decoration: none;
+}
+
+.resultTitle {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.resultExcerpt {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-700);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.error,
+.empty,
+.hint {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.error {
+  color: var(--ifm-color-danger);
+}
