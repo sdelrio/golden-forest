@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import SkeletonLoader from '../Shared/SkeletonLoader/SkeletonLoader';
+import CategoryFilter from '../Shared/CategoryFilter/CategoryFilter';
 import CommandCard from './CommandCard';
 import CommandDetail from './CommandDetail';
 import useSearchFilter from '../../hooks/useSearchFilter';
@@ -97,23 +98,13 @@ function CmdRefInternal({ tool }) {
         />
       </div>
 
-      <div className={styles.filterBar}>
-        {CATEGORIES.map((cat) => {
-          const count = cat.id === 'all' ? counts.total : (counts[cat.id] || 0);
-          if (cat.id !== 'all' && count === 0) return null;
-          return (
-            <button
-              key={cat.id}
-              className={`${styles.pill} ${selectedCategory === cat.id ? styles.active : ''}`}
-              onClick={() => setSelectedCategory(cat.id)}
-              type="button"
-            >
-              <span className={styles.pillLabel}>{cat.label}</span>
-              {count > 0 && <span className={styles.pillCount}>{count}</span>}
-            </button>
-          );
-        })}
-      </div>
+      <CategoryFilter
+        categories={CATEGORIES}
+        selected={selectedCategory}
+        onChange={setSelectedCategory}
+        counts={counts}
+        hideEmpty
+      />
 
       <div className={styles.grid}>
         {isLoading

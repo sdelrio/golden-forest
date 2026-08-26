@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import clsx from 'clsx';
 import useReadingList from '../../hooks/useReadingList';
+import CategoryFilter from '../Shared/CategoryFilter/CategoryFilter';
 import styles from './ReadingList.module.css';
 
 function ProgressBar({ progress }) {
@@ -88,10 +89,10 @@ export default function ReadingList() {
   };
 
   const categories = [
-    { key: 'all', label: 'All' },
-    { key: 'bookmarked', label: 'Bookmarked' },
-    { key: 'read', label: 'Read' },
-    { key: 'unread', label: 'Unread' },
+    { id: 'all', label: 'All' },
+    { id: 'bookmarked', label: 'Bookmarked' },
+    { id: 'read', label: 'Read' },
+    { id: 'unread', label: 'Unread' },
   ];
 
   if (!loaded) {
@@ -109,22 +110,12 @@ export default function ReadingList() {
 
       {entries.length > 0 && (
         <>
-          <div className={styles.filterBar}>
-            {categories.map(({ key, label }) => (
-              <button
-                key={key}
-                type="button"
-                className={clsx(
-                  'shared-pill',
-                  selectedCategory === key && 'shared-pill-active',
-                )}
-                onClick={() => setSelectedCategory(key)}
-              >
-                <span className="shared-pill-label">{label}</span>
-                <span className="shared-pill-count">{counts[key] || 0}</span>
-              </button>
-            ))}
-          </div>
+          <CategoryFilter
+            categories={categories}
+            selected={selectedCategory}
+            onChange={setSelectedCategory}
+            counts={{ ...counts, total: counts.all }}
+          />
 
           <div className={styles.searchRow}>
             <input

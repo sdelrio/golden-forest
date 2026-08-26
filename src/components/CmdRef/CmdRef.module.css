@@ -28,31 +28,6 @@
   composes: shared-search-input from '../../css/shared-components.css';
 }
 
-/* Category filter pills */
-.filterBar {
-  composes: shared-filter-bar from '../../css/shared-components.css';
-}
-
-.pill {
-  composes: shared-pill from '../../css/shared-components.css';
-}
-
-.active {
-  composes: shared-pill-active from '../../css/shared-components.css';
-}
-
-.pillCount {
-  composes: shared-pill-count from '../../css/shared-components.css';
-}
-
-.active .pillCount {
-  background: rgba(255, 255, 255, 0.25);
-}
-
-.pillLabel {
-  composes: shared-pill-label from '../../css/shared-components.css';
-}
-
 /* Grid */
 .grid {
   display: grid;
