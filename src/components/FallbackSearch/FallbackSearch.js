@@ -10,12 +10,13 @@ import styles from './FallbackSearch.module.css';
  * title + excerpt + url for docs/, tutorial/, blog/). Zero impact on
  * the main bundle; used when Algolia DocSearch is unavailable.
  */
-export default function FallbackSearch({ open, onClose }) {
+export default function FallbackSearch({ open, onClose, indexUrl = '/search-index.json' }) {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
   const [error, setError] = useState(null);
   const miniSearchRef = useRef(null);
   const inputRef = useRef(null);
+  const requestSeqRef = useRef(0);
 
   useEffect(() => {
     if (open) setTimeout(() => inputRef.current?.focus(), 50);
@@ -29,9 +30,22 @@ export default function FallbackSearch({ open, onClose }) {
 
   async function ensureIndex() {
     if (miniSearchRef.current) return miniSearchRef.current;
+    if (!ensureIndex.promise) {
+      ensureIndex.promise = loadIndex().then((ms) => {
+        miniSearchRef.current = ms;
+        return ms;
+      });
+      ensureIndex.promise.catch(() => {
+        ensureIndex.promise = null;
+      });
+    }
+    return ensureIndex.promise;
+  }
+
+  async function loadIndex() {
     const [{ default: MiniSearch }, res] = await Promise.all([
       import('minisearch'),
-      fetch('/search-index.json'),
+      fetch(indexUrl, { cache: 'force-cache' }),
     ]);
     if (!res.ok) throw new Error(`search index HTTP ${res.status}`);
     const docs = await res.json();
@@ -41,7 +55,6 @@ export default function FallbackSearch({ open, onClose }) {
       searchOptions: { prefix: true, fuzzy: 0.2, boost: { title: 2 } },
     });
     ms.addAll(docs);
-    miniSearchRef.current = ms;
     return ms;
   }
 
@@ -52,12 +65,16 @@ export default function FallbackSearch({ open, onClose }) {
       setResults([]);
       return;
     }
+    const seq = ++requestSeqRef.current;
     try {
       const ms = await ensureIndex();
+      if (seq !== requestSeqRef.current) return;
       setError(null);
       setResults(ms.search(q).slice(0, 20));
     } catch (err) {
-      setError(err.message || 'Failed to load search index');
+      if (seq === requestSeqRef.current) {
+        setError(err.message || 'Failed to load search index');
+      }
     }
   }
 

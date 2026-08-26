@@ -28,6 +28,9 @@ if (typeof document !== 'undefined') {
         createElement(FallbackSearch, {
           open: openState,
           onClose: () => render(false),
+          indexUrl:
+            (window.docusaurus && window.docusaurus.baseUrl || '/') +
+            'search-index.json',
         })
       );
     }
