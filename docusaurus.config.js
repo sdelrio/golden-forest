@@ -135,6 +135,7 @@ const config = {
     require.resolve('./src/bones/registry.js'),
     require.resolve('./src/client/reading-progress.js'),
     require.resolve('./src/client/bookmark-button.js'),
+    require.resolve('./src/client/fallback-search.js'),
   ],
 
   themeConfig:
