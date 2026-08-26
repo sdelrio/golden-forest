@@ -80,14 +80,7 @@ npx skills add tt-a1i/archify -g
 Depending on your agent, the exact invocation differs. Pick yours below:
 
 <Tabs groupId="agent">
-  <TabItem value="cursor" label="Cursor" default>
-    ```bash
-    npx -y skills add tt-a1i/archify --skill archify --agent cursor --global --copy --yes
-    ```
-
-    Installs to the Cursor global skills directory.
-  </TabItem>
-  <TabItem value="claude" label="Claude Code">
+  <TabItem value="claude" label="Claude Code" default>
     ```bash
     npx skills add tt-a1i/archify -g
     ```
@@ -100,6 +93,13 @@ Depending on your agent, the exact invocation differs. Pick yours below:
     ```
 
     Installs to `~/.config/opencode/skills/` (also accepts `.opencode/skills/` or `.agents/skills/`).
+  </TabItem>
+  <TabItem value="cursor" label="Cursor">
+    ```bash
+    npx -y skills add tt-a1i/archify --skill archify --agent cursor --global --copy --yes
+    ```
+
+    Installs to the Cursor global skills directory.
   </TabItem>
   <TabItem value="codex" label="Codex CLI">
     ```bash
