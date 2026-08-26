@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-26T09:52:45.440Z",
-  "toolCount": 47,
+  "generatedAt": "2026-08-26T10:02:30.347Z",
+  "toolCount": 48,
   "tools": [
     {
       "id": "agency-agents",
@@ -119,6 +119,21 @@
         "opensandbox"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/comparatives/autonomous-agents"
+    },
+    {
+      "id": "chris-titus-ai-workflow",
+      "name": "Chris Titus AI Workflow",
+      "category": "workflows",
+      "description": "Disciplined AI coding workflow: plain-text guardrails, spec-first with pinned versions, test harness before features, small PRs, and more review effort than generation.",
+      "site": "https://christitus.com/my-ai-workflow/",
+      "tags": [
+        "workflow",
+        "code-review",
+        "ci",
+        "guardrails",
+        "spec-driven"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Workflows/chris-titus-ai-workflow"
     },
     {
       "id": "claude-code",
