@@ -84,21 +84,37 @@ Depending on your agent, the exact invocation differs. Pick yours below:
     ```bash
     npx -y skills add tt-a1i/archify --skill archify --agent cursor --global --copy --yes
     ```
+
+    Installs to the Cursor global skills directory.
   </TabItem>
   <TabItem value="claude" label="Claude Code">
-    Install to `~/.claude/skills/` or `.claude/skills/` using the global command above.
+    ```bash
+    npx skills add tt-a1i/archify -g
+    ```
+
+    Installs to `~/.claude/skills/` (or `.claude/skills/` for project scope).
   </TabItem>
   <TabItem value="opencode" label="OpenCode">
-    Install to `~/.config/opencode/skills/`, `.opencode/skills/`, or `.agents/skills/`.
+    ```bash
+    npx skills add tt-a1i/archify -g
+    ```
+
+    Installs to `~/.config/opencode/skills/` (also accepts `.opencode/skills/` or `.agents/skills/`).
   </TabItem>
   <TabItem value="codex" label="Codex CLI">
     ```bash
     npx skills use tt-a1i/archify@archify --agent codex
     ```
-    Or try without installing.
+
+    Runs the skill without installing it permanently.
   </TabItem>
   <TabItem value="raven" label="Raven">
-    Raven is not a switcher target. Download [archify.zip](https://github.com/tt-a1i/archify/blob/main/archify.zip) and extract it into `~/.raven/workspace/skills`, yielding `~/.raven/workspace/skills/archify`.
+    ```bash
+    curl -LO https://github.com/tt-a1i/archify/raw/main/archify.zip
+    unzip archify.zip -d ~/.raven/workspace/skills
+    ```
+
+    Raven is not a switcher target, so install the ZIP manually. This yields `~/.raven/workspace/skills/archify`.
   </TabItem>
 </Tabs>
 
