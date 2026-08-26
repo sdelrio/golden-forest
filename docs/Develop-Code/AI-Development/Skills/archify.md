@@ -69,6 +69,8 @@ Use Mermaid for small diagrams embedded in documentation, Excalidraw for freefor
 
 ## Quickstart
 
+Archify's CLI runs on Node.js, so make sure your machine has Node available before installing.
+
 Installation is one command via the `skills` CLI:
 
 ```bash
@@ -88,6 +90,15 @@ Depending on your agent, the exact invocation differs. Pick yours below:
   </TabItem>
   <TabItem value="opencode" label="OpenCode">
     Install to `~/.config/opencode/skills/`, `.opencode/skills/`, or `.agents/skills/`.
+  </TabItem>
+  <TabItem value="codex" label="Codex CLI">
+    ```bash
+    npx skills use tt-a1i/archify@archify --agent codex
+    ```
+    Or try without installing.
+  </TabItem>
+  <TabItem value="raven" label="Raven">
+    Raven is not a switcher target. Download [archify.zip](https://github.com/tt-a1i/archify/blob/main/archify.zip) and extract it into `~/.raven/workspace/skills`, yielding `~/.raven/workspace/skills/archify`.
   </TabItem>
 </Tabs>
 
