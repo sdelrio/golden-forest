@@ -75,6 +75,8 @@ Installation is one command via the `skills` CLI:
 npx skills add tt-a1i/archify -g
 ```
 
+Depending on your agent, the exact invocation differs. Pick yours below:
+
 <Tabs groupId="agent">
   <TabItem value="cursor" label="Cursor" default>
     ```bash
@@ -111,6 +113,8 @@ A complete production review workflow, from install to shareable artifact:
     ```
   </Step>
   <Step title="Check your environment">
+    From inside a clone of the Archify repository:
+
     ```bash
     cd archify
     node bin/archify.mjs doctor
@@ -132,13 +136,13 @@ A complete production review workflow, from install to shareable artifact:
   <Step title="Preview with the last-good live loop">
     ```bash
     node bin/archify.mjs preview workflow examples/agent-tool-call.workflow.json \
-      /tmp/workflow.html --quality showcase
+      tmp/workflow.html --quality showcase
     ```
   </Step>
   <Step title="Deliver and open">
     ```bash
     node bin/archify.mjs deliver workflow examples/agent-tool-call.workflow.json \
-      /tmp/workflow.html --quality showcase --open --json
+      tmp/workflow.html --quality showcase --open --json
     ```
   </Step>
 </Steps>
@@ -164,12 +168,22 @@ node bin/archify.mjs guide "Show an API request with Redis cache miss"
 For design or code review, Architecture Delta compares validated Before / Delta / After snapshots with a machine receipt of exactly what changed:
 
 ```bash
-node archify/bin/archify.mjs compare architecture base.json head.json architecture-delta.html --json
+node bin/archify.mjs compare architecture base.json head.json architecture-delta.html --json
 ```
 
 ### Exploring the delivered artifact
 
-In the generated HTML you can press `?` for the diagram guide, `/` to search nodes, trace upstream/downstream reach from any focused node, probe directed routes (`R`), compare semantic roles (`L`), and play guided stories (`P`). Stable links can restore state via fragments like `#focus=<id>` and `#route=<source>~<target>`, so you can deep-link a specific reading directly in a pull request or document.
+In the generated HTML you can use the following keyboard controls:
+
+| Key | Action |
+| :--- | :--- |
+| `?` | Open the diagram guide |
+| `/` | Search and focus nodes |
+| `R` | Probe a directed route between two nodes |
+| `L` | Compare semantic roles |
+| `P` | Play a guided story |
+
+Stable links can restore state via fragments like `#focus=<id>` and `#route=&lt;source&gt;~&lt;target&gt;`, so you can deep-link a specific reading directly in a pull request or document.
 
 ## References
 
