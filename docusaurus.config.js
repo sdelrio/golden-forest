@@ -15,9 +15,11 @@ import { rehypeExtendedTable } from 'rehype-extended-table';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const SITE_TITLE = 'The Golden Forest';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'The Golden Forest',
+  title: SITE_TITLE,
   tagline: 'Digital garden',
   favicon: 'img/favicon.ico',
 
@@ -173,7 +175,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/tree.png',
       navbar: {
-        title: 'The Golden Forest',
+        title: SITE_TITLE,
         logo: {
           alt: 'Logo',
           src: 'img/tree.svg',
@@ -249,7 +251,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} The Golden Forest project. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} ${SITE_TITLE} project. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
