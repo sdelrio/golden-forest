@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import SkeletonLoader from '../Shared/SkeletonLoader/SkeletonLoader';
 import XmlChar from '../XmlChar/XmlChar';
+import CategoryFilter from '../Shared/CategoryFilter/CategoryFilter';
 import useSearchFilter from '../../hooks/useSearchFilter';
 import charSearchCardBones from '../../bones/char-search-card.bones.json';
 import withBrowserOnly from '../../utils/withBrowserOnly';
@@ -12,29 +13,11 @@ function stripAccents(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
-const DEFAULT_CLASSES = [
-    'All',
-    'Anti Paladin',
-    'Barbarian',
-    'Bard',
-    'Blood Hunter',
-    'Cleric',
-    'Druid',
-    'Fighter',
-    'Monk',
-    'Paladin',
-    'Ranger',
-    'Rogue',
-    'Sorcerer',
-    'Warlock',
-    'Wizard',
-];
-
 function filterChars(ch, searchText, selectedClass) {
     const matchName =
         !searchText ||
         stripAccents(ch.name.toLowerCase()).includes(stripAccents(searchText.toLowerCase()));
-    const matchClass = selectedClass === 'All' || ch.classes.includes(selectedClass);
+    const matchClass = selectedClass === 'all' || ch.classes.includes(selectedClass);
     return matchName && matchClass;
 }
 
@@ -42,6 +25,8 @@ function CharSearchInternal() {
     const [index, setIndex] = useState(null);
     const [fetchError, setFetchError] = useState(null);
     const [selectedChar, setSelectedChar] = useState(null);
+    const [selectedRace, setSelectedRace] = useState('all');
+    const [sortKey, setSortKey] = useState('name');
 
     const charsUrl = useBaseUrl('/fg/chars');
 
@@ -68,9 +53,55 @@ function CharSearchInternal() {
     } = useSearchFilter({
         items: index,
         filterFn: filterChars,
-        defaultCategory: 'All',
+        defaultCategory: 'all',
         external: true,
     });
+
+    const races = useMemo(() => {
+        if (!index) return [];
+        return Array.from(new Set(index.map((ch) => ch.race).filter(Boolean))).sort((a, b) =>
+            a.localeCompare(b),
+        );
+    }, [index]);
+
+    const classCategories = useMemo(() => {
+        if (!index) return [];
+        const byClass = {};
+        index.forEach((ch) => {
+            ch.classes.forEach((cls) => {
+                byClass[cls] = (byClass[cls] || 0) + 1;
+            });
+        });
+        return Object.keys(byClass)
+            .sort((a, b) => a.localeCompare(b))
+            .map((cls) => ({ id: cls, label: cls }));
+    }, [index]);
+
+    const classCounts = useMemo(() => {
+        const c = { total: index ? index.length : 0 };
+        if (!index) return c;
+        index.forEach((ch) => {
+            ch.classes.forEach((cls) => {
+                c[cls] = (c[cls] || 0) + 1;
+            });
+        });
+        return c;
+    }, [index]);
+
+    const visible = useMemo(() => {
+        const matching = selectedRace === 'all'
+            ? filtered
+            : filtered.filter((ch) => ch.race === selectedRace);
+        if (sortKey === 'level') {
+            return [...matching].sort((a, b) => {
+                if (a.level == null && b.level == null) return 0;
+                if (a.level == null) return 1;
+                if (b.level == null) return -1;
+                return b.level - a.level;
+            });
+        }
+        return [...matching].sort((a, b) => a.name.localeCompare(b.name));
+    }, [filtered, selectedRace, sortKey]);
 
     const handleSelectChar = (char) => {
         setSelectedChar(char);
@@ -107,7 +138,7 @@ function CharSearchInternal() {
         <>
         <div className={styles.container}>
 
-            {/* Search and filter toolbar */}
+            {/* Search toolbar */}
             <div className={styles.toolbar}>
                 <input
                     type="text"
@@ -118,16 +149,28 @@ function CharSearchInternal() {
                     className={clsx(styles.searchInput, selectedChar && styles.hiddenWhenSelected)}
                 />
                 <select
-                    aria-label="Filter characters by class"
-                    value={selectedClass}
-                    onChange={(e) => setSelectedClass(e.target.value)}
+                    aria-label="Filter characters by race"
+                    value={selectedRace}
+                    onChange={(e) => setSelectedRace(e.target.value)}
                     className={clsx(styles.classSelect, selectedChar && styles.hiddenWhenSelected)}
                 >
-                    {DEFAULT_CLASSES.map((cls) => (
-                        <option key={cls} value={cls}>
-                            {cls === 'All' ? `All Classes (${index.length})` : cls}
+                    <option key="all" value="all">
+                        All Races ({index.length})
+                    </option>
+                    {races.map((race) => (
+                        <option key={race} value={race}>
+                            {race}
                         </option>
                     ))}
+                </select>
+                <select
+                    aria-label="Sort characters"
+                    value={sortKey}
+                    onChange={(e) => setSortKey(e.target.value)}
+                    className={clsx(styles.classSelect, styles.sortSelect, selectedChar && styles.hiddenWhenSelected)}
+                >
+                    <option value="name">Sort: Name (A-Z)</option>
+                    <option value="level">Sort: Level</option>
                 </select>
                 {selectedChar && (
                     <button onClick={() => setSelectedChar(null)} className={styles.backBtn}>
@@ -136,11 +179,21 @@ function CharSearchInternal() {
                 )}
             </div>
 
+            {/* Class pills */}
+            {!selectedChar && (
+                <CategoryFilter
+                    categories={[{ id: 'all', label: 'All Classes' }, ...classCategories]}
+                    selected={selectedClass}
+                    onChange={setSelectedClass}
+                    counts={classCounts}
+                />
+            )}
+
             {/* Results count */}
-            {!selectedChar && <p className={styles.count}>{filtered.length} character{filtered.length !== 1 ? 's' : ''}</p>}
+            {!selectedChar && <p className={styles.count}>{visible.length} character{visible.length !== 1 ? 's' : ''}</p>}
 
 
-            {!selectedChar && filtered.map((ch) => (
+            {!selectedChar && visible.map((ch) => (
                 <button
                     key={ch.filename}
                     onClick={() => handleSelectChar(ch)}
@@ -159,7 +212,7 @@ function CharSearchInternal() {
             ))}
 
             {/* Empty state */}
-            {!selectedChar && filtered.length === 0 && searchText && (
+            {!selectedChar && visible.length === 0 && (
                 <p className={styles.empty}>No characters match your filters.</p>
             )}
         </div>
