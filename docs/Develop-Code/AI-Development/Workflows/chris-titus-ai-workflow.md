@@ -10,7 +10,7 @@ import CardGroup from '@site/src/components/Card/CardGroup';
 
 # Chris Titus AI Workflow: Slow Is Smooth, Smooth Is Fast
 
-Chris Titus Tech's workflow flips the usual approach: instead of one giant looping prompt that generates demos, it spends **more compute on review than on generation**. The result is maintainable software.
+[Chris Titus Tech](https://christitus.com/my-ai-workflow/) uses AI to ship real software, not demos. His workflow flips the usual approach: instead of one giant looping prompt, it spends **more compute on review than on generation**.
 
 The whole workflow in one diagram:
 
@@ -42,6 +42,8 @@ Rules are cheap: dislike one? Delete it. Agent repeats a mistake? Add a sharper 
 
 ## 2. Define Done Before Writing Code
 
+The spec lists everything that must be true before the phase counts as finished:
+
 ```mermaid
 mindmap
   root((SPEC.md))
@@ -54,7 +56,7 @@ mindmap
     Acceptance criteria
 ```
 
-:::warning
+:::warning[Pinned Versions]
 Pin dependency versions in the spec. LLMs install whatever appeared most often in their training data - usually years old.
 :::
 
@@ -78,6 +80,8 @@ flowchart LR
     F --> A
 ```
 
+Repeat until no actionable findings remain.
+
 Two rules make this work:
 
 - **Fresh context**: the reviewer (CodeRabbit, another agent, or a human) never grades its own work
@@ -85,7 +89,14 @@ Two rules make this work:
 
 ## 6. CI Gates + Human Merge
 
-CI runs Dependabot, CodeQL, and dependency review on **every** PR update - an old green check proves nothing. Before merging, verify by hand: diff contains only the intended change, tests pass on the latest commit, docs match behavior, and it works in the real environment.
+CI runs Dependabot, CodeQL, and dependency review on **every** PR update - an old green check proves nothing.
+
+Before merging, verify by hand:
+
+- Diff contains only the intended change
+- Tests pass on the latest commit
+- Docs match behavior
+- It works in the real environment
 
 ## Why It Works
 
