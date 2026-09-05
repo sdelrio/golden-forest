@@ -78,7 +78,7 @@ corepack prepare pnpm@latest --activate
 
 Configure your package manager to reject packages published on the same day. This gives the security community time to detect and flag malicious releases.
 
-**Recommended value: `1440` minutes (24 hours)**
+**Recommended value: `1` day**
 
 </Step>
 
@@ -99,9 +99,10 @@ Prevent dependencies from executing arbitrary code on your machine during instal
 # This prevents preinstall, postinstall, install, and prepare scripts from executing
 ignore-scripts=true
 
-# Reject packages published less than 24 hours ago (1440 minutes)
-# Gives security researchers time to detect malicious releases
-minimum-release-age=1440
+# Docs: https://docs.npmjs.com/cli/v11/using-npm/config
+# Reject packages published less than 1 day ago
+# Gives security researchers time to detect and flag malicious releases
+minimum-release-age=1
 
 # Additional hardening
 audit=true
@@ -117,9 +118,9 @@ fund=false
 # This prevents preinstall, postinstall, install, and prepare scripts from executing
 enableScripts: false
 
-# Reject packages published less than 24 hours ago (1440 minutes)
-# Gives security researchers time to detect malicious releases
-minimumReleaseAge: 1440
+# Reject packages published less than 1 day ago
+# Gives security researchers time to detect and flag malicious releases
+minimumReleaseAge: 1
 
 # Additional hardening
 enableImmutableInstalls: true
@@ -137,8 +138,8 @@ enableImmutableInstalls: true
 # but this ensures even direct dependencies can't run scripts
 ignore-scripts=true
 
-# Reject packages published less than 24 hours ago (1440 minutes)
-minimum-release-age=1440
+# Reject packages published less than 1 day ago
+minimum-release-age=1
 
 # Use strict peer dependencies to catch supply chain issues early
 strict-peer-dependencies=true
@@ -154,7 +155,7 @@ audit=true
 | Setting | npm | yarn | pnpm |
 |---------|-----|------|------|
 | Block scripts | `ignore-scripts=true` | `enableScripts: false` | `ignore-scripts=true` |
-| Min release age | `minimum-release-age=1440` | `minimumReleaseAge: 1440` | `minimum-release-age=1440` |
+| Min release age | `minimum-release-age=1` | `minimumReleaseAge: 1` | `minimum-release-age=1` |
 | Audit on install | `audit=true` | built-in | `audit=true` |
 | Immutable installs | `package-lock-only=true` | `enableImmutableInstalls: true` | `frozen-lockfile=true` |
 
