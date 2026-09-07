@@ -3875,10 +3875,10 @@ body-parser@1.20.3:
     type-is "~1.6.18"
     unpipe "1.0.0"
 
-boneyard-js@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/boneyard-js/-/boneyard-js-1.9.0.tgz#9cdb7f2467be03845762004727deead62e34912c"
-  integrity sha512-FlIHm7YyQ6GMBPaNY6um5ESHNyZGONoSZ0IMhayuyemBsCUhhDl4nC/gMTOi/25ojtrlnRInTWKqFKb7hGK6Cg==
+boneyard-js@^1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/boneyard-js/-/boneyard-js-1.10.0.tgz#b23f05d3576b246ddf2c585c6083c6cc0386c747"
+  integrity sha512-bHyZFdBHswa6Rt2aP0F1pNpPn4/lRcTMRWAt1d7tbFZLoPnwjztr6cmAVa/vaQwTOH9ETD3Lz4vW1iuvQDJNqg==
   dependencies:
     playwright "^1.58.2"
   optionalDependencies:
