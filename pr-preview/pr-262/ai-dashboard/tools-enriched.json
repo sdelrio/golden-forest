@@ -1,0 +1,1260 @@
+{
+  "generatedAt": "2026-08-26T10:02:30.347Z",
+  "toolCount": 48,
+  "tools": [
+    {
+      "id": "agency-agents",
+      "name": "Agency Agents",
+      "description": "Curated collection of AI agent personas: Frontend Developer, Backend Architect, Security Engineer, DevOps Automator, and more.",
+      "category": "agents",
+      "github": "https://github.com/msitarzewski/agency-agents",
+      "npm": null,
+      "pip": null,
+      "install": "./scripts/install.sh",
+      "site": null,
+      "license": "MIT",
+      "tags": [
+        "personas",
+        "roles",
+        "multi-agent"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode",
+        "copilot",
+        "gemini",
+        "cursor"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Agents/ai-agency",
+      "githubStars": 148084,
+      "githubOpenIssues": 61,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-06T13:29:47Z",
+      "githubLanguage": "Shell"
+    },
+    {
+      "id": "agentmemory",
+      "name": "AgentMemory",
+      "description": "Persistent memory runtime for AI coding agents — 95.2% retrieval accuracy, 92% fewer tokens, 53 MCP tools, 121 REST endpoints.",
+      "category": "tools",
+      "github": "https://github.com/rohitg00/agentmemory",
+      "npm": "@agentmemory/agentmemory",
+      "pip": null,
+      "install": "npx @agentmemory/agentmemory",
+      "site": "https://www.agent-memory.dev",
+      "license": "Apache-2.0",
+      "tags": [
+        "memory",
+        "retrieval",
+        "mcp",
+        "rest-api",
+        "hooks"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode",
+        "cursor",
+        "gemini",
+        "cline"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/agentmemory",
+      "githubStars": 27444,
+      "githubOpenIssues": 266,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-24T06:11:16Z",
+      "githubLanguage": "TypeScript",
+      "npmVersion": "0.9.29",
+      "npmLastPublished": "2026-08-16T14:03:27.408Z"
+    },
+    {
+      "id": "archify",
+      "name": "Archify",
+      "description": "Agent skill that turns a codebase or system description into polished, verifiable, interactive architecture diagrams as self-contained HTML.",
+      "category": "skills",
+      "github": "https://github.com/tt-a1i/archify",
+      "npm": null,
+      "pip": null,
+      "install": "npx skills add tt-a1i/archify -g",
+      "site": "https://tt-a1i.github.io/archify/",
+      "license": "MIT",
+      "tags": [
+        "skills",
+        "diagrams",
+        "architecture",
+        "visualization"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode",
+        "cursor",
+        "codex"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/archify",
+      "githubStars": 16682,
+      "githubOpenIssues": 16,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-26T06:19:38Z",
+      "githubLanguage": "HTML"
+    },
+    {
+      "id": "autonomous-agents",
+      "name": "Autonomous Agents",
+      "description": "AI agents operating in the background on schedules — deep dive into OpenFang and OpenSandbox.",
+      "category": "comparatives",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": null,
+      "license": "N/A",
+      "tags": [
+        "autonomous",
+        "background",
+        "scheduled",
+        "openfang",
+        "opensandbox"
+      ],
+      "supportedBy": [
+        "openfang",
+        "opensandbox"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/comparatives/autonomous-agents"
+    },
+    {
+      "id": "chris-titus-ai-workflow",
+      "name": "Chris Titus AI Workflow",
+      "category": "workflows",
+      "description": "Disciplined AI coding workflow: plain-text guardrails, spec-first with pinned versions, test harness before features, small PRs, and more review effort than generation.",
+      "site": "https://christitus.com/my-ai-workflow/",
+      "tags": [
+        "workflow",
+        "code-review",
+        "ci",
+        "guardrails",
+        "spec-driven"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Workflows/chris-titus-ai-workflow"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "description": "Anthropic's agentic CLI terminal tool for AI-powered coding with skills, memory, and tool orchestration.",
+      "category": "agents",
+      "github": null,
+      "npm": "@anthropic-ai/claude-code",
+      "pip": null,
+      "install": "npm install -g @anthropic-ai/claude-code",
+      "site": "https://docs.anthropic.com/en/docs/claude-code",
+      "license": "Proprietary",
+      "tags": [
+        "cli",
+        "coding",
+        "agentic",
+        "anthropic"
+      ],
+      "supportedBy": [
+        "ecc",
+        "omo",
+        "skills-sh",
+        "agency-agents"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Agents/claude-code",
+      "npmVersion": "2.1.246",
+      "npmLastPublished": "2026-08-25T19:17:34.421Z"
+    },
+    {
+      "id": "claude-code-proxy",
+      "name": "Free Claude Code Proxy",
+      "description": "Open-source drop-in proxy routing Claude Code CLI traffic to 17+ alternative/free/local LLM providers.",
+      "category": "proxy",
+      "github": "https://github.com/Alishahryar1/free-claude-code",
+      "npm": null,
+      "pip": null,
+      "install": "curl -fsSL \"https://github.com/Alishahryar1/free-claude-code/blob/main/scripts/install.sh?raw=1\" | sh",
+      "site": null,
+      "license": "Unknown",
+      "tags": [
+        "proxy",
+        "free",
+        "local",
+        "multi-provider"
+      ],
+      "supportedBy": [
+        "claude-code"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Proxy/free-claude-code-proxy",
+      "githubStars": 50031,
+      "githubOpenIssues": 237,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-26T09:23:05Z",
+      "githubLanguage": "Python"
+    },
+    {
+      "id": "claude-prompt-anatomy",
+      "name": "Claude 4.6 Prompt Anatomy",
+      "description": "8-step structured prompt methodology: Task, Context Files, Reference, Brief, Rules, Conversation, Plan, Alignment.",
+      "category": "prompts",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": null,
+      "license": "N/A",
+      "tags": [
+        "prompting",
+        "methodology",
+        "structured",
+        "claude"
+      ],
+      "supportedBy": [
+        "claude-code"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Prompt-Library/Claude-4.6-Prompts-Anatomy"
+    },
+    {
+      "id": "claudekit",
+      "name": "ClaudeKit",
+      "description": "Spec-driven AI development workflow with TDD principles, brainstorm-to-code pipeline.",
+      "category": "workflows",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": "https://app.aitmpl.com/featured/claudekit",
+      "license": "MIT",
+      "tags": [
+        "workflow",
+        "tdd",
+        "spec-driven",
+        "planning"
+      ],
+      "supportedBy": [
+        "claude-code"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Workflows/ClaudeKit-Workflow"
+    },
+    {
+      "id": "codegraph",
+      "name": "CodeGraph",
+      "description": "Pre-indexed semantic code graph for AI agents — reduces tool calls by ~92%, speeds up exploration by ~71%.",
+      "category": "tools",
+      "github": "https://github.com/colbymchenry/codegraph",
+      "npm": "@colbymchenry/codegraph",
+      "pip": null,
+      "install": "npx @colbymchenry/codegraph",
+      "site": null,
+      "license": "Unknown",
+      "tags": [
+        "code-graph",
+        "semantic",
+        "indexing",
+        "exploration"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode",
+        "cursor",
+        "codex"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/codegraph",
+      "githubStars": 68188,
+      "githubOpenIssues": 166,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-25T16:09:48Z",
+      "githubLanguage": "C",
+      "npmVersion": "1.5.0",
+      "npmLastPublished": "2026-07-21T19:19:19.814Z"
+    },
+    {
+      "id": "cve-mcp-server",
+      "name": "CVE MCP Server",
+      "description": "Production-grade MCP server providing 27 security intelligence tools across 21 APIs for vulnerability research, threat intel, and risk scoring.",
+      "category": "mcp",
+      "github": "https://github.com/mukul975/cve-mcp-server",
+      "npm": null,
+      "pip": "cve-mcp-server",
+      "install": "pip install -e .",
+      "site": "https://www.mahipal.engineer/CVE-MCP-Server/",
+      "license": "Unknown",
+      "tags": [
+        "security",
+        "cve",
+        "vulnerability",
+        "threat-intel",
+        "mcp"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode",
+        "cursor"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/MCPs/cve-mcp-server",
+      "githubStars": 1163,
+      "githubOpenIssues": 3,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-05T08:09:26Z",
+      "githubLanguage": "Python"
+    },
+    {
+      "id": "cybersecurity-skills",
+      "name": "Cybersecurity Skills",
+      "description": "734+ structured cybersecurity skills across 29 domains following the agentskills.io standard, mapped to MITRE ATT&CK.",
+      "category": "skills",
+      "github": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "npm": null,
+      "pip": null,
+      "install": "npx skills add mukul975/Anthropic-Cybersecurity-Skills",
+      "site": "https://www.mahipal.engineer/Anthropic-Cybersecurity-Skills/",
+      "license": "Apache-2.0",
+      "tags": [
+        "security",
+        "skills",
+        "mitre-attack",
+        "29-domains"
+      ],
+      "supportedBy": [
+        "claude-code"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/cybersecurity-skills",
+      "githubStars": 31169,
+      "githubOpenIssues": 20,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-24T11:12:27Z",
+      "githubLanguage": "Python"
+    },
+    {
+      "id": "everything-claude-code",
+      "name": "Everything Claude Code (ECC)",
+      "description": "Hackathon-winning harness-native operator system: 63 agents, 251 skills, cross-harness support with AgentShield security.",
+      "category": "agents",
+      "github": "https://github.com/affaan-m/ECC",
+      "npm": "ecc-universal",
+      "pip": null,
+      "install": "npm install -g ecc-universal",
+      "site": null,
+      "license": "MIT",
+      "tags": [
+        "agents",
+        "skills",
+        "security",
+        "cross-harness"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode",
+        "cursor",
+        "copilot",
+        "gemini"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Agents/everything-claude-code",
+      "githubStars": 243303,
+      "githubOpenIssues": 52,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-25T21:27:27Z",
+      "githubLanguage": "JavaScript",
+      "npmVersion": "2.1.0",
+      "npmLastPublished": "2026-07-27T18:59:23.425Z"
+    },
+    {
+      "id": "excel-prompts",
+      "name": "Excel Prompts (15)",
+      "description": "15 advanced Excel prompts themed as consulting firm personas: Deloitte, Goldman Sachs, McKinsey, and more.",
+      "category": "prompts",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": null,
+      "license": "N/A",
+      "tags": [
+        "excel",
+        "prompts",
+        "consulting",
+        "bilingual"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Prompt-Library/excel-15-prompts"
+    },
+    {
+      "id": "freellmapi",
+      "name": "FreeLLMAPI",
+      "description": "OpenAI-compatible proxy that stacks free tiers of 29 LLM providers behind one endpoint, giving ~4B tokens/month with smart routing and automatic failover.",
+      "category": "proxy",
+      "github": "https://github.com/tashfeenahmed/freellmapi",
+      "npm": null,
+      "pip": null,
+      "install": "curl -fsSL https://freellmapi.co/install.sh | bash",
+      "site": "https://freellmapi.co",
+      "license": "MIT",
+      "tags": [
+        "llm",
+        "proxy",
+        "openai",
+        "free-tier",
+        "routing",
+        "docker",
+        "failover"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "opencode",
+        "aider",
+        "cline"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Proxy/freellmapi",
+      "githubStars": 20426,
+      "githubOpenIssues": 26,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-26T09:06:41Z",
+      "githubLanguage": "TypeScript"
+    },
+    {
+      "id": "gemini-prompts",
+      "name": "45 Prompts for Gemini 3",
+      "description": "45 curated prompts across 3 categories: Development, Content Creation, and Data Analysis for Google Gemini 3.",
+      "category": "prompts",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": null,
+      "license": "N/A",
+      "tags": [
+        "gemini",
+        "prompts",
+        "development",
+        "content",
+        "data-analysis"
+      ],
+      "supportedBy": [
+        "gemini"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Prompt-Library/gemini-prompts"
+    },
+    {
+      "id": "glm5-kimi",
+      "name": "GLM-5 & Kimi K2.5",
+      "description": "Open-source multimodal models for video analysis. GLM-5 (744B/40B active) and Kimi K2.5 (1T/32B active) with Agent Swarm.",
+      "category": "models",
+      "github": "https://github.com/THUDM/glm-5",
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": null,
+      "license": "MIT",
+      "tags": [
+        "video",
+        "multimodal",
+        "moe",
+        "open-source"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Workflows/GLM-Kimi-Video-Analysis"
+    },
+    {
+      "id": "graphify",
+      "name": "Graphify",
+      "description": "Transform any folder/repository into a navigable knowledge graph with 71.5x token efficiency and MCP support.",
+      "category": "tools",
+      "github": "https://github.com/safishamsi/graphify",
+      "npm": null,
+      "pip": "graphifyy",
+      "install": "pip install graphifyy",
+      "site": "https://graphifylabs.ai",
+      "license": "Unknown",
+      "tags": [
+        "knowledge-graph",
+        "codebase",
+        "token-efficiency",
+        "mcp"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode",
+        "cursor",
+        "copilot",
+        "gemini"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/graphify",
+      "githubStars": 110759,
+      "githubOpenIssues": 525,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-25T17:43:30Z",
+      "githubLanguage": "Python"
+    },
+    {
+      "id": "headless-browsers",
+      "name": "Headless Browsers for AI",
+      "description": "Architectural overview comparing headless Chrome vs Obscura (Rust) vs Lightpanda (Zig) for AI agents.",
+      "category": "comparatives",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": null,
+      "license": "N/A",
+      "tags": [
+        "headless",
+        "comparison",
+        "chrome",
+        "obscura",
+        "lightpanda"
+      ],
+      "supportedBy": [
+        "obscura",
+        "lightpanda"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/comparatives/headless-browser"
+    },
+    {
+      "id": "interactive-agents",
+      "name": "Interactive Agents",
+      "description": "Comparison of Claude Code vs OpenCode for real-time, human-directed coding workflows.",
+      "category": "comparatives",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": null,
+      "license": "N/A",
+      "tags": [
+        "comparison",
+        "claude-code",
+        "opencode",
+        "interactive"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/comparatives/interactive-agents"
+    },
+    {
+      "id": "karpathy-skills",
+      "name": "Karpathy's LLM Coding Guidelines",
+      "description": "Comprehensive guide to the CLAUDE.md behavioral guidelines recommended by Andrej Karpathy to reduce common LLM coding mistakes.",
+      "category": "skills",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": null,
+      "license": "N/A",
+      "tags": [
+        "guidelines",
+        "claude-md",
+        "best-practices",
+        "karpathy"
+      ],
+      "supportedBy": [
+        "claude-code"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/karpathy-skills"
+    },
+    {
+      "id": "lightpanda",
+      "name": "Lightpanda",
+      "description": "High-concurrency headless browser built in Zig for AI agents. ~24MB memory, <50ms startup, 11.8K+ GitHub stars.",
+      "category": "browsers",
+      "github": "https://github.com/lightpanda-io/browser",
+      "npm": "@lightpanda/browser",
+      "pip": null,
+      "install": "npm install @lightpanda/browser",
+      "site": "https://lightpanda.io",
+      "license": "AGPL-3.0",
+      "tags": [
+        "headless",
+        "browser",
+        "zig",
+        "high-concurrency"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/lightpanda",
+      "githubStars": 34259,
+      "githubOpenIssues": 77,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-26T09:00:42Z",
+      "githubLanguage": "Zig",
+      "npmVersion": "1.5.0",
+      "npmLastPublished": "2026-08-24T10:52:05.072Z"
+    },
+    {
+      "id": "mac-code",
+      "name": "Mac-Code",
+      "description": "Open-source AI coding agent for macOS using SSD flash-paging and persistent KV cache for local LLM inference.",
+      "category": "models",
+      "github": "https://github.com/walter-grace/mac-code",
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": null,
+      "license": "Unknown",
+      "tags": [
+        "macos",
+        "local",
+        "llm",
+        "inference",
+        "flash-paging"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Models-LLMs/mac-code",
+      "githubStars": 1026,
+      "githubOpenIssues": 5,
+      "githubArchived": false,
+      "githubLastPush": "2026-04-09T18:39:22Z",
+      "githubLanguage": "Python"
+    },
+    {
+      "id": "markitdown",
+      "name": "MarkItDown",
+      "description": "Microsoft's Python utility for converting Office documents, PDFs, images, audio to Markdown for LLM consumption.",
+      "category": "tools",
+      "github": "https://github.com/microsoft/markitdown",
+      "npm": null,
+      "pip": "markitdown",
+      "install": "pip install 'markitdown[all]'",
+      "site": null,
+      "license": "MIT",
+      "tags": [
+        "conversion",
+        "markdown",
+        "microsoft",
+        "office",
+        "pdf"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/markitdown",
+      "githubStars": 176355,
+      "githubOpenIssues": 401,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-19T19:36:22Z",
+      "githubLanguage": "Python"
+    },
+    {
+      "id": "mattpocock-skills",
+      "name": "Matt Pocock Skills",
+      "description": "Composable AI coding workflow with grilling sessions, domain modeling, TDD, and architecture health checks. 189k+ GitHub stars.",
+      "category": "workflows",
+      "github": "https://github.com/mattpocock/skills",
+      "npm": null,
+      "pip": null,
+      "install": "npx skills@latest add mattpocock/skills",
+      "site": "https://skills.sh/mattpocock/skills",
+      "license": "MIT",
+      "tags": [
+        "workflow",
+        "skills",
+        "tdd",
+        "domain-driven-design",
+        "grilling",
+        "architecture"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode",
+        "cursor",
+        "copilot"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Workflows/matpocock",
+      "githubStars": 237313,
+      "githubOpenIssues": 398,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-24T14:20:17Z",
+      "githubLanguage": "Shell"
+    },
+    {
+      "id": "modern-web-guidance",
+      "name": "Modern Web Guidance",
+      "description": "Expert-curated web development best practices by Google Chrome and Microsoft Edge teams for AI agents.",
+      "category": "prompts",
+      "github": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "npm": "modern-web-guidance",
+      "pip": null,
+      "install": "npx modern-web-guidance@latest install",
+      "site": "https://developer.chrome.com/docs/modern-web-guidance",
+      "license": "Unknown",
+      "tags": [
+        "web-dev",
+        "best-practices",
+        "google",
+        "microsoft",
+        "skills"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode",
+        "copilot",
+        "cursor"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Prompt-Library/modern-web-guidance",
+      "githubStars": 993,
+      "githubOpenIssues": 300,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-26T04:16:40Z",
+      "githubLanguage": "TypeScript",
+      "npmVersion": "0.0.185",
+      "npmLastPublished": "2026-08-24T20:11:32.038Z"
+    },
+    {
+      "id": "notebooklm",
+      "name": "NotebookLM",
+      "description": "Google's AI-powered research and writing tool grounded in user-provided documents, powered by Gemini 1.5 Pro with 2M context.",
+      "category": "tools",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": "https://notebooklm.google.com/",
+      "license": "Proprietary",
+      "tags": [
+        "research",
+        "writing",
+        "google",
+        "grounded-ai"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/notebooklm"
+    },
+    {
+      "id": "obscura",
+      "name": "Obscura",
+      "description": "Ultra-lightweight headless browser engine in Rust with V8, built for AI agent automation and stealth scraping at ~30MB.",
+      "category": "browsers",
+      "github": "https://github.com/h4ckf0r0day/obscura",
+      "npm": null,
+      "pip": null,
+      "install": "cargo build --release --features stealth",
+      "site": null,
+      "license": "Unknown",
+      "tags": [
+        "headless",
+        "browser",
+        "rust",
+        "stealth",
+        "scraping"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/obscura",
+      "githubStars": 22312,
+      "githubOpenIssues": 45,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-24T09:28:00Z",
+      "githubLanguage": "Rust"
+    },
+    {
+      "id": "obsidian-skills",
+      "name": "Obsidian Skills & LLM Wiki",
+      "description": "Guide for using Obsidian as an AI-maintained knowledge base with Karpathy's LLM Wiki pattern.",
+      "category": "skills",
+      "github": "https://github.com/kepano/obsidian-skills",
+      "npm": null,
+      "pip": null,
+      "install": "npx skills add git@github.com:kepano/obsidian-skills.git",
+      "site": null,
+      "license": "Unknown",
+      "tags": [
+        "obsidian",
+        "knowledge-base",
+        "memory",
+        "wiki"
+      ],
+      "supportedBy": [
+        "claude-code"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/obsidian-skills-setup",
+      "githubStars": 47290,
+      "githubOpenIssues": 27,
+      "githubArchived": false,
+      "githubLastPush": "2026-06-08T16:12:01Z",
+      "githubLanguage": null
+    },
+    {
+      "id": "oh-my-openagent",
+      "name": "Oh My OpenAgent",
+      "description": "Batteries-included agent harness with multi-model orchestration, 40+ lifecycle hooks, and 9 specialized agents.",
+      "category": "agents",
+      "github": "https://github.com/code-yeongyu/oh-my-openagent",
+      "npm": "oh-my-openagent",
+      "pip": null,
+      "install": "bunx oh-my-openagent install",
+      "site": "https://ohmyopenagent.com/docs",
+      "license": "Unknown",
+      "tags": [
+        "harness",
+        "orchestration",
+        "hooks",
+        "specialized-agents"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Agents/oh-my-openagent",
+      "githubStars": 68383,
+      "githubOpenIssues": 489,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-26T09:42:08Z",
+      "githubLanguage": "TypeScript",
+      "npmVersion": "4.19.4",
+      "npmLastPublished": "2026-08-01T09:47:40.813Z"
+    },
+    {
+      "id": "omniroute",
+      "name": "OmniRoute",
+      "description": "Free MIT AI gateway: one endpoint, 340+ providers (90+ free), auto-fallback, RTK+Caveman token compression (78-95%), 19 routing strategies, MCP/A2A support.",
+      "category": "proxy",
+      "github": "https://github.com/diegosouzapw/OmniRoute",
+      "npm": "omniroute",
+      "pip": null,
+      "install": "npm install -g omniroute",
+      "site": "https://omniroute.online",
+      "license": "MIT",
+      "tags": [
+        "gateway",
+        "proxy",
+        "free",
+        "compression",
+        "routing",
+        "fallback",
+        "mcp"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "cline",
+        "opencode",
+        "aider",
+        "goose",
+        "copilot"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Proxy/omniroute",
+      "githubStars": 55620,
+      "githubOpenIssues": 71,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-26T05:45:11Z",
+      "githubLanguage": "TypeScript",
+      "npmVersion": "3.8.49",
+      "npmLastPublished": "2026-07-30T02:58:52.207Z"
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "description": "Terminal-first, provider-agnostic AI coding agent supporting 75+ LLM providers with Ask, Edit, Safe, and Agent modes.",
+      "category": "agents",
+      "github": "https://github.com/sst/opencode",
+      "npm": null,
+      "pip": null,
+      "install": "curl -fsSL https://opencode.ai/install | bash",
+      "site": "https://opencode.ai",
+      "license": "MIT",
+      "tags": [
+        "cli",
+        "coding",
+        "agentic",
+        "multi-provider"
+      ],
+      "supportedBy": [
+        "ecc",
+        "omo",
+        "skills-sh"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Agents/opencode",
+      "githubStars": 201513,
+      "githubOpenIssues": 4060,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-26T09:44:14Z",
+      "githubLanguage": "TypeScript"
+    },
+    {
+      "id": "openfang",
+      "name": "OpenFang",
+      "description": "Production-grade Agent Operating System built in Rust for 24/7 autonomous operations with 7 hands, 16 security layers, 40 channel adapters.",
+      "category": "agents",
+      "github": "https://github.com/RightNow-AI/openfang",
+      "npm": null,
+      "pip": null,
+      "install": "curl -fsSL https://openfang.sh/install | sh",
+      "site": "https://openfang.sh",
+      "license": "MIT",
+      "tags": [
+        "autonomous",
+        "rust",
+        "agent-os",
+        "24-7",
+        "security"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Agents/openfang",
+      "githubStars": 18135,
+      "githubOpenIssues": 73,
+      "githubArchived": false,
+      "githubLastPush": "2026-07-02T08:13:12Z",
+      "githubLanguage": "Rust"
+    },
+    {
+      "id": "opensre",
+      "name": "OpenSRE",
+      "description": "Open-source framework for building AI SRE agents that investigate and resolve production incidents across your existing observability stack.",
+      "category": "workflows",
+      "github": "https://github.com/Tracer-Cloud/opensre",
+      "npm": null,
+      "pip": "opensre",
+      "install": "pip install opensre",
+      "site": "https://www.opensre.com",
+      "license": "MIT",
+      "tags": [
+        "sre",
+        "incident-response",
+        "root-cause-analysis",
+        "observability",
+        "ai-agents"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode",
+        "cursor"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Workflows/opensre",
+      "githubStars": 10934,
+      "githubOpenIssues": 307,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-26T09:48:11Z",
+      "githubLanguage": "Python"
+    },
+    {
+      "id": "openui",
+      "name": "OpenUI",
+      "description": "Streaming-first generative UI language for AI agents, 67% more token-efficient than JSON.",
+      "category": "tools",
+      "github": "https://github.com/thesysdev/openui",
+      "npm": "@openuidev/react-lang",
+      "pip": null,
+      "install": "npm install @openuidev/cli",
+      "site": "https://openui.com",
+      "license": "Unknown",
+      "tags": [
+        "generative-ui",
+        "streaming",
+        "token-efficient",
+        "react"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/openui",
+      "githubStars": 8458,
+      "githubOpenIssues": 56,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-26T09:35:09Z",
+      "githubLanguage": "TypeScript",
+      "npmVersion": "0.2.15",
+      "npmLastPublished": "2026-08-24T16:09:23.504Z"
+    },
+    {
+      "id": "ponytail",
+      "name": "Ponytail",
+      "description": "Agent plugin that teaches your AI coding agent to write the least code that works — cutting 54% of code, 22% of tokens, and 20% of cost while keeping safety intact.",
+      "category": "tools",
+      "github": "https://github.com/DietrichGebert/ponytail",
+      "npm": "@dietrichgebert/ponytail",
+      "pip": null,
+      "install": "/plugin install ponytail@ponytail",
+      "site": "https://ponytail.dev",
+      "license": "MIT",
+      "tags": [
+        "yagni",
+        "token-efficiency",
+        "code-reduction",
+        "agent-plugin"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode",
+        "codex",
+        "gemini-cli"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/ponytail",
+      "githubStars": 111702,
+      "githubOpenIssues": 65,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-07T21:44:01Z",
+      "githubLanguage": "JavaScript",
+      "npmVersion": "4.9.0",
+      "npmLastPublished": "2026-08-07T21:14:40.831Z"
+    },
+    {
+      "id": "presenton",
+      "name": "Presenton",
+      "description": "Open-source, self-hosted AI presentation generator (PPTX + PDF) with BYOK support for 7+ providers.",
+      "category": "tools",
+      "github": "https://github.com/presenton/presenton",
+      "npm": null,
+      "pip": null,
+      "install": "docker pull ghcr.io/presenton/presenton:latest",
+      "site": "https://presenton.ai/",
+      "license": "Unknown",
+      "tags": [
+        "presentations",
+        "pptx",
+        "pdf",
+        "generative",
+        "self-hosted"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/presenton",
+      "githubStars": 9853,
+      "githubOpenIssues": 30,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-26T09:48:42Z",
+      "githubLanguage": "TypeScript"
+    },
+    {
+      "id": "public-models",
+      "name": "Public Model Access",
+      "description": "Curated list of public model providers: NVIDIA NIM, Groq, Z.ai, HuggingFace, Anthropic, OpenAI, OpenRouter, Ollama, vLLM, LM Studio.",
+      "category": "models",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": "https://build.nvidia.com/models",
+      "license": "N/A",
+      "tags": [
+        "providers",
+        "inference",
+        "free",
+        "paid",
+        "self-hosted"
+      ],
+      "supportedBy": [
+        "claude-code-proxy",
+        "opencode"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Models-LLMs/public-models"
+    },
+    {
+      "id": "qwen35-small",
+      "name": "Qwen3.5 Small Series",
+      "description": "Small language models (0.8B-9B) for edge and local deployment with native multimodal support.",
+      "category": "models",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": "https://huggingface.co/collections/Qwen/qwen35",
+      "license": "Apache-2.0",
+      "tags": [
+        "small-model",
+        "edge",
+        "local",
+        "multimodal"
+      ],
+      "supportedBy": [
+        "mac-code"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Models-LLMs/Qwen3.5-Small-Series"
+    },
+    {
+      "id": "remotion-skills",
+      "name": "Remotion Skills",
+      "description": "React-based video framework with AI agent skills for creating programmatic videos from chat prompts. 10 specialized skills for animation, rendering, and project scaffolding.",
+      "category": "skills",
+      "github": "https://github.com/remotion-dev/remotion",
+      "npm": "remotion",
+      "pip": null,
+      "install": "npx skills add remotion-dev/skills",
+      "site": "https://www.remotion.dev",
+      "license": "Custom",
+      "tags": [
+        "video",
+        "react",
+        "animation",
+        "skills",
+        "agent-agnostic"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "opencode",
+        "kimi-code",
+        "windsurf",
+        "cline"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/remotion-skills",
+      "githubStars": 57377,
+      "githubOpenIssues": 161,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-26T09:48:10Z",
+      "githubLanguage": "TypeScript",
+      "npmVersion": "4.0.517",
+      "npmLastPublished": "2026-08-25T14:45:48.354Z"
+    },
+    {
+      "id": "rtk",
+      "name": "RTK (Rust Token Killer)",
+      "description": "Token optimization middleware in Rust that reduces LLM consumption by 60-90% for AI coding agents.",
+      "category": "tools",
+      "github": "https://github.com/rtk-ai/rtk",
+      "npm": null,
+      "pip": null,
+      "install": "brew install rtk",
+      "site": "https://www.rtk-ai.app",
+      "license": "Unknown",
+      "tags": [
+        "token-optimization",
+        "rust",
+        "middleware",
+        "cost-reduction"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/rtk",
+      "githubStars": 77465,
+      "githubOpenIssues": 1013,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-26T08:11:32Z",
+      "githubLanguage": "Rust"
+    },
+    {
+      "id": "skillopt",
+      "name": "SkillOpt",
+      "description": "Microsoft's text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts.",
+      "category": "skills",
+      "github": "https://github.com/microsoft/SkillOpt",
+      "npm": null,
+      "pip": "skillopt",
+      "install": "pip install skillopt",
+      "site": "https://microsoft.github.io/SkillOpt/",
+      "license": "MIT",
+      "tags": [
+        "skills",
+        "optimization",
+        "self-evolving",
+        "agent-skills"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "codex",
+        "copilot"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/skillopt",
+      "githubStars": 16363,
+      "githubOpenIssues": 19,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-23T07:02:47Z",
+      "githubLanguage": "Python"
+    },
+    {
+      "id": "skills-sh",
+      "name": "Skills.sh",
+      "description": "Open-source decentralized registry for AI agent capabilities — a package manager for AI intelligence.",
+      "category": "skills",
+      "github": "https://github.com/sdelrio/skills",
+      "npm": "skills.sh",
+      "pip": null,
+      "install": "npx skills add <owner/repo>",
+      "site": "https://skills.sh",
+      "license": "Unknown",
+      "tags": [
+        "skills",
+        "registry",
+        "package-manager",
+        "multi-agent"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "opencode",
+        "cursor",
+        "copilot",
+        "windsurf",
+        "cline"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/skills-sh"
+    },
+    {
+      "id": "system-prompts",
+      "name": "System Prompts & Personas",
+      "description": "Framework for system prompt analysis and persona construction with constraint layers, tool orchestration, and reasoning buffers.",
+      "category": "prompts",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": null,
+      "license": "N/A",
+      "tags": [
+        "system-prompts",
+        "personas",
+        "analysis",
+        "framework"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Prompt-Library/System-Prompts-and-Personas"
+    },
+    {
+      "id": "test-new",
+      "name": "Test New",
+      "description": "After",
+      "category": "tools",
+      "docPath": "/docs/test"
+    },
+    {
+      "id": "test-tool",
+      "name": "Test Tool",
+      "description": "After update",
+      "category": "tools",
+      "docPath": "/docs/test",
+      "install": null
+    },
+    {
+      "id": "toon",
+      "name": "TOON",
+      "description": "Token-Oriented Object Notation — compact data format with 70-75% less overhead than JSON for LLM consumption.",
+      "category": "tools",
+      "github": null,
+      "npm": null,
+      "pip": null,
+      "install": null,
+      "site": "https://toonformat.dev",
+      "license": "Unknown",
+      "tags": [
+        "data-format",
+        "token-efficient",
+        "compact"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/toon"
+    },
+    {
+      "id": "webwright",
+      "name": "Webwright",
+      "description": "Microsoft open-source browser agent framework that turns coding models into state-of-the-art browser automation agents using Playwright.",
+      "category": "skills",
+      "github": "https://github.com/microsoft/Webwright",
+      "npm": null,
+      "pip": "webwright",
+      "install": "pip install -e .",
+      "site": "https://microsoft.github.io/Webwright/",
+      "license": "MIT",
+      "tags": [
+        "browser-automation",
+        "playwright",
+        "ai-agents",
+        "web-scraping",
+        "llm"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "codex",
+        "opencode"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/webwright",
+      "githubStars": 5946,
+      "githubOpenIssues": 11,
+      "githubArchived": false,
+      "githubLastPush": "2026-08-03T22:00:27Z",
+      "githubLanguage": "Python"
+    }
+  ]
+}
