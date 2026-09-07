@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([["35961"],{21024(e,s,r){r.d(s,{createWardleyServices:()=>t.J});var t=r(74469);r(94144),r(99389)}}]);
