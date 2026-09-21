@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([["29591"],{14922(e,s,t){t.d(s,{createGitGraphServices:()=>r.b});var r=t(51191);t(56894)}}]);

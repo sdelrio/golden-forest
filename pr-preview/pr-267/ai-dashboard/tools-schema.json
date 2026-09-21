@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Dashboard Tools",
+  "description": "Schema for static/ai-dashboard/tools.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "description", "category", "docPath"],
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier (lowercase, hyphens for spaces)",
+        "pattern": "^[a-z0-9][a-z0-9\\-]*$"
+      },
+      "name": {
+        "type": "string",
+        "description": "Display name"
+      },
+      "description": {
+        "type": "string",
+        "description": "Short description for the dashboard card"
+      },
+      "category": {
+        "type": "string",
+        "enum": ["agents", "skills", "tools", "workflows", "prompts", "comparatives", "models", "mcp", "browsers", "proxy"],
+        "description": "Dashboard category filter"
+      },
+      "github": {
+        "type": ["string", "null"],
+        "description": "GitHub repo URL"
+      },
+      "npm": {
+        "type": ["string", "null"],
+        "description": "npm package name"
+      },
+      "pip": {
+        "type": ["string", "null"],
+        "description": "pip package name"
+      },
+      "install": {
+        "type": ["string", "null"],
+        "description": "Install command"
+      },
+      "site": {
+        "type": ["string", "null"],
+        "description": "Project website URL"
+      },
+      "license": {
+        "type": "string",
+        "description": "License identifier"
+      },
+      "tags": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Search/filter tags"
+      },
+      "supportedBy": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "List of tool IDs this integrates with"
+      },
+      "docPath": {
+        "type": "string",
+        "description": "Path to the MDX article (e.g. /docs/Develop-Code/AI-Development/Tools/my-tool)"
+      }
+    },
+    "additionalProperties": false
+  }
+}
