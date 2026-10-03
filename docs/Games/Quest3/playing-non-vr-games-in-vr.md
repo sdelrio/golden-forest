@@ -1,16 +1,17 @@
 ---
 title: "Playing Non-VR Games in VR with Quest 3 Mods"
-description: "A guide to community-made VR mods that let you play flat-screen games in full VR on Meta Quest 3, featuring Cyberpunk 2077 VR Port, Red Dead Redemption 2 RealVR, and The Witcher 3 VR."
+description: "A guide to community-made VR mods that let you play flat-screen games in full VR on Meta Quest 3, featuring Cyberpunk 2077 VR Port, Red Dead Redemption 2 RealVR, The Witcher 3 VR, and Titanfall 2 VR."
 tags:
   - quest 3
   - vr mods
   - cyberpunk 2077
   - red dead redemption 2
   - the witcher 3
+  - titanfall 2
   - pcvr
 sidebar_label: "Non-VR Game Mods"
 last_update:
-  date: 2026-08-09
+  date: 2026-10-03
 ---
 
 import Accordion from '@site/src/components/Accordion/Accordion';
@@ -22,7 +23,7 @@ import Step from '@site/src/components/Steps/Step';
 
 Community modders have found ways to inject full 6-DoF VR rendering into games that were never designed for it. These mods go far beyond simple "fake 3D" wrappers - they add real stereo rendering, motion controller support (where available), and hand-to-holster interaction systems directly into flat-screen game engines.
 
-With a PC and a Quest 3, you can play titles like Cyberpunk 2077, Red Dead Redemption 2, and The Witcher 3 as if they were native VR games. This article covers how it works, how to connect, and three of the most polished mods available.
+With a PC and a Quest 3, you can play titles like Cyberpunk 2077, Red Dead Redemption 2, The Witcher 3, and Titanfall 2 as if they were native VR games. This article covers how it works, how to connect, and four of the most polished mods available.
 
 ## How to Connect: Streaming PCVR to Quest 3
 
@@ -312,6 +313,108 @@ The mod has been tested on **Quest 3** (via Virtual Desktop) and **Pimax 5K** (v
 
 A video walkthrough by **NotAGameAddict** covers the full experience: [The Witcher 3 in VR is ILLEGALLY good](https://www.youtube.com/watch?v=QZcvEh7k6wE).
 
+## Titanfall 2 VR
+
+[Titanfall 2 VR](https://github.com/CircuitLord/CircuitLordVRModInstaller) by CircuitLord is a full VR conversion of the Titanfall 2 campaign. Unlike the other mods on this page it is **closed source** and ships through a dedicated one-click Windows installer rather than as loose files you drop into the game folder. If wall-running, slide chains, and cockpit-piloted mechs sound impossible in VR, this is the mod that makes them happen.
+
+:::warning Campaign Only
+The mod covers the **single-player campaign** ("OpenXR campaign VR support for Titanfall 2"). Multiplayer is not supported yet, and the mod is currently distributed as a **beta** build. Launching Titanfall 2 normally stays completely unmodded, so your regular install is never touched.
+:::
+
+### Key Features
+
+- **Full VR campaign conversion** - stereo rendering throughout the campaign, delivered through OpenXR.
+- **Full body IK** - your avatar's arms and upper body track to your real pose instead of floating as a disconnected viewmodel.
+- **Manual reloads** - interactive reloading built into the weapons rather than a single button press.
+- **Titan controls** - sitting in the cockpit and working the mech's controls by hand. This is the part players single out as the most immersive.
+- **Isolated from your main install** - the mod installs into a separate `TF2VR` profile in the game directory, and VR launches use their own saves and settings.
+
+### Requirements
+
+- [Titanfall 2](https://store.steampowered.com/app/1237970/TITANFALL_2/) (PC, via a Steam, EA, or Xbox install)
+- **EA app** signed in - Titanfall 2 will not launch without it. If it is not installed, launch Titanfall 2 once from Steam so it gets installed.
+- A working OpenXR runtime (SteamVR or your runtime of choice)
+- Write access to the game folder - the EA app installs under `Program Files`, so the installer will request permission once
+
+:::tip
+The installer auto-detects your Titanfall 2 install from Steam, EA, and Xbox. If it reports **Not found**, press **Change** and pick the folder containing `Titanfall2.exe`.
+:::
+
+### Installation
+
+<Steps>
+<Step title="Download the Installer" interactive>
+
+Grab [CircuitLordVRModInstaller.exe](https://github.com/CircuitLord/CircuitLordVRModInstaller/releases/latest/download/CircuitLordVRModInstaller.exe) from the latest release and run it. Windows SmartScreen will warn you about an unsigned executable. That is expected for an unofficial mod installer.
+
+</Step>
+<Step title="Pick Titanfall 2 VR" interactive>
+
+The installer opens on a **Choose a game** screen. Select **Titanfall 2 VR**, then let it locate your install.
+
+</Step>
+<Step title="Sign In to the EA App" interactive>
+
+The installer checks for the EA app. If it is missing, the app installs itself when you launch Titanfall 2 once. Sign in, close the game, then come back and confirm with **I'm signed in** and **Refresh**. The game must be closed before the installer proceeds.
+
+</Step>
+<Step title="Install the Mod" interactive>
+
+Click **Install**. Accept the one-time UAC prompt so the installer can write to the game folder. It then installs **Northstar** (the mod loader) and Titanfall 2 VR into a dedicated `TF2VR` profile inside your game directory, and drops a launcher next to the game executable. Expect the install to take a while, since it rebuilds game assets. The launcher is an unsigned executable, so antivirus may flag it.
+
+</Step>
+<Step title="Launch in VR" interactive>
+
+Start **SteamVR** (or your runtime of choice) first, then use the installer's **Launch in VR** button. Launching Titanfall 2 from Steam or EA as usual stays flat-screen and unmodded.
+
+</Step>
+</Steps>
+
+### Campaign Saves
+
+VR launches keep their own saves and settings, separate from your regular campaign. Since mod 1.0.4 the VR save lives outside `Documents` (Windows Controlled folder access blocks the launcher from reading it):
+
+```
+%LOCALAPPDATA%\Respawn\Titanfall2_VR\profile\
+  profile.cfg
+  savegames\savegame.sav
+```
+
+The installer's **Campaign saves** button reports whether a VR save exists (**Save found**, **No save**, or **Incomplete save**) and can open that folder for you. It does not copy saves. To carry your existing campaign progress into VR, copy `profile.cfg` and `savegames\savegame.sav` from your normal Titanfall 2 save into that `profile` folder by hand.
+
+:::info Keeping Things Updated
+The installer compares its manifest version against what is installed and shows **Install** or **Update** accordingly. Updates add and remove only the files the previous version shipped, and uninstall removes exactly what the installer recorded (the `TF2VR` profile, the launcher it renamed, and its own files), leaving the rest of your game untouched. You can also enable **Beta updates** in the installer to pull early mod releases.
+:::
+
+### Known Issues
+
+<AccordionGroup>
+<Accordion title="Comfort and Movement" icon="mdi:run" defaultOpen={false}>
+
+- Titanfall 2's movement is built around sudden vertical velocity changes and very high speeds, which can be rough on your vestibular system. Expect an adjustment period, especially with wall-running and slide chains.
+- Consider playing seated with a clear physical space around you, or with a guardian set for standing play, until you are used to the speed.
+
+</Accordion>
+<Accordion title="Conflicting Mods" icon="mdi:puzzle" defaultOpen={false}>
+
+- The installer refuses to launch if another mod has dropped a `dxgi.dll` or `d3d11.dll` next to the game or in `bin\x64_retail\`. Those DirectX replacements take the Present call away from VR rendering. Remove them and launch again.
+- As with the Cyberpunk 2077 port above, install and test other mods before adding the VR layer so you know which one is responsible for a problem.
+
+</Accordion>
+<Accordion title="Limitations" icon="mdi:information-outline" defaultOpen={false}>
+
+- Single-player campaign only. Multiplayer is not supported.
+- Currently shipping as a beta build, so expect rough edges.
+- The mod itself is closed source, so issues cannot be debugged from source. Report them in CircuitLord's [Discord](https://discord.gg/MTKwud2cCP).
+- Not affiliated with or endorsed by Respawn or EA. Use at your own risk.
+
+</Accordion>
+</AccordionGroup>
+
+### Video Walkthrough
+
+A video walkthrough by **Beardo Benjo** covers the full experience: [Titanfall 2 VR - The Best VR Game of 2026](https://www.youtube.com/watch?v=j1SJ1bysKi4).
+
 ## General Tips for VR Mod Gaming
 
 :::info
@@ -335,4 +438,7 @@ VR mods are community projects and can be fragile. Always back up your game save
 - [Witcher 3 VR - GitHub Repository](https://github.com/tig3rmast3r/witcher3-vr)
 - [Witcher 3 VR - Releases](https://github.com/tig3rmast3r/witcher3-vr/releases)
 - [The Witcher 3 in VR is ILLEGALLY good - YouTube](https://www.youtube.com/watch?v=QZcvEh7k6wE)
+- [CircuitLord's VR Mod Installer - GitHub Repository](https://github.com/CircuitLord/CircuitLordVRModInstaller)
+- [CircuitLord's VR Mod Installer - Releases](https://github.com/CircuitLord/CircuitLordVRModInstaller/releases)
+- [Titanfall 2 VR - YouTube (Beardo Benjo)](https://www.youtube.com/watch?v=j1SJ1bysKi4)
 - [Virtual Desktop Link Cable Guide](/docs/Games/Quest3/virtual-desktop-link-cable)
