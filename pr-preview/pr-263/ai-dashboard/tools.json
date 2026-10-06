@@ -398,6 +398,33 @@
     "docPath": "/docs/Develop-Code/AI-Development/Workflows/GLM-Kimi-Video-Analysis"
   },
   {
+    "id": "graft",
+    "name": "Graft",
+    "description": "Open-source context layer for large codebases - turbocharge coding agents with up to 4x cheaper, 3x faster performance via tree-sitter graph and optional LLM summaries.",
+    "category": "tools",
+    "github": "https://github.com/trailhq/Graft",
+    "npm": "@nanonets/graft",
+    "pip": null,
+    "install": "npm install -g @nanonets/graft",
+    "site": "https://graft.nanonets.ai",
+    "license": "MIT",
+    "tags": [
+      "code-graph",
+      "tree-sitter",
+      "context-layer",
+      "token-efficiency",
+      "mcp"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "cursor",
+      "codex",
+      "gemini",
+      "opencode"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Tools/graft"
+  },
+  {
     "id": "graphify",
     "name": "Graphify",
     "description": "Transform any folder/repository into a navigable knowledge graph with 71.5x token efficiency and MCP support.",
