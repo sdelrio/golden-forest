@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T21:01:28.504Z",
+  "generatedAt": "2026-10-12T21:05:40.361Z",
   "toolCount": 51,
   "tools": [
     {
@@ -294,7 +294,8 @@
       "supportedBy": [
         "claude-code"
       ],
-      "docPath": "/docs/Develop-Code/AI-Development/Skills/cloudflare-security-audit-skill"
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/cloudflare-security-audit-skill",
+      "healthScore": 20
     },
     {
       "id": "codegraph",
