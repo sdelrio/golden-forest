@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-12T17:53:30.688Z",
-  "toolCount": 50,
+  "generatedAt": "2026-10-12T21:01:28.504Z",
+  "toolCount": 51,
   "tools": [
     {
       "id": "agency-agents",
@@ -59,13 +59,13 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/agentmemory",
-      "npmVersion": "0.9.30",
-      "npmLastPublished": "2026-10-06T13:52:25.926Z",
       "githubStars": 29354,
       "githubOpenIssues": 271,
       "githubArchived": false,
       "githubLastPush": "2026-10-12T15:36:21Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.9.30",
+      "npmLastPublished": "2026-10-06T13:52:25.926Z",
       "healthScore": 100
     },
     {
@@ -274,6 +274,29 @@
       "healthScore": 20
     },
     {
+      "id": "cloudflare-security-audit-skill",
+      "name": "Cloudflare Security Audit Skill",
+      "description": "Cloudflare's coding-agent skill for multi-phase security audits with independently verified, machine-readable findings.",
+      "category": "skills",
+      "github": "https://github.com/cloudflare/security-audit-skill",
+      "npm": null,
+      "pip": null,
+      "install": "npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit",
+      "site": null,
+      "license": "MIT",
+      "tags": [
+        "security",
+        "skills",
+        "audit",
+        "cloudflare",
+        "vulnerability"
+      ],
+      "supportedBy": [
+        "claude-code"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/cloudflare-security-audit-skill"
+    },
+    {
       "id": "codegraph",
       "name": "CodeGraph",
       "description": "Pre-indexed semantic code graph for AI agents — reduces tool calls by ~92%, speeds up exploration by ~71%.",
@@ -297,13 +320,13 @@
         "codex"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/codegraph",
-      "npmVersion": "1.6.2",
-      "npmLastPublished": "2026-10-03T06:45:46.734Z",
       "githubStars": 73816,
       "githubOpenIssues": 160,
       "githubArchived": false,
       "githubLastPush": "2026-10-12T16:56:52Z",
       "githubLanguage": "C",
+      "npmVersion": "1.6.2",
+      "npmLastPublished": "2026-10-03T06:45:46.734Z",
       "healthScore": 100
     },
     {
@@ -390,13 +413,13 @@
         "gemini"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/everything-claude-code",
-      "npmVersion": "2.2.3",
-      "npmLastPublished": "2026-10-02T01:56:16.379Z",
       "githubStars": 277729,
       "githubOpenIssues": 79,
       "githubArchived": false,
       "githubLastPush": "2026-10-12T14:45:46Z",
       "githubLanguage": "JavaScript",
+      "npmVersion": "2.2.3",
+      "npmLastPublished": "2026-10-02T01:56:16.379Z",
       "healthScore": 100
     },
     {
@@ -527,13 +550,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/graft",
-      "npmVersion": "0.21.1",
-      "npmLastPublished": "2026-09-29T11:26:22.311Z",
       "githubStars": 9912,
       "githubOpenIssues": 116,
       "githubArchived": false,
       "githubLastPush": "2026-10-12T05:18:47Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.21.1",
+      "npmLastPublished": "2026-09-29T11:26:22.311Z",
       "healthScore": 100
     },
     {
@@ -656,13 +679,13 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/lightpanda",
-      "npmVersion": "1.6.0",
-      "npmLastPublished": "2026-08-31T09:31:51.783Z",
       "githubStars": 36340,
       "githubOpenIssues": 65,
       "githubArchived": false,
       "githubLastPush": "2026-10-12T14:46:26Z",
       "githubLanguage": "Zig",
+      "npmVersion": "1.6.0",
+      "npmLastPublished": "2026-08-31T09:31:51.783Z",
       "healthScore": 100
     },
     {
@@ -777,13 +800,13 @@
         "cursor"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Prompt-Library/modern-web-guidance",
-      "npmVersion": "0.0.193",
-      "npmLastPublished": "2026-10-07T16:26:04.768Z",
       "githubStars": 1148,
       "githubOpenIssues": 460,
       "githubArchived": false,
       "githubLastPush": "2026-10-12T17:17:27Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.0.193",
+      "npmLastPublished": "2026-10-07T16:26:04.768Z",
       "healthScore": 94
     },
     {
@@ -884,13 +907,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/oh-my-openagent",
-      "npmVersion": "5.1.30",
-      "npmLastPublished": "2026-10-11T14:51:04.670Z",
       "githubStars": 69976,
       "githubOpenIssues": 779,
       "githubArchived": false,
       "githubLastPush": "2026-10-12T17:29:23Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "5.1.30",
+      "npmLastPublished": "2026-10-11T14:51:04.670Z",
       "healthScore": 100
     },
     {
@@ -924,13 +947,13 @@
         "copilot"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Proxy/omniroute",
-      "npmVersion": "3.8.51",
-      "npmLastPublished": "2026-09-30T02:54:04.736Z",
       "githubStars": 75631,
       "githubOpenIssues": 64,
       "githubArchived": false,
       "githubLastPush": "2026-10-11T04:53:56Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "3.8.51",
+      "npmLastPublished": "2026-09-30T02:54:04.736Z",
       "healthScore": 100
     },
     {
@@ -1040,13 +1063,13 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/openui",
-      "npmVersion": "1.0.0",
-      "npmLastPublished": "2026-10-12T15:08:15.772Z",
       "githubStars": 10789,
       "githubOpenIssues": 60,
       "githubArchived": false,
       "githubLastPush": "2026-10-12T17:09:19Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "1.0.0",
+      "npmLastPublished": "2026-10-12T15:08:15.772Z",
       "healthScore": 100
     },
     {
@@ -1073,13 +1096,13 @@
         "gemini-cli"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/ponytail",
-      "npmVersion": "5.1.0",
-      "npmLastPublished": "2026-10-08T16:22:45.300Z",
       "githubStars": 161718,
       "githubOpenIssues": 19,
       "githubArchived": false,
       "githubLastPush": "2026-10-10T04:19:53Z",
       "githubLanguage": "JavaScript",
+      "npmVersion": "5.1.0",
+      "npmLastPublished": "2026-10-08T16:22:45.300Z",
       "healthScore": 100
     },
     {
@@ -1185,13 +1208,13 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/remotion-skills",
-      "npmVersion": "4.0.535",
-      "npmLastPublished": "2026-10-12T08:43:12.704Z",
       "githubStars": 63548,
       "githubOpenIssues": 160,
       "githubArchived": false,
       "githubLastPush": "2026-10-12T17:29:09Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "4.0.535",
+      "npmLastPublished": "2026-10-12T08:43:12.704Z",
       "healthScore": 100
     },
     {

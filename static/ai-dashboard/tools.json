@@ -232,6 +232,29 @@
     "docPath": "/docs/Develop-Code/AI-Development/Workflows/ClaudeKit-Workflow"
   },
   {
+    "id": "cloudflare-security-audit-skill",
+    "name": "Cloudflare Security Audit Skill",
+    "description": "Cloudflare's coding-agent skill for multi-phase security audits with independently verified, machine-readable findings.",
+    "category": "skills",
+    "github": "https://github.com/cloudflare/security-audit-skill",
+    "npm": null,
+    "pip": null,
+    "install": "npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit",
+    "site": null,
+    "license": "MIT",
+    "tags": [
+      "security",
+      "skills",
+      "audit",
+      "cloudflare",
+      "vulnerability"
+    ],
+    "supportedBy": [
+      "claude-code"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Skills/cloudflare-security-audit-skill"
+  },
+  {
     "id": "codegraph",
     "name": "CodeGraph",
     "description": "Pre-indexed semantic code graph for AI agents — reduces tool calls by ~92%, speeds up exploration by ~71%.",

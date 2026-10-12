@@ -274,6 +274,7 @@ function mergeWithPrevious(entry, prev) {
   const enrichedKeys = [
     'githubStars', 'githubOpenIssues', 'githubArchived',
     'githubLastPush', 'githubLanguage', 'npmVersion', 'npmLastPublished',
+    'healthScore',
   ];
   for (const key of enrichedKeys) {
     if (entry[key] === undefined && prev[key] !== undefined) {
