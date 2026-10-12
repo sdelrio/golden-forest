@@ -1,7 +1,7 @@
 ---
 title: "Claude Code"
 description: "Integration guide and project architecture for Anthropic's Claude Code CLI tool."
-last_updated: 2026-08-26
+last_updated: 2026-10-12
 tags:
   - AI
   - tools
@@ -426,19 +426,40 @@ Drops of tens of thousands of tokens per turn are common after cleanup. The six 
   </Accordion>
 </AccordionGroup>
 
-### Companion Feature: Claude Design (`/design`)
+## UI Prototyping with `/design`
+
+`/design` is a built-in Claude Code command (desktop and terminal) for turning an idea into UI. Instead of describing a layout and hoping, you get a tight visual loop: Claude generates **three distinct prototypes**, you pick the direction that convinces you most, and it implements the winner. In the demo, that loop runs end-to-end in around fifteen seconds.
+
+:::tip
+Constrain each prototype differently rather than asking for three skins of the same layout. Prompts like "generate three options: mobile-first, accessibility-focused, and dark-mode-first" force real trade-offs instead of cosmetic variations.
+:::
 
 <AccordionGroup>
-  <Accordion title="Claude Design: prototype-first UI generation" icon="mdi:palette">
-    Claude Design is a companion capability (not part of the CLI) that generates **three UI prototypes** for you to pick from, then implements the chosen design. It pairs well with the tips above:
+  <Accordion title="Three prototypes, then implement the winner" icon="mdi:palette-swatch">
+    Run `/design` with a description of what you want to build. Claude produces three alternative directions, you review them, pick one, and it implements that design directly - no copy-pasting between a design tool and your editor.
 
-    - Use `/design` to explore visual directions before asking Claude Code to build the real thing.
-    - Once implemented, apply tip #20 (screenshot-based self-verification) to confirm Claude Code matches the chosen prototype.
-    - Combine with tip #22 (cloning inspiration sites) when the prototypes need external references.
+    - Vary the constraints per option (layout, density, accessibility, mobile-first) so the choice is architectural, not just visual.
+    - Ask for a direction that matches your stack from the start, so the implemented result needs less cleanup.
+  </Accordion>
 
-    :::info
-    Availability: **beta** for Pro, Max, Team, and Enterprise plans (default off for Enterprise). Access it at [claude.ai/design](https://claude.ai/design) or via the sidebar in Claude Desktop.
-    :::
+  <Accordion title="/design-sync: build from your real design system" icon="mdi:sync">
+    `/design-sync` pulls your existing design system (components, tokens, styles) from your codebase or design files into Claude Design. Prototypes are then built from your real components instead of invented ones, so what you choose is closer to production on the first pass.
+  </Accordion>
+
+  <Accordion title="Round-trip between design and code" icon="mdi:swap-horizontal">
+    Design and code stay synced instead of handing off through screenshots:
+
+    - **Import**: bring a Claude Design project into your codebase with `/design`.
+    - **Export**: turn existing code into a live prototype with `/design`.
+    - **Build**: let Claude take a design end-to-end and implement it.
+
+    This is the main advantage over separate design tools - the model continues from your existing work rather than re-deriving it from an image.
+  </Accordion>
+
+  <Accordion title="Availability" icon="mdi:information-outline">
+    Claude Design is available on **Free, Pro, Max, Team, and Enterprise** plans and is on by default for most of them. On Enterprise plans it turns on by default on October 15, 2026, and owners can enable it earlier under **Organization settings &gt; Artifacts**. The standalone version at claude.ai/design closes on December 14, 2026.
+
+    Design work draws from the same usage pool as the rest of Claude, including Claude Code, so there is no separate allowance to track.
   </Accordion>
 </AccordionGroup>
 
@@ -454,5 +475,4 @@ Drops of tens of thousands of tokens per turn are common after cleanup. The six 
 - [32 Tricks to Level Up Claude Code](https://www.youtube.com/watch?v=SkMuVhScLRQ) - Video covering all tips in this section.
 - [32 Claude Code Hacks - Full Writeup](https://www.mejba.me/es/blog/claude-code-32-power-user-hacks) - Detailed breakdown with examples.
 - [Kill The Bloat In Claude Code's System Prompt](https://www.aihero.dev/how-to-kill-the-bloat-in-claude-codes-system-prompt) - Guide to trimming token overhead from tool definitions and system instructions.
-
-- [Get Started with Claude Design](https://support.claude.com/en/articles/14604416-get-started-with-claude-design) - Official guide to the `/design` command.
+- [Get Started with Claude Design](https://support.claude.com/en/articles/14604416-get-started-with-claude-design) - Deep dive: the official guide to the `/design` command.
