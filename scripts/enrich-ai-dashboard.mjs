@@ -274,7 +274,6 @@ function mergeWithPrevious(entry, prev) {
   const enrichedKeys = [
     'githubStars', 'githubOpenIssues', 'githubArchived',
     'githubLastPush', 'githubLanguage', 'npmVersion', 'npmLastPublished',
-    'healthScore',
   ];
   for (const key of enrichedKeys) {
     if (entry[key] === undefined && prev[key] !== undefined) {
@@ -307,12 +306,13 @@ async function main() {
     // Merge: keep enriched data for existing tools, add new tools as-is
     const merged = tools.map((tool) => {
       const prev = prevLookup[tool.id];
-      if (prev) {
-        // Existing tool: merge with previous enriched data
-        return mergeWithPrevious({ ...tool }, prev);
-      }
-      // New tool: add with basic info
-      return { ...tool };
+      const entry = prev
+        ? mergeWithPrevious({ ...tool }, prev)
+        : { ...tool };
+      // Recompute health score so every enriched entry keeps a value,
+      // mirroring the stale-cache path below.
+      entry.healthScore = computeHealthScore(entry);
+      return entry;
     });
 
     const output = {
