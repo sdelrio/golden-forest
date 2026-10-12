@@ -52,6 +52,31 @@
     "docPath": "/docs/Develop-Code/AI-Development/Tools/agentmemory"
   },
   {
+    "id": "anatomy",
+    "name": "Anatomy",
+    "description": "Agent skill that explains an idea by building it as a real, working object, producing interactive isometric SVG, WebGL and 3D figures.",
+    "category": "skills",
+    "github": "https://github.com/wheresryan22/anatomy",
+    "npm": null,
+    "pip": null,
+    "install": "npx skills add wheresryan22/anatomy -g",
+    "site": "https://skills.wheresryan.sh/anatomy",
+    "license": "MIT",
+    "tags": [
+      "skills",
+      "visualization",
+      "isometric",
+      "svg",
+      "webgl"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "opencode",
+      "codex"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Skills/anatomy"
+  },
+  {
     "id": "archify",
     "name": "Archify",
     "description": "Agent skill that turns a codebase or system description into polished, verifiable, interactive architecture diagrams as self-contained HTML.",
