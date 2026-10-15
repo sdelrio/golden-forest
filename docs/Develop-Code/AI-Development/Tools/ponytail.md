@@ -60,8 +60,8 @@ The cut is biggest where there is a real over-build trap (e.g., a date picker go
 
 Ponytail offers three modes to control how aggressive the laziness gets:
 
-- **`lite`** – Builds what you asked, names the lazier alternative in one line. You pick. (default)
-- **`full`** – The ladder enforced. Stdlib and native first. Shortest diff, shortest explanation.
+- **`lite`** – Builds what you asked, names the lazier alternative in one line. You pick.
+- **`full`** – The ladder enforced. Stdlib and native first. Shortest diff, shortest explanation. (default)
 - **`ultra`** – YAGNI extremist. Ships the one-liner and challenges the rest of the requirement in the same breath.
 
 Set the level per session or globally via `PONYTAIL_DEFAULT_MODE` env var.
@@ -91,23 +91,21 @@ These are two separate prompts — send them one after the other. The desktop ap
   </TabItem>
   <TabItem value="opencode" label="OpenCode">
 
-Add to your `opencode.json`:
+Install globally:
+
+```bash
+opencode plugin add @dietrichgebert/ponytail
+```
+
+Or add it to a project's `opencode.json`:
 
 ```json
 {
-  "plugin": ["@dietrichgebert/ponytail"]
+  "plugins": ["@dietrichgebert/ponytail"]
 }
 ```
 
-Or run from a local checkout:
-
-```json
-{
-  "plugin": ["./.opencode/plugins/ponytail.mjs"]
-}
-```
-
-The plugin injects the ruleset every turn at the active level and adds the `/ponytail` commands. OpenCode also auto-loads this repo's `AGENTS.md`, so the rules hold even without the plugin.
+The plugin injects the ruleset every turn at the active level, and registers the `/ponytail` commands and skills. OpenCode also auto-loads this repo's `AGENTS.md`, so the rules hold even without the plugin.
 
   </TabItem>
   <TabItem value="codex" label="Codex">
