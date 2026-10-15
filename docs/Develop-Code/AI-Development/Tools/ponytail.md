@@ -60,8 +60,8 @@ The cut is biggest where there is a real over-build trap (e.g., a date picker go
 
 Ponytail offers three modes to control how aggressive the laziness gets:
 
-- **`lite`** – Builds what you asked, names the lazier alternative in one line. You pick. (default)
-- **`full`** – The ladder enforced. Stdlib and native first. Shortest diff, shortest explanation.
+- **`lite`** – Builds what you asked, names the lazier alternative in one line. You pick.
+- **`full`** – The ladder enforced. Stdlib and native first. Shortest diff, shortest explanation. (default)
 - **`ultra`** – YAGNI extremist. Ships the one-liner and challenges the rest of the requirement in the same breath.
 
 Set the level per session or globally via `PONYTAIL_DEFAULT_MODE` env var.

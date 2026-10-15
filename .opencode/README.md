@@ -11,7 +11,9 @@ OpenCode configuration for The Golden Forest. The **Ponytail** plugin ("lazy sen
 /ponytail off      # deactivate
 ```
 
-Deactivate anytime with `stop ponytail` or `normal mode`.
+Deactivate with `/ponytail off`. The `stop ponytail` and `normal mode` phrases only work under the Claude Code hooks.
+
+These commands come from the global npm plugin - see [How it works](#how-it-works).
 
 ## Directory structure
 
@@ -40,8 +42,8 @@ Deactivate anytime with `stop ponytail` or `normal mode`.
 | Command | What it does |
 |---------|-------------|
 | `/ponytail [level]` | Switch intensity (lite/full/ultra/off) |
-| `/ponytail-review` | Over-engineering review of current changes |
-| `/ponytail-audit` | Whole-repo over-engineering audit |
+| `/ponytail-review` | Quality review of a change: logic, safety, load, tests, speed, bloat |
+| `/ponytail-audit` | Ranked quality audit of the whole repo |
 | `/ponytail-debt` | Harvest `shortcut:` comments into a tracked debt ledger |
 | `/ponytail-gain` | Measured-impact scoreboard from benchmarks |
 | `/ponytail-help` | Quick reference card |
@@ -56,9 +58,9 @@ Deactivate anytime with `stop ponytail` or `normal mode`.
 
 **State persistence**: Active mode is stored at `~/.config/opencode/.ponytail-active`.
 
-**Other env vars**:
-- `PONYTAIL_QUIET_STARTUP=1` — Suppress startup toast
-- `PONYTAIL_HIDE_STATUS=1` — Hide status bar indicator
+**Other env vars** (Claude Code hooks only - OpenCode has no toast or status line):
+- `PONYTAIL_QUIET_STARTUP=1` - Suppress startup toast
+- `PONYTAIL_HIDE_STATUS=1` - Hide status bar indicator
 
 ## How it works
 
@@ -71,7 +73,7 @@ opencode plugin update @dietrichgebert/ponytail
 
 It registers its own commands and skills, and hooks `session.hook('context')` / `session.hook('compaction')` to append the active mode's ruleset to the system prompt every turn. `/ponytail <level>` persists the new mode to the state file (it takes effect next turn).
 
-Plugins under `.opencode/plugins/` and `~/.config/opencode/plugins/` are auto-discovered, but only loose `.js`/`.ts` files and directories are picked up (not `.mjs`). Configured entries in `opencode.json` must be npm package names or directory paths.
+Plugins under `.opencode/plugins/` and `~/.config/opencode/plugins/` are auto-discovered, but only loose `.js`/`.ts` files and directories are picked up (not `.mjs`). Configured entries in `opencode.json` must be npm package names, or local paths starting with `./`, `../`, `/` or `file://`. A bare `plugins/x.js` is read as a package spec and fails to install.
 
 ## The `shortcut:` comment convention
 
