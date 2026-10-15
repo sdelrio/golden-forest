@@ -91,23 +91,21 @@ These are two separate prompts — send them one after the other. The desktop ap
   </TabItem>
   <TabItem value="opencode" label="OpenCode">
 
-Add to your `opencode.json`:
+Install globally:
+
+```bash
+opencode plugin add @dietrichgebert/ponytail
+```
+
+Or add it to a project's `opencode.json`:
 
 ```json
 {
-  "plugin": ["@dietrichgebert/ponytail"]
+  "plugins": ["@dietrichgebert/ponytail"]
 }
 ```
 
-Or run from a local checkout:
-
-```json
-{
-  "plugin": ["./.opencode/plugins/ponytail.mjs"]
-}
-```
-
-The plugin injects the ruleset every turn at the active level and adds the `/ponytail` commands. OpenCode also auto-loads this repo's `AGENTS.md`, so the rules hold even without the plugin.
+The plugin injects the ruleset every turn at the active level, and registers the `/ponytail` commands and skills. OpenCode also auto-loads this repo's `AGENTS.md`, so the rules hold even without the plugin.
 
   </TabItem>
   <TabItem value="codex" label="Codex">

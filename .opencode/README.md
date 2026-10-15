@@ -1,6 +1,6 @@
 # .opencode/
 
-OpenCode configuration for The Golden Forest. Contains the **Ponytail** plugin — a "lazy senior dev" mode that enforces minimal, YAGNI-first code.
+OpenCode configuration for The Golden Forest. The **Ponytail** plugin ("lazy senior dev" mode, minimal YAGNI-first code) is installed globally from npm as `@dietrichgebert/ponytail`, not vendored here.
 
 ## Quick start
 
@@ -17,34 +17,10 @@ Deactivate anytime with `stop ponytail` or `normal mode`.
 
 ```
 .opencode/
-├── opencode.json              # Plugin registration
+├── opencode.json              # Project plugin config
 ├── plugins/
-│   ├── ponytail.mjs           # Main plugin entry point
-│   ├── ponytail-frontmatter.cjs  # Command .md frontmatter parser
-│   ├── graphify.js            # Knowledge graph plugin (unrelated)
-│   ├── command/               # Slash command definitions
-│   │   ├── ponytail.md
-│   │   ├── ponytail-audit.md
-│   │   ├── ponytail-debt.md
-│   │   ├── ponytail-gain.md
-│   │   ├── ponytail-help.md
-│   │   └── ponytail-review.md
-│   ├── hooks/                 # Shared hooks (used by Claude Code, Codex, pi too)
-│   │   ├── ponytail-config.js      # Mode resolution (env → config → default)
-│   │   ├── ponytail-instructions.js # System prompt builder
-│   │   ├── ponytail-activate.js
-│   │   ├── ponytail-mode-tracker.js
-│   │   ├── ponytail-runtime.js
-│   │   ├── ponytail-statusline.sh  # Bash status line indicator
-│   │   ├── ponytail-statusline.ps1 # PowerShell status line indicator
-│   │   └── ponytail-subagent.js
-│   └── skills/                # Detailed mode/command documentation
-│       ├── ponytail/SKILL.md
-│       ├── ponytail-audit/SKILL.md
-│       ├── ponytail-debt/SKILL.md
-│       ├── ponytail-gain/SKILL.md
-│       ├── ponytail-help/SKILL.md
-│       └── ponytail-review/SKILL.md
+│   └── graphify.js            # Knowledge graph reminder plugin
+├── commands/                  # Project slash commands (check-mdx, jobs, issues, ...)
 ├── skills/                    # Project-specific skills (non-ponytail)
 │   ├── find-skills/
 │   └── write-article/
@@ -66,7 +42,7 @@ Deactivate anytime with `stop ponytail` or `normal mode`.
 | `/ponytail [level]` | Switch intensity (lite/full/ultra/off) |
 | `/ponytail-review` | Over-engineering review of current changes |
 | `/ponytail-audit` | Whole-repo over-engineering audit |
-| `/ponytail-debt` | Harvest `ponytail:` comments into a tracked debt ledger |
+| `/ponytail-debt` | Harvest `shortcut:` comments into a tracked debt ledger |
 | `/ponytail-gain` | Measured-impact scoreboard from benchmarks |
 | `/ponytail-help` | Quick reference card |
 
@@ -86,22 +62,25 @@ Deactivate anytime with `stop ponytail` or `normal mode`.
 
 ## How it works
 
-1. `opencode.json` loads `plugins/ponytail.mjs` as a server plugin
-2. On each chat turn, `experimental.chat.system.transform` reads the persisted mode and appends Ponytail instructions to the system prompt
-3. `/ponytail <level>` writes the new mode to the state file (takes effect next turn)
-4. Commands in `plugins/command/` are registered via the `config` hook and parsed by `ponytail-frontmatter.cjs`
-5. Skills in `plugins/skills/` provide the detailed behavioral definitions for each mode
+Ponytail is a **global npm plugin**, installed once for every project:
 
-The `hooks/` directory contains shared code used across Claude Code, Codex, Pi, and OpenCode — all read from one source of truth.
+```sh
+opencode plugin add @dietrichgebert/ponytail@5.2.0
+opencode plugin update @dietrichgebert/ponytail
+```
 
-## The `ponytail:` comment convention
+It registers its own commands and skills, and hooks `session.hook('context')` / `session.hook('compaction')` to append the active mode's ruleset to the system prompt every turn. `/ponytail <level>` persists the new mode to the state file (it takes effect next turn).
+
+Plugins under `.opencode/plugins/` and `~/.config/opencode/plugins/` are auto-discovered, but only loose `.js`/`.ts` files and directories are picked up (not `.mjs`). Configured entries in `opencode.json` must be npm package names or directory paths.
+
+## The `shortcut:` comment convention
 
 When Ponytail takes a deliberate shortcut with a known ceiling, it leaves a marker:
 
 ```python
-# ponytail: global lock, per-account locks if throughput matters
+# shortcut: global lock, per-account locks if throughput matters
 ```
 
-Format: `ponytail: <ceiling>, <upgrade path>`
+Format: `shortcut: <ceiling>, <upgrade path>`. Older `ponytail:` markers are still recognised.
 
 Track these with `/ponytail-debt`. Check what's still cuttable with `/ponytail-audit`.
