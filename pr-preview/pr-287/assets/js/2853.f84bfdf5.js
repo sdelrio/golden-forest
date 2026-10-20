@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgolden_forest_website=self.webpackChunkgolden_forest_website||[]).push([["2853"],{90884(e,s,r){r.d(s,{createTreemapServices:()=>t.d});var t=r(16527);r(4954)}}]);
