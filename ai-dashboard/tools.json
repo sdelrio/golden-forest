@@ -1137,6 +1137,21 @@
     "docPath": "/docs/Develop-Code/AI-Development/Tools/toon"
   },
   {
+    "id": "vercel-ai-workflow",
+    "name": "Vercel CEO AI Workflow",
+    "category": "workflows",
+    "description": "Vercel CEO Guillermo Rauch's agentic workflow: test ideas as MVPs, keep builds on course against a spec, and run breaker, first-time-user and security agents before shipping.",
+    "site": "https://www.youtube.com/watch?v=WeiB_gLOdQE",
+    "tags": [
+      "workflow",
+      "agents",
+      "security",
+      "mvp",
+      "spec-driven"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Workflows/vercel-ai-workflow"
+  },
+  {
     "id": "webwright",
     "name": "Webwright",
     "description": "Microsoft open-source browser agent framework that turns coding models into state-of-the-art browser automation agents using Playwright.",
