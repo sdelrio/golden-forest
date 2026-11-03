@@ -261,12 +261,12 @@ Components here are quiet: they are mostly a hairline, a pill, or a sheet. The p
 - **Shape:** Infima defaults, 0.4rem radius. The system barely uses buttons; primary actions are links and pills.
 - **Primary:** there is no dedicated primary button component. Calls to action are amber-family links (`--ifm-link-color` = amber-link, hover amber-link-hover, no underline shift) or filter pills.
 - **Hero CTA:** the one exception, on the home page only: `button button--secondary button--lg` overridden to an amber-darker fill with an amber-lightest border and a stacked amber text-shadow. It is a hero ornament, not a reusable button style.
-- **Hover / Focus:** colour and shadow transitions run 0.15s to 0.2s ease. Focus-visible on the round controls uses a 2px amber outline with 2px offset.
+- **Hover / Focus:** colour and shadow transitions run 0.15s to 0.2s ease. Focus-visible uses a 2px `--focus-ring` outline with 2px offset. The ring is `#8f5d00` (5.39:1) on paper and `#ffb630` (10.85:1) in dark mode; amber at #e99700 is only 2.26:1 and is never a focus colour.
 
 ### Chips
 
 - **Style:** filter pills are fully round, transparent at rest with a 1px emphasis-300 border, 0.8125rem label at weight 500, 0.375rem by 0.75rem padding.
-- **State:** hover shifts border and label to amber. The active pill inverts to an amber fill with white text and moves its count badge from white-alpha to black-alpha.
+- **State:** hover shifts border and label to amber. The active pill inverts to an amber fill with ink text (6.77:1) and lightens its count badge with a white-alpha fill. Ink is used rather than white because `#fff` on #e99700 is only 2.36:1, and `opacity: .9` on hover would drop a white label further.
 - **Badges:** freshness badges are round at 9999px with a 8px status dot and a 12% tinted background (green, amber, red). Tags are the opposite: 4px radius, 0.625rem uppercase-ish meta text on an amber tint over the page field (`rgba(233, 151, 0, .12)`), ink text. Category badges share that tint; there is no per-category hue.
 
 ### Cards
@@ -320,6 +320,6 @@ Every h2 gets `border-bottom: 2px solid` gold-rule (#c9ad6a in light, rgb(134, 1
 - **Don't** introduce a fourth accent hue. Amber, oxblood and the decorative leaf trio are the whole palette.
 - **Don't** use neutral grey shadows on paper surfaces; the dark-mode card hover (`#AAA3`) and the handbook container are the only exceptions.
 - **Don't** reuse the handbook's red rule (#9c2b1b) as an error colour, or the leaf red as a danger state.
-- **Don't** ship new white-on-amber text. `#fff` on #e99700 sits near 2.1:1; the existing active pill does this and is a known exception, not a pattern to copy. Use amber-darkest as the fill or ink as the text.
+- **Don't** ship white-on-amber text. `#fff` on #e99700 is 2.36:1. Amber fills carry ink (`--ink`, 6.77:1) or use amber-darkest as the fill with white text (4.55:1).
 - **Don't** apply the organic radius, the leaf trio or the drop cap outside their artifacts. They are signatures, and repeating them everywhere spends them.
 - **Don't** put a hardcoded type size in a component CSS module when an Infima variable already carries it; the two-register type system depends on those variables being the single source.

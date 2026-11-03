@@ -112,11 +112,11 @@
 .shared-pill-active {
   background: var(--ifm-color-primary);
   border-color: var(--ifm-color-primary);
-  color: #fff;
+  color: var(--ink);
 }
 
 .shared-pill-active:hover {
-  color: #fff;
+  color: var(--ink);
   opacity: 0.9;
 }
 
@@ -162,7 +162,7 @@
 }
 
 .shared-search-input:focus {
-  border-color: var(--ifm-color-primary);
+  border-color: var(--focus-ring);
 }
 
 .shared-search-input::placeholder {
