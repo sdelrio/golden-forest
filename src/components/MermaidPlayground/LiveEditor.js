@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useColorMode } from '@docusaurus/theme-common';
-import { CATEGORY_COLORS } from '../../constants/colors';
 import CopyButton from '../CopyButton/CopyButton';
 import styles from './LiveEditor.module.css';
 
@@ -11,8 +10,6 @@ export default function LiveEditor({ template, onBack }) {
   const debounceRef = useRef(null);
   const containerRef = useRef(null);
   const lineNumbersRef = useRef(null);
-
-  const color = CATEGORY_COLORS[template.category] || '#6b7280';
 
   // null = follow site color mode; true/false = explicit override
   const [darkOverride, setDarkOverride] = useState(null);
@@ -123,7 +120,7 @@ export default function LiveEditor({ template, onBack }) {
       </button>
 
       <div className={styles.editorHeader}>
-        <span className={styles.categoryBadge} style={{ background: color }}>
+        <span className={styles.categoryBadge}>
           {template.category}
         </span>
         <h2 className={styles.templateName}>{template.name}</h2>

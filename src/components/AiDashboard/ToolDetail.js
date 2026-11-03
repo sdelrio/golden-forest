@@ -1,14 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useId, useRef } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Icon } from '@iconify/react';
 import StatusBadge from './StatusBadge';
 import CopyButton from '../CopyButton/CopyButton';
-import { CATEGORY_COLORS } from '../../constants/colors';
+import useDialogFocus from '../../hooks/useDialogFocus';
 import { formatNumber, timeAgo } from '../../utils/format';
 import styles from './ToolDetail.module.css';
 
 export default function ToolDetail({ tool, onClose }) {
   const docsUrl = useBaseUrl(tool.docPath);
+  const panelRef = useRef(null);
+  const titleId = useId();
+  useDialogFocus(panelRef);
 
   useEffect(() => {
     const handleKey = (e) => {
@@ -18,20 +21,26 @@ export default function ToolDetail({ tool, onClose }) {
     return () => document.removeEventListener('keydown', handleKey);
   }, [onClose]);
 
-  const color = CATEGORY_COLORS[tool.category] || '#6b7280';
-
   return (
     <div className={styles.overlay} onClick={onClose} role="presentation">
-      <div className={styles.panel} onClick={(e) => e.stopPropagation()} role="dialog">
+      <div
+        className={styles.panel}
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        tabIndex={-1}
+        ref={panelRef}
+      >
         <button className={styles.closeBtn} onClick={onClose} type="button" aria-label="Close details">
           <Icon icon="mdi:close" width={18} />
         </button>
 
-        <div className={styles.header} style={{ borderLeftColor: color }}>
-          <span className={styles.categoryBadge} style={{ background: color }}>
+        <div className={styles.header}>
+          <span className={styles.categoryBadge}>
             {tool.category}
           </span>
-          <h2 className={styles.name}>{tool.name}</h2>
+          <h2 className={styles.name} id={titleId}>{tool.name}</h2>
           <p className={styles.description}>{tool.description}</p>
         </div>
 

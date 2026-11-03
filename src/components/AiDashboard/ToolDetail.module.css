@@ -68,7 +68,8 @@
   border-radius: 9999px;
   font-size: 0.6875rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--ifm-font-color-base);
+  background: rgba(233, 151, 0, 0.12);
   text-transform: uppercase;
   letter-spacing: 0.03em;
   margin-bottom: 0.5rem;

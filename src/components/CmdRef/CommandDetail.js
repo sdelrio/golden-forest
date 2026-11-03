@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useId, useRef } from 'react';
 import { Icon } from '@iconify/react';
 import CopyButton from '../CopyButton/CopyButton';
-import { CATEGORY_COLORS } from '../../constants/colors';
+import useDialogFocus from '../../hooks/useDialogFocus';
 import styles from './CommandDetail.module.css';
 
 export default function CommandDetail({ command, onClose }) {
+  const panelRef = useRef(null);
+  const titleId = useId();
+  useDialogFocus(panelRef);
   useEffect(() => {
     const handleKey = (e) => {
       if (e.key === 'Escape') onClose();
@@ -13,20 +16,26 @@ export default function CommandDetail({ command, onClose }) {
     return () => document.removeEventListener('keydown', handleKey);
   }, [onClose]);
 
-  const color = CATEGORY_COLORS[command.category] || '#6b7280';
-
   return (
     <div className={styles.overlay} onClick={onClose} role="presentation">
-      <div className={styles.panel} onClick={(e) => e.stopPropagation()} role="dialog">
+      <div
+        className={styles.panel}
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        tabIndex={-1}
+        ref={panelRef}
+      >
         <button className={styles.closeBtn} onClick={onClose} type="button" aria-label="Close details">
           <Icon icon="mdi:close" width={18} />
         </button>
 
-        <div className={styles.header} style={{ borderLeftColor: color }}>
-          <span className={styles.toolBadge} style={{ background: color }}>
+        <div className={styles.header}>
+          <span className={styles.toolBadge}>
             {command.tool}
           </span>
-          <h2 className={styles.syntax}>{command.syntax}</h2>
+          <h2 className={styles.syntax} id={titleId}>{command.syntax}</h2>
           <p className={styles.description}>{command.description}</p>
         </div>
 
@@ -43,7 +52,7 @@ export default function CommandDetail({ command, onClose }) {
           {/* Category */}
           <div className={styles.section}>
             <h3 className={styles.sectionTitle}>Category</h3>
-            <span className={styles.categoryBadge} style={{ background: color }}>
+            <span className={styles.categoryBadge}>
               {command.category}
             </span>
           </div>
