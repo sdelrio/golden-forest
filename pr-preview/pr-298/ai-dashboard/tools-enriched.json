@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-20T20:57:31.610Z",
-  "toolCount": 52,
+  "generatedAt": "2026-11-03T16:48:37.833Z",
+  "toolCount": 55,
   "tools": [
     {
       "id": "agency-agents",
@@ -26,10 +26,10 @@
         "cursor"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/ai-agency",
-      "githubStars": 162235,
-      "githubOpenIssues": 25,
+      "githubStars": 166257,
+      "githubOpenIssues": 34,
       "githubArchived": false,
-      "githubLastPush": "2026-10-19T16:48:24Z",
+      "githubLastPush": "2026-10-25T01:43:20Z",
       "githubLanguage": "Shell",
       "healthScore": 75
     },
@@ -59,13 +59,13 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/agentmemory",
-      "npmVersion": "0.9.30",
-      "npmLastPublished": "2026-10-06T13:52:25.926Z",
-      "githubStars": 29709,
-      "githubOpenIssues": 283,
+      "githubStars": 30112,
+      "githubOpenIssues": 261,
       "githubArchived": false,
-      "githubLastPush": "2026-10-20T11:59:03Z",
+      "githubLastPush": "2026-11-02T06:15:04Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.9.31",
+      "npmLastPublished": "2026-10-26T14:17:42.871Z",
       "healthScore": 100
     },
     {
@@ -92,8 +92,8 @@
         "codex"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/anatomy",
-      "githubStars": 17518,
-      "githubOpenIssues": 12,
+      "githubStars": 24351,
+      "githubOpenIssues": 15,
       "githubArchived": false,
       "githubLastPush": "2026-10-18T20:20:24Z",
       "githubLanguage": "JavaScript",
@@ -123,10 +123,10 @@
         "codex"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/archify",
-      "githubStars": 86347,
-      "githubOpenIssues": 132,
+      "githubStars": 93060,
+      "githubOpenIssues": 138,
       "githubArchived": false,
-      "githubLastPush": "2026-10-20T12:04:50Z",
+      "githubLastPush": "2026-11-03T11:24:12Z",
       "githubLanguage": "JavaScript",
       "healthScore": 75
     },
@@ -195,8 +195,8 @@
         "agency-agents"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/claude-code",
-      "npmVersion": "2.1.305",
-      "npmLastPublished": "2026-10-20T19:29:36.816Z",
+      "npmVersion": "2.1.317",
+      "npmLastPublished": "2026-11-02T23:57:53.069Z",
       "healthScore": 45
     },
     {
@@ -220,10 +220,10 @@
         "claude-code"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Proxy/free-claude-code-proxy",
-      "githubStars": 62146,
-      "githubOpenIssues": 230,
+      "githubStars": 66102,
+      "githubOpenIssues": 257,
       "githubArchived": false,
-      "githubLastPush": "2026-10-18T15:41:07Z",
+      "githubLastPush": "2026-11-03T08:18:16Z",
       "githubLanguage": "Python",
       "healthScore": 75
     },
@@ -295,8 +295,8 @@
         "claude-code"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/cloudflare-security-audit-skill",
-      "githubStars": 33886,
-      "githubOpenIssues": 28,
+      "githubStars": 57954,
+      "githubOpenIssues": 40,
       "githubArchived": false,
       "githubLastPush": "2026-09-14T19:29:02Z",
       "githubLanguage": "JavaScript",
@@ -326,13 +326,13 @@
         "codex"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/codegraph",
+      "githubStars": 76378,
+      "githubOpenIssues": 167,
+      "githubArchived": false,
+      "githubLastPush": "2026-11-01T17:36:07Z",
+      "githubLanguage": "TypeScript",
       "npmVersion": "1.6.2",
       "npmLastPublished": "2026-10-03T06:45:46.734Z",
-      "githubStars": 74531,
-      "githubOpenIssues": 188,
-      "githubArchived": false,
-      "githubLastPush": "2026-10-20T20:33:39Z",
-      "githubLanguage": "C",
       "healthScore": 100
     },
     {
@@ -359,8 +359,8 @@
         "cursor"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/MCPs/cve-mcp-server",
-      "githubStars": 1627,
-      "githubOpenIssues": 4,
+      "githubStars": 1735,
+      "githubOpenIssues": 5,
       "githubArchived": false,
       "githubLastPush": "2026-10-01T07:11:17Z",
       "githubLanguage": "Python",
@@ -387,10 +387,44 @@
         "claude-code"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/cybersecurity-skills",
-      "githubStars": 34759,
-      "githubOpenIssues": 23,
+      "githubStars": 35505,
+      "githubOpenIssues": 26,
       "githubArchived": false,
       "githubLastPush": "2026-08-31T04:32:44Z",
+      "githubLanguage": "Python",
+      "healthScore": 75
+    },
+    {
+      "id": "elephant-goldfish-model",
+      "name": "Elephant-Goldfish Model (EGM)",
+      "description": "Google's open-source plugin of agent skills for spec-driven development: a deep-context elephant drafts the design, zero-context goldfish subagents review it in fresh sessions, and the human approves the trade-offs.",
+      "category": "workflows",
+      "github": "https://github.com/google/elephant-goldfish-model",
+      "npm": null,
+      "pip": null,
+      "install": "claude plugin marketplace add google/elephant-goldfish-model",
+      "site": "https://egm.dev",
+      "license": "Apache-2.0",
+      "tags": [
+        "workflow",
+        "spec-driven",
+        "code-review",
+        "context-engineering",
+        "google",
+        "claude-code",
+        "codex",
+        "subagents"
+      ],
+      "supportedBy": [
+        "claude-code",
+        "codex",
+        "antigravity"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Workflows/elephant-goldfish-model",
+      "githubStars": 11134,
+      "githubOpenIssues": 42,
+      "githubArchived": false,
+      "githubLastPush": "2026-11-03T07:44:14Z",
       "githubLanguage": "Python",
       "healthScore": 75
     },
@@ -419,13 +453,13 @@
         "gemini"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/everything-claude-code",
+      "githubStars": 296262,
+      "githubOpenIssues": 84,
+      "githubArchived": false,
+      "githubLastPush": "2026-11-02T04:56:08Z",
+      "githubLanguage": "JavaScript",
       "npmVersion": "2.2.3",
       "npmLastPublished": "2026-10-02T01:56:16.379Z",
-      "githubStars": 284790,
-      "githubOpenIssues": 95,
-      "githubArchived": false,
-      "githubLastPush": "2026-10-20T19:37:53Z",
-      "githubLanguage": "JavaScript",
       "healthScore": 100
     },
     {
@@ -478,10 +512,10 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Proxy/freellmapi",
-      "githubStars": 38252,
-      "githubOpenIssues": 19,
+      "githubStars": 46848,
+      "githubOpenIssues": 23,
       "githubArchived": false,
-      "githubLastPush": "2026-10-20T19:59:48Z",
+      "githubLastPush": "2026-11-02T19:37:21Z",
       "githubLanguage": "TypeScript",
       "healthScore": 75
     },
@@ -556,13 +590,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/graft",
-      "npmVersion": "0.23.0",
-      "npmLastPublished": "2026-10-15T14:37:34.205Z",
-      "githubStars": 10503,
-      "githubOpenIssues": 140,
+      "githubStars": 11062,
+      "githubOpenIssues": 142,
       "githubArchived": false,
-      "githubLastPush": "2026-10-20T16:31:21Z",
+      "githubLastPush": "2026-11-03T13:15:03Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.28.1",
+      "npmLastPublished": "2026-10-30T17:11:53.883Z",
       "healthScore": 100
     },
     {
@@ -590,10 +624,10 @@
         "gemini"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/graphify",
-      "githubStars": 130068,
-      "githubOpenIssues": 704,
+      "githubStars": 141634,
+      "githubOpenIssues": 724,
       "githubArchived": false,
-      "githubLastPush": "2026-10-20T16:16:19Z",
+      "githubLastPush": "2026-11-02T19:38:53Z",
       "githubLanguage": "Python",
       "healthScore": 75
     },
@@ -685,13 +719,13 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/lightpanda",
+      "githubStars": 41116,
+      "githubOpenIssues": 60,
+      "githubArchived": false,
+      "githubLastPush": "2026-11-03T15:49:27Z",
+      "githubLanguage": "Zig",
       "npmVersion": "1.6.0",
       "npmLastPublished": "2026-08-31T09:31:51.783Z",
-      "githubStars": 36790,
-      "githubOpenIssues": 68,
-      "githubArchived": false,
-      "githubLastPush": "2026-10-20T20:35:45Z",
-      "githubLanguage": "Zig",
       "healthScore": 100
     },
     {
@@ -741,10 +775,10 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/markitdown",
-      "githubStars": 191293,
-      "githubOpenIssues": 318,
+      "githubStars": 193688,
+      "githubOpenIssues": 323,
       "githubArchived": false,
-      "githubLastPush": "2026-10-04T03:59:52Z",
+      "githubLastPush": "2026-10-28T15:33:14Z",
       "githubLanguage": "Python",
       "healthScore": 75
     },
@@ -774,10 +808,10 @@
         "copilot"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Workflows/matpocock",
-      "githubStars": 298530,
-      "githubOpenIssues": 184,
+      "githubStars": 311046,
+      "githubOpenIssues": 186,
       "githubArchived": false,
-      "githubLastPush": "2026-10-19T15:52:15Z",
+      "githubLastPush": "2026-11-01T11:42:33Z",
       "githubLanguage": "Shell",
       "healthScore": 75
     },
@@ -806,13 +840,13 @@
         "cursor"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Prompt-Library/modern-web-guidance",
-      "npmVersion": "0.0.195",
-      "npmLastPublished": "2026-10-19T20:19:09.556Z",
-      "githubStars": 1184,
-      "githubOpenIssues": 374,
+      "githubStars": 1217,
+      "githubOpenIssues": 365,
       "githubArchived": false,
-      "githubLastPush": "2026-10-20T20:42:02Z",
+      "githubLastPush": "2026-11-03T15:56:20Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.0.197",
+      "npmLastPublished": "2026-11-02T15:15:26.593Z",
       "healthScore": 94
     },
     {
@@ -856,10 +890,10 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/obscura",
-      "githubStars": 29075,
-      "githubOpenIssues": 99,
+      "githubStars": 30277,
+      "githubOpenIssues": 120,
       "githubArchived": false,
-      "githubLastPush": "2026-10-20T14:44:55Z",
+      "githubLastPush": "2026-11-02T11:16:14Z",
       "githubLanguage": "Rust",
       "healthScore": 75
     },
@@ -884,7 +918,7 @@
         "claude-code"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/obsidian-skills-setup",
-      "githubStars": 49819,
+      "githubStars": 50685,
       "githubOpenIssues": 38,
       "githubArchived": false,
       "githubLastPush": "2026-09-15T14:43:57Z",
@@ -913,14 +947,38 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/oh-my-openagent",
-      "npmVersion": "5.1.40",
-      "npmLastPublished": "2026-10-20T15:08:02.389Z",
-      "githubStars": 70226,
-      "githubOpenIssues": 1017,
+      "githubStars": 70660,
+      "githubOpenIssues": 1446,
       "githubArchived": false,
-      "githubLastPush": "2026-10-20T20:55:55Z",
+      "githubLastPush": "2026-11-03T15:56:45Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "5.1.59",
+      "npmLastPublished": "2026-11-03T09:09:46.258Z",
       "healthScore": 100
+    },
+    {
+      "id": "oh-my-opencode-slim",
+      "name": "Oh My Opencode Slim",
+      "description": "Lean OpenCode agent-orchestration plugin: one Orchestrator routing work to specialist subagents, each on its own model, for quality, speed and cost balance.",
+      "category": "workflows",
+      "github": "https://github.com/alvinunreal/oh-my-opencode-slim",
+      "npm": "oh-my-opencode-slim",
+      "pip": null,
+      "install": "bunx oh-my-opencode-slim@latest install",
+      "site": "https://ohmyopencodeslim.com",
+      "license": "MIT",
+      "tags": [
+        "opencode",
+        "orchestration",
+        "multi-agent",
+        "plugin",
+        "workflow"
+      ],
+      "supportedBy": [
+        "opencode"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Workflows/oh-my-opencode-slim",
+      "healthScore": 20
     },
     {
       "id": "omniroute",
@@ -953,13 +1011,13 @@
         "copilot"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Proxy/omniroute",
+      "githubStars": 84175,
+      "githubOpenIssues": 202,
+      "githubArchived": false,
+      "githubLastPush": "2026-11-03T15:51:37Z",
+      "githubLanguage": "TypeScript",
       "npmVersion": "3.8.52",
       "npmLastPublished": "2026-10-19T22:40:03.431Z",
-      "githubStars": 78925,
-      "githubOpenIssues": 92,
-      "githubArchived": false,
-      "githubLastPush": "2026-10-20T20:55:05Z",
-      "githubLanguage": "TypeScript",
       "healthScore": 100
     },
     {
@@ -982,13 +1040,14 @@
       "supportedBy": [
         "ecc",
         "omo",
-        "skills-sh"
+        "skills-sh",
+        "oh-my-opencode-slim"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/opencode",
-      "githubStars": 218783,
-      "githubOpenIssues": 2634,
+      "githubStars": 224277,
+      "githubOpenIssues": 2377,
       "githubArchived": false,
-      "githubLastPush": "2026-10-20T20:50:55Z",
+      "githubLastPush": "2026-11-03T15:40:28Z",
       "githubLanguage": "TypeScript",
       "healthScore": 75
     },
@@ -1012,7 +1071,7 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/openfang",
-      "githubStars": 18212,
+      "githubStars": 18242,
       "githubOpenIssues": 76,
       "githubArchived": false,
       "githubLastPush": "2026-07-02T08:13:12Z",
@@ -1043,10 +1102,10 @@
         "cursor"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Workflows/opensre",
-      "githubStars": 12281,
-      "githubOpenIssues": 53,
+      "githubStars": 12689,
+      "githubOpenIssues": 47,
       "githubArchived": false,
-      "githubLastPush": "2026-10-20T19:16:33Z",
+      "githubLastPush": "2026-11-03T13:21:55Z",
       "githubLanguage": "Python",
       "healthScore": 75
     },
@@ -1069,13 +1128,13 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/openui",
-      "npmVersion": "1.0.1",
-      "npmLastPublished": "2026-10-15T04:25:47.119Z",
-      "githubStars": 12604,
-      "githubOpenIssues": 64,
+      "githubStars": 14723,
+      "githubOpenIssues": 73,
       "githubArchived": false,
-      "githubLastPush": "2026-10-19T10:14:13Z",
+      "githubLastPush": "2026-11-03T15:44:06Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "1.0.2",
+      "npmLastPublished": "2026-10-27T15:21:18.824Z",
       "healthScore": 100
     },
     {
@@ -1102,13 +1161,13 @@
         "gemini-cli"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/ponytail",
-      "npmVersion": "5.3.2",
-      "npmLastPublished": "2026-10-16T23:06:18.715Z",
-      "githubStars": 169426,
-      "githubOpenIssues": 23,
+      "githubStars": 183476,
+      "githubOpenIssues": 67,
       "githubArchived": false,
-      "githubLastPush": "2026-10-18T01:55:14Z",
+      "githubLastPush": "2026-10-29T11:59:31Z",
       "githubLanguage": "JavaScript",
+      "npmVersion": "5.3.3",
+      "npmLastPublished": "2026-10-29T03:08:20.518Z",
       "healthScore": 100
     },
     {
@@ -1131,10 +1190,10 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/presenton",
-      "githubStars": 11242,
-      "githubOpenIssues": 19,
+      "githubStars": 11664,
+      "githubOpenIssues": 18,
       "githubArchived": false,
-      "githubLastPush": "2026-10-19T06:08:49Z",
+      "githubLastPush": "2026-11-02T15:39:08Z",
       "githubLanguage": "TypeScript",
       "healthScore": 75
     },
@@ -1214,13 +1273,13 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/remotion-skills",
-      "npmVersion": "4.0.537",
-      "npmLastPublished": "2026-10-19T16:15:43.113Z",
-      "githubStars": 65592,
-      "githubOpenIssues": 160,
+      "githubStars": 70363,
+      "githubOpenIssues": 168,
       "githubArchived": false,
-      "githubLastPush": "2026-10-20T15:40:33Z",
+      "githubLastPush": "2026-11-03T15:53:37Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "4.0.540",
+      "npmLastPublished": "2026-11-02T08:32:34.576Z",
       "healthScore": 100
     },
     {
@@ -1245,10 +1304,10 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/rtk",
-      "githubStars": 84085,
-      "githubOpenIssues": 879,
+      "githubStars": 85430,
+      "githubOpenIssues": 918,
       "githubArchived": false,
-      "githubLastPush": "2026-10-20T14:03:49Z",
+      "githubLastPush": "2026-11-03T15:48:44Z",
       "githubLanguage": "Rust",
       "healthScore": 75
     },
@@ -1275,10 +1334,10 @@
         "copilot"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/skillopt",
-      "githubStars": 18588,
-      "githubOpenIssues": 31,
+      "githubStars": 18855,
+      "githubOpenIssues": 33,
       "githubArchived": false,
-      "githubLastPush": "2026-10-18T17:03:51Z",
+      "githubLastPush": "2026-11-01T14:47:38Z",
       "githubLanguage": "Python",
       "healthScore": 75
     },
@@ -1369,6 +1428,35 @@
       "healthScore": 20
     },
     {
+      "id": "tuxee",
+      "name": "Tuxee",
+      "description": "60 MB Debian container with a browser UI for file management and persistent terminals, built to host terminal AI agents like Codex, Claude Code and Spynel.",
+      "category": "agents",
+      "github": "https://github.com/agent0ai/tuxee",
+      "npm": null,
+      "pip": null,
+      "install": "docker run -p 80:80 -p 443:443 -e ROOT_PASSWORD=your-password agent0ai/tuxee",
+      "site": "https://github.com/agent0ai/tuxee",
+      "license": "MIT",
+      "tags": [
+        "containers",
+        "linux",
+        "web-terminal",
+        "ai-agents",
+        "debian",
+        "persistent-terminals"
+      ],
+      "supportedBy": [
+        "spynel",
+        "agent-zero",
+        "claude-code",
+        "codex",
+        "opencode"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Agents/tuxee",
+      "healthScore": 20
+    },
+    {
       "id": "vercel-ai-workflow",
       "name": "Vercel CEO AI Workflow",
       "category": "workflows",
@@ -1408,10 +1496,10 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/webwright",
-      "githubStars": 6065,
+      "githubStars": 6086,
       "githubOpenIssues": 16,
       "githubArchived": false,
-      "githubLastPush": "2026-10-06T07:30:35Z",
+      "githubLastPush": "2026-10-27T03:03:47Z",
       "githubLanguage": "Python",
       "healthScore": 74
     }

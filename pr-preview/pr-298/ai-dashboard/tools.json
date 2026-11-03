@@ -327,6 +327,34 @@
     "docPath": "/docs/Develop-Code/AI-Development/Skills/cybersecurity-skills"
   },
   {
+    "id": "elephant-goldfish-model",
+    "name": "Elephant-Goldfish Model (EGM)",
+    "description": "Google's open-source plugin of agent skills for spec-driven development: a deep-context elephant drafts the design, zero-context goldfish subagents review it in fresh sessions, and the human approves the trade-offs.",
+    "category": "workflows",
+    "github": "https://github.com/google/elephant-goldfish-model",
+    "npm": null,
+    "pip": null,
+    "install": "claude plugin marketplace add google/elephant-goldfish-model",
+    "site": "https://egm.dev",
+    "license": "Apache-2.0",
+    "tags": [
+      "workflow",
+      "spec-driven",
+      "code-review",
+      "context-engineering",
+      "google",
+      "claude-code",
+      "codex",
+      "subagents"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "codex",
+      "antigravity"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Workflows/elephant-goldfish-model"
+  },
+  {
     "id": "everything-claude-code",
     "name": "Everything Claude Code (ECC)",
     "description": "Hackathon-winning harness-native operator system: 63 agents, 251 skills, cross-harness support with AgentShield security.",
@@ -766,6 +794,29 @@
     "docPath": "/docs/Develop-Code/AI-Development/Agents/oh-my-openagent"
   },
   {
+    "id": "oh-my-opencode-slim",
+    "name": "Oh My Opencode Slim",
+    "description": "Lean OpenCode agent-orchestration plugin: one Orchestrator routing work to specialist subagents, each on its own model, for quality, speed and cost balance.",
+    "category": "workflows",
+    "github": "https://github.com/alvinunreal/oh-my-opencode-slim",
+    "npm": "oh-my-opencode-slim",
+    "pip": null,
+    "install": "bunx oh-my-opencode-slim@latest install",
+    "site": "https://ohmyopencodeslim.com",
+    "license": "MIT",
+    "tags": [
+      "opencode",
+      "orchestration",
+      "multi-agent",
+      "plugin",
+      "workflow"
+    ],
+    "supportedBy": [
+      "opencode"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Workflows/oh-my-opencode-slim"
+  },
+  {
     "id": "omniroute",
     "name": "OmniRoute",
     "description": "Free MIT AI gateway: one endpoint, 340+ providers (90+ free), auto-fallback, RTK+Caveman token compression (78-95%), 19 routing strategies, MCP/A2A support.",
@@ -817,7 +868,8 @@
     "supportedBy": [
       "ecc",
       "omo",
-      "skills-sh"
+      "skills-sh",
+      "oh-my-opencode-slim"
     ],
     "docPath": "/docs/Develop-Code/AI-Development/Agents/opencode"
   },
@@ -1135,6 +1187,34 @@
     ],
     "supportedBy": [],
     "docPath": "/docs/Develop-Code/AI-Development/Tools/toon"
+  },
+  {
+    "id": "tuxee",
+    "name": "Tuxee",
+    "description": "60 MB Debian container with a browser UI for file management and persistent terminals, built to host terminal AI agents like Codex, Claude Code and Spynel.",
+    "category": "agents",
+    "github": "https://github.com/agent0ai/tuxee",
+    "npm": null,
+    "pip": null,
+    "install": "docker run -p 80:80 -p 443:443 -e ROOT_PASSWORD=your-password agent0ai/tuxee",
+    "site": "https://github.com/agent0ai/tuxee",
+    "license": "MIT",
+    "tags": [
+      "containers",
+      "linux",
+      "web-terminal",
+      "ai-agents",
+      "debian",
+      "persistent-terminals"
+    ],
+    "supportedBy": [
+      "spynel",
+      "agent-zero",
+      "claude-code",
+      "codex",
+      "opencode"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Agents/tuxee"
   },
   {
     "id": "vercel-ai-workflow",
