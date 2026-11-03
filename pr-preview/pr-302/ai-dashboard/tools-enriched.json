@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T16:43:03.145Z",
+  "generatedAt": "2026-11-03T16:48:37.833Z",
   "toolCount": 55,
   "tools": [
     {
@@ -959,7 +959,7 @@
     {
       "id": "oh-my-opencode-slim",
       "name": "Oh My Opencode Slim",
-      "description": "Lean OpenCode agent-orchestration plugin: one Orchestrator delegating to six specialist agents, each with its own model, for quality, speed and cost balance.",
+      "description": "Lean OpenCode agent-orchestration plugin: one Orchestrator routing work to specialist subagents, each on its own model, for quality, speed and cost balance.",
       "category": "workflows",
       "github": "https://github.com/alvinunreal/oh-my-opencode-slim",
       "npm": "oh-my-opencode-slim",
