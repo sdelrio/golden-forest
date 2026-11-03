@@ -83,4 +83,4 @@ Oh My OpenAgent is a significant step forward from assistive copilots to truly a
 * **Source:** [Oh My OpenAgent Documentation](https://ohmyopenagent.com/docs)
 * **Repository:** [code-yeongyu/oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent)
 * **Fork:** [oh-my-opencode](https://github.com/opensoft/oh-my-opencode)
-* **Fork:** [oh-my-opencode-slim (Lighter, fine-tuned version)](https://github.com/alvinunreal/oh-my-opencode-slim)
+* **Fork:** [oh-my-opencode-slim](https://github.com/alvinunreal/oh-my-opencode-slim) - see the [oh-my-opencode-slim article](../Workflows/oh-my-opencode-slim.md) for the lean, OpenCode-only variant
