@@ -28,6 +28,11 @@ When I correct you, or you catch yourself making a mistake: before continuing, a
 - **Why it matters**: Renaming files to match titles (e.g. `claude-code-proxy.md` -> `free-claude-code-proxy.md`) lets Docusaurus auto-sort alphabetically without any `sidebar_position` frontmatter.
 - **Rule**: When creating a new article under `docs/Develop-Code/AI-Development/Tools/`, name the file to match the title alphabetically (lowercase, hyphens for spaces). Do NOT add `sidebar_position` to frontmatter. If an existing file doesn't match its title, rename it and update any cross-references.
 
+### Impeccable live overlay needs the helper token in the script URL
+- **When**: 2026-11-03 — the live overlay never appeared at localhost:3000 because `src/client/impeccable-live.js` loaded `http://localhost:8400/live.js` without the per-run token, so the helper answered 401.
+- **Why it matters**: Docusaurus dev serves generated HTML, so the tag is not injected from an entry file; the URL must be built where Node can see `.impeccable/live/server.json`.
+- **Rule**: Load the overlay via `scripts: impeccableLiveScripts()` in `docusaurus.config.js` (dev-only, token read from `.impeccable/live/server.json`), and restart `yarn start` after restarting the helper because the token rotates per run.
+
 ### Never use em dash
 - **Rule**: Never use the em dash "—". Use plain dash "-" instead.
 
