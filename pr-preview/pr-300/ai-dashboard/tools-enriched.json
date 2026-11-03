@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T15:57:45.026Z",
+  "generatedAt": "2026-11-03T16:06:16.416Z",
   "toolCount": 53,
   "tools": [
     {
@@ -59,13 +59,13 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/agentmemory",
-      "npmVersion": "0.9.31",
-      "npmLastPublished": "2026-10-26T14:17:42.871Z",
       "githubStars": 30112,
       "githubOpenIssues": 261,
       "githubArchived": false,
       "githubLastPush": "2026-11-02T06:15:04Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.9.31",
+      "npmLastPublished": "2026-10-26T14:17:42.871Z",
       "healthScore": 100
     },
     {
@@ -326,13 +326,13 @@
         "codex"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/codegraph",
-      "npmVersion": "1.6.2",
-      "npmLastPublished": "2026-10-03T06:45:46.734Z",
       "githubStars": 76378,
       "githubOpenIssues": 167,
       "githubArchived": false,
       "githubLastPush": "2026-11-01T17:36:07Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "1.6.2",
+      "npmLastPublished": "2026-10-03T06:45:46.734Z",
       "healthScore": 100
     },
     {
@@ -418,8 +418,7 @@
       "supportedBy": [
         "claude-code",
         "codex",
-        "antigravity",
-        "opencode"
+        "antigravity"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Workflows/elephant-goldfish-model",
       "githubStars": 11134,
@@ -454,13 +453,13 @@
         "gemini"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/everything-claude-code",
-      "npmVersion": "2.2.3",
-      "npmLastPublished": "2026-10-02T01:56:16.379Z",
       "githubStars": 296262,
       "githubOpenIssues": 84,
       "githubArchived": false,
       "githubLastPush": "2026-11-02T04:56:08Z",
       "githubLanguage": "JavaScript",
+      "npmVersion": "2.2.3",
+      "npmLastPublished": "2026-10-02T01:56:16.379Z",
       "healthScore": 100
     },
     {
@@ -591,13 +590,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/graft",
-      "npmVersion": "0.28.1",
-      "npmLastPublished": "2026-10-30T17:11:53.883Z",
       "githubStars": 11062,
       "githubOpenIssues": 142,
       "githubArchived": false,
       "githubLastPush": "2026-11-03T13:15:03Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.28.1",
+      "npmLastPublished": "2026-10-30T17:11:53.883Z",
       "healthScore": 100
     },
     {
@@ -720,13 +719,13 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/lightpanda",
-      "npmVersion": "1.6.0",
-      "npmLastPublished": "2026-08-31T09:31:51.783Z",
       "githubStars": 41116,
       "githubOpenIssues": 60,
       "githubArchived": false,
       "githubLastPush": "2026-11-03T15:49:27Z",
       "githubLanguage": "Zig",
+      "npmVersion": "1.6.0",
+      "npmLastPublished": "2026-08-31T09:31:51.783Z",
       "healthScore": 100
     },
     {
@@ -841,13 +840,13 @@
         "cursor"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Prompt-Library/modern-web-guidance",
-      "npmVersion": "0.0.197",
-      "npmLastPublished": "2026-11-02T15:15:26.593Z",
       "githubStars": 1217,
       "githubOpenIssues": 365,
       "githubArchived": false,
       "githubLastPush": "2026-11-03T15:56:20Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.0.197",
+      "npmLastPublished": "2026-11-02T15:15:26.593Z",
       "healthScore": 94
     },
     {
@@ -948,13 +947,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/oh-my-openagent",
-      "npmVersion": "5.1.59",
-      "npmLastPublished": "2026-11-03T09:09:46.258Z",
       "githubStars": 70660,
       "githubOpenIssues": 1446,
       "githubArchived": false,
       "githubLastPush": "2026-11-03T15:56:45Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "5.1.59",
+      "npmLastPublished": "2026-11-03T09:09:46.258Z",
       "healthScore": 100
     },
     {
@@ -988,13 +987,13 @@
         "copilot"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Proxy/omniroute",
-      "npmVersion": "3.8.52",
-      "npmLastPublished": "2026-10-19T22:40:03.431Z",
       "githubStars": 84175,
       "githubOpenIssues": 202,
       "githubArchived": false,
       "githubLastPush": "2026-11-03T15:51:37Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "3.8.52",
+      "npmLastPublished": "2026-10-19T22:40:03.431Z",
       "healthScore": 100
     },
     {
@@ -1104,13 +1103,13 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/openui",
-      "npmVersion": "1.0.2",
-      "npmLastPublished": "2026-10-27T15:21:18.824Z",
       "githubStars": 14723,
       "githubOpenIssues": 73,
       "githubArchived": false,
       "githubLastPush": "2026-11-03T15:44:06Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "1.0.2",
+      "npmLastPublished": "2026-10-27T15:21:18.824Z",
       "healthScore": 100
     },
     {
@@ -1137,13 +1136,13 @@
         "gemini-cli"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/ponytail",
-      "npmVersion": "5.3.3",
-      "npmLastPublished": "2026-10-29T03:08:20.518Z",
       "githubStars": 183476,
       "githubOpenIssues": 67,
       "githubArchived": false,
       "githubLastPush": "2026-10-29T11:59:31Z",
       "githubLanguage": "JavaScript",
+      "npmVersion": "5.3.3",
+      "npmLastPublished": "2026-10-29T03:08:20.518Z",
       "healthScore": 100
     },
     {
@@ -1249,13 +1248,13 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/remotion-skills",
-      "npmVersion": "4.0.540",
-      "npmLastPublished": "2026-11-02T08:32:34.576Z",
       "githubStars": 70363,
       "githubOpenIssues": 168,
       "githubArchived": false,
       "githubLastPush": "2026-11-03T15:53:37Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "4.0.540",
+      "npmLastPublished": "2026-11-02T08:32:34.576Z",
       "healthScore": 100
     },
     {
