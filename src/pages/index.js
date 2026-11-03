@@ -28,7 +28,7 @@ export default function Home() {
 
   return (
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
-      <div className={styles.home}>
+      <main className={styles.home}>
         <div className="container">
           <div className={styles.split}>
             <div
@@ -91,7 +91,7 @@ export default function Home() {
             <ToolList tools={tools} />
           </section>
         </div>
-      </div>
+      </main>
     </Layout>
   );
 }
