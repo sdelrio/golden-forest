@@ -1165,6 +1165,34 @@
     "docPath": "/docs/Develop-Code/AI-Development/Tools/toon"
   },
   {
+    "id": "tuxee",
+    "name": "Tuxee",
+    "description": "60 MB Debian container with a browser UI for file management and persistent terminals, built to host terminal AI agents like Codex, Claude Code and Spynel.",
+    "category": "agents",
+    "github": "https://github.com/agent0ai/tuxee",
+    "npm": null,
+    "pip": null,
+    "install": "docker run -p 80:80 -p 443:443 -e ROOT_PASSWORD=your-password agent0ai/tuxee",
+    "site": "https://github.com/agent0ai/tuxee",
+    "license": "MIT",
+    "tags": [
+      "containers",
+      "linux",
+      "web-terminal",
+      "ai-agents",
+      "debian",
+      "persistent-terminals"
+    ],
+    "supportedBy": [
+      "spynel",
+      "agent-zero",
+      "claude-code",
+      "codex",
+      "opencode"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Agents/tuxee"
+  },
+  {
     "id": "vercel-ai-workflow",
     "name": "Vercel CEO AI Workflow",
     "category": "workflows",
