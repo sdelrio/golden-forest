@@ -1,0 +1,709 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-03T00:00:00.000Z",
+  "title": "Design System: The Golden Forest",
+  "extensions": {
+    "colorMeta": {
+      "amber": {
+        "role": "primary",
+        "displayName": "Autumn Amber",
+        "canonical": "oklch(0.742 0.160 71.031)",
+        "purpose": "Interactive light: active states, focus borders, plaque lid, dark-mode headings.",
+        "tonalRamp": [
+          "#2f0000",
+          "#530800",
+          "#732900",
+          "#934700",
+          "#b36500",
+          "#d48400",
+          "#fdaa2e",
+          "#ffd785"
+        ]
+      },
+      "amber-dark": {
+        "role": "primary",
+        "displayName": "Bark Amber Dark",
+        "canonical": "oklch(0.686 0.148 71.258)",
+        "purpose": "Link hover bed and plaque gradient start.",
+        "tonalRamp": [
+          "#2d0000",
+          "#500f00",
+          "#702c00",
+          "#8f4a00",
+          "#af6700",
+          "#d08600",
+          "#f8ac41",
+          "#ffd88e"
+        ]
+      },
+      "amber-darker": {
+        "role": "primary",
+        "displayName": "Bark Amber",
+        "canonical": "oklch(0.657 0.141 71.282)",
+        "purpose": "Hero CTA fill, plaque gradient top, dark-mode heading light.",
+        "tonalRamp": [
+          "#2c0000",
+          "#4f1100",
+          "#6e2e00",
+          "#8d4b00",
+          "#ad6900",
+          "#ce8715",
+          "#f6ad4a",
+          "#ffd992"
+        ]
+      },
+      "amber-darkest": {
+        "role": "primary",
+        "displayName": "Deep Bark",
+        "canonical": "oklch(0.571 0.122 72.423)",
+        "purpose": "Link colour, plaque frame, dark-mode page edge.",
+        "tonalRamp": [
+          "#280400",
+          "#491800",
+          "#683300",
+          "#864f00",
+          "#a66d07",
+          "#c68b36",
+          "#eeb15f",
+          "#ffdb9e"
+        ]
+      },
+      "amber-light": {
+        "role": "primary",
+        "displayName": "Lit Amber",
+        "canonical": "oklch(0.794 0.171 71.155)",
+        "purpose": "Inline code in dark mode.",
+        "tonalRamp": [
+          "#310000",
+          "#550200",
+          "#762500",
+          "#964400",
+          "#b76300",
+          "#d88200",
+          "#ffa809",
+          "#ffd57d"
+        ]
+      },
+      "amber-lighter": {
+        "role": "primary",
+        "displayName": "Lit Amber Lighter",
+        "canonical": "oklch(0.802 0.169 72.857)",
+        "purpose": "Dark-mode hover accent.",
+        "tonalRamp": [
+          "#300000",
+          "#540600",
+          "#742700",
+          "#944600",
+          "#b46400",
+          "#d68300",
+          "#fea90b",
+          "#ffd77d"
+        ]
+      },
+      "amber-lightest": {
+        "role": "primary",
+        "displayName": "Lit Amber Lightest",
+        "canonical": "oklch(0.825 0.160 76.991)",
+        "purpose": "Dark-mode headings, hero glow highlight.",
+        "tonalRamp": [
+          "#2c0000",
+          "#4f1000",
+          "#6f2e00",
+          "#8e4b00",
+          "#ae6900",
+          "#ce8800",
+          "#f7ae22",
+          "#ffda82"
+        ]
+      },
+      "oxblood": {
+        "role": "secondary",
+        "displayName": "Oxblood Ink",
+        "canonical": "oklch(0.313 0.096 32.189)",
+        "purpose": "Light-mode headings and handbook header text.",
+        "tonalRamp": [
+          "#2a0000",
+          "#4d1006",
+          "#6c2b1f",
+          "#8c473a",
+          "#ac6455",
+          "#cd8272",
+          "#f5a797",
+          "#ffd3c6"
+        ]
+      },
+      "oxblood-rule": {
+        "role": "secondary",
+        "displayName": "Oxblood Rule",
+        "canonical": "oklch(0.464 0.152 31.209)",
+        "purpose": "Handbook horizontal-rule accent. Decorative only.",
+        "tonalRamp": [
+          "#360000",
+          "#5d0000",
+          "#800700",
+          "#a23120",
+          "#c4503e",
+          "#e6705c",
+          "#ff9680",
+          "#ffc7b5"
+        ]
+      },
+      "gold-rule": {
+        "role": "neutral",
+        "displayName": "Gold Rule",
+        "canonical": "oklch(0.757 0.092 87.530)",
+        "purpose": "Full-width h2 underline; handbook TOC and footnote rules.",
+        "tonalRamp": [
+          "#1e0d00",
+          "#3b2400",
+          "#573e00",
+          "#745a10",
+          "#917733",
+          "#b09552",
+          "#d7bb77",
+          "#f9e3af"
+        ]
+      },
+      "parchment-page": {
+        "role": "neutral",
+        "displayName": "Parchment Page",
+        "canonical": "oklch(0.985 0.020 91.579)",
+        "purpose": "Light-mode page field and card surface.",
+        "tonalRamp": [
+          "#14110a",
+          "#2c291e",
+          "#464236",
+          "#625d51",
+          "#7f7a6d",
+          "#9d988a",
+          "#c2beaf",
+          "#e8e4d9"
+        ]
+      },
+      "parchment-shade": {
+        "role": "neutral",
+        "displayName": "Parchment Shade",
+        "canonical": "oklch(0.938 0.046 86.463)",
+        "purpose": "Tag fills and recessed planes.",
+        "tonalRamp": [
+          "#181000",
+          "#32270c",
+          "#4d4125",
+          "#695c3f",
+          "#86795b",
+          "#a59778",
+          "#cbbc9c",
+          "#efe4ca"
+        ]
+      },
+      "parchment-edge": {
+        "role": "neutral",
+        "displayName": "Parchment Edge",
+        "canonical": "oklch(0.927 0.065 86.742)",
+        "purpose": "Outermost 1% stop of the body edge gradient.",
+        "tonalRamp": [
+          "#1b0f00",
+          "#362600",
+          "#514013",
+          "#6e5b30",
+          "#8b784d",
+          "#aa966a",
+          "#d0bc8e",
+          "#f3e3bf"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Reading Ink",
+        "canonical": "oklch(0.251 0.031 78.363)",
+        "purpose": "Light-mode body copy.",
+        "tonalRamp": [
+          "#171006",
+          "#312718",
+          "#4c4130",
+          "#675c4a",
+          "#857866",
+          "#a39683",
+          "#c9bca8",
+          "#eee3d3"
+        ]
+      },
+      "dusk-page": {
+        "role": "neutral",
+        "displayName": "Sepia Dusk",
+        "canonical": "oklch(0.174 0.036 86.977)",
+        "purpose": "Dark-mode page field.",
+        "tonalRamp": [
+          "#171104",
+          "#302814",
+          "#4b412c",
+          "#665d47",
+          "#837963",
+          "#a29780",
+          "#c8bda4",
+          "#ece4d0"
+        ]
+      },
+      "parchment-text": {
+        "role": "neutral",
+        "displayName": "Night Parchment",
+        "canonical": "oklch(0.826 0.042 81.673)",
+        "purpose": "Dark-mode body copy.",
+        "tonalRamp": [
+          "#191002",
+          "#332710",
+          "#4e4028",
+          "#6a5c42",
+          "#87785e",
+          "#a5967b",
+          "#ccbca0",
+          "#f0e3cd"
+        ]
+      },
+      "forest-floor": {
+        "role": "neutral",
+        "displayName": "Forest Floor",
+        "canonical": "oklch(0.289 0.000 89.876)",
+        "purpose": "Code plaque body in dark mode.",
+        "tonalRamp": [
+          "#121212",
+          "#292929",
+          "#424242",
+          "#5d5d5d",
+          "#7a7a7a",
+          "#989898",
+          "#bebebe",
+          "#e4e4e4"
+        ]
+      },
+      "table-odd": {
+        "role": "neutral",
+        "displayName": "Ledger Stripe Odd",
+        "canonical": "oklch(0.982 0.002 247.839)",
+        "purpose": "Odd table row.",
+        "tonalRamp": [
+          "#111212",
+          "#28292a",
+          "#424243",
+          "#5d5e5e",
+          "#797a7b",
+          "#979899",
+          "#bdbebf",
+          "#e4e4e5"
+        ]
+      },
+      "table-even": {
+        "role": "neutral",
+        "displayName": "Ledger Stripe Even",
+        "canonical": "oklch(0.942 0.005 247.879)",
+        "purpose": "Even table row.",
+        "tonalRamp": [
+          "#101213",
+          "#27292b",
+          "#404345",
+          "#5b5e60",
+          "#787b7d",
+          "#96999b",
+          "#bbbec1",
+          "#e2e5e7"
+        ]
+      },
+      "dnd-parchment": {
+        "role": "tertiary",
+        "displayName": "D&D Parchment",
+        "canonical": "oklch(0.971 0.022 87.150)",
+        "purpose": "Handbook container fill.",
+        "tonalRamp": [
+          "#151109",
+          "#2d281d",
+          "#474235",
+          "#635d4f",
+          "#807a6c",
+          "#9e9889",
+          "#c4bdae",
+          "#e9e4d8"
+        ]
+      },
+      "dnd-input": {
+        "role": "tertiary",
+        "displayName": "D&D Input",
+        "canonical": "oklch(0.962 0.031 81.757)",
+        "purpose": "Handbook field fill and card wash.",
+        "tonalRamp": [
+          "#171106",
+          "#302818",
+          "#4b4130",
+          "#665c4a",
+          "#847966",
+          "#a29783",
+          "#c8bca8",
+          "#ede3d3"
+        ]
+      },
+      "dnd-gold": {
+        "role": "tertiary",
+        "displayName": "D&D Gold",
+        "canonical": "oklch(0.743 0.117 89.511)",
+        "purpose": "Handbook field border.",
+        "tonalRamp": [
+          "#210c00",
+          "#3e2200",
+          "#5b3d00",
+          "#785900",
+          "#967606",
+          "#b59436",
+          "#dbba5f",
+          "#fce29e"
+        ]
+      },
+      "dnd-brown": {
+        "role": "tertiary",
+        "displayName": "D&D Brown",
+        "canonical": "oklch(0.559 0.066 75.606)",
+        "purpose": "Handbook muted border and secondary text.",
+        "tonalRamp": [
+          "#1e0d00",
+          "#3b2300",
+          "#573d14",
+          "#735831",
+          "#91754d",
+          "#b0936a",
+          "#d7b88e",
+          "#f9e1bf"
+        ]
+      },
+      "leaf-red": {
+        "role": "tertiary",
+        "displayName": "Leaf Red",
+        "canonical": "oklch(0.568 0.200 26.406)",
+        "purpose": "First control leaf on the code plaque. Decorative, not danger.",
+        "tonalRamp": [
+          "#3f0000",
+          "#6b0000",
+          "#900000",
+          "#b30010",
+          "#d73433",
+          "#fc5851",
+          "#ff8176",
+          "#ffbaad"
+        ]
+      },
+      "leaf-green": {
+        "role": "tertiary",
+        "displayName": "Leaf Green",
+        "canonical": "oklch(0.575 0.145 144.181)",
+        "purpose": "Third control leaf on the code plaque. Decorative, not success.",
+        "tonalRamp": [
+          "#001b00",
+          "#003700",
+          "#005400",
+          "#14711e",
+          "#3a8f3d",
+          "#5aaf5c",
+          "#80d680",
+          "#b7f9b6"
+        ]
+      },
+      "error-red": {
+        "role": "tertiary",
+        "displayName": "Error Red",
+        "canonical": "oklch(0.526 0.159 31.961)",
+        "purpose": "Handbook error rule and error surface.",
+        "tonalRamp": [
+          "#370000",
+          "#5f0000",
+          "#820000",
+          "#a42d19",
+          "#c74d39",
+          "#ea6d56",
+          "#ff937b",
+          "#ffc6b1"
+        ]
+      },
+      "error-ink": {
+        "role": "tertiary",
+        "displayName": "Error Ink",
+        "canonical": "oklch(0.427 0.138 27.484)",
+        "purpose": "Handbook error text.",
+        "tonalRamp": [
+          "#330000",
+          "#5a0000",
+          "#7c1412",
+          "#9d362f",
+          "#be554b",
+          "#e17368",
+          "#ff998c",
+          "#ffc9be"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page h1 and home hero title. Oxblood in light mode, amber in dark."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2, always paired with the full-width gold rule."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "h3. Tight margins, no rule, no case change."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All prose, lists and table cells at 16px/1.625."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "h4 only, uppercase at 0.85rem."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Code blocks and inline code, weight 350, never above 450."
+      },
+      "handbook-body": {
+        "displayName": "Handbook Body",
+        "purpose": "BookInstanity, scoped to the D&D routes."
+      },
+      "handbook-heading": {
+        "displayName": "Handbook Heading",
+        "purpose": "MrEavesRemake, scoped to the D&D routes."
+      }
+    },
+    "shadows": [
+      {
+        "name": "paper-rest",
+        "value": "0 2px 14px rgba(163, 106, 0, .4)",
+        "purpose": "Default floating state for pagination links, notes and cards that are not plain surfaces."
+      },
+      {
+        "name": "paper-hover",
+        "value": "0 5px 14px rgba(163, 106, 0, .7)",
+        "purpose": "Lifted state, 0.2s ease-in-out."
+      },
+      {
+        "name": "card-hover-light",
+        "value": "0 3px 6px #0003",
+        "purpose": "The only neutral-black shadow allowed on a light paper surface."
+      },
+      {
+        "name": "card-hover-dark",
+        "value": "0 3px 6px #AAA3",
+        "purpose": "Dark-mode card hover, a light haze instead of a dark one."
+      },
+      {
+        "name": "handbook-binding",
+        "value": "0 6px 12px rgba(0, 0, 0, .3), inset 0 4px 0 0 var(--dnd-parchment-accent), inset 0 5px 0 0 var(--dnd-text-heading), inset 0 -4px 0 0 var(--dnd-parchment-accent), inset 0 -5px 0 0 var(--dnd-text-heading)",
+        "purpose": "D&D parchment container. Dark mode deepens the outer shadow to .5."
+      },
+      {
+        "name": "hero-glow",
+        "value": "1px 3px 0 #c68000, -1px -3px 0 #ffb630, 1px 13px 15px #a36a00",
+        "purpose": "Embossed hero title on the home page only."
+      },
+      {
+        "name": "admonition-curl-rest",
+        "value": "0 5px 14px rgba(163, 106, 0, .7)",
+        "purpose": "Skewed pseudo-element pair under admonitions, contracting on hover."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-fast",
+        "value": "0.15s ease",
+        "purpose": "Pill, tag and search-field state changes."
+      },
+      {
+        "name": "state-standard",
+        "value": "0.2s ease-in-out",
+        "purpose": "Paper lift shadows and border shifts."
+      },
+      {
+        "name": "sidebar",
+        "value": "0.2s cubic-bezier(0.08, 0.52, 0.52, 1)",
+        "purpose": "Sidebar collapse and expand width transition."
+      },
+      {
+        "name": "tab-panel",
+        "value": "0.3s ease-in-out",
+        "purpose": "Tab panel slide in and out."
+      },
+      {
+        "name": "theme-reveal",
+        "value": "1s var(--expo-out)",
+        "purpose": "Circular clip-path reveal when toggling dark mode."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "hero-collapse",
+        "value": "966px"
+      },
+      {
+        "name": "infima-mobile",
+        "value": "996px"
+      },
+      {
+        "name": "char-grid",
+        "value": "480px"
+      },
+      {
+        "name": "char-grid-wide",
+        "value": "520px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Code Plaque",
+      "kind": "custom",
+      "refersTo": "code-block",
+      "description": "Full-width terminal frame: bark plaque with a 28px amber lid and three leaf controls.",
+      "html": "<div class=\"ds-plaque\"><span class=\"ds-plaque-leaf ds-leaf-red\"></span><span class=\"ds-plaque-leaf ds-leaf-amber\"></span><span class=\"ds-plaque-leaf ds-leaf-green\"></span><span class=\"ds-plaque-title\">bash</span><pre class=\"ds-plaque-code\">$ task build</pre></div>",
+      "css": ".ds-plaque{position:relative;border-radius:28px 12px 35px 15px;overflow:hidden;padding:calc(32px + .25rem) .5rem .5rem;background-color:#2b2b2b;border:2px solid var(--ifm-color-primary-darkest);margin:1.5rem 0}.ds-plaque::before{content:'';position:absolute;top:0;left:0;right:0;height:28px;background:linear-gradient(to bottom,var(--ifm-color-primary-darker),var(--ifm-color-primary-darkest));border-bottom:2px solid var(--ifm-color-primary-darker)}.ds-plaque-leaf{position:absolute;top:5px;width:18px;height:18px;z-index:2;clip-path:polygon(50% 0,95% 45%,50% 100%,5% 45%)}.ds-leaf-red{left:14px;background:#d32f2f}.ds-leaf-amber{left:34px;background:#e99700}.ds-leaf-green{left:54px;background:#388e3c}.ds-plaque-title{position:absolute;top:4px;left:80px;height:28px;line-height:28px;font-size:.85rem;font-weight:600;color:#e2e2e2;z-index:5;pointer-events:none;text-shadow:1px 1px 1px rgba(0,0,0,.5)}.ds-plaque-code{margin:0;padding:.5rem;background:transparent;color:#e6e6e6;font-family:Source Code Pro,Consolas,Menlo,monospace;font-size:14px;font-weight:350;line-height:1.5;white-space:pre-wrap}"
+    },
+    {
+      "name": "Filter Pill",
+      "kind": "chip",
+      "refersTo": "pill-filter",
+      "description": "Round filter control used across the dashboards and galleries. Outline at rest, amber fill when active.",
+      "html": "<button class=\"ds-pill\">Workflows <span class=\"ds-pill-count\">12</span></button>\n<button class=\"ds-pill ds-pill-active\">Tools <span class=\"ds-pill-count\">48</span></button>",
+      "css": ".ds-pill{display:inline-flex;align-items:center;gap:.375rem;padding:.375rem .75rem;border-radius:9999px;border:1px solid var(--ifm-color-emphasis-300);background:transparent;color:var(--ifm-font-color-base);font-size:.8125rem;font-weight:500;cursor:pointer;transition:all .15s ease}.ds-pill:hover{border-color:var(--ifm-color-primary);color:var(--ifm-color-primary)}.ds-pill:focus-visible{outline:2px solid var(--ifm-color-primary);outline-offset:2px}.ds-pill-active{background:var(--ifm-color-primary);border-color:var(--ifm-color-primary);color:#fff}.ds-pill-active:hover{color:#fff;opacity:.9}.ds-pill-count{background:rgba(255,255,255,.2);padding:0 .375rem;border-radius:9999px;font-size:.6875rem;font-weight:700;min-width:1.25rem;text-align:center}.ds-pill-active .ds-pill-count{background:rgba(255,255,255,.25)}"
+    },
+    {
+      "name": "Bookmark Button",
+      "kind": "button",
+      "description": "Round toggle used for the browser-local reading list. Outline to amber fill.",
+      "html": "<button class=\"ds-bookmark\">+ Save</button>\n<button class=\"ds-bookmark ds-bookmark-on\">+ Saved</button>",
+      "css": ".ds-bookmark{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:9999px;border:1px solid var(--ifm-color-emphasis-300);background:transparent;color:var(--ifm-color-emphasis-700);font-size:.8125rem;font-weight:500;cursor:pointer;transition:all .15s ease}.ds-bookmark:hover{border-color:var(--ifm-color-primary);color:var(--ifm-color-primary)}.ds-bookmark:focus-visible{outline:2px solid var(--ifm-color-primary);outline-offset:2px}.ds-bookmark-on{background:var(--ifm-color-primary);border-color:var(--ifm-color-primary);color:#fff}.ds-bookmark-on:hover{opacity:.9;color:#fff}"
+    },
+    {
+      "name": "Hero Call to Action",
+      "kind": "button",
+      "description": "The home page amber button with an embossed stacked shadow. Hero ornament, not a reusable style.",
+      "html": "<a class=\"ds-cta\" href=\"#\">Documentation</a>",
+      "css": ".ds-cta{display:inline-block;padding:1rem 2.5rem;border-radius:.4rem;background-color:#c68000;border:1px solid #ffc740;color:#fff;font-size:1.25rem;font-weight:700;text-decoration:none;box-shadow:1px 3px 0 #c68000,-1px -1px 0 #ffaa0d,1px 5px 7px #a36a00;transition:box-shadow .2s ease-in-out}.ds-cta:hover{box-shadow:1px 5px 0 #c68000,-1px -1px 0 #ffb630,1px 9px 15px #a36a00;text-decoration:none;color:#fff}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Standalone search input used above the card grids. Paper fill, amber focus border, no glow.",
+      "html": "<input class=\"ds-search\" type=\"search\" placeholder=\"Search tools\" />",
+      "css": ".ds-search{width:100%;padding:.625rem 1rem;border:1px solid var(--ifm-color-emphasis-300);border-radius:8px;background:var(--ifm-background-surface-color);color:var(--ifm-font-color-base);font-size:.9375rem;font-family:var(--ifm-font-family-base);outline:none;transition:border-color .15s ease;box-sizing:border-box}.ds-search:focus{border-color:var(--ifm-color-primary)}.ds-search::placeholder{color:var(--ifm-color-emphasis-500)}"
+    },
+    {
+      "name": "Tool Card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "Flat paper card, border and shadow only on hover. Content bottom-aligned meta row.",
+      "html": "<a class=\"ds-card\" href=\"#\"><div><h4 class=\"ds-card-name\">OpenCode</h4><p class=\"ds-card-desc\">Terminal coding agent.</p></div><div class=\"ds-card-meta\"><span>CLI</span><span>MIT</span></div></a>",
+      "css": ".ds-card{display:flex;flex-direction:column;height:100%;padding:2rem 1.5rem;border-radius:.4rem;background:var(--ifm-card-background-color);border:1px solid transparent;color:inherit;text-decoration:none;transition:border-color .1s,box-shadow .1s}.ds-card:hover{border-color:var(--ifm-color-primary);box-shadow:0 3px 6px rgba(0,0,0,.2);text-decoration:none;color:inherit}.ds-card-name{margin:0 0 .25rem;font-size:1rem;font-weight:700;line-height:1.3;color:var(--ifm-heading-color)}.ds-card-desc{margin:0;font-size:.875rem;line-height:1.5;color:var(--ifm-color-emphasis-600)}.ds-card-meta{display:flex;gap:.75rem;margin-top:auto;padding-top:.5rem;font-size:.75rem;font-weight:500;color:var(--ifm-color-emphasis-600)}"
+    },
+    {
+      "name": "Freshness Badge",
+      "kind": "chip",
+      "description": "Status badge with a dot and a 12% tinted wash. Communicates note age, not an alert.",
+      "html": "<span class=\"ds-badge ds-badge-fresh\"><span class=\"ds-badge-dot\"></span>Fresh</span>\n<span class=\"ds-badge ds-badge-stale\"><span class=\"ds-badge-dot\"></span>Stale</span>\n<span class=\"ds-badge ds-badge-outdated\"><span class=\"ds-badge-dot\"></span>Outdated</span>",
+      "css": ".ds-badge{display:inline-flex;align-items:center;gap:6px;border-radius:9999px;padding:2px 10px 2px 8px;font-weight:600;font-size:.75rem;line-height:1.4;white-space:nowrap}.ds-badge-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}.ds-badge-fresh{background:rgba(34,197,94,.12)}.ds-badge-fresh .ds-badge-dot{background:#22c55e}.ds-badge-fresh{color:#15803d}.ds-badge-stale{background:rgba(245,158,11,.12);color:#b45309}.ds-badge-stale .ds-badge-dot{background:#f59e0b}.ds-badge-outdated{background:rgba(239,68,68,.12);color:#dc2626}.ds-badge-outdated .ds-badge-dot{background:#ef4444}"
+    },
+    {
+      "name": "Meta Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Smallest label in the system. 4px radius, tinted fill, muted text.",
+      "html": "<span class=\"ds-tag\">workflow</span> <span class=\"ds-tag\">security</span>",
+      "css": ".ds-tag{display:inline-block;padding:.0625rem .375rem;border-radius:4px;font-size:.625rem;font-weight:500;color:var(--ifm-color-emphasis-600);background:var(--ifm-color-emphasis-100)}"
+    },
+    {
+      "name": "Ruled Section Heading",
+      "kind": "custom",
+      "description": "The system's most repeated signature: every h2 carries a full-width 2px gold rule.",
+      "html": "<h2 class=\"ds-ruled-h2\">Installation</h2>",
+      "css": ".ds-ruled-h2{font-size:24px;line-height:32px;font-weight:600;color:#58180d;margin-top:calc(var(--ifm-h2-vertical-rhythm-top,2) * var(--ifm-leading) / 3);margin-bottom:.25rem;border-bottom:2px solid #c9ad6a;padding-bottom:.15rem}"
+    },
+    {
+      "name": "Handbook Field",
+      "kind": "input",
+      "refersTo": "dnd-input",
+      "description": "Tabletop register input: parchment fill, 2px D&D-gold border, oxblood text. Scoped to the D&D routes.",
+      "html": "<input class=\"ds-dnd-input\" placeholder=\"Search characters\" />",
+      "css": ".ds-dnd-input{padding:.5rem .75rem;font-size:1rem;font-family:'BookInstanity',Georgia,serif;background:#fdf1dc;border:2px solid #c9a84c;border-radius:3px;color:#58180d;outline:none;transition:border-color .2s ease;box-sizing:border-box}.ds-dnd-input::placeholder{color:#8b6d52}.ds-dnd-input:focus{border-color:#e69a28;box-shadow:inset 0 1px 3px rgba(0,0,0,.1)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Gilded Grove",
+    "overview": "The site reads as a clearing at golden hour. Amber is the light that falls through the canopy; cream parchment is the page it lands on; oxblood is the ink. Everything else is paper, bark, and leaf. The system is warm before it is modern, and hand-bound before it is systematic. There is one page material and two inks: light mode is a single sheet of pale cream paper warmed at its left and right edges, dark mode is the same room after sunset. Body copy is ink on paper in both modes; amber never becomes text colour, because amber here is light, and light does not carry meaning. The system runs two registers. The default register is the garden: calm, reading-first, one column, with craft concentrated in the ruled h2, the SVG page divider and the bark-plaque code block. The second register is the tabletop handbook, activated only under the D&D route classes.",
+    "keyCharacteristics": [
+      "Amber primary with a seven-step ramp; oxblood heading ink in light mode, amber heading ink in dark mode.",
+      "Warm, low-opacity shadows tinted amber (never neutral grey) on paper surfaces.",
+      "Irregular compound corner radii for anything that reads as a cut sheet or a plaque.",
+      "Reading-first density: 16px body at 1.625 line height, 280px sidebar, one content column.",
+      "Craft artifacts over ornament: SVG divider, ruled h2, leaf-lit code plaque.",
+      "Handbook sub-theme that is explicitly scoped to a route and never leaks."
+    ],
+    "rules": [
+      {
+        "name": "The Two Inks Rule",
+        "body": "Amber is light; ink is text. Body copy is never amber and never a link colour. If a passage needs emphasis, it gets weight or oxblood, not the accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Gilded Edge Rule",
+        "body": "The warm gradient on body lives in the first and last 1% of the horizontal axis and nowhere else. A new surface does not get its own gradient; it sits flat on the sheet.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Accent Rule",
+        "body": "Amber is the only interactive hue. Oxblood, the leaf trio, and the ledger greys never become hover or focus colours.",
+        "section": "colors"
+      },
+      {
+        "name": "The 16/26 Rule",
+        "body": "Body copy is 16px on a 26px line (1.625). A 110% base was tried and replaced; do not reintroduce it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Handbook Quarantine Rule",
+        "body": "BookInstanity, MrEavesRemake, ScalySans, the drop cap and the small-caps first line apply only inside html[class*=\"-doc-id-DnD/\"]. They never appear on a dashboard, a landing page, or a general article.",
+        "section": "typography"
+      },
+      {
+        "name": "The Two-Weight Rule",
+        "body": "Reading text uses 400, emphasis 450 to 700, and mono never exceeds 450. Weight is the system's emphasis tool; colour is not.",
+        "section": "typography"
+      },
+      {
+        "name": "The Warm Shadow Rule",
+        "body": "If a shadow falls on paper, it is rgba(163, 106, 0, ...). Black shadows are an exception for the handbook container and dark-mode hovers, not a default.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Settle Rule",
+        "body": "Hover does not scale, bounce or glow. It changes the shadow from rest to lifted over 0.2s ease-in-out. Motion is a sheet being picked up, nothing faster.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep body copy at 16px on a 26px line (1.625), and keep paragraph margins tight (0.5em bottom).",
+      "Do give every h2 the full-width 2px gold rule, and give h3 nothing.",
+      "Do use the compound radius 28px 12px 35px 15px for anything that reads as a cut sheet: code blocks, admonitions, terminal frames.",
+      "Do tint paper shadows amber (rgba(163, 106, 0, .4) at rest, .7 on hover) and animate them over 0.2s ease-in-out.",
+      "Do reach for --ifm-color-primary and its seven-step family instead of writing new amber hex values.",
+      "Do use the SVG divider on hr, and the leaf trio on full-width terminal frames only.",
+      "Do scope handbook typography and the parchment texture to the -doc-id-DnD/ route classes, and give those components their own --dnd-* tokens.",
+      "Do prefer a 9999px pill or a 3px hairline to a mid-range radius; the system has no 12px-to-24px middle ground."
+    ],
+    "donts": [
+      "Don't set body copy in amber, and don't make amber a heading colour in light mode. Headings are oxblood there.",
+      "Don't put the warm gradient anywhere except the first and last 1% of the viewport edges.",
+      "Don't introduce a fourth accent hue. Amber, oxblood and the decorative leaf trio are the whole palette.",
+      "Don't use neutral grey shadows on paper surfaces; the dark-mode card hover (#AAA3) and the handbook container are the only exceptions.",
+      "Don't reuse the handbook's red rule (#9c2b1b) as an error colour, or the leaf red as a danger state.",
+      "Don't ship new white-on-amber text. #fff on #e99700 sits near 2.1:1; the existing active pill does this and is a known exception, not a pattern to copy.",
+      "Don't apply the organic radius, the leaf trio or the drop cap outside their artifacts. They are signatures, and repeating them everywhere spends them.",
+      "Don't put a hardcoded type size in a component CSS module when an Infima variable already carries it."
+    ]
+  }
+}
