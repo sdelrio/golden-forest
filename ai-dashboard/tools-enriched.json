@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T16:22:40.918Z",
-  "toolCount": 54,
+  "generatedAt": "2026-11-03T16:48:37.833Z",
+  "toolCount": 55,
   "tools": [
     {
       "id": "agency-agents",
@@ -957,6 +957,30 @@
       "healthScore": 100
     },
     {
+      "id": "oh-my-opencode-slim",
+      "name": "Oh My Opencode Slim",
+      "description": "Lean OpenCode agent-orchestration plugin: one Orchestrator routing work to specialist subagents, each on its own model, for quality, speed and cost balance.",
+      "category": "workflows",
+      "github": "https://github.com/alvinunreal/oh-my-opencode-slim",
+      "npm": "oh-my-opencode-slim",
+      "pip": null,
+      "install": "bunx oh-my-opencode-slim@latest install",
+      "site": "https://ohmyopencodeslim.com",
+      "license": "MIT",
+      "tags": [
+        "opencode",
+        "orchestration",
+        "multi-agent",
+        "plugin",
+        "workflow"
+      ],
+      "supportedBy": [
+        "opencode"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Workflows/oh-my-opencode-slim",
+      "healthScore": 20
+    },
+    {
       "id": "omniroute",
       "name": "OmniRoute",
       "description": "Free MIT AI gateway: one endpoint, 340+ providers (90+ free), auto-fallback, RTK+Caveman token compression (78-95%), 19 routing strategies, MCP/A2A support.",
@@ -1016,7 +1040,8 @@
       "supportedBy": [
         "ecc",
         "omo",
-        "skills-sh"
+        "skills-sh",
+        "oh-my-opencode-slim"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/opencode",
       "githubStars": 224277,
