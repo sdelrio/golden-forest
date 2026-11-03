@@ -942,7 +942,7 @@
   ],
   "narrative": {
     "northStar": "The Gilded Grove",
-    "overview": "The site reads as a clearing at golden hour. Amber is the light that falls through the canopy; cream parchment is the page it lands on; oxblood is the ink. Everything else is paper, bark, and leaf. The system is warm before it is modern, and hand-bound before it is systematic. There is one page material and two inks: light mode is a single sheet of pale cream paper warmed at its left and right edges, dark mode is the same room after sunset. Body copy is ink on paper in both modes; amber never becomes text colour, because amber here is light, and light does not carry meaning. The system runs two registers. The default register is the garden: calm, reading-first, one column, with craft concentrated in the ruled h2, the SVG page divider and the bark-plaque code block. The second register is the tabletop handbook, activated only under the D&D route classes.",
+    "overview": "The site reads as a clearing at golden hour. Amber is the light that falls through the canopy; cream parchment is the page it lands on; oxblood is the ink. Everything else is paper, bark, and leaf. The system is warm before it is modern, and hand-bound before it is systematic. There is one page material and two inks: light mode is a single sheet of pale cream paper lit from above, one soft amber light entering at the top edge, dark mode is the same room after sunset with the same light from above. Body copy is ink on paper in both modes; amber never becomes text colour, because amber here is light, and light does not carry meaning. The system runs two registers. The default register is the garden: calm, reading-first, one column, with craft concentrated in the ruled h2, the SVG page divider and the bark-plaque code block. The second register is the tabletop handbook, activated only under the D&D route classes.",
     "keyCharacteristics": [
       "Amber primary with a seven-step ramp; oxblood heading ink in light mode, amber heading ink in dark mode.",
       "Warm, low-opacity shadows tinted amber (never neutral grey) on paper surfaces.",
@@ -958,8 +958,8 @@
         "section": "colors"
       },
       {
-        "name": "The Gilded Edge Rule",
-        "body": "The warm gradient on `body` lives in the first and last 1% of the horizontal axis and nowhere else. A new surface does not get its own gradient; it sits flat on the sheet.",
+        "name": "The Canopy Light Rule",
+        "body": "Amber enters the page exactly once, as one soft radial at the top edge that has faded out before the first screen ends. No surface carries its own gradient; the light belongs to the page and falls over every surface on it.",
         "section": "colors"
       },
       {
