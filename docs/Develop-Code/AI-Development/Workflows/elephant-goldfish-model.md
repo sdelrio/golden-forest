@@ -143,7 +143,7 @@ Install into the harness you already use, then start a new session so the skills
     ```
   </TabItem>
   <TabItem value="opencode" label="OpenCode (experimental)">
-    Needs a local clone. The adapter targets OpenCode **1.18.29** and the V1 `task` and `permission` interfaces, not the V2 `subagent` interface.
+    Needs a local clone. The adapter targets OpenCode **1.18.29** and the V1 `task` and `permission` interfaces, not the [V2 `subagent` interface](https://github.com/google/elephant-goldfish-model/issues/282).
 
     ```bash
     git clone https://github.com/google/elephant-goldfish-model.git
