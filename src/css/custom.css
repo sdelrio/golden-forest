@@ -37,6 +37,10 @@
      paper field, below WCAG AA. Hover darkens so the link stays readable. */
   --ifm-link-color: #8f5d00;
   --ifm-link-hover-color: #7a4f00;
+  /* Ink and focus ring: amber at #e99700 is only 2.26:1 on the paper field,
+     below the 3:1 non-text floor, so both get their own ramp value. */
+  --ink: #2a2010;
+  --focus-ring: #8f5d00;
   --docusaurus-highlighted-code-line-bg: #efefef;
   /* Handbook variables */
   --HB_Color_Background: #EEE5CE;
@@ -97,6 +101,7 @@ html[data-theme='dark'] img[alt="D&D Dragon with Dice"] {
 [data-theme='dark'] {
   --ifm-link-color: #ffb630;
   --ifm-link-hover-color: #ffc45c;
+  --focus-ring: #ffb630;
   --docusaurus-highlighted-code-line-bg: #3a3a3a;
   --bg-table-row-odd: #242526;
   --bg-table-row-even: #2c2e30;

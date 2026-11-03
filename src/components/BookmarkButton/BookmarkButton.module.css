@@ -20,12 +20,12 @@
 .active {
   background: var(--ifm-color-primary);
   border-color: var(--ifm-color-primary);
-  color: #fff;
+  color: var(--ink);
 }
 
 .active:hover {
   opacity: 0.9;
-  color: #fff;
+  color: var(--ink);
 }
 
 .label {
@@ -42,6 +42,6 @@
 }
 
 .btn:focus-visible {
-  outline: 2px solid var(--ifm-color-primary);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
