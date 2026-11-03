@@ -56,10 +56,12 @@
   color: var(--dnd-text-secondary);
 }
 
+/* --dnd-error-bg and --dnd-error-text are already theme-overridden in
+   custom.css; the -dark variants never existed. */
 [data-theme='dark'] .dnd-state-error {
-  background: var(--dnd-error-bg-dark);
+  background: var(--dnd-error-bg);
   border-color: var(--dnd-error-border);
-  color: var(--dnd-error-text-dark);
+  color: var(--dnd-error-text);
 }
 
 [data-theme='dark'] .dnd-state-empty {
