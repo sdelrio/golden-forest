@@ -14,8 +14,6 @@ import CardGroup from '@site/src/components/Card/CardGroup';
 
 # Oh My Opencode Slim
 
-## Summary
-
 **Oh My Opencode Slim** is an MIT-licensed plugin for [OpenCode](https://opencode.ai) that replaces a single all-purpose agent with a small staff. One orchestrator plans the work and routes it to a roster of specialists, each running on the model you assign to it. The default mental model is a team with a manager, not a smarter chatbot.
 
 It is the slim fork of [Oh My OpenAgent](https://github.com/code-yeongyu/oh-my-openagent), covered in the [sibling article](../Agents/oh-my-openagent.md). Same core idea, different scope: where OMO ships hooks for everything, this one ships orchestration plus a single hook you can switch off. At v3.0.6 (November 2026) it carries roughly 10k stars, 615 forks, and 12.4k weekly npm downloads, so it is a real community project rather than a weekend experiment.
@@ -116,14 +114,14 @@ flowchart TB
     O -->|"interface task"| D
     O -->|"implementation task"| F
 
-    O -.->|"advice on demand"| OR
-    O -.->|"explicit request only"| C
+    O -->|"advice on demand"| OR
+    O -->|"explicit request only"| C
 
     E --> R["Orchestrator reconciles<br/>and verifies"]
     D --> R
     F --> R
-    OR -.-> R
-    C -.-> R
+    OR --> R
+    C --> R
 
     R --> V["Verified result"]
 ```
