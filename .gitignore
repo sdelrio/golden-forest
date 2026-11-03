@@ -49,6 +49,7 @@ local-prompts/
 
 # Impeccable local state (machine-specific consent flag)
 .impeccable/config.local.json
+.impeccable/live/
 
 # Codex agent hooks (absolute machine paths)
 .codex/

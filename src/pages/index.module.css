@@ -1,29 +1,256 @@
 /**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
+ * Homepage: the herbarium sheet - photograph on the left plate, the garden
+ * copy on the right, the ruled section index and workbenches below.
  */
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  background-image: url('/static/img/sdr-forest-01.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 10%;
+.home {
+  --muted: #6b6152;
+  --hair: rgba(201, 173, 106, 0.5);
+  padding: 3rem 0 4.5rem;
+  color: var(--ifm-font-color-base);
 }
 
+:global(html[data-theme='dark']) .home {
+  --muted: #a89b82;
+  --hair: rgba(134, 115, 71, 0.45);
+}
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
+.home ::selection {
+  background: rgba(233, 151, 0, 0.35);
+}
+
+.home a:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Masthead: the photograph holds the left panel, the sheet the right. */
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 3rem 3.5rem;
+  align-items: stretch;
+}
+
+.plate {
+  min-height: 27rem;
+  background-color: #2a2010;
+  background-position: 50% 45%;
+  background-size: cover;
+  box-shadow: 0 1px 2px rgba(23, 15, 0, 0.2), 0 18px 34px -22px rgba(23, 15, 0, 0.55);
+}
+
+.copy {
+  padding-top: 0.5rem;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+}
+
+.tagline {
+  margin: 0.45rem 0 1.1rem;
+  color: var(--muted);
+}
+
+.quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pill {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 9999px;
+  color: var(--ifm-font-color-base);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.pill:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-link-color);
+  text-decoration: none;
+}
+
+.garden {
+  max-width: 66ch;
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.garden a {
+  text-underline-offset: 3px;
+}
+
+.startHeading {
+  margin: 1.6rem 0 0.3rem;
+  color: var(--ifm-heading-color);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.start {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--hair);
+  list-style: none;
+}
+
+.start li {
+  border-bottom: 1px solid var(--hair);
+}
+
+.start a {
+  display: block;
+  padding: 0.55rem 0;
+  font-size: 0.95rem;
+  text-underline-offset: 3px;
+}
+
+/* Index: a ruled ledger of sections, never a card grid. */
+
+.index {
+  padding-top: 2.5rem;
+}
+
+.ledger {
+  columns: 2;
+  column-gap: 3rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ledger li {
+  break-inside: avoid;
+  border-top: 1px solid var(--hair);
+}
+
+.entry {
+  display: block;
+  padding: 0.9rem 0 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.entry:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.entryHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.entryTitle {
+  color: var(--ifm-heading-color);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.entry:hover .entryTitle {
+  color: var(--ifm-link-color);
+}
+
+.entryCount {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.entryBlurb {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+/* Workbenches: ruled links, three across. */
+
+.bench {
+  margin-top: 3rem;
+}
+
+.benchList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1.25rem 2.5rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.benchList li {
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--hair);
+}
+
+.toolLink {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.toolLink:hover {
+  text-decoration: none;
+}
+
+.toolName {
+  display: block;
+  color: var(--ifm-link-color);
+  font-weight: 600;
+}
+
+.toolLink:hover .toolName {
+  color: var(--ifm-link-hover-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.toolBlurb {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 996px) {
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
   }
 
+  .plate {
+    min-height: 20rem;
+  }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (max-width: 768px) {
+  .home {
+    padding-top: 2.25rem;
+  }
+
+  .plate {
+    min-height: 15rem;
+  }
+
+  .ledger {
+    columns: 1;
+  }
 }

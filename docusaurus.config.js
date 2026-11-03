@@ -4,6 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
+import { readFileSync } from 'node:fs';
 import { themes as prismThemes } from 'prism-react-renderer';
 
 // KATEX: https://docusaurus.io/docs/3.0.1/markdown-features/math-equations#self-hosting-katex-assets
@@ -16,6 +17,20 @@ import { rehypeExtendedTable } from 'rehype-extended-table';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const SITE_TITLE = 'The Golden Forest';
+
+// impeccable live-mode overlay. Kept for future design sessions but disabled for
+// the production release: re-enable by uncommenting the `scripts:` line below and
+// restarting the helper (`impeccable live-server`) before `yarn start`.
+// The helper mints a token per run, so restart the dev server after restarting it.
+function impeccableLiveScripts() {
+  if (process.env.NODE_ENV !== 'development') return [];
+  try {
+    const { token } = JSON.parse(readFileSync('./.impeccable/live/server.json', 'utf8'));
+    return [{ src: `http://localhost:8400/live.js?token=${token}`, async: true }];
+  } catch {
+    return [];
+  }
+}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -131,6 +146,8 @@ const config = {
   ],
 
   stylesheets: [],
+
+  // scripts: impeccableLiveScripts(), // impeccable live mode, disabled for release
 
   clientModules: [
     require.resolve('./src/client/theme-transition.js'),
