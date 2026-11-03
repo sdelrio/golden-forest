@@ -350,8 +350,7 @@
     "supportedBy": [
       "claude-code",
       "codex",
-      "antigravity",
-      "opencode"
+      "antigravity"
     ],
     "docPath": "/docs/Develop-Code/AI-Development/Workflows/elephant-goldfish-model"
   },
