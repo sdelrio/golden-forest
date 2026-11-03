@@ -46,14 +46,9 @@
   margin-top: 0.25rem;
 }
 
-/* Light shades of each hue: the bright ones sit at 2.06-3.61:1 on the paper field. */
-.fresh .statCount { color: #15803d; }
-.stale .statCount { color: #b45309; }
-.outdated .statCount { color: #b91c1c; }
-
-:global([data-theme='dark']) .fresh .statCount { color: #4ade80; }
-:global([data-theme='dark']) .stale .statCount { color: #fbbf24; }
-:global([data-theme='dark']) .outdated .statCount { color: #f87171; }
+.fresh .statCount { color: var(--status-fresh-ink); }
+.stale .statCount { color: var(--status-stale-ink); }
+.outdated .statCount { color: var(--status-outdated-ink); }
 
 .filters {
   display: flex;

@@ -20,14 +20,14 @@
 }
 
 .copiedIcon {
-  color: #22c55e;
+  color: var(--status-fresh-ink);
 }
 
 .copiedHint {
   position: fixed;
   transform: translateX(-50%);
   font-size: 0.625rem;
-  color: #22c55e;
+  color: var(--status-fresh-ink);
   white-space: nowrap;
   font-weight: 600;
   pointer-events: none;
@@ -59,6 +59,6 @@
 }
 
 .copiedBtn {
-  border-color: #22c55e;
-  color: #22c55e;
+  border-color: var(--status-fresh-ink);
+  color: var(--status-fresh-ink);
 }

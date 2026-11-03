@@ -41,6 +41,11 @@
      below the 3:1 non-text floor, so both get their own ramp value. */
   --ink: #2a2010;
   --focus-ring: #8f5d00;
+  /* Status inks: dark enough to clear AA on their own 12% fill. The bright
+     hue is a fill and a dot colour only, never label text. */
+  --status-fresh-ink: #146c34;
+  --status-stale-ink: #96450a;
+  --status-outdated-ink: #b91c1c;
   --docusaurus-highlighted-code-line-bg: #efefef;
   /* Handbook variables */
   --HB_Color_Background: #EEE5CE;
@@ -102,6 +107,9 @@ html[data-theme='dark'] img[alt="D&D Dragon with Dice"] {
   --ifm-link-color: #ffb630;
   --ifm-link-hover-color: #ffc45c;
   --focus-ring: #ffb630;
+  --status-fresh-ink: #86efac;
+  --status-stale-ink: #fcd34d;
+  --status-outdated-ink: #fca5a5;
   --docusaurus-highlighted-code-line-bg: #3a3a3a;
   --bg-table-row-odd: #242526;
   --bg-table-row-even: #2c2e30;

@@ -26,7 +26,7 @@
 }
 
 .fresh .label {
-  color: #15803d;
+  color: var(--status-fresh-ink);
 }
 
 .stale {
@@ -38,7 +38,7 @@
 }
 
 .stale .label {
-  color: #b45309;
+  color: var(--status-stale-ink);
 }
 
 .outdated {
@@ -50,7 +50,7 @@
 }
 
 .outdated .label {
-  color: #dc2626;
+  color: var(--status-outdated-ink);
 }
 
 .label {
@@ -64,23 +64,14 @@
 .suggestLink {
   font-size: 0.65rem;
   color: inherit;
-  opacity: 0.7;
   text-decoration: underline;
   text-decoration-style: dotted;
   margin-left: 2px;
 }
 
-.suggestLink:hover {
-  opacity: 1;
-}
-
 /* Dark mode */
 :global([data-theme='dark']) .fresh .dot {
   background: #4ade80;
-}
-
-:global([data-theme='dark']) .fresh .label {
-  color: #86efac;
 }
 
 :global([data-theme='dark']) .fresh {
@@ -91,20 +82,12 @@
   background: #fbbf24;
 }
 
-:global([data-theme='dark']) .stale .label {
-  color: #fcd34d;
-}
-
 :global([data-theme='dark']) .stale {
   background: rgba(251, 191, 36, 0.15);
 }
 
 :global([data-theme='dark']) .outdated .dot {
   background: #f87171;
-}
-
-:global([data-theme='dark']) .outdated .label {
-  color: #fca5a5;
 }
 
 :global([data-theme='dark']) .outdated {

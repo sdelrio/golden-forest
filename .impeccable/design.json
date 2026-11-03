@@ -647,7 +647,7 @@
       "status-fresh-ink": {
         "role": "neutral",
         "displayName": "Fresh Green Ink",
-        "canonical": "oklch(0.527 0.137 150.1)",
+        "canonical": "oklch(0.468 0.119 150.2)",
         "purpose": "Fresh freshness label, light mode.",
         "tonalRamp": [
           "oklch(0.150 0.099 150.1)",
@@ -679,7 +679,7 @@
       "status-stale-ink": {
         "role": "neutral",
         "displayName": "Stale Amber Ink",
-        "canonical": "oklch(0.555 0.146 49.0)",
+        "canonical": "oklch(0.487 0.126 49.0)",
         "purpose": "Stale freshness label, light mode.",
         "tonalRamp": [
           "oklch(0.150 0.105 49.0)",
@@ -711,7 +711,7 @@
       "status-outdated-ink": {
         "role": "neutral",
         "displayName": "Outdated Red Ink",
-        "canonical": "oklch(0.577 0.215 27.3)",
+        "canonical": "oklch(0.505 0.190 27.5)",
         "purpose": "Outdated freshness label, light mode.",
         "tonalRamp": [
           "oklch(0.150 0.155 27.3)",

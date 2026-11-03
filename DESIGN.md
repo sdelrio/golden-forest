@@ -46,11 +46,11 @@ colors:
   hb-header-underline: "#c0ad6a"
   hb-caption: "#766649"
   status-fresh: "#22c55e"
-  status-fresh-ink: "#15803d"
+  status-fresh-ink: "#146c34"
   status-stale: "#f59e0b"
-  status-stale-ink: "#b45309"
+  status-stale-ink: "#96450a"
   status-outdated: "#ef4444"
-  status-outdated-ink: "#dc2626"
+  status-outdated-ink: "#b91c1c"
 typography:
   display:
     fontFamily: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
@@ -252,8 +252,9 @@ A two-hue system, amber light and oxblood ink, resting on warm paper and a sepia
 
 A closed, separate family. These exist only to encode freshness, never to decorate:
 
-- **Fresh Green** (#22c55e at a 12% tint, label #15803d): used by the freshness badge, the stale-content dashboard and the copy-success state.
-- **Stale Amber** (#f59e0b, label #b45309) and **Outdated Red** (#ef4444, label #dc2626): the same treatment in the other two statuses.
+- **Fresh Green** (#22c55e at a 12% tint, label #146c34): used by the freshness badge, the stale-content dashboard and the copy-success state.
+- **Stale Amber** (#f59e0b, label #96450a) and **Outdated Red** (#ef4444, label #b91c1c): the same treatment in the other two statuses.
+- The hue is a fill and a dot colour only. Labels read from `--status-*-ink`, which is dark enough to clear 4.5:1 against the badge's own tint (5.32 to 5.86); the bright hue manages 3.97 to 4.42 on the same surface and is never label text.
 - Dark mode lightens every one of them (#4ade80 / #fbbf24 / #f87171 at a 15% tint over the sepia field, labels #86efac / #fcd34d / #fca5a5).
 
 ### Named Rules
