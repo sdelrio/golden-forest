@@ -199,7 +199,7 @@ components:
 
 The site reads as a clearing at golden hour. Amber is the light that falls through the canopy; cream parchment is the page it lands on; oxblood is the ink. Everything else is paper, bark, and leaf. The system is warm before it is modern, and hand-bound before it is systematic: a reader should feel that a person cut the page edges, ruled the headings, and drew the dividers, not that a framework defaulted them.
 
-There is one page material and two inks. Light mode is a single sheet of pale cream paper, subtly warmed at the left and right edges so the sheet reads as curved rather than flat. Dark mode is the same room after sunset: near-black sepia with the same amber edge glow. Body copy is ink on paper in both modes; amber never becomes text colour, because amber here is light, and light does not carry meaning.
+There is one page material and two inks. Light mode is a single sheet of pale cream paper lit from above: one soft amber light enters at the top edge and falls through the page before the first screen ends. Dark mode is the same room after sunset: near-black sepia with the same amber light from above. Body copy is ink on paper in both modes; amber never becomes text colour, because amber here is light, and light does not carry meaning.
 
 The system runs two registers. The default register is the garden: calm, reading-first, one column, with craft concentrated in three recurring artifacts (the ruled h2, the SVG page divider, and the bark-plaque code block). The second register is the tabletop handbook, activated only under the D&D route classes: parchment texture, drop caps, small-caps first lines, and the ScalySans/MrEavesRemake faces. These two registers share the same amber and the same paper instinct, which is why the site feels coherent rather than assembled.
 
@@ -237,13 +237,13 @@ A two-hue system, amber light and oxblood ink, resting on warm paper and a sepia
 
 - **Parchment Page** (#fffaeb): the light-mode page field.
 - **Parchment Shade** (#f8e9c8): tags, recessed surfaces, the warm plane behind the page.
-- **Parchment Edge** (#fae5b6): the outermost 1% stop of the body gradient. It only ever appears at the edges of the viewport.
+- **Parchment Edge** (#fae5b6): the lightest parchment step. Retired from the page field when the edge gradient became the canopy glow; only the navbar keeps an edge stop of its own.
 - **Reading Ink** (#2a2010): light-mode body copy. Near-black with a brown bias so it sits in the paper rather than on top of it.
 - **Gold Rule** (#c9ad6a): the h2 underline, the handbook's footnote and TOC rules. Structural, 2px, full width.
 - **Sepia Dusk** (#170f00) and **Night Parchment** (#d4c4a8): the dark-mode page field and body copy.
 - **Forest Floor** (#2b2b2b): the code plaque body, the one place the system goes genuinely dark on purpose.
 - **Ledger Stripes** (#f8f9fa / #e9ecef, dark #242526 / #2c2e30): alternating table rows.
-- **Tambour Edge** (#fcefd4 in light, #533800 in dark): the navbar's own 1% edge stop. Same rule as the page edge, different value, because the navbar sits one plane above the sheet.
+- **Tambour Edge** (#fcefd4 in light, #533800 in dark): the navbar's own 1% edge stop, kept after the page's edge gradient retired, because the navbar sits one plane above the sheet.
 - **Footer Slate** (#1b2127): the footer. The one genuinely cool, non-amber surface in the system, deliberately outside the paper metaphor.
 - **D&D Parchment** (#fcf5e5), **D&D Input** (#fdf1dc), **D&D Gold** (#c9a84c), **D&D Brown** (#8b6f47), **D&D Accent** (#e69a28): the handbook register's paper, field, border and accent colours. Its ink is not invented either: **Oxblood Ink** is the heading colour, and the trio #3a2a1a / #5a4a2a / #8b6d52 carries body, secondary and muted text.
 - **Handbook Vellum** (#eee5ce), **Handbook Wash** (#e0e5c1), **Handbook Rule** (#c0ad6a), **Handbook Caption** (#766649): the print-source colours the handbook register inherits. Handbook Rule is a separate, slightly greener gold than Gold Rule (#c9ad6a): it edges inline code and holds handbook header underlines, while the h2 rule and the footnote rule stay on Gold Rule.
@@ -261,7 +261,7 @@ A closed, separate family. These exist only to encode freshness, never to decora
 
 **The Two Inks Rule.** Amber is light; ink is text. Body copy is never amber and never a link colour. If a passage needs emphasis, it gets weight or oxblood, not the accent.
 
-**The Gilded Edge Rule.** The warm gradient on `body` lives in the first and last 1% of the horizontal axis and nowhere else. A new surface does not get its own gradient; it sits flat on the sheet.
+**The Canopy Light Rule.** Amber enters the page exactly once, as one soft radial at the top edge that has faded out before the first screen ends. No surface carries its own gradient; the light belongs to the page and falls over every surface on it.
 
 **The One Accent Rule.** Amber is the only interactive hue. Oxblood, the leaf trio, and the ledger greys never become hover or focus colours. Adding a fourth accent hue breaks the world.
 

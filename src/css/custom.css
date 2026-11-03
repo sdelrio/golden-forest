@@ -425,15 +425,15 @@ html,
 body {
   min-height: 100vh;
   background-color: #fffaeb;
-  background-image: -webkit-linear-gradient(180deg, rgba(250, 229, 182, 1) 0%, rgba(255, 250, 235, 1) 1%, rgba(255, 250, 235, 1) 99%, rgba(255, 215, 140, 1) 100%);
-  background-image: linear-gradient(-90deg, rgba(250, 229, 182, 1) 0%, rgba(255, 250, 235, 1) 1%, rgba(255, 250, 235, 1) 99%, rgba(255, 215, 140, 1) 100%);
+  background-image: radial-gradient(115% 55vh at 50% -8vh, rgba(233, 151, 0, 0.13) 0%, rgba(233, 151, 0, 0) 68%);
+  background-repeat: no-repeat;
 }
 
 html[data-theme='dark'],
 html[data-theme='dark'] body {
   background-color: #170f00;
-  background-image: -webkit-linear-gradient(180deg, rgba(163, 106, 0, 1) 0%, rgba(23, 15, 0, 1) 1%, rgba(23, 15, 0, 1) 99%, rgba(163, 106, 0, 1) 100%);
-  background-image: linear-gradient(-90deg, rgba(163, 106, 0, 1) 0%, rgba(23, 15, 0, 1) 1%, rgba(23, 15, 0, 1) 99%, rgba(163, 106, 0, 1) 100%);
+  background-image: radial-gradient(115% 55vh at 50% -8vh, rgba(233, 151, 0, 0.11) 0%, rgba(233, 151, 0, 0) 68%);
+  background-repeat: no-repeat;
 }
 
 .header-github-link:hover {
@@ -605,6 +605,78 @@ html h2 {
 .table-of-contents strong,
 .table-of-contents b {
   font-weight: 450;
+}
+
+/* Intro page - "Canopy glow" layout: split hero + two-column grove of tiles. */
+
+.intro-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.intro-hero > p {
+  margin: 0;
+}
+
+.intro-hero > p img {
+  width: 100%;
+  height: auto;
+  opacity: 0.55;
+  filter: sepia(1) saturate(2.2) hue-rotate(-12deg);
+}
+
+.intro-grove {
+  margin-top: 1.5rem;
+}
+
+.intro-grove > .col > div {
+  display: flex;
+  height: 100%;
+}
+
+.grove-tile.card {
+  width: 100%;
+  gap: 0.5rem;
+  border: 1px solid rgba(201, 173, 106, 0.5);
+  border-radius: 28px 12px 35px 15px;
+  background: var(--ifm-card-background-color);
+  box-shadow: 0 1px 4px rgba(163, 106, 0, 0.12);
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.grove-tile.card:hover,
+.grove-tile.card:focus-visible {
+  border-color: var(--ifm-color-primary-dark);
+  box-shadow: 0 5px 14px rgba(163, 106, 0, 0.7);
+  transform: translateY(-2px);
+}
+
+/* gold hairline at the foot of every tile, pushed down by margin-top: auto */
+.grove-tile.card::after {
+  content: '';
+  margin-top: auto;
+  height: 1px;
+  background: linear-gradient(90deg, #c9ad6a, rgba(201, 173, 106, 0));
+}
+
+@media (max-width: 860px) {
+  .intro-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .intro-hero > p img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 640px) {
+  .intro-grove > .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 /* Import pagination styles */
