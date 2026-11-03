@@ -103,6 +103,9 @@ export default function StaleContentDashboard() {
     }
   };
 
+  const ariaSort = (key) =>
+    sortKey !== key ? 'none' : sortAsc ? 'ascending' : 'descending';
+
   const sortIndicator = (key) => {
     if (sortKey !== key) return '';
     return sortAsc ? ' \u2191' : ' \u2193';
@@ -130,11 +133,13 @@ export default function StaleContentDashboard() {
           type="text"
           className={styles.searchInput}
           placeholder="Search title, description, tags..."
+          aria-label="Search docs by title, description or tags"
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
         />
         <select
           className={styles.select}
+          aria-label="Filter by freshness level"
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
         >
@@ -154,15 +159,21 @@ export default function StaleContentDashboard() {
           <table className={styles.table}>
             <thead>
               <tr>
-                <th className={styles.thSortable} onClick={() => toggleSort('title')}>
-                  Title{sortIndicator('title')}
+                <th aria-sort={ariaSort('title')}>
+                  <button className={styles.thSortable} type="button" onClick={() => toggleSort('title')}>
+                    Title{sortIndicator('title')}
+                  </button>
                 </th>
-                <th className={styles.thSortable} onClick={() => toggleSort('lastUpdated')}>
-                  Last Updated{sortIndicator('lastUpdated')}
+                <th aria-sort={ariaSort('lastUpdated')}>
+                  <button className={styles.thSortable} type="button" onClick={() => toggleSort('lastUpdated')}>
+                    Last Updated{sortIndicator('lastUpdated')}
+                  </button>
                 </th>
-                <th>Age</th>
-                <th className={styles.thSortable} onClick={() => toggleSort('freshness')}>
-                  Freshness{sortIndicator('freshness')}
+                <th aria-sort="none">Age</th>
+                <th aria-sort={ariaSort('freshness')}>
+                  <button className={styles.thSortable} type="button" onClick={() => toggleSort('freshness')}>
+                    Freshness{sortIndicator('freshness')}
+                  </button>
                 </th>
               </tr>
             </thead>

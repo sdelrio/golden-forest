@@ -33,8 +33,10 @@
   --ifm-font-weight-bold: 700;
   --ifm-table-cell-padding: 0.25rem;
   --ifm-heading-margin-bottom: 0.25rem;
-  --ifm-link-color: var(--ifm-color-primary-darkest);
-  --ifm-link-hover-color: var(--ifm-color-primary-darker);
+  /* Darker than --ifm-color-primary-darkest: that step is only 4.36:1 on the
+     paper field, below WCAG AA. Hover darkens so the link stays readable. */
+  --ifm-link-color: #8f5d00;
+  --ifm-link-hover-color: #7a4f00;
   --docusaurus-highlighted-code-line-bg: #efefef;
   /* Handbook variables */
   --HB_Color_Background: #EEE5CE;
@@ -93,6 +95,8 @@ html[data-theme='dark'] img[alt="D&D Dragon with Dice"] {
 }
 
 [data-theme='dark'] {
+  --ifm-link-color: #ffb630;
+  --ifm-link-hover-color: #ffc45c;
   --docusaurus-highlighted-code-line-bg: #3a3a3a;
   --bg-table-row-odd: #242526;
   --bg-table-row-even: #2c2e30;

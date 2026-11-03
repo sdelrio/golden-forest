@@ -25,14 +25,13 @@
 
 .radarWrapper {
   width: 100%;
+  overflow-x: auto;
   composes: container;
 }
 
-.radarWrapper :global(.docusaurus-mermaid-container) {
-  width: 100%;
-}
-
-.radarWrapper :global(.docusaurus-mermaid-container) > svg {
+/* The SVG is injected via dangerouslySetInnerHTML into a bare div, so there is
+   no .docusaurus-mermaid-container to target. */
+.radarWrapper > div > svg {
   width: 100% !important;
   height: auto !important;
 }

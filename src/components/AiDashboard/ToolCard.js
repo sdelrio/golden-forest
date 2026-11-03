@@ -1,23 +1,20 @@
 import React from 'react';
 import StatusBadge from './StatusBadge';
-import { CATEGORY_COLORS } from '../../constants/colors';
 import { formatNumber, timeAgo } from '../../utils/format';
 import DashboardCard from '../DashboardCard/DashboardCard';
 import dashboardStyles from '../DashboardCard/DashboardCard.module.css';
 import styles from './ToolCard.module.css';
 
 export default function ToolCard({ tool, onSelect }) {
-  const color = CATEGORY_COLORS[tool.category] || '#6b7280';
   const stars = formatNumber(tool.githubStars, { compact: true });
   const lastPush = timeAgo(tool.githubLastPush, { compact: true });
 
   return (
     <DashboardCard
-      accentColor={color}
       onClick={() => onSelect(tool)}
       header={
         <>
-          <span className={dashboardStyles.categoryBadge} style={{ background: color }}>
+          <span className={dashboardStyles.categoryBadge}>
             {tool.category}
           </span>
           {tool.healthScore != null && (
