@@ -327,6 +327,35 @@
     "docPath": "/docs/Develop-Code/AI-Development/Skills/cybersecurity-skills"
   },
   {
+    "id": "elephant-goldfish-model",
+    "name": "Elephant-Goldfish Model (EGM)",
+    "description": "Google's open-source plugin of agent skills for spec-driven development: a deep-context elephant drafts the design, zero-context goldfish subagents review it in fresh sessions, and the human approves the trade-offs.",
+    "category": "workflows",
+    "github": "https://github.com/google/elephant-goldfish-model",
+    "npm": null,
+    "pip": null,
+    "install": "claude plugin marketplace add google/elephant-goldfish-model",
+    "site": "https://egm.dev",
+    "license": "Apache-2.0",
+    "tags": [
+      "workflow",
+      "spec-driven",
+      "code-review",
+      "context-engineering",
+      "google",
+      "claude-code",
+      "codex",
+      "subagents"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "codex",
+      "antigravity",
+      "opencode"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Workflows/elephant-goldfish-model"
+  },
+  {
     "id": "everything-claude-code",
     "name": "Everything Claude Code (ECC)",
     "description": "Hackathon-winning harness-native operator system: 63 agents, 251 skills, cross-harness support with AgentShield security.",
