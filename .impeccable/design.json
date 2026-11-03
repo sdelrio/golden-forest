@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-03T00:00:00.000Z",
+  "generatedAt": "2026-11-03T21:54:59.574Z",
   "title": "Design System: The Golden Forest",
   "extensions": {
     "colorMeta": {
@@ -435,6 +435,294 @@
           "#ff998c",
           "#ffc9be"
         ]
+      },
+      "heading-dark": {
+        "role": "neutral",
+        "displayName": "Heading Amber",
+        "canonical": "oklch(0.657 0.141 71.3)",
+        "purpose": "Dark-mode heading colour (-ifm-heading-color-dark).",
+        "tonalRamp": [
+          "oklch(0.150 0.102 71.3)",
+          "oklch(0.250 0.112 71.3)",
+          "oklch(0.350 0.121 71.3)",
+          "oklch(0.450 0.131 71.3)",
+          "oklch(0.550 0.141 71.3)",
+          "oklch(0.650 0.131 71.3)",
+          "oklch(0.800 0.117 71.3)",
+          "oklch(0.950 0.102 71.3)"
+        ]
+      },
+      "footer-dark": {
+        "role": "neutral",
+        "displayName": "Footer Slate",
+        "canonical": "oklch(0.244 0.014 248.4)",
+        "purpose": "Footer plane, the one cool surface in the system.",
+        "tonalRamp": [
+          "oklch(0.150 0.010 248.4)",
+          "oklch(0.250 0.011 248.4)",
+          "oklch(0.350 0.012 248.4)",
+          "oklch(0.450 0.013 248.4)",
+          "oklch(0.550 0.014 248.4)",
+          "oklch(0.650 0.013 248.4)",
+          "oklch(0.800 0.012 248.4)",
+          "oklch(0.950 0.010 248.4)"
+        ]
+      },
+      "navbar-edge-light": {
+        "role": "neutral",
+        "displayName": "Tambour Edge (light)",
+        "canonical": "oklch(0.955 0.038 85.3)",
+        "purpose": "Navbar 1% edge stop, light mode.",
+        "tonalRamp": [
+          "oklch(0.150 0.027 85.3)",
+          "oklch(0.250 0.030 85.3)",
+          "oklch(0.350 0.033 85.3)",
+          "oklch(0.450 0.035 85.3)",
+          "oklch(0.550 0.038 85.3)",
+          "oklch(0.650 0.035 85.3)",
+          "oklch(0.800 0.031 85.3)",
+          "oklch(0.950 0.027 85.3)"
+        ]
+      },
+      "navbar-edge-dark": {
+        "role": "neutral",
+        "displayName": "Tambour Edge (dark)",
+        "canonical": "oklch(0.363 0.075 78.5)",
+        "purpose": "Navbar 1% edge stop, dark mode.",
+        "tonalRamp": [
+          "oklch(0.150 0.054 78.5)",
+          "oklch(0.250 0.060 78.5)",
+          "oklch(0.350 0.065 78.5)",
+          "oklch(0.450 0.070 78.5)",
+          "oklch(0.550 0.075 78.5)",
+          "oklch(0.650 0.070 78.5)",
+          "oklch(0.800 0.062 78.5)",
+          "oklch(0.950 0.054 78.5)"
+        ]
+      },
+      "dnd-accent": {
+        "role": "neutral",
+        "displayName": "Handbook Accent",
+        "canonical": "oklch(0.745 0.149 71.2)",
+        "purpose": "Handbook accent, used by the container binding hairlines.",
+        "tonalRamp": [
+          "oklch(0.150 0.107 71.2)",
+          "oklch(0.250 0.117 71.2)",
+          "oklch(0.350 0.128 71.2)",
+          "oklch(0.450 0.138 71.2)",
+          "oklch(0.550 0.149 71.2)",
+          "oklch(0.650 0.138 71.2)",
+          "oklch(0.800 0.123 71.2)",
+          "oklch(0.950 0.107 71.2)"
+        ]
+      },
+      "dnd-text-primary": {
+        "role": "neutral",
+        "displayName": "Handbook Ink",
+        "canonical": "oklch(0.299 0.036 65.8)",
+        "purpose": "Handbook body text.",
+        "tonalRamp": [
+          "oklch(0.150 0.026 65.8)",
+          "oklch(0.250 0.028 65.8)",
+          "oklch(0.350 0.031 65.8)",
+          "oklch(0.450 0.033 65.8)",
+          "oklch(0.550 0.036 65.8)",
+          "oklch(0.650 0.033 65.8)",
+          "oklch(0.800 0.029 65.8)",
+          "oklch(0.950 0.026 65.8)"
+        ]
+      },
+      "dnd-text-secondary": {
+        "role": "neutral",
+        "displayName": "Handbook Secondary Ink",
+        "canonical": "oklch(0.418 0.052 83.7)",
+        "purpose": "Handbook secondary text.",
+        "tonalRamp": [
+          "oklch(0.150 0.038 83.7)",
+          "oklch(0.250 0.041 83.7)",
+          "oklch(0.350 0.045 83.7)",
+          "oklch(0.450 0.049 83.7)",
+          "oklch(0.550 0.052 83.7)",
+          "oklch(0.650 0.049 83.7)",
+          "oklch(0.800 0.043 83.7)",
+          "oklch(0.950 0.038 83.7)"
+        ]
+      },
+      "dnd-text-muted": {
+        "role": "neutral",
+        "displayName": "Handbook Muted Ink",
+        "canonical": "oklch(0.557 0.055 63.3)",
+        "purpose": "Handbook muted and empty-state text.",
+        "tonalRamp": [
+          "oklch(0.150 0.039 63.3)",
+          "oklch(0.250 0.043 63.3)",
+          "oklch(0.350 0.047 63.3)",
+          "oklch(0.450 0.051 63.3)",
+          "oklch(0.550 0.055 63.3)",
+          "oklch(0.650 0.051 63.3)",
+          "oklch(0.800 0.045 63.3)",
+          "oklch(0.950 0.039 63.3)"
+        ]
+      },
+      "hb-parchment": {
+        "role": "neutral",
+        "displayName": "Handbook Vellum",
+        "canonical": "oklch(0.923 0.032 89.1)",
+        "purpose": "Print-source handbook paper (--HB_Color_Background).",
+        "tonalRamp": [
+          "oklch(0.150 0.023 89.1)",
+          "oklch(0.250 0.025 89.1)",
+          "oklch(0.350 0.028 89.1)",
+          "oklch(0.450 0.030 89.1)",
+          "oklch(0.550 0.032 89.1)",
+          "oklch(0.650 0.030 89.1)",
+          "oklch(0.800 0.026 89.1)",
+          "oklch(0.950 0.023 89.1)"
+        ]
+      },
+      "hb-accent": {
+        "role": "neutral",
+        "displayName": "Handbook Wash",
+        "canonical": "oklch(0.909 0.048 113.8)",
+        "purpose": "Inline-code fill and handbook wash (--HB_Color_Accent).",
+        "tonalRamp": [
+          "oklch(0.150 0.034 113.8)",
+          "oklch(0.250 0.038 113.8)",
+          "oklch(0.350 0.041 113.8)",
+          "oklch(0.450 0.045 113.8)",
+          "oklch(0.550 0.048 113.8)",
+          "oklch(0.650 0.045 113.8)",
+          "oklch(0.800 0.040 113.8)",
+          "oklch(0.950 0.034 113.8)"
+        ]
+      },
+      "hb-header-underline": {
+        "role": "neutral",
+        "displayName": "Handbook Rule",
+        "canonical": "oklch(0.749 0.089 94.1)",
+        "purpose": "Handbook header rule (--HB_Color_HeaderUnderline).",
+        "tonalRamp": [
+          "oklch(0.150 0.064 94.1)",
+          "oklch(0.250 0.071 94.1)",
+          "oklch(0.350 0.077 94.1)",
+          "oklch(0.450 0.083 94.1)",
+          "oklch(0.550 0.089 94.1)",
+          "oklch(0.650 0.083 94.1)",
+          "oklch(0.800 0.074 94.1)",
+          "oklch(0.950 0.064 94.1)"
+        ]
+      },
+      "hb-caption": {
+        "role": "neutral",
+        "displayName": "Handbook Caption",
+        "canonical": "oklch(0.518 0.047 82.1)",
+        "purpose": "Handbook caption text (--HB_Color_CaptionText).",
+        "tonalRamp": [
+          "oklch(0.150 0.034 82.1)",
+          "oklch(0.250 0.037 82.1)",
+          "oklch(0.350 0.041 82.1)",
+          "oklch(0.450 0.044 82.1)",
+          "oklch(0.550 0.047 82.1)",
+          "oklch(0.650 0.044 82.1)",
+          "oklch(0.800 0.039 82.1)",
+          "oklch(0.950 0.034 82.1)"
+        ]
+      },
+      "status-fresh": {
+        "role": "tertiary",
+        "displayName": "Fresh Green",
+        "canonical": "oklch(0.723 0.192 149.6)",
+        "purpose": "Fresh freshness dot and 12% tint source.",
+        "tonalRamp": [
+          "oklch(0.150 0.138 149.6)",
+          "oklch(0.250 0.152 149.6)",
+          "oklch(0.350 0.165 149.6)",
+          "oklch(0.450 0.179 149.6)",
+          "oklch(0.550 0.192 149.6)",
+          "oklch(0.650 0.179 149.6)",
+          "oklch(0.800 0.158 149.6)",
+          "oklch(0.950 0.138 149.6)"
+        ]
+      },
+      "status-fresh-ink": {
+        "role": "neutral",
+        "displayName": "Fresh Green Ink",
+        "canonical": "oklch(0.527 0.137 150.1)",
+        "purpose": "Fresh freshness label, light mode.",
+        "tonalRamp": [
+          "oklch(0.150 0.099 150.1)",
+          "oklch(0.250 0.108 150.1)",
+          "oklch(0.350 0.118 150.1)",
+          "oklch(0.450 0.128 150.1)",
+          "oklch(0.550 0.137 150.1)",
+          "oklch(0.650 0.128 150.1)",
+          "oklch(0.800 0.113 150.1)",
+          "oklch(0.950 0.099 150.1)"
+        ]
+      },
+      "status-stale": {
+        "role": "tertiary",
+        "displayName": "Stale Amber",
+        "canonical": "oklch(0.769 0.165 70.1)",
+        "purpose": "Stale freshness dot and 12% tint source.",
+        "tonalRamp": [
+          "oklch(0.150 0.119 70.1)",
+          "oklch(0.250 0.130 70.1)",
+          "oklch(0.350 0.142 70.1)",
+          "oklch(0.450 0.153 70.1)",
+          "oklch(0.550 0.165 70.1)",
+          "oklch(0.650 0.153 70.1)",
+          "oklch(0.800 0.136 70.1)",
+          "oklch(0.950 0.119 70.1)"
+        ]
+      },
+      "status-stale-ink": {
+        "role": "neutral",
+        "displayName": "Stale Amber Ink",
+        "canonical": "oklch(0.555 0.146 49.0)",
+        "purpose": "Stale freshness label, light mode.",
+        "tonalRamp": [
+          "oklch(0.150 0.105 49.0)",
+          "oklch(0.250 0.115 49.0)",
+          "oklch(0.350 0.125 49.0)",
+          "oklch(0.450 0.135 49.0)",
+          "oklch(0.550 0.146 49.0)",
+          "oklch(0.650 0.135 49.0)",
+          "oklch(0.800 0.120 49.0)",
+          "oklch(0.950 0.105 49.0)"
+        ]
+      },
+      "status-outdated": {
+        "role": "tertiary",
+        "displayName": "Outdated Red",
+        "canonical": "oklch(0.637 0.208 25.3)",
+        "purpose": "Outdated freshness dot and 12% tint source.",
+        "tonalRamp": [
+          "oklch(0.150 0.150 25.3)",
+          "oklch(0.250 0.164 25.3)",
+          "oklch(0.350 0.179 25.3)",
+          "oklch(0.450 0.193 25.3)",
+          "oklch(0.550 0.208 25.3)",
+          "oklch(0.650 0.193 25.3)",
+          "oklch(0.800 0.171 25.3)",
+          "oklch(0.950 0.150 25.3)"
+        ]
+      },
+      "status-outdated-ink": {
+        "role": "neutral",
+        "displayName": "Outdated Red Ink",
+        "canonical": "oklch(0.577 0.215 27.3)",
+        "purpose": "Outdated freshness label, light mode.",
+        "tonalRamp": [
+          "oklch(0.150 0.155 27.3)",
+          "oklch(0.250 0.170 27.3)",
+          "oklch(0.350 0.185 27.3)",
+          "oklch(0.450 0.200 27.3)",
+          "oklch(0.550 0.215 27.3)",
+          "oklch(0.650 0.200 27.3)",
+          "oklch(0.800 0.178 27.3)",
+          "oklch(0.950 0.155 27.3)"
+        ]
       }
     },
     "typographyMeta": {
@@ -469,6 +757,26 @@
       "handbook-heading": {
         "displayName": "Handbook Heading",
         "purpose": "MrEavesRemake, scoped to the D&D routes."
+      },
+      "handbook-quote": {
+        "displayName": "Handbook Quote",
+        "purpose": "ScalySans. Blockquotes and stat tables inside the D&D route."
+      },
+      "handbook-small-caps": {
+        "displayName": "Handbook Small Caps",
+        "purpose": "ScalySansSmallCaps. Admonition heads and the first line of a handbook opening paragraph."
+      },
+      "handbook-drop-cap": {
+        "displayName": "Handbook Drop Cap",
+        "purpose": "SolberaImitationRemake. Floated first letter after a header, gradient-filled."
+      },
+      "table": {
+        "displayName": "Table",
+        "purpose": "Roboto 300. Table cells only, never prose."
+      },
+      "toc": {
+        "displayName": "Table of Contents",
+        "purpose": "Roboto 325. Right-hand table of contents only."
       }
     },
     "shadows": [
@@ -651,22 +959,27 @@
       },
       {
         "name": "The Gilded Edge Rule",
-        "body": "The warm gradient on body lives in the first and last 1% of the horizontal axis and nowhere else. A new surface does not get its own gradient; it sits flat on the sheet.",
+        "body": "The warm gradient on `body` lives in the first and last 1% of the horizontal axis and nowhere else. A new surface does not get its own gradient; it sits flat on the sheet.",
         "section": "colors"
       },
       {
         "name": "The One Accent Rule",
-        "body": "Amber is the only interactive hue. Oxblood, the leaf trio, and the ledger greys never become hover or focus colours.",
+        "body": "Amber is the only interactive hue. Oxblood, the leaf trio, and the ledger greys never become hover or focus colours. Adding a fourth accent hue breaks the world.",
+        "section": "colors"
+      },
+      {
+        "name": "The Status-Only Green Rule",
+        "body": "Green appears in this system only as a freshness signal, always as a 12% tint behind a dark-shade label. It never becomes a bullet, a highlight, an illustration fill, or a success message elsewhere.",
         "section": "colors"
       },
       {
         "name": "The 16/26 Rule",
-        "body": "Body copy is 16px on a 26px line (1.625). A 110% base was tried and replaced; do not reintroduce it.",
+        "body": "Body copy is 16px on a 26px line (1.625). A 110% base was tried and replaced; do not reintroduce it. Long-form reading quality is the site's most load-bearing visual decision. Note the mechanism: `--ifm-font-size-base` is declared twice, as `110%` in `custom.css` and as `16px` in `custom-narrow-styles.css`, and the second wins only because that file is imported last. The same applies to the system UI stack, which shadows an unused `\"Open Sans\"` declaration a few lines earlier. The computed value is the only one that counts; the earlier declarations are dead weight, not a second opinion.",
         "section": "typography"
       },
       {
         "name": "The Handbook Quarantine Rule",
-        "body": "BookInstanity, MrEavesRemake, ScalySans, the drop cap and the small-caps first line apply only inside html[class*=\"-doc-id-DnD/\"]. They never appear on a dashboard, a landing page, or a general article.",
+        "body": "BookInstanity, MrEavesRemake, ScalySans, the drop cap and the small-caps first line apply only inside `html[class*=\"-doc-id-DnD/\"]`. They never appear on a dashboard, a landing page, or a general article.",
         "section": "typography"
       },
       {
@@ -676,34 +989,38 @@
       },
       {
         "name": "The Warm Shadow Rule",
-        "body": "If a shadow falls on paper, it is rgba(163, 106, 0, ...). Black shadows are an exception for the handbook container and dark-mode hovers, not a default.",
+        "body": "If a shadow falls on paper, it is `rgba(163, 106, 0, ...)`. Black shadows are an exception for the handbook container and dark-mode hovers, not a default.",
         "section": "elevation"
       },
       {
         "name": "The Settle Rule",
-        "body": "Hover does not scale, bounce or glow. It changes the shadow from rest to lifted over 0.2s ease-in-out. Motion is a sheet being picked up, nothing faster.",
+        "body": "Hover does not scale, bounce or glow. It changes the shadow from rest to lifted over 0.2s ease-in-out. Motion in this system is a sheet being picked up, nothing faster.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do keep body copy at 16px on a 26px line (1.625), and keep paragraph margins tight (0.5em bottom).",
-      "Do give every h2 the full-width 2px gold rule, and give h3 nothing.",
-      "Do use the compound radius 28px 12px 35px 15px for anything that reads as a cut sheet: code blocks, admonitions, terminal frames.",
-      "Do tint paper shadows amber (rgba(163, 106, 0, .4) at rest, .7 on hover) and animate them over 0.2s ease-in-out.",
-      "Do reach for --ifm-color-primary and its seven-step family instead of writing new amber hex values.",
-      "Do use the SVG divider on hr, and the leaf trio on full-width terminal frames only.",
-      "Do scope handbook typography and the parchment texture to the -doc-id-DnD/ route classes, and give those components their own --dnd-* tokens.",
-      "Do prefer a 9999px pill or a 3px hairline to a mid-range radius; the system has no 12px-to-24px middle ground."
+      "keep body copy at 16px on a 26px line (1.625), and keep paragraph margins tight (0.5em bottom).",
+      "give every h2 the full-width 2px gold rule, and give h3 nothing.",
+      "use the compound radius `28px 12px 35px 15px` for anything that reads as a cut sheet: code blocks, admonitions, terminal frames.",
+      "tint paper shadows amber (`rgba(163, 106, 0, .4)` at rest, `.7` on hover) and animate them over 0.2s ease-in-out.",
+      "reach for `--ifm-color-primary` and its seven-step family instead of writing new amber hex values.",
+      "use the SVG divider on `hr`, and the leaf trio on full-width terminal frames only.",
+      "scope handbook typography and the parchment texture to the `-doc-id-DnD/` route classes, and give those components their own `--dnd-*` tokens.",
+      "route every focus indicator through `--focus-ring` (`#8f5d00` light, `#ffb630` dark). Amber at #e99700 is 2.26:1 on paper and is never a focus colour.",
+      "keep green, stale-amber and outdated-red inside the freshness family, always as a 12% tint with a dark-shade label, never as a bare fill.",
+      "prefer a 9999px pill or a 3px hairline to a mid-range radius; the system has no 12px-to-24px middle ground."
     ],
     "donts": [
-      "Don't set body copy in amber, and don't make amber a heading colour in light mode. Headings are oxblood there.",
-      "Don't put the warm gradient anywhere except the first and last 1% of the viewport edges.",
-      "Don't introduce a fourth accent hue. Amber, oxblood and the decorative leaf trio are the whole palette.",
-      "Don't use neutral grey shadows on paper surfaces; the dark-mode card hover (#AAA3) and the handbook container are the only exceptions.",
-      "Don't reuse the handbook's red rule (#9c2b1b) as an error colour, or the leaf red as a danger state.",
-      "Don't ship new white-on-amber text. #fff on #e99700 sits near 2.1:1; the existing active pill does this and is a known exception, not a pattern to copy.",
-      "Don't apply the organic radius, the leaf trio or the drop cap outside their artifacts. They are signatures, and repeating them everywhere spends them.",
-      "Don't put a hardcoded type size in a component CSS module when an Infima variable already carries it."
+      "set body copy in amber, and don't make amber a heading colour in light mode. Headings are oxblood there.",
+      "put the warm gradient anywhere except the first and last 1% of the viewport edges.",
+      "introduce a fourth accent hue. Amber, oxblood and the decorative leaf trio are the whole palette.",
+      "use neutral grey shadows on paper surfaces; the dark-mode card hover (`#AAA3`) and the handbook container are the only exceptions.",
+      "reuse the handbook's red rule (#9c2b1b) as an error colour, or the leaf red as a danger state.",
+      "ship white-on-amber text. `#fff` on #e99700 is 2.36:1. Amber fills carry ink (`--ink`, 6.77:1) or use amber-darkest as the fill with white text (4.55:1).",
+      "apply the organic radius, the leaf trio or the drop cap outside their artifacts. They are signatures, and repeating them everywhere spends them.",
+      "set Roboto outside table cells and the table of contents; prose is the system UI stack.",
+      "animate anything on scroll except the 0.1-speed hero parallax.",
+      "put a hardcoded type size in a component CSS module when an Infima variable already carries it; the two-register type system depends on those variables being the single source."
     ]
   }
 }
