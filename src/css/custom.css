@@ -89,12 +89,12 @@
   --mermaid-lightblue-stroke: #0366d6;
 }
 
-html[data-theme='light'] :root {
+html[data-theme='light'] {
   --ifm-font-color-base: #2a2010;
   --ifm-heading-color: var(--ifm-heading-color-light);
 }
 
-html[data-theme='dark'] :root {
+html[data-theme='dark'] {
   --ifm-font-color-base: #d4c4a8;
   --ifm-heading-color: var(--ifm-heading-color-dark);
 }

@@ -162,8 +162,11 @@
   font-weight: 600;
 }
 
-.entry:hover .entryTitle {
+.entry:hover .entryTitle,
+.entry:focus-visible .entryTitle {
   color: var(--ifm-link-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .entryCount {
@@ -188,7 +191,7 @@
 
 .benchList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(19rem, 100%), 1fr));
   gap: 1.25rem 2.5rem;
   margin: 1.25rem 0 0;
   padding: 0;
@@ -216,7 +219,8 @@
   font-weight: 600;
 }
 
-.toolLink:hover .toolName {
+.toolLink:hover .toolName,
+.toolLink:focus-visible .toolName {
   color: var(--ifm-link-hover-color);
   text-decoration: underline;
   text-underline-offset: 3px;
