@@ -46,3 +46,9 @@ graphify-out/**
 
 local-prompts/
 
+
+# Impeccable local state (machine-specific consent flag)
+.impeccable/config.local.json
+
+# Codex agent hooks (absolute machine paths)
+.codex/
