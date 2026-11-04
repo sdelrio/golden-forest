@@ -206,6 +206,11 @@ const config = {
             label: 'Documents',
           },
           {
+            to: '/docs/tags/',
+            position: 'left',
+            label: 'Tags',
+          },
+          {
             to: '/tutorial/tutorial-intro',
             //type: 'doc',
             docId: 'tutorial-intro',
