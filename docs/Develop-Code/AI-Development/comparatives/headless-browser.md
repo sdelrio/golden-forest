@@ -70,10 +70,15 @@ For AI developers seeking to deploy lightweight headless browsers, **Obscura** (
   </TabItem>
 </Tabs>
 
+## Framework Layer
+
+A headless browser is only the fetch step. If you also need parsing, adaptive selectors, crawling, retries, proxy rotation and exports in one package, see [Scrapling](../Tools/scrapling.md), which wraps the same browser layer and can parse whatever these engines return behind a single `Selector` API.
+
 ## References
 
 - [Obscura Headless Browser](../Tools/obscura.md) — Rust-based lightweight browser with advanced stealth, SSRF shielding, and CDP support.
 - [Lightpanda Headless Browser](../Tools/lightpanda.md) — Zig-based high-concurrency browser with semantic DOM tree extraction.
+- [Scrapling](../Tools/scrapling.md) - Python scraping framework with adaptive selectors, spiders and a stealth browser fetcher.
 - [RTK (Rust Token Killer)](../Tools/rtk.md) — Token optimization proxy for terminal commands.
 - [Claude Code](../Agents/claude-code.md) — Anthropic's agentic CLI terminal tool.
 - [OpenSandbox](../../../Security/opensandbox.md) — Secure execution sandboxes for AI agents.

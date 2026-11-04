@@ -1084,6 +1084,25 @@
     "docPath": "/docs/Develop-Code/AI-Development/Tools/rtk"
   },
   {
+    "id": "scrapling",
+    "name": "Scrapling",
+    "description": "Self-healing Python web scraping framework with HTTP and stealth browser fetchers, adaptive selectors, concurrent spiders and Markdown export for building documentation corpora.",
+    "category": "tools",
+    "github": "https://github.com/D4Vinci/Scrapling",
+    "pip": "scrapling",
+    "install": "pip install \"scrapling[all]\" && scrapling install",
+    "site": "https://scrapling.readthedocs.io",
+    "license": "BSD-3-Clause",
+    "tags": [
+      "web-scraping",
+      "python",
+      "crawler",
+      "adaptive-scraping",
+      "markdown"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Tools/scrapling"
+  },
+  {
     "id": "skillopt",
     "name": "SkillOpt",
     "description": "Microsoft's text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts.",
