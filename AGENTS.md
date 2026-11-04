@@ -199,6 +199,7 @@ The dark/light mode toggle uses the **View Transitions API** for a circular-mask
   - `./scripts/ai-dashboard-list.sh [category|id]` - List tools or show one entry
   - Schema: `static/ai-dashboard/tools-schema.json`
   - After adding/updating, run `task ai-dashboard:enrich` to regenerate `tools-enriched.json`.
+- **Docs Tags**: Every article under `docs/` carries 1 to 4 `tags:` frontmatter values, all drawn from `scripts/tags-vocabulary.json` (`topics` plus curated `tools`). Tags are lowercase, kebab-case, no spaces, no plurals, no version numbers. Adding a tag to the vocabulary is a deliberate PR. `task check-tags` (also run by `task check`) fails on a missing tag, more than 4 tags, or an unknown tag.
 - **Temp files**: All scripts must use `tmp/` at the repo root (not `/tmp`). Create with `mkdir -p "$REPO_ROOT/tmp"`. This directory is gitignored.
 - **Algolia Search**: See [ALGOLIA.md](file:///Users/sdelrio/github/sdelrio/golden-forest/ALGOLIA.md) for indexing configuration, record count analysis, and reduction strategies. Config: `.algolia.docsearch.json`.
 - **Git**: Use **Conventional Commits** (`feat(scope): desc`, `fix: desc`, `docs: desc`).
