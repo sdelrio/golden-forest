@@ -2,10 +2,8 @@
 title: "Using Virtual Desktop with a Link Cable on Quest 3"
 description: "A guide to using Virtual Desktop over a wired Link Cable connection for stable, low-latency PCVR gaming on Meta Quest 3."
 tags:
-  - quest 3
-  - virtual desktop
-  - link cable
-  - pcvr
+  - vr
+  - hardware
 sidebar_label: "Virtual Desktop Link"
 last_update:
   date: 2026-08-07

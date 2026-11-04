@@ -1,7 +1,7 @@
 ---
 title: "Cloudflare Security Audit Skill"
 description: "Cloudflare's open-source coding-agent skill that runs multi-phase security audits with independently verified, machine-readable findings."
-tags: [ai-development, skills, security, agents, cloudflare]
+tags: [ai, skills, security, agents]
 sidebar_label: "Security Audit"
 ---
 

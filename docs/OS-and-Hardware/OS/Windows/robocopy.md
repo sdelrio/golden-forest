@@ -3,9 +3,8 @@ title: Robocopy
 author: sdelrio
 date: 20211106
 tags:
-- robocopy
-- windows
-- rsync
+  - backup
+  - cli
 ---
 
 # Robocopy

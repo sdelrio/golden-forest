@@ -1,3 +1,7 @@
+---
+tags: [storage, self-hosted]
+---
+
 # MinIO
 
 Minio is an Open Source S3 compatible object storage. Available on every public cloud, every kubernetes, private and the edge.

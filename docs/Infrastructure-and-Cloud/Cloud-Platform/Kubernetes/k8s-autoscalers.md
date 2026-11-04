@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, performance]
+---
+
 # K8s autoscalers
 
 # Hetzner

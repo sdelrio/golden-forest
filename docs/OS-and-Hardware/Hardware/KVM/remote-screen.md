@@ -1,3 +1,7 @@
+---
+tags: [hardware, networking]
+---
+
 # Remote screen
 
 # fit-Headless

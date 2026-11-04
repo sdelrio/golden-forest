@@ -1,3 +1,7 @@
+---
+tags: [home-automation, self-hosted]
+---
+
 # Zigbee2MQTT
 
 Zigbee2MQTT was written in Node.js and runs almost on every platform with affordable memory footprint.

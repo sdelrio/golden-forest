@@ -1,7 +1,7 @@
 ---
 title: "Tuxee - Linux Container for AI Agents"
 description: "Tuxee is a 60 MB Debian container with a browser UI for files and persistent terminals, built to host terminal AI agents like Codex and Claude Code."
-tags: ["tuxee", "agents", "containers", "linux", "web-terminal"]
+tags: [ai, agents, containers, linux]
 sidebar_label: "Tuxee"
 ---
 

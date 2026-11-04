@@ -1,3 +1,7 @@
+---
+tags: [testing, web-development]
+---
+
 # Selenium
 
 Selenium is a automation testing tool's framework. It's based on the JavaScript.

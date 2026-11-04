@@ -1,4 +1,5 @@
 ---
+tags: [dnd, cli]
 title: Usage Examples
 description: Real-world examples and usage patterns for the FG Character Extractor
 sidebar_position: 30

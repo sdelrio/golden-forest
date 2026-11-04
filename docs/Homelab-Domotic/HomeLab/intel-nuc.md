@@ -1,3 +1,7 @@
+---
+tags: [homelab, hardware]
+---
+
 # Intel Nuc
 
 The Intel NUC (Next Unit of Computing) is a small/barebone desktop computer, which you will need to supply your own RAM, sotrage, screen keybooard, and mouse to get a fully working solution

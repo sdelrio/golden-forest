@@ -1,3 +1,7 @@
+---
+tags: [web-development, performance]
+---
+
 # Wordpress
 
 Force CSS reload in WordPress every time when file is updated

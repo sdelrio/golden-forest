@@ -1,4 +1,5 @@
 ---
+tags: [ai, agents, automation, claude-code]
 title: "ClaudeKit: Spec-Driven AI Development Workflow"
 hide_table_of_contents: true
 ---

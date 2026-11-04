@@ -1,4 +1,5 @@
 ---
+tags: [dnd, tooling, programming]
 title: 'Building the Project'
 description: 'Build instructions and cross-platform compilation for FG Character Extractor'
 ---

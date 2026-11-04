@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, networking]
+---
+
 # k8s Network Policies
 
 It allows you to control the flow of the traffic to specify how the Pod is allowed to communicate (IP address and port).

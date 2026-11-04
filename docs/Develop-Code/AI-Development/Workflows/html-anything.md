@@ -3,11 +3,9 @@ title: "HTML Anything"
 description: "The agentic HTML editor that lets your local AI agent convert any data into ship-ready, design-grade HTML with 75 skills across 9 surface modes."
 tags:
   - ai
-  - tools
-  - html
-  - design
+  - tooling
+  - web-development
   - agents
-  - zero-api-key
 ---
 
 import Card from '@site/src/components/Card/Card';

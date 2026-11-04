@@ -1,3 +1,7 @@
+---
+tags: [storage, hardware]
+---
+
 # S.M.A.R.T. tools
 
 

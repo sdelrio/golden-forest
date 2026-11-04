@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, git]
+---
+
 # GitLab
 
 ## Gitlab runners access

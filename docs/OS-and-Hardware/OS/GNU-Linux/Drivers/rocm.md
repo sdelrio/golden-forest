@@ -2,10 +2,8 @@
 date: 20211106
 author: sdelrio
 tags:
-- amd
-- radeon
-- OpenCL
-- ROCm
+  - gpu
+  - linux
 ---
 
 # ROCm OpenCL

@@ -1,3 +1,7 @@
+---
+tags: [homelab, cloud, self-hosted]
+---
+
 # OpenStack Homelab
 
 ## Developer enviornment

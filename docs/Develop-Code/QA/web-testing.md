@@ -1,3 +1,7 @@
+---
+tags: [testing, web-development]
+---
+
 # Web testing
 
 ## Automated Testing

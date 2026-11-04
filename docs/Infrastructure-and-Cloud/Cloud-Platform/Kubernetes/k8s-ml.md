@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, llm, gpu]
+---
+
 # K8s Machine Learning
 
 ## Kubeflow

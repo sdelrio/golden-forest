@@ -1,7 +1,7 @@
 ---
 title: "AI Engineering from Scratch: A Complete Curriculum"
 description: "A comprehensive overview of the open-source curriculum that teaches AI engineering from first principles — 503 lessons, 20 phases, from linear algebra to autonomous swarms."
-tags: [ai-engineering, machine-learning, curriculum, learning-path, open-source]
+tags: [ai, llm]
 sidebar_label: "AI Engineering from Scratch"
 ---
 

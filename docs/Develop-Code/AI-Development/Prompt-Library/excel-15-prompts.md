@@ -1,4 +1,5 @@
 ---
+tags: [ai, llm, productivity]
 title: Excel prompts
 ---
 # Create advanced Excel with prompts

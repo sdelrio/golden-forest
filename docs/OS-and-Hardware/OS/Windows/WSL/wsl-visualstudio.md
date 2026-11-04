@@ -3,9 +3,8 @@ title: WSL VS code
 author: sdelrio
 date: 20211106
 tags:
-- visual studio code
-- wsl
-- windows
+  - linux
+  - tooling
 ---
 
 # Using Visual Studio in Windows Subsystem for Linux

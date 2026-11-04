@@ -1,3 +1,7 @@
+---
+tags: [media, tooling]
+---
+
 # VobSub2SRT
 
 Converts VobSub subtitles (.idx/.srt format) into .srt subtitles.

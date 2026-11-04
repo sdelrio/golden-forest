@@ -2,12 +2,9 @@
 title: "TurboQuant: Extreme LLM Compression"
 description: "Google's TurboQuant compresses KV cache to 3 bits with zero accuracy loss, achieving 8x speedup on H100 GPUs."
 tags:
-  - AI
-  - LLM
-  - Quantization
-  - Compression
-  - KV Cache
-  - Google Research
+  - ai
+  - llm
+  - performance
 sidebar_label: "TurboQuant"
 ---
 

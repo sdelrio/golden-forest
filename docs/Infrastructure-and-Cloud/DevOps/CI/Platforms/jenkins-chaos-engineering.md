@@ -1,3 +1,7 @@
+---
+tags: [ci-cd]
+---
+
 # Jenkins Chaos engineering
 
 ## References

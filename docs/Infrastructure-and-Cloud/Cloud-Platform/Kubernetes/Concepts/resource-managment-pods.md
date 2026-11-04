@@ -1,4 +1,5 @@
 ---
+tags: [kubernetes]
 sidebar_position: 1
 title: "Resources/Limits"
 ---

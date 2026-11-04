@@ -4,10 +4,7 @@ description: "Terminal-first AI coding agents designed for real-time, human-dire
 tags:
   - ai
   - agents
-  - interactive
-  - coding
-  - claude-code
-  - opencode
+  - programming
 sidebar_position: 10
 ---
 

@@ -1,3 +1,7 @@
+---
+tags: [homelab, self-hosted]
+---
+
 # Common apps used in homelab
 
 - Reverse Proxy:

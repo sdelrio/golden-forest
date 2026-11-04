@@ -1,3 +1,7 @@
+---
+tags: [networking, homelab, hardware]
+---
+
 # 10 GB Network at home
 
 Basically try to go fiber instead of cable.

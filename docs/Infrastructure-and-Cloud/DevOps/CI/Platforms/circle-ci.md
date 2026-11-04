@@ -1,3 +1,7 @@
+---
+tags: [ci-cd]
+---
+
 # Circle CI
 
 * [Docker and CI/CD tutorial: a deep dive into containers](https://circleci.com/blog/docker-and-cicd-tutorial-a-deep-dive-into-containers/)

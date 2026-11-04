@@ -1,3 +1,7 @@
+---
+tags: [python, testing]
+---
+
 # Python Unit testing
 
 ## Beyond Unit Tess

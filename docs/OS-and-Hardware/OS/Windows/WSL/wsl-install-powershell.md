@@ -3,9 +3,8 @@ title: WSL install
 author: sdelrio
 date: 20211106
 tags:
-- powershell
-- wsl
-- windows
+  - linux
+  - cli
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 title: "gh-secure"
 description: "Official GitHub CLI extension from the GitHub Security Lab that enables branch protection, private vulnerability reporting, secret scanning, Dependabot, and CodeQL on a repository in about 2 minutes."
-tags: [security, github, cli, devsecops, supply-chain]
+tags: [security, github, cli, appsec]
 ---
 
 import Tabs from '@theme/Tabs';

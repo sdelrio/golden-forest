@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, automation, tooling]
+---
+
 # Flottbot
 
 A chatbot framework written in Go. All configurations are made in YAML files, or inside scripts written in your favorite language.

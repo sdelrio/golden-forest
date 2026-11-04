@@ -2,9 +2,8 @@
 title: Corsair on Ryzen
 date: 20211106
 tags:
-- memory
-- speed
-- overclock
+  - hardware
+  - performance
 ---
 
 # Corsair Overclock on Ryzen 

@@ -1,7 +1,7 @@
 ---
 title: "Privacy Guides"
 description: "Independent, non-profit resource for privacy and security tool recommendations and best practices."
-tags: [privacy, security, vpn, encryption, tools]
+tags: [privacy, security]
 sidebar_position: 10
 ---
 

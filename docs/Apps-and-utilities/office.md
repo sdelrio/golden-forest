@@ -1,3 +1,7 @@
+---
+tags: [productivity, tooling]
+---
+
 # Office Suite Alternatives
 
 This document provides an overview of free and open-source office suite alternatives for word processing, spreadsheets, presentations, graphics, and database management.

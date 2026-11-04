@@ -1,3 +1,7 @@
+---
+tags: [hardware]
+---
+
 # Windows Power Management ⚡
 
 This section covers advanced power configuration settings to optimize system performance,

@@ -1,7 +1,7 @@
 ---
 title: "Advanced Debian/Ubuntu Hardening Strategy (2026)"
 description: "Comprehensive guide to securing Debian and Ubuntu servers with SSH hardening, 2FA/MFA, kernel sysctl tuning, file integrity monitoring, rootkit detection, and automated security updates."
-tags: [security, linux, debian, ubuntu, hardening, homelab]
+tags: [security, linux, homelab]
 sidebar_position: 10
 ---
 

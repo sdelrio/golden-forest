@@ -1,3 +1,7 @@
+---
+tags: [media, tooling]
+---
+
 # Adobe susbscription alternatives
 
 ## Photoshop

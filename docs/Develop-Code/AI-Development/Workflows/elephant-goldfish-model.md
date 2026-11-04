@@ -1,7 +1,7 @@
 ---
 title: "Elephant-Goldfish Model (EGM)"
 description: "A spec-driven development workflow that separates the agent holding project context from the agents reviewing the design in fresh, isolated contexts."
-tags: [ai, workflow, spec-driven-development, code-review, devops, claude-code, agents]
+tags: [ai, automation, agents, code-review]
 ---
 
 import Tabs from '@theme/Tabs';

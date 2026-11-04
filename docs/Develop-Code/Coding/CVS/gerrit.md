@@ -1,3 +1,7 @@
+---
+tags: [git, code-review, devops]
+---
+
 # Gerrit
 
 Gerrit is a free, web-based team code collaboration tool. Software developers in a team can review each other's modifications on their source code using a Web browser and approve or reject those changes. It integrates closely with Git, a distributed version control system.

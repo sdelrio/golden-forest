@@ -1,3 +1,7 @@
+---
+tags: [hardware, linux]
+---
+
 # Notebook tools
 
 ## Track battery usage

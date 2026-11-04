@@ -1,3 +1,7 @@
+---
+tags: [linux, storage]
+---
+
 # Clean system
 
 ## Clean docs packages

@@ -1,3 +1,7 @@
+---
+tags: [hardware]
+---
+
 # Mac Book Pro 16 intel
 
 Install with Ubuntu T2 version

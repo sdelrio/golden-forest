@@ -1,3 +1,7 @@
+---
+tags: [tooling, backup, storage]
+---
+
 # Imaging and Cloning tools
 
 ## Clonezilla

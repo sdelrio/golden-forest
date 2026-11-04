@@ -2,10 +2,7 @@
 date: 20211106
 author: sdelrio
 tags:
-- kernel
-- linux
-- linux 5
-- linux 5.15
+  - linux
 ---
 
 # Linux 5.15

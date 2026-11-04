@@ -1,7 +1,7 @@
 ---
 title: "Lingering Injuries"
 description: "Lingering Injuries and Treatment"
-tags: [injury, injuries, healing, dnd]
+tags: [dnd]
 ---
 
 # Lingering Injuries

@@ -1,7 +1,7 @@
 ---
 title: GitHub
 description: A comprehensive guide to contributing on GitHub, covering fork management, professional workflows, and high-performance GitHub Actions for CI/CD.
-tags: [github, git, collaboration, devops, github-actions, ci-cd]
+tags: [git, devops, ci-cd, github]
 slug: github
 ---
 # GitHub

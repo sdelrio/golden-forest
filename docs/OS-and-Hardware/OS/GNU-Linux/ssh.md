@@ -1,3 +1,7 @@
+---
+tags: [linux, cli, security]
+---
+
 # ssh client
 
 ## Tunnel

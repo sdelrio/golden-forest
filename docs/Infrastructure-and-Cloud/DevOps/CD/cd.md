@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, devops]
+---
+
 # Continous Deployment
 
 CD sometimes stand for Continous Delivery or Continous Deployment.

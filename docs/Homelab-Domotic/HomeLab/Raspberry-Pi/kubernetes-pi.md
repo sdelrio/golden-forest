@@ -1,3 +1,7 @@
+---
+tags: [homelab, kubernetes, hardware]
+---
+
 
 # Kubernetes on Pi
 

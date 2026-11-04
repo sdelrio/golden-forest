@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, containers]
+---
+
 # Kubernetes
 
 Kubernetes is an open-sourced platform for managing containerized workloads.

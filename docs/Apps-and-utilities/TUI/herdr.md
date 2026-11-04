@@ -2,11 +2,10 @@
 title: "Herdr"
 description: "A modern terminal multiplexer with built-in AI agent support"
 tags:
-  - CLI
-  - terminal
-  - tmux
-  - AI agents
-  - TUI
+  - cli
+  - agents
+  - tui
+  - tooling
 ---
 
 # Herdr

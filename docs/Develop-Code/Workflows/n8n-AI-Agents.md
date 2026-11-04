@@ -1,3 +1,7 @@
+---
+tags: [automation, ai, agents, self-hosted]
+---
+
 # n8n: AI Agent Workflows 🤖
 
 n8n is an incredibly powerful, free, and open-source platform that allows for the creation

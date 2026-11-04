@@ -3,9 +3,8 @@ title: 7-Zip
 date: 20211106
 author: sdelrio
 tags:
-- 7zip
-- benchmark
-- cpu
+  - hardware
+  - performance
 ---
 
 # 7-Zip benchmark

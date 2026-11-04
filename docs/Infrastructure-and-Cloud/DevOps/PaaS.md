@@ -1,3 +1,7 @@
+---
+tags: [devops, cloud, self-hosted]
+---
+
 # PaaS
 
 ## [Otomi](https://otomi.io/)

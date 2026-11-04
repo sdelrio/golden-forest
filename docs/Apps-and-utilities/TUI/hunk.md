@@ -2,12 +2,10 @@
 title: "Hunk"
 description: "Review-first terminal diff viewer for agent-authored changesets with inline AI annotations and multi-file navigation."
 tags:
-  - CLI
-  - terminal
-  - TUI
-  - diff
-  - code-review
+  - cli
+  - tui
   - git
+  - code-review
 ---
 
 # Hunk

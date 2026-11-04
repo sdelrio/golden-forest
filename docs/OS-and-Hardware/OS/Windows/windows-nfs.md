@@ -1,3 +1,7 @@
+---
+tags: [networking, hardware]
+---
+
 # NFS mount on Windows
 
 

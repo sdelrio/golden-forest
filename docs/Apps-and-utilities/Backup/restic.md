@@ -1,3 +1,7 @@
+---
+tags: [backup, storage]
+---
+
 # Restic
 
 [Restic](https://restic.net/) is a modern, fast, secure, and efficient backup program that works across Linux, BSD, macOS, and Windows. It is designed to be easy to use and provides robust data protection through encryption and deduplication.

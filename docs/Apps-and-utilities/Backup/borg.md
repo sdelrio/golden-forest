@@ -1,8 +1,9 @@
 ---
 id: borg-backup
 tags:
-  - borg
   - backup
+  - storage
+  - borg
 ---
 # Borg Backup
 

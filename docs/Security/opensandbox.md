@@ -1,4 +1,5 @@
 ---
+tags: [security, agents, containers]
 title: OpenSandbox - Secure Agent Infrastructure by Alibaba
 hide_table_of_contents: false
 sidebar_label: OpenSandbox

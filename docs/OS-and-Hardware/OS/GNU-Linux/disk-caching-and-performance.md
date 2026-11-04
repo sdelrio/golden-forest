@@ -1,7 +1,7 @@
 ---
 tags:
-  - 'vm.dirty_ratio'
-  - 'vm.dirty_background_ratio'
+  - linux
+  - performance
 ---
 
 # Disk Caching & Performance

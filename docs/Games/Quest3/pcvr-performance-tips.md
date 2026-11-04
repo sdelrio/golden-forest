@@ -2,11 +2,10 @@
 title: "PCVR Performance Tips for Quest 3"
 description: "Optimize your PCVR experience on Meta Quest 3 with NVIDIA driver settings, H.A.G.S. configuration, Process Lasso CPU management, and background process tuning."
 tags:
-  - quest 3
-  - pcvr
-  - nvidia
+  - vr
   - performance
-  - optimization
+  - hardware
+  - gaming
 sidebar_label: "PCVR Performance"
 last_update:
   date: 2026-08-09

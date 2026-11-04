@@ -1,3 +1,7 @@
+---
+tags: [storage, linux]
+---
+
 # Spin Down HDs
 
 ## Tunning

@@ -1,3 +1,7 @@
+---
+tags: [linux, networking]
+---
+
 # Systemd-resolved
 
 ## Disable systemd-resolved

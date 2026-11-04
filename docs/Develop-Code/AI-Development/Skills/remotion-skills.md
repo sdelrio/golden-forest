@@ -1,7 +1,7 @@
 ---
 title: "Remotion Skills"
 description: "Practical guide to Remotion AI agent skills — create programmatic videos from chat prompts using React and coding agents like Claude Code or Cursor."
-tags: ["AI Agents", "Video Generation", "Remotion", "Agent Skills", "React"]
+tags: [skills, agents, media, web-development]
 sidebar_label: "Remotion"
 ---
 

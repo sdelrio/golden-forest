@@ -1,3 +1,7 @@
+---
+tags: [cloud, devops]
+---
+
 # Amazon Web Services
 
 Amazon Web Services (AWS) is the most widely adopted and comprehensive cloud platform in the world, offering more than 200 comprehensive data center services globally.

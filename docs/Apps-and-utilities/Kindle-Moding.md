@@ -1,3 +1,7 @@
+---
+tags: [hardware, tooling]
+---
+
 # Kindle Modding
 
 Modifying a Kindle device allows you to unlock additional features, install third-party applications, and remove restrictions imposed by Amazon. This guide covers the process for jailbreaking a Kindle Voyage (7th generation) running firmware version 5.13.7.

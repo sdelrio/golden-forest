@@ -1,3 +1,7 @@
+---
+tags: [networking, cli]
+---
+
 # Traceroute
 
 Network diagnostics comand line tool. It shows the routing path to reach the target domain/IP.

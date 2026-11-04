@@ -1,7 +1,7 @@
 ---
 title: "Chris Titus AI Workflow: Slow Is Smooth, Smooth Is Fast"
 description: "A disciplined AI coding workflow built on plain-text guardrails, test-first scaffolding, small PRs, and heavy review - from Chris Titus Tech."
-tags: [ai, workflow, code-review, ci, security, claude-code]
+tags: [ai, automation, code-review, ci-cd]
 sidebar_label: "Chris Titus AI Workflow"
 ---
 

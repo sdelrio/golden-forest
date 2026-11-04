@@ -1,7 +1,7 @@
 ---
 title: "OmniRoute"
 description: "Free, open-source AI gateway that routes requests across 340+ providers with auto-fallback, token compression up to 95%, and zero-config setup."
-tags: [ai, tools, proxy, gateway, free, compression, routing, claude-code, cursor, opencode, cline]
+tags: [ai, tooling, proxy, performance]
 ---
 
 import Tabs from '@theme/Tabs';

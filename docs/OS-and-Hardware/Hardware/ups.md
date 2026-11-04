@@ -1,3 +1,7 @@
+---
+tags: [hardware]
+---
+
 # UPS
 
 Uninterruptible Power Source (UPS) is an electrical apparatus that provides emergency power to a load when the input power source or mains power fails. 

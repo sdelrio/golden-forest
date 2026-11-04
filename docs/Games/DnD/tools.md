@@ -1,7 +1,7 @@
 ---
 title: "Campaign Design Tools"
 description: "A curated collection of procedural generators and mapping tools for D&D 5e worldbuilding and campaign design."
-tags: [dnd, worldbuilding, tools, maps, generator]
+tags: [dnd, tooling]
 sidebar_position: 25
 ---
 

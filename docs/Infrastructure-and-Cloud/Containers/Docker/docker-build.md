@@ -1,3 +1,7 @@
+---
+tags: [containers, best-practices]
+---
+
 # Docker build best practices
 
 `docker build` builds an image from a Dockerfile.

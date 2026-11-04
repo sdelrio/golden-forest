@@ -3,9 +3,7 @@ title: Temperature
 date: 20211106
 author: sdelrio
 tags:
-- temperature
-- benchmark
-- cpu
+  - hardware
 ---
 
 # Check CPU temperature

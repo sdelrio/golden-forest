@@ -1,3 +1,7 @@
+---
+tags: [hardware]
+---
+
 # Phones and notebooks
 
 ## Laptop Charger

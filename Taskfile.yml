@@ -190,9 +190,15 @@ tasks:
       - ./scripts/pr-workflow.sh {{.ENRICH}} {{.NOCHECK}} {{.DRYRUN}} {{.BRANCH}} {{.TITLE}} {{.BODY}}
 
   ## --- Verification and Testing ---
+  check-tags:
+    desc: Validate docs frontmatter tags against scripts/tags-vocabulary.json
+    cmds:
+      - node scripts/check-tags.mjs
+
   check:
     desc: Run Docusaurus MDX checker
     cmds:
+      - node scripts/check-tags.mjs
       - "{{.NPX}} docusaurus-mdx-checker -c docs/"
       - "{{.NPX}} docusaurus-mdx-checker -c tutorial/"
       - "{{.NPX}} docusaurus-mdx-checker -c src/"

@@ -1,3 +1,7 @@
+---
+tags: [storage, performance]
+---
+
 # Bcache SSD caching
 
 ## Bcache Sample

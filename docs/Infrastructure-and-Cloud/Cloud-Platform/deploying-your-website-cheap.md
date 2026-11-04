@@ -2,11 +2,9 @@
 title: Deploying Your Website
 description: A comprehensive guide to free hosting, database, and backend services for deploying websites cost-effectively.
 tags:
-  - deployment
-  - hosting
   - cloud
-  - free-tools
   - web-development
+  - devops
 ---
 
 # Deploying Your Website - Cheap

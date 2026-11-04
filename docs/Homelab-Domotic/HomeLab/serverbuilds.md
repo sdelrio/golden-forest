@@ -1,3 +1,7 @@
+---
+tags: [homelab, hardware]
+---
+
 # Server Builds
 
 Guides to build your own server or homelab server, wth old tech, but cheaper than noraml servers.

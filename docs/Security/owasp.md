@@ -3,11 +3,8 @@ title: "OWASP"
 description: "Open Web Application Security Project - Top 10, Cheat Sheet Series, ASVS, and Proactive Controls for building and verifying secure applications."
 tags:
   - security
-  - owasp
   - appsec
-  - web
-  - vulnerabilities
-  - top10
+  - web-development
 ---
 
 import Card from '@site/src/components/Card/Card';

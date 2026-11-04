@@ -1,3 +1,7 @@
+---
+tags: [security, networking, cli]
+---
+
 # nmapUnleashed (nu) - Modern Nmap Wrapper
 
 **nmapUnleashed (nu)** is a modern CLI wrapper for [Nmap](https://nmap.org/), designed to make network scanning more comfortable and effective. It provides all familiar Nmap commands with extended features such as **multithreading**, easy scan management, and improved overview.

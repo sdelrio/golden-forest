@@ -1,3 +1,7 @@
+---
+tags: [hardware, performance]
+---
+
 # XMP
 
 Extreme Memory Profiles

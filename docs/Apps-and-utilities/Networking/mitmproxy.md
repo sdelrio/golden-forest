@@ -1,7 +1,7 @@
 ---
 title: "mitmproxy"
 description: "A free and open-source interactive HTTPS proxy for intercepting, inspecting, modifying, and replaying HTTP/HTTPS traffic across CLI, web, and Python API interfaces."
-tags: [networking, security, proxy, debugging, mitmproxy]
+tags: [networking, security, proxy, programming]
 ---
 
 import Tabs from '@theme/Tabs';

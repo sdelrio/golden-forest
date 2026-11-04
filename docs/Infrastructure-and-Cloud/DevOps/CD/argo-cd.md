@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, kubernetes, devops]
+---
+
 # Argo CD
 
 A declarative GitOps continuous delivery toold for Kubernetes.

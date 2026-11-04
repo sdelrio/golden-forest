@@ -1,3 +1,7 @@
+---
+tags: [cloud, self-hosted, tooling]
+---
+
 # Ganeti
 
 If you find OpenStack is too dificult, Ganeti can be an option. It's a Google's software wich can be used to manage physical machinines to host Virtual Machines.

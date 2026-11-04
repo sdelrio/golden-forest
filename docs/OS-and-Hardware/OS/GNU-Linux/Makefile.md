@@ -1,3 +1,7 @@
+---
+tags: [programming, tooling, automation]
+---
+
 # Makefile
 
 The `make` utility is a software automatino tool for run and compile your programs more efficiently.

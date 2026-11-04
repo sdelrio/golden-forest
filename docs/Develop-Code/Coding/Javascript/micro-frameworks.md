@@ -1,7 +1,7 @@
 ---
 title: "Micro-Frameworks & Thin Fullstack"
 description: "Combining lightweight HTML-first libraries with fast server frameworks — the HTMX + Axum pattern and beyond."
-tags: [htmx, axum, rust, micro-framework, thin-fullstack, server-rendered]
+tags: [web-development, rust, programming]
 ---
 
 # Micro-Frameworks & Thin Fullstack

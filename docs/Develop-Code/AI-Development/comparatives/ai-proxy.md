@@ -1,7 +1,7 @@
 ---
 title: "OmniRoute vs FreeLLMAPI"
 description: "Head-to-head comparison of two open-source AI gateways that stack free LLM provider tiers behind a single endpoint."
-tags: [ai, tools, proxy, gateway, comparison, omniroute, freellmapi, free-tier, routing]
+tags: [ai, tooling, proxy, llm]
 sidebar_position: 30
 ---
 

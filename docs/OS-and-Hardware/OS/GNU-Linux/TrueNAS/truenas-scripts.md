@@ -3,7 +3,9 @@ title: TrueNAS SCALE scripts
 date: 20230901
 author: sdelrio
 tags:
- - nas
+  - zfs
+  - storage
+  - automation
 ---
 
 # TrueNAS SCALE scripts

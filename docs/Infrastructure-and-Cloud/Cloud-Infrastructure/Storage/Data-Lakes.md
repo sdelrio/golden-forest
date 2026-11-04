@@ -1,3 +1,7 @@
+---
+tags: [storage, databases, self-hosted]
+---
+
 # Data Lakes: Open-Source & Self-Hosted 🌊
 
 Data Lakes enable the massive storage of both structured and unstructured data. Implementing one in a "self-hosted" manner provides data sovereignty and a drastic reduction in costs compared to commercial solutions.

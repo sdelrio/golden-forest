@@ -1,3 +1,7 @@
+---
+tags: [linux, automation]
+---
+
 # Automatic Upgrades
 
 ## Ubuntu

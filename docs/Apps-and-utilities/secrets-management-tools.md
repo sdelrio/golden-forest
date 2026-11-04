@@ -1,7 +1,7 @@
 ---
 title: Secrets Management Tools
 description: A comprehensive guide to industry-standard secrets management solutions including HashiCorp Vault, AWS Secrets Manager, SOPS, and Teller (by TellerOps).
-tags: [security, devops, secrets-management, vault, aws, sops, tellerops, teller]
+tags: [security, devops, cloud, tooling]
 slug: secrets-management-tools
 ---
 

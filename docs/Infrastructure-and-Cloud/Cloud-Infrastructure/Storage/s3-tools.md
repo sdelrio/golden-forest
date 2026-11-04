@@ -1,3 +1,7 @@
+---
+tags: [storage, tooling, cli]
+---
+
 # S3-tools
 
 - [s3manager](https://github.com/cloudlena/s3manager): A Web GUI for your S3 buckets written in go.

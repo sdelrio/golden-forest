@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, web-development]
+---
+
 # Jenkinsfile React app
 
 * [Continuous delivery of react app with Jenkins and Docker](https://hackernoon.com/continuous-delivery-of-react-app-with-jenkins-and-docker-8a1ae1511b86)

@@ -1,7 +1,7 @@
 ---
 title: "The eMudhra Intermediate CA Compromise"
 description: "Eight eMudhra intermediate CA private keys were recoverable from the certificates themselves. How to check and fix macOS and Linux trust stores."
-tags: [security, tls, certificates, pki, macos, linux]
+tags: [security, networking]
 ---
 
 # The eMudhra Intermediate CA Compromise

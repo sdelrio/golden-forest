@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, kubernetes]
+---
+
 # Argo Rollouts
 
 * [2019: Introducing Argo Rollouts](https://blog.argoproj.io/introducing-argo-rollouts-59dd0fad476c)

@@ -3,11 +3,10 @@ title: "Claude Code"
 description: "Integration guide and project architecture for Anthropic's Claude Code CLI tool."
 last_updated: 2026-10-12
 tags:
-  - AI
-  - tools
-  - Claude
-  - Anthropic
-  - CLI
+  - ai
+  - agents
+  - claude-code
+  - cli
 ---
 
 import Accordion from '@site/src/components/Accordion/Accordion';

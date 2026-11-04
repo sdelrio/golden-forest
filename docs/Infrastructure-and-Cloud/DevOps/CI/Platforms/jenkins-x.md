@@ -1,3 +1,7 @@
+---
+tags: [ci-cd]
+---
+
 # Jenkis-X
 
 Automate the continuous delivery of change through your environments via GitOps and create previews on Pull Requests.

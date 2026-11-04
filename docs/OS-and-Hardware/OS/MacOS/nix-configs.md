@@ -1,3 +1,7 @@
+---
+tags: [nixos, hardware]
+---
+
 
 # Nix configs and tutorials
 

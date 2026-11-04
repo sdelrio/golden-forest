@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, tooling]
+---
+
 # Jenkins Plugins
 
 ## Github Organizational plugin

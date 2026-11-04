@@ -1,3 +1,7 @@
+---
+tags: [cli, tooling]
+---
+
 
 # Oh my Zsh
 

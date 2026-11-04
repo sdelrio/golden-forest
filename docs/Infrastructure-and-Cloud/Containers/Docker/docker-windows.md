@@ -1,3 +1,7 @@
+---
+tags: [containers]
+---
+
 # Docker for windows
 
 ## WSL

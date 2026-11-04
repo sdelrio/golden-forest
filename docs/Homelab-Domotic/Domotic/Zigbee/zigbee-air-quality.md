@@ -1,3 +1,7 @@
+---
+tags: [home-automation, hardware]
+---
+
 # Air Quality Sensor
 
 ## IKEA hacking

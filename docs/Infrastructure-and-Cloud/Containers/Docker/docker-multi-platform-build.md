@@ -1,3 +1,7 @@
+---
+tags: [containers, ci-cd]
+---
+
 # Docker build multi-platform
 
 ## How it works?

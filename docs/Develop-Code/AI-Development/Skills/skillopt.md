@@ -2,11 +2,10 @@
 title: "SkillOpt"
 description: "Microsoft's text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits and validation-gated updates."
 tags:
-  - AI
-  - tools
+  - ai
+  - tooling
   - agents
   - skills
-  - Microsoft
 ---
 
 import Card from '@site/src/components/Card/Card';

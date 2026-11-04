@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, tooling, cli]
+---
+
 # Kubectl plugins
 
 

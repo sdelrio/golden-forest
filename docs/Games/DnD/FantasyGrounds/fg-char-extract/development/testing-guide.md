@@ -1,4 +1,5 @@
 ---
+tags: [dnd, testing]
 title: 'Testing Guide'
 description: 'Testing strategies and golden file patterns for FG Character Extractor'
 ---

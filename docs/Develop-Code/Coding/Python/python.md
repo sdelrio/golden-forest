@@ -1,7 +1,7 @@
 ---
 title: Python Development Environment
 description: A comprehensive guide to managing Python versions, virtual environments, and project setups using pyenv, poetry, and best practices.
-tags: [python, pyenv, devops, productivity, poetry, development]
+tags: [python, tooling]
 ---
 
 # Python

@@ -1,3 +1,7 @@
+---
+tags: [tmux, cli, tui]
+---
+
 # Tmux
 
 ## Install

@@ -1,3 +1,7 @@
+---
+tags: [networking, self-hosted]
+---
+
 # Tunnes to LAN
 
 ## Inlets

@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, performance]
+---
+
 # HPA autoscalers
 
 ## Autoscale using Prometheus

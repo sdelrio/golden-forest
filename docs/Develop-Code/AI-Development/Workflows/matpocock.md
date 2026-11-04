@@ -1,7 +1,7 @@
 ---
 title: "Matt Pocock Skills: A Complete AI Coding Workflow"
 description: "End-to-end AI coding methodology using composable skills for alignment, domain modeling, TDD, and architecture health."
-tags: [ai, skills, workflow, tdd, domain-driven-design, claude-code]
+tags: [ai, skills, automation, testing]
 sidebar_label: "Matt Pocock Skills"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Understand Anything"
 description: "Turn any codebase into an interactive knowledge graph you can explore, search, and ask questions about, as a plugin for Claude Code, Codex, Cursor, Copilot, Gemini CLI, and more."
-tags: [ai, tools, knowledge-graph, codebase-analysis, claude-code, codex, cursor, copilot, gemini, opencode]
+tags: [ai, tooling, agents]
 ---
 
 import Tabs from '@theme/Tabs';

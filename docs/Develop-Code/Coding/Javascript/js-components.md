@@ -2,7 +2,7 @@
 title: "JavaScript Components"
 description: "Understanding JavaScript components — from vanilla patterns to Web Components and modern framework approaches."
 last_updated: 2026-08-01
-tags: [javascript, components, web-components, vanilla-js]
+tags: [web-development]
 sidebar_position: 10
 sidebar_label: "JS Components"
 ---

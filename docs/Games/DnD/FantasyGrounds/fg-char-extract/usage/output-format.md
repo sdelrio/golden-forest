@@ -1,4 +1,5 @@
 ---
+tags: [dnd, cli, documentation]
 title: Output Format
 description: Understanding the structure and format of extracted character XML files
 sidebar_position: 20

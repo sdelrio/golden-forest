@@ -1,7 +1,7 @@
 ---
 title: "Headless Browsers for AI"
 description: "Architectural overview of headless browsers, explaining their core benefits for AI agents and comparing lightweight engines like Obscura and Lightpanda."
-tags: [ai, agents, web-scraping, headless-browser, obscura, lightpanda]
+tags: [ai, agents, web-scraping]
 sidebar_position: 20
 ---
 

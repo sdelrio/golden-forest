@@ -1,7 +1,7 @@
 ---
 title: "Mac-Code"
 description: "An open-source AI coding agent that runs locally on macOS, utilizing SSD flash-paging and persistent KV cache for high-speed inference."
-tags: [ai, local-llm, agents, mac-code, llama.cpp, mlx]
+tags: [ai, llm, agents]
 sidebar_position: 10
 sidebar_label: "Mac-Code"
 ---

@@ -1,7 +1,7 @@
 ---
 title: Chrome Configs and Tricks
 description: A deep dive into Chrome's on-device AI integration, privacy concerns, and mitigation steps.
-tags: [chrome, ai, privacy]
+tags: [tooling, ai, privacy]
 ---
 # Chrome configs and tricks
 

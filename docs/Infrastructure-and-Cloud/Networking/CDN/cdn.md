@@ -1,4 +1,5 @@
 ---
+tags: [networking, web-development]
 sidebar_position: 1
 ---
 # Content Delivery Network

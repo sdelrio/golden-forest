@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, backup]
+---
+
 # K8s backup
 
 ## Control Plane

@@ -5,10 +5,6 @@ tags:
   - ai
   - security
   - agents
-  - opencode
-  - claude
-  - secrets
-  - best-practices
 ---
 
 import Tabs from '@theme/Tabs';

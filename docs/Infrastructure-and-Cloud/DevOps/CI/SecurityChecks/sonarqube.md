@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, security, code-review]
+---
+
 # SonarQube
 
 SonarQube is a web-based software analysis platform with open source roots that can go a long way to delivering cleaner, issue-free code. 
