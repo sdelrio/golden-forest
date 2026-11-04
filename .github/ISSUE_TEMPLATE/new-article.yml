@@ -1,0 +1,51 @@
+name: New Article
+description: Create or update a docs article with the write-article skill
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Agent prompt
+      description: Prefilled execution contract. Leave it as is.
+      value: |
+        Use the write-article skill: run `task` with `subagent_type="general"` and tell it to read `AGENTS.md`, `.agents/skills/write-article/SKILL.md` and the templates in `.agents/skills/write-article/resources/templates/`. AGENTS.md and SKILL.md win over this prompt on any conflict.
+
+        1. Find an existing article first: search `docs/` for the topic keywords and read the `title` in each hit's frontmatter. Same topic: update that file in place and keep its frontmatter (`title`, `sidebar_label`, `sidebar_position`) intact. Partial overlap: add a section only if it fits that article's scope, otherwise create a new file and cross-link both ways.
+        2. Decide the subpath under `docs/` and the filename yourself from the content. Do not ask. The frontmatter title comes from the Topic field, not the issue title. Under `docs/Develop-Code/AI-Development/Tools/` the filename matches the title (lowercase, hyphens) and has no `sidebar_position`. No em dashes. Verify the file landed in the intended folder.
+        3. If the article lands under `docs/Develop-Code/AI-Development/`, add or update its entry in `static/ai-dashboard/tools.json` with `./scripts/ai-dashboard-add.sh` or `./scripts/ai-dashboard-update.sh`. Required fields: `id`, `name`, `description`, `category`, `docPath` (point it at the article). Then run `task ai-dashboard:enrich`.
+        4. Validate with `task check` and `task build`. Fix missing component imports if SSG fails.
+        5. Stop after writing the file: do not commit, branch, or open a PR.
+        6. Report the final path, section count, components imported, whether it was a new article or an update, and any warnings. Treat `_No response_` in the other fields as empty.
+    validations:
+      required: true
+
+  - type: input
+    id: topic
+    attributes:
+      label: Topic
+      description: What should the article be about? A working title is fine.
+      placeholder: "Tuxee, a Debian-based container for terminal AI agents"
+    validations:
+      required: true
+
+  - type: input
+    id: audience
+    attributes:
+      label: Audience
+      description: Who reads it, and what should they be able to do afterwards.
+      placeholder: "DevOps engineers - understand the flow and implement it in their repos"
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: One URL per line. Official docs, repo, video, posts.
+      placeholder: |
+        https://github.com/...
+        https://youtu.be/...
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Scope, must-cover sections, things to skip, angle to take.
