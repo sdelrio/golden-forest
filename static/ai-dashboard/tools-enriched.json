@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-04T18:47:23.929Z",
-  "toolCount": 56,
+  "generatedAt": "2026-11-04T18:59:03.742Z",
+  "toolCount": 57,
   "tools": [
     {
       "id": "agency-agents",
@@ -64,7 +64,7 @@
       "githubStars": 30132,
       "githubOpenIssues": 238,
       "githubArchived": false,
-      "githubLastPush": "2026-11-04T18:46:59Z",
+      "githubLastPush": "2026-11-04T18:57:59Z",
       "githubLanguage": "TypeScript",
       "healthScore": 100
     },
@@ -92,7 +92,7 @@
         "codex"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/anatomy",
-      "githubStars": 24807,
+      "githubStars": 24812,
       "githubOpenIssues": 15,
       "githubArchived": false,
       "githubLastPush": "2026-10-18T20:20:24Z",
@@ -123,7 +123,7 @@
         "codex"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/archify",
-      "githubStars": 93410,
+      "githubStars": 93411,
       "githubOpenIssues": 144,
       "githubArchived": false,
       "githubLastPush": "2026-11-03T23:41:50Z",
@@ -220,7 +220,7 @@
         "claude-code"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Proxy/free-claude-code-proxy",
-      "githubStars": 66397,
+      "githubStars": 66398,
       "githubOpenIssues": 259,
       "githubArchived": false,
       "githubLastPush": "2026-11-04T12:43:20Z",
@@ -295,7 +295,7 @@
         "claude-code"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/cloudflare-security-audit-skill",
-      "githubStars": 58878,
+      "githubStars": 58903,
       "githubOpenIssues": 40,
       "githubArchived": false,
       "githubLastPush": "2026-09-14T19:29:02Z",
@@ -328,7 +328,7 @@
       "docPath": "/docs/Develop-Code/AI-Development/Tools/codegraph",
       "npmVersion": "1.6.2",
       "npmLastPublished": "2026-10-03T06:45:46.734Z",
-      "githubStars": 76551,
+      "githubStars": 76553,
       "githubOpenIssues": 170,
       "githubArchived": false,
       "githubLastPush": "2026-11-01T17:36:07Z",
@@ -421,7 +421,7 @@
         "antigravity"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Workflows/elephant-goldfish-model",
-      "githubStars": 11643,
+      "githubStars": 11649,
       "githubOpenIssues": 44,
       "githubArchived": false,
       "githubLastPush": "2026-11-03T21:31:42Z",
@@ -455,7 +455,7 @@
       "docPath": "/docs/Develop-Code/AI-Development/Agents/everything-claude-code",
       "npmVersion": "2.2.3",
       "npmLastPublished": "2026-10-02T01:56:16.379Z",
-      "githubStars": 297101,
+      "githubStars": 297106,
       "githubOpenIssues": 86,
       "githubArchived": false,
       "githubLastPush": "2026-11-02T04:56:08Z",
@@ -512,7 +512,7 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Proxy/freellmapi",
-      "githubStars": 47467,
+      "githubStars": 47469,
       "githubOpenIssues": 25,
       "githubArchived": false,
       "githubLastPush": "2026-11-04T17:03:31Z",
@@ -624,8 +624,8 @@
         "gemini"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/graphify",
-      "githubStars": 142313,
-      "githubOpenIssues": 714,
+      "githubStars": 142316,
+      "githubOpenIssues": 716,
       "githubArchived": false,
       "githubLastPush": "2026-11-03T22:46:46Z",
       "githubLanguage": "Python",
@@ -775,7 +775,7 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/markitdown",
-      "githubStars": 193873,
+      "githubStars": 193876,
       "githubOpenIssues": 323,
       "githubArchived": false,
       "githubLastPush": "2026-10-28T15:33:14Z",
@@ -808,7 +808,7 @@
         "copilot"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Workflows/matpocock",
-      "githubStars": 312921,
+      "githubStars": 312937,
       "githubOpenIssues": 188,
       "githubArchived": false,
       "githubLastPush": "2026-11-04T11:45:30Z",
@@ -845,7 +845,7 @@
       "githubStars": 1223,
       "githubOpenIssues": 331,
       "githubArchived": false,
-      "githubLastPush": "2026-11-04T18:37:27Z",
+      "githubLastPush": "2026-11-04T18:53:37Z",
       "githubLanguage": "TypeScript",
       "healthScore": 94
     },
@@ -952,7 +952,7 @@
       "githubStars": 70703,
       "githubOpenIssues": 1478,
       "githubArchived": false,
-      "githubLastPush": "2026-11-04T18:45:14Z",
+      "githubLastPush": "2026-11-04T18:55:19Z",
       "githubLanguage": "TypeScript",
       "healthScore": 100
     },
@@ -1020,10 +1020,10 @@
       "docPath": "/docs/Develop-Code/AI-Development/Proxy/omniroute",
       "npmVersion": "3.8.52",
       "npmLastPublished": "2026-10-19T22:40:03.431Z",
-      "githubStars": 84499,
+      "githubStars": 84501,
       "githubOpenIssues": 218,
       "githubArchived": false,
-      "githubLastPush": "2026-11-04T18:43:31Z",
+      "githubLastPush": "2026-11-04T18:52:56Z",
       "githubLanguage": "TypeScript",
       "healthScore": 100
     },
@@ -1051,10 +1051,10 @@
         "oh-my-opencode-slim"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/opencode",
-      "githubStars": 224552,
-      "githubOpenIssues": 2571,
+      "githubStars": 224553,
+      "githubOpenIssues": 2573,
       "githubArchived": false,
-      "githubLastPush": "2026-11-04T18:46:56Z",
+      "githubLastPush": "2026-11-04T18:58:42Z",
       "githubLanguage": "TypeScript",
       "healthScore": 75
     },
@@ -1109,7 +1109,7 @@
         "cursor"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Workflows/opensre",
-      "githubStars": 12706,
+      "githubStars": 12707,
       "githubOpenIssues": 47,
       "githubArchived": false,
       "githubLastPush": "2026-11-04T14:59:52Z",
@@ -1137,7 +1137,7 @@
       "docPath": "/docs/Develop-Code/AI-Development/Tools/openui",
       "npmVersion": "1.1.0",
       "npmLastPublished": "2026-11-04T12:32:55.554Z",
-      "githubStars": 14757,
+      "githubStars": 14758,
       "githubOpenIssues": 72,
       "githubArchived": false,
       "githubLastPush": "2026-11-04T13:03:59Z",
@@ -1170,7 +1170,7 @@
       "docPath": "/docs/Develop-Code/AI-Development/Tools/ponytail",
       "npmVersion": "5.3.3",
       "npmLastPublished": "2026-10-29T03:08:20.518Z",
-      "githubStars": 184398,
+      "githubStars": 184403,
       "githubOpenIssues": 71,
       "githubArchived": false,
       "githubLastPush": "2026-10-29T11:59:31Z",
@@ -1282,7 +1282,7 @@
       "docPath": "/docs/Develop-Code/AI-Development/Skills/remotion-skills",
       "npmVersion": "4.0.540",
       "npmLastPublished": "2026-11-02T08:32:34.576Z",
-      "githubStars": 70708,
+      "githubStars": 70710,
       "githubOpenIssues": 176,
       "githubArchived": false,
       "githubLastPush": "2026-11-04T17:33:45Z",
@@ -1316,6 +1316,31 @@
       "githubArchived": false,
       "githubLastPush": "2026-11-04T18:27:05Z",
       "githubLanguage": "Rust",
+      "healthScore": 75
+    },
+    {
+      "id": "scrapling",
+      "name": "Scrapling",
+      "description": "Self-healing Python web scraping framework with HTTP and stealth browser fetchers, adaptive selectors, concurrent spiders and Markdown export for building documentation corpora.",
+      "category": "tools",
+      "github": "https://github.com/D4Vinci/Scrapling",
+      "pip": "scrapling",
+      "install": "pip install \"scrapling[all]\" && scrapling install",
+      "site": "https://scrapling.readthedocs.io",
+      "license": "BSD-3-Clause",
+      "tags": [
+        "web-scraping",
+        "python",
+        "crawler",
+        "adaptive-scraping",
+        "markdown"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/scrapling",
+      "githubStars": 96251,
+      "githubOpenIssues": 0,
+      "githubArchived": false,
+      "githubLastPush": "2026-11-04T16:08:38Z",
+      "githubLanguage": "Python",
       "healthScore": 75
     },
     {
@@ -1495,7 +1520,7 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/understand-anything",
-      "githubStars": 90529,
+      "githubStars": 90531,
       "githubOpenIssues": 129,
       "githubArchived": false,
       "githubLastPush": "2026-10-26T07:05:22Z",
