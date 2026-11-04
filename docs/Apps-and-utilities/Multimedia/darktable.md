@@ -1,3 +1,7 @@
+---
+tags: [media, tooling]
+---
+
 # Darktable
 
 # Darktable seggings for Lightroom users

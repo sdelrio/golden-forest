@@ -1,3 +1,7 @@
+---
+tags: [backup, storage]
+---
+
 # Duplicati
 
 [Duplicati](https://www.duplicati.com/) is a free, open-source backup client that securely stores encrypted, incremental, and compressed backups on various local and remote storage destinations. It is managed through a user-friendly web interface.

@@ -1,3 +1,7 @@
+---
+tags: [nixos]
+---
+
 # NixOS Flakes
 
 Nix flakes define a schema with standarized inputs and output to solve the composability probem that Nix [Derivations](https://nixos.org/manual/nix/stable/language/derivations.html) have

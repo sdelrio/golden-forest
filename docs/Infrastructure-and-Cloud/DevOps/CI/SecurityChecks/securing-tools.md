@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, security]
+---
+
 # Securing Tools
 
 ## Articles

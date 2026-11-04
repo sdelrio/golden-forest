@@ -1,7 +1,7 @@
 ---
 title: "2-GPU Setup for Local LLMs"
 description: "@leopardracer's dual-GPU local AI lab: running Qwen 3.6 on an RTX 4080 SUPER + RTX 5060 Ti with llama.cpp and llama-swap for private, rate-limit-free AI experimentation."
-tags: [llm, gpu, hardware, local-ai, llama.cpp]
+tags: [llm, gpu, hardware]
 sidebar_position: 10
 sidebar_label: "2-GPU LLM Setup"
 ---

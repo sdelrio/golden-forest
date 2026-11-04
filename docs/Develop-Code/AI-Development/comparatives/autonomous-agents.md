@@ -4,10 +4,7 @@ description: "AI agents that operate in the background on schedules, without req
 tags:
   - ai
   - agents
-  - autonomous
   - automation
-  - openfang
-  - opensandbox
 sidebar_position: 10
 ---
 

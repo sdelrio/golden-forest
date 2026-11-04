@@ -1,7 +1,7 @@
 ---
 title: "Oh My Opencode Slim - Multi Agent Suite for OpenCode"
 description: "A lean OpenCode plugin that turns one agent into an orchestrator routing work to specialist subagents, each on its own model, for quality, speed and cost."
-tags: [ai-agents, opencode, orchestration, multi-agent, plugin, workflow]
+tags: [ai, agents, opencode, automation]
 sidebar_label: "Oh My Opencode Slim"
 ---
 

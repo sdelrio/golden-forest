@@ -1,7 +1,7 @@
 ---
 title: "Graft"
 description: "Open-source context layer for large codebases - turbocharge coding agents with up to 4x cheaper, 3x faster performance via tree-sitter graph and optional LLM summaries."
-tags: [ai, tools, code-graph, tree-sitter, claude-code, cursor, codex, gemini, mcp]
+tags: [ai, tooling, mcp, programming]
 ---
 
 import Tabs from '@theme/Tabs';

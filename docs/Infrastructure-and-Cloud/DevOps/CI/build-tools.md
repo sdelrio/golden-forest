@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, tooling]
+---
+
 # Build Tools
 
 ## [Earthly](https://earthly.dev/)

@@ -1,3 +1,7 @@
+---
+tags: [homelab, kubernetes]
+---
+
 # K8s Homelab
 
 ## k8s-at-home

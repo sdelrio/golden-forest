@@ -1,3 +1,7 @@
+---
+tags: [tooling]
+---
+
 # Windows 10 generic keys
 
 

@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, programming, tooling]
+---
+
 # Dev in k8s
 
 ## Develop Microservices on k8s

@@ -1,4 +1,5 @@
 ---
+tags: [dnd, documentation]
 title: 'Contributing Guide'
 description: 'How to contribute to the FG Character Extractor project'
 ---

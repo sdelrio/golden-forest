@@ -2,10 +2,9 @@
 title: "Google Workspace CLI"
 description: "Command-line access to Google Workspace APIs with AI agent support"
 tags:
-  - CLI
-  - Google
-  - AI
-  - tools
+  - cli
+  - tooling
+  - ai
 ---
 
 # Google Workspace CLI (gws)

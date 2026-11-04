@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, tooling]
+---
+
 # Helm Plugins
 
 | name | url  |

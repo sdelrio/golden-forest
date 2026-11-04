@@ -1,3 +1,7 @@
+---
+tags: [hardware]
+---
+
 # Manage RAM problems
 
 `apt-get install memtester` 

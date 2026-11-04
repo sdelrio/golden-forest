@@ -1,3 +1,7 @@
+---
+tags: [productivity, tooling]
+---
+
 # Personal Finance Tools
 
 This document covers free and open-source tools for managing personal finances, including budgeting and investment portfolio tracking.

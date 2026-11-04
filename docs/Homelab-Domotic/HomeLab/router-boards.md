@@ -1,3 +1,7 @@
+---
+tags: [homelab, networking, hardware]
+---
+
 # Router boards
 
 ## 4 cards + 4 10Gbit

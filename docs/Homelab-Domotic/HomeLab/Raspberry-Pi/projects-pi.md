@@ -1,3 +1,7 @@
+---
+tags: [homelab, hardware]
+---
+
 # Pi Projects
 
 ## KVM

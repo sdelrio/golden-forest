@@ -1,3 +1,7 @@
+---
+tags: [storage, tooling]
+---
+
 # GDAL
 
 [Geospatial Data Abstraction Library](https://gdal.org/)

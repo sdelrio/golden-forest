@@ -1,3 +1,7 @@
+---
+tags: [ai, llm, automation]
+---
+
 # Model Routing & Quota Playbook
 
 Kun is model-agnostic on purpose: his routing rules live in a plain text file that tells First Mate which harness, model, and reasoning effort to use for each kind of task. Here's the full routing table and the economics behind it.

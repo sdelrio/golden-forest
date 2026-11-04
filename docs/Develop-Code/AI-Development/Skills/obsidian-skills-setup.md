@@ -5,11 +5,9 @@ category: "AI Skills / Knowledge Bases"
 labels: ["Obsidian", "Claude Code", "LLM Wiki", "PKM"]
 tags:
   - obsidian
-  - claude-code
-  - knowledge-base
-  - LLM-wiki
   - skills
   - agents
+  - llm
 ---
 
 import { Icon } from '@iconify/react';

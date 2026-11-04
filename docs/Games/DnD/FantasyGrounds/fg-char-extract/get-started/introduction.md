@@ -1,4 +1,5 @@
 ---
+tags: [dnd, cli]
 title: Introduction
 description: Extract character sheets from Fantasy Grounds campaigns into individual XML files
 sidebar_position: 10

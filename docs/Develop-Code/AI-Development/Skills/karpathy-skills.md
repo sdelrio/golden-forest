@@ -1,7 +1,7 @@
 ---
 title: "Karpathy's LLM Coding Guidelines"
 description: "A comprehensive guide to the CLAUDE.md behavioral guidelines recommended by Andrej Karpathy to reduce common LLM coding mistakes."
-tags: ["AI Coding", "CLAUDE.md", "Karpathy Guidelines", "AI Agents", "Best Practices"]
+tags: [ai, agents, best-practices, skills]
 ---
 
 import Card from '@site/src/components/Card/Card';

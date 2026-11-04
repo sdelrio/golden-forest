@@ -1,3 +1,7 @@
+---
+tags: [containers, storage]
+---
+
 
 # Docker registry
 

@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, architecture]
+---
+
 # K8s streaming
 
 ## Cloudflow

@@ -1,7 +1,7 @@
 ---
 title: "Real-Time Banking System with Apache Kafka"
 description: "Architecture and patterns for building a real-time banking transaction monitoring system using Apache Kafka, Python, PostgreSQL, and Grafana."
-tags: [kafka, streaming, architecture, banking, python, postgresql, grafana]
+tags: [architecture, databases, devops]
 sidebar_position: 10
 sidebar_label: "Streaming & Queues"
 ---

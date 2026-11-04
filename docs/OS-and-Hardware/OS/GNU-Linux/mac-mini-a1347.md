@@ -1,3 +1,7 @@
+---
+tags: [hardware]
+---
+
 # Mac Mini A1347
 
 Almost all compatible with a recent kernel. On Debian 13 all but Wifi works fine.

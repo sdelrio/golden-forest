@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, cli]
+---
+
 # kubectl usefull commands
 
 ## Get storage classes

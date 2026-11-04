@@ -2,11 +2,10 @@
 title: "k9s"
 description: "A fast, real-time terminal UI for managing Kubernetes clusters with vim-style navigation and built-in resource monitoring."
 tags:
-  - CLI
-  - terminal
   - kubernetes
-  - k8s
-  - TUI
+  - tui
+  - cli
+  - k9s
 ---
 
 # k9s

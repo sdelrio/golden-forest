@@ -1,7 +1,7 @@
 ---
 title: "GitHub Actions"
 description: "Learn GitHub Actions from scratch: workflows, jobs, runners, CI/CD pipelines, and best practices for automating your projects."
-tags: [devops, ci-cd, github, automation, tools]
+tags: [ci-cd, devops, github, automation]
 sidebar_label: "GitHub Actions"
 ---
 

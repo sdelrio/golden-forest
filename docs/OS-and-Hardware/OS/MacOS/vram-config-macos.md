@@ -2,13 +2,9 @@
 title: "VRAM & Local LLM Configuration on macOS"
 description: "Optimize VRAM allocation, model selection, and quantization for running local LLMs on Apple Silicon Macs (edge computing)"
 tags:
-  - macOS
-  - Apple Silicon
-  - LLM
-  - MLX
-  - GGUF
-  - quantization
-  - edge computing
+  - llm
+  - hardware
+  - gpu
 ---
 
 # 🚀 VRAM & Local LLM Configuration Guide for Apple Silicon

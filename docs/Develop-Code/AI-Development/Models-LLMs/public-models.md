@@ -1,7 +1,7 @@
 ---
 title: "Public Model Access"
 description: "A curated list of public model providers, endpoints, and inference services categorized by access type."
-tags: [ai, llm, inference, providers, nvidia, groq]
+tags: [ai, llm, gpu]
 ---
 
 import Card from '@site/src/components/Card/Card';

@@ -3,11 +3,9 @@ title: "OpenCode CLI"
 description: "Terminal-first, provider-agnostic AI coding agent with native skills, MCP integration, and free model access via Google Gemini."
 tags:
   - ai
-  - tools
+  - agents
   - opencode
-  - cli
   - mcp
-  - gemini
 ---
 
 import Card from '@site/src/components/Card/Card';

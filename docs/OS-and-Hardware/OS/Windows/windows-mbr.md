@@ -1,3 +1,7 @@
+---
+tags: [storage, hardware]
+---
+
 # Windows MBR repair
 
 F8 on boot menu or if it doesn't even boot use Windows USB boot install and on install windows click *Repair* on the bottom left of the dialog. You will get a menu with three options:

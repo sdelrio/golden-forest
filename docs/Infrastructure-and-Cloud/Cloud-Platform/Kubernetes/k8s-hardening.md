@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, security]
+---
+
 # K8s hardening
 
 ## Guides

@@ -3,10 +3,8 @@ title: Linux Benchmark Apps
 date: 20211106
 author: sdelrio
 tags:
- - cpu
- - benchmark
- - linux
- - apps
+  - hardware
+  - performance
 ---
 
 # Linux Benchmark Apps

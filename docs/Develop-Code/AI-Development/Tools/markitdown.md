@@ -4,12 +4,10 @@ description: Microsoft's lightweight Python utility for converting Office docume
 category: "AI Tools / Data Processing"
 labels: ["Markdown", "Python", "LLM", "Data Processing", "Microsoft"]
 tags:
-  - markitdown
-  - markdown
-  - document-conversion
-  - LLM
-  - token-optimization
+  - documentation
+  - llm
   - python
+  - tooling
 ---
 
 import { Icon } from '@iconify/react';

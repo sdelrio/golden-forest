@@ -1,3 +1,7 @@
+---
+tags: [kubernetes]
+---
+
 # K3s Tips
 
 ## Clean Orphaned Pod Volumes

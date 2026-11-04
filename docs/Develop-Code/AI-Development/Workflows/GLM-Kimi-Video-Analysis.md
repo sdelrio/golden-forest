@@ -2,12 +2,10 @@
 title: GLM and Kimi K2.5 for Video Analysis
 description: Using advanced open-source multimodal AI models for video understanding and analysis
 tags:
-  - AI
-  - multimodal
-  - video-analysis
-  - GLM
-  - Kimi
-  - open-source
+  - ai
+  - media
+  - llm
+  - automation
 ---
 
 # GLM and Kimi K2.5 for Video Analysis

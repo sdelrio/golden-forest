@@ -3,10 +3,9 @@ title: Disable mitigations
 date: 20211106
 author: sdelrio
 tags:
-- cpu
-- tuning
-- mitigation
-- security
+  - linux
+  - performance
+  - security
 ---
 
 # Disable CPU mitigations

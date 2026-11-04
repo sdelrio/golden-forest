@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, databases]
+---
+
 # DB Migrations
 
 ## Liquidbase

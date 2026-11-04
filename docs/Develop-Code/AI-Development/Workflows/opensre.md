@@ -1,7 +1,7 @@
 ---
 title: "OpenSRE"
 description: "An open-source framework for building AI SRE agents that investigate and resolve production incidents across your existing observability stack."
-tags: [ai, sre, incident-response, root-cause-analysis, observability, devops, ai-agents]
+tags: [ai, devops, agents, automation]
 ---
 
 import Card from '@site/src/components/Card/Card';

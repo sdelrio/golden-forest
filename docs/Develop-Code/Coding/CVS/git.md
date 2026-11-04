@@ -1,7 +1,7 @@
 ---
 title: Git
 description: A professional guide to Git, covering its distributed architecture, core concepts, advanced workflows, and server-side integration with Gitea.
-tags: [git, version-control, cvs, devops, collaboration]
+tags: [git, devops]
 slug: git
 ---
 # Git

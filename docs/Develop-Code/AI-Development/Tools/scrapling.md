@@ -1,7 +1,7 @@
 ---
 title: "Scrapling"
 description: "Guide to Scrapling, a self-healing Python web scraping framework that covers HTTP requests, stealth browsers, adaptive selectors, spiders and CLI extraction for building documentation corpora."
-tags: [ai, tools, web-scraping, python, crawler, adaptive-scraping]
+tags: [ai, tooling, web-scraping, python]
 ---
 
 import Tabs from '@theme/Tabs';

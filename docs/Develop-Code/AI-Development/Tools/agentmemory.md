@@ -2,7 +2,7 @@
 title: "AgentMemory"
 description: "Persistent memory runtime for AI coding agents. 95.2% retrieval accuracy, 92% fewer tokens per session, zero external databases. Works with every MCP-compatible agent."
 last_updated: 2026-07-02
-tags: [ai, tools, memory, mcp, claude-code, cursor, codex, agent]
+tags: [ai, agents, mcp, tooling]
 ---
 
 import Tabs from '@theme/Tabs';

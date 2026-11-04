@@ -3,9 +3,8 @@ title: ZFS
 date: 20211106
 author: sdelrio
 tags:
- - zfs
- - zpool
- - gc
+  - zfs
+  - storage
 ---
 
 # ZFS

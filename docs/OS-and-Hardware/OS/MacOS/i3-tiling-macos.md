@@ -1,3 +1,7 @@
+---
+tags: [hardware, tooling]
+---
+
 # I3 Tiling on osx
 
 ## Alternatives

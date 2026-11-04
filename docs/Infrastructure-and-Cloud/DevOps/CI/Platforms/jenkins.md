@@ -1,3 +1,7 @@
+---
+tags: [ci-cd]
+---
+
 # Jenkins
 
 Jenkins provides hundreds of plugins to support building, deploying and automating any project. Like a Swiss knives, it can do a lot of things.

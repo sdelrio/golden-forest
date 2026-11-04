@@ -1,4 +1,5 @@
 ---
+tags: [dnd, cli]
 title: Command Reference
 description: Complete command-line reference for the FG Character Extractor tool
 sidebar_position: 10

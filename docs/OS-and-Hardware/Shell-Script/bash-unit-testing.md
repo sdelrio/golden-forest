@@ -1,3 +1,7 @@
+---
+tags: [testing, programming, cli]
+---
+
 # Unit testing
 
 ## Sample script

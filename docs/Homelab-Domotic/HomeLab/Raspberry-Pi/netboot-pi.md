@@ -1,3 +1,7 @@
+---
+tags: [homelab, hardware, networking]
+---
+
 # Netbooting Raspberry Pi
 
 # 2017

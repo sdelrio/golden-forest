@@ -1,4 +1,5 @@
 ---
+tags: [dnd, cli]
 title: Quickstart
 description: Extract your first Fantasy Grounds character in minutes
 sidebar_position: 30

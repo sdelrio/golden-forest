@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, tooling]
+---
+
 # VM base images
 
 ## Tools

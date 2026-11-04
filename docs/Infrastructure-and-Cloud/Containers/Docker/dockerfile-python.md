@@ -1,3 +1,7 @@
+---
+tags: [containers, python]
+---
+
 # Python Dockerfiles
 
 Since version 17.05, Docker has supported [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build), which allow for the separation of build-time dependencies from the final runtime image. This approach optimizes image size and enhances security by excluding unnecessary tools from the production environment.

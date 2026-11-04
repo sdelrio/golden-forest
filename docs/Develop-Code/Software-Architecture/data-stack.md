@@ -1,3 +1,7 @@
+---
+tags: [architecture, databases, storage]
+---
+
 # Modern Data Stack
 
 ## What is a Modern Stack?

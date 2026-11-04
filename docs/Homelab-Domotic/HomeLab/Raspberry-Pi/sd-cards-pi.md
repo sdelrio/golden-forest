@@ -1,3 +1,7 @@
+---
+tags: [homelab, hardware, storage]
+---
+
 # SD cards on Raspberry Pi
 
 ## 2020

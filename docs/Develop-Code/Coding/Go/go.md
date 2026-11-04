@@ -1,3 +1,7 @@
+---
+tags: [programming]
+---
+
 # Go
 
 [Go](https://en.wikipedia.org/wiki/Go_(programming_language)), also known as Golang, is an open-source programming language developed by Google in 2009. It is designed for simplicity, efficiency, and strong concurrency support, making it well-suited for building scalable and high-performance applications. Go combines the ease of use of dynamically typed languages with the performance and safety of statically typed languages. It features a clean syntax, garbage collection, and built-in support for concurrent programming through goroutines. Go is widely used in cloud services, distributed systems, and other performance-critical application

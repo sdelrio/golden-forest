@@ -1,7 +1,7 @@
 ---
 title: Rust
 description: A deep dive into Rust, focusing on system performance, memory safety without garbage collection, and its thriving ecosystem for web and WebAssembly.
-tags: [rust, systems-programming, wasm, performance, backend]
+tags: [rust, programming, performance]
 slug: rust
 ---
 

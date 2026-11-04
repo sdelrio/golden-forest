@@ -1,4 +1,5 @@
 ---
+tags: [ai, skills, agents]
 title: "Skills.sh"
 description: "A strategic overview of Skills.sh (The Open Agent Skills Ecosystem), the decentralized registry for AI agent capabilities, procedural knowledge, and modular enhancements."
 version: "1.0.0"

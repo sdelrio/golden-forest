@@ -1,3 +1,7 @@
+---
+tags: [tooling, hardware]
+---
+
 # Windows coreinfo
 
 Coreinfo is part of Sysinternals.

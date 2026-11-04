@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, architecture]
+---
+
 # Kubernetes patterns
 
 

@@ -3,8 +3,8 @@ title: Window Managers
 date: 20240127
 author: sdelrio
 tags:
- - i3
- - xfce4
+  - linux
+  - tooling
 ---
 
 # Window Managers

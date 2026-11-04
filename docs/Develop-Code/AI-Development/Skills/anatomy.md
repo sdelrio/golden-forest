@@ -1,7 +1,7 @@
 ---
 title: "Anatomy"
 description: "Ryan's Anatomy agent skill builds interactive isometric figures in SVG, WebGL and 3D to explain how an idea actually works as a real, movable object."
-tags: [ai-development, skills, agents, svg, webgl, isometric, visualization]
+tags: [ai, skills, agents, web-development]
 sidebar_label: "Anatomy"
 ---
 

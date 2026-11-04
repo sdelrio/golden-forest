@@ -2,12 +2,9 @@
 date: 20231014
 author: sdelrio
 tags:
- - nixos
- - config
- - tutorials
- - gpu
- - passthrough
- - paranoid
+  - nixos
+  - hardware
+  - gpu
 ---
 
 # NixOS configs and tutorials

@@ -1,9 +1,8 @@
 ---
 description: This document is a step-by-step guide for fixing Meta Quest 3 controller stick drift, detailing how to safely use electronics contact cleaner and adjust the deadzone settings to prevent phantom movement.
 tags:
- - quest 3
- - drift
- - controller
+  - vr
+  - hardware
 ---
 # Quest 3 Controller Drift Fix
 

@@ -1,3 +1,7 @@
+---
+tags: [storage, hardware]
+---
+
 # Windows SSD
 
 ## Windows 7

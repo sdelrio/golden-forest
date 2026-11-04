@@ -3,9 +3,9 @@ title: TrueNAS
 date: 20230901
 author: sdelrio
 tags:
- - zfs
- - zpool
- - nas
+  - zfs
+  - storage
+  - self-hosted
 ---
 
 # TrueNAS

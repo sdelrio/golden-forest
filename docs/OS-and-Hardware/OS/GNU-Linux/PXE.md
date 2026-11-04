@@ -3,11 +3,9 @@ title: PXE boot
 date: 20230722
 author: sdelrio
 tags:
- - pxe
- - netboot.xyz
- - iVentoy
- - MaaS
- - Ironic
+  - networking
+  - linux
+  - automation
 ---
 
 # PXE

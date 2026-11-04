@@ -1,7 +1,7 @@
 ---
 title: "OpenWiki"
 description: "An open-source CLI that generates and maintains wiki documentation for codebases, keeping coding agents in sync with your repo."
-tags: [ai, tools, documentation, agents, openwiki, langchain, github-actions]
+tags: [ai, tooling, documentation, agents]
 ---
 
 import Tabs from '@theme/Tabs';

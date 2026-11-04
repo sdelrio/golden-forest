@@ -1,7 +1,7 @@
 ---
 title: "FreeLLMAPI"
 description: "OpenAI-compatible proxy that stacks the free tiers of 29 LLM providers behind one endpoint, giving you ~4B tokens/month for free."
-tags: [ai, tools, llm, proxy, openai, docker, free-tier, routing]
+tags: [ai, tooling, llm, proxy]
 sidebar_label: "FreeLLMAPI"
 ---
 

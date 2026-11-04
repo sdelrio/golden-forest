@@ -1,3 +1,7 @@
+---
+tags: [ci-cd]
+---
+
 # Groovy scripts
 
 ## Jenkins server configuration

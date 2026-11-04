@@ -1,3 +1,7 @@
+---
+tags: [networking]
+---
+
 # Networking
 
 A telecommunications network is a group of nodes interconnected by telecommunications links that are used to exchange messages between the nodes. The links may use a variety of technologies based on the methodologies of circuit switching, message switching, or packet switching, to pass messages and signals.

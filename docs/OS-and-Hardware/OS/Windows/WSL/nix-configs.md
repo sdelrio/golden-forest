@@ -1,3 +1,7 @@
+---
+tags: [nixos, linux]
+---
+
 
 # NixOs configs and tutorials
 

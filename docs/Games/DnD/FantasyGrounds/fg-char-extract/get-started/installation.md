@@ -1,4 +1,5 @@
 ---
+tags: [dnd, cli]
 title: Installation
 description: Install FG Character Extractor on macOS, Windows, or Linux
 sidebar_position: 20

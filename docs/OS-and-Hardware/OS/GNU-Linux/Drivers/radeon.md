@@ -2,9 +2,9 @@
 date: 20211106
 author: sdelrio
 tags:
-- amd
-- radeon
-- driver
+  - gpu
+  - hardware
+  - linux
 ---
 
 # Radeon Drivers

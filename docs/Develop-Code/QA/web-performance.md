@@ -1,3 +1,7 @@
+---
+tags: [performance, web-development]
+---
+
 # Web Performance
 
 ## Tools

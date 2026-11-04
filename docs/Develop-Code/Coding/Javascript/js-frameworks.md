@@ -1,3 +1,7 @@
+---
+tags: [web-development, programming]
+---
+
 # Javascript Frameworks
 
 import BarChart from '@site/src/components/BarChart/BarChart';

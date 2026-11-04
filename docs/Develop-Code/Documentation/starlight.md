@@ -1,7 +1,7 @@
 ---
 title: "Starlight"
 description: "Documentation framework built on Astro — fast, accessible, and easy to extend with any UI framework."
-tags: [development, tools, documentation, astro]
+tags: [documentation, tooling]
 sidebar_position: 20
 sidebar_label: "Starlight"
 ---

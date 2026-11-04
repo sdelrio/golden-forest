@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, devops]
+---
+
 # Spinnaker
 
 Cloud Native Continuous Delivery.  Fast, safe, repeatable deployments for every enterprise

@@ -1,3 +1,7 @@
+---
+tags: [cli, tui, tooling]
+---
+
 # Charm.sh
 
 * [https://charm.sh](https://charm.sh)

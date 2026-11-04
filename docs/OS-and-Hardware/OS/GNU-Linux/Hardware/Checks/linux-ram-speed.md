@@ -3,9 +3,8 @@ title: Ram speed
 date: 20211106
 author: sdelrio
 tags:
-- ram
-- linux
-- speed
+  - hardware
+  - performance
 ---
 
 # Check RAM speed in Linux

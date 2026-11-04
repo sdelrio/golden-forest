@@ -1,3 +1,7 @@
+---
+tags: [containers]
+---
+
 # Dockerfile for Java
 
 Starting with Java 9 you could build a custom JRE with just the libraries you need using the tool `jlink`, provided with the Java 9 JDK.

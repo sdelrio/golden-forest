@@ -1,3 +1,7 @@
+---
+tags: [linux, performance]
+---
+
 # Linux Performance
 
 ![Observability Tools](https://brendangregg.com/Perf/linux_observability_tools.png)

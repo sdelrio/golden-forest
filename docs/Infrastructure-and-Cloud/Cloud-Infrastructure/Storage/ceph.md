@@ -1,3 +1,7 @@
+---
+tags: [storage, self-hosted, cloud]
+---
+
 # Ceph
 
 Ceph is an open-source software (software-defined storage) storage platform. Very scalable. Does not depends on other filesystems

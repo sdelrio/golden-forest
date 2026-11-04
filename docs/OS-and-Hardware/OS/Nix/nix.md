@@ -1,3 +1,7 @@
+---
+tags: [nixos, tooling]
+---
+
 # Nix
 
 Nix is a declarative package manager that enables users to declare desired system state in config files. It doesn't requiere to have NixOS as the base system.

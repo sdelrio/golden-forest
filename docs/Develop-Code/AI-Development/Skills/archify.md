@@ -1,7 +1,7 @@
 ---
 title: "Archify"
 description: "An agent skill that turns a codebase or system description into polished, verifiable, interactive architecture diagrams as self-contained HTML."
-tags: [ai-development, skills, diagrams, architecture, agents]
+tags: [ai, skills, tooling, architecture]
 sidebar_label: "Archify"
 ---
 

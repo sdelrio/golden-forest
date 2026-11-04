@@ -1,4 +1,5 @@
 ---
+tags: [ai, llm]
 title: The Anatomy of a Claude 4.6 Prompt
 hide_table_of_contents: false
 sidebar_label: Claude 4.6 Prompts

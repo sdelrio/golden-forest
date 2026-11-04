@@ -2,12 +2,8 @@
 title: "Qwen3.5 Small Models"
 description: "More intelligence, less compute: 0.8B-9B models for edge and local deployment"
 tags:
-  - AI
-  - LLM
-  - Qwen
-  - Small Models
-  - Edge AI
-  - Inference
+  - ai
+  - llm
 ---
 
 # 🚀 Introducing Qwen3.5 Small Model Series

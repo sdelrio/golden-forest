@@ -1,3 +1,7 @@
+---
+tags: [kubernetes, networking, proxy]
+---
+
 # K8s nginx-ingress
 
 ## [External OAUTH Authentication](https://kubernetes.github.io/ingress-nginx/examples/auth/oauth-external-auth/)

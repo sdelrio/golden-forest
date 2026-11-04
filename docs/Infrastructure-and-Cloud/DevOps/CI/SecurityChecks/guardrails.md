@@ -1,3 +1,7 @@
+---
+tags: [ci-cd, security]
+---
+
 # GuardRails
 
 A SaaS which runs on Amazon Web Services, the company also offers a version for on-premise deployments. The platform is offered free of charge for anyone who wants to focus only on public code repositories. Paid versions start at $39 monthly for startups.

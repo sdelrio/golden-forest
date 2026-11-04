@@ -1,3 +1,7 @@
+---
+tags: [cloud, hardware, devops]
+---
+
 # Tinkerbell
 
 Created by the same team as Packet. Is an open source provision engine.

@@ -2,13 +2,8 @@
 title: "Playing Non-VR Games in VR with Quest 3 Mods"
 description: "A guide to community-made VR mods that let you play flat-screen games in full VR on Meta Quest 3, featuring Cyberpunk 2077 VR Port, Red Dead Redemption 2 RealVR, The Witcher 3 VR, and Titanfall 2 VR."
 tags:
-  - quest 3
-  - vr mods
-  - cyberpunk 2077
-  - red dead redemption 2
-  - the witcher 3
-  - titanfall 2
-  - pcvr
+  - vr
+  - gaming
 sidebar_label: "Non-VR Game Mods"
 last_update:
   date: 2026-10-03

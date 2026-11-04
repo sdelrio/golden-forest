@@ -1,3 +1,7 @@
+---
+tags: [kubernetes]
+---
+
 # K8s platforms
 
 ## Devtron

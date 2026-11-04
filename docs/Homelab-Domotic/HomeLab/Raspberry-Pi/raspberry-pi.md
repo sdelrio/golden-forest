@@ -1,4 +1,5 @@
 ---
+tags: [homelab, hardware]
 sidebar_position: 1
 title: "Raspberry Pi"
 ---

@@ -1,3 +1,7 @@
+---
+tags: [linux, hardware]
+---
+
 # QEMU
 
 ## KVM UI managers

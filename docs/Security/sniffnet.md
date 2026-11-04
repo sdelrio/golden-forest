@@ -1,7 +1,7 @@
 ---
 title: "Sniffnet"
 description: "A cross-platform, Rust-based network traffic monitor with real-time visualization, geolocation, and protocol detection."
-tags: [security, networking, rust, monitoring]
+tags: [security, networking, rust]
 sidebar_position: 12
 sidebar_label: "Sniffnet"
 ---

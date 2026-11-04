@@ -1,3 +1,7 @@
+---
+tags: [tooling, productivity]
+---
+
 # Visual Studio Code
 
 ## Download VS Code Insider

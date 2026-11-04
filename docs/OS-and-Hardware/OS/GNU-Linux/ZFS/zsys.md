@@ -3,8 +3,8 @@ title: ZSysctl
 date: 20211106
 author: sdelrio
 tags:
- - zfs
- - zsys
+  - zfs
+  - storage
 ---
 
 

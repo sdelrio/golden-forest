@@ -1,7 +1,7 @@
 ---
 title: "Replace Your Tech Stack with PostgreSQL"
 description: "How PostgreSQL extensibility lets small teams replace Redis, Elasticsearch, Kafka, vector databases, MongoDB and cron schedulers with a single consolidated database."
-tags: [postgresql, architecture, databases, simplicity]
+tags: [databases, architecture, self-hosted]
 sidebar_label: "Postgres Stack"
 ---
 

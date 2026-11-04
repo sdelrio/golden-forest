@@ -1,3 +1,7 @@
+---
+tags: [homelab, hardware]
+---
+
 # Racks for Pi
 
 ## References

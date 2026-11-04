@@ -1,3 +1,7 @@
+---
+tags: [containers, cli]
+---
+
 # crictl
 
 `crictl` is a command-line interface for CRI-compatible container runtimes, like containerd.

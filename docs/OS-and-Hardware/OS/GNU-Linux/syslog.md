@@ -1,3 +1,7 @@
+---
+tags: [linux]
+---
+
 # Syslog
 
 In computing, syslog is a standard for message logging. It allows separation of the software that generates messages, the system that stores them, and the software that reports and analyzes them. Each message is labeled with a facility code, indicating the type of system generating the message, and is assigned a severity level.

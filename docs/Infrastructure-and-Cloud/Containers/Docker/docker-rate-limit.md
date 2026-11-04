@@ -1,3 +1,7 @@
+---
+tags: [containers, cloud]
+---
+
 # Docker Hub Rate Limits
 
 Since 1st nov 2020  Docker Hub will apply 100 max pull limits/6h (200/6h if registered account).

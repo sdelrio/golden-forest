@@ -2,7 +2,7 @@
 title: "Self-learning Prompt"
 description: "A simple yet powerful prompt technique that enables AI agents to learn from mistakes and self-correct in real-time."
 author: "Boris Cherny"
-tags: [prompts, self-improvement, agent-memory, prompt-engineering]
+tags: [agents, ai, llm]
 sidebar_position: 15
 ---
 

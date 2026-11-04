@@ -1,7 +1,7 @@
 ---
 title: mgmt (Conf Management)
 description: A deep dive into mgmt, the distributed, event-driven, and parallel configuration management tool that challenges legacy paradigms.
-tags: [devops, infra-as-code, mgmt, configuration-management, distributed-systems, automation]
+tags: [devops, architecture, automation]
 ---
 
 # mgmt: Reactive Infrastructure

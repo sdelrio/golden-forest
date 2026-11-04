@@ -1,7 +1,7 @@
 ---
 title: "Agency Agents"
 description: "A comprehensive overview of the Agency Agents repository, its capabilities, and how to integrate it with various AI tooling."
-tags: ["AI", "Agents", "Agency"]
+tags: [ai, agents]
 ---
 
 import Card from '@site/src/components/Card/Card';

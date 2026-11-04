@@ -1,7 +1,7 @@
 ---
 title: "Graphify"
 description: "Transform any folder or repository into a navigable knowledge graph with 71.5x token efficiency and MCP support."
-tags: [ai, tools, knowledge-graph, obsidian, claude-code, mcp, cursor]
+tags: [ai, tooling, mcp, obsidian]
 ---
 
 import Tabs from '@theme/Tabs';

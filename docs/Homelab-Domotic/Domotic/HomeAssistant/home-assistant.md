@@ -1,3 +1,7 @@
+---
+tags: [home-automation, self-hosted, automation]
+---
+
 # Home Assistant
 
 ## Automations

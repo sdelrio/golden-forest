@@ -1,3 +1,7 @@
+---
+tags: [ci-cd]
+---
+
 # Jenkinsfile node app
 
 * [Set up Jenkins CI in Docker Container & Run Your Tests Inside Their Own Container A How-To Guide](https://hackernoon.com/set-up-jenkins-ci-in-docker-container-and-run-your-tests-inside-their-own-container-a-how-to-guide-7h8u32yi)

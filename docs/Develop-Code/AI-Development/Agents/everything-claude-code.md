@@ -1,7 +1,7 @@
 ---
 title: "Everything Claude Code (ECC)"
 description: "The Anthropic hackathon-winning harness-native operator system: 63 agents, 251 skills, cross-harness support for Claude Code, Codex, Cursor, OpenCode, Gemini, Zed, and GitHub Copilot."
-tags: [ECC, ClaudeCode, AgenticWorkflows, AgentShield, AIAgents, CrossHarness, TokenOptimization, MemoryPersistence, ContinuousLearning]
+tags: [ai, agents, skills, claude-code]
 sidebar_label: "ECC"
 ---
 

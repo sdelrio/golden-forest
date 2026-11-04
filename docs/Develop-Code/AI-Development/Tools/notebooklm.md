@@ -1,7 +1,7 @@
 ---
 title: "NotebookLM"
 description: "A comprehensive guide to Google's NotebookLM: features, use cases, and how to leverage it for deep research."
-tags: [ai, tools, research, google, gemini, knowledge-management]
+tags: [ai, tooling, documentation, hardware]
 ---
 
 import Card from '@site/src/components/Card/Card';

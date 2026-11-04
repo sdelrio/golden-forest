@@ -1,7 +1,7 @@
 ---
 title: "Vercel CEO AI Workflow"
 description: "Vercel's CEO builds with agents by testing ideas as MVPs, checking drift against a spec, and running breaker and first-time-user agents before shipping."
-tags: [ai, workflow, claude-code, agents, security, mvp]
+tags: [ai, automation, agents, security]
 sidebar_label: "Vercel AI Workflow"
 ---
 

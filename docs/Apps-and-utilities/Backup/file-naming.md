@@ -1,7 +1,7 @@
 ---
 title: File Naming Conventions
 description: A complete guide to professional file and directory naming rules for consistent behavior in terminals, web environments, and codebases.
-tags: [best-practices, naming-conventions, organization, terminal]
+tags: [best-practices, productivity, cli]
 slug: file-naming-conventions
 ---
 # File Naming Rules

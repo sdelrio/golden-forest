@@ -1,3 +1,7 @@
+---
+tags: [ai, agents, cli, tooling]
+---
+
 
 # Replicate Kun Chen's FirstMate + Herdr + Pi setup
 

@@ -1,7 +1,7 @@
 ---
 title: Oh My OpenAgent
 description: A deep dive into Oh My OpenAgent, its multi-model orchestration, specialized agents, and the philosophy of high-output engineering.
-tags: [ai-agents, oh-my-openagent, orchestration, productivity, ultrawork, framework]
+tags: [ai, agents, productivity, automation]
 ---
 
 import { Icon } from '@iconify/react';

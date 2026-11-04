@@ -1,3 +1,7 @@
+---
+tags: [testing, security, devops]
+---
+
 # Inspec.io
 
 [Chef Inspec](https://www.chef.io/products/chef-inspec) provides a language for describing security and compliance rules that can be shared between software engineers, operations, and security engineers.

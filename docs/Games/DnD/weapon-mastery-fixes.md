@@ -1,6 +1,6 @@
 ---
 description: House rules for D&D weapon master property fixes.
-tags: [weapon, weapon-master, weapon-mastery, weapon-masteries, dnd]
+tags: [dnd]
 ---
 # Weapon Master Property fixes
 

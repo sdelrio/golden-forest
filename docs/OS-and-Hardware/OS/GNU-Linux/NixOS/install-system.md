@@ -3,9 +3,7 @@ title: Installing NixOS
 date: 20231014
 author: sdelrio
 tags:
- - nixos
- - nix
- - nixos-install
+  - nixos
 ---
 
 # Installing

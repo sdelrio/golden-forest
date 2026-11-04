@@ -2,10 +2,9 @@
 title: Nix + devbox + direnv
 date: 20230713
 tags:
-- visual studio code
-- nix
-- devbox
-- direnv
+  - nixos
+  - tooling
+  - devops
 ---
 
 # Dev Environment with Nix, Devbox and Direnv

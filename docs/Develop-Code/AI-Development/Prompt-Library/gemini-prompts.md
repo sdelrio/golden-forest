@@ -4,7 +4,7 @@ description: "A comprehensive collection of 45 infallible prompts to maximize th
 author: "Gemini Collaborator"
 date: 2026-02-05
 category: "AI Guide"
-tags: [Gemini 3, AI Prompts, Agentic Coding, Multimodal AI, Data Analysis]
+tags: [ai, llm]
 version: "1.1.0"
 ---
 

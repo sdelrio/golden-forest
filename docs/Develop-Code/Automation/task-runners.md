@@ -1,3 +1,7 @@
+---
+tags: [automation, programming, tooling]
+---
+
 # Task Runners: Beyond the Makefile
 
 In modern software development, orchestrating repetitive tasks—building, testing, linting, and deploying—is a core part of the developer workflow. While shell scripts work for simple cases, specialized task runners provide better structure, dependency management, and discovery.

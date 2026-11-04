@@ -1,3 +1,7 @@
+---
+tags: [tooling, storage]
+---
+
 # Syncthing
 
 Personal cloud software with the abilty to have files in sync no matter what computer or device you're on.

@@ -1,3 +1,7 @@
+---
+tags: [linux, hardware, tooling]
+---
+
 # Quickemu
 
 Quickly create and run optimised Windows, macOS and Linux desktop virtual machines. 
