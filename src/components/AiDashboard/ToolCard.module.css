@@ -18,7 +18,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  font-size: 0.75rem;
-  color: var(--ifm-color-emphasis-600);
+  font-size: 0.85rem;
+  /* Tinted from the ink: the cool grey steps below AA on the card field. */
+  color: color-mix(in srgb, var(--ifm-font-color-base) 78%, transparent);
   font-weight: 500;
 }

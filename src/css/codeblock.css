@@ -127,3 +127,69 @@ html[data-theme='light'] [class*='codeBlockContainer_'] button[class*='copyButto
     color: #3e2723;
     border-color: rgba(62, 39, 35, 0.2);
 }
+/*
+ * Syntax palette in the garden's own inks. The Prism theme ships cool greys,
+ * teal and pink that belong to another world; these override the inline token
+ * colours the theme writes into the markup.
+ */
+[class*='codeBlockContainer_'] {
+    --syntax-plain: #2a2010;
+    --syntax-key: #8f5d00;
+    --syntax-string: #58180d;
+    --syntax-number: #7a4f00;
+    --syntax-function: #7a4f00;
+    --syntax-comment: #766649;
+}
+
+[data-theme='dark'] [class*='codeBlockContainer_'] {
+    --syntax-plain: #d4c4a8;
+    --syntax-key: #ffb630;
+    --syntax-string: #c9ad6a;
+    --syntax-number: #ffa601;
+    --syntax-function: #ffe0a3;
+    --syntax-comment: #9a8f7a;
+}
+
+html[data-theme='light'] [class*='codeBlockContainer_'] {
+    background-color: #fffaeb;
+}
+
+[class*='codeBlockContainer_'] pre {
+    background: transparent !important;
+    color: var(--syntax-plain) !important;
+}
+
+[class*='codeBlockContainer_'] .token.plain,
+[class*='codeBlockContainer_'] .token.operator,
+[class*='codeBlockContainer_'] .token.punctuation {
+    color: var(--syntax-plain) !important;
+}
+
+[class*='codeBlockContainer_'] .token.property,
+[class*='codeBlockContainer_'] .token.keyword,
+[class*='codeBlockContainer_'] .token.tag,
+[class*='codeBlockContainer_'] .token.attr-name,
+[class*='codeBlockContainer_'] .token.builtin {
+    color: var(--syntax-key) !important;
+}
+
+[class*='codeBlockContainer_'] .token.string,
+[class*='codeBlockContainer_'] .token.attr-value {
+    color: var(--syntax-string) !important;
+}
+
+[class*='codeBlockContainer_'] .token.number,
+[class*='codeBlockContainer_'] .token.boolean,
+[class*='codeBlockContainer_'] .token.constant {
+    color: var(--syntax-number) !important;
+}
+
+[class*='codeBlockContainer_'] .token.function,
+[class*='codeBlockContainer_'] .token.class-name {
+    color: var(--syntax-function) !important;
+}
+
+[class*='codeBlockContainer_'] .token.comment {
+    color: var(--syntax-comment) !important;
+    font-style: italic;
+}

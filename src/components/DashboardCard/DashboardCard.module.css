@@ -55,7 +55,8 @@
 .description {
   margin: 0;
   font-size: 0.8125rem;
-  color: var(--ifm-color-emphasis-700);
+  /* Tinted from the ink, not from a cool grey. */
+  color: color-mix(in srgb, var(--ifm-font-color-base) 80%, transparent);
   line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 2;
