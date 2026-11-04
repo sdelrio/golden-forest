@@ -72,6 +72,12 @@ Interactive Mermaid editor with live preview.
 - **Data:** `static/mermaid-templates/templates.json`
 - **Complexity:** Low
 
+## 6. RSS/Atom Feed for Blog - DECLINED
+
+- **What:** Enable blog feed generation and add feed autodiscovery links (issue #242)
+- **Decision (2026-11-04):** Not needed. The blog has only the Docusaurus seed post and is not updated, so there is nothing to syndicate. `feedOptions` is already set in `docusaurus.config.js`, so no code change is required.
+- **Revisit only if:** the blog starts being published to regularly.
+
 ---
 
 ## Summary
@@ -81,4 +87,5 @@ Interactive Mermaid editor with live preview.
 | DONE | 5 |
 | IN PROGRESS | 0 |
 | NOT STARTED | 0 |
+| DECLINED | 1 |
 | **Total** | **5** |
