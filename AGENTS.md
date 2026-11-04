@@ -33,6 +33,11 @@ When I correct you, or you catch yourself making a mistake: before continuing, a
 - **Why it matters**: Docusaurus dev serves generated HTML, so the tag is not injected from an entry file; the URL must be built where Node can see `.impeccable/live/server.json`.
 - **Rule**: Load the overlay via `scripts: impeccableLiveScripts()` in `docusaurus.config.js` (dev-only, token read from `.impeccable/live/server.json`), and restart `yarn start` after restarting the helper because the token rotates per run.
 
+### Card icons must render from bundled data, not `<Icon>`
+- **When**: 2026-11-04 - issue #310: passing bundled icon objects to `@iconify/react`'s `Icon` still produced `<span></span>` in the static build.
+- **Why it matters**: `Icon` is a client-only component, so the SVG never reaches the SSG HTML and the site depends on `api.iconify.design` for card icons.
+- **Rule**: Card icons resolve through `src/components/Card/icons.js` and render as inline `<svg>` via `CardIcon`. Add new `mdi:`/`game-icons:` names to that map; bundled sets must not call the Iconify API.
+
 ### Never use em dash
 - **Rule**: Never use the em dash "—". Use plain dash "-" instead.
 
