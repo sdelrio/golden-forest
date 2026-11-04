@@ -85,7 +85,7 @@ function AiDashboardInternal() {
       <div className={styles.header}>
         <div className={styles.headerTop}>
           <div>
-            <h1 className={styles.title}>AI Dashboard</h1>
+            <h2 className={styles.title}>AI Dashboard</h2>
             <p className={styles.subtitle}>
               {tools ? tools.length : '—'} tools, agents, and resources for AI-powered development
             </p>
