@@ -5,7 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useLocation } from '@docusaurus/router';
 import isInternalUrl from '@docusaurus/isInternalUrl';
-import { Icon } from '@iconify/react';
+import CardIcon from './CardIcon';
 import styles from './Card.module.css';
 
 export default function Card({ children, title, icon, href, shadow, className }) {
@@ -49,11 +49,7 @@ export default function Card({ children, title, icon, href, shadow, className })
     <>
       {(title || icon) && (
         <div style={{ display: 'flex', alignItems: 'center', marginBottom: children ? '0.5rem' : 0 }}>
-          {icon && (
-            <span style={{ marginRight: '0.5rem', display: 'flex', alignItems: 'center' }}>
-              <Icon icon={icon.includes(':') ? icon : `mdi:${icon}`} fontSize="1.5rem" />
-            </span>
-          )}
+          <CardIcon icon={icon} />
           {title && <h3 style={{ margin: 0 }}>{title}</h3>}
         </div>
       )}
