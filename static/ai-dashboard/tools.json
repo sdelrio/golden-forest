@@ -1217,6 +1217,34 @@
     "docPath": "/docs/Develop-Code/AI-Development/Agents/tuxee"
   },
   {
+    "id": "understand-anything",
+    "name": "Understand Anything",
+    "description": "Turn any codebase into an interactive knowledge graph you can explore, search, and ask questions about, via a plugin for Claude Code, Codex, Cursor, Copilot, and Gemini CLI.",
+    "category": "tools",
+    "github": "https://github.com/Egonex-AI/Understand-Anything",
+    "npm": null,
+    "pip": null,
+    "install": "/plugin marketplace add Egonex-AI/Understand-Anything",
+    "site": "https://understand-anything.com",
+    "license": "MIT",
+    "tags": [
+      "knowledge-graph",
+      "codebase-analysis",
+      "onboarding",
+      "tree-sitter",
+      "dashboard"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "codex",
+      "cursor",
+      "copilot",
+      "gemini",
+      "opencode"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Tools/understand-anything"
+  },
+  {
     "id": "vercel-ai-workflow",
     "name": "Vercel CEO AI Workflow",
     "category": "workflows",
