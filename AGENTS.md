@@ -41,6 +41,11 @@ When I correct you, or you catch yourself making a mistake: before continuing, a
 ### Never use em dash
 - **Rule**: Never use the em dash "—". Use plain dash "-" instead.
 
+### Use Markdown image syntax, not `<img>` tags, in MDX
+- **When**: 2026-11-05 - issue #322, the pipeline illustration used a raw `<img src="/img/..." style={{...}}>` tag in MDX.
+- **Why it matters**: Raw `<img>` tags in MDX do not render reliably in the built site. Markdown `![alt](/img/file.svg)` is processed by Docusaurus, which adds lazy loading, decoding, intrinsic dimensions and responsive max-width.
+- **Rule**: In MDX, reference images as `![alt text](/img/file.svg)` with the asset in `static/img/`. Never use a raw `<img>` tag.
+
 ### Never auto-add agent co-author to commits
 - **Rule**: When writing commit messages, NEVER auto-add your agent name as co-author.
 

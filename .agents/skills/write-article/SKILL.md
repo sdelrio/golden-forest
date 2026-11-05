@@ -83,7 +83,7 @@ Always include a `## References` section at the end. Use a bulleted list with de
 
 ### 6. Formatting & Visuals
 - **Headings**: Use `##` for major sections and `###` for sub-sections.
-- **Visuals**: Use standard markdown for images.
+- **Visuals**: Always use Markdown image syntax `![alt text](/img/file.svg)`. Do NOT use raw `<img>` tags in MDX: they do not render reliably in the built site. Put the asset in `static/img/` and reference it by absolute path, the same way `docs/docs-intro.md` references `/img/trees-02.svg`.
 - **Diagrams**: Use Mermaid.js (`mermaid` code blocks) for workflows or architecture.
 
 #### Architecture Diagram Design
