@@ -42,7 +42,7 @@ By leveraging free tiers like Google AI Studio (Gemini 2.5/3.1 Flash) or local m
 
 The proxy server acts as an intelligent intermediary. It registers endpoints like `/v1/messages` and `/v1/models` to emulate the official Anthropic API locally, while mapping requests dynamically.
 
-<img src="/img/free-claude-code-proxy-flow.svg" alt="Architecture of Free Claude Code: Claude Code client, fcc-server proxy, and provider routing" width="912" height="1070" style={{width: '100%', height: 'auto'}} />
+![Architecture of Free Claude Code: Claude Code client, fcc-server proxy, and provider routing](/img/free-claude-code-proxy-flow.svg)
 
 ```mermaid
 flowchart TD
