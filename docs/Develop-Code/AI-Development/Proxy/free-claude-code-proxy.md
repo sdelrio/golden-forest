@@ -42,6 +42,8 @@ By leveraging free tiers like Google AI Studio (Gemini 2.5/3.1 Flash) or local m
 
 The proxy server acts as an intelligent intermediary. It registers endpoints like `/v1/messages` and `/v1/models` to emulate the official Anthropic API locally, while mapping requests dynamically.
 
+<img src="/img/free-claude-code-proxy-flow.svg" alt="Architecture of Free Claude Code: Claude Code client, fcc-server proxy, and provider routing" width="912" height="1070" style={{width: '100%', height: 'auto'}} />
+
 ```mermaid
 flowchart TD
     subgraph Local Developer Machine
@@ -244,6 +246,6 @@ Append the proxy environment variables under the `acp.registry.claude-acp` confi
 ## References
 
 - [Free Claude Code GitHub Repository](https://github.com/Alishahryar1/free-claude-code) — Source code, updates, and voice setup scripts.
-- [Anthropic Claude Code CLI Documentation](https://anthropic.com/claude/code) — Standard client controls and slash commands.
+- [Anthropic Claude Code CLI Documentation](https://anthropic.com/claude/code) - Standard client controls and slash commands.
 - [RTK (Rust Token Killer)](../Tools/rtk.md) — Optimize context window size by filtering CLI output before sending it to the proxy.
 - [Graphify Knowledge Graph](../Tools/graphify.md) — Map out complex directory structures for token-efficient agent referencing.
