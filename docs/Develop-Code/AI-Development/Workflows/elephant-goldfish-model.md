@@ -199,3 +199,5 @@ The guardrail that holds the whole thing together is the human gate. Goldfish pr
 - [Harness and Setup Guide](https://github.com/google/elephant-goldfish-model/blob/main/docs/harnesses.md) - Which harnesses support fresh-context delegation.
 - [Dave Rensin: Elephants, Goldfish, and the New Golden Age of Software Engineering](https://medium.com/@drensin/elephants-goldfish-and-the-new-golden-age-of-software-engineering-c33641a48874) - The essay the model comes from.
 - [AI LABS: EGM, Google's New Way To Use Claude Code Is Insane](https://youtu.be/xxf6D9jynFw) - Community video that surfaced EGM. Useful as an introduction, not as a specification.
+- [EGM walkthrough](https://youtu.be/skwZQRYAcrc) - Additional walkthrough of the Elephant-Goldfish Model and its review workflow.
+
