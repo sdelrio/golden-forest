@@ -176,6 +176,11 @@ A worker started with `thread_spawn_contained` can fail without killing the proc
 
 Goose emits one C file for the whole program, so it runs wherever a C compiler does and calls C directly through `extern fn`. The bundled TinyCC backend compiles and runs a program in-process with no build step.
 
+![Goose compilation pipeline: the compiler emits one C file for the whole program. TinyCC compiles it in-process and runs it immediately, a native toolchain builds an executable, and the generated code calls libm, libc and the gfx packages through extern fn](/img/goose-compile-pipeline.svg)
+
+{/*
+Diagram source for /img/goose-compile-pipeline.svg. Kept here so agents reading this file have the graph in text form; edit the SVG, not this copy.
+
 ```mermaid
 flowchart TB
     Src["Program<br/>(.goose files)"]
@@ -199,6 +204,7 @@ flowchart TB
     CFile -->|"extern fn"| Libs
     Native --> Gfx
 ```
+*/}
 
 Only types with supported C representations may cross the boundary, and unsupported signatures are rejected at the declaration.
 
