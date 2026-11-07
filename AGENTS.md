@@ -33,6 +33,16 @@ When I correct you, or you catch yourself making a mistake: before continuing, a
 - **Why it matters**: Docusaurus dev serves generated HTML, so the tag is not injected from an entry file; the URL must be built where Node can see `.impeccable/live/server.json`.
 - **Rule**: Load the overlay via `scripts: impeccableLiveScripts()` in `docusaurus.config.js` (dev-only, token read from `.impeccable/live/server.json`), and restart `yarn start` after restarting the helper because the token rotates per run.
 
+### Impeccable live mode is a manual toggle in `docusaurus.config.js`
+- **When**: 2026-11-04 - the overlay bar was invisible because the `scripts: impeccableLiveScripts()` line was commented out for the release.
+- **Why it matters**: The helper can be running on `:8400` with a valid token and still render nothing if that line is commented. But if it stays uncommented, a `localhost:8400` script tag ends up in committed code.
+- **Rule**: To start a design session, uncomment the `scripts: impeccableLiveScripts()` line in `docusaurus.config.js` and restart `yarn start` (config changes are not hot-reloaded). When you finish designing, or before any commit, comment the line back out with `// impeccable live mode, disabled for release`. Never commit it enabled.
+
+### Never force `height: 100%` on card tiles
+- **When**: 2026-11-04 - adding `height: 100%` to the shared card rule made cards in a second `CardGroup` row touch the row above.
+- **Why it matters**: `CardGroup` wraps each card in a `div` with inline `height: 100%` plus `margin-bottom: 1rem`. A full-height card overflows into that margin and eats the row gap.
+- **Rule**: Leave card height to `Card.module.css` (90%). Fix alignment with flex/gap on the wrapper, never with `height: 100%` on the card itself.
+
 ### Card icons must render from bundled data, not `<Icon>`
 - **When**: 2026-11-04 - issue #310: passing bundled icon objects to `@iconify/react`'s `Icon` still produced `<span></span>` in the static build.
 - **Why it matters**: `Icon` is a client-only component, so the SVG never reaches the SSG HTML and the site depends on `api.iconify.design` for card icons.

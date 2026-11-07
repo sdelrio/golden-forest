@@ -18,10 +18,12 @@ import { rehypeExtendedTable } from 'rehype-extended-table';
 
 const SITE_TITLE = 'The Golden Forest';
 
-// impeccable live-mode overlay. Kept for future design sessions but disabled for
-// the production release: re-enable by uncommenting the `scripts:` line below and
-// restarting the helper (`impeccable live-server`) before `yarn start`.
-// The helper mints a token per run, so restart the dev server after restarting it.
+// impeccable live-mode overlay. Gated by the top-level `scripts:` line below,
+// which is the manual ON/OFF switch for live mode:
+//   - enabled  -> uncomment `scripts: impeccableLiveScripts()` and restart `yarn start`
+//   - disabled -> comment it back out before committing (never commit it enabled)
+// Config changes are not hot-reloaded, and the helper mints a token per run, so
+// restart the dev server after toggling and after restarting `impeccable live-server`.
 function impeccableLiveScripts() {
   if (process.env.NODE_ENV !== 'development') return [];
   try {
