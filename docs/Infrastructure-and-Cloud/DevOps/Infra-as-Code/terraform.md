@@ -357,4 +357,5 @@ provisioner "local-exec" {
 ## References
 
 * [Homepage](https://www.terraform.io/intro)
+* [Floci](floci.md) - local AWS endpoint to plan and apply the same configuration without a cloud account
 
