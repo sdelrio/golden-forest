@@ -1222,6 +1222,26 @@
     "docPath": "/docs/Develop-Code/AI-Development/Models-LLMs/thx-02-decision-model"
   },
   {
+    "id": "thx-02-vs-jev",
+    "name": "THX-02 vs Jev",
+    "description": "THX-02 against Jev 1.13: what the public Decision Index really says, where each model runs, and which one to pick for routing, triage or moderation.",
+    "category": "comparatives",
+    "github": null,
+    "npm": null,
+    "pip": null,
+    "install": null,
+    "site": "https://huggingface.co/HAL-X-AI/THX-02",
+    "license": "N/A",
+    "tags": [
+      "comparison",
+      "jev",
+      "thx-02",
+      "decision-model"
+    ],
+    "supportedBy": [],
+    "docPath": "/docs/Develop-Code/AI-Development/comparatives/thx-02-vs-jev"
+  },
+  {
     "id": "toon",
     "name": "TOON",
     "description": "Token-Oriented Object Notation — compact data format with 70-75% less overhead than JSON for LLM consumption.",

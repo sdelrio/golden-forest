@@ -165,7 +165,9 @@ These are HAL-X's numbers, measured on their Decision Index 0.3, not an independ
 | d1-3B | 3.1 B | 48.19 | 19 ms |
 | THX-01 (predecessor) | 0.3 B | 11.30 | 9 ms |
 
-The package description puts THX-02 above **Jev (57.96)** and above 27B decision models. The predecessor comparison is the more interesting one: THX-01, at 0.3 B, scored 11.30 on the same evaluation, so nearly all of the capability arrives with the 4.5 B model.
+The package description puts THX-02 above **Jev (57.96)** and above 27B decision models. That claim is worth checking rather than repeating: the 2026-11-06 dump of the public Jev Decision Index does not list THX-02 at all, while several open JEV-27B reproductions score above 65.06. See [THX-02 vs Jev](../comparatives/thx-02-vs-jev.md) for the leaderboard rows, the deployment trade-offs and a decision rule.
+
+The predecessor comparison is the more interesting one: THX-01, at 0.3 B, scored 11.30 on the same evaluation, so nearly all of the capability arrives with the 4.5 B model.
 
 For image work the vendor reports **72.19** on the public sets of the Decision Vision Index, averaging ten of eleven public sets (Winoground is gated on Hugging Face and was not run). Per-benchmark scores range from 94.5 on InfographicVQA and 92.9 on key-information extraction from receipts and forms down to 53.8 on meme moderation and 36.0 on MMMU-Pro vision. That spread is the honest part: charts and forms are strong, exam questions rendered inside an image are not.
 
