@@ -1,5 +1,18 @@
 [
   {
+    "id": "adversarial-code-review",
+    "name": "Adversarial Code Review",
+    "description": "ASDLC review pattern where a separate Critic Agent checks generated code against the Spec and returns PASS or actionable violations before human review.",
+    "category": "workflows",
+    "site": "https://asdlc.io/patterns/adversarial-code-review/",
+    "tags": [
+      "code-review",
+      "multi-agent",
+      "spec-driven"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Workflows/adversarial-code-review"
+  },
+  {
     "id": "agency-agents",
     "name": "Agency Agents",
     "description": "Curated collection of AI agent personas: Frontend Developer, Backend Architect, Security Engineer, DevOps Automator, and more.",
