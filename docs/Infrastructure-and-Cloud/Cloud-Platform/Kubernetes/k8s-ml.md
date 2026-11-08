@@ -4,6 +4,8 @@ tags: [kubernetes, llm, gpu]
 
 # K8s Machine Learning
 
+For the platform side - how GPUs are scheduled, shared and monitored - see the [Kubernetes GPU guide](k8s-gpu.md).
+
 ## Kubeflow
 
 The Machine Learning Toolkit for Kubernetes
