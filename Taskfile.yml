@@ -199,6 +199,7 @@ tasks:
     desc: Run Docusaurus MDX checker
     cmds:
       - node scripts/check-tags.mjs
+      - node scripts/check-math-dollars.mjs
       - "{{.NPX}} docusaurus-mdx-checker -c docs/"
       - "{{.NPX}} docusaurus-mdx-checker -c tutorial/"
       - "{{.NPX}} docusaurus-mdx-checker -c src/"

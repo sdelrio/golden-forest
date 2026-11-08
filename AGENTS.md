@@ -59,6 +59,11 @@ When I correct you, or you catch yourself making a mistake: before continuing, a
 ### Never auto-add agent co-author to commits
 - **Rule**: When writing commit messages, NEVER auto-add your agent name as co-author.
 
+### Escape `$` in prose prices, MDX reads a pair as LaTeX
+- **When**: 2026-11-08 - `jev-decision-model.md` had `$42 per billion input tokens, $0.042 per million`; remark-math rendered it as an equation, so the live page showed garbled math and the build still passed.
+- **Why it matters**: `remarkMath` + `rehypeKatex` are enabled in `docusaurus.config.js`. Two `$` on one line is math, and a bad equation is a silent rendering bug, not a build error.
+- **Rule**: Escape currency as `\$42` (or use an inline code span) whenever a line has two or more `$` before digits. `task check` runs `scripts/check-math-dollars.mjs` to catch this.
+
 ## Build/Lint/Test Commands
 
 ### Core Operations
