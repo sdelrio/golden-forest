@@ -77,7 +77,7 @@ There is no separate limit on the number of questions, only on the context they 
 | | Jev 1.14 | Jev 1.13 |
 |---|---|---|
 | Model ID | `jev-1.14.0` | `jev-1.13.0` |
-| Price | $42 per billion input tokens, $0.042 per million | same |
+| Price | \$42 per billion input tokens, \$0.042 per million | same |
 | Output tokens | Free | Free |
 | Context | 64k per request, 32k per question | same |
 | Input | Text, images | Text, images |

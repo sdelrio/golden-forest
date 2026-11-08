@@ -30,7 +30,7 @@ For the full API, installation and local deployment of THX-02, see [THX-02 Decis
 | **Images** | Up to 4 per request | Accepted in state, instructions and criteria, marked "Dreamer-ready" |
 | **Where it runs** | Your GPU, CPU or phone, or the HAL-X API | TypeSafe API only |
 | **Median latency** | 50 ms direct, 79 ms with thinking, on one RTX PRO 6000 | 127 ms per task (Artificial Analysis), 524 ms per request (Jev Decision Index) |
-| **Price** | Free when self-hosted, free tier on the HAL-X API | $0.042 per 1M input tokens, about $42 per 1M tasks |
+| **Price** | Free when self-hosted, free tier on the HAL-X API | \$0.042 per 1M input tokens, about \$42 per 1M tasks |
 | **Decision Index 0.3** | 65.06 with thinking, 63.83 direct, vendor run only | 57.96 on the public board |
 
 The two APIs are close cousins. Jev's `Choice`, `Score` and `Noul` map one to one onto THX-02's `choice`, `score` and `noul`, both return `probabilities` and `confidence`, and both read option descriptions you write in the request. Migrating a working classifier from one to the other is a request-shape change, not a redesign. THX-02 has no `Box` primitive, so anything that needs coordinates in an image stays with Jev 1.14.
@@ -107,7 +107,7 @@ Read the latency numbers with the harness attached to them, because the same mod
 
 Jev 1.13 shows 524 ms on one board and 127 ms on another, which is not a contradiction: the two harnesses send different request shapes and measure different things. It is a warning against comparing a latency number from one table with a latency number from the other, and against comparing either with the 50 ms a self-hosted 4.5 B model gets on a quiet GPU.
 
-At volume the shapes of the two bills diverge. Jev scales linearly with usage at $42 per million tasks. THX-02 has a fixed cost, one GPU, and a marginal cost near zero once that GPU exists, so on hardware you already own the API bill is pure saving at any volume. If you would have to buy the GPU, do the arithmetic on your own numbers: $42 per million tasks buys a lot of rental, and a 24 GB card that sits idle is the most expensive option on this page.
+At volume the shapes of the two bills diverge. Jev scales linearly with usage at \$42 per million tasks. THX-02 has a fixed cost, one GPU, and a marginal cost near zero once that GPU exists, so on hardware you already own the API bill is pure saving at any volume. If you would have to buy the GPU, do the arithmetic on your own numbers: $42 per million tasks buys a lot of rental, and a 24 GB card that sits idle is the most expensive option on this page.
 
 ## What each one admits it is bad at
 
