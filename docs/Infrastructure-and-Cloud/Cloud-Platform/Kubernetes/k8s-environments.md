@@ -35,6 +35,10 @@ That is the actual cost. Duplication is annoying, but ambiguity is dangerous: a 
 
 The rule behind every layout in this article: if you are about to write the same value in two places, it belongs one layer up. Four layers are enough for most platforms:
 
+![Layered values diagram: the platform chart feeds app base values, which feed environment values, which feed cluster values, and the result is one set of rendered manifests per environment. Each layer lists what it owns and who owns it.](/img/k8s-values-layers.svg)
+
+{/* Diagram source, kept for edits. The rendered version is static/img/k8s-values-layers.svg.
+
 ```mermaid
 flowchart TB
     Chart["Platform chart<br/>how a service is shaped"]
@@ -47,6 +51,8 @@ flowchart TB
     Env --> Cluster
     Cluster --> Render["Rendered manifests<br/>per environment"]
 ```
+
+*/}
 
 | Layer | Owns | Owned by |
 | :--- | :--- | :--- |
