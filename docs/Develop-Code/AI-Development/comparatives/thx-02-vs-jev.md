@@ -140,7 +140,7 @@ The pattern is that Jev's docs assume a generative model is nearby and tell you 
     - You want an API call and no ops, and the volume is modest
     - You need draw-a-box answers, which only exist from Jev 1.14
     - 64k requests and a 32k per-question budget fit your documents better than 32k flat
-    - You want a vendor with published patterns, SDKs in two languages and a support contract
+    - You want a vendor with published patterns and Python and JavaScript SDKs
     - You want the model whose behaviour the public indexes are calibrated around
   </Accordion>
 </AccordionGroup>
