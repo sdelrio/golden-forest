@@ -1202,6 +1202,26 @@
     "install": null
   },
   {
+    "id": "thx-02",
+    "name": "THX-02",
+    "description": "4.5B open decision model: send a state plus typed questions, get calibrated probabilities for every option. Runs locally on GPU, CPU or phone.",
+    "category": "models",
+    "github": null,
+    "npm": null,
+    "pip": "thx02",
+    "install": "pip install thx02",
+    "site": "https://huggingface.co/HAL-X-AI/THX-02",
+    "license": "Apache-2.0",
+    "tags": [
+      "decision",
+      "classification",
+      "local",
+      "multimodal"
+    ],
+    "supportedBy": [],
+    "docPath": "/docs/Develop-Code/AI-Development/Models-LLMs/thx-02-decision-model"
+  },
+  {
     "id": "toon",
     "name": "TOON",
     "description": "Token-Oriented Object Notation — compact data format with 70-75% less overhead than JSON for LLM consumption.",

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-08T00:08:35.386Z",
-  "toolCount": 58,
+  "generatedAt": "2026-11-08T00:16:26.961Z",
+  "toolCount": 59,
   "tools": [
     {
       "id": "adversarial-code-review",
@@ -73,13 +73,13 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/agentmemory",
-      "npmVersion": "0.9.32",
-      "npmLastPublished": "2026-11-04T19:12:48.130Z",
       "githubStars": 30190,
       "githubOpenIssues": 237,
       "githubArchived": false,
       "githubLastPush": "2026-11-07T16:18:41Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.9.32",
+      "npmLastPublished": "2026-11-04T19:12:48.130Z",
       "healthScore": 100
     },
     {
@@ -340,13 +340,13 @@
         "codex"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/codegraph",
-      "npmVersion": "1.6.2",
-      "npmLastPublished": "2026-10-03T06:45:46.734Z",
       "githubStars": 77006,
       "githubOpenIssues": 186,
       "githubArchived": false,
       "githubLastPush": "2026-11-01T17:36:07Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "1.6.2",
+      "npmLastPublished": "2026-10-03T06:45:46.734Z",
       "healthScore": 100
     },
     {
@@ -467,13 +467,13 @@
         "gemini"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/everything-claude-code",
-      "npmVersion": "2.2.3",
-      "npmLastPublished": "2026-10-02T01:56:16.379Z",
       "githubStars": 299177,
       "githubOpenIssues": 93,
       "githubArchived": false,
       "githubLastPush": "2026-11-06T21:21:50Z",
       "githubLanguage": "JavaScript",
+      "npmVersion": "2.2.3",
+      "npmLastPublished": "2026-10-02T01:56:16.379Z",
       "healthScore": 100
     },
     {
@@ -604,13 +604,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/graft",
-      "npmVersion": "0.29.0",
-      "npmLastPublished": "2026-11-06T11:54:11.476Z",
       "githubStars": 11134,
       "githubOpenIssues": 139,
       "githubArchived": false,
       "githubLastPush": "2026-11-07T19:49:32Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.29.0",
+      "npmLastPublished": "2026-11-06T11:54:11.476Z",
       "healthScore": 100
     },
     {
@@ -733,13 +733,13 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/lightpanda",
-      "npmVersion": "1.6.0",
-      "npmLastPublished": "2026-08-31T09:31:51.783Z",
       "githubStars": 41569,
       "githubOpenIssues": 54,
       "githubArchived": false,
       "githubLastPush": "2026-11-07T23:58:45Z",
       "githubLanguage": "Zig",
+      "npmVersion": "1.6.0",
+      "npmLastPublished": "2026-08-31T09:31:51.783Z",
       "healthScore": 100
     },
     {
@@ -854,13 +854,13 @@
         "cursor"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Prompt-Library/modern-web-guidance",
-      "npmVersion": "0.0.197",
-      "npmLastPublished": "2026-11-02T15:15:26.593Z",
       "githubStars": 1233,
       "githubOpenIssues": 326,
       "githubArchived": false,
       "githubLastPush": "2026-11-08T00:05:31Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.0.197",
+      "npmLastPublished": "2026-11-02T15:15:26.593Z",
       "healthScore": 94
     },
     {
@@ -961,13 +961,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/oh-my-openagent",
-      "npmVersion": "5.1.64",
-      "npmLastPublished": "2026-11-07T17:06:18.444Z",
       "githubStars": 70772,
       "githubOpenIssues": 1617,
       "githubArchived": false,
       "githubLastPush": "2026-11-08T00:04:38Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "5.1.64",
+      "npmLastPublished": "2026-11-07T17:06:18.444Z",
       "healthScore": 100
     },
     {
@@ -992,13 +992,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Workflows/oh-my-opencode-slim",
-      "npmVersion": "3.0.7",
-      "npmLastPublished": "2026-11-04T19:15:21.739Z",
       "githubStars": 10148,
       "githubOpenIssues": 36,
       "githubArchived": false,
       "githubLastPush": "2026-11-05T19:24:52Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "3.0.7",
+      "npmLastPublished": "2026-11-04T19:15:21.739Z",
       "healthScore": 100
     },
     {
@@ -1032,13 +1032,13 @@
         "copilot"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Proxy/omniroute",
-      "npmVersion": "3.8.53",
-      "npmLastPublished": "2026-11-06T14:41:02.729Z",
       "githubStars": 85455,
       "githubOpenIssues": 220,
       "githubArchived": false,
       "githubLastPush": "2026-11-07T22:36:08Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "3.8.53",
+      "npmLastPublished": "2026-11-06T14:41:02.729Z",
       "healthScore": 100
     },
     {
@@ -1149,13 +1149,13 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/openui",
-      "npmVersion": "1.1.0",
-      "npmLastPublished": "2026-11-04T12:32:55.554Z",
       "githubStars": 14929,
       "githubOpenIssues": 74,
       "githubArchived": false,
       "githubLastPush": "2026-11-07T08:20:04Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "1.1.0",
+      "npmLastPublished": "2026-11-04T12:32:55.554Z",
       "healthScore": 100
     },
     {
@@ -1182,13 +1182,13 @@
         "gemini-cli"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/ponytail",
-      "npmVersion": "5.3.3",
-      "npmLastPublished": "2026-10-29T03:08:20.518Z",
       "githubStars": 186377,
       "githubOpenIssues": 75,
       "githubArchived": false,
       "githubLastPush": "2026-10-29T11:59:31Z",
       "githubLanguage": "JavaScript",
+      "npmVersion": "5.3.3",
+      "npmLastPublished": "2026-10-29T03:08:20.518Z",
       "healthScore": 100
     },
     {
@@ -1294,13 +1294,13 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/remotion-skills",
-      "npmVersion": "4.0.541",
-      "npmLastPublished": "2026-11-05T08:00:25.694Z",
       "githubStars": 71517,
       "githubOpenIssues": 174,
       "githubArchived": false,
       "githubLastPush": "2026-11-07T15:58:09Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "4.0.541",
+      "npmLastPublished": "2026-11-05T08:00:25.694Z",
       "healthScore": 100
     },
     {
@@ -1451,6 +1451,27 @@
       "category": "tools",
       "docPath": "/docs/test",
       "install": null,
+      "healthScore": 20
+    },
+    {
+      "id": "thx-02",
+      "name": "THX-02",
+      "description": "4.5B open decision model: send a state plus typed questions, get calibrated probabilities for every option. Runs locally on GPU, CPU or phone.",
+      "category": "models",
+      "github": null,
+      "npm": null,
+      "pip": "thx02",
+      "install": "pip install thx02",
+      "site": "https://huggingface.co/HAL-X-AI/THX-02",
+      "license": "Apache-2.0",
+      "tags": [
+        "decision",
+        "classification",
+        "local",
+        "multimodal"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Models-LLMs/thx-02-decision-model",
       "healthScore": 20
     },
     {
