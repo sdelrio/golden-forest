@@ -52,7 +52,7 @@ if ! echo "$ID" | grep -qE '^[a-z0-9][a-z0-9\-]*$'; then
 fi
 
 # Validate category
-VALID_CATEGORIES="agents skills tools workflows prompts comparative models mcp browsers proxy"
+VALID_CATEGORIES="agents skills tools workflows prompts comparatives models mcp browsers proxy"
 if ! echo "$VALID_CATEGORIES" | grep -qw "$CATEGORY"; then
   echo "Error: invalid category '$CATEGORY'. Valid: $VALID_CATEGORIES" >&2
   exit 1
