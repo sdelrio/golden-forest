@@ -52,6 +52,10 @@ LG owners report that firmware updates sometimes switch Live Plus back on. Re-ch
 
 DNS filtering is the layer that survives reboots, factory resets and a TV that ignores its own settings. It also catches the ad and telemetry traffic of apps that never honor the TV's privacy menus.
 
+![Diagram: TV privacy settings and a clean launcher feed a DNS filter, which hands off to a firewall or isolated VLAN, while hardcoded IPs and LAN scanning still get out](/img/tv-tracking-layers.svg)
+
+{/* Mermaid source behind the diagram above. Kept as text so it can be edited and re-rendered; it renders through static/img/tv-tracking-layers.svg, not from this block.
+
 ```mermaid
 flowchart TB
     subgraph TV["On the TV"]
@@ -75,6 +79,8 @@ flowchart TB
     D2 -.->|"cannot stop"| O1
     D2 -.->|"cannot stop"| O2
 ```
+
+*/}
 
 The setup that holds up in practice:
 
