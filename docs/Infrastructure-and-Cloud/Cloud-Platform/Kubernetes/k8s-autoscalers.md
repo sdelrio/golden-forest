@@ -17,5 +17,5 @@ Autoscaling in Kubernetes is not one feature but a stack: pod-level scaling driv
 
 ## Hetzner
 
-[Cluster Autoscaler for Hetzner Cloud](https://dev.to/kalebu/how-to-build-a-simple-file-cleaner-in-python-knn)
+[Cluster Autoscaler for Hetzner Cloud](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler/cloudprovider/hetzner) adds and removes Hetzner Cloud servers when Pods cannot be scheduled.
 
