@@ -231,6 +231,12 @@ Use `XmlChar` or `Feat` components if documenting D&D 5e content.
   - ❌ `Returns Array<string>`
   - ✅ `Returns Array&lt;string&gt;`
 
+- **Dollar Signs**: `remark-math` renders two `$` on one line as a LaTeX equation, so a price pair silently turns into garbled math (it does not fail the build). Escape every `$` in prose currency, or wrap the figure in a code span.
+  - ❌ `$42 per billion input tokens, $0.042 per million`
+  - ✅ `\$42 per billion input tokens, \$0.042 per million`
+  - ✅ `` `$0.042` per million ``
+  - `task check` runs `scripts/check-math-dollars.mjs`, which fails on two or more unescaped `$` before a digit on one line.
+
 ## Component Reference
 
 Use these components to enhance the visual appeal and interactivity of your articles.

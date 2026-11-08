@@ -25,7 +25,7 @@ tags: [homelab, networking, hardware]
   * (AES-NI Support)
   * PCI-e slot 2.0 
     * Dell X3959 Intel PRO/1000PT Dual-Port Gigabit Ethernet Network Adapter ($15)
-    * Intel EXPI9404PTG1P2 Pro/1000PT Quad Port 10/100/1000 Gigabit Ethernet Network ($25-$40)
+    * Intel EXPI9404PTG1P2 Pro/1000PT Quad Port 10/100/1000 Gigabit Ethernet Network (\$25-\$40)
     * Haoyexin PCI Express 8X Riser CArd 90 Degree Right Angle riser adapter card converter for U/2U 3cm (6€) 
   * PCI-e slot 2.0 x1 (500MBytes/s)
     * Mini PCIe to dual Port Gigabit Ethernet 100/1000M LAN card INtel 82583 ($60)
