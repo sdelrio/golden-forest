@@ -584,6 +584,26 @@
     "docPath": "/docs/Develop-Code/AI-Development/comparatives/interactive-agents"
   },
   {
+    "id": "jev-decision-model",
+    "name": "Jev Decision Model",
+    "description": "TypeSafe System One model: send a state and typed questions, get calibrated decisions your code can branch on, at about 100 ms and $0.042 per million input tokens.",
+    "category": "models",
+    "github": null,
+    "npm": null,
+    "pip": "typesafe-sdk",
+    "install": null,
+    "site": "https://typesafe.ai/",
+    "license": "N/A",
+    "tags": [
+      "decision-model",
+      "classification",
+      "routing",
+      "guardrails"
+    ],
+    "supportedBy": [],
+    "docPath": "/docs/Develop-Code/AI-Development/Models-LLMs/jev-decision-model"
+  },
+  {
     "id": "karpathy-skills",
     "name": "Karpathy's LLM Coding Guidelines",
     "description": "Comprehensive guide to the CLAUDE.md behavioral guidelines recommended by Andrej Karpathy to reduce common LLM coding mistakes.",
