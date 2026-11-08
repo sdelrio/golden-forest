@@ -14,7 +14,7 @@ import AccordionGroup from '@site/src/components/Accordion/AccordionGroup';
 The headline is real but narrow: on the same public index, THX-02's vendor-run score is 7 points above Jev 1.13 while being a fraction of the size and open weights. The headline does not settle the category, because the leaderboard around Jev has moved and THX-02 is not on it.
 
 :::tip
-For the full API, installation and local deployment of THX-02, see [THX-02 Decision Model](../Models-LLMs/thx-02-decision-model.md). This article only compares.
+For the full API, installation and local deployment of THX-02, see [THX-02 Decision Model](../Models-LLMs/thx-02-decision-model.md). For what Jev is, what it returns, and when to reach for it, see [Jev Decision Model](../Models-LLMs/jev-decision-model.md). This article only compares.
 :::
 
 ## At a glance

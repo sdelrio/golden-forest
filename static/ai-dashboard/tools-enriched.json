@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-08T00:29:08.915Z",
-  "toolCount": 60,
+  "generatedAt": "2026-11-08T13:41:44.996Z",
+  "toolCount": 61,
   "tools": [
     {
       "id": "adversarial-code-review",
@@ -689,6 +689,27 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/comparatives/interactive-agents",
+      "healthScore": 20
+    },
+    {
+      "id": "jev-decision-model",
+      "name": "Jev Decision Model",
+      "description": "TypeSafe System One model: send a state and typed questions, get calibrated decisions your code can branch on, at about 100 ms and $0.042 per million input tokens.",
+      "category": "models",
+      "github": null,
+      "npm": null,
+      "pip": "typesafe-sdk",
+      "install": null,
+      "site": "https://typesafe.ai/",
+      "license": "N/A",
+      "tags": [
+        "decision-model",
+        "classification",
+        "routing",
+        "guardrails"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Models-LLMs/jev-decision-model",
       "healthScore": 20
     },
     {
