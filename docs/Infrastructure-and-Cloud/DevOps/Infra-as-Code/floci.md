@@ -37,6 +37,11 @@ The project reports a startup time of about 24 ms, roughly 13 MiB idle memory an
 
 Everything arrives on one HTTP port speaking the real AWS wire protocols. State lives in a storage backend, and services that need a real engine (Lambda runtimes, RDS engines, Kafka, Kubernetes) are started as Docker containers.
 
+![Floci architecture: Terraform, the AWS CLI and SDKs call port 4566, where the router dispatches to stateless services, stateful services and container-backed services. Stateful services write to a storage backend of memory, hybrid, persistent or write-ahead log, and container-backed services drive real containers through the Docker API](/img/floci-architecture.svg)
+
+{/*
+Diagram source for /img/floci-architecture.svg. Kept here so agents reading this file have the graph in text form; edit the SVG, not this copy.
+
 ```mermaid
 flowchart TB
     Client["Terraform / AWS CLI / SDK"]
@@ -55,6 +60,7 @@ flowchart TB
     Stateless & Stateful --> Store
     Containers -->|"Docker API"| Docker
 ```
+*/}
 
 ## Run it
 
