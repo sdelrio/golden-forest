@@ -23,7 +23,7 @@
     "@docusaurus/theme-search-algolia": "^3.10.1",
     "@iconify/icons-game-icons": "^1.2.1",
     "@iconify/icons-mdi": "^1.2.48",
-    "@iconify/react": "^6.0.3",
+    "@iconify/react": "^6.0.4",
     "@mdx-js/react": "^3.1.0",
     "@mermaid-js/layout-elk": "^1.0.1",
     "@svgr/webpack": "^8.1.0",
