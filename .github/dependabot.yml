@@ -4,25 +4,45 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "monday"
     groups:
       actions:
         patterns:
-          - "actions/*"
-      github:
-        patterns:
-          - "github/*"
+          - "*"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "monday"
+    # order matters: first matching group wins, catch-all goes last.
+    # named groups carry majors too, the catch-all stays on minor+patch so a
+    # breaking bump always gets its own PR (and its own preview).
     groups:
-      docusaurus:
-        patterns:
-          - "@docusaurus/*"
       react:
         patterns:
           - "react"
           - "react-dom"
+      docusaurus:
+        patterns:
+          - "@docusaurus/*"
+      mermaid:
+        patterns:
+          - "mermaid"
+          - "mdx-mermaid"
+          - "@mermaid-js/*"
+      iconify:
+        patterns:
+          - "@iconify/*"
+      browser-data:
+        patterns:
+          - "baseline-browser-mapping"
+          - "caniuse-lite"
+      minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
     # split constraints by SemVer granularity to be more aggressive with patches
     # but cautious with breaking changes.
     cooldown:
