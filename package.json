@@ -25,7 +25,7 @@
     "@iconify/icons-mdi": "^1.2.48",
     "@iconify/react": "^6.0.3",
     "@mdx-js/react": "^3.1.0",
-    "@mermaid-js/layout-elk": "^1.0.1",
+    "@mermaid-js/layout-elk": "^1.0.2",
     "@svgr/webpack": "^8.1.0",
     "baseline-browser-mapping": "^2.11.35",
     "boneyard-js": "^1.10.0",
