@@ -27,7 +27,7 @@
     "@mdx-js/react": "^3.1.0",
     "@mermaid-js/layout-elk": "^1.0.1",
     "@svgr/webpack": "^8.1.0",
-    "baseline-browser-mapping": "^2.11.34",
+    "baseline-browser-mapping": "^2.11.35",
     "boneyard-js": "^1.10.0",
     "caniuse-lite": "^1.0.30001820",
     "clsx": "^2.0.0",
