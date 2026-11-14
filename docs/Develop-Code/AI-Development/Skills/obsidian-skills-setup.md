@@ -20,15 +20,25 @@ import TabItem from '@theme/TabItem';
 
 ## Summary
 
-**Obsidian Skills & LLM Wiki** represents a paradigm shift from traditional human-managed note-taking to an AI-orchestrated Knowledge Base. By leveraging **Claude Code** and the **Karpathy LLM Wiki pattern**, users can build a "self-evolving" digital garden where the AI acts as the primary librarian—ingesting sources, cross-referencing concepts, and maintaining a structured index—while the human remains as the high-level architect and curator.
+**Obsidian Skills & LLM Wiki** represents a paradigm shift from traditional human-managed note-taking to an AI-orchestrated Knowledge Base. By leveraging **Claude Code** and the **[Karpathy LLM Wiki pattern](../Tools/karpathy-llm-wiki.md)**, users can build a "self-evolving" digital garden where the AI acts as the primary librarian—ingesting sources, cross-referencing concepts, and maintaining a structured index—while the human remains as the high-level architect and curator.
 
 The **LLM Wiki** approach moves beyond stateless RAG (Retrieval-Augmented Generation). Instead of rediscovering knowledge from scratch on every query, the LLM **incrementally builds a persistent wiki**—a structured codebase of knowledge that compounds over time.
 
-> [!TIP]
-> *"You never write the wiki yourself — the LLM writes and maintains all of it. You're in charge of sourcing, exploration, and asking the right questions."*
-> — **Andrej Karpathy**
+This article covers the knowledge layer. Where the rest of the vault goes, and how a human side stays read-only while the agent owns a machine side, is the subject of the companion article [Obsidian as a Backend, Not a Second Brain](./obsidian-as-a-backend.md).
 
-### Three-Layer Architecture
+:::tip
+*"You never write the wiki yourself — the LLM writes and maintains all of it. You're in charge of sourcing, exploration, and asking the right questions."*
+
+Andrej Karpathy
+:::
+
+### The Layers
+
+![Diagram: a schema file governs immutable raw sources; session hooks and a compiler pass turn new logs into wiki pages; the wiki holds the index, the log and the page types.](/img/obsidian-skills-three-layers.svg)
+
+{/*
+Mermaid source for the diagram above, kept for agents and future edits. It is not rendered.
+If you change the layers, redraw the SVG and update the table below together.
 
 ```mermaid
 graph TD
@@ -68,6 +78,7 @@ graph TD
     Schema -->|Governs| Evolution
     Wiki -->|Reference| Schema
 ```
+*/}
 
 | Layer | Description | Ownership |
 |---|---|---|
@@ -96,8 +107,9 @@ Open this folder as a **Vault** in Obsidian.
 # Navigate to your vault
 cd ~/my-knowledge-base
 
-# Initialize Claude Code — this creates CLAUDE.md
-claude init
+# Start Claude Code, then run the built-in command that creates CLAUDE.md
+claude
+/init
 ```
 
 #### 3. Configure `CLAUDE.md`
@@ -212,20 +224,20 @@ This pattern treats your session history like **Source Code** and your Wiki like
 
 ### Claude Code Lifecycle Hooks
 
-To implement this, you can configure `CLAUDE.md` to trigger specific actions at key points in the session lifecycle:
+To implement this, wire Claude Code's lifecycle hooks in `.claude/settings.json` to the scripts that read and write the wiki:
 
-| Hook | Purpose | Action |
+| Hook event | Purpose | Action |
 |---|---|---|
-| `session_start` | **Restore Context** | Automatically reads `index.md` and relevant `wiki/` pages to ground the agent. |
-| `pre_compact` | **Synthesize** | Summarizes the current conversation before the context window is pruned or the session ends. |
-| `session_end` | **Archival** | Appends the synthesized summary to `raw/daily_logs/` and triggers a compilation pass. |
+| `SessionStart` | **Restore Context** | Automatically reads `index.md` and relevant `wiki/` pages to ground the agent. |
+| `PreCompact` | **Synthesize** | Summarizes the current conversation before the context window is pruned. |
+| `SessionEnd` | **Archival** | Appends the synthesized summary to `raw/daily_logs/` and triggers a compilation pass. |
 
 ### Bootstrapping with a One-Shot Prompt
 
-You can initialize this entire autonomous system in a new vault by providing a single "Meta-Instruction" prompt to Claude Code that defines the folder structure and sets up the hook logic in `CLAUDE.md`.
+You can initialize this entire autonomous system in a new vault by providing a single "Meta-Instruction" prompt to Claude Code that defines the folder structure, writes `CLAUDE.md`, and wires the hooks in `.claude/settings.json`.
 
 :::info Pro Tip
-Use the [Claude Agent SDK](https://github.com/anthropics/claude-sdk) to build specialized "Compiler" scripts that handle the multi-file updates required when a single session touches multiple wiki concepts.
+Use the [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk) to build specialized "Compiler" scripts that handle the multi-file updates required when a single session touches multiple wiki concepts.
 :::
 
 ---
@@ -271,6 +283,7 @@ Projects inspired by the LLM Wiki pattern:
 - [Andrej Karpathy - LLM Knowledge Bases - on X](https://x.com/karpathy/status/2039805659525644595?s=61)
 - [Video: Karpathy LLM Knowledge Bases Pattern](https://www.youtube.com/watch?v=sboNwYmH3AY)
 - [Video: Autonomous Claude Code Memory (Cole Medin)](https://www.youtube.com/watch?v=7huCP6RkcY4)
+- [Video: Build an Obsidian Backend, Not a Second Brain (Easy Machine AI)](https://youtu.be/4z2i6UsQG1k)
 - [Kepano obsidian-skills](https://github.com/kepano/obsidian-skills)
 - [qmd - Local Markdown Search Engine](https://github.com/tobi/qmd)
 - [Claude Memory Compiler](https://github.com/coleam00/claude-memory-compiler)

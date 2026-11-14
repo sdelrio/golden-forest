@@ -196,6 +196,8 @@ The pattern is intentionally abstract. Everything below is a starting shape, not
   </Step>
 </Steps>
 
+Two companion articles cover this pattern inside Obsidian: [Obsidian Skills & LLM Wiki Setup](../Skills/obsidian-skills-setup.md) walks through the vault, the schema file and the ingest workflow, and [Obsidian as a Backend, Not a Second Brain](../Skills/obsidian-as-a-backend.md) covers the human/machine vault layout that surrounds the wiki.
+
 :::tip
 Karpathy's own description of the workflow is worth keeping: Obsidian is the IDE, the LLM is the programmer, and the wiki is the codebase. The wiki is just a Git repository of Markdown, so you get diffs, history, and blame for free.
 :::

@@ -894,6 +894,20 @@
     "docPath": "/docs/Develop-Code/AI-Development/Tools/obscura"
   },
   {
+    "id": "obsidian-backend",
+    "name": "Obsidian as a Backend",
+    "description": "Turn an Obsidian vault into a backend: human/machine split, AGENTS.md per folder, frontmatter filled by collector scripts, and findings files that improve each agent run.",
+    "category": "workflows",
+    "site": "https://youtu.be/4z2i6UsQG1k",
+    "tags": [
+      "obsidian",
+      "agents",
+      "knowledge-base",
+      "automation"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Skills/obsidian-as-a-backend"
+  },
+  {
     "id": "obsidian-skills",
     "name": "Obsidian Skills & LLM Wiki",
     "description": "Guide for using Obsidian as an AI-maintained knowledge base with Karpathy's LLM Wiki pattern.",
