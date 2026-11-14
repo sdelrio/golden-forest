@@ -34,6 +34,11 @@ Advanced RAG variants extract relationships into a graph ahead of time, which mo
 
 The pattern is deliberately small. There are only three layers.
 
+![Diagram of the three layers: a schema file (CLAUDE.md or AGENTS.md) sets the conventions; immutable raw sources are read once by the agent; the agent's three operations are ingest, query and lint; ingest writes and updates wiki pages, query reads the index and files answers back as pages, and lint flags drift and stale claims. The wiki itself holds concept pages, entity pages, comparisons, index.md and log.md.](/img/karpathy-llm-wiki-layers.svg)
+
+{/*
+Mermaid source for the diagram above, kept for agents and future edits. It is not rendered.
+
 ```mermaid
 flowchart TB
     subgraph Raw["raw/ - immutable source of truth"]
@@ -66,6 +71,7 @@ flowchart TB
     C -->|"good answers filed back"| E
     D -->|"contradictions, stale claims, orphans"| E
 ```
+*/}
 
 - **Raw sources**: your curated documents. Articles, papers, images, data files. The agent reads them and never edits them, so they remain the ground truth you can always check against.
 - **The wiki**: a directory of agent-written Markdown pages. Summaries, entity pages, concept pages, comparisons, an overview. The agent owns this layer completely; you read it.
