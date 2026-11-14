@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 912 900" role="img" aria-labelledby="tv-layers-title" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+  <title id="tv-layers-title">TV tracking defences in three layers: privacy settings and a clean launcher on the TV feed a DNS filter on the network, which hands off to a firewall. Hardcoded IPs and LAN scanning still get out because DNS cannot see them.</title>
+  <defs>
+    <marker id="tv-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#8b949e"/>
+    </marker>
+    <marker id="tv-arrow-leak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#d29922"/>
+    </marker>
+  </defs>
+
+  <rect width="912" height="900" rx="18" fill="#0d1117"/>
+
+  <text x="456" y="54" text-anchor="middle" font-size="24" font-weight="700" fill="#e6edf3">Cutting TV Tracking at the Network</text>
+  <text x="456" y="82" text-anchor="middle" font-size="14" fill="#8b949e">Settings and debloat are things the TV can undo; DNS and firewall rules are not.</text>
+
+  <rect x="40" y="108" width="832" height="196" rx="14" fill="#161b22" stroke="#30363d"/>
+  <text x="68" y="142" font-size="13" font-weight="600" letter-spacing="1" fill="#8b949e">ON THE TV</text>
+
+  <rect x="64" y="160" width="376" height="72" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="252" y="188" text-anchor="middle" font-size="16" fill="#e6edf3">Privacy settings</text>
+  <text x="252" y="210" text-anchor="middle" font-size="14" fill="#8b949e">ACR, consent, microphone</text>
+
+  <rect x="472" y="160" width="376" height="72" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="660" y="188" text-anchor="middle" font-size="16" fill="#e6edf3">Debloat or clean launcher</text>
+  <text x="660" y="210" text-anchor="middle" font-size="14" fill="#8b949e">ADB and Developer Mode</text>
+
+  <rect x="40" y="344" width="832" height="250" rx="14" fill="#161b22" stroke="#30363d"/>
+  <text x="68" y="378" font-size="13" font-weight="600" letter-spacing="1" fill="#8b949e">ON THE NETWORK</text>
+
+  <rect x="256" y="396" width="400" height="62" rx="10" fill="#21262d" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="456" y="422" text-anchor="middle" font-size="16" fill="#e6edf3">DNS filter</text>
+  <text x="456" y="443" text-anchor="middle" font-size="14" fill="#8b949e">Pi-hole, AdGuard Home, NextDNS</text>
+
+  <rect x="256" y="478" width="400" height="62" rx="10" fill="#21262d" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="456" y="504" text-anchor="middle" font-size="16" fill="#e6edf3">Firewall or isolated VLAN</text>
+  <text x="456" y="525" text-anchor="middle" font-size="14" fill="#8b949e">redirect port 53, block DoT and DoH</text>
+
+  <rect x="40" y="628" width="832" height="190" rx="14" fill="#161b22" stroke="#30363d"/>
+  <text x="68" y="662" font-size="13" font-weight="600" letter-spacing="1" fill="#8b949e">WHAT STILL GETS OUT</text>
+
+  <rect x="64" y="686" width="376" height="72" rx="10" fill="#21262d" stroke="#d29922" stroke-width="1.5"/>
+  <text x="252" y="714" text-anchor="middle" font-size="16" fill="#e6edf3">Hardcoded IPs</text>
+  <text x="252" y="736" text-anchor="middle" font-size="14" fill="#8b949e">app telemetry on fixed endpoints</text>
+
+  <rect x="472" y="686" width="376" height="72" rx="10" fill="#21262d" stroke="#d29922" stroke-width="1.5"/>
+  <text x="660" y="714" text-anchor="middle" font-size="16" fill="#e6edf3">LAN and Wi-Fi scanning</text>
+  <text x="660" y="736" text-anchor="middle" font-size="14" fill="#8b949e">no DNS query needed</text>
+
+  <path d="M252 232 V330 H660 V232" fill="none" stroke="#8b949e" stroke-width="1.5"/>
+  <line x1="456" y1="330" x2="456" y2="390" stroke="#8b949e" stroke-width="1.5" marker-end="url(#tv-arrow)"/>
+  <line x1="456" y1="458" x2="456" y2="472" stroke="#8b949e" stroke-width="1.5" marker-end="url(#tv-arrow)"/>
+
+  <path d="M456 540 V608 H660 V680" fill="none" stroke="#d29922" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#tv-arrow-leak)"/>
+  <line x1="456" y1="608" x2="252" y2="608" stroke="#d29922" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <line x1="252" y1="608" x2="252" y2="680" stroke="#d29922" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#tv-arrow-leak)"/>
+  <text x="676" y="660" font-size="13" fill="#d29922">cannot stop</text>
+
+  <text x="68" y="862" font-size="14" fill="#8b949e">Turn the TV settings off first, then enforce at the router: a filter the TV cannot route around is worth more than any menu.</text>
+</svg>
