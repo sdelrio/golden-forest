@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-14T16:00:05.733Z",
-  "toolCount": 66,
+  "generatedAt": "2026-11-14T17:14:20.138Z",
+  "toolCount": 67,
   "tools": [
     {
       "id": "adversarial-code-review",
@@ -1070,6 +1070,21 @@
       "githubLastPush": "2026-11-14T10:15:25Z",
       "githubLanguage": "Rust",
       "healthScore": 75
+    },
+    {
+      "id": "obsidian-backend",
+      "name": "Obsidian as a Backend",
+      "description": "Turn an Obsidian vault into a backend: human/machine split, AGENTS.md per folder, frontmatter filled by collector scripts, and findings files that improve each agent run.",
+      "category": "workflows",
+      "site": "https://youtu.be/4z2i6UsQG1k",
+      "tags": [
+        "obsidian",
+        "agents",
+        "knowledge-base",
+        "automation"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Skills/obsidian-as-a-backend",
+      "healthScore": 20
     },
     {
       "id": "obsidian-skills",
