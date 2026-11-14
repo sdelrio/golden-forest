@@ -606,6 +606,26 @@
     "docPath": "/docs/Develop-Code/AI-Development/comparatives/headless-browser"
   },
   {
+    "id": "holmesgpt",
+    "name": "HolmesGPT",
+    "description": "Open source SRE agent that investigates production incidents across Prometheus, Grafana, Datadog, Kubernetes and 38+ data sources, with a CLI, HTTP API and a Kubernetes operator for 24/7 background health checks.",
+    "category": "tools",
+    "github": "https://github.com/HolmesGPT/holmesgpt",
+    "pip": "holmesgpt",
+    "install": "pipx install holmesgpt",
+    "site": "https://holmesgpt.dev",
+    "license": "Apache-2.0",
+    "tags": [
+      "sre",
+      "observability",
+      "incident-response",
+      "kubernetes",
+      "agents"
+    ],
+    "supportedBy": [],
+    "docPath": "/docs/Develop-Code/AI-Development/Tools/holmesgpt"
+  },
+  {
     "id": "interactive-agents",
     "name": "Interactive Agents",
     "description": "Comparison of Claude Code vs OpenCode for real-time, human-directed coding workflows.",
