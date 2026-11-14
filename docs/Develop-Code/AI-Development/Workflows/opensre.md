@@ -143,6 +143,7 @@ OpenSRE supports Anthropic, OpenAI, Codex, Ollama, Gemini, OpenRouter, NVIDIA NI
 
 ## References
 
+- [Related Article: HolmesGPT](../Tools/holmesgpt.md) - A batteries-included alternative: prebuilt integrations, CLI, HTTP API and a Kubernetes operator for background checks.
 - [OpenSRE GitHub Repository](https://github.com/Tracer-Cloud/opensre) — Source code, installation scripts, and deployment docs.
 - [OpenSRE Documentation](https://www.opensre.com/docs) — Full integration matrix, quickstart guide, and FAQ.
 - [DEPLOYMENT.md](https://github.com/Tracer-Cloud/opensre/blob/main/DEPLOYMENT.md) — EC2, AMI, and hosted deployment steps.
