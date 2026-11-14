@@ -160,6 +160,32 @@
     "docPath": "/docs/Develop-Code/AI-Development/comparatives/autonomous-agents"
   },
   {
+    "id": "bla",
+    "name": "BLA (Blind LLM Agents)",
+    "description": "Blue Defense MCP server and CLI that hardens your own release artifacts (JS/TS, Electron, WASM, native, SQLite, GGUF/Safetensors, DEX) against AI reverse-engineering agents.",
+    "category": "tools",
+    "github": "https://github.com/qybaihe/bla",
+    "npm": "bla-agents",
+    "pip": null,
+    "install": "npx bla-agents harden .",
+    "site": "https://bla.tools/",
+    "license": "MIT",
+    "tags": [
+      "security",
+      "appsec",
+      "obfuscation",
+      "mcp",
+      "reverse-engineering"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "cursor",
+      "codex",
+      "opencode"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Tools/bla"
+  },
+  {
     "id": "chris-titus-ai-workflow",
     "name": "Chris Titus AI Workflow",
     "category": "workflows",
