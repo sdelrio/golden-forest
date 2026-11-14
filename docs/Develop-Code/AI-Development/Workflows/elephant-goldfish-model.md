@@ -24,6 +24,12 @@ EGM's answer is deliberate asymmetry: the agent with the most context writes, an
 
 ## How It Works
 
+![EGM workflow: egm-brainstorm writes a brief, a six-lens goldfish critique challenges the concept, egm-draft writes the design doc, five fresh-context review stages run, a synthesizer collects their findings, a human resolves trade-offs and merges the design as a PR, implementation follows, and egm-drift-report compares the design docs with the source](/img/egm-workflow.svg)
+
+{/*
+Mermaid source for the diagram above. It is deliberately not rendered: the SVG
+is the published version, this block is the editable source of truth for agents.
+
 ```mermaid
 flowchart TB
     subgraph Elephant["Elephant - full project context"]
@@ -65,6 +71,7 @@ flowchart TB
     I --> DR
     DR -.->|"refresh the spec"| D
 ```
+*/}
 
 | Role | Context it holds | What it does |
 | :--- | :--- | :--- |
@@ -177,6 +184,26 @@ The process pays for itself where the blast radius of a wrong assumption is larg
 
 Where it is overkill: small bug fixes, a config tweak, a dependency bump, a typo in a dashboard. If the change is clear and the risk is contained, the document is pure overhead. The skills are standalone, so you can use `egm-review` alone on an existing doc, or `egm-bootstrap` once and never touch the rest.
 
+## Compared With Spec Kit, OpenSpec, and Superpowers
+
+Prakash Pandey's [17-minute comparison](https://youtu.be/6loAUS0TXOc) puts EGM next to GitHub's [Spec Kit](https://github.com/github/spec-kit), Fission AI's [OpenSpec](https://github.com/Fission-AI/OpenSpec), and [Superpowers](https://github.com/obra/superpowers). All four describe the same loop: research the problem, plan the solution, implement it, verify the result. What differs is where the discipline sits.
+
+| Aspect | EGM | Spec Kit | OpenSpec | Superpowers |
+| :--- | :--- | :--- | :--- | :--- |
+| Understanding an existing codebase | `egm-bootstrap` builds a map bottom-up, one README per directory | No map generator; the constitution carries principles, not structure | No map generator; `project.md` and the agent's own reading | No map generator; skills plus your instruction files |
+| Shaping a rough idea | `egm-brainstorm`, then a six-lens Goldfish swarm attacks the concept | `specify` drafts quickly on assumptions, `clarify` asks targeted questions | Optional `explore` conversation before committing to a change | An interactive brainstorming skill that questions the idea first |
+| Stress-testing the design | Five fresh-context review stages plus a synthesizer, then `egm-resolve` | `clarify`, `checklist`, `analyze` check artifact quality and consistency | Design artifact review and validation checks | Conditional builder-check subagent for larger written designs, plus reviews after implementation |
+| Structure during implementation | None prescribed; no TDD rule, no task ledger | `tasks.md` with dependencies, checked off by the implement command | `tasks.md`, flexible about how the work gets done | TDD, small testable tasks, one subagent per task with reviews for spec match and code quality, progress ledger |
+| Docs versus code over time | `egm-drift-report` compares design docs with source, run on demand | `converge` checks code against the spec and plan | `verify` per change, `archive` folds the change into living specs | Verification during implementation, no doc-versus-code audit |
+
+**Design review is the sharpest difference.** The other three check their own artifacts, but none makes a fresh-context, multi-perspective design review a standard step before code. Superpowers comes closest: it can run an independent builder-check subagent on a larger written design, but the check is conditional and single-pass, not five stages with a synthesizer.
+
+**EGM says little about implementation, by design.** It sets no TDD requirement and keeps no task ledger, so tracking progress across sessions is on you. Spec Kit and OpenSpec give the agent a persistent `tasks.md`; Superpowers goes further with subagent-driven development and a progress ledger. The presenter's own next experiment is that split: an EGM-reviewed design handed to a Superpowers execution workflow, a combination he has not tried yet.
+
+**Drift detection is the other clear differentiator.** Spec Kit's `converge`, OpenSpec's `verify` and `archive`, and Superpowers' review-driven implementation all check the work against the plan. Only EGM ships a repeatable workflow for the later question: does the document still describe what the application does? You can build that yourself on top of OpenSpec's living specs or custom agent instructions, but you would be building it.
+
+The video does not pick a winner, and that is the useful framing. Pick by where your process breaks down: Spec Kit if you want a fast, gated specification trail; OpenSpec if the work is mostly changes to an existing system; Superpowers if execution discipline and TDD are the weak spot; EGM if the design is the artifact your team keeps getting wrong. It is one practitioner's reading of the docs plus a few experiments, not a controlled benchmark, so treat each judgement as an opinion.
+
 ## Limitations And Guardrails
 
 A Goldfish review needs a harness that can spawn fresh subagent contexts. If the harness cannot, the review skill **stops** rather than running the review in the same context, because a same-context review defeats the entire mechanism. Standalone Antigravity IDE (tested on macOS and Linux) does not expose the required `invoke_subagent` tool, and some ChatGPT modes have no fresh-context delegation. Check your harness before planning a rollout.
@@ -199,5 +226,6 @@ The guardrail that holds the whole thing together is the human gate. Goldfish pr
 - [Harness and Setup Guide](https://github.com/google/elephant-goldfish-model/blob/main/docs/harnesses.md) - Which harnesses support fresh-context delegation.
 - [Dave Rensin: Elephants, Goldfish, and the New Golden Age of Software Engineering](https://medium.com/@drensin/elephants-goldfish-and-the-new-golden-age-of-software-engineering-c33641a48874) - The essay the model comes from.
 - [AI LABS: EGM, Google's New Way To Use Claude Code Is Insane](https://youtu.be/xxf6D9jynFw) - Community video that surfaced EGM. Useful as an introduction, not as a specification.
+- [Prakash Pandey: Elephant-Goldfish vs Spec Kit, OpenSpec & Superpowers](https://youtu.be/6loAUS0TXOc) - Five-axis comparison across context building, idea exploration, design review, implementation structure, and documentation drift.
 - [EGM walkthrough](https://youtu.be/skwZQRYAcrc) - Additional walkthrough of the Elephant-Goldfish Model and its review workflow.
 
