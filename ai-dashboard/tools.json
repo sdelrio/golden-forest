@@ -561,6 +561,27 @@
     "docPath": "/docs/Develop-Code/AI-Development/Tools/graphify"
   },
   {
+    "id": "harnessrouter",
+    "name": "HarnessRouter",
+    "description": "Apache-2.0 self-hosted router that puts Codex, Claude Code, Hermes, Pi, DSH and 25+ harnesses behind one OpenAI Responses-compatible API, with sessions, streaming, files, cancellation and structured failures.",
+    "category": "proxy",
+    "github": "https://github.com/HarnessRouter/harnessrouter",
+    "npm": null,
+    "pip": null,
+    "install": "docker run -d --name harnessrouter -p 127.0.0.1:3000:3000 -v harnessrouter:/data harnessrouter/harnessrouter",
+    "site": "https://harnessrouter.ai",
+    "license": "Apache-2.0",
+    "tags": [
+      "agents",
+      "self-hosted",
+      "devops",
+      "harness",
+      "api"
+    ],
+    "supportedBy": [],
+    "docPath": "/docs/Develop-Code/AI-Development/Tools/harnessrouter"
+  },
+  {
     "id": "headless-browsers",
     "name": "Headless Browsers for AI",
     "description": "Architectural overview comparing headless Chrome vs Obscura (Rust) vs Lightpanda (Zig) for AI agents.",

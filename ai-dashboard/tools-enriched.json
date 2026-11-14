@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-14T14:00:05.251Z",
-  "toolCount": 62,
+  "generatedAt": "2026-11-14T14:39:29.334Z",
+  "toolCount": 63,
   "tools": [
     {
       "id": "adversarial-code-review",
@@ -100,13 +100,13 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/agentmemory",
-      "npmVersion": "0.9.33",
-      "npmLastPublished": "2026-11-09T12:21:35.305Z",
       "githubStars": 30358,
       "githubOpenIssues": 235,
       "githubArchived": false,
       "githubLastPush": "2026-11-13T06:39:42Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.9.33",
+      "npmLastPublished": "2026-11-09T12:21:35.305Z",
       "healthScore": 100
     },
     {
@@ -367,13 +367,13 @@
         "codex"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/codegraph",
-      "npmVersion": "1.6.2",
-      "npmLastPublished": "2026-10-03T06:45:46.734Z",
       "githubStars": 77579,
       "githubOpenIssues": 203,
       "githubArchived": false,
       "githubLastPush": "2026-11-01T17:36:07Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "1.6.2",
+      "npmLastPublished": "2026-10-03T06:45:46.734Z",
       "healthScore": 100
     },
     {
@@ -494,13 +494,13 @@
         "gemini"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/everything-claude-code",
-      "npmVersion": "2.2.3",
-      "npmLastPublished": "2026-10-02T01:56:16.379Z",
       "githubStars": 302679,
       "githubOpenIssues": 101,
       "githubArchived": false,
       "githubLastPush": "2026-11-09T04:56:24Z",
       "githubLanguage": "JavaScript",
+      "npmVersion": "2.2.3",
+      "npmLastPublished": "2026-10-02T01:56:16.379Z",
       "healthScore": 100
     },
     {
@@ -631,13 +631,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/graft",
-      "npmVersion": "0.29.0",
-      "npmLastPublished": "2026-11-06T11:54:11.476Z",
       "githubStars": 11268,
       "githubOpenIssues": 142,
       "githubArchived": false,
       "githubLastPush": "2026-11-14T10:33:27Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "0.29.0",
+      "npmLastPublished": "2026-11-06T11:54:11.476Z",
       "healthScore": 100
     },
     {
@@ -671,6 +671,28 @@
       "githubLastPush": "2026-11-12T21:47:45Z",
       "githubLanguage": "Python",
       "healthScore": 75
+    },
+    {
+      "id": "harnessrouter",
+      "name": "HarnessRouter",
+      "description": "Apache-2.0 self-hosted router that puts Codex, Claude Code, Hermes, Pi, DSH and 25+ harnesses behind one OpenAI Responses-compatible API, with sessions, streaming, files, cancellation and structured failures.",
+      "category": "proxy",
+      "github": "https://github.com/HarnessRouter/harnessrouter",
+      "npm": null,
+      "pip": null,
+      "install": "docker run -d --name harnessrouter -p 127.0.0.1:3000:3000 -v harnessrouter:/data harnessrouter/harnessrouter",
+      "site": "https://harnessrouter.ai",
+      "license": "Apache-2.0",
+      "tags": [
+        "agents",
+        "self-hosted",
+        "devops",
+        "harness",
+        "api"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/harnessrouter",
+      "healthScore": 20
     },
     {
       "id": "headless-browsers",
@@ -781,13 +803,13 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/lightpanda",
-      "npmVersion": "1.6.0",
-      "npmLastPublished": "2026-08-31T09:31:51.783Z",
       "githubStars": 42041,
       "githubOpenIssues": 54,
       "githubArchived": false,
       "githubLastPush": "2026-11-14T06:38:40Z",
       "githubLanguage": "Zig",
+      "npmVersion": "1.6.0",
+      "npmLastPublished": "2026-08-31T09:31:51.783Z",
       "healthScore": 100
     },
     {
@@ -902,13 +924,13 @@
         "cursor"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Prompt-Library/modern-web-guidance",
-      "npmVersion": "1.0.0",
-      "npmLastPublished": "2026-11-10T03:29:19.190Z",
       "githubStars": 5438,
       "githubOpenIssues": 304,
       "githubArchived": false,
       "githubLastPush": "2026-11-14T02:08:33Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "1.0.0",
+      "npmLastPublished": "2026-11-10T03:29:19.190Z",
       "healthScore": 98
     },
     {
@@ -1009,13 +1031,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/oh-my-openagent",
-      "npmVersion": "5.1.70",
-      "npmLastPublished": "2026-11-14T07:57:48.609Z",
       "githubStars": 70908,
       "githubOpenIssues": 1843,
       "githubArchived": false,
       "githubLastPush": "2026-11-14T13:37:45Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "5.1.70",
+      "npmLastPublished": "2026-11-14T07:57:48.609Z",
       "healthScore": 100
     },
     {
@@ -1040,13 +1062,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Workflows/oh-my-opencode-slim",
-      "npmVersion": "3.0.7",
-      "npmLastPublished": "2026-11-04T19:15:21.739Z",
       "githubStars": 10218,
       "githubOpenIssues": 30,
       "githubArchived": false,
       "githubLastPush": "2026-11-14T13:02:17Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "3.0.7",
+      "npmLastPublished": "2026-11-04T19:15:21.739Z",
       "healthScore": 100
     },
     {
@@ -1080,13 +1102,13 @@
         "copilot"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Proxy/omniroute",
-      "npmVersion": "3.8.53",
-      "npmLastPublished": "2026-11-06T14:41:02.729Z",
       "githubStars": 87321,
       "githubOpenIssues": 199,
       "githubArchived": false,
       "githubLastPush": "2026-11-14T13:57:56Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "3.8.53",
+      "npmLastPublished": "2026-11-06T14:41:02.729Z",
       "healthScore": 100
     },
     {
@@ -1197,13 +1219,13 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/openui",
-      "npmVersion": "1.1.1",
-      "npmLastPublished": "2026-11-12T15:24:06.401Z",
       "githubStars": 15205,
       "githubOpenIssues": 83,
       "githubArchived": false,
       "githubLastPush": "2026-11-13T11:44:01Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "1.1.1",
+      "npmLastPublished": "2026-11-12T15:24:06.401Z",
       "healthScore": 100
     },
     {
@@ -1230,13 +1252,13 @@
         "gemini-cli"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/ponytail",
-      "npmVersion": "5.3.3",
-      "npmLastPublished": "2026-10-29T03:08:20.518Z",
       "githubStars": 190649,
       "githubOpenIssues": 99,
       "githubArchived": false,
       "githubLastPush": "2026-10-29T11:59:31Z",
       "githubLanguage": "JavaScript",
+      "npmVersion": "5.3.3",
+      "npmLastPublished": "2026-10-29T03:08:20.518Z",
       "healthScore": 100
     },
     {
@@ -1342,13 +1364,13 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/remotion-skills",
-      "npmVersion": "4.0.543",
-      "npmLastPublished": "2026-11-11T16:43:12.300Z",
       "githubStars": 73114,
       "githubOpenIssues": 154,
       "githubArchived": false,
       "githubLastPush": "2026-11-14T13:06:03Z",
       "githubLanguage": "TypeScript",
+      "npmVersion": "4.0.543",
+      "npmLastPublished": "2026-11-11T16:43:12.300Z",
       "healthScore": 100
     },
     {
