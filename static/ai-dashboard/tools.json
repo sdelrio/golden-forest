@@ -692,6 +692,30 @@
     "docPath": "/docs/Develop-Code/AI-Development/Models-LLMs/jev-decision-model"
   },
   {
+    "id": "karpathy-llm-wiki",
+    "name": "Karpathy's LLM Wiki",
+    "description": "A pattern where an AI agent compiles raw sources into a persistent, interlinked Markdown wiki and answers questions from it instead of re-retrieving documents on every query.",
+    "category": "tools",
+    "github": null,
+    "npm": null,
+    "pip": null,
+    "install": null,
+    "site": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+    "license": "N/A",
+    "tags": [
+      "knowledge-base",
+      "markdown",
+      "obsidian",
+      "compilation"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "codex",
+      "opencode"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Tools/karpathy-llm-wiki"
+  },
+  {
     "id": "karpathy-skills",
     "name": "Karpathy's LLM Coding Guidelines",
     "description": "Comprehensive guide to the CLAUDE.md behavioral guidelines recommended by Andrej Karpathy to reduce common LLM coding mistakes.",

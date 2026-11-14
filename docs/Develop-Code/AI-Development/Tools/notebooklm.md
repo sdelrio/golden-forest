@@ -145,4 +145,5 @@ Enhance the official NotebookLM experience using community-developed extensions 
 - [NotebookLM Official Help Center](https://support.google.com/notebooklm)
 - [Gemini AI Models](../Models-LLMs/Qwen3.5-Small-Series.md): Understanding the underlying tech
 - [AI Development](../index.mdx): Integrated knowledge management
+- [Karpathy's LLM Wiki](karpathy-llm-wiki.md) - An alternative to per-notebook retrieval: a wiki compiled once and kept current.
 
