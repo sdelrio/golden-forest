@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" role="img" aria-labelledby="k8s-layers-title" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+  <title id="k8s-layers-title">Layered Kubernetes configuration: a platform chart defines the shape of a service, app base values hold what is true in every environment, environment values hold only the per-environment differences, cluster values hold domain, ingress class, region and secret store, and the result renders one set of manifests per environment.</title>
+  <defs>
+    <marker id="k8s-layers-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#8b949e"/>
+    </marker>
+    <marker id="k8s-layers-arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#58a6ff"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="760" rx="18" fill="#0d1117"/>
+
+  <text x="480" y="52" text-anchor="middle" font-size="24" font-weight="700" fill="#e6edf3">One Value, One Layer</text>
+  <text x="480" y="80" text-anchor="middle" font-size="14" fill="#8b949e">Every value is written once, in the narrowest layer that owns it.</text>
+
+  <text x="940" y="108" text-anchor="end" font-size="12" font-weight="600" letter-spacing="1" fill="#8b949e">OWNED BY</text>
+
+  <rect x="120" y="122" width="560" height="76" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="400" y="154" text-anchor="middle" font-size="16" font-weight="600" fill="#e6edf3">Platform chart</text>
+  <text x="400" y="176" text-anchor="middle" font-size="13" fill="#8b949e">how a service is shaped: Deployment, Service, probes, security context</text>
+  <text x="940" y="166" text-anchor="end" font-size="13" fill="#8b949e">Platform team</text>
+
+  <line x1="400" y1="198" x2="400" y2="228" stroke="#8b949e" stroke-width="1.5" marker-end="url(#k8s-layers-arrow)"/>
+
+  <rect x="120" y="234" width="560" height="76" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="400" y="266" text-anchor="middle" font-size="16" font-weight="600" fill="#e6edf3">App base values</text>
+  <text x="400" y="288" text-anchor="middle" font-size="13" fill="#8b949e">what is true in every environment: image repository, ports, log format</text>
+  <text x="940" y="278" text-anchor="end" font-size="13" fill="#8b949e">Application team</text>
+
+  <line x1="400" y1="310" x2="400" y2="340" stroke="#8b949e" stroke-width="1.5" marker-end="url(#k8s-layers-arrow)"/>
+
+  <rect x="120" y="346" width="560" height="76" rx="10" fill="#21262d" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="400" y="378" text-anchor="middle" font-size="16" font-weight="600" fill="#e6edf3">Environment values</text>
+  <text x="400" y="400" text-anchor="middle" font-size="13" fill="#8b949e">only what differs: replicas, resource sizing, image tag, feature flags</text>
+  <text x="940" y="390" text-anchor="end" font-size="13" fill="#8b949e">App team, SRE approves prod</text>
+
+  <line x1="400" y1="422" x2="400" y2="452" stroke="#8b949e" stroke-width="1.5" marker-end="url(#k8s-layers-arrow)"/>
+
+  <rect x="120" y="458" width="560" height="76" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="400" y="490" text-anchor="middle" font-size="16" font-weight="600" fill="#e6edf3">Cluster values</text>
+  <text x="400" y="512" text-anchor="middle" font-size="13" fill="#8b949e">domain, ingress class, region, secret store name for every app in a cluster</text>
+  <text x="940" y="502" text-anchor="end" font-size="13" fill="#8b949e">Platform team</text>
+
+  <line x1="400" y1="534" x2="400" y2="564" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#k8s-layers-arrow-accent)"/>
+
+  <rect x="120" y="570" width="560" height="76" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="400" y="602" text-anchor="middle" font-size="16" font-weight="600" fill="#e6edf3">Rendered manifests</text>
+  <text x="400" y="624" text-anchor="middle" font-size="13" fill="#8b949e">one output per environment: dev, staging, production</text>
+  <text x="940" y="614" text-anchor="end" font-size="13" fill="#8b949e">CI and Argo CD</text>
+
+  <text x="120" y="692" font-size="14" fill="#8b949e">A new service adds one folder under apps/. A new staging domain edits one cluster file, not fifty app folders.</text>
+  <text x="120" y="716" font-size="14" fill="#8b949e">If a value has to be copied into two files, it is living one layer too low.</text>
+</svg>
