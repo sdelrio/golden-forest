@@ -37,6 +37,10 @@ That breaks the assumptions of traditional proxies, which expect short-lived req
 
 Agentgateway is a data plane with policies attached at listener, route, backend, or MCP-target level. The same process can front non-agentic HTTP, LLM traffic, MCP targets, and A2A agents.
 
+![Agentgateway architecture: agent clients, application SDKs and other agents send MCP, A2A or HTTP traffic to the listeners, which pass through routes with CEL policies and authN/authZ before branching into the MCP multiplexer and the LLM router. The gateway then fans out to upstream MCP servers, OpenAPI backends, LLM providers and A2A agents, and exports metrics, logs and traces over OTLP.](/img/agentgateway-architecture.svg)
+
+{/* Diagram source, kept for agents and future edits. Renders nothing: the SVG above is the visible figure.
+
 ```mermaid
 flowchart TB
     subgraph Clients["Clients"]
@@ -71,6 +75,7 @@ flowchart TB
     LLM -->|"OpenAI-compatible"| S3
     AUTH -->|"A2A"| S4
 ```
+*/}
 
 ### Two deployment modes
 
