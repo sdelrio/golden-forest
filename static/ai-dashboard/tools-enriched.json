@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-08T13:41:44.996Z",
-  "toolCount": 61,
+  "generatedAt": "2026-11-14T14:00:05.251Z",
+  "toolCount": 62,
   "tools": [
     {
       "id": "adversarial-code-review",
@@ -40,12 +40,39 @@
         "cursor"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/ai-agency",
-      "githubStars": 167121,
-      "githubOpenIssues": 31,
+      "githubStars": 168255,
+      "githubOpenIssues": 38,
       "githubArchived": false,
-      "githubLastPush": "2026-11-07T17:31:08Z",
+      "githubLastPush": "2026-11-09T00:27:04Z",
       "githubLanguage": "Shell",
       "healthScore": 75
+    },
+    {
+      "id": "agentgateway",
+      "name": "Agentgateway",
+      "description": "Rust-based agentic proxy for MCP servers, A2A agents, and LLM providers. Tool federation, JWT/OAuth auth, CEL per-tool authorization, rate limits, and OTLP observability.",
+      "category": "proxy",
+      "github": "https://github.com/agentgateway/agentgateway",
+      "npm": null,
+      "pip": null,
+      "install": "curl -sL https://agentgateway.dev/install | bash",
+      "site": "https://agentgateway.dev",
+      "license": "Apache-2.0",
+      "tags": [
+        "mcp",
+        "agents",
+        "proxy",
+        "gateway",
+        "security"
+      ],
+      "supportedBy": [],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/agentgateway",
+      "githubStars": 6184,
+      "githubOpenIssues": 230,
+      "githubArchived": false,
+      "githubLastPush": "2026-11-14T00:08:20Z",
+      "githubLanguage": "Rust",
+      "healthScore": 74
     },
     {
       "id": "agentmemory",
@@ -73,13 +100,13 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/agentmemory",
-      "githubStars": 30190,
-      "githubOpenIssues": 237,
+      "npmVersion": "0.9.33",
+      "npmLastPublished": "2026-11-09T12:21:35.305Z",
+      "githubStars": 30358,
+      "githubOpenIssues": 235,
       "githubArchived": false,
-      "githubLastPush": "2026-11-07T16:18:41Z",
+      "githubLastPush": "2026-11-13T06:39:42Z",
       "githubLanguage": "TypeScript",
-      "npmVersion": "0.9.32",
-      "npmLastPublished": "2026-11-04T19:12:48.130Z",
       "healthScore": 100
     },
     {
@@ -106,7 +133,7 @@
         "codex"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/anatomy",
-      "githubStars": 25769,
+      "githubStars": 27232,
       "githubOpenIssues": 16,
       "githubArchived": false,
       "githubLastPush": "2026-10-18T20:20:24Z",
@@ -137,10 +164,10 @@
         "codex"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/archify",
-      "githubStars": 94459,
-      "githubOpenIssues": 144,
+      "githubStars": 96359,
+      "githubOpenIssues": 155,
       "githubArchived": false,
-      "githubLastPush": "2026-11-08T00:02:57Z",
+      "githubLastPush": "2026-11-14T13:32:00Z",
       "githubLanguage": "JavaScript",
       "healthScore": 75
     },
@@ -209,8 +236,8 @@
         "agency-agents"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/claude-code",
-      "npmVersion": "2.1.319",
-      "npmLastPublished": "2026-11-06T00:58:56.366Z",
+      "npmVersion": "2.1.325",
+      "npmLastPublished": "2026-11-13T20:07:25.823Z",
       "healthScore": 45
     },
     {
@@ -234,10 +261,10 @@
         "claude-code"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Proxy/free-claude-code-proxy",
-      "githubStars": 67177,
-      "githubOpenIssues": 268,
+      "githubStars": 70081,
+      "githubOpenIssues": 312,
       "githubArchived": false,
-      "githubLastPush": "2026-11-06T19:37:16Z",
+      "githubLastPush": "2026-11-14T09:52:03Z",
       "githubLanguage": "Python",
       "healthScore": 75
     },
@@ -309,8 +336,8 @@
         "claude-code"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/cloudflare-security-audit-skill",
-      "githubStars": 65691,
-      "githubOpenIssues": 43,
+      "githubStars": 72295,
+      "githubOpenIssues": 46,
       "githubArchived": false,
       "githubLastPush": "2026-09-14T19:29:02Z",
       "githubLanguage": "JavaScript",
@@ -340,13 +367,13 @@
         "codex"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/codegraph",
-      "githubStars": 77006,
-      "githubOpenIssues": 186,
+      "npmVersion": "1.6.2",
+      "npmLastPublished": "2026-10-03T06:45:46.734Z",
+      "githubStars": 77579,
+      "githubOpenIssues": 203,
       "githubArchived": false,
       "githubLastPush": "2026-11-01T17:36:07Z",
       "githubLanguage": "TypeScript",
-      "npmVersion": "1.6.2",
-      "npmLastPublished": "2026-10-03T06:45:46.734Z",
       "healthScore": 100
     },
     {
@@ -373,7 +400,7 @@
         "cursor"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/MCPs/cve-mcp-server",
-      "githubStars": 1762,
+      "githubStars": 1778,
       "githubOpenIssues": 5,
       "githubArchived": false,
       "githubLastPush": "2026-10-01T07:11:17Z",
@@ -401,8 +428,8 @@
         "claude-code"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/cybersecurity-skills",
-      "githubStars": 35750,
-      "githubOpenIssues": 26,
+      "githubStars": 36123,
+      "githubOpenIssues": 25,
       "githubArchived": false,
       "githubLastPush": "2026-08-31T04:32:44Z",
       "githubLanguage": "Python",
@@ -435,10 +462,10 @@
         "antigravity"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Workflows/elephant-goldfish-model",
-      "githubStars": 13871,
-      "githubOpenIssues": 54,
+      "githubStars": 18880,
+      "githubOpenIssues": 70,
       "githubArchived": false,
-      "githubLastPush": "2026-11-07T23:59:45Z",
+      "githubLastPush": "2026-11-14T09:40:03Z",
       "githubLanguage": "Python",
       "healthScore": 75
     },
@@ -467,13 +494,13 @@
         "gemini"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/everything-claude-code",
-      "githubStars": 299177,
-      "githubOpenIssues": 93,
-      "githubArchived": false,
-      "githubLastPush": "2026-11-06T21:21:50Z",
-      "githubLanguage": "JavaScript",
       "npmVersion": "2.2.3",
       "npmLastPublished": "2026-10-02T01:56:16.379Z",
+      "githubStars": 302679,
+      "githubOpenIssues": 101,
+      "githubArchived": false,
+      "githubLastPush": "2026-11-09T04:56:24Z",
+      "githubLanguage": "JavaScript",
       "healthScore": 100
     },
     {
@@ -526,10 +553,10 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Proxy/freellmapi",
-      "githubStars": 48856,
-      "githubOpenIssues": 18,
+      "githubStars": 52103,
+      "githubOpenIssues": 20,
       "githubArchived": false,
-      "githubLastPush": "2026-11-07T21:20:33Z",
+      "githubLastPush": "2026-11-14T10:23:35Z",
       "githubLanguage": "TypeScript",
       "healthScore": 75
     },
@@ -604,13 +631,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/graft",
-      "githubStars": 11134,
-      "githubOpenIssues": 139,
-      "githubArchived": false,
-      "githubLastPush": "2026-11-07T19:49:32Z",
-      "githubLanguage": "TypeScript",
       "npmVersion": "0.29.0",
       "npmLastPublished": "2026-11-06T11:54:11.476Z",
+      "githubStars": 11268,
+      "githubOpenIssues": 142,
+      "githubArchived": false,
+      "githubLastPush": "2026-11-14T10:33:27Z",
+      "githubLanguage": "TypeScript",
       "healthScore": 100
     },
     {
@@ -638,10 +665,10 @@
         "gemini"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/graphify",
-      "githubStars": 143992,
-      "githubOpenIssues": 737,
+      "githubStars": 147518,
+      "githubOpenIssues": 754,
       "githubArchived": false,
-      "githubLastPush": "2026-11-06T17:11:19Z",
+      "githubLastPush": "2026-11-12T21:47:45Z",
       "githubLanguage": "Python",
       "healthScore": 75
     },
@@ -754,13 +781,13 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/lightpanda",
-      "githubStars": 41569,
-      "githubOpenIssues": 54,
-      "githubArchived": false,
-      "githubLastPush": "2026-11-07T23:58:45Z",
-      "githubLanguage": "Zig",
       "npmVersion": "1.6.0",
       "npmLastPublished": "2026-08-31T09:31:51.783Z",
+      "githubStars": 42041,
+      "githubOpenIssues": 54,
+      "githubArchived": false,
+      "githubLastPush": "2026-11-14T06:38:40Z",
+      "githubLanguage": "Zig",
       "healthScore": 100
     },
     {
@@ -810,8 +837,8 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/markitdown",
-      "githubStars": 194324,
-      "githubOpenIssues": 328,
+      "githubStars": 195336,
+      "githubOpenIssues": 321,
       "githubArchived": false,
       "githubLastPush": "2026-11-07T00:14:01Z",
       "githubLanguage": "Python",
@@ -843,10 +870,10 @@
         "copilot"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Workflows/matpocock",
-      "githubStars": 317689,
-      "githubOpenIssues": 197,
+      "githubStars": 324197,
+      "githubOpenIssues": 218,
       "githubArchived": false,
-      "githubLastPush": "2026-11-05T10:40:01Z",
+      "githubLastPush": "2026-11-13T12:30:31Z",
       "githubLanguage": "Shell",
       "healthScore": 75
     },
@@ -875,14 +902,14 @@
         "cursor"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Prompt-Library/modern-web-guidance",
-      "githubStars": 1233,
-      "githubOpenIssues": 326,
+      "npmVersion": "1.0.0",
+      "npmLastPublished": "2026-11-10T03:29:19.190Z",
+      "githubStars": 5438,
+      "githubOpenIssues": 304,
       "githubArchived": false,
-      "githubLastPush": "2026-11-08T00:05:31Z",
+      "githubLastPush": "2026-11-14T02:08:33Z",
       "githubLanguage": "TypeScript",
-      "npmVersion": "0.0.197",
-      "npmLastPublished": "2026-11-02T15:15:26.593Z",
-      "healthScore": 94
+      "healthScore": 98
     },
     {
       "id": "notebooklm",
@@ -925,10 +952,10 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/obscura",
-      "githubStars": 30517,
-      "githubOpenIssues": 115,
+      "githubStars": 35284,
+      "githubOpenIssues": 136,
       "githubArchived": false,
-      "githubLastPush": "2026-11-07T23:56:49Z",
+      "githubLastPush": "2026-11-14T10:15:25Z",
       "githubLanguage": "Rust",
       "healthScore": 75
     },
@@ -953,11 +980,11 @@
         "claude-code"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/obsidian-skills-setup",
-      "githubStars": 50961,
-      "githubOpenIssues": 38,
+      "githubStars": 52430,
+      "githubOpenIssues": 2,
       "githubArchived": false,
-      "githubLastPush": "2026-09-15T14:43:57Z",
-      "githubLanguage": null,
+      "githubLastPush": "2026-11-11T16:12:33Z",
+      "githubLanguage": "Shell",
       "healthScore": 75
     },
     {
@@ -982,13 +1009,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/oh-my-openagent",
-      "githubStars": 70772,
-      "githubOpenIssues": 1617,
+      "npmVersion": "5.1.70",
+      "npmLastPublished": "2026-11-14T07:57:48.609Z",
+      "githubStars": 70908,
+      "githubOpenIssues": 1843,
       "githubArchived": false,
-      "githubLastPush": "2026-11-08T00:04:38Z",
+      "githubLastPush": "2026-11-14T13:37:45Z",
       "githubLanguage": "TypeScript",
-      "npmVersion": "5.1.64",
-      "npmLastPublished": "2026-11-07T17:06:18.444Z",
       "healthScore": 100
     },
     {
@@ -1013,13 +1040,13 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Workflows/oh-my-opencode-slim",
-      "githubStars": 10148,
-      "githubOpenIssues": 36,
-      "githubArchived": false,
-      "githubLastPush": "2026-11-05T19:24:52Z",
-      "githubLanguage": "TypeScript",
       "npmVersion": "3.0.7",
       "npmLastPublished": "2026-11-04T19:15:21.739Z",
+      "githubStars": 10218,
+      "githubOpenIssues": 30,
+      "githubArchived": false,
+      "githubLastPush": "2026-11-14T13:02:17Z",
+      "githubLanguage": "TypeScript",
       "healthScore": 100
     },
     {
@@ -1053,13 +1080,13 @@
         "copilot"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Proxy/omniroute",
-      "githubStars": 85455,
-      "githubOpenIssues": 220,
-      "githubArchived": false,
-      "githubLastPush": "2026-11-07T22:36:08Z",
-      "githubLanguage": "TypeScript",
       "npmVersion": "3.8.53",
       "npmLastPublished": "2026-11-06T14:41:02.729Z",
+      "githubStars": 87321,
+      "githubOpenIssues": 199,
+      "githubArchived": false,
+      "githubLastPush": "2026-11-14T13:57:56Z",
+      "githubLanguage": "TypeScript",
       "healthScore": 100
     },
     {
@@ -1086,10 +1113,10 @@
         "oh-my-opencode-slim"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/opencode",
-      "githubStars": 225298,
-      "githubOpenIssues": 2652,
+      "githubStars": 226788,
+      "githubOpenIssues": 2573,
       "githubArchived": false,
-      "githubLastPush": "2026-11-07T23:31:38Z",
+      "githubLastPush": "2026-11-14T12:44:30Z",
       "githubLanguage": "TypeScript",
       "healthScore": 75
     },
@@ -1113,8 +1140,8 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/openfang",
-      "githubStars": 18242,
-      "githubOpenIssues": 76,
+      "githubStars": 18252,
+      "githubOpenIssues": 77,
       "githubArchived": false,
       "githubLastPush": "2026-07-02T08:13:12Z",
       "githubLanguage": "Rust",
@@ -1144,10 +1171,10 @@
         "cursor"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Workflows/opensre",
-      "githubStars": 12749,
-      "githubOpenIssues": 47,
+      "githubStars": 12828,
+      "githubOpenIssues": 10,
       "githubArchived": false,
-      "githubLastPush": "2026-11-07T00:51:51Z",
+      "githubLastPush": "2026-11-14T07:26:39Z",
       "githubLanguage": "Python",
       "healthScore": 75
     },
@@ -1170,13 +1197,13 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/openui",
-      "githubStars": 14929,
-      "githubOpenIssues": 74,
+      "npmVersion": "1.1.1",
+      "npmLastPublished": "2026-11-12T15:24:06.401Z",
+      "githubStars": 15205,
+      "githubOpenIssues": 83,
       "githubArchived": false,
-      "githubLastPush": "2026-11-07T08:20:04Z",
+      "githubLastPush": "2026-11-13T11:44:01Z",
       "githubLanguage": "TypeScript",
-      "npmVersion": "1.1.0",
-      "npmLastPublished": "2026-11-04T12:32:55.554Z",
       "healthScore": 100
     },
     {
@@ -1203,13 +1230,13 @@
         "gemini-cli"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/ponytail",
-      "githubStars": 186377,
-      "githubOpenIssues": 75,
+      "npmVersion": "5.3.3",
+      "npmLastPublished": "2026-10-29T03:08:20.518Z",
+      "githubStars": 190649,
+      "githubOpenIssues": 99,
       "githubArchived": false,
       "githubLastPush": "2026-10-29T11:59:31Z",
       "githubLanguage": "JavaScript",
-      "npmVersion": "5.3.3",
-      "npmLastPublished": "2026-10-29T03:08:20.518Z",
       "healthScore": 100
     },
     {
@@ -1232,8 +1259,8 @@
       ],
       "supportedBy": [],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/presenton",
-      "githubStars": 11790,
-      "githubOpenIssues": 19,
+      "githubStars": 11897,
+      "githubOpenIssues": 21,
       "githubArchived": false,
       "githubLastPush": "2026-11-06T05:46:19Z",
       "githubLanguage": "TypeScript",
@@ -1315,13 +1342,13 @@
         "cline"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/remotion-skills",
-      "githubStars": 71517,
-      "githubOpenIssues": 174,
+      "npmVersion": "4.0.543",
+      "npmLastPublished": "2026-11-11T16:43:12.300Z",
+      "githubStars": 73114,
+      "githubOpenIssues": 154,
       "githubArchived": false,
-      "githubLastPush": "2026-11-07T15:58:09Z",
+      "githubLastPush": "2026-11-14T13:06:03Z",
       "githubLanguage": "TypeScript",
-      "npmVersion": "4.0.541",
-      "npmLastPublished": "2026-11-05T08:00:25.694Z",
       "healthScore": 100
     },
     {
@@ -1346,10 +1373,10 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/rtk",
-      "githubStars": 85835,
-      "githubOpenIssues": 927,
+      "githubStars": 86549,
+      "githubOpenIssues": 935,
       "githubArchived": false,
-      "githubLastPush": "2026-11-07T15:25:51Z",
+      "githubLastPush": "2026-11-14T07:50:26Z",
       "githubLanguage": "Rust",
       "healthScore": 75
     },
@@ -1371,10 +1398,10 @@
         "markdown"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/scrapling",
-      "githubStars": 99319,
-      "githubOpenIssues": 3,
+      "githubStars": 102695,
+      "githubOpenIssues": 6,
       "githubArchived": false,
-      "githubLastPush": "2026-11-05T18:01:47Z",
+      "githubLastPush": "2026-11-11T19:16:10Z",
       "githubLanguage": "Python",
       "healthScore": 75
     },
@@ -1401,10 +1428,10 @@
         "copilot"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/skillopt",
-      "githubStars": 18937,
-      "githubOpenIssues": 33,
+      "githubStars": 19075,
+      "githubOpenIssues": 40,
       "githubArchived": false,
-      "githubLastPush": "2026-11-07T12:57:49Z",
+      "githubLastPush": "2026-11-10T20:10:50Z",
       "githubLanguage": "Python",
       "healthScore": 75
     },
@@ -1563,10 +1590,10 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Agents/tuxee",
-      "githubStars": 376,
-      "githubOpenIssues": 0,
+      "githubStars": 414,
+      "githubOpenIssues": 1,
       "githubArchived": false,
-      "githubLastPush": "2026-11-05T21:03:14Z",
+      "githubLastPush": "2026-11-09T21:17:58Z",
       "githubLanguage": "JavaScript",
       "healthScore": 66
     },
@@ -1597,10 +1624,10 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Tools/understand-anything",
-      "githubStars": 91260,
-      "githubOpenIssues": 129,
+      "githubStars": 92589,
+      "githubOpenIssues": 134,
       "githubArchived": false,
-      "githubLastPush": "2026-11-07T05:37:08Z",
+      "githubLastPush": "2026-11-13T03:17:33Z",
       "githubLanguage": "TypeScript",
       "healthScore": 75
     },
@@ -1644,7 +1671,7 @@
         "opencode"
       ],
       "docPath": "/docs/Develop-Code/AI-Development/Skills/webwright",
-      "githubStars": 6094,
+      "githubStars": 6097,
       "githubOpenIssues": 16,
       "githubArchived": false,
       "githubLastPush": "2026-10-27T03:03:47Z",
