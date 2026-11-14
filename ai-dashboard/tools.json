@@ -38,6 +38,27 @@
     "docPath": "/docs/Develop-Code/AI-Development/Agents/ai-agency"
   },
   {
+    "id": "agentgateway",
+    "name": "Agentgateway",
+    "description": "Rust-based agentic proxy for MCP servers, A2A agents, and LLM providers. Tool federation, JWT/OAuth auth, CEL per-tool authorization, rate limits, and OTLP observability.",
+    "category": "proxy",
+    "github": "https://github.com/agentgateway/agentgateway",
+    "npm": null,
+    "pip": null,
+    "install": "curl -sL https://agentgateway.dev/install | bash",
+    "site": "https://agentgateway.dev",
+    "license": "Apache-2.0",
+    "tags": [
+      "mcp",
+      "agents",
+      "proxy",
+      "gateway",
+      "security"
+    ],
+    "supportedBy": [],
+    "docPath": "/docs/Develop-Code/AI-Development/Tools/agentgateway"
+  },
+  {
     "id": "agentmemory",
     "name": "AgentMemory",
     "description": "Persistent memory runtime for AI coding agents — 95.2% retrieval accuracy, 92% fewer tokens, 53 MCP tools, 121 REST endpoints.",
