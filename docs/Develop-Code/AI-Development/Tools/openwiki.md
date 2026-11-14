@@ -222,3 +222,4 @@ For GitLab CI users, an equivalent `.gitlab-ci.yml` configuration is available i
 - [OpenWiki GitHub Repository](https://github.com/langchain-ai/openwiki) — Source code, CLI usage, and configuration options.
 - [Claude Code](../Agents/claude-code.md) — Anthropic's agentic CLI tool that reads AGENTS.md for repo context.
 - [OpenCode](../Agents/opencode.md) — Interactive CLI tool for software engineering tasks with agent instruction support.
+- [Karpathy's LLM Wiki](karpathy-llm-wiki.md) - The same compile-a-wiki approach applied to arbitrary sources rather than a codebase.
