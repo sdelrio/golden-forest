@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 
 The **LLM Wiki** approach moves beyond stateless RAG (Retrieval-Augmented Generation). Instead of rediscovering knowledge from scratch on every query, the LLM **incrementally builds a persistent wiki**—a structured codebase of knowledge that compounds over time.
 
-This article covers the knowledge layer. Where the rest of the vault goes, and how a human side stays read-only while the agent owns a machine side, is the subject of the companion article [Obsidian as a Backend, Not a Second Brain](./obsidian-as-a-backend.md).
+This article covers the knowledge layer. Where the rest of the vault goes, and how a human side stays read-only while the agent owns a machine side, is the subject of the companion article [Obsidian as a Backend, Not a Second Brain](./obsidian-as-a-backend.md). For the human side of the same vault - folders, file names, properties and tags that make a note findable without an agent - see [Organize Your Obsidian Vault](../../../Productivity/organize-obsidian-vault.md).
 
 :::tip
 *"You never write the wiki yourself — the LLM writes and maintains all of it. You're in charge of sourcing, exploration, and asking the right questions."*

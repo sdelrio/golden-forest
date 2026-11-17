@@ -20,7 +20,7 @@ import { Icon } from '@iconify/react';
 
 A second brain collects. You feed it every day and it feeds nothing back, so the notes turn into an archive you never reread. The vault in this article is built the other way around: plain Markdown files, frontmatter fields filled by scripts on a schedule, and agents that log their own work and read their own history before the next run.
 
-Once notes have structured frontmatter, you can build anything on top of them: agent workflows, dashboards, a custom front end. The vault stops being a visualizer and becomes a small database you own. The knowledge layer of that database is covered in [Obsidian Skills & LLM Wiki Setup](./obsidian-skills-setup.md); this article is the rest of the vault.
+Once notes have structured frontmatter, you can build anything on top of them: agent workflows, dashboards, a custom front end. The vault stops being a visualizer and becomes a small database you own. The knowledge layer of that database is covered in [Obsidian Skills & LLM Wiki Setup](./obsidian-skills-setup.md); this article is the rest of the vault. The human-facing conventions that make the same folders searchable by hand - naming, properties, tags and maps of content - are in [Organize Your Obsidian Vault](../../../Productivity/organize-obsidian-vault.md).
 
 :::info The three things that make it work
 1. Markdown files with frontmatter properties.
