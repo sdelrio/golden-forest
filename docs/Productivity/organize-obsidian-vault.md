@@ -276,7 +276,7 @@ The order matters less than the count: two or three of these cover the daily loo
 
 ## 🎨 Coloring Folders
 
-Obsidian has no built-in colour per folder. The colour comes from the **theme**, and a second plugin only gives you the controls. Blue Topaz is the usual pairing: it ships a feature called **Colorful folders**, and Style Settings exposes its settings in the UI.
+Obsidian has no built-in colour per folder. The colour comes from the **theme**, and Blue Topaz ships a feature called **Colorful folders** for it. The controls for that feature live in the **Style Settings** plugin, so install Style Settings too: without it the theme still applies its colours, but you cannot change the palette or the mode.
 
 Set the theme first, either in **Settings → Appearance → Themes** or directly in the vault's `.obsidian/appearance.json`:
 
@@ -284,7 +284,7 @@ Set the theme first, either in **Settings → Appearance → Themes** or directl
 "cssTheme": "Blue Topaz"
 ```
 
-Then open **Settings → Style Settings → Blue Topaz → 2.3.3.1 Colorful folder** to change the palette or the mode.
+Then open **Settings → Style Settings → Blue Topaz Theme**. Type `Toggle colorful folders` in the settings search box, or scroll to section **2.3.3.1 Colorful folder**, where the palette and the mode are set.
 
 **How the colours are assigned.** The theme CSS does not read your folder names. It assigns a colour to each top-level folder by its **position in the file explorer** and walks a palette in order. With the current default palette (`folder-colorful-six`) the sequence starts:
 
