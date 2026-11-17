@@ -257,6 +257,59 @@ Structure degrades quietly. Tags accumulate that no longer match how you think, 
 - **Archive sweep:** move completed projects and superseded references to `05 - Archive`. Empty `00 - Inbox`.
 - **Naming check:** batch-rename the outliers. Obsidian rewrites `[[wikilinks]]` on rename, so this is fast and safe inside the app. Fix scripts and agent instructions by hand.
 
+## 🧩 Plugins Worth Adding
+
+None of these are required to make the structure work. Each one replaces a manual step you would otherwise repeat by hand, which is the only reason to install it.
+
+| Plugin | What it replaces |
+|---|---|
+| Dataview | The manual dashboard. It queries the properties from the previous sections, so a project list is a query over `02 - Projects` instead of a note you maintain. |
+| Mermaid Tools | Starting every diagram from a blank code block. It gives you a snippet toolbar for Mermaid diagrams inside a note. |
+| Lean Terminal | Leaving the app to run a command. It embeds a real terminal in the workspace, for scripts that fill properties and for git on the vault repository. Desktop only. |
+| Style Settings | Hand-editing theme CSS. It exposes the settings a theme author prepared, including the folder colours below. |
+| Templater | Remembering to type the four properties. It inserts the template, variables and all, when a note is created. |
+| Calendar (Beta) | Hunting for yesterday's note. It adds a month grid over `01 - Notes/daily/`, which is the fastest jump when time is your retriever. |
+| Full Calendar | Meeting notes that live outside time. It renders calendars inside a note, local or subscribed, so a meeting can sit on a real schedule. |
+| Excalidraw | Describing a sketch in words. It gives you a drawing canvas as a note, which is the one content type a folder tree handles badly. |
+
+The order matters less than the count: two or three of these cover the daily loop. A vault with twelve plugins that overlap is a second maintenance job, and the quarterly review will not save it.
+
+## 🎨 Coloring Folders
+
+Obsidian has no built-in colour per folder. The colour comes from the **theme**, and a second plugin only gives you the controls. Blue Topaz is the usual pairing: it ships a feature called **Colorful folders**, and Style Settings exposes its settings in the UI.
+
+Set the theme first, either in **Settings → Appearance → Themes** or directly in the vault's `.obsidian/appearance.json`:
+
+```json
+"cssTheme": "Blue Topaz"
+```
+
+Then open **Settings → Style Settings → Blue Topaz → 2.3.3.1 Colorful folder** to change the palette or the mode.
+
+**How the colours are assigned.** The theme CSS does not read your folder names. It assigns a colour to each top-level folder by its **position in the file explorer** and walks a palette in order. With the current default palette (`folder-colorful-six`) the sequence starts:
+
+| Position | Colour | Hex |
+|---|---|---|
+| 1 | Red | `#fc5c65` |
+| 2 | Orange | `#fd9644` |
+| 3 | Yellow | `#fed330` |
+| 4 | Green | `#26de81` |
+| 5 | Teal | `#2bcbba` |
+
+The first folder is red, the second orange, and a new folder that sorts after the second becomes third and turns yellow.
+
+Three consequences to know before you rely on it:
+
+- **Colours follow order, not names.** Renaming or moving a folder shifts the colour of every folder after it. Insert one folder near the top of the tree and the whole column of colours moves down one.
+- **The palette repeats.** With the current default the sequence restarts after twenty folders, so folder twenty-one looks like folder one.
+- **The default mode is Border.** Only the folder name text and the left border are tinted, not the whole row, which is why the file explorer stays readable at a glance.
+
+If you want a fixed colour on one specific folder, and want it to survive reordering, this is the wrong tool. Use a separate plugin such as **File Color**, which stores the colour with the item instead of deriving it from position.
+
+:::warning Colour is decoration, not metadata
+A colour derived from position is not a type system. Do not use folder colours to encode project status or priority: the moment you archive a folder or add one above it, the colours lie. Colour is a scan aid. The `type` and `status` properties are what you query.
+:::
+
 ## 🤖 When an Agent Reads the Vault Too
 
 This layout optimizes for a human doing the retrieving. The moment an agent also writes into the vault, add one constraint: an `AGENTS.md` (or `CLAUDE.md`) at the root of every folder an agent may enter, stating what lives there, what it may write, and how to run the work that belongs to the folder. Without it, the agent loads the whole tree, and more context does not mean better answers.
