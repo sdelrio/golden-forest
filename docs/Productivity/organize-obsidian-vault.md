@@ -13,6 +13,10 @@ The problem is rarely the app. It is that most vaults are organized like a filin
 
 This article builds a vault around those four retrieval dimensions: a seven-folder structure, a file naming convention, structured properties, namespaced tags, maps of content, an inbox loop and a maintenance review. It is the human side of the vault. If agents also read or write it, the companion articles [Obsidian as a Backend, Not a Second Brain](../Develop-Code/AI-Development/Skills/obsidian-as-a-backend.md) and [Obsidian Skills & LLM Wiki Setup](../Develop-Code/AI-Development/Skills/obsidian-skills-setup.md) cover the machine side.
 
+![Diagram of the whole system: a numbered vault tree from 00 - Inbox through 06 - System with its subfolders, the test each folder accepts, six principles that keep retrieval working, the five-step daily flow, and what the system buys you](/img/obsidian-vault-structure.svg)
+
+The rest of this article is the reasoning behind each panel of that diagram.
+
 ## 🧠 Organize for Retrieval, not for Storage
 
 Two goals produce two different architectures:
