@@ -238,7 +238,7 @@ The overlap is real and it is where this setup breaks. Both plugins have a brain
 
 ### Superpowers In More Detail
 
-Superpowers is Jesse Vincent's MIT-licensed plugin, built by Prime Radiant. It sells itself as a methodology rather than a tool: a set of composable skills plus a bootstrap instruction that makes the agent check for a relevant skill before starting any task, so the skills fire by description instead of by command.
+Superpowers is Jesse Vincent's MIT-licensed plugin, built by Prime Radiant. It sells itself as a methodology rather than a tool: a set of composable skills plus a bootstrap instruction that makes the agent check for a relevant skill before starting any task, so the skills fire by description instead of by command. The [Superpowers deep dive](superpowers.md) covers the full skill set, harness setup, and how it compares with Matt Pocock's skills.
 
 For Claude Code:
 
