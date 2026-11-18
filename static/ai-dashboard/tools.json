@@ -1314,6 +1314,32 @@
     "docPath": "/docs/Develop-Code/AI-Development/Skills/skills-sh"
   },
   {
+    "id": "superpowers",
+    "name": "Superpowers",
+    "description": "Jesse Vincent's MIT-licensed plugin that turns agent skills into a full development methodology: brainstorming and an approved design, a worktree, bite-sized plans, TDD, one subagent per task, review between tasks, and a branch finish.",
+    "category": "workflows",
+    "github": "https://github.com/obra/superpowers",
+    "npm": null,
+    "pip": null,
+    "install": "/plugin install superpowers@claude-plugins-official",
+    "site": "https://primeradiant.com/superpowers/",
+    "license": "MIT",
+    "tags": [
+      "workflow",
+      "skills",
+      "tdd",
+      "subagents",
+      "brainstorming",
+      "methodology"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "codex",
+      "opencode"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Workflows/superpowers"
+  },
+  {
     "id": "system-prompts",
     "name": "System Prompts & Personas",
     "description": "Framework for system prompt analysis and persona construction with constraint layers, tool orchestration, and reasoning buffers.",
