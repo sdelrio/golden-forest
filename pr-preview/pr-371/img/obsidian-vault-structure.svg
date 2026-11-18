@@ -1,0 +1,279 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1010" role="img" aria-labelledby="obsidian-vault-title" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+  <title id="obsidian-vault-title">How to organize an Obsidian vault for retrieval. A seven-folder structure - 00 Inbox as the processing queue, 01 Notes holding daily, meetings, books and courses, 02 Projects with an end date, 03 Areas with no end date, 04 Resources as your personal wiki, 05 Archive for inactive notes, 06 System for templates, maps of content and attachments - plus .obsidian and an optional AGENTS.md. Each folder has a test for what it accepts. Six principles: filter instead of filing, one naming rule, properties as the database, tags that earn their place, archive instead of deleting, and a quarterly review. A daily flow of capture, process, name and file, fill properties, then review. The payoff is finding a note in seconds instead of searching for minutes.</title>
+  <defs>
+    <marker id="ov-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#58a6ff"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="1010" rx="18" fill="#0d1117"/>
+
+  <text x="640" y="52" text-anchor="middle" font-size="26" font-weight="700" fill="#e6edf3">How to Organize Your Obsidian Vault</text>
+  <text x="640" y="80" text-anchor="middle" font-size="13.5" fill="#8b949e">So you can always find what you need: seven folders, one naming rule, four properties, three tag namespaces.</text>
+
+  <!-- vault structure -->
+  <rect x="40" y="104" width="460" height="600" rx="14" fill="#161b22" stroke="#30363d"/>
+  <text x="64" y="136" font-size="12" font-weight="600" letter-spacing="1.2" fill="#8b949e">VAULT STRUCTURE</text>
+  <text x="64" y="158" font-size="11.5" fill="#8b949e">numbered, so the order never depends on a letter</text>
+
+  <g stroke="#30363d" stroke-width="1.2" fill="none">
+    <!-- depth 1 spine -->
+    <line x1="76" y1="198" x2="76" y2="650"/>
+    <line x1="76" y1="198" x2="84" y2="198"/>
+    <line x1="76" y1="214" x2="84" y2="214"/>
+    <line x1="76" y1="230" x2="84" y2="230"/>
+    <line x1="76" y1="294" x2="84" y2="294"/>
+    <line x1="76" y1="326" x2="84" y2="326"/>
+    <line x1="76" y1="422" x2="84" y2="422"/>
+    <line x1="76" y1="502" x2="84" y2="502"/>
+    <line x1="76" y1="566" x2="84" y2="566"/>
+    <line x1="76" y1="630" x2="84" y2="630"/>
+    <line x1="76" y1="646" x2="84" y2="646"/>
+    <!-- 01 - Notes -->
+    <line x1="96" y1="230" x2="96" y2="278"/>
+    <line x1="96" y1="246" x2="104" y2="246"/>
+    <line x1="96" y1="262" x2="104" y2="262"/>
+    <line x1="96" y1="278" x2="104" y2="278"/>
+    <!-- 02 - Projects -->
+    <line x1="96" y1="298" x2="96" y2="312"/>
+    <line x1="96" y1="312" x2="104" y2="312"/>
+    <!-- 03 - Areas -->
+    <line x1="96" y1="342" x2="96" y2="406"/>
+    <line x1="96" y1="342" x2="104" y2="342"/>
+    <line x1="96" y1="358" x2="104" y2="358"/>
+    <line x1="96" y1="374" x2="104" y2="374"/>
+    <line x1="96" y1="390" x2="104" y2="390"/>
+    <line x1="96" y1="406" x2="104" y2="406"/>
+    <!-- 04 - Resources -->
+    <line x1="96" y1="438" x2="96" y2="486"/>
+    <line x1="96" y1="438" x2="104" y2="438"/>
+    <line x1="96" y1="454" x2="104" y2="454"/>
+    <line x1="96" y1="470" x2="104" y2="470"/>
+    <line x1="96" y1="486" x2="104" y2="486"/>
+    <!-- 05 - Archive -->
+    <line x1="96" y1="518" x2="96" y2="550"/>
+    <line x1="96" y1="518" x2="104" y2="518"/>
+    <line x1="96" y1="534" x2="104" y2="534"/>
+    <line x1="96" y1="550" x2="104" y2="550"/>
+    <!-- 06 - System -->
+    <line x1="96" y1="582" x2="96" y2="614"/>
+    <line x1="96" y1="582" x2="104" y2="582"/>
+    <line x1="96" y1="598" x2="104" y2="598"/>
+    <line x1="96" y1="614" x2="104" y2="614"/>
+  </g>
+
+  <g font-size="12.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <text x="64" y="186" fill="#e6edf3" font-weight="600">my-vault/</text>
+    <text x="88" y="202" fill="#d29922" font-weight="600">00 - Inbox/</text>
+    <text x="88" y="218" fill="#3fb950" font-weight="600">01 - Notes/</text>
+    <text x="108" y="234" fill="#8b949e">daily/</text>
+    <text x="108" y="250" fill="#8b949e">meetings/</text>
+    <text x="108" y="266" fill="#8b949e">books/</text>
+    <text x="108" y="282" fill="#8b949e">courses/</text>
+    <text x="88" y="298" fill="#58a6ff" font-weight="600">02 - Projects/</text>
+    <text x="108" y="314" fill="#8b949e">website-launch/</text>
+    <text x="88" y="330" fill="#bc8cff" font-weight="600">03 - Areas/</text>
+    <text x="108" y="346" fill="#8b949e">career/</text>
+    <text x="108" y="362" fill="#8b949e">finance/</text>
+    <text x="108" y="378" fill="#8b949e">health/</text>
+    <text x="108" y="394" fill="#8b949e">learning/</text>
+    <text x="108" y="410" fill="#8b949e">relationships/</text>
+    <text x="88" y="426" fill="#39c5cf" font-weight="600">04 - Resources/</text>
+    <text x="108" y="442" fill="#8b949e">topics/</text>
+    <text x="108" y="458" fill="#8b949e">people/</text>
+    <text x="108" y="474" fill="#8b949e">places/</text>
+    <text x="108" y="490" fill="#8b949e">tools/</text>
+    <text x="88" y="506" fill="#8b949e" font-weight="600">05 - Archive/</text>
+    <text x="108" y="522" fill="#8b949e">projects/</text>
+    <text x="108" y="538" fill="#8b949e">notes/</text>
+    <text x="108" y="554" fill="#8b949e">resources/</text>
+    <text x="88" y="570" fill="#f778ba" font-weight="600">06 - System/</text>
+    <text x="108" y="586" fill="#8b949e">templates/</text>
+    <text x="108" y="602" fill="#8b949e">MOCs/</text>
+    <text x="108" y="618" fill="#8b949e">attachments/</text>
+    <text x="88" y="634" fill="#8b949e">.obsidian/</text>
+    <text x="88" y="650" fill="#8b949e">AGENTS.md</text>
+  </g>
+
+  <g font-size="10.5" fill="#484f58" text-anchor="end">
+    <text x="476" y="202">processing queue</text>
+    <text x="476" y="218">time is the index</text>
+    <text x="476" y="298">has an end date</text>
+    <text x="476" y="330">no end date</text>
+    <text x="476" y="426">your own wiki</text>
+    <text x="476" y="506">kept, not deleted</text>
+    <text x="476" y="570">infrastructure</text>
+    <text x="476" y="634">app config</text>
+    <text x="476" y="650">only if agents read it</text>
+  </g>
+
+  <text x="64" y="682" font-size="11" fill="#8b949e">Two entries you never create on purpose: .obsidian/ and the attachments folder.</text>
+
+  <!-- what each folder is for -->
+  <rect x="520" y="104" width="360" height="600" rx="14" fill="#161b22" stroke="#30363d"/>
+  <text x="544" y="136" font-size="12" font-weight="600" letter-spacing="1.2" fill="#8b949e">WHAT EACH FOLDER IS FOR</text>
+  <text x="544" y="158" font-size="11.5" fill="#8b949e">the test a note has to pass to enter</text>
+
+  <g font-size="11" fill="#8b949e">
+    <rect x="544" y="180" width="3" height="40" rx="1.5" fill="#d29922"/>
+    <text x="560" y="196" font-size="12.5" font-weight="600" fill="#e6edf3">00 - Inbox</text>
+    <text x="560" y="212">You do not know the type yet, or you are</text>
+    <text x="560" y="226">capturing faster than you can file.</text>
+
+    <rect x="544" y="246" width="3" height="40" rx="1.5" fill="#3fb950"/>
+    <text x="560" y="262" font-size="12.5" font-weight="600" fill="#e6edf3">01 - Notes</text>
+    <text x="560" y="278">Tied to a moment in time: a day, a meeting,</text>
+    <text x="560" y="292">a book, a course session.</text>
+
+    <rect x="544" y="312" width="3" height="40" rx="1.5" fill="#58a6ff"/>
+    <text x="560" y="328" font-size="12.5" font-weight="600" fill="#e6edf3">02 - Projects</text>
+    <text x="560" y="344">A defined outcome that will finish, then the</text>
+    <text x="560" y="358">folder moves to Archive.</text>
+
+    <rect x="544" y="378" width="3" height="40" rx="1.5" fill="#bc8cff"/>
+    <text x="560" y="394" font-size="12.5" font-weight="600" fill="#e6edf3">03 - Areas</text>
+    <text x="560" y="410">Responsibility with no end date: career,</text>
+    <text x="560" y="424">finance, health, learning.</text>
+
+    <rect x="544" y="444" width="3" height="40" rx="1.5" fill="#39c5cf"/>
+    <text x="560" y="460" font-size="12.5" font-weight="600" fill="#e6edf3">04 - Resources</text>
+    <text x="560" y="476">Reference you consult later: a topic, a</text>
+    <text x="560" y="490">person, a place, a tool.</text>
+
+    <rect x="544" y="510" width="3" height="40" rx="1.5" fill="#8b949e"/>
+    <text x="560" y="526" font-size="12.5" font-weight="600" fill="#e6edf3">05 - Archive</text>
+    <text x="560" y="542">Complete, outdated or superseded, but</text>
+    <text x="560" y="556">still worth keeping.</text>
+
+    <rect x="544" y="576" width="3" height="40" rx="1.5" fill="#f778ba"/>
+    <text x="560" y="592" font-size="12.5" font-weight="600" fill="#e6edf3">06 - System</text>
+    <text x="560" y="608">Infrastructure, not knowledge: templates,</text>
+    <text x="560" y="622">maps of content, attachments.</text>
+  </g>
+
+  <text x="544" y="660" font-size="11" font-weight="600" fill="#e6edf3">Projects finish. Areas never do.</text>
+  <text x="544" y="680" font-size="11" fill="#8b949e">Filing a responsibility as a project leaves</text>
+  <text x="544" y="694" font-size="11" fill="#8b949e">a folder that never closes.</text>
+
+  <!-- principles -->
+  <rect x="900" y="104" width="340" height="600" rx="14" fill="#161b22" stroke="#30363d"/>
+  <text x="924" y="136" font-size="12" font-weight="600" letter-spacing="1.2" fill="#8b949e">PRINCIPLES THAT KEEP YOU FINDING</text>
+  <text x="924" y="158" font-size="11.5" fill="#8b949e">six rules, no more</text>
+
+  <g font-size="11" fill="#8b949e">
+    <circle cx="929" cy="172" r="3.5" fill="#58a6ff"/>
+    <text x="944" y="176" font-size="12.5" font-weight="600" fill="#e6edf3">Filter, do not file</text>
+    <text x="944" y="192">Folders stay coarse. Metadata does</text>
+    <text x="944" y="206">the narrow searching.</text>
+
+    <circle cx="929" cy="246" r="3.5" fill="#58a6ff"/>
+    <text x="944" y="250" font-size="12.5" font-weight="600" fill="#e6edf3">One naming rule</text>
+    <text x="944" y="266">Date prefix where time is the retriever,</text>
+    <text x="944" y="280">plain title everywhere else.</text>
+
+    <circle cx="929" cy="320" r="3.5" fill="#58a6ff"/>
+    <text x="944" y="324" font-size="12.5" font-weight="600" fill="#e6edf3">Properties are the database</text>
+    <text x="944" y="340">type, status, date, tags. A closed</text>
+    <text x="944" y="354">vocabulary, never synonyms.</text>
+
+    <circle cx="929" cy="394" r="3.5" fill="#58a6ff"/>
+    <text x="944" y="398" font-size="12.5" font-weight="600" fill="#e6edf3">Tags earn their place</text>
+    <text x="944" y="414">A tag needs five notes. Never mirror</text>
+    <text x="944" y="428">a property in a tag.</text>
+
+    <circle cx="929" cy="468" r="3.5" fill="#58a6ff"/>
+    <text x="944" y="472" font-size="12.5" font-weight="600" fill="#e6edf3">Archive, never delete</text>
+    <text x="944" y="488">Storage is cheap. Recovering a</text>
+    <text x="944" y="502">deleted note is not.</text>
+
+    <circle cx="929" cy="542" r="3.5" fill="#58a6ff"/>
+    <text x="944" y="546" font-size="12.5" font-weight="600" fill="#e6edf3">Review, or it rots</text>
+    <text x="944" y="562">Quarterly: merge small folders, archive</text>
+    <text x="944" y="576">closed work, empty the inbox.</text>
+  </g>
+
+  <rect x="924" y="600" width="292" height="52" rx="8" fill="#21262d" stroke="#30363d"/>
+  <text x="940" y="621" font-size="11" fill="#e6edf3">Before adopting any convention, ask:</text>
+  <text x="940" y="638" font-size="11" fill="#58a6ff">will this find the note faster than search?</text>
+
+  <text x="924" y="678" font-size="11" fill="#8b949e">If the answer is no, it is decoration.</text>
+
+  <!-- daily flow -->
+  <rect x="40" y="724" width="760" height="208" rx="14" fill="#161b22" stroke="#30363d"/>
+  <text x="64" y="756" font-size="12" font-weight="600" letter-spacing="1.2" fill="#8b949e">A SIMPLE DAILY FLOW</text>
+  <text x="64" y="776" font-size="11.5" fill="#8b949e">fifteen minutes at the end of the day</text>
+
+  <g>
+    <rect x="64" y="794" width="120" height="112" rx="10" fill="#21262d" stroke="#30363d"/>
+    <text x="80" y="814" font-size="10" font-weight="700" fill="#d29922">1</text>
+    <text x="80" y="834" font-size="12" font-weight="600" fill="#e6edf3">Capture</text>
+    <text x="80" y="852" font-size="10" fill="#8b949e">everything into</text>
+    <text x="80" y="866" font-size="10" fill="#8b949e">Inbox, with</text>
+    <text x="80" y="880" font-size="10" fill="#8b949e">today's date</text>
+
+    <line x1="186" y1="850" x2="204" y2="850" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#ov-arrow)"/>
+
+    <rect x="210" y="794" width="120" height="112" rx="10" fill="#21262d" stroke="#30363d"/>
+    <text x="226" y="814" font-size="10" font-weight="700" fill="#3fb950">2</text>
+    <text x="226" y="834" font-size="12" font-weight="600" fill="#e6edf3">Process</text>
+    <text x="226" y="852" font-size="10" fill="#8b949e">what type is it?</text>
+    <text x="226" y="866" font-size="10" fill="#8b949e">does it already</text>
+    <text x="226" y="880" font-size="10" fill="#8b949e">have a home?</text>
+
+    <line x1="332" y1="850" x2="350" y2="850" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#ov-arrow)"/>
+
+    <rect x="356" y="794" width="120" height="112" rx="10" fill="#21262d" stroke="#30363d"/>
+    <text x="372" y="814" font-size="10" font-weight="700" fill="#58a6ff">3</text>
+    <text x="372" y="834" font-size="12" font-weight="600" fill="#e6edf3">Name and file</text>
+    <text x="372" y="852" font-size="10" fill="#8b949e">YYYY-MM-DD-</text>
+    <text x="372" y="866" font-size="10" fill="#8b949e">type-topic.md</text>
+    <text x="372" y="880" font-size="10" fill="#8b949e">then move it</text>
+
+    <line x1="478" y1="850" x2="496" y2="850" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#ov-arrow)"/>
+
+    <rect x="502" y="794" width="120" height="112" rx="10" fill="#21262d" stroke="#30363d"/>
+    <text x="518" y="814" font-size="10" font-weight="700" fill="#bc8cff">4</text>
+    <text x="518" y="834" font-size="12" font-weight="600" fill="#e6edf3">Properties</text>
+    <text x="518" y="852" font-size="10" fill="#8b949e">type, status,</text>
+    <text x="518" y="866" font-size="10" fill="#8b949e">date, tags.</text>
+    <text x="518" y="880" font-size="10" fill="#8b949e">link it once</text>
+
+    <line x1="624" y1="850" x2="642" y2="850" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#ov-arrow)"/>
+
+    <rect x="648" y="794" width="120" height="112" rx="10" fill="#21262d" stroke="#30363d"/>
+    <text x="664" y="814" font-size="10" font-weight="700" fill="#39c5cf">5</text>
+    <text x="664" y="834" font-size="12" font-weight="600" fill="#e6edf3">Review</text>
+    <text x="664" y="852" font-size="10" fill="#8b949e">empty the inbox,</text>
+    <text x="664" y="866" font-size="10" fill="#8b949e">archive what</text>
+    <text x="664" y="880" font-size="10" fill="#8b949e">finished</text>
+  </g>
+
+  <text x="64" y="918" font-size="10.5" fill="#8b949e">An inbox with three-week-old notes is a to-do list you are avoiding.</text>
+
+  <!-- benefits -->
+  <rect x="820" y="724" width="420" height="208" rx="14" fill="#161b22" stroke="#30363d"/>
+  <text x="844" y="756" font-size="12" font-weight="600" letter-spacing="1.2" fill="#8b949e">WHY IT PAYS OFF</text>
+  <text x="844" y="776" font-size="11.5" fill="#8b949e">what a retrieval-first vault gives you</text>
+
+  <g font-size="10.5" fill="#8b949e">
+    <circle cx="849" cy="798" r="3.5" fill="#3fb950"/>
+    <text x="864" y="802" font-size="12" font-weight="600" fill="#e6edf3">Find it in seconds</text>
+    <text x="864" y="818">the folder, the date, the tag</text>
+
+    <circle cx="849" cy="846" r="3.5" fill="#d29922"/>
+    <text x="864" y="850" font-size="12" font-weight="600" fill="#e6edf3">One habit, not ten</text>
+    <text x="864" y="866">everything enters a single inbox</text>
+
+    <circle cx="1046" cy="798" r="3.5" fill="#58a6ff"/>
+    <text x="1061" y="802" font-size="12" font-weight="600" fill="#e6edf3">Scales past a thousand</text>
+    <text x="1061" y="818">metadata, no rebuild</text>
+
+    <circle cx="1046" cy="846" r="3.5" fill="#bc8cff"/>
+    <text x="1061" y="850" font-size="12" font-weight="600" fill="#e6edf3">Less mental load</text>
+    <text x="1061" y="866">less to hold in your head</text>
+  </g>
+
+  <text x="844" y="902" font-size="10.5" fill="#8b949e">Under a couple of hundred notes, a flat folder and search is faster.</text>
+
+  <text x="640" y="972" text-anchor="middle" font-size="12.5" fill="#8b949e">Do this consistently and retrieval stops being a search problem.</text>
+</svg>
