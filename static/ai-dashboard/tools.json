@@ -405,7 +405,8 @@
       "google",
       "claude-code",
       "codex",
-      "subagents"
+      "subagents",
+      "superpowers"
     ],
     "supportedBy": [
       "claude-code",

@@ -184,6 +184,82 @@ The process pays for itself where the blast radius of a wrong assumption is larg
 
 Where it is overkill: small bug fixes, a config tweak, a dependency bump, a typo in a dashboard. If the change is clear and the risk is contained, the document is pure overhead. The skills are standalone, so you can use `egm-review` alone on an existing doc, or `egm-bootstrap` once and never touch the rest.
 
+## Combining EGM With Superpowers
+
+EGM and Superpowers cover opposite ends of the same loop, which is why they compose. EGM is strongest before code exists and long after it shipped: it forces a design into a file, has it attacked by agents that never saw the conversation, and later checks whether the document still describes the repository. Superpowers is strongest during the build: isolated worktrees, small test-first tasks, a fresh subagent per task, review between tasks, and a clean finish on the branch.
+
+Nothing formal connects the two. Both are plugins of skills your harness discovers by description, so installing both is enough for the capabilities to be present. The cooperation is a convention you enforce, not an integration either project ships. That means the split only holds if you say who owns each phase.
+
+Cristian Calabro ran that split on a real feature, a documentation change to a CLI flag, and wrote up [the session](https://youtu.be/fUX9R5IONeI). EGM handled the brief, the design and the review, Superpowers handled the implementation, and a drift report closed the loop.
+
+### Who Owns What
+
+| Phase | Owner | Artifact |
+| :--- | :--- | :--- |
+| Shaping the idea | EGM `egm-brainstorm` | `concepts_brief.md` |
+| Writing the design | EGM `egm-draft` | `docs/designs/<feature>.md` |
+| Stress-testing the design | EGM `egm-review` then `egm-resolve` | Review report, revised design |
+| Implementation plan | Superpowers `writing-plans` | `docs/superpowers/plans/` |
+| Execution | Superpowers `subagent-driven-development` or `executing-plans` | Branch, worktree, commits |
+| Test discipline | Superpowers `test-driven-development` | Failing test first, then code |
+| Code review | Superpowers `requesting-code-review` | Findings per task, critical ones block |
+| Drift after ship | EGM `egm-drift-report` | Dated drift report |
+
+The rule of thumb: the design belongs to EGM, the build belongs to Superpowers, and the plan is a translation of an approved design rather than a second design.
+
+### A Concrete Workflow
+
+1. Shape the idea with `egm-brainstorm`. It asks the clarifying questions, runs the Goldfish lenses in parallel, and writes `concepts_brief.md`. Resolve the risks it raises inside the brief, not in chat.
+2. Draft with `egm-draft`. It writes `docs/designs/<feature>.md` one section at a time, pausing for approval after each, and closes with an implementation plan listing the files to touch.
+3. Review with `egm-review`, then `egm-resolve`. Reviewers only get the document and the files it references. You approve the design and merge it as a PR before any code exists.
+4. Hand the merged design to Superpowers `writing-plans`. Point it at the design document and tell it not to rediscover the problem. It breaks the work into tasks small enough to verify individually, with the test for each one named up front.
+5. Execute with Superpowers `subagent-driven-development`. It creates a worktree, dispatches a fresh subagent per task, runs RED-GREEN-REFACTOR, and reviews each task before moving on. `executing-plans` is the cheaper option when the work is small enough to hold in one context.
+6. Close the branch with `finishing-a-development-branch`, which verifies the tests and presents merge, PR or discard.
+7. Run `egm-drift-report` after the merge, and on the maintenance cadence described above.
+
+```bash
+# Design half, EGM skills are namespaced by the plugin
+/egm:egm-brainstorm <the idea, with the constraints you already know>
+/egm:egm-draft
+/egm:egm-review docs/designs/<feature>.md
+/egm:egm-resolve
+
+# Build half, Superpowers skills trigger from the request
+# "Use the approved design in docs/designs/<feature>.md, plan the implementation"
+# "Execute the plan with subagent-driven development"
+
+# After the merge
+/egm:egm-drift-report
+```
+
+:::warning
+The overlap is real and it is where this setup breaks. Both plugins have a brainstorming step, and both write a design document, into different folders: `docs/designs/` for EGM and `docs/superpowers/specs/` for Superpowers. Let both run the same phase and you get two specs, one of them stale by construction, and the agent will follow whichever it read last. Pick one owner per phase. If your repo already keeps specs under `docs/superpowers/specs/`, keep that as the only home and tell `egm-draft` to write there.
+:::
+
+### Superpowers In More Detail
+
+Superpowers is Jesse Vincent's MIT-licensed plugin, built by Prime Radiant. It sells itself as a methodology rather than a tool: a set of composable skills plus a bootstrap instruction that makes the agent check for a relevant skill before starting any task, so the skills fire by description instead of by command.
+
+For Claude Code:
+
+```bash
+/plugin install superpowers@claude-plugins-official
+```
+
+The [README](https://github.com/obra/superpowers) carries the install line for every other harness it supports, including Codex, Cursor, Gemini CLI, Copilot CLI, OpenCode and Antigravity. Install it separately per harness; it does not share state.
+
+The parts that matter next to EGM:
+
+- **`brainstorming`** draws out intent one question at a time, reads the existing code, offers two or three approaches, and writes the design document in the same skill. EGM separates those steps and routes the review through fresh contexts.
+- **`writing-plans`** produces tasks of a few minutes each, with exact file paths, complete code and a verification step. This is the piece EGM deliberately does not have.
+- **`subagent-driven-development`** dispatches a fresh subagent per task with a two-stage review, spec compliance first and code quality second. **`executing-plans`** is the one-context variant with a single review of the branch at the end.
+- **`test-driven-development`** enforces RED-GREEN-REFACTOR and deletes code written before its test. That is a stronger stance than EGM takes, which has no opinion on testing at all.
+- **A progress ledger** survives context loss, so a session that runs out of room can resume without re-planning. EGM keeps no ledger.
+
+What Superpowers does not have is an independent design critique or a doc-versus-code audit after the work is done; the [comparison below](#compared-with-spec-kit-openspec-and-superpowers) covers how each framework handles those two phases. They are exactly the gaps EGM fills, which is the argument for running both.
+
+The cost is real. You now carry two instruction sets in every session, both of which want to run first, and the number of phases roughly doubles. On a change that fits in one sitting, the pair is slower than either alone. It pays off where a wrong assumption is expensive and where the document outlives the ticket, which is the same test EGM uses on its own.
+
 ## Compared With Spec Kit, OpenSpec, and Superpowers
 
 Prakash Pandey's [17-minute comparison](https://youtu.be/6loAUS0TXOc) puts EGM next to GitHub's [Spec Kit](https://github.com/github/spec-kit), Fission AI's [OpenSpec](https://github.com/Fission-AI/OpenSpec), and [Superpowers](https://github.com/obra/superpowers). All four describe the same loop: research the problem, plan the solution, implement it, verify the result. What differs is where the discipline sits.
@@ -198,7 +274,7 @@ Prakash Pandey's [17-minute comparison](https://youtu.be/6loAUS0TXOc) puts EGM n
 
 **Design review is the sharpest difference.** The other three check their own artifacts, but none makes a fresh-context, multi-perspective design review a standard step before code. Superpowers comes closest: it can run an independent builder-check subagent on a larger written design, but the check is conditional and single-pass, not five stages with a synthesizer.
 
-**EGM says little about implementation, by design.** It sets no TDD requirement and keeps no task ledger, so tracking progress across sessions is on you. Spec Kit and OpenSpec give the agent a persistent `tasks.md`; Superpowers goes further with subagent-driven development and a progress ledger. The presenter's own next experiment is that split: an EGM-reviewed design handed to a Superpowers execution workflow, a combination he has not tried yet.
+**EGM says little about implementation, by design.** It sets no TDD requirement and keeps no task ledger, so tracking progress across sessions is on you. Spec Kit and OpenSpec give the agent a persistent `tasks.md`; Superpowers goes further with subagent-driven development and a progress ledger. That is exactly why the pairing in [Combining EGM With Superpowers](#combining-egm-with-superpowers) is worth trying: an EGM-reviewed design handed to a Superpowers execution workflow.
 
 **Drift detection is the other clear differentiator.** Spec Kit's `converge`, OpenSpec's `verify` and `archive`, and Superpowers' review-driven implementation all check the work against the plan. Only EGM ships a repeatable workflow for the later question: does the document still describe what the application does? You can build that yourself on top of OpenSpec's living specs or custom agent instructions, but you would be building it.
 
@@ -224,8 +300,11 @@ The guardrail that holds the whole thing together is the human gate. Goldfish pr
 - [egm.dev](https://egm.dev) - Project site.
 - [Getting Started Guide](https://github.com/google/elephant-goldfish-model/blob/main/docs/getting_started.md) - First install and first review.
 - [Harness and Setup Guide](https://github.com/google/elephant-goldfish-model/blob/main/docs/harnesses.md) - Which harnesses support fresh-context delegation.
+- [Superpowers](https://github.com/obra/superpowers) - Jesse Vincent's skills library and methodology, with the install command for each harness and the full skill reference.
 - [Dave Rensin: Elephants, Goldfish, and the New Golden Age of Software Engineering](https://medium.com/@drensin/elephants-goldfish-and-the-new-golden-age-of-software-engineering-c33641a48874) - The essay the model comes from.
 - [AI LABS: EGM, Google's New Way To Use Claude Code Is Insane](https://youtu.be/xxf6D9jynFw) - Community video that surfaced EGM. Useful as an introduction, not as a specification.
 - [Prakash Pandey: Elephant-Goldfish vs Spec Kit, OpenSpec & Superpowers](https://youtu.be/6loAUS0TXOc) - Five-axis comparison across context building, idea exploration, design review, implementation structure, and documentation drift.
+- [Cristian Calabro: Elephant-Goldfish Model + Obra's Superpowers: Better Together?](https://youtu.be/fUX9R5IONeI) - One-feature trial that uses EGM for the design and the drift report and Superpowers for the build.
+- [Cristian Calabro: How I used Google's Elephant-Goldfish Model and Superpowers to build one feature](https://dev.to/ccalabro/how-i-used-googles-elephant-goldfish-model-and-superpowers-to-build-one-feature-2h4a) - The written version of the same trial, with the commands and the artifacts each side produced.
 - [EGM walkthrough](https://youtu.be/skwZQRYAcrc) - Additional walkthrough of the Elephant-Goldfish Model and its review workflow.
 
