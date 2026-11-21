@@ -513,6 +513,22 @@
     "docPath": "/docs/Develop-Code/AI-Development/Proxy/freellmapi"
   },
   {
+    "id": "frontend-design-and-review-skills",
+    "name": "Frontend Design and Review Skills",
+    "description": "Roundup of five AI-agent repos for frontend design and review: Astryx, Modern Web Guidance, Open Code Review, Anthropic document skills and Plannotator, with install verdicts.",
+    "category": "tools",
+    "github": null,
+    "site": null,
+    "license": null,
+    "tags": [
+      "frontend",
+      "design",
+      "code-review",
+      "skills"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Tools/frontend-design-and-review-skills"
+  },
+  {
     "id": "gemini-prompts",
     "name": "45 Prompts for Gemini 3",
     "description": "45 curated prompts across 3 categories: Development, Content Creation, and Data Analysis for Google Gemini 3.",
