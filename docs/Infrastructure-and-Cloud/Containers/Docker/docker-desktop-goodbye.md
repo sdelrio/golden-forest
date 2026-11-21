@@ -5,6 +5,7 @@ sidebar_position: 1
 
 # Goodbye Docker Desktop
 
+For an Apple-native replacement that runs containers and local Kubernetes clusters as lightweight VMs, see [Apple Container Clusters](../apple-container-clusters.md).
 
 ## Unistall docker-desktop for Mac
 
