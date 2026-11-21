@@ -10,21 +10,13 @@ tags: [kubernetes, performance]
 
 ```mermaid
 
-  flowchart TB;
+  flowchart TB
 
     HPA --custom/metrics.k8s.io/v1beta1--> CMAPI[Custom Metrics API]
     CMAPI --> Prometheus
     Prometheus --/metrics--> Pods
 
-    classDef red fill:#eaa,stroke:#c00,stroke-width:2px
-    classDef green fill:#beb,stroke:#ada,stroke-width:2px
-    classDef blue fill:#bbe,stroke:#aad,stroke-width:2px
-
-
-    class HPA red
-    class CMAPI green
-    class Prometheus green
-    class Pods blue
+    class HPA highlight
 
 ```
 

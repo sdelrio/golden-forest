@@ -64,6 +64,11 @@ When I correct you, or you catch yourself making a mistake: before continuing, a
 - **Why it matters**: `remarkMath` + `rehypeKatex` are enabled in `docusaurus.config.js`. Two `$` on one line is math, and a bad equation is a silent rendering bug, not a build error.
 - **Rule**: Escape currency as `\$42` (or use an inline code span) whenever a line has two or more `$` before digits. `task check` runs `scripts/check-math-dollars.mjs` to catch this.
 
+### The swizzled Mermaid component must be keyed on the colour mode
+- **When**: 2026-11-21 - with an unkeyed renderer, dark mode showed 1 of 3 diagrams on the microservices page and the rest resolved to an empty SVG.
+- **Why it matters**: Docusaurus hydrates as light and then flips to dark, so the renderer re-runs its effect with the same mermaid id while the first render is still in flight; the two collide and one returns an empty SVG. Light mode never flips, so the bug only shows in dark.
+- **Rule**: Keep `key={colorMode}` on the renderer inside `src/theme/Mermaid/index.js`, and always test a Mermaid change in dark mode.
+
 ## Build/Lint/Test Commands
 
 ### Core Operations
@@ -137,9 +142,9 @@ docs(k8s): add dedicated k9s article
 
 ### Running a "Single Test"
 The project has no unit test framework (Jest/Vitest). To test components:
-1. Create an MDX file in `docs/` or `tutorial/` (e.g., `docs/_test-feature.mdx`).
-2. Prefix the filename with `_` to exclude it from the sidebar automatically.
-3. Run `yarn start` and navigate to the page manually to verify component behavior.
+1. Create a page in `src/pages/` (e.g., `src/pages/test-feature.js`) that imports the component.
+2. Do NOT prefix the name with `_`: Docusaurus excludes `**/_*.{js,jsx,ts,tsx,md,mdx}` (GlobExcludeDefault), so an underscore file gets no route.
+3. Run `yarn start` and navigate to the page manually, then delete the page.
 
 ## Code Style Guidelines
 
@@ -183,7 +188,10 @@ See [src/components/AGENTS.md](file:///Users/sdelrio/github/sdelrio/golden-fores
 - Mermaid diagrams are supported via `mermaid` code blocks.
 
 ### 6. Mermaid TreeView Dark Mode (Temporary Override)
-TreeView-beta hardcodes `labelColor: 'black'` and `lineColor: 'black'` in `styles.ts`, ignoring Mermaid's `themeVariables`. CSS overrides with `!important` in `custom.css` adapt it to Docusaurus dark mode (needed because mermaid injects `<style>` inside SVG `<defs>`). **Pending review** when Mermaid upgrades or treeView leaves beta and inherits theme properly.
+TreeView-beta hardcodes `labelColor: 'black'` and `lineColor: 'black'` in `styles.ts`, ignoring Mermaid's `themeVariables`. CSS overrides with `!important` in `src/css/mermaid.css` adapt it to Docusaurus dark mode (needed because mermaid injects `<style>` inside SVG `<defs>`). **Pending review** when Mermaid upgrades or treeView leaves beta and inherits theme properly.
+
+### 6b. Mermaid Diagrams Are Themed Globally
+Diagram colours belong to `src/theme/mermaidTheme.js` (swapped per mode by `src/theme/Mermaid/index.js`), layout and the `plain` / `external` / `highlight` hooks to `src/css/mermaid.css`. Articles carry no `classDef` fills, no `style` statements, no `linkStyle` strokes and no `%%{init:%%}` theme overrides; they use only the `plain` / `external` / `highlight` hooks - see DESIGN.md, "Signature: Ink Plate".
 
 ### 7. Mermaid `useMaxWidth` and Sizing
 Mermaid diagrams default to `useMaxWidth: true` in their per-diagram config (e.g., `radar.useMaxWidth: true`). This caps the SVG at its internal resolution and prevents it from filling wider containers. To make a diagram scale to its container:

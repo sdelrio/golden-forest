@@ -49,25 +49,15 @@ By default no traffic is filtered until a pod gets a policy, then, only the spec
         ns2 --- to
         ip2 --- to
 
-        subgraph section-from ["ingress"]
+        subgraph section-from["ingress"]
             from
         end
-        subgraph section-to ["egress"]
+        subgraph section-to["egress"]
             to
         end
 
-        linkStyle default stroke-width:2px,fill:none,stroke:#c0c0c0
-
-        classDef green fill:#beb,stroke:#ada,stroke-width:2px
-        classDef gray fill:#eee,stroke:#999,stroke-width:2px
-        classDef yellow fill:#eeb,stroke:#dda,stroke-width:2px
-        classDef section color:#808080,fill:none,stroke:#c0c0c0,stroke-width:2px
-        classDef npstyle color:#808020,fill:#F0F0F0,stroke:#c0c020,stroke-width:2px
-        classDef ext color:#808020,fill:none,stroke:#606010,stroke-width:2px
-
-        class level-1,level-2,section-from,section-to,kind section
-        class sub-level-1,sub-level-2 gray
-        class np npstyle
+        class level-1,level-2,kind plain
+        class np highlight
 ```
 
 * NetworkPolicy 

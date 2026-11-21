@@ -46,8 +46,7 @@ graph TD
         CLI -- "Installs into" --> Agent3
     end
 
-    style Registry fill:#f9f,stroke:#333,stroke-width:4px
-    style CLI fill:#bbf,stroke:#333,stroke-width:2px
+    class Registry highlight
 ```
 
 ### What is a "Skill"?

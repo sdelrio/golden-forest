@@ -40,8 +40,7 @@ flowchart TB
     Gate -->|"accept if improved"| Skill
     Gate -->|"reject if degraded"| Optimizer
 
-    style Skill fill:#2d6a4f,stroke:#40916c,color:#fff
-    style Gate fill:#1b4332,stroke:#40916c,color:#fff
+    class Skill highlight
 ```
 
 ### How It Differs from Prompt Engineering

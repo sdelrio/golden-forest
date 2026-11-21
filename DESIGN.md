@@ -390,6 +390,29 @@ Reuse it for any full-width terminal or log frame (`.terminal-window` mirrors th
 
 Every h2 gets `border-bottom: 2px solid` gold-rule (#c9ad6a in light, rgb(134, 115, 71) in dark) at full column width, with a deliberately small bottom margin (0.25rem via `--ifm-heading-margin-bottom`). Combined with the halved top rhythm, this makes an article read as a series of ruled paper sections. It is the cheapest and most repeated signal of the world; keep it on every h2 and on none of h3.
 
+### Signature: Ink Plate (Mermaid)
+
+A Mermaid diagram is not a chart; it is a plate pasted into the field manual. It floats on the paper with no frame, no wash and no shadow, and the only colours in it are the ones already on the page: parchment, ink, gold, and one lit amber node.
+
+The palette lives in `src/theme/mermaidTheme.js` and is swapped per colour mode by the swizzled `src/theme/Mermaid`; layout and the three hooks live in `src/css/mermaid.css`. Articles never carry colours.
+
+| Role | Light | Dark | Token |
+|---|---|---|---|
+| Field | `#fffaeb` | `#170f00` | Parchment Page / Sepia Dusk |
+| Node fill | `#f8e9c8` | `#241a0a` | Parchment Shade / dusk lifted by ink |
+| Node and edge ink | `#a36a00` | `#c68000` | Amber-darkest / Heading Amber |
+| Label ink | `#2a2010` | `#d4c4a8` | Reading Ink / Night Parchment |
+| Cluster frame | `#c9ad6a` | `#5a4a2a` | Gold Rule / D&D brown dark |
+| Cluster title | `#58180d` | `#c68000` | Oxblood Ink / Heading Amber |
+| Note chip | `#fcefd4` | `#2a2010` | Parchment Edge / sepia |
+| Lit node | `#e99700` fill, ink label | `#c68000` fill, ink label | the active-pill rule |
+
+- **Edges** are 1.5px hairlines with rounded caps. Direction carries the meaning; an edge is never coloured to encode good or bad. A subgraph is a ruled region with a transparent fill and a 1px gold frame, and its title carries weight 600.
+- **Type** is the body system stack at 14px. No mono, no Roboto, no emoji in labels.
+- **Furniture follows the frame.** Arrow markers, mindmap branches and the mindmap node underline are painted from `--mermaid-frame` / `--mermaid-rule`, because Mermaid hardcodes some of them black or derives them by inverting the series ramp (amber inverts to blue). A mindmap is paper and ink: parchment nodes, a lit root, gold branches, ink labels.
+- **Hooks.** Articles opt into exactly three class names and nothing else: `plain` (a layout-spacer subgraph: no frame, no fill), `external` (users and outside systems: dashed gold hairline, no fill), `highlight` (the one node that carries the article's point: amber fill, ink label). `class users external` is the whole syntax; `classDef` with properties is banned.
+- **Mode** is not optional: a new diagram token must be added for both light and dark in `mermaidTheme.js`, never borrowed from Mermaid's stock themes.
+
 ## Do's and Don'ts
 
 ### Do:
@@ -404,6 +427,7 @@ Every h2 gets `border-bottom: 2px solid` gold-rule (#c9ad6a in light, rgb(134, 1
 - **Do** route every focus indicator through `--focus-ring` (`#8f5d00` light, `#ffb630` dark). Amber at #e99700 is 2.26:1 on paper and is never a focus colour.
 - **Do** keep green, stale-amber and outdated-red inside the freshness family, always as a 12% tint with a dark-shade label, never as a bare fill.
 - **Do** prefer a 9999px pill or a 3px hairline to a mid-range radius; the system has no 12px-to-24px middle ground.
+- **Do** dress every Mermaid diagram from `src/theme/mermaidTheme.js`, and use only the `plain`, `external` and `highlight` hooks in the article.
 
 ### Don't:
 
@@ -417,3 +441,4 @@ Every h2 gets `border-bottom: 2px solid` gold-rule (#c9ad6a in light, rgb(134, 1
 - **Don't** set Roboto outside table cells and the table of contents; prose is the system UI stack.
 - **Don't** animate anything on scroll except the 0.1-speed hero parallax.
 - **Don't** put a hardcoded type size in a component CSS module when an Infima variable already carries it; the two-register type system depends on those variables being the single source.
+- **Don't** author colours inside a Mermaid block - no `classDef` fills, no `style` statements, no `linkStyle` strokes, no `%%{init}%%` theme override. A diagram uses the palette and the three hooks; it never redefines it.

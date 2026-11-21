@@ -46,10 +46,7 @@ graph TB
     %% Force vertical layout between the two subgraphs
     Input ~~~ Request
 
-    style Input fill:#ffb3b3,stroke:#333
-    style Fail fill:#ff6666,stroke:#333
-    style Request fill:#d4edda,stroke:#333
-    style Goal fill:#28a745,stroke:#333,color:#fff
+    class Goal highlight
 ```
 
 ## The Four Core Principles

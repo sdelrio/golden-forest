@@ -122,11 +122,7 @@ flowchart TB
     DB --> TDD
     ICA --> GM
 
-    style Start fill:#1b5e20,stroke:#4caf50,color:#fff
-    style AM fill:#0d47a1,stroke:#42a5f5,color:#fff
-    style GM fill:#4a148c,stroke:#ab47bc,color:#fff
-    style IMP fill:#bf360c,stroke:#ff7043,color:#fff
-    style TDD fill:#e65100,stroke:#ffa726,color:#fff
+    class AM highlight
 ```
 
 ## Standard Development Workflow

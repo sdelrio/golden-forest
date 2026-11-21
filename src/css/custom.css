@@ -80,12 +80,6 @@
 
   --bg-table-row-odd: #f8f9fa;
   --bg-table-row-even: #e9ecef;
-
-  /* Mermaid Diagram Variables */
-  --mermaid-lightbrown-fill: #f9f9fb;
-  --mermaid-lightbrown-stroke: #58180d;
-  --mermaid-lightblue-fill: #f0f4f8;
-  --mermaid-lightblue-stroke: #0366d6;
 }
 
 html[data-theme='light'] {
@@ -128,35 +122,6 @@ html[data-theme='dark'] img[alt="D&D Dragon with Dice"] {
   --dnd-card-bg-hover: rgba(42, 32, 16, 0.8);
   --dnd-error-bg: rgba(120, 40, 30, 0.3);
   --dnd-error-text: #e0a090;
-
-  /* Mermaid Diagram Variables (Dark Mode) */
-  --mermaid-lightbrown-fill: #3a2a2a;
-  --mermaid-lightbrown-stroke: #ff9988;
-  --mermaid-lightblue-fill: #2a1a3a;
-  --mermaid-lightblue-stroke: #88aaff;
-}
-
-/* Mermaid Custom Node Styling */
-.lightbrown-node .label-container,
-.lightbrown-node>rect,
-.lightbrown-node>path,
-.lightbrown-node>circle,
-.lightbrown-node>ellipse,
-.lightbrown-node>polygon {
-  fill: var(--mermaid-lightbrown-fill) !important;
-  stroke: var(--mermaid-lightbrown-stroke) !important;
-  stroke-width: 4px !important;
-}
-
-.lightblue-node .label-container,
-.lightblue-node>rect,
-.lightblue-node>path,
-.lightblue-node>circle,
-.lightblue-node>ellipse,
-.lightblue-node>polygon {
-  fill: var(--mermaid-lightblue-fill) !important;
-  stroke: var(--mermaid-lightblue-stroke) !important;
-  stroke-width: 2px !important;
 }
 
 /* ============================================
@@ -219,22 +184,6 @@ html[data-theme='light'] .terminal-window::before {
 .terminal-window .docusaurus-mermaid-container > svg {
   max-width: 100%;
   height: auto;
-}
-
-/* TreeView dark mode fix — hardcoded in mermaid treeView-beta styles.ts.
-   Uses !important because mermaid injects <style> inside SVG <defs>,
-   which can override external selectors despite lower specificity. */
-html[data-theme='dark'] .treeView-node-label {
-  fill: var(--ifm-font-color-base) !important;
-}
-html[data-theme='dark'] .treeView-node-line {
-  stroke: var(--ifm-color-emphasis-400) !important;
-}
-html[data-theme='light'] .treeView-node-label {
-  fill: var(--ifm-font-color-base) !important;
-}
-html[data-theme='light'] .treeView-node-line {
-  stroke: var(--ifm-color-emphasis-400) !important;
 }
 
 /*
@@ -505,6 +454,7 @@ html h2 {
 @import './admonition.css';
 @import './custom-dnd.css';
 @import './shared-components.css';
+@import './mermaid.css';
 
 
 .markdown h2 {
