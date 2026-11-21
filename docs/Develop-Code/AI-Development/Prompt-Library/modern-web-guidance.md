@@ -225,3 +225,4 @@ Here is how Modern Web Guidance helps an agent automatically refactor legacy imp
 - [GitHub Repository](https://github.com/GoogleChrome/modern-web-guidance-src)
 - [Example Guide: Navigation Drawer](https://github.com/GoogleChrome/modern-web-guidance/blob/main/skills/modern-web-guidance/guides/user-experience/navigation-drawer.md)
 - [Google Privacy Policy](https://policies.google.com/privacy)
+- [Frontend Design and Review Skills](../Tools/frontend-design-and-review-skills.md) - Where this skill fits against Astryx, Open Code Review, Plannotator and Anthropic's document skills.

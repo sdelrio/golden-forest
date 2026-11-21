@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-21T14:22:40.726Z",
-  "toolCount": 70,
+  "generatedAt": "2026-11-21T14:24:44.186Z",
+  "toolCount": 71,
   "tools": [
     {
       "id": "adversarial-code-review",
@@ -616,6 +616,23 @@
       "githubLastPush": "2026-11-20T11:08:57Z",
       "githubLanguage": "TypeScript",
       "healthScore": 75
+    },
+    {
+      "id": "frontend-design-and-review-skills",
+      "name": "Frontend Design and Review Skills",
+      "description": "Roundup of five AI-agent repos for frontend design and review: Astryx, Modern Web Guidance, Open Code Review, Anthropic document skills and Plannotator, with install verdicts.",
+      "category": "tools",
+      "github": null,
+      "site": null,
+      "license": null,
+      "tags": [
+        "frontend",
+        "design",
+        "code-review",
+        "skills"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Tools/frontend-design-and-review-skills",
+      "healthScore": 20
     },
     {
       "id": "gemini-prompts",
