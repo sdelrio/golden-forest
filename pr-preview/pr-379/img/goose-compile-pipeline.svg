@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 680" role="img" aria-labelledby="goose-compile-title" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+  <title id="goose-compile-title">Goose compilation pipeline: the Goose compiler emits a single C file for the whole program. TinyCC compiles that file in-process and runs it immediately with no build step, or a native C toolchain builds an executable, which is also required for threads. The generated C calls libm, libc and native modules through extern fn, and native builds link the gfx, audio, ui and physics packages on top of SDL3, Nuklear and Box3D.</title>
+  <defs>
+    <marker id="goose-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#8b949e"/>
+    </marker>
+    <marker id="goose-arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#58a6ff"/>
+    </marker>
+  </defs>
+
+  <rect width="1240" height="680" rx="18" fill="#0d1117"/>
+
+  <text x="620" y="50" text-anchor="middle" font-size="24" font-weight="700" fill="#e6edf3">Goose - Compiling to C</text>
+  <text x="620" y="80" text-anchor="middle" font-size="14" fill="#8b949e">One C file per program: run it in-process with TinyCC, or build a native executable.</text>
+
+  <rect x="60" y="112" width="320" height="64" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="220" y="140" text-anchor="middle" font-size="17" fill="#e6edf3">Program</text>
+  <text x="220" y="160" text-anchor="middle" font-size="14" fill="#8b949e">(.goose files)</text>
+
+  <line x1="220" y1="176" x2="220" y2="210" stroke="#8b949e" stroke-width="1.5" marker-end="url(#goose-arrow)"/>
+
+  <rect x="60" y="216" width="320" height="64" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="220" y="244" text-anchor="middle" font-size="17" fill="#e6edf3">goose compiler</text>
+  <text x="220" y="264" text-anchor="middle" font-size="14" fill="#8b949e">(C++)</text>
+
+  <line x1="220" y1="280" x2="220" y2="314" stroke="#8b949e" stroke-width="1.5" marker-end="url(#goose-arrow)"/>
+
+  <rect x="60" y="320" width="320" height="64" rx="10" fill="#21262d" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="220" y="348" text-anchor="middle" font-size="17" fill="#e6edf3">Single C file</text>
+  <text x="220" y="368" text-anchor="middle" font-size="14" fill="#8b949e">one per program</text>
+
+  <path d="M220 384 V420 H580 V446" fill="none" stroke="#8b949e" stroke-width="1.5"/>
+  <line x1="220" y1="420" x2="220" y2="446" stroke="#8b949e" stroke-width="1.5" marker-end="url(#goose-arrow)"/>
+  <line x1="580" y1="420" x2="580" y2="446" stroke="#8b949e" stroke-width="1.5" marker-end="url(#goose-arrow)"/>
+
+  <rect x="60" y="452" width="320" height="64" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="220" y="480" text-anchor="middle" font-size="17" fill="#e6edf3">TinyCC in-process</text>
+  <text x="220" y="500" text-anchor="middle" font-size="14" fill="#8b949e">goose file.goose</text>
+
+  <rect x="420" y="452" width="320" height="64" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="580" y="480" text-anchor="middle" font-size="17" fill="#e6edf3">C toolchain</text>
+  <text x="580" y="500" text-anchor="middle" font-size="14" fill="#8b949e">goose build</text>
+
+  <line x1="220" y1="516" x2="220" y2="550" stroke="#8b949e" stroke-width="1.5" marker-end="url(#goose-arrow)"/>
+  <line x1="580" y1="516" x2="580" y2="550" stroke="#8b949e" stroke-width="1.5" marker-end="url(#goose-arrow)"/>
+
+  <rect x="60" y="556" width="320" height="64" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="220" y="584" text-anchor="middle" font-size="17" fill="#e6edf3">Runs immediately</text>
+  <text x="220" y="604" text-anchor="middle" font-size="14" fill="#8b949e">no build step</text>
+
+  <rect x="420" y="556" width="320" height="64" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="580" y="584" text-anchor="middle" font-size="17" fill="#e6edf3">Native executable</text>
+  <text x="580" y="604" text-anchor="middle" font-size="14" fill="#8b949e">required for threads</text>
+
+  <rect x="800" y="300" width="400" height="300" rx="14" fill="#161b22" stroke="#30363d"/>
+  <text x="828" y="330" font-size="13" font-weight="600" letter-spacing="1" fill="#8b949e">C WORLD</text>
+
+  <rect x="828" y="352" width="344" height="84" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="1000" y="390" text-anchor="middle" font-size="16" fill="#e6edf3">libm, libc</text>
+  <text x="1000" y="410" text-anchor="middle" font-size="14" fill="#8b949e">native modules</text>
+
+  <rect x="828" y="472" width="344" height="84" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="1000" y="510" text-anchor="middle" font-size="16" fill="#e6edf3">gfx, audio, ui, physics</text>
+  <text x="1000" y="530" text-anchor="middle" font-size="14" fill="#8b949e">(SDL3, Nuklear, Box3D)</text>
+
+  <path d="M380 352 H760 V394 H822" fill="none" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#goose-arrow-accent)"/>
+  <text x="570" y="342" text-anchor="middle" font-size="13" fill="#58a6ff">extern fn</text>
+
+  <path d="M740 484 H780 V514 H822" fill="none" stroke="#8b949e" stroke-width="1.5" marker-end="url(#goose-arrow)"/>
+</svg>
