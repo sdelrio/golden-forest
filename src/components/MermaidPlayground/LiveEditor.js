@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useColorMode } from '@docusaurus/theme-common';
 import CopyButton from '../CopyButton/CopyButton';
+import { mermaidConfig, withoutMaxWidth } from '@site/src/theme/mermaidTheme';
 import styles from './LiveEditor.module.css';
 
 export default function LiveEditor({ template, onBack }) {
@@ -16,27 +17,15 @@ export default function LiveEditor({ template, onBack }) {
   const { colorMode } = useColorMode();
   const isDark = darkOverride ?? colorMode === 'dark';
 
-  const renderMermaid = useCallback(async (codeToRender, theme) => {
+  const renderMermaid = useCallback(async (codeToRender, mode) => {
     try {
       const mermaid = (await import('mermaid')).default;
+      const config = mermaidConfig(mode);
       mermaid.initialize({
-        startOnLoad: false,
-        theme: theme,
+        ...config,
+        // The preview pane is narrower than the diagram's intrinsic size.
+        ...withoutMaxWidth(config),
         securityLevel: 'loose',
-        fontFamily: 'var(--ifm-font-family-base)',
-        flowchart: { useMaxWidth: false },
-        sequence: { useMaxWidth: false },
-        class: { useMaxWidth: false },
-        state: { useMaxWidth: false },
-        er: { useMaxWidth: false },
-        gantt: { useMaxWidth: false },
-        pie: { useMaxWidth: false },
-        mindmap: { useMaxWidth: false },
-        architecture: { useMaxWidth: false },
-        gitGraph: { useMaxWidth: false },
-        xychart: { useMaxWidth: false },
-        radar: { useMaxWidth: false },
-        treeView: { useMaxWidth: false },
       });
       const id = `mermaid-preview-${Date.now()}`;
       const { svg: rendered } = await mermaid.render(id, codeToRender);
@@ -52,7 +41,7 @@ export default function LiveEditor({ template, onBack }) {
   // latest value without re-subscribing or re-debouncing on theme change.
   const themeRef = useRef(isDark);
   themeRef.current = isDark;
-  const themeName = () => (themeRef.current ? 'dark' : 'default');
+  const modeName = () => (themeRef.current ? 'dark' : 'light');
 
   // Re-render immediately on theme toggle; code edits go through the
   // debounced effect below, which reads the theme via ref.
@@ -62,7 +51,7 @@ export default function LiveEditor({ template, onBack }) {
     prevThemeRef.current = isDark;
     if (debounceRef.current) clearTimeout(debounceRef.current);
     if (code.trim()) {
-      renderMermaid(code, isDark ? 'dark' : 'default');
+      renderMermaid(code, isDark ? 'dark' : 'light');
     }
   }, [isDark]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -70,7 +59,7 @@ export default function LiveEditor({ template, onBack }) {
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
       if (code.trim()) {
-        renderMermaid(code, themeName());
+        renderMermaid(code, modeName());
       } else {
         setSvg('');
         setError(null);
@@ -84,7 +73,7 @@ export default function LiveEditor({ template, onBack }) {
   // Re-render on site theme change
   useEffect(() => {
     const observer = new MutationObserver(() => {
-      if (code.trim()) renderMermaid(code, themeName());
+      if (code.trim()) renderMermaid(code, modeName());
     });
     observer.observe(document.documentElement, {
       attributes: true,

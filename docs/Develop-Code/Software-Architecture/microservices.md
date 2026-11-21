@@ -28,29 +28,21 @@ Unfortunately, this pattern means a tight coupling of services.
 
 An illustration of microservices "request-driven" communication, Service A is dependent on B and C
 
-<!-- https://github.com/mermaid-js/mermaid/tree/develop/packages/mermaid-layout-elk -->
 ```mermaid
-    graph LR;
-        subgraph "request-driven"
+    graph LR
+        subgraph request-driven[Request-driven]
             SA[Service A] --> SB[Service B]
             SB --> SA
             SB --> SC[Service C]
             SC --> SB
         end
-        subgraph external [External]
-            users[Users] -.-> SA
-            SA -.-> users
+        subgraph external[External]
+            users[Users]
         end
+        users -.-> SA
+        SA -.-> users
 
-        linkStyle 4 stroke:green,stroke-width:3px,stroke-dasharray:3;
-        linkStyle 5 stroke:green,stroke-width:3px,stroke-dasharray:3;
-        linkStyle default stroke-width:2px,fill:none,stroke:#c0c0c0
-        classDef green fill:#beb,stroke:#ada,stroke-width:2px
-        classDef gray fill:#eee,stroke:#999,stroke-width:2px
-        classDef section color:#808080,fill:none,stroke:#c0c0c0,stroke-width:2px
-        class users green
-        class SA,SB,SC gray
-        class request-driven,external section
+        class users external
 ```
 
 #### Risks
@@ -73,25 +65,24 @@ An illustration of overly chatty microservices (AKA spaghetti)
 
 
 ```mermaid
-    graph BT;
-
-        subgraph "request-driven"
-            subgraph level-1 [" "]
-                auth[Auth] 
+    graph BT
+        subgraph request-driven[Request-driven]
+            subgraph level-1[" "]
+                auth[Auth]
                 reporting[Reporting]
                 analytics[Analytics]
             end
             reporting --- auth
             reporting --- analytics
 
-            subgraph level-2 [" "]
+            subgraph level-2[" "]
                 configs[Configs]
                 tracking[Tracking]
             end
             configs --- tracking
-            configs --- analytics & tracking & campaings 
-    
-            subgraph level-3 [" "]
+            configs --- analytics & tracking & campaings
+
+            subgraph level-3[" "]
                 customers[Customers]
                 campaings[Campaings]
             end
@@ -100,43 +91,29 @@ An illustration of overly chatty microservices (AKA spaghetti)
             campaings --- tracking
         end
 
-        subgraph external-1 [" "]
+        subgraph external-1[" "]
             users-1[Users]
         end
         users-1 --- reporting
 
-        subgraph external-2 [" "]
+        subgraph external-2[" "]
             users-2[Users]
         end
         users-2 --- tracking
 
-        subgraph external-3 [" "]
+        subgraph external-3[" "]
             users-3[Users]
         end
         users-3 --- customers
 
-        subgraph external-4 [" "]
+        subgraph external-4[" "]
             users-4[Users]
         end
         users-4 --- campaings
 
-
-        linkStyle 9 stroke:green,stroke-width:3px,stroke-dasharray:3;
-        linkStyle 10 stroke:green,stroke-width:3px,stroke-dasharray:3;
-        linkStyle 11 stroke:green,stroke-width:3px,stroke-dasharray:3;
-        linkStyle 12 stroke:green,stroke-width:3px,stroke-dasharray:3;
-        linkStyle default stroke-width:2px,fill:none,stroke:#c0c0c0
-
-        classDef green fill:#beb,stroke:#ada,stroke-width:2px
-        class users-1,users-2,users-3,users-4 green
-
-        classDef ext color:#808020,fill:none,stroke:#606010,stroke-width:2px
-        class external-1,external-2,external-3,external-4 ext
-
-        classDef section color:#808080,fill:none,stroke:#c0c0c0,stroke-width:2px
-        classDef sectiontrans color:none,fill:none,stroke:none,stroke-width:2px
-        class level-1,level-2,level-3 sectiontrans
-        class request-driven section
+        class level-1,level-2,level-3 plain
+        class external-1,external-2,external-3,external-4 plain
+        class users-1,users-2,users-3,users-4 external
 ```
 
 ## Good practices
@@ -153,71 +130,39 @@ Services can now:
 * Easy to add subscribers and that way they don’t put a further load on the publisher service.
 
 ```mermaid
+    flowchart LR
 
-    flowchart TB
-
-        subgraph external-1 [" "]
-            users-1[Users]
-        end
-        subgraph external-2 [" "]
-            users-2[Users]
-        end
-        subgraph level-1 [" "]
+        subgraph level-1[Services]
             auth[Auth]
             report[Reporting API]
         end
-
-        users-1 --- auth
-        users-2 --- report
 
         subgraph queuesys[" "]
             queue[Kafka]
         end
 
-        auth --- queue
-        report --- queue
-
-        subgraph level-2 [" "]
+        subgraph level-2[Subscribers]
             analytics
             configs
             campaign
             customers
         end
 
-        analytics --- queue
-        configs --- queue
-        campaign --- queue
-        customers --- queue
+        users-1[Users] -.-> auth
+        users-2[Users] -.-> report
+        users-3[Users] -.-> customers
+        users-4[Users] -.-> campaign
 
-        subgraph external-3 [" "]
-            users-3[Users]
-        end
-        subgraph external-4 [" "]
-            users-4[Users]
-        end
+        auth --> queue
+        report --> queue
+        queue --> analytics
+        queue --> configs
+        queue --> campaign
+        queue --> customers
 
-        users-3 --- customers
-        users-4 --- campaign
-
-        linkStyle 0 stroke:green,stroke-width:3px,stroke-dasharray:3;
-        linkStyle 1 stroke:green,stroke-width:3px,stroke-dasharray:3;
-        linkStyle 8 stroke:green,stroke-width:3px,stroke-dasharray:3;
-        linkStyle 9 stroke:green,stroke-width:3px,stroke-dasharray:3;
-        linkStyle default stroke-width:2px,fill:none,stroke:#c0c0c0
-
-        classDef green fill:#beb,stroke:#ada,stroke-width:2px
-        classDef gray fill:#eee,stroke:#999,stroke-width:2px
-        classDef yellow fill:#eeb,stroke:#dda,stroke-width:2px
-        classDef section color:#808080,fill:none,stroke:#c0c0c0,stroke-width:2px
-        classDef queuesection color:#808020,fill:none,stroke:#c0c020,stroke-width:2px
-        classDef ext color:#808020,fill:none,stroke:#606010,stroke-width:2px
-
-        class users-1,users-2,users-3,users-4 green
-        class report,auth,analytics,configs,customers,tracking,campaign gray
-        class queue yellow
-        class level-1,level-2, section
-        class external-1,external-2,external-3,external-4 ext
-        class queuesys queuesection
+        class users-1,users-2,users-3,users-4 external
+        class queuesys plain
+        class queue highlight
 ```
 
 ## Event-driven runtimes

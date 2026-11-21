@@ -1,0 +1,171 @@
+/* Mermaid diagrams - "Ink Plate" register. Palette: src/theme/mermaidTheme.js.
+   This file owns layout and the three authoring hooks (plain, external,
+   highlight). */
+
+.docusaurus-mermaid-container {
+  /* The diagram floats on the paper: no border, no wash, no shadow. */
+  margin: 1.5rem 0 2rem;
+  text-align: center;
+
+  --mermaid-rule: #c9ad6a; /* gold-rule */
+  --mermaid-frame: #a36a00; /* amber-darkest */
+  --mermaid-lit: #e99700; /* amber */
+  --mermaid-lit-ink: #2a2010; /* ink, 6.77:1 on amber */
+  --mermaid-page: #fffaeb; /* parchment-page */
+  --mermaid-surface: #f8e9c8; /* parchment-shade, liftable node */
+}
+
+html[data-theme='dark'] .docusaurus-mermaid-container {
+  --mermaid-rule: #7a5c30;
+  --mermaid-frame: #c68000;
+  --mermaid-lit: #c68000;
+  --mermaid-lit-ink: #2a2010; /* ink, 5.09:1 on #c68000 */
+  --mermaid-page: #170f00; /* sepia dusk */
+  --mermaid-surface: #241a0a; /* dusk lifted by ink */
+}
+
+.docusaurus-mermaid-container > svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Round corners on standard nodes and subgraphs */
+.docusaurus-mermaid-container .node rect,
+.docusaurus-mermaid-container .cluster rect {
+  rx: 8px;
+  ry: 8px;
+}
+
+/* Edges are hairlines: direction carries the meaning, not the weight. */
+.docusaurus-mermaid-container .edgePath .path,
+.docusaurus-mermaid-container .flowchart-link {
+  stroke-width: 2.5px !important;
+  stroke-linecap: round;
+}
+
+/* Mermaid draws the "cross" and open arrowheads with a hardcoded black
+   stroke/fill, which disappears on the sepia field. Markers follow the frame. */
+.docusaurus-mermaid-container marker path,
+.docusaurus-mermaid-container marker polygon {
+  fill: var(--mermaid-frame) !important;
+  stroke: var(--mermaid-frame) !important;
+}
+
+/* .plain - a subgraph that only places nodes (a layout spacer). */
+.docusaurus-mermaid-container .cluster.plain > rect {
+  fill: none !important;
+  stroke: none !important;
+}
+
+/* Subgraph titles are headings: they carry weight, not just colour. */
+.docusaurus-mermaid-container .cluster-label,
+.docusaurus-mermaid-container .cluster-label span {
+  font-weight: 600;
+}
+
+/* Pie slices are separated by paper, never by a black frame. */
+.docusaurus-mermaid-container .pieCircle {
+  stroke: var(--mermaid-page) !important;
+  stroke-width: 1px !important;
+}
+
+/* Labels that carry no theme variable of their own. Pinned so a diagram can
+   never fall back to Mermaid's black on the sepia field.
+   The tech radar renders outside .docusaurus-mermaid-container, so it gets
+   the Infima body colour instead. */
+.docusaurus-mermaid-container .radarLegendText,
+.docusaurus-mermaid-container .radarAxisLabel,
+.docusaurus-mermaid-container .radarTitle,
+.radarWrapper .radarLegendText,
+.radarWrapper .radarAxisLabel,
+.radarWrapper .radarTitle {
+  fill: var(--ifm-font-color-base) !important;
+}
+
+/* Mindmaps paint fills and labels from cScale/cScaleLabel, which the radar
+   legend also reads: the two collide. A mindmap is paper and ink - every node
+   is a liftable sheet, the root is the lit one, and branches are gold. */
+.docusaurus-mermaid-container .mindmap-node path,
+.docusaurus-mermaid-container .mindmap-node rect,
+.docusaurus-mermaid-container .mindmap-node circle,
+.docusaurus-mermaid-container .mindmap-node polygon,
+.docusaurus-mermaid-container .mindmap-node ellipse {
+  fill: var(--mermaid-surface) !important;
+  stroke: var(--mermaid-frame) !important;
+}
+
+.docusaurus-mermaid-container .mindmap-node.section-root path,
+.docusaurus-mermaid-container .mindmap-node.section-root rect,
+.docusaurus-mermaid-container .mindmap-node.section-root circle,
+.docusaurus-mermaid-container .mindmap-node.section-root polygon,
+.docusaurus-mermaid-container .mindmap-node.section-root ellipse {
+  fill: var(--mermaid-lit) !important;
+}
+
+.docusaurus-mermaid-container [class*='section-edge-'] {
+  stroke: var(--mermaid-rule) !important;
+  stroke-width: 2px !important;
+}
+
+.docusaurus-mermaid-container .mindmap-node text,
+.docusaurus-mermaid-container .mindmap-node span {
+  fill: var(--ifm-font-color-base) !important;
+  color: var(--ifm-font-color-base) !important;
+}
+
+.docusaurus-mermaid-container .mindmap-node.section-root text,
+.docusaurus-mermaid-container .mindmap-node.section-root span {
+  fill: var(--mermaid-lit-ink) !important;
+  color: var(--mermaid-lit-ink) !important;
+}
+
+.docusaurus-mermaid-container [class*='node-line-'] {
+  stroke: var(--mermaid-frame) !important;
+}
+
+/* .external - users and outside systems: dashed hairline, no fill. */
+.docusaurus-mermaid-container .external > rect,
+.docusaurus-mermaid-container .external > polygon,
+.docusaurus-mermaid-container .external > circle,
+.docusaurus-mermaid-container .external > ellipse,
+.docusaurus-mermaid-container .external > path {
+  fill: none !important;
+  stroke: var(--mermaid-rule) !important;
+  stroke-width: 2px !important;
+  stroke-dasharray: 4 3;
+}
+
+/* .highlight - the one node that carries the article's point, lit amber. */
+.docusaurus-mermaid-container .highlight > rect,
+.docusaurus-mermaid-container .highlight > polygon,
+.docusaurus-mermaid-container .highlight > circle,
+.docusaurus-mermaid-container .highlight > ellipse,
+.docusaurus-mermaid-container .highlight > path {
+  fill: var(--mermaid-lit) !important;
+  stroke: var(--mermaid-frame) !important;
+  stroke-width: 2px !important;
+}
+
+.docusaurus-mermaid-container .highlight .nodeLabel,
+.docusaurus-mermaid-container .highlight .nodeLabel span,
+.docusaurus-mermaid-container .highlight .nodeLabel p,
+.docusaurus-mermaid-container .highlight text {
+  color: var(--mermaid-lit-ink) !important;
+  fill: var(--mermaid-lit-ink) !important;
+}
+
+/* TreeView dark mode fix - hardcoded in mermaid treeView-beta styles.ts.
+   Uses !important because mermaid injects <style> inside SVG <defs>,
+   which can override external selectors despite lower specificity. */
+html[data-theme='dark'] .treeView-node-label {
+  fill: var(--ifm-font-color-base) !important;
+}
+html[data-theme='dark'] .treeView-node-line {
+  stroke: var(--ifm-color-emphasis-400) !important;
+}
+html[data-theme='light'] .treeView-node-label {
+  fill: var(--ifm-font-color-base) !important;
+}
+html[data-theme='light'] .treeView-node-line {
+  stroke: var(--ifm-color-emphasis-400) !important;
+}

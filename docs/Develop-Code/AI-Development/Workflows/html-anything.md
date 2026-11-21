@@ -54,9 +54,7 @@ flowchart TD
     B -->|"SSE text deltas"| D["🖥️ Sandboxed Iframe Preview\nLive srcdoc rendering"]
     D --> E["📤 Export Targets\nWeChat · X · Zhihu · .html · .png"]
 
-    style C fill:#bbf,stroke:#333,stroke-width:2px
-    style B fill:#f9f,stroke:#333,stroke-width:2px
-    style D fill:#bfb,stroke:#333,stroke-width:2px
+    class C highlight
 ```
 
 ## Integration with AI Agents

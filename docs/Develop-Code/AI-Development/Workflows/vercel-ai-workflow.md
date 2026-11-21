@@ -27,8 +27,7 @@ flowchart TD
     F --> P["Ship<br/>error-free sessions"]
     P --> C["Customer signal<br/>latency to fix"]
 
-    style X fill:#5d1a1a,stroke:#e57373,color:#fff
-    style P fill:#1b5e20,stroke:#4caf50,color:#fff
+    class P highlight
 ```
 
 ## Test Ideas First

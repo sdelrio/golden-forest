@@ -71,8 +71,7 @@ graph LR
 
     end
 
-    class agentskills lightbrown-node
-    class GitHub lightblue-node
+    class agentskills highlight
 ```
 
 ## How It Works: Progressive Disclosure {#how-it-works}

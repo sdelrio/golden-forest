@@ -163,9 +163,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       mermaid: {
+        // Palette and per-mode variables: src/theme/mermaidTheme.js, swapped
+        // by the swizzled src/theme/Mermaid. Never author colours in articles.
         theme: {
-          light: 'default',
-          dark: 'dark',
+          light: 'base',
+          dark: 'base',
         },
       },
       algolia: {

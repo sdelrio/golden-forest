@@ -23,8 +23,7 @@ flowchart TD
     R --> C["CI Gates<br/>security + deps"]
     C --> H(("Human<br/>Merge"))
 
-    style H fill:#1b5e20,stroke:#4caf50,color:#fff
-    style G fill:#0d47a1,stroke:#42a5f5,color:#fff
+    class H highlight
 ```
 
 ## 1. Plain-Text Guardrails

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import { mermaidConfig } from '@site/src/theme/mermaidTheme';
 import styles from './TechRadar.module.css';
 
 function slugify(str) {
@@ -17,15 +18,12 @@ function buildMermaidString(data) {
 
 async function renderRadar(mermaidCode) {
   const mermaid = (await import('mermaid')).default;
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   mermaid.initialize({
-    startOnLoad: false,
-    theme:
-      document.documentElement.getAttribute('data-theme') === 'dark'
-        ? 'dark'
-        : 'default',
+    ...mermaidConfig(isDark ? 'dark' : 'light'),
     securityLevel: 'loose',
-    fontFamily: 'var(--ifm-font-family-base)',
     radar: {
+      ...mermaidConfig(isDark ? 'dark' : 'light').radar,
       useMaxWidth: false,
       width: 900,
       height: 900,
