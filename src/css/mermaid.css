@@ -32,7 +32,7 @@ html[data-theme='dark'] .docusaurus-mermaid-container {
 /* Edges are hairlines: direction carries the meaning, not the weight. */
 .docusaurus-mermaid-container .edgePath .path,
 .docusaurus-mermaid-container .flowchart-link {
-  stroke-width: 1.5px !important;
+  stroke-width: 2.5px !important;
   stroke-linecap: round;
 }
 
@@ -124,7 +124,7 @@ html[data-theme='dark'] .docusaurus-mermaid-container {
 .docusaurus-mermaid-container .external > path {
   fill: none !important;
   stroke: var(--mermaid-rule) !important;
-  stroke-width: 1.5px !important;
+  stroke-width: 2px !important;
   stroke-dasharray: 4 3;
 }
 
