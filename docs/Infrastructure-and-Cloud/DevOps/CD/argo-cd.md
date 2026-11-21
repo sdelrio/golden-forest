@@ -12,6 +12,10 @@ A declarative GitOps continuous delivery toold for Kubernetes.
 * [ApplicationSet Controller](https://argocd-applicationset.readthedocs.io/en/stable/)
   * [Generators](https://argocd-applicationset.readthedocs.io/en/stable/Generators/)
 
+## Multi-Cluster
+
+Where Argo CD lives once there is more than one cluster, and the tradeoffs of each topology, is its own topic: [Multi-Cluster Argo CD Architecture](argo-cd-multi-cluster.md).
+
 ## Plugins
 
 ### Lovely plugin with Vault Replacer
