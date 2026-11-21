@@ -35,7 +35,7 @@ Concretely, those responsibilities are:
 - **Cancellation**: how work you no longer need is stopped.
 - **Failure modes**: what a structured error looks like, as opposed to a stack trace in a log.
 
-Doing that once per harness is the harness engineering tax. The point of the router is to pay it once.
+Doing that once per harness is the harness engineering tax. The point of the router is to pay it once. The wider discipline of building that environment around an agent is covered in [Harness Engineering: From 0 to 1](../Workflows/harness-engineering.md).
 
 ## Architecture: One Container, Three Processes
 

@@ -625,6 +625,22 @@
     "docPath": "/docs/Develop-Code/AI-Development/Tools/graphify"
   },
   {
+    "id": "harness-engineering",
+    "name": "Harness Engineering: From 0 to 1",
+    "description": "Beginner tutorial for building the instructions, state files, verification gates and session lifecycle that make a coding agent reliable inside a real repository.",
+    "category": "workflows",
+    "site": "https://walkinglabs.github.io/learn-harness-engineering/",
+    "github": "https://github.com/walkinglabs/learn-harness-engineering",
+    "license": "MIT",
+    "tags": [
+      "agents",
+      "devops",
+      "verification",
+      "workflow"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Workflows/harness-engineering"
+  },
+  {
     "id": "harnessrouter",
     "name": "HarnessRouter",
     "description": "Apache-2.0 self-hosted router that puts Codex, Claude Code, Hermes, Pi, DSH and 25+ harnesses behind one OpenAI Responses-compatible API, with sessions, streaming, files, cancellation and structured failures.",
