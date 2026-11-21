@@ -29,6 +29,13 @@ html[data-theme='dark'] .docusaurus-mermaid-container {
   height: auto;
 }
 
+/* Round corners on standard nodes and subgraphs */
+.docusaurus-mermaid-container .node rect,
+.docusaurus-mermaid-container .cluster rect {
+  rx: 8px;
+  ry: 8px;
+}
+
 /* Edges are hairlines: direction carries the meaning, not the weight. */
 .docusaurus-mermaid-container .edgePath .path,
 .docusaurus-mermaid-container .flowchart-link {
