@@ -281,7 +281,7 @@ All three turn a codebase into a graph, but they optimize different things.
 | **Install** | Plugin marketplace or `install.sh` | `pip` | `npx` |
 
 :::tip
-They compose rather than compete. Use Understand Anything to onboard humans and produce a shareable architecture map, and a code graph such as Codegraph or Graft for per-turn agent navigation during day-to-day coding.
+They compose rather than compete. Use Understand Anything to onboard humans and produce a shareable architecture map, a code graph such as Codegraph or Graft for per-turn agent navigation during day-to-day coding, and [Floorplan](./floorplan.md) when the goal is understanding and health-checking an app you built rather than studying a large codebase function by function.
 :::
 
 ## Caveats
@@ -311,3 +311,4 @@ They compose rather than compete. Use Understand Anything to onboard humans and 
 - [Graphify - Multi-modal Knowledge Graph](./graphify.md)
 - [Codegraph - Pre-indexed Semantic Code Graph](./codegraph.md)
 - [Graft - Context Layer for Coding Agents](./graft.md)
+- [Floorplan - Plain-English Map of Your Codebase](./floorplan.md)
