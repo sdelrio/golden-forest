@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-21T14:24:44.186Z",
-  "toolCount": 71,
+  "generatedAt": "2026-11-21T14:48:07.698Z",
+  "toolCount": 72,
   "tools": [
     {
       "id": "adversarial-code-review",
@@ -745,6 +745,23 @@
       "githubLastPush": "2026-11-20T22:49:07Z",
       "githubLanguage": "Python",
       "healthScore": 75
+    },
+    {
+      "id": "harness-engineering",
+      "name": "Harness Engineering: From 0 to 1",
+      "description": "Beginner tutorial for building the instructions, state files, verification gates and session lifecycle that make a coding agent reliable inside a real repository.",
+      "category": "workflows",
+      "site": "https://walkinglabs.github.io/learn-harness-engineering/",
+      "github": "https://github.com/walkinglabs/learn-harness-engineering",
+      "license": "MIT",
+      "tags": [
+        "agents",
+        "devops",
+        "verification",
+        "workflow"
+      ],
+      "docPath": "/docs/Develop-Code/AI-Development/Workflows/harness-engineering",
+      "healthScore": 20
     },
     {
       "id": "harnessrouter",
