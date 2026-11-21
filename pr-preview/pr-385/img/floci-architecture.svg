@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 660" role="img" aria-labelledby="floci-arch-title" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+  <title id="floci-arch-title">Floci architecture: Terraform, the AWS CLI and SDKs send HTTP requests to port 4566, where a router speaking the AWS wire protocols dispatches to stateless services (SSM, SQS, SNS, IAM, STS, KMS, EventBridge, Step Functions, CloudFormation), stateful services (S3, DynamoDB) and container-backed services (Lambda, RDS, ElastiCache, ECS, EC2, EKS, MSK, OpenSearch). Stateful services write to a storage backend that can be memory, hybrid, persistent or write-ahead log, and container-backed services drive real containers through the Docker API.</title>
+  <defs>
+    <marker id="floci-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#8b949e"/>
+    </marker>
+    <marker id="floci-arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#58a6ff"/>
+    </marker>
+  </defs>
+
+  <rect width="1420" height="660" rx="18" fill="#0d1117"/>
+
+  <text x="710" y="50" text-anchor="middle" font-size="24" font-weight="700" fill="#e6edf3">Floci - Architecture</text>
+  <text x="710" y="80" text-anchor="middle" font-size="14" fill="#8b949e">One HTTP port for every service: state goes to a pluggable backend, engines run as real containers.</text>
+
+  <rect x="40" y="270" width="160" height="100" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="120" y="302" text-anchor="middle" font-size="14" fill="#e6edf3">Terraform</text>
+  <text x="120" y="324" text-anchor="middle" font-size="14" fill="#e6edf3">AWS CLI</text>
+  <text x="120" y="346" text-anchor="middle" font-size="14" fill="#e6edf3">SDK</text>
+
+  <line x1="200" y1="320" x2="304" y2="320" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#floci-arrow-accent)"/>
+  <text x="240" y="303" text-anchor="middle" font-size="12" fill="#58a6ff">HTTP :4566</text>
+
+  <rect x="280" y="110" width="880" height="490" rx="14" fill="#161b22" stroke="#30363d"/>
+  <text x="300" y="142" font-size="13" font-weight="600" letter-spacing="1" fill="#8b949e">FLOCI, PORT 4566</text>
+
+  <rect x="310" y="270" width="160" height="100" rx="10" fill="#21262d" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="390" y="308" text-anchor="middle" font-size="16" fill="#e6edf3">HTTP router</text>
+  <text x="390" y="332" text-anchor="middle" font-size="13" fill="#8b949e">AWS wire protocols</text>
+
+  <path d="M470 300 H500 V205 H524" fill="none" stroke="#8b949e" stroke-width="1.5" marker-end="url(#floci-arrow)"/>
+  <line x1="470" y1="345" x2="524" y2="345" stroke="#8b949e" stroke-width="1.5" marker-end="url(#floci-arrow)"/>
+  <path d="M470 360 H500 V485 H524" fill="none" stroke="#8b949e" stroke-width="1.5" marker-end="url(#floci-arrow)"/>
+
+  <rect x="530" y="150" width="300" height="110" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="680" y="192" text-anchor="middle" font-size="16" fill="#e6edf3">Stateless services</text>
+  <text x="680" y="214" text-anchor="middle" font-size="12.5" fill="#8b949e">SSM, SQS, SNS, IAM, STS, KMS,</text>
+  <text x="680" y="234" text-anchor="middle" font-size="12.5" fill="#8b949e">EventBridge, Step Functions, CloudFormation</text>
+
+  <rect x="530" y="290" width="300" height="110" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="680" y="332" text-anchor="middle" font-size="16" fill="#e6edf3">Stateful services</text>
+  <text x="680" y="354" text-anchor="middle" font-size="12.5" fill="#8b949e">S3, DynamoDB, DynamoDB Streams</text>
+
+  <rect x="530" y="430" width="300" height="110" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="680" y="472" text-anchor="middle" font-size="16" fill="#e6edf3">Container-backed services</text>
+  <text x="680" y="494" text-anchor="middle" font-size="12.5" fill="#8b949e">Lambda, RDS, ElastiCache, ECS,</text>
+  <text x="680" y="514" text-anchor="middle" font-size="12.5" fill="#8b949e">EC2, EKS, MSK, OpenSearch</text>
+
+  <rect x="880" y="230" width="250" height="170" rx="10" fill="#21262d" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="1005" y="288" text-anchor="middle" font-size="16" fill="#e6edf3">Storage backend</text>
+  <text x="1005" y="312" text-anchor="middle" font-size="12.5" fill="#8b949e">memory, hybrid,</text>
+  <text x="1005" y="332" text-anchor="middle" font-size="12.5" fill="#8b949e">persistent, wal</text>
+
+  <path d="M830 205 H855 V260 H874" fill="none" stroke="#8b949e" stroke-width="1.5" marker-end="url(#floci-arrow)"/>
+  <line x1="830" y1="345" x2="874" y2="345" stroke="#8b949e" stroke-width="1.5" marker-end="url(#floci-arrow)"/>
+
+  <line x1="830" y1="485" x2="1194" y2="485" stroke="#8b949e" stroke-width="1.5" marker-end="url(#floci-arrow)"/>
+  <text x="1090" y="473" text-anchor="middle" font-size="12" fill="#8b949e">Docker API</text>
+
+  <rect x="1200" y="430" width="200" height="110" rx="10" fill="#21262d" stroke="#30363d"/>
+  <text x="1300" y="478" text-anchor="middle" font-size="16" fill="#e6edf3">Docker Engine</text>
+  <text x="1300" y="500" text-anchor="middle" font-size="12.5" fill="#8b949e">real containers</text>
+</svg>
