@@ -1528,5 +1528,25 @@
       "opencode"
     ],
     "docPath": "/docs/Develop-Code/AI-Development/Skills/webwright"
+  },
+  {
+    "id": "yogurt",
+    "name": "Yogurt",
+    "description": "Private AI meeting notes that stay on your computer. Records and transcribes calls locally with whisper.cpp and summarises them with a local LLM, with no meeting bot and no account.",
+    "category": "tools",
+    "github": "https://github.com/FrigadeHQ/yogurt",
+    "npm": null,
+    "pip": null,
+    "install": "brew install --cask frigadehq/yogurt/yogurt",
+    "site": "https://www.yogurt.so/",
+    "license": "MIT",
+    "tags": [
+      "meeting-notes",
+      "transcription",
+      "local-first",
+      "privacy"
+    ],
+    "supportedBy": [],
+    "docPath": "/docs/Develop-Code/AI-Development/Tools/yogurt"
   }
 ]
