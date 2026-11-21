@@ -462,6 +462,27 @@
     "docPath": "/docs/Develop-Code/AI-Development/Prompt-Library/excel-15-prompts"
   },
   {
+    "id": "floorplan",
+    "name": "Floorplan",
+    "description": "Claude Code and Codex plugin that reads your codebase and draws an interactive, plain-English map of every part, file and web request, with a health check for AI-built app mistakes.",
+    "category": "tools",
+    "github": "https://github.com/haydenschmitty/floorplan",
+    "site": "https://haydenschmitty.github.io/floorplan-demo/",
+    "license": "MIT",
+    "install": "/plugin marketplace add haydenschmitty/floorplan",
+    "tags": [
+      "codebase-visualization",
+      "architecture",
+      "onboarding",
+      "security-audit"
+    ],
+    "supportedBy": [
+      "claude-code",
+      "codex"
+    ],
+    "docPath": "/docs/Develop-Code/AI-Development/Tools/floorplan"
+  },
+  {
     "id": "freellmapi",
     "name": "FreeLLMAPI",
     "description": "OpenAI-compatible proxy that stacks free tiers of 29 LLM providers behind one endpoint, giving ~4B tokens/month with smart routing and automatic failover.",
