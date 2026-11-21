@@ -136,7 +136,7 @@ html[data-theme='dark'] .docusaurus-mermaid-container {
 .docusaurus-mermaid-container .highlight > path {
   fill: var(--mermaid-lit) !important;
   stroke: var(--mermaid-frame) !important;
-  stroke-width: 1.5px !important;
+  stroke-width: 2px !important;
 }
 
 .docusaurus-mermaid-container .highlight .nodeLabel,
