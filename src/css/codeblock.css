@@ -1,120 +1,118 @@
 /**
- * Golden Forest - Nature-Themed Code Blocks
- * Organic shapes, earthy colors, and berry/leaf controls
-[class*='codeBlockContainer_'] {
+ * Golden Forest - Honey Wax code blocks
+ * A warm opaque panel lit from above: no lid, no leaves.
+ * No backdrop blur on purpose: the panel is a solid sticker, so scrolling
+ * long articles never pays for a full-page composite per code block.
  */
+
 .theme-code-block {
-    border-radius: 28px 12px 35px 15px;
-    /* Organic, irregular shape */
+    --panel-bg: rgba(247, 231, 194, 0.96);
+    --panel-frame: #c9ad6a;
+    --panel-inner: rgba(255, 255, 255, 0.8);
+    --panel-shadow: 0 16px 30px -26px rgba(163, 106, 0, 0.75);
+    --panel-glow: radial-gradient(60% 100% at 18% 0%, rgba(255, 182, 48, 0.24) 0%, rgba(255, 182, 48, 0) 72%);
+    --panel-title-bg: rgba(255, 253, 245, 0.7);
+    --panel-title-ink: #8f5d00;
+    --panel-title-border: rgba(201, 173, 106, 0.6);
+    /* Keeps the highlighted line's bleed equal to the plate inset. */
+    --ifm-pre-padding: 0.9rem;
+    position: relative;
     overflow: hidden;
     margin: 1.5rem 0;
-    position: relative;
-    padding: calc(32px + 0.25rem) 0.5rem 0.5rem 0.5rem;
-    background-color: #2b2b2b;
-    /* Dark forest floor */
-    border: 2px solid var(--ifm-color-primary-darkest);
-    /* Bark brown/gold */
+    padding: 2.85rem var(--ifm-pre-padding) 0.95rem;
+    border-radius: 28px 12px 35px 15px;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-frame);
+    box-shadow: inset 0 1px 0 var(--panel-inner), var(--panel-shadow);
 }
 
-/* Header/Wood Plaque Bar */
+/* Light from above, nothing else: the only ornament on the plaque. */
 .theme-code-block::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 28px;
-    background: linear-gradient(to bottom, var(--ifm-color-primary-darker), var(--ifm-color-primary-darkest));
-    /* Wooden bark texture */
-    display: block;
+    inset: 0 0 auto 0;
+    height: 96px;
+    background: var(--panel-glow);
+    pointer-events: none;
+    z-index: 0;
+}
+
+html[data-theme='dark'] .theme-code-block {
+    --panel-bg: rgba(52, 34, 4, 0.94);
+    --panel-frame: rgba(255, 182, 48, 0.3);
+    --panel-inner: rgba(255, 182, 48, 0.16);
+    --panel-shadow: 0 20px 36px -28px rgba(0, 0, 0, 0.9);
+    --panel-glow: radial-gradient(60% 100% at 18% 0%, rgba(255, 182, 48, 0.16) 0%, rgba(255, 182, 48, 0) 70%);
+    --panel-title-bg: rgba(255, 182, 48, 0.1);
+    --panel-title-ink: #ffb630;
+    --panel-title-border: rgba(255, 182, 48, 0.28);
+}
+
+/* Code sits above the glow. */
+.theme-code-block [class*='codeBlockContent_'] {
+    position: relative;
     z-index: 1;
-    border-bottom: 2px solid var(--ifm-color-primary-darker);
 }
 
-/* Nature Controls (Trio of Wide Leaf SVGs) */
-.theme-code-block::after {
-    content: '';
-    position: absolute;
-    top: 4px;
-    left: 14px;
-    width: 85px;
-    /* Wider area for chunky leaves */
-    height: 20px;
-    z-index: 2;
-    background-repeat: no-repeat;
-    /* Red Leaf, Yellow Autumn Leaf, Green Summer Leaf */
-    background-image:
-        /* Red Leaf - Extra Wide & Chunky */
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23d32f2f' d='M21,11C21,11 15,7 12,2C9,7 3,11 3,11C3,11 5,16 12,22C19,16 21,11 21,11Z'/%3E%3C/svg%3E"),
-        /* Autumn Leaf - Extra Wide & Chunky */
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e99700' d='M21,11C21,11 15,7 12,2C9,7 3,11 3,11C3,11 5,16 12,22C19,16 21,11 21,11Z'/%3E%3C/svg%3E"),
-        /* Summer Leaf - Extra Wide & Chunky */
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23388e3c' d='M21,11C21,11 15,7 12,2C9,7 3,11 3,11C3,11 5,16 12,22C19,16 21,11 21,11Z'/%3E%3C/svg%3E");
-    background-size: 18px 18px, 18px 18px, 18px 18px;
-    background-position: 0px 0px, 20px 0px, 40px 0px;
+/*
+ * Without a title there is no pill to fill the top band, so the panel
+ * collapses to normal padding. The controls fall back to the stock
+ * top-right corner inside the content, visible on hover.
+ */
+.theme-code-block:not(:has(> [class*='codeBlockTitle_'])) {
+    padding-top: 0.95rem;
 }
 
-/* Code Block Title - Tab Style in Header */
+.theme-code-block:not(:has(> [class*='codeBlockTitle_'])) [class*='buttonGroup_'] {
+    top: 2px;
+}
+
+.theme-code-block pre {
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+}
+
+/* Floating caption pill with a single lantern dot. */
 .theme-code-block>[class*='codeBlockTitle_'] {
     position: absolute;
-    top: 0;
-    left: 80px;
-    height: 28px;
-    line-height: 28px;
-    background: transparent;
-    border: none;
-    color: #e2e2e2;
-    font-weight: 600;
-    font-size: 0.85rem;
-    z-index: 5;
-    padding: 0;
+    top: 11px;
+    left: 13px;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    max-width: calc(100% - 100px);
     margin: 0;
-    pointer-events: none;
-    /* Let clicks pass through */
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    padding: 0.2rem 0.7rem;
+    border-radius: 9999px;
+    background: var(--panel-title-bg);
+    border: 1px solid var(--panel-title-border);
+    color: var(--panel-title-ink);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-html[data-theme='light'] .theme-code-block>[class*='codeBlockTitle_'] {
-    color: var(--ifm-color-secondary-lightest);
-    text-shadow: 1px 1px 2px rgba(62, 39, 35, 0.8);
+.theme-code-block>[class*='codeBlockTitle_']::before {
+    content: '';
+    flex: 0 0 auto;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ifm-color-primary);
+    box-shadow: 0 0 10px rgba(255, 166, 1, 0.9);
 }
 
-/* Adjust colors using filters to match theme variables if possible, 
-   but SVGs use hex for simplicity here. We can use CSS variables in SVGs via mask-image if preferred. */
-
-/* Light Mode Nature Overrides */
-html[data-theme='light'] [class*='codeBlockContainer_'] {
-    background-color: var(--ifm-card-background-color);
-    /* Parchment/Leafy background */
-    border-color: var(--HB_Color_HeaderUnderline);
-}
-
-html[data-theme='light'] [class*='codeBlockContainer_']::before {
-    background: linear-gradient(to bottom, var(--HB_Color_HeaderUnderline), var(--HB_Color_HeaderText));
-    border-bottom-color: var(--HB_Color_HorizontalRule);
-}
-
-/* Adjust the code content */
-[class*='codeBlockContainer_'] pre {
-    margin: 0;
-    background: transparent;
-}
-
-/* Nature-styled Copy Button */
+/* Copy and word-wrap controls: unchanged from the live site. */
 [class*='codeBlockContainer_'] div[class*='buttonGroup_'] {
     z-index: 10;
     top: -42px;
     right: 8px;
-    /*
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    margin: 0 4px !important;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    */
 }
 
 [class*='codeBlockContainer_'] div[class*='buttonGroup_'] button {
@@ -127,6 +125,7 @@ html[data-theme='light'] [class*='codeBlockContainer_'] button[class*='copyButto
     color: #3e2723;
     border-color: rgba(62, 39, 35, 0.2);
 }
+
 /*
  * Syntax palette in the garden's own inks. The Prism theme ships cool greys,
  * teal and pink that belong to another world; these override the inline token
@@ -148,10 +147,6 @@ html[data-theme='light'] [class*='codeBlockContainer_'] button[class*='copyButto
     --syntax-number: #ffa601;
     --syntax-function: #ffe0a3;
     --syntax-comment: #9a8f7a;
-}
-
-html[data-theme='light'] [class*='codeBlockContainer_'] {
-    background-color: #fffaeb;
 }
 
 [class*='codeBlockContainer_'] pre {
@@ -192,4 +187,15 @@ html[data-theme='light'] [class*='codeBlockContainer_'] {
 [class*='codeBlockContainer_'] .token.comment {
     color: var(--syntax-comment) !important;
     font-style: italic;
+}
+
+/* Highlighted line: an amber wash, not the stock grey strip. */
+.theme-code-block .theme-code-block-highlighted-line {
+    background-color: rgba(233, 151, 0, 0.18);
+    box-shadow: inset 2px 0 0 var(--ifm-color-primary-darkest);
+}
+
+[data-theme='dark'] .theme-code-block .theme-code-block-highlighted-line {
+    background-color: rgba(255, 182, 48, 0.13);
+    box-shadow: inset 2px 0 0 var(--ifm-color-primary);
 }
