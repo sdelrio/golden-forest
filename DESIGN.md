@@ -157,9 +157,9 @@ components:
     rounded: "{rounded.input}"
     padding: "0.625rem 1rem"
   code-block:
-    backgroundColor: "{colors.forest-floor}"
+    backgroundColor: "rgba(247, 231, 194, 0.96)"
     rounded: "{rounded.organic}"
-    padding: "2rem 0.5rem 0.5rem 0.5rem"
+    padding: "2.85rem 0.9rem 0.95rem"
   tag:
     backgroundColor: "{colors.parchment-shade}"
     textColor: "{colors.ink}"
@@ -201,7 +201,7 @@ The site reads as a clearing at golden hour. Amber is the light that falls throu
 
 There is one page material and two inks. Light mode is a single sheet of pale cream paper lit from above: one soft amber light enters at the top edge and falls through the page before the first screen ends. Dark mode is the same room after sunset: near-black sepia with the same amber light from above. Body copy is ink on paper in both modes; amber never becomes text colour, because amber here is light, and light does not carry meaning.
 
-The system runs two registers. The default register is the garden: calm, reading-first, one column, with craft concentrated in three recurring artifacts (the ruled h2, the SVG page divider, and the bark-plaque code block). The second register is the tabletop handbook, activated only under the D&D route classes: parchment texture, drop caps, small-caps first lines, and the ScalySans/MrEavesRemake faces. These two registers share the same amber and the same paper instinct, which is why the site feels coherent rather than assembled.
+The system runs two registers. The default register is the garden: calm, reading-first, one column, with craft concentrated in three recurring artifacts (the ruled h2, the SVG page divider, and the honey-wax code panel). The second register is the tabletop handbook, activated only under the D&D route classes: parchment texture, drop caps, small-caps first lines, and the ScalySans/MrEavesRemake faces. These two registers share the same amber and the same paper instinct, which is why the site feels coherent rather than assembled.
 
 **Key Characteristics:**
 
@@ -209,7 +209,7 @@ The system runs two registers. The default register is the garden: calm, reading
 - Warm, low-opacity shadows tinted amber (never neutral grey) on paper surfaces.
 - Irregular compound corner radii for anything that reads as a cut sheet or a plaque.
 - Reading-first density: 16px body at 1.625 line height, 280px sidebar, one content column.
-- Craft artifacts over ornament: SVG divider, ruled h2, leaf-lit code plaque.
+- Craft artifacts over ornament: SVG divider, ruled h2, lit wax code panel.
 - Motion is a sheet being handled, never a flourish: 0.15s state shifts, 0.2s lifts, and one 1s circular clip-path reveal when the room goes dark.
 - Handbook sub-theme that is explicitly scoped to a route and never leaks.
 
@@ -219,7 +219,7 @@ A two-hue system, amber light and oxblood ink, resting on warm paper and a sepia
 
 ### Primary
 
-- **Autumn Amber** (#e99700): the site's `--ifm-color-primary`. It is the light of the place: active states, focus borders, the lid of the code plaque, and the accent on hover. It is the only hue allowed to mean "interactive", and it is never a heading or body colour.
+- **Autumn Amber** (#e99700): the site's `--ifm-color-primary`. It is the light of the place: active states, focus borders, the lantern dot on the code panel, and the accent on hover. It is the only hue allowed to mean "interactive", and it is never a heading or body colour.
 - **Lit Amber** (#ffa601, #ffaa0d, #ffb630): the light steps. Inline code in dark mode (#ffa601) and dark-mode links, focus rings and hover states (#ffb630). It is the light that lands on a dark surface, so it is never a fill carrying text.
 - **Heading Amber** (#c68000): `--ifm-heading-color-dark`, the only heading colour in dark mode. It is a Bark Amber step rather than a Lit Amber one: at h2 size 5.87:1 is comfortably enough, and the quieter step keeps headings from out-shouting the links beneath them.
 - **Bark Amber** (#d28800, #c68000, #a36a00): the dark steps. Link colour, plaque gradient, borders, hero glow, text-shadow beds. #c68000 does double duty as Heading Amber.
@@ -231,7 +231,7 @@ A two-hue system, amber light and oxblood ink, resting on warm paper and a sepia
 
 ### Tertiary
 
-- **Leaf Trio** (#d32f2f, #e99700, #388e3c): red, amber and green leaves standing in for window controls on the code plaque. These three appear nowhere else as a triad. The red and green are not semantic.
+- **Leaf Trio** (#d32f2f, #e99700, #388e3c): red, amber and green leaves standing in for window controls on full-width terminal frames (`.terminal-window`). These three appear nowhere else as a triad. The red and green are not semantic.
 
 ### Neutral
 
@@ -241,7 +241,7 @@ A two-hue system, amber light and oxblood ink, resting on warm paper and a sepia
 - **Reading Ink** (#2a2010): light-mode body copy. Near-black with a brown bias so it sits in the paper rather than on top of it.
 - **Gold Rule** (#c9ad6a): the h2 underline, the handbook's footnote and TOC rules. Structural, 2px, full width.
 - **Sepia Dusk** (#170f00) and **Night Parchment** (#d4c4a8): the dark-mode page field and body copy.
-- **Forest Floor** (#2b2b2b): the code plaque body, the one place the system goes genuinely dark on purpose.
+- **Forest Floor** (#2b2b2b): the terminal-window body, the one place the system goes genuinely dark on purpose. The code panel no longer uses it: it is warm honey wax.
 - **Ledger Stripes** (#f8f9fa / #e9ecef, dark #242526 / #2c2e30): alternating table rows.
 - **Tambour Edge** (#fcefd4 in light, #533800 in dark): the navbar's own 1% edge stop, kept after the page's edge gradient retired, because the navbar sits one plane above the sheet.
 - **Footer Slate** (#1b2127): the footer. The one genuinely cool, non-amber surface in the system, deliberately outside the paper metaphor.
@@ -336,11 +336,11 @@ Two artifacts go further than a drop shadow. Admonitions and pagination links ca
 
 ## Shapes
 
-Form language is irregular by intent. The signature radius is the compound `28px 12px 35px 15px`: four deliberately different corners that make a rectangle look cut by hand. It belongs to the code plaque, admonitions and terminal frames, and it is what most distinguishes the site from a stock Docusaurus theme.
+Form language is irregular by intent. The signature radius is the compound `28px 12px 35px 15px`: four deliberately different corners that make a rectangle look cut by hand. It belongs to the code panel, admonitions and terminal frames, and it is what most distinguishes the site from a stock Docusaurus theme.
 
-Everything else is either a hairline or a pill, with no middle ground. Handbook inputs use a 3px radius, inline code and tags 4px, standalone buttons and copy controls 6px, Infima surfaces 0.4rem, standalone search fields 8px, and filters and badges are fully round at 9999px. Borders are almost always 1px or 2px and amber-derived; heavy frames are replaced by the plaque edge treatment (a 28px gradient bar across the top).
+Everything else is either a hairline or a pill, with no middle ground. Handbook inputs use a 3px radius, inline code and tags 4px, standalone buttons and copy controls 6px, Infima surfaces 0.4rem, standalone search fields 8px, and filters and badges are fully round at 9999px. Borders are almost always 1px or 2px and amber-derived; heavy frames are replaced by the panel's floating caption pill and its lit top edge.
 
-Recurring silhouettes: the three-leaf control cluster on code plaques (18px leaves, 20px apart), the full-width gold rule under every h2, the hand-drawn divider on `hr`, and the handbook's four small circles at the corners of a blockquote. A new artifact should reuse one of these before inventing a new shape.
+Recurring silhouettes: the three-leaf control cluster on terminal frames (18px leaves, 20px apart), the full-width gold rule under every h2, the hand-drawn divider on `hr`, and the handbook's four small circles at the corners of a blockquote. A new artifact should reuse one of these before inventing a new shape.
 
 ## Components
 
@@ -380,11 +380,15 @@ Components here are quiet: they are mostly a hairline, a pill, or a sheet. The p
 - **Typography:** link labels at base body size; no letter-spacing, no uppercase. The active TOC entry is amber; the rest are ink.
 - **Mobile:** Infima's sidebar drawer, with the same hide/show transition reinstated explicitly at 0.2s `cubic-bezier(0.08, 0.52, 0.52, 1)`.
 
-### Signature: Code Plaque
+### Signature: Honey Wax
 
-The most recognisable artifact in the system. A code block is a dark bark plaque (Forest Floor `#2b2b2b`) with the compound organic radius, a 2px amber-darkest frame, and a 28px header bar carrying an amber gradient from darker to darkest. Three 18px leaves (red, amber, green) sit at the top-left where window controls would be, and the code block title floats beside them at 0.85rem in a light smoke colour. In light mode the plaque body inverts to the paper card colour with a `HB_Color_HeaderUnderline` to `HB_Color_HeaderText` gradient bar, so it still reads as a wooden lid on a pale page.
+A code block is a warm opaque panel with the compound organic radius, a 1px gold frame, and an amber wash falling from the top-left. There is no lid, no leaves and no gradient bar: the only ornament is the light itself. In light mode the panel is `rgba(247, 231, 194, 0.96)`: a cut piece of waxed parchment, dense enough that the page grain does not show through. In dark mode it is a solid smoked amber, `rgba(52, 34, 4, 0.94)` on Sepia Dusk, with the frame lifted to `rgba(255, 182, 48, 0.3)`.
 
-Reuse it for any full-width terminal or log frame (`.terminal-window` mirrors the same CSS). Do not apply the organic radius or the leaf trio to ordinary cards.
+No backdrop blur, ever. The panel is opaque, so a blur would cost a full-page composite per block while changing almost nothing; the wax surface is painted, not filtered.
+
+The title is a floating pill at the top-left, with a single 7px amber lantern dot and a 1px gold border, at 0.7rem weight 700. The copy and word-wrap controls stay exactly where they are, top right, unchanged: same icons, same 0.4rem chip, same 0.65 scale, same hover fade. Inline code inside prose keeps the handbook wash; highlighted lines inside a panel are an amber wash with a 2px amber left rule, never the stock grey strip.
+
+The terminal frame (`.terminal-window`) keeps the older bark plaque treatment with the leaf trio. Do not apply the leaf trio to code panels or to ordinary cards.
 
 ### Signature: Ruled Heading
 
